@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/iconfont.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        .top{
+            position: relative;
+            width: 100%;
+            height:49px;
+            
+            
+        }
+        .iconfont{
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+            padding-left: 10px;
+            transition: all 0.5s;
+        }
+        #search{
+            position: absolute;
+            padding-right: 10px;
+            right: 0;
+        }
+        .iconfont:hover{
+            transform: scale(0.6);
+        }
+        .topphoto{
+            position: relative;
+            height: 553px;
+            width: 100%;
+            background-image: url(https://renjirui.oss-cn-beijing.aliyuncs.com/wg.png);
+            background-size: 100% 100%;
+        }
+       .camera{
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        left: 50%;
+        top:-49px;
+        margin-left:-75px;
+        transition: all 0.5s;
+       }
+       .camera:hover{
+        transform: scale(0.8) ;
+       }
+       .camera img{
+        height: 100%;
+        width: 100%;
+       }
+       .toptitle{
+        position: absolute;
+        top: 150px;
+        left: 400px;
+        color: #2a3f17
+       }
+       .toptitle h1{
+        display: inline-block;
+        position: relative;
+        left: 130px;
+       }
+       .topbutton{
+        position: absolute;
+        width: 150px;
+        height: 50px;
+        top: 300px;
+        left:400px;
+        text-align: center;
+        line-height: 50px;
+        color: white;
+        font-size: 20px;
+        background-color: #2a3f17;
+       }
+       .topbutton a{
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        text-decoration: none;
+        color: white;
+       }
+      
+       .birds{
+        position: absolute;
+        height:300px;
+        width: 600px;
+        top: 450px;
+        left: 50%;
+        transform: translateX(-50%);
+        
+      
+       } 
+       .birds ul{
+        height: 100%;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+       }
+       .birds ul li{
+        position: relative;
+        height: 100%;
+        width: 180px;
+        transition: all 1s;
+       }
+       .birds ul li:hover{
+        transform: translateY(-35px);
+       }
+       .birds img{
+        height:100%;
+        width: 100%;
+       }
+       .birds ul li span{
+        position: absolute;
+        top:200px;
+        right: 40px;
+        color: white;
+        font-size: 18px;
+        font-weight: bolder;
+       }
+       .xiaolu{
+        position: relative;
+        margin-top: 400px;
+        width: 100%;
+        height: 600px;
+        background-image:url(https://renjirui.oss-cn-beijing.aliyuncs.com/lu.png) ;
+        background-size: 100% 100%;
+       }
+       .content{
+        position: absolute;
+        top: -50px;
+        width: 800px;
+        height: 400px;
+        left: 50%;
+        margin-left: -400px;
+        background-color: #e0dfdf;
+        transition: all 1s;
+       }
+       .content:hover{
+        transform: translateY(-40px);
+       }
+       .content .words{
+        height: 200px;
+        width: 80%;
+        margin: 20px auto;
+        font-size: 17px;
+        
+        
+       }
+       .content .button{
+        height: 60px;
+        width: 180px;
+        background-color: #2a3f17;
+        margin:50px auto;
+        text-align: center;
+        line-height: 60px;
+        color: white;
+        font-size: 20px;
+        transition: all 1s;
+       }
+       .content .button:hover{
+        transform:scale(0.9);
+       }
+       .content .button a{
+        color: white;
+        text-decoration: none;
+       }
+       .mdpart{
+        width: 100%;
+        height: 600px;
+       
+       }
+       .mdtop{
+        box-sizing: border-box;
+        margin: 10px auto;
+        width: 200px;
+        height: 80px;
+
+        text-align: center;
+        line-height: 80px;
+        font-size: 35px;
+        color: #2a3f17;
+       
+       }
+       .mdtop:hover{
+        animation: df 4s ;
+       }
+       @keyframes df{
+        25%{
+            border-top: 5px solid #2a3f17;-webkit-transition: 4s;
+        }
+        50%{
+             border-right: 5px solid #2a3f17;
+        }
+        75%{
+             border-bottom: 5px solid #2a3f17;
+        }
+        100%{
+             border-left: 5px solid #2a3f17;
+        }
+       }
+       @-webkit-keyframes bt{
+        25%{
+            border-top: 5px solid #2a3f17;-webkit-transition: 4s;
+        }
+        50%{
+             border-right: 5px solid #2a3f17;
+        }
+        75%{
+             border-bottom: 5px solid #2a3f17;
+        }
+        100%{
+             border-left: 5px solid #2a3f17;
+        }
+       }
+       
+       .mdph{
+        height: 300px;
+        width: 800px;
+        margin: 0 auto;
+        
+        
+       }
+       .mdph ul{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+       }
+       .mdph ul li{
+            width: 180px;
+            height: 100%;
+            background-color: #e0dfdf;
+            transition: all 1s;
+       }
+       .ph{
+        height: 200px;
+        width: 100%;
+        
+       }
+       .ph img{
+        height: 100%;
+        width: 100%;
+       }
+       .name{
+        height: 50px;
+        width: 100%;
+        text-align: center;
+        line-height: 50px;
+        font-size: 20px;
+        color: #2a3f17;
+        
+       }
+       .story{
+        text-align: center;
+        line-height: 50px;
+       }
+       .story a{
+        color: #2a3f17;
+        
+       }
+       .mdph li:hover{
+            transform: translateY(-20px);
+       }
+       .mdbutton{
+        height: 70px;
+        width: 250px;
+        text-align: center;
+        line-height: 70px;
+        font-size: 30px;
+        color: #2a3f17;
+        border-style: solid;
+        border-color: #2a3f17;
+        margin:50px auto ;
+       
+       }
+       .mdbutton:hover{
+        animation: bt 1s forwards;
+       }
+       @keyframes bt{
+        from{}
+        to{
+            color: white;
+            background-color: #2a3f17;
+        }
+       }
+       .slpart{
+        height: 800px;
+        width: 1200px;
+        margin: 0 auto;
+
+       }
+       .slph{
+        float: left;
+        height: 100%;
+        width: 45%;
+       }
+       .slph img{
+
+        height: 100%;
+        width: 100%;
+       }
+       .slcontent{
+        float: left;
+        height: 100%;
+        width: 55%;
+       }
+       .sltop{
+        height: 50px;
+        width: 200px;
+        text-align: center;
+        line-height: 50px;
+        margin: 30px 80px;
+        color: #2a3f17;
+        font-size: 35px;
+        transition: all 1s;
+       }
+       .sltop:hover{
+        transform: translateY(-10px);
+       }
+       .slwords{
+        height: 150px;
+        width: 90%;
+        margin:40px 60px ;
+        font-size: 20px;
+        color: #2a3f17;
+        transition: all 1s;
+       }
+       .slwords:hover{
+        transform:translateX(5px) scale(1.15);
+        transform-origin: left;
+       }
+       .choice{
+        height: 490px;
+        width: 100%;
+       }
+       .choice ul{
+        
+        height: 100%;
+        width: 100%;
+       }
+       .choice ul li{
+        position: relative;
+        height: 25%;
+        width: 100%;
+        margin-left: 20px;
+        transition: all 1s;
+       }
+       .choice ul li .number{
+        position: absolute;
+        height: 70px;
+        width: 70px;
+        top: 50%;
+        left: 20px;
+        border-radius: 50%;
+        border: solid;
+        border-width: 2px;
+        border-color: #2a3f17;
+        transform: translate(0,-50%);
+        color: #2a3f17;
+        text-align: center;
+        line-height: 70px;
+        font-size: 45px;
+        
+       }
+       .choice ul li .rtwords{
+        position: absolute;
+        height: 70px;
+        width: 500px;
+        right: 5px;
+        top: 50%;
+        line-height: 70px;
+        color: #2a3f17;
+        font-size: 30px;
+        transform: translate(0,-50%);
+       }
+       .choice ul li:hover{
+        transform: translateX(50px);
+       }
+       hr{
+        margin-top: 100px;
+        border:2px solid #2a3f17;
+       }
+       .end{
+        position: relative;
+        width: 1200px;
+        margin: 0 auto;
+        height: 300px;
+       
+       }
+       .word1{
+            position: absolute;
+            width: 300px;
+            height: 150px;
+           ;
+            margin-left: 100px;
+            top: 100px;
+            left: 70px;
+            font-size: 30px;
+            color: #2a3f17;
+            
+       }
+       .word2{
+         position: absolute;
+         height: 150px;
+         width: 250px;
+         top: 100px;
+         left: 400px;
+         font-size: 25px;
+         color: #697461;
+        
+       }
+       .endbutton{
+        position: absolute;
+        height: 70px;
+        width: 250px;
+        right: 150px;
+        top: 170px;
+        text-align: center;
+        line-height: 70px;
+        color: white;
+        font-size: 25px;
+        background-color: #949f8b;
+
+       }
+       .endbutton:hover{
+        animation: edbt 1s forwards;
+       }
+       @keyframes edbt{
+        from{}
+        to{
+            background-color: white;
+            color: #949f8b;
+        }
+       }
+     </style>
+</head>
+<body>
+    <div class="top">
+        <span class="iconfont">&#xe62f;</span>
+        <span class="iconfont" id="search">&#xe60c;</span>
+    </div>
+    <div class="topphoto">
+        <div class="camera">
+            <img src="https://renjirui.oss-cn-beijing.aliyuncs.com/camera.png" alt="">
+        </div>
+        <div class="toptitle">
+            <h1>Animal Photography</h1>
+            <br>
+            <span>A silhouette of them, a simple little acttion, here are the photographer’s<br>
+            eyes the best of them, their laughter, their love, their every vivid, are recored<br>
+            by us.</span>
+        </div>
+        <div class="topbutton">
+            <a href="#"><span>EXPIORE</span></a>
+        </div>
+        <div class="birds">
+            <ul>
+                <li class="bird1">
+                    <img src="https://renjirui.oss-cn-beijing.aliyuncs.com/bird1.png" alt="">
+                    <span>Fly</span>
+                </li>
+                <li class="bird2">
+                    <img src="https://renjirui.oss-cn-beijing.aliyuncs.com/bird2.png" alt="">
+                    <span>Love</span>
+                </li>
+                <li class="bird3">
+                    <img src="https://renjirui.oss-cn-beijing.aliyuncs.com/bird3.png" alt="">
+                    <span>Stand</span>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+    <div class="xiaolu">
+        <div class="content">
+            <div class="words">
+               <nobr> “Family Farms is the best place，where I can buy fruit,vegetable,meat,honey,milk,</nobr>
+                <nobr> eggs and so on for my retaurant directly fromupplier. Super convinient.Thank you”</nobr>
+                <nobr>xdccnfc cfvfesc cfnccnjdcn cfjdcdsr dcwwzwqg ejs dddc ddf fnfjv eij fvnv jnxzexh cn</nobr>
+            <nobr> cdcmdsc ddnc, cddmdcds dncdn cdcn wqeoeas, dcndassasas,cdcndcnc cciqoskxm</nobr>
+               <nobr> cbdcpqslwq nfnere nfncsfjjc dndcww frhfjnc qpdjweiw cnncqe, cqjsdc ccn dcjndc ,</nobr>
+               <nobr> ncf cdncjd dcdjcndq csjncq dcdncf dcdjdnc cdjsq, qkodkqe wqcnpsdc cdnqq qcw,</nobr>
+               <nobr> cqnonxj dcdcnd dcnjsdvb wcnwq cowwncjq jjcnjncqnw wcq c wd cwch, cnjncnc ece</nobr>
+               <nobr> cdcnncdwnc nenwc dcnnc cjcj , c cjrnc wecwc .</nobr>
+            </div>
+            <div class="button">
+               <a href="#">SIGN UP</a> 
+            </div>
+        </div>
+    </div>
+    <div class="mdpart">
+        <div class="mdtop">
+            Difference
+        </div>
+        <div class="mdph">
+            <ul>
+                <li>
+                    <div class="ph"><img src="https://renjirui.oss-cn-beijing.aliyuncs.com/horse.png" alt=""></div>
+                    <div class="name">Horse</div>
+                    <div class="story"><a href="#">A difference story</a></div>
+                </li>
+                <li>
+                    <div class="ph"><img src="https://renjirui.oss-cn-beijing.aliyuncs.com/rabbit.png" alt=""></div>
+                    <div class="name">Kangaroo</div>
+                    <div class="story"><a href="#">A difference story</a></div>
+                </li>
+                <li>
+                    <div class="ph"><img src="https://renjirui.oss-cn-beijing.aliyuncs.com/lion.png" alt=""></div>
+                    <div class="name">Lion</div>
+                    <div class="story"><a href="#">A difference story</a></div>
+                </li>
+                <li>
+                    <div class="ph"><img src="https://renjirui.oss-cn-beijing.aliyuncs.com/hummingbird.png" alt=""></div>
+                    <div class="name">Hummingbird</div>
+                    <div class="story"><a href="#">A difference story</a></div>
+                </li>
+            </ul>
+        </div>
+        <div class="mdbutton">
+            Know more
+        </div>
+    </div>
+    <div class="slpart">
+        <div class="slph">
+            <img src="https://renjirui.oss-cn-beijing.aliyuncs.com/sl.png" alt="">
+        </div>
+        <div class="slcontent">
+            <div class="sltop">The Photo</div>
+            <div class="slwords">
+                “Family Farms is the best placewhere I
+                can buy fruit,vegetable,meat,honey,milk,
+                eggs and so on for my retaurant directly from
+                supplier. Super convinient.Thank you”
+            </div>
+            <div class="choice">
+                <ul>
+                    <li>
+                        <div class="number">1</div>
+                        <div class="rtwords">Looking for it</div>
+                    </li>
+                    <li>
+                        <div class="number">2</div>
+                        <div class="rtwords">Cultivate feelings</div>
+                    </li>
+                    <li>
+                        <div class="number">3</div>
+                        <div class="rtwords">Shooting</div>
+                    </li>
+                    <li>
+                        <div class="number">4</div>
+                        <div class="rtwords">Harvest achievement
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+       
+    </div>
+    <hr>
+    <div class="end">
+        <div class="word1">
+            IN THE WILD<br>
+            <br>
+            IN THE SEA
+        </div>
+        <div class="word2">
+            MOER<br><br>
+            We create art.<br>
+            We create life<br>
+        </div>
+        <div class="endbutton">
+            Big World
+        </div>
+    </div>
+</body>
+</html>
