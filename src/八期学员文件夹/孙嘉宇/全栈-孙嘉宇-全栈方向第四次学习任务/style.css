@@ -1,0 +1,609 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.public-header{
+    width: 1920px;
+    height: 48px;
+    margin:0 auto;
+    position: relative;
+}
+@keyframes ChangeMenu {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0.6);
+    }
+}
+.menu{
+    width: 50px;
+    height: 48px;
+    position: absolute;
+    left:0px;
+} 
+.menu:hover{
+    animation-name: ChangeMenu;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+.scan {
+    width: 50px;
+    height: 48px;
+    position: absolute;
+    right: 0%;
+}
+.scan:hover {
+    animation-name: ChangeMenu;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+@keyframes ChangeSquare{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(0.9);
+    }
+}
+.greenSquare{
+    width: 200px;
+    height: 200px;
+    margin:0 910px;
+    background-color: #81c04b;
+    position: absolute;
+    /* 以下使图标水平与竖直居中 */
+    text-align: center;
+    line-height:200px;
+    color:white;
+}
+.greenSquare:hover{
+    animation-name: ChangeSquare;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+.circle{
+    margin-top:-200px;
+}
+.title{
+    width: 1920px;
+    height: 882px;
+    margin:0 auto;
+    background-image: url(https://sunjiayu19.oss-cn-beijing.aliyuncs.com/turtle.png);
+    background-repeat: no-repeat;
+}
+.text-title{
+    font-size: 80px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:700;
+    color:#2a3f17;
+    padding-top: 300px;
+    padding-left: 580px;
+}
+.introduction{
+    width: 1100px;
+    height: 120px;
+    font-size: 28px;
+    color: #2a3f17;
+    padding-left: 400px;
+    padding-top: 30px;
+}
+.explore{
+    width: 270px;
+    height: 70px;
+    display: inline-block;
+    background-color:#2a3f17;
+    /* padding-left:400px;
+    padding-top:135px; */
+    margin:30px 1240px 0 400px;
+    color: white;
+    line-height: 70px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+}
+.flamingo{
+    width: 1110px;
+    height: 498px;
+    /* 火烈鸟图片距上空余90px */
+    margin:90px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    /* background-color: pink; */
+}
+.flamingo1{
+    flex:1;
+    background-image: url(https://sunjiayu19.oss-cn-beijing.aliyuncs.com/火烈鸟1.png);
+    background-repeat: no-repeat;
+    position: relative;
+}
+.text-flamingo1{
+    color: white;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    right:80px;
+    bottom:50px;
+}
+.flamingo2 {
+    flex: 1;
+    background-image: url(https://sunjiayu19.oss-cn-beijing.aliyuncs.com/火烈鸟2.png);
+    background-repeat: no-repeat;
+    position: relative;
+}
+.text-flamingo2{
+    color: white;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    right: 80px;
+    bottom: 50px;
+}
+.flamingo3 {
+    flex: 1;
+    background-image: url(https://sunjiayu19.oss-cn-beijing.aliyuncs.com/火烈鸟3.png);
+    background-repeat: no-repeat;
+    position: relative;
+}
+.text-flamingo3 {
+    color: white;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    right: 80px;
+    bottom: 50px;
+}
+@keyframes MoveUp{
+    from {
+        top:0px;
+    }
+    to {
+        top:-50px;
+    }
+}
+.flamingo1:hover{
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-name: MoveUp;
+    animation-fill-mode:both;
+}
+.flamingo2:hover {
+    animation-duration: 1s;animation-timing-function: linear;animation-name: MoveUp;
+    animation-fill-mode: both;
+}
+.flamingo3:hover {
+    animation-duration: 1s;animation-timing-function: linear; animation-name: MoveUp;
+    animation-fill-mode: both;
+}
+.blank{
+    width: 1920px;
+    height: 600px;
+    /* background-color: pink; */
+    margin:0 auto;
+}
+.deer{
+    width: 1920px;
+    height: 760px;
+    margin:0 auto;
+    position: relative;
+    /* background-color: pink; */
+    background-image: url(https://sunjiayu19.oss-cn-beijing.aliyuncs.com/deer.png);
+    background-repeat: no-repeat;
+}
+.text-deer{
+    width: 950px;
+    height: 460px;
+    background-color: #e0dfdf;
+    position: absolute;
+    top:-90px;
+    left:500px;
+    font-size: 28px;
+    text-align: center;
+    padding:80px;
+}
+
+.text-deer:hover{
+    animation-duration: 1s;
+    animation-name: MoveUp;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
+.sign-up{
+    width: 200px;
+    height: 70px;
+    background-color: #2a3f17;
+    position: absolute;
+    left:450px;
+    top:500px;
+    color: white;
+    line-height: 70px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+}
+.sign-up:hover{
+    animation-duration: 1s;
+    animation-name: ChangeSquare;
+    animation-fill-mode: both;animation-timing-function: linear;
+}
+.difference{
+    width: 1920px;
+    height: 680px;
+    margin:0 auto;
+}
+.text-difference:hover{
+    animation-duration: 2s;
+    animation-name:Border;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
+.text-difference{
+    width: 260px;
+    height: 70px;
+    font-size: 40px;
+    color:#2a3f17;
+    line-height: 70px;
+    text-align: center;
+    margin-left: 850px;
+    margin-top: 80px;
+}
+@keyframes Border{
+    /* 25%{border-top:3px black solid;}
+    50%{border-top: 3px black solid;
+        border-right: 3px black solid;}
+    75%{border-top: 3px black solid;
+        border-right: 3px black solid;
+        border-bottom: 3px black solid;}
+    100%{border-top: 3px black solid;
+        border-right: 3px black solid;
+        border-bottom: 3px black solid;
+        border-left: 3px black solid;} */
+
+        25%{border-top:5px black solid;}
+        50%{border-top: 5px black solid;
+            border-right: 5px black solid;}
+        75%{border-top: 5px black solid;
+            border-right: 5px black solid;border-bottom: 5px black solid;}
+        100%{border-top: 5px black solid;
+            border-right: 5px black solid;
+            border-bottom: 5px black solid;
+            border-left: 5px black solid;}
+}
+.four-animals{
+    width: 1150px;
+    height: 420px;
+    margin:30px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+.grey{
+    width: 265px;
+    height: 420px;
+    background-color:#e0dfdf;
+}
+.horse{
+    flex:1;
+    position: relative;
+}
+.pic-horse{
+    width: 265px;
+    height: 260px;
+    background-color: pink;
+    background-image: url(https://sunjiayu19.oss-cn-beijing.aliyuncs.com/马.png);
+    background-position: left top;
+    position: absolute;
+}
+.kangaroo{
+    flex:1;
+    position: relative;
+}
+.pic-kangaroo{
+    width: 265px;
+    height: 260px;
+    background-color: pink;
+    background-image: url(https://sunjiayu19.oss-cn-beijing.aliyuncs.com/袋鼠.png);
+    background-position: left top;
+    position: absolute;
+}
+.lion{
+    flex:1;
+    position: relative;
+}
+.pic-lion{
+    width: 265px;
+    height: 260px;
+    background-color: pink;
+    background-image: url(https://sunjiayu19.oss-cn-beijing.aliyuncs.com/狮子.png);
+    background-position: left top;
+    position: absolute;
+}
+.bird{
+    flex:1;
+    position: relative;
+}
+.pic-bird {
+    width: 265px;
+    height: 260px;
+    background-color: pink;
+    background-image: url(https://sunjiayu19.oss-cn-beijing.aliyuncs.com/小鸟.png);
+    background-position: left top;
+    position: absolute;
+}
+.text{
+    width: 256px;
+    height: 75px;
+    color:#2a3f17;
+    position: absolute;
+    font-size: 40px;
+    margin-top:260px;
+    line-height:75px;
+    text-align: center;
+}
+.horse:hover {
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-name: MoveUp;
+    animation-fill-mode: both;
+}
+.lion:hover {
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-name: MoveUp;
+    animation-fill-mode: both;
+}
+.kangaroo:hover {
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-name: MoveUp;
+    animation-fill-mode: both;
+}
+.bird:hover{
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-name: MoveUp;
+    animation-fill-mode: both;
+}
+
+.story{
+    width: 210px;
+    height: 40px;
+    list-style: 40px;
+    font-size: 20px;
+    text-align: center;
+    border-bottom:black 2px solid;
+    position: absolute;
+    margin-top:340px;
+    margin-left:20px;
+}
+.squirrel{
+    width: 1920px;
+    height: 1265px;
+    /* background-color: pink; */
+    margin:0 auto;
+    border-bottom: 2px black solid;
+}
+.KnowMore{
+    width: 365px;
+    height: 70px;
+    /* background-color: thistle; */
+    margin:0 auto;
+    border:5px solid #2a3f17;
+    font-size: 30px;
+    line-height:70px;
+    text-align: center;
+}
+@keyframes TurnBlack {
+    from {
+        background-color: #fff;
+        color:black;
+    }
+
+    to {
+        background-color: black;
+        color:#fff;
+    }
+}
+.KnowMore:hover{
+    animation-duration: 1s;
+        animation-timing-function:linear;
+        animation-name: TurnBlack;
+        animation-fill-mode: both;
+}
+.page-squirrel{
+    width: 1356px;
+    height: 1024px;
+    /* background-color: greenyellow; */
+    margin:100px auto;
+    display: flex;
+}
+.pic-squirrel{
+    flex:1;
+    background-image: url(https://sunjiayu19.oss-cn-beijing.aliyuncs.com/松鼠.png);
+}
+.right{
+    flex:1;
+    position: relative;
+}
+@keyframes leap {
+    from {
+        margin-top: 40px
+    }
+    to {
+       margin-top:0px;
+    }
+}
+.the-photo{
+    width: 550px;
+    height: 80px;
+    /* background-color: seagreen; */
+    margin-top: 40px;
+    margin-left: 120px;
+    font-size: 50px;
+    line-height: 80px;
+    text-align: left;
+    position: absolute;
+}
+.the-photo:hover{
+    animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-name: leap;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+}
+@keyframes large {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+.photo-intro{
+    width: 550px;
+    height: 180px;
+    /* background-color: honeydew; */
+    margin-top:150px;
+    margin-left: auto;
+    font-size: 26px;
+}
+.photo-intro:hover{
+    animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-name:large;
+        animation-fill-mode: both;
+}
+.page-order{
+    width: 550px;
+    height: 700px;
+    /* background-color: yellow; */
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@keyframes moveRight{
+    from {
+        transform: translateX(0)
+    }
+
+    to {
+        transform: translateX(30px)
+    }
+}
+.order{
+    flex:1;
+}
+.order:hover{
+    animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-name: moveRight;
+        animation-fill-mode: both;
+}
+.num{
+    width: 72px;
+    height: 72px;
+    /* background-color: thistle; */
+    margin-left: 20px;
+    margin-top: 40px;
+    border:3px black solid;
+    border-radius: 100%;
+    font-size: 40px;
+    line-height: 72px;
+    text-align: center;
+}
+.text-photo{
+    width: 400px;
+    height: 72px;
+    /* background-color: skyblue; */
+    margin-top:-50px;
+    margin-left: 120px;
+    font-size: 26px;
+    line-height:40px;
+    text-align:left;
+}
+.public-end{
+    width: 1920px;
+    height: 460px;
+    /* background-color: hotpink; */
+    margin:0 auto;
+    position: relative;
+}
+.end-left{
+    width: 334px;
+    height: 230px;
+    /* background-color: firebrick; */
+    margin-left:380px;
+    margin-top:160px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+}
+.left-text{
+    flex:1;
+    font-size:35px;
+    text-align:start;
+    line-height: 100%;
+}
+.end-center{
+    width: 220px;
+    height: 180px;
+    position: absolute;
+    /* background-color: skyblue; */
+    margin-left:720px;
+    margin-top:160px;
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+}
+.center-text1{
+    font-size: 30px;
+    flex: 1;
+    text-align: center;
+}
+.center-text{
+    font-size: 20px;
+    flex:1;
+    text-align: center;
+}
+.end-right{
+    width: 960px;
+    height: 450px;
+    /* background-color: silver; */
+    margin-left:940px;
+    position: absolute;
+}
+.big-world{
+    width: 360px;
+    height: 80px;
+    background-color: #949f8b;
+    color:white;
+    font-size: 40px;
+    line-height: 80px;
+    text-align: center;
+    position: absolute;
+    margin-top:190px;
+    margin-left: 280px;
+}
+@keyframes TurnWhite {
+    from {
+        background-color: #949f8b;
+        color: white;
+        margin-top:190px;
+    }
+    to {
+        background-color:white;
+        color:#949f8b;
+       margin-top:150px;
+    }
+}
+.big-world:hover{
+    animation-duration: 2s;animation-timing-function: linear;animation-name: TurnWhite;
+    animation-fill-mode: both;
+}
