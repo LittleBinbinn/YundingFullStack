@@ -1,0 +1,677 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 1200px;
+    margin: 0 auto;
+}
+ul{
+    list-style: none;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+input:hover{
+    cursor: pointer;
+}
+.top_left{
+    margin-top: 20px;
+    margin-left: 20px;
+    float: left;
+    transition: width 1s, height 1s;
+}
+.top_left:hover{
+    width: 13px;
+    height: 13px;
+}
+.top_right{
+    margin-top: 20px;
+    margin-right: 20px;
+    float: right;
+    transition: width 1s,height 1s;
+}
+.top_right:hover{
+    width: 13px;
+    height: 13px;
+}
+.tortoise{
+    position: relative;
+    top: 50px;
+    width: 1200px;
+    height: 581px;
+    /* background-color: pink; */
+    background-image: url("https://zhangpeiyao.oss-cn-beijing.aliyuncs.com/%E4%B9%8C%E9%BE%9F.png");
+    background-repeat: no-repeat;
+}
+.photo{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    left: 50%;
+    margin-left: -62.5px;
+    top: -50px;
+    background-color: #81c04b;
+    background-image: url("https://zhangpeiyao.oss-cn-beijing.aliyuncs.com/%E7%9B%B8%E6%9C%BA.png");
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition-property: all;
+    transition-duration: 0.8s;
+}
+.photo:hover{
+    width: 100px;
+    height: 100px;
+    background-size: 75px 75px;
+    transform: translate(12.5px,10px);
+}
+.title{
+    position: absolute;
+    top: 120px;
+    width: 700px;
+    height: 70px;
+    left: 50%;
+    margin-left: -350px;
+    /* background-color: pink; */
+    color: #2a3f17;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 700px;
+}
+.tortoise_text{
+    position: absolute;
+    top: 190px;
+    width: 700px;
+    height: 120px;
+    left: 50%;
+    margin-left: -350px;
+    /* background-color: purple; */
+    font-size: 20px;
+    color: #2a3f17;
+}
+.tortoise_button{
+    position: absolute;
+    height: 45px;
+    width: 155px;
+    top: 320px;
+    left: 250px;
+    background-color: #2a3f17;
+    color: white;
+    font-size: 17px;
+}
+.bird{
+    position: absolute;
+    height: 312.5px;
+    width: 693.75px;
+    bottom: -150px;
+    left: 50%;
+    margin-left: -346.875px;
+    /* background-color: turquoise; */
+    display: flex;
+    justify-content: space-between;
+}
+.bird1{
+    height: 100%;
+    width: 209px;
+    background-image: url("https://zhangpeiyao.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F1.png");
+    background-size: 209px 312.5px;
+    /* background-color: pink; */
+    transition-property: all;
+    transition-duration: 0.8s;
+}
+.bird1:hover{
+    transform: translate(0,-30px);
+}
+.fly{
+    color: white;
+    font-size: 25px;
+    margin-top: 200px;
+    margin-left: 140px;
+}
+.bird2{
+    height: 100%;
+    width: 209px;
+    background-image: url("https://zhangpeiyao.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F2.png");
+    background-size: 209px 312.5px;
+    /* background-color: pink; */
+    transition-property: all;
+    transition-duration: 0.8s;
+}
+.bird2:hover{
+    transform: translate(0,-30px);
+}
+.love{
+    color: white;
+    font-size: 25px;
+    margin-top: 200px;
+    margin-left: 130px;
+}
+.bird3{
+    height: 100%;
+    width: 209px;
+    background-image: url("https://zhangpeiyao.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F3.png");
+    background-size: 209px 312.5px;
+    /* background-color: pink; */
+    transition-property: all;
+    transition-duration: 0.8s;
+}
+.bird3:hover{
+    transform: translate(0,-30px);
+}
+.stand{
+    color: white;
+    font-size: 25px;
+    margin-top: 200px;
+    margin-left: 110px;
+}
+.giraffe{
+    position: relative;
+    top: 400px;
+    width: 100%;
+    height: 475px;
+    background-image: url("https://zhangpeiyao.oss-cn-beijing.aliyuncs.com/%E9%B9%BF.png");
+    background-size: 1200px 475px;
+}
+.giraffe_text{
+    position: absolute;
+    top: -100px;
+    width: 497.25px;
+    height: 288.125px;
+    left: 50%;
+    margin-left: -295.625px;
+    background-color: #e0dfdf;
+    font-size: 12.5px;
+    padding-top: 50px;
+    text-align: center;
+    padding-left: 47px;
+    padding-right: 47px;
+    transition-property: all;
+    transition-duration: 0.8s;
+}
+.giraffe_text:hover{
+    transform: translate(0,-20px);
+}
+.giraffe_buttom{
+    position: absolute;
+    width: 123.25px;
+    height: 43.75px;
+    left: 50%;
+    margin-left: -66.625px;
+    bottom: 40px;
+    font-size: 18.75px;
+    background-color: #2a3f17;
+    color: white;
+    transition-property: all;
+    transition-duration: 0.8s;
+}
+.giraffe_buttom:hover{
+    width: 110px;
+    height: 38px;
+    font-size: 15px;
+    transform: translate(9px,0);
+}
+.difference{
+    position: relative;
+    width: 150px;
+    top: 449px;
+    margin: 0 auto;
+    background-color: white;
+    font-size: 30px;
+    text-align: center;
+    color: #2a3f17;
+}
+.difference::before{
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 4px;
+    top: -4px;
+    background-color: white;
+    animation-name: border_one;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    z-index: -1;
+    animation-play-state: paused;
+}
+.difference::after{
+    content: " ";
+    position: absolute;
+    height: 3px;
+    width: 3px;
+    left: 150px;
+    top: 40px;
+    background-color: white;
+    animation-name: border_two;
+    z-index: -1;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    transition: background-color 0.1s;
+    transition-delay: 2.1s;
+}
+.difference:hover::before{
+    background-color: #2a3f17;
+    animation-play-state: running;
+}
+.difference:hover::after{
+    /* background-color: black; */
+    animation-play-state: running;
+    background-color: white;
+}
+.difference:not(.difference):hover::after{
+    background-color: white;
+}
+@keyframes border_one{
+    50% {
+        background-color: #2a3f17;
+        width: 152px;
+        height: 4px;
+    }
+    100%{
+        background-color: #2a3f17;
+        width: 152px;
+        height: 44px;
+    }
+}
+@keyframes border_two{
+    0% {
+        background-color: #2a3f17;
+    }
+    50% {
+        background-color: #2a3f17;
+        left: -3px;
+        width: 156px;
+        height: 3px;
+        top: 40px;
+    }
+    100% {
+        background-color: #2a3f17;
+        width: 156px;
+        height: 47px;
+        top: -4px;
+        left: -3px;
+    }
+}
+.four_animals{
+    position: relative;
+    top: 480px;
+    height: 270.25px;
+    width: 715.625px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    color: #2a3f17;
+}
+.horse>a{
+    display: inline-block;
+    text-align: center;
+    width: 116.83px;
+    /* background-color: pink; */
+    margin-top: 10px;
+    margin-left: 24.585px;
+    font-size: 13.75px;
+    color: #2a3f17;
+    border-bottom-style: solid;
+    border-bottom-color: #2a3f17;
+}
+.horse{
+    width: 166px;
+    height: 250px;
+    background-color: #e0dfdf;
+    align-self: flex-end;
+    transition-property: all;
+    transition-duration: 0.8s;
+}
+.horse_photo{
+    width: 166px;
+    height: 160px;
+}
+.horse:hover{
+    transform: translate(0,-30px);
+}
+.horse_text{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 19px;
+    /* background-color: pink; */
+    color: #2a3f17;
+}
+.kangaroo{
+    width: 166px;
+    height: 250px;
+    background-color: #e0dfdf;
+    align-self: flex-end;
+    transition-property: all;
+    transition-duration: 0.8s;
+}
+.kangaroo_photo{
+    width: 166px;
+    height: 160px;
+}
+.kangaroo:hover{
+    transform: translate(0,-30px);
+}
+.kangaroo_text{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 19px;
+    /* background-color: pink; */
+    color: #2a3f17;
+}
+.kangaroo>a{
+    display: inline-block;
+    text-align: center;
+    width: 116.83px;
+    /* background-color: pink; */
+    margin-top: 10px;
+    margin-left: 24.585px;
+    font-size: 13.75px;
+    color: #2a3f17;
+    border-bottom-style: solid;
+    border-bottom-color: #2a3f17;
+}
+.lion{
+    width: 166px;
+    height: 250px;
+    background-color: #e0dfdf;
+    align-self: flex-end;
+    transition-property: all;
+    transition-duration: 0.8s;
+}
+.lion_photo{
+    width: 166px;
+    height: 160px;
+}
+.lion:hover{
+    transform: translate(0,-30px);
+}
+.lion_text{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 19px;
+    /* background-color: pink; */
+    color: #2a3f17;
+}
+.lion>a{
+    display: inline-block;
+    text-align: center;
+    width: 116.83px;
+    /* background-color: pink; */
+    margin-top: 10px;
+    margin-left: 24.585px;
+    font-size: 13.75px;
+    color: #2a3f17;
+    border-bottom-style: solid;
+    border-bottom-color: #2a3f17;
+}
+.hummingbird{
+    width: 166px;
+    height: 250px;
+    background-color: #e0dfdf;
+    align-self: flex-end;
+    transition-property: all;
+    transition-duration: 0.8s;
+}
+.hummingbird_photo{
+    width: 166px;
+    height: 160px;
+}
+.hummingbird:hover{
+    transform: translate(0,-30px);
+}
+.hummingbird_text{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 19px;
+    /* background-color: pink; */
+    color: #2a3f17;
+}
+.hummingbird>a{
+    display: inline-block;
+    text-align: center;
+    width: 116.83px;
+    /* background-color: pink; */
+    margin-top: 10px;
+    margin-left: 24.585px;
+    font-size: 13.75px;
+    color: #2a3f17;
+    border-bottom-style: solid;
+    border-bottom-color: #2a3f17;
+}
+.know_more{
+    position: relative;
+    top: 550px;
+    background-color: white;
+    width: 225px;
+    height: 44px;
+    left: 50%;
+    margin-left: -112.5px;
+    font-size: 18.75px;
+    color: #2a3f17;
+    border-color: #2a3f17;
+    transition-property: all;
+    transition-duration: 0.8s;
+}
+.know_more:hover{
+    background-color: #2a3f17;
+    color: white;
+}
+.squirrel{
+    position: relative;
+    top: 600px;
+    /* background-color: pink; */
+    width: 100%;
+    height: 680px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: black;
+}
+.squirrel_photo{
+    height: 640px;
+    width: 500px;
+    /* background-color: red; */
+    background-image: url("https://zhangpeiyao.oss-cn-beijing.aliyuncs.com/%E6%9D%BE%E9%BC%A0.png");
+    background-size:500px 640px ;
+}
+.squirrel_text{
+    height: 640px;
+    width: 700px;
+    /* background-color: blue; */
+}
+.the_photo{
+    position: absolute;
+    top: 50px;
+    font-size: 25px;
+    left: 600px;
+    transition-property: all;
+    transition-duration: 0.8s;
+}
+.the_photo:hover{
+    transform: translate(0,-30px);
+}
+.Family{
+    position: absolute;
+    top: 120px;
+    font-size: 15px;
+    left: 600px;
+    transition-duration: 0.2s;
+    transition-property: all;
+}
+.Family:hover{
+    transform: translate(5px,0);
+    font-size: 20px;
+}
+.lie{
+    position: absolute;
+    top: 250px;
+    left: 641px;
+    width: 200px;
+    height: 340px;
+    font-size: 15px;
+    color: #2a3f17;
+    /* background-color: pink; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.li1{
+    transition-duration: 0.8s;
+    transition-property: all;
+}
+.circle1{
+    position: absolute;
+    left: -41px;
+    border-width: 2px;
+    border-color: rgb(42, 63, 23);
+    border-style: solid;
+    border-radius: 50%;
+    width: 41px;
+    height: 41px;
+    font-size: 30px;
+    text-align: center;
+}
+.circle1_text{
+    width: 200px;
+    height: 41px;
+    margin-left: 20px;
+    /* background-color: pink; */
+    line-height: 41px;
+}
+.li1:hover{
+    transform: translate(40px,0);
+}
+.li2{
+    transition-duration: 0.8s;
+    transition-property: all;
+}
+.circle2{
+    position: absolute;
+    left: -41px;
+    border-width: 2px;
+    border-color: rgb(42, 63, 23);
+    border-style: solid;
+    border-radius: 50%;
+    width: 41px;
+    height: 41px;
+    font-size: 30px;
+    text-align: center;
+}
+.circle2_text{
+    width: 200px;
+    height: 41px;
+    margin-left: 20px;
+    /* background-color: pink; */
+    line-height: 41px;
+}
+.li2:hover{
+    transform: translate(40px,0);
+}
+.li3{
+    transition-duration: 0.8s;
+    transition-property: all;
+}
+.circle3{
+    position: absolute;
+    left: -41px;
+    border-width: 2px;
+    border-color: rgb(42, 63, 23);
+    border-style: solid;
+    border-radius: 50%;
+    width: 41px;
+    height: 41px;
+    font-size: 30px;
+    text-align: center;
+}
+.circle3_text{
+    width: 200px;
+    height: 41px;
+    margin-left: 20px;
+    /* background-color: pink; */
+    line-height: 41px;
+}
+.li3:hover{
+    transform: translate(40px,0);
+}
+.li4{
+    transition-duration: 0.8s;
+    transition-property: all;
+}
+.circle4{
+    position: absolute;
+    left: -41px;
+    border-width: 2px;
+    border-color: rgb(42, 63, 23);
+    border-style: solid;
+    border-radius: 50%;
+    width: 41px;
+    height: 41px;
+    font-size: 30px;
+    text-align: center;
+}
+.circle4_text{
+    width: 200px;
+    height: 41px;
+    margin-left: 20px;
+    /* background-color: pink; */
+    line-height: 41px;
+}
+.li4:hover{
+    transform: translate(40px,0);
+}
+.last{
+    position: relative;
+    width: 1300px;
+    height: 290px;
+    top: 600px;
+}
+.text1{
+    position: absolute;
+    top: 106px;
+    left: 337px;
+    width: 187px;
+    height: 110px;
+    /* background-color: red; */
+    font-size: 25px;
+    color: #2a3f17;
+}
+.text2{
+    position: absolute;
+    top: 106px;
+    left: 524px;
+    width: 187px;
+    height: 110px;
+    /* background-color: blue; */
+    color: #2a3f17;
+}
+.more{
+    font-size: 18.75px;
+    color: #4d5b41;
+}
+.we{
+    font-size: 9px;
+    color: #4d5b41;
+}
+.last_buttom{
+    position: relative;
+    top: 136px;
+    left: 711px;
+    width: 224px;
+    height: 44px;
+    font-size: 22.5px;
+    color: white;
+    background-color: #949f8b;
+    transition-property: all;
+    transition-duration: 0.8s;
+}
+.last_buttom:hover{
+    background-color: white;
+    color: #949f8b;
+    transform: translate(0,-30px);
+    border: none;
+}
