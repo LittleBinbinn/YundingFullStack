@@ -1,3 +1,13 @@
+html {
+    overflow: scroll;
+    overflow-x: hidden!important;
+    overflow-y: auto!important;
+}
+body {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
 *{
     margin:0 auto;
     padding:0;
@@ -8,7 +18,7 @@
     height: 930px;
     margin-left: auto;
     margin-right: auto;
-    background: url(../images4/乌龟.png) top center;
+    background: url(https://06ddd.oss-cn-beijing.aliyuncs.com/202312122201170.png) top center;
 }
 .header1 {
     position: relative;
@@ -55,7 +65,7 @@
     width: 1920px;
     height: 760px;
     margin-top: 1530px;
-    background: green url(../images4/鹿.png);
+    background: green url(https://06ddd.oss-cn-beijing.aliyuncs.com/202312122201567.png);
 }
 .w1  {
     margin-left: 400px;
@@ -276,10 +286,11 @@ button {
 }
 .more {
     position: absolute;
+    margin-top: 910px;
+    margin-left: 380px;
     width: 300px;
     height: 70px;
-    margin-top: 910px;
-    margin-left: 420px;
+    z-index: 4;
     border: 2px  solid rgb(25, 55, 21);
     color: rgb(25, 55, 21);
     background-color: transparent;
@@ -288,11 +299,10 @@ button {
     text-align: center;
     line-height: 70px;
     transition: all 2s;
-    z-index: 9;
-} 
-.more:hover {
+}
+.more:hover{
     background-color: rgb(25, 55, 21);
-    color: azure;
+    color: rgb(245, 247, 246);
 }
 .bodyer2 {
     position: relative;
@@ -310,7 +320,7 @@ button {
 .song {
     width: 702px;
     height: 1020px;
-    background: url(../images4/松鼠.png) no-repeat;
+    background: url(https://06ddd.oss-cn-beijing.aliyuncs.com/202312122201358.png) no-repeat;
 }
 .text {
     display: flex;
@@ -491,7 +501,7 @@ button {
     top: 10px;
     width: 361px;
     height: 73px;
-    background: transparent url(../images4/BigWorld.png);
+    background: transparent url(https://06ddd.oss-cn-beijing.aliyuncs.com/202312122200374.png);
     text-decoration: none;
 }
 .big:hover {
@@ -514,5 +524,5 @@ button {
 }
 @keyframes lv {
     50% {margin-top: -30px;}
-    100% {margin-top: -50px;background: url("../images4/BigWorld1.png");}
+    100% {margin-top: -50px;background: url(https://06ddd.oss-cn-beijing.aliyuncs.com/202312132124918.png);}
 }
