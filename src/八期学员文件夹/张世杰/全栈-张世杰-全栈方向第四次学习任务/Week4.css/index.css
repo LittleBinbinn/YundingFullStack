@@ -1,0 +1,445 @@
+
+.background {
+    position: relative;
+    width: 1470px;
+    height: 3578px;
+    background-color: transparent;
+}
+
+.banner {
+    width: 1470px;
+    height: 980px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tortoise-box {
+    width: 1470px;
+    height: 712px;
+    background-color: blueviolet;
+    background: url(https://sandwich-zhang.oss-cn-beijing.aliyuncs.com/tortoise.png);
+}
+
+.header-flex {
+    width: 1470px;
+    height: 38px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sangang {
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 18px;
+    height: 38px;
+    background-color: yellow;
+    background: url(https://sandwich-zhang.oss-cn-beijing.aliyuncs.com/sangang.png)no-repeat;
+    transition: all 0.3s ease;
+}
+
+.sangang:hover {
+    transform: scale(0.8);
+}
+
+.icon {
+    width: 154px;
+    height: 154px;
+    background-color: yellowgreen;
+    background: url(  https://sandwich-zhang.oss-cn-beijing.aliyuncs.com/icon.png);
+    transition: all 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(0.8);
+}
+
+.lens {
+    margin-top: 10px;
+    margin-right: 20px;
+    width: 13px;
+    height: 38px;
+    background-color: violet;
+    background: url(https://sandwich-zhang.oss-cn-beijing.aliyuncs.com/lens.png)no-repeat;
+    transition: all 0.3s ease;
+}
+
+.lens:hover {
+    transform: scale(0.8);
+}
+
+.text-banner {
+    margin-top: 186px;
+    /*调整居中*/
+    margin-left: auto;
+    margin-right: auto;
+    width: 840px;
+    height: 138px;
+    background-color: tomato;
+    background: url(https://sandwich-zhang.oss-cn-beijing.aliyuncs.com/banner-text.png);
+}
+
+.banner-button {
+    margin-top: 100px;
+    margin-left: 316px;
+    width: 200px;
+    height: 54px;
+    font-size: 23px;
+    padding-top: 20px;
+    color: white;
+    text-align: center;
+    background-color: #2a3f17;
+    transition: all 0.3s ease;
+}
+
+.banner-button:hover {
+    transform: scale(0.8);
+}
+
+.bird-flex {
+    margin-top: 62px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 840px;
+    height: 382px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bird1 {
+    width: 256px;
+    height: 382px;
+    background-color: blanchedalmond;
+    background: url(https://sandwich-zhang.oss-cn-beijing.aliyuncs.com/Fly.png)no-repeat;
+    transition: all 0.3s ease;
+}
+
+.bird1:hover {
+    transform: translateY(-50px);
+}
+
+.bird2 {
+    width: 256px;
+    height: 382px;
+    background-color: blanchedalmond;
+    background: url(https://sandwich-zhang.oss-cn-beijing.aliyuncs.com/Love.png)no-repeat;
+    transition: all 0.3s ease;
+}
+
+.bird2:hover {
+    transform: translateY(-50px);
+}
+
+.bird3 {
+    width: 256px;
+    height: 382px;
+    background-color: blanchedalmond;
+    background: url(https://sandwich-zhang.oss-cn-beijing.aliyuncs.com/Stand.png)no-repeat;
+    transition: all 0.3s ease;
+}
+
+.bird3:hover {
+    transform: translateY(-50px);
+}
+
+.deer {
+    margin-top: 190px;
+    width: 1470px;
+    height: 582px;
+    background-color: chartreuse;
+    background: url(https://sandwich-zhang.oss-cn-beijing.aliyuncs.com/deer.png);
+    display: flex;
+}
+
+.deer-box {
+    margin-top: -66px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 724px;
+    height: 414px;
+    background-color: #e0dfdf;
+    transition: all 0.3s ease;
+}
+
+.deer-box:hover {
+    transform: translateY(-50px);
+}
+
+.deer-text {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 608px;
+    height: 178px;
+    background-color: chocolate;
+    background: url(https://sandwich-zhang.oss-cn-beijing.aliyuncs.com/deer-text.png)no-repeat;
+}
+
+.deer-button {
+    margin-top: 76px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+    padding-top: 8px;
+    text-align: center;
+    color: white;
+    width: 150px;
+    height: 44px;
+    background-color: #2a3f17;
+    transition: all 0.3s ease;
+}
+
+.deer-button:hover {
+    transform: scale(0.8);
+}
+
+.difference {
+    width: 1470px;
+    height: 440px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes border-expand {
+    0% {
+        border-top: none;
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
+    }
+    25% {
+        border-top: 5px solid black;
+    }
+    50% {
+        border-right: 5px solid black;
+    }
+    75% {
+        border-bottom: 5px solid black;
+    }
+    100% {
+        border-left: 5px solid black;
+    }
+}
+
+.difference-title {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 38px;
+    border: none;
+    animation: border-expand 2s infinite;
+}
+
+.difference-title:hover {
+    animation-play-state: running;
+}
+
+.difference-box {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 880px;
+    height: 318px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box1 {
+    width: 202px;
+    height: 318px;
+    background-color: darkcyan;
+    background: url(https://sandwich-zhang.oss-cn-beijing.aliyuncs.com/Horse.png)no-repeat;
+    transition: all 0.3s ease;
+}
+
+.box1:hover {
+    transform: translateY(-50px);
+}
+
+.box2 {
+    width: 202px;
+    height: 318px;
+    background-color: darkcyan;
+    background: url(https://sandwich-zhang.oss-cn-beijing.aliyuncs.com/Kangaroo.png)no-repeat;
+    transition: all 0.3s ease;
+}
+
+.box2:hover {
+    transform: translateY(-50px);
+}
+
+.box3 {
+    width: 202px;
+    height: 318px;
+    background-color: darkcyan;
+    background: url(https://sandwich-zhang.oss-cn-beijing.aliyuncs.com/Lion.png)no-repeat;
+    transition: all 0.3s ease;
+}
+
+.box3:hover {
+    transform: translateY(-50px);
+}
+
+.box4 {
+    width: 202px;
+    height: 318px;
+    background-color: darkcyan;
+    background: url(https://sandwich-zhang.oss-cn-beijing.aliyuncs.com/Hummingbird.png)no-repeat;
+    transition: all 0.3s ease;
+}
+
+.box4:hover {
+    transform: translateY(-50px);
+}
+
+.squirrel {
+    width: 1470px;
+    height: 1040px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.squirrel-title {
+    width: 276px;
+    height: 52px;
+    margin-top: 92px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+    padding-top: 8px;
+    text-align: center;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.squirrel-title:hover {
+    background-color: pink;
+}
+
+.squirrel-box {
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1070px;
+    height: 782px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+}
+
+.squirrel-pic {
+    width: 538px;
+    height: 782px;
+    background-color: wheat;
+    background: url(https://sandwich-zhang.oss-cn-beijing.aliyuncs.com/松鼠.png)no-repeat;
+}
+
+.squirrel-text {
+    width: 408px;
+    height: 782px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.thephoto {
+    margin-top: 70px;
+    width: 408px;
+    height: 142px;
+    background-color: goldenrod;
+    background: url(https://sandwich-zhang.oss-cn-beijing.aliyuncs.com/ThePhoto.png)no-repeat;
+    transition: all 0.3s ease;
+}
+
+.thephoto:hover {
+    transform: translateY(-50px);
+}
+
+.looking {
+    width: 408px;
+    height: 54px;
+    background-color: goldenrod;
+    background: url(https://sandwich-zhang.oss-cn-beijing.aliyuncs.com/Looking.png)no-repeat;
+    transition: all 0.3s ease;
+}
+
+.looking:hover {
+    transform: translateX(50px);
+}
+
+.cultivate {
+    width: 408px;
+    height: 54px;
+    background-color: goldenrod;
+    background: url(https://sandwich-zhang.oss-cn-beijing.aliyuncs.com/cultivate.png)no-repeat;
+    transition: all 0.3s ease;
+}
+
+.cultivate:hover {
+    transform: translateX(50px);
+}
+
+.shooting {
+    width: 408px;
+    height: 54px;
+    background-color: goldenrod;
+    background: url(https://sandwich-zhang.oss-cn-beijing.aliyuncs.com/shooting.png)no-repeat;
+    transition: all 0.3s ease;
+}
+
+.shooting:hover {
+    transform: translateX(50px);
+}
+
+.harvest {
+    margin-bottom: 78px;
+    width: 408px;
+    height: 54px;
+    background-color: goldenrod;
+    background: url(https://sandwich-zhang.oss-cn-beijing.aliyuncs.com/harvest.png)no-repeat;
+    transition: all 0.3s ease;
+}
+
+.harvest:hover {
+    transform: translateX(50px);
+}
+
+.end {
+    width: 1470px;
+    height: 352px;
+    background-color: hotpink;
+    background: url(https://sandwich-zhang.oss-cn-beijing.aliyuncs.com/end-line.png)no-repeat;
+}
+
+.end-text {
+    margin-top: 134px;
+    margin-left: 344px;
+    float: left;
+    width: 352px;
+    height: 94px;
+    background: url(https://sandwich-zhang.oss-cn-beijing.aliyuncs.com/end-text.png);
+}
+
+.end-button {
+    margin-top: 150px;
+    margin-left: 246px;
+    float: left;
+    width: 276px;
+    height: 46px;
+    font-size: 28px;
+    color: white;
+    padding-top: 10px;
+    text-align: center;
+    background-color: #949f8b;
+    transition: all 0.3s ease;
+}
+
+.end-button:hover {
+    transform: scale(0.8);
+}

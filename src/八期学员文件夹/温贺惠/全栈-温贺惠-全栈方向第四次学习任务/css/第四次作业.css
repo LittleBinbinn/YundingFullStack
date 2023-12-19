@@ -1,0 +1,518 @@
+*{
+    margin:0 auto;
+    padding:0;
+    background: #f8f8f8;
+}
+.header {
+    width: 1920px;
+    height: 930px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url(../images4/乌龟.png) top center;
+}
+.header1 {
+    position: relative;
+    background-color: white;
+    height: 50px;
+}
+.header2 {
+    float: left;
+    background-color: transparent ;
+}
+.p1 { 
+    display: block;
+    width: 640px;
+    height: 75px;
+    margin-top: 280px;
+    margin-left: 600px;
+    font: 400 72px Cambria;
+    background-color: transparent;
+    color: #2a3f17;
+}
+.p2 {
+    display: block;
+    width: 1080px;
+    height: 95px;
+    margin-top: 30px;
+    margin-left: 400px;
+    font: 400 30px "微软雅黑";
+    background-color: transparent; 
+    color: #2a3f17;  
+}
+.EXPIORE {
+    margin-top: 120px;
+    margin-left: 400px;
+}
+.green {
+    position: absolute;
+    left: 45%;   
+}
+.green:hover {
+    transform:scale(0.8);
+}
+.bodyer1 {
+    position: absolute;
+    width: 1920px;
+    height: 760px;
+    margin-top: 1530px;
+    background: green url(../images4/鹿.png);
+}
+.w1  {
+    margin-left: 400px;
+    width: 1180px;
+    height: 1600px;
+    background-color: transparent;
+}
+.pra1 {
+   position: absolute;
+   display: flex;
+   justify-content: space-between;
+   width: 1180px;
+   height: 900px;
+   margin-top: -730px;
+   background-color: transparent;
+} 
+.n1:hover{
+   animation: huadong 3s;
+}
+.n2:hover{
+   animation: huadong 3s;
+}
+.n3:hover{
+   animation: huadong 3s;
+}
+.n3,.n2,.n1 {
+    background: transparent;
+}
+.niao3 {
+    margin-left: -40px;
+}
+.fly {
+   position: relative;
+   color: white;
+   font: 500 48px Cambria;
+   background-color: transparent;
+   left: 200px;
+   top: -150px;
+}
+.love {
+   position: relative;
+   color: white;
+   font: 500 48px Cambria;
+   background-color: transparent;
+   left: 170px;
+   top: -150px;
+}
+.stand {
+   position: relative;
+   color: white;
+   font: 500 48px Cambria;
+   background-color: transparent;
+   left: 110px;
+   top: -150px;
+}
+.text1 {
+    background-color: #e0dfdf;
+    position: absolute;
+    top: -60px;
+    height: 450px;
+    margin-left: 75px;
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 75px;
+    font: 400 20px "微软雅黑";
+}
+.box1:hover{
+    animation: xiangs 1s ease-in; 
+    animation-fill-mode: forwards;
+}
+.box1 {
+    background-color: transparent;
+}
+.sign {
+    position: relative;
+    margin-top: 330px;
+    margin-left: 450px;
+}
+.sign:hover{
+    transform: scale(0.7);
+    transition-timing-function: ease;  
+}
+.pra2 {
+    background-color: transparent;
+}
+.pra3 {
+    position: relative;
+}
+button {
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  margin: 1px;
+  padding: 10px 20px;
+  color: #2a3f17;
+  font: 400 48px "微软雅黑";
+  position: relative;
+  vertical-align: middle;
+  top: 380px;
+  left: 420px;
+  z-index: 9;
+  &::before,
+  &::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+.d1 {
+  transition: color 0.25s; 
+  &::before,
+  &::after {
+    border: 9px solid transparent;
+    width: 0;
+    height: 0; /*边框不可见 */
+  }
+  &::before {
+    top: 0;
+    left: 0;
+  }
+  &::after {
+    bottom: 0;
+    right: 0;
+  }
+  &:hover::before,
+  &:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+  &:hover::before {
+    border-top-color: #2a3f17; 
+    border-right-color:#2a3f17;
+    transition:
+      width 0.25s ease-out, 
+      height 0.25s ease-out 0.25s; 
+  }
+  &:hover::after {
+    border-bottom-color: #2a3f17; 
+    border-left-color:#2a3f17;
+    transition:
+      border-color 0s ease-out 0.5s, 
+      width 0.25s ease-out 0.5s,
+      height 0.25s ease-out 0.75s; 
+  }
+}
+.t1 {
+    position: absolute;
+    top: 410px;
+    left: -30px;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    width: 1200px;
+    height: 410px;
+    z-index: 3;
+}
+.maa,.daishuu,.shizii,.niaoo {
+    position: relative;
+    background-color: transparent;
+}
+.maa:hover{
+   animation: huadong1 2s;
+}
+.daishuu:hover{
+   animation: huadong1 2s;
+}
+.shizii:hover{
+   animation: huadong1 2s;
+}
+.niaoo:hover{
+   animation: huadong1 2s;
+}
+.a1 {
+    position: absolute;
+    top: 350px;
+    left: 50px;
+    width: 200px;
+    height: 30px;
+    color: #2a3f17;
+    font: 400 22px "微软雅黑";
+    background-color: transparent;
+    z-index: 6;
+}
+.a2 {
+    position: absolute;
+    top: 350px;
+    left: 40px;
+    width: 200px;
+    height: 30px;
+    color: #2a3f17;
+    font: 400 22px "微软雅黑";
+    background-color: transparent;
+    z-index: 6;
+}
+.a3 {
+    position: absolute;
+    top: 350px;
+    left: 40px;
+    width: 200px;
+    height: 30px;
+    color: #2a3f17;
+    font: 400 22px "微软雅黑";
+    background-color: transparent;
+    z-index: 6;
+}
+.a4 {
+    position: absolute;
+    top: 350px;
+    left: 45px;
+    width: 200px;
+    height: 30px;
+    color: #2a3f17;
+    font: 400 22px "微软雅黑";
+    background-color: transparent;
+    z-index: 6;
+}
+.more {
+    position: absolute;
+    width: 300px;
+    height: 70px;
+    margin-top: 910px;
+    margin-left: 420px;
+    border: 2px  solid rgb(25, 55, 21);
+    color: rgb(25, 55, 21);
+    background-color: transparent;
+    font-family:微软雅黑;
+    font-size: 40px;
+    text-align: center;
+    line-height: 70px;
+    transition: all 2s;
+    z-index: 9;
+} 
+.more:hover {
+    background-color: rgb(25, 55, 21);
+    color: azure;
+}
+.bodyer2 {
+    position: relative;
+    top: 2390px;
+    width: 1920px;
+    height: 1600px;
+}
+.w2 {
+    display: flex;
+    justify-content: flex-start;
+    width: 1420px;
+    height: 1100px;
+    background-color:transparent;
+}
+.song {
+    width: 702px;
+    height: 1020px;
+    background: url(../images4/松鼠.png) no-repeat;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 702px;
+    height: 1020px;
+}
+.the {
+    position: absolute;
+    top: 760px;
+    left: 1080px;
+    width: 180px;
+    height: 45px;
+    color: #2a3f17;
+    font: 400 36px "微软雅黑";
+    background-color: transparent;
+}
+.the:hover {
+    margin-top: -50px;
+}
+.textarea {
+    position: absolute;
+    top: 830px;
+    left: 1080px;
+    width: 650px;
+    height: 210px;
+    color: #2a3f17;
+    font: 400 24px "微软雅黑";
+    background-color: transparent;
+}
+.textarea:hover {
+    font-size: 28px;
+}
+.quan1 {
+    position: absolute;
+    top: 1020px;
+    left: 1080px;
+    background-color: transparent;
+}
+.quan111 {
+    position: absolute;
+    left: 20px;
+    color: #2a3f17;
+    font: 400 52px "微软雅黑";
+    background-color: transparent;
+}
+.quan2 {
+    position: absolute;
+    top: 1185px;
+    left: 1080px;
+}
+.quan222 {
+    position: absolute;
+    left: 20px;
+    color: #2a3f17;
+    font: 400 52px "微软雅黑";
+    background-color: transparent;
+}
+.quan3 {
+    position: absolute;
+    top: 1355px;
+    left: 1080px;
+}
+.quan333 {
+    position: absolute;
+    left: 20px;
+    color: #2a3f17;
+    font: 400 52px "微软雅黑";
+    background-color: transparent;
+}
+.quan4 {
+    position: absolute;
+    top: 1520px;
+    left: 1080px;
+}
+.quan444 {
+    position: absolute;
+    left: 20px;
+    color: #2a3f17;
+    font: 400 52px "微软雅黑";
+    background-color: transparent;
+}
+.look {
+    position: relative;
+    left: 60px;
+    top: -15px;
+    color: #2a3f17;
+    font: 400 24px "微软雅黑";
+    background-color: transparent;
+}
+.quan1:hover {
+    transform: translateX(100px);
+    transition-duration: 2s;
+}
+.quan2:hover {
+    transform: translateX(100px);
+    transition-duration: 2s;
+}
+.quan3:hover {
+    transform: translateX(100px);
+    transition-duration: 2s;
+}
+.quan4:hover {
+    transform: translateX(100px);
+    transition-duration: 2s;
+}
+.cul {
+    position: relative;
+    left: 60px;
+    top: -10px;
+    color: #2a3f17;
+    font: 400 24px "微软雅黑";
+    background-color: transparent;
+}
+.shoot {
+    position: relative;
+    left: 60px;
+    top: -15px;
+    color: #2a3f17;
+    font: 400 24px "微软雅黑";
+    background-color: transparent;
+}
+.har {
+    position: relative;
+    left: 60px;
+    top: -20px;
+    color: #2a3f17;
+    font: 400 24px "微软雅黑";
+    background-color: transparent;
+}
+.black {
+    width: 1920px;
+    height: 3px;
+    background-color: black;
+}
+.w3 {
+    width: 1920px;
+    height: 500px;
+    background-color: white;
+}
+.wild {
+    position: relative;
+    left: 420px;
+    top: 190px;
+    color: #2a3f17;
+    font: 400 40px "微软雅黑";
+    background-color: transparent;
+}
+.sea {
+    position: relative;
+    left: 420px;
+    top: 220px;
+    color: #2a3f17;
+    font: 400 40px "微软雅黑";
+    background-color: transparent;
+}
+.moer {
+    position: relative;
+    left: 710px;
+    top: 100px;
+    color: #2a3f17;
+    font: 400 30px "微软雅黑";
+    background-color: transparent;
+}
+.we {
+    position: relative;
+    left: 710px;
+    top: 110px;
+    color: #2a3f17;
+    font: 400 24px "微软雅黑";
+    background-color: transparent;
+}
+.big {
+    display: block;
+    position: relative;
+    left: 500px;
+    top: 10px;
+    width: 361px;
+    height: 73px;
+    background: transparent url(../images4/BigWorld.png);
+    text-decoration: none;
+}
+.big:hover {
+    animation: lv 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+} 
+@keyframes xiangs {
+    from {margin-top: 0px;}
+    to {transform: translate(0px,-30px);}
+}
+@keyframes huadong {
+    0% {margin-top: 0px;}
+    50% {margin-top: -100px;}
+    100% {margin-top: 0px;}
+}
+@keyframes huadong1 {
+    from {transform: translate(0px,0px);}
+    to {transform: translateY(-30px);}
+}
+@keyframes lv {
+    50% {margin-top: -30px;}
+    100% {margin-top: -50px;background: url("../images4/BigWorld1.png");}
+}
