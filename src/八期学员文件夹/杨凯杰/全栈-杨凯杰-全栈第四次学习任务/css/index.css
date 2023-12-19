@@ -1,0 +1,485 @@
+.background_turtle {
+    background-image: url(https://miandianyaowang.oss-cn-beijing.aliyuncs.com/%E4%B9%8C%E9%BE%9F.png);
+    width: 100%;
+    height: 1000px;
+    /*乌龟背景图片*/
+    margin: 0;
+}
+
+.camera {
+    position: relative;
+    left: 47%;
+    top: 100px;
+    /*照相机图片*/
+    animation: photography 2s linear infinite;
+    background-image: url(https://miandianyaowang.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E6%A0%87.png);
+    width: 200px;
+    height: 200px;
+}
+
+@keyframes photography {
+    0% {
+        width: 200px;
+        height: 200px
+    }
+
+    ;
+
+    100% {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.explore {
+    left: 500px;
+    top: 450px;
+    position: relative;
+    background-color: rgb(1, 80, 1);
+    font-size: 25px;
+    width: 200px;
+    color: rgba(255, 255, 255, 0.89);
+}
+
+.title {
+    width: 700px;
+    position: relative;
+    left: 30%;
+    top: 250px;
+    color: rgb(1, 80, 1);
+    text-indent: 100px;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.introduce {
+    width: 850px;
+    position: relative;
+    left: 30%;
+    top: 250px;
+    color: rgb(1, 80, 1);
+    font-size: 25px;
+}
+
+.flamingo_flex {
+    position: relative;
+    top: 550px;
+    width: 800px;
+    height: 400px;
+    left: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.flamingo {
+    width: 250px;
+    height: 400px;
+    /*transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 0;*/
+    transition: 1s ease-in-out;
+}
+
+.flamingo img {
+    width: 100%;
+    height: 100%;
+}
+
+.flamingo:hover {
+    transform: translateY(-50px);
+}
+
+
+.Fly {
+    top: -90px;
+    position: relative;
+    font-size: 25px;
+    color: white;
+    left: 160px;
+}
+
+.Love {
+    top: -90px;
+    position: relative;
+    color: white;
+    font-size: 25px;
+    left: 160px;
+}
+
+.Stand {
+    top: -90px;
+    position: relative;
+    color: white;
+    font-size: 25px;
+    left: 140px;
+}
+
+.background_deer {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    background-image: url(https://miandianyaowang.oss-cn-beijing.aliyuncs.com/%E9%B9%BF.png);
+    top: 600px;
+}
+
+.poster {
+    width: 750px;
+    height: 400px;
+    background-color: whitesmoke;
+    top: -100px;
+    border: 1px solid white;
+    left: 470px;
+    position: relative;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 0;
+    transition: 1s ease-in-out;
+}
+
+.poster:hover {
+    transform: translateY(-50px);
+}
+
+.information {
+    width: 750px;
+    height: 380px;
+    background-color: whitesmoke;
+    color: rgb(1, 80, 1);
+    font-size: 22px;
+}
+
+.signup {
+    left: 300px;
+    top: -50px;
+    position: relative;
+    background-color: rgb(1, 80, 1);
+    font-size: 25px;
+    width: 150px;
+    color: rgba(255, 255, 255, 0.89);
+    transition: 2s ease;
+}
+
+.signup:hover {
+    transform: scale(0.8);
+}
+
+@keyframes differ {
+    0% {
+        border: none;
+    }
+
+    25% {
+        border-top: 3px solid rgb(1, 80, 1);
+    }
+
+    50% {
+        border-top: 3px solid rgb(1, 80, 1);
+        border-right: 3px solid rgb(1, 80, 1);
+    }
+
+    75% {
+        border-top: 3px solid rgb(1, 80, 1);
+        border-right: 3px solid rgb(1, 80, 1);
+        border-bottom: 3px solid rgb(1, 80, 1);
+    }
+
+    100% {
+        border-top: 3px solid rgb(1, 80, 1);
+        border-right: 3px solid rgb(1, 80, 1);
+        border-bottom: 3px solid rgb(1, 80, 1);
+        border-left: 3px solid rgb(1, 80, 1);
+    }
+
+}
+
+#difference {
+    width: 150px;
+    height: 40px;
+    position: relative;
+    top: 690px;
+    color: rgb(1, 80, 1);
+    left: 45%;
+    font-size: 30px;
+}
+
+#difference:hover {
+    animation: differ 2s linear infinite;
+}
+
+.animal_flex {
+    position: relative;
+    top: 800px;
+    width: 800px;
+    height: 300px;
+    display: flex;
+    left: 25%;
+    justify-content: space-between;
+}
+
+.animal {
+    width: 180px;
+    height: 300px;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 0;
+    transition: 1s ease-in-out;
+}
+
+.animal:hover {
+    transform: translateY(-50px);
+}
+
+.image_horse {
+    height: 200px;
+    width: 180px;
+}
+
+.image_horse img {
+    width: 100%;
+    height: 100%;
+}
+
+.introduce_horse {
+    background-color: rgba(190, 187, 187, 0.511);
+    position: relative;
+    width: 100%;
+    top: -20px;
+    height: 90px;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 500;
+    color: rgb(1, 80, 1);
+}
+
+p {
+    position: relative;
+    left: 25px;
+
+    color: rgb(1, 80, 1);
+    text-decoration: underline;
+}
+
+.image_kangaroo {
+    height: 200px;
+    width: 180px;
+}
+
+.image_kangaroo img {
+    width: 100%;
+    height: 100%;
+}
+
+.introduce_kangaroo {
+    background-color: rgba(190, 187, 187, 0.511);
+    position: relative;
+    width: 100%;
+    top: -20px;
+    height: 90px;
+}
+
+.image_lion {
+    height: 200px;
+    width: 180px;
+}
+
+.image_lion img {
+    width: 100%;
+    height: 100%;
+}
+
+.introduce_lion {
+    background-color: rgba(190, 187, 187, 0.511);
+    position: relative;
+    width: 100%;
+    top: -20px;
+    height: 90px;
+}
+
+.image_hummingbird {
+    height: 200px;
+    width: 180px;
+}
+
+.image_hummingbird img {
+    width: 100%;
+    height: 100%;
+}
+
+.introduce_hummingbird {
+    background-color: rgba(190, 187, 187, 0.511);
+    position: relative;
+    width: 100%;
+    top: -20px;
+    height: 90px;
+}
+
+@keyframes example {
+    0% {
+        background-color: white;
+        color: rgb(1, 80, 1);
+    }
+
+    100% {
+        background-color: rgb(1, 80, 1);
+        color: white;
+    }
+}
+
+.knowmore {
+    position: relative;
+    top: 850px;
+    width: 200px;
+    height: 40px;
+    border: 1px solid rgb(1, 80, 1);
+    color: rgb(1, 80, 1);
+    font-size: 20px;
+    left: 43%;
+}
+
+.knowmore:hover {
+    animation-name: example;
+    animation-duration: 1.5s;
+}
+
+.squirrel_grid {
+    position: relative;
+    top: 930px;
+    width: 70%;
+    height: 930px;
+    left: 150px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    padding: 5px;
+    grid-template-columns: 600px 300px;
+}
+
+.squirrel_grid div {
+    padding: 20px 0;
+}
+
+.squirrel_image {
+    grid-row-start: 1;
+    grid-row-end: 7;
+    position: relative;
+    background-image: url(https://miandianyaowang.oss-cn-beijing.aliyuncs.com/%E6%9D%BE%E9%BC%A0.png)
+}
+
+.thePhoto {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0;
+}
+
+.thePhoto:hover {
+    transform: translateY(-20px);
+
+}
+
+p1 {
+    font-size: 25px;
+    color: rgb(1, 80, 1);
+    position: relative;
+    left: 70px;
+    top: 70px;
+}
+
+h4 {
+    position: relative;
+    top: 110px;
+    color: rgb(1, 80, 1);
+    left: 70px;
+    font-weight: 500;
+}
+
+.label {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 0;
+    transition: 1s ease-in-out;
+}
+
+.label:hover {
+    transform: translateX(80px);
+}
+
+.summary {
+    position: relative;
+    top: 1000px;
+    height: 400px;
+    width: 100%;
+    margin: 0;
+}
+
+.big_character {
+    position: relative;
+    top: 100px;
+    width: 250px;
+    height: 150px;
+    left: 15%;
+    font-size: 25px;
+    color: rgb(1, 80, 1);
+}
+
+.little_character {
+    position: relative;
+    top: -65px;
+    width: 200px;
+    height: 60px;
+    left: 27%;
+}
+
+h5 {
+    color: rgb(1, 80, 1);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.bigworld {
+    position: relative;
+    left: 70%;
+    background-color: rgb(96, 145, 96);
+    color: white;
+    top: -100px;
+    width: 150px;
+    height: 40px;
+    font-size: 25px;
+    border: 1px solid white;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 0;
+    transition: 1s ease-in-out;
+}
+
+@keyframes bigworld {
+    0% {
+        background-color: rgb(96, 145, 96);
+        color: white;
+    }
+
+    100% {
+        background-color: white;
+        color: rgb(96, 145, 96);
+    }
+}
+
+.bigworld:hover {
+    animation-name: bigworld;
+    animation-duration: 2s;
+    transform: translateY(-20px);
+}
