@@ -1,0 +1,190 @@
+.all{
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: darkgreen;
+    align-content: space-between;
+    height: 2800px;
+}
+.search{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.animal{
+    width: 100%;
+    text-align: center;
+    color:darkgreen;
+}
+.explore1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+}
+.explore{
+    position: relative;
+    background-color:darkgreen;
+    color: white;
+    width: 10%;
+    text-align: center;
+}
+.exploreempty{
+    width: 31%;
+}
+.threephoto{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    height: 250px;
+}
+
+.empty{
+    width: 2.85%;
+}
+.bird{
+    width: 100%;
+    height: 100%;
+}
+.first{
+    position: relative;
+    transition-duration: 1s;
+}
+.second{
+    position: relative;
+    transition-duration: 1s;
+}
+.third{
+    position: relative;
+    transition-duration: 1s;
+}
+.fly{
+    position: absolute;
+    color: white;
+    right: 20%;
+    bottom: 20%;
+}
+.signup{
+    width: 35%;
+    position: relative;
+    background-color:gainsboro;
+    font-size:xx-small;
+    text-align: center;
+    color: darkgreen;
+    height: 280px;
+    transition-duration: 1s;
+}
+.SIGNUP{
+    background-color: darkgreen;
+    width: 20%;
+    position: absolute;
+    left: 39%;
+    bottom: 10%;
+    color: white;
+    font-size:large;
+    transition-duration: 1s;
+}
+.diff{
+    width: 100%;
+    text-align: center;
+}
+.diffbox{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 270px;
+}
+.diffempty{
+    width: 1%;
+}
+.fourphoto{
+    width: 11%;
+    height: 100%;
+    background-color:lightgray;
+    transition-duration: 1s;
+}
+.boxphoto{
+    height: 60%;
+    width: 100%;
+}
+.squirreltext{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.squirrel{
+    width:30% ;
+}
+.squitext{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.realsqui{
+    width: 100%;
+}
+.hahah{
+    width: 5%;
+}
+.bottom{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 200px;
+    width: 100%;
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-color: darkgreen;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+.bottomtext{
+    width: 13%;
+    align-self: center;
+}
+.boxh1{
+    transition-duration: 1s;
+}
+.lala:hover{
+    transform: scale(0.7);
+}
+.first:hover{
+    transform: translate(0,-50px);
+}
+.second:hover {
+    transform: translate(0, -50px);
+}
+.third:hover {
+    transform: translate(0, -50px);
+}
+.signup:hover{
+    transform: translate(0,-40px);
+}
+.SIGNUP:hover{
+    transform: scale(0.7);
+}
+.fourphoto:hover{
+    transform: translate(0,-30px);
+}
+.lalala:hover{
+    border-style: solid;
+    border-color: darkgreen;
+    border-width: 5px;
+}
+.haha:hover{
+    background-color: darkgreen;
+    color: white;
+}
+.boxh1:hover{
+    transform: translate(80px,0);
+}
+.squititle:hover{
+    transform: translate(0,-40px);
+}
+.boxh:hover{
+    transform: scale(1.3);
+}
+
