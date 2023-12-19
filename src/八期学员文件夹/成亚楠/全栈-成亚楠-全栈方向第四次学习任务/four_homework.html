@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>four_homework</title>
+    <link rel="stylesheet" href="iconfont.css">
+    <style>
+      .navigation{
+        display: flex;
+        width: 1000px;
+        height: 30px;
+        background-color: #f8f8f8;
+        margin:0 auto;
+        justify-content: space-between;
+      }
+      .iconfont:hover{
+      transform: scale(0.8,0.8);
+      }
+      .iconfont{
+        width: 40px;
+        height: 30px;
+        transition-duration: 1s;
+      }
+      .photography_background{
+        width: 1000px;
+        height: 550px;
+        margin:0 auto;
+        background-image: url(https://typora--first.oss-cn-huhehaote.aliyuncs.com/%E4%B9%8C%E9%BE%9F.png);
+        background-size: 1000px 550px;
+      }
+      .camera{
+        position: relative;
+        width: 100px;
+        height: 100px;
+        top: -30px;
+        margin: auto;
+        background-color: rgb(53, 51, 39);
+        background-image: url(https://typora--first.oss-cn-huhehaote.aliyuncs.com/%E7%9B%B8%E6%9C%BA2.png);
+        background-size: 100px 100px;
+        transition-duration: 1s;
+      }
+      .camera:hover{
+        transform: scale(0.7,0.7);
+      }
+      .text_photography{
+        height: 70px;
+        width: 280px;
+        margin: auto;
+        color: #2a3f17;
+        font-size: 30px;
+        text-align: center;
+        font-family: Cambria;
+        line-height: 80px;
+      }
+      .text1{
+        position: relative;
+        height: 60px;
+        width: 600px;
+        top: 10px;
+        margin: auto;
+        font-size: 17px;
+        color: #2a3f17;
+      }
+      .explore{
+        position: relative;
+        width: 150px;
+        height: 50px;
+        left: 200px;
+        top: 100px;
+        background-color: #2a3f17;
+        line-height: 50px;
+        text-align: center;
+        font-size: large;
+        color:#ffffff ;
+      }
+      .three_show_background{
+        width: 1000px;
+        height: 370px;
+        margin:0 auto;
+        background-color: #f8f8f8;
+      }
+      .three_show{
+        display: flex;
+        position: relative;
+        height: 320px;
+        width: 600px;
+        top: -100px;
+        margin: auto;
+        justify-content: space-between;
+      }
+      .show{
+        width: 180px;
+        height: 320px;
+        background-color: floralwhite;
+        transition: all 1s;
+      }
+      .show:hover{
+        transform: translate(0,-50px);
+      }
+      .sign1{
+        position: relative; 
+        left: 110px;
+        bottom: 100px;
+        color:white ;
+        font-family: Cambria;
+        font-size: xx-large;
+      }
+      .sign2{
+        position: relative; 
+        left: 80px;
+        bottom: 100px;
+        color:white ;
+        font-family: Cambria;
+        font-size: xx-large;
+      }
+      .sign3{
+        position: relative; 
+        left: 70px;
+        bottom: 100px;
+        color:white ;
+        font-family: Cambria;
+        font-size: xx-large;
+      }
+      .sign_up_background{
+        width: 1000px;
+        height: 450px;
+        margin: auto;
+        background-image: url(https://typora--first.oss-cn-huhehaote.aliyuncs.com/%E9%B9%BF.png);
+        background-size:1000px 450px ;
+      }
+      .text_background:hover{
+        transform: translate(0,-30px);
+      }
+      .text_background{
+        position: relative;
+        top: -70px;
+        margin: auto;
+        width: 500px;
+        height: 350px;
+        background-color: #e0dfdf;
+        transition: all 1s;
+      }
+      .text{
+        position: relative;
+        top: 25px;
+        width: 450px;
+        height: 200px;
+        margin: auto;
+        font-size: 15px;
+        color: #2a3f17;
+      }
+      .sign_up{
+        position: relative;
+        top: 70px;
+        margin: auto;
+        width: 150px;
+        height: 50px;
+        background-color: #2a3f17;
+        text-align: center;
+        line-height: 50px;
+        font-size: 22px;
+        color: white;
+        transition-duration: 1s;
+      }
+      .sign_up:hover{
+        transform: scale(0.9);
+      }
+      .difference_background{
+        margin: auto;
+        height: 480px;
+        width: 1000px;
+        background-color: #f8f8f8;
+      }
+      div{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .difference{
+        position: relative;
+        top: 30px;
+        width: 200px;
+        height: 40px;
+        margin: auto;
+        text-align: center;
+        line-height: 60px;
+        font-size: xx-large;
+      }
+      
+      .four_show{
+        display: flex;
+        position: relative;
+        display: flex;
+        height: 200px;
+        width: 600px;
+        top: 60px;
+        margin: auto;
+        background-color: whitesmoke;
+        justify-content: space-between;
+      }
+      .show2{
+        display: flex;
+        width: 200px;
+        height: 200px;
+        background-color: #e0dfdf;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all 1s;
+      }
+      .show2:hover{
+        transform: translate(0,-30px);
+      }
+      .child1{
+        height: 120px;
+        background-color: chartreuse;
+        
+      }
+      .child2{
+        height: 40px;
+        background: rgba(red, green, blue, alpha);
+        font-size: larger;
+        text-align: center;
+        line-height: 40px;
+      }
+      .child3{
+        height: 40px;
+        background: rgba(red, green, blue, alpha);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        font-size: small;
+        text-align: center;
+        line-height: 40px;
+      }
+      .show2:nth-child(-n+3){
+        margin-right: 10px;
+      }
+      .know_more{
+        position: relative;
+        top: 120px;
+        width: 250px;
+        height: 50px;
+        margin: auto;
+        border: 2px solid #2a3f17;
+        text-align: center;
+        line-height: 50px;
+        font-size: x-large;
+        color: #2a3f17;
+        transition: background-color 1s,color 1s;
+      }
+      .know_more:hover{
+        background-color:#2a3f17;
+        color: white;
+      }
+      .squirrel_background{
+        width: 1000px;
+        height: 600px;
+        margin: auto;
+        background-color:#f8f8f8;
+      }
+      .photo{
+
+        position: relative;
+        top: 50px;
+        left: 100px;
+        width: 400px;
+        height: 500px;
+        background-image: url(https://typora--first.oss-cn-huhehaote.aliyuncs.com/%E6%9D%BE%E9%BC%A0.png);
+        background-size:400px 500px ;
+      }
+      .the_photo{
+        position: relative;
+        left: 600px;
+        top: -430px;
+        width: 150px;
+        height: 40px;
+        color: #2a3f17;
+        font-size: x-large;
+        transition: all 1s;
+      }
+      .the_photo:hover{
+        transform: translate(0,-30px);
+      }
+      .text_squirrel{
+        position: relative;
+        left: 600px;
+        top: -410px;
+        width: 270px;
+        height: 100px;
+        color: #2a3f17;
+        font-size: small;
+        transition-duration: 0.5s;
+      }
+      .text_squirrel:hover{
+        transform: translate(50px,10px) scale(1.2);
+      }
+      .choice{
+        display: flex;
+        position:relative;
+        left: 600px;
+        bottom: 400px;
+        width: 270px;
+        height: 300px;
+        flex-direction: column;
+        justify-content: space-between;
+        
+      }
+      .choice1{
+        width: 270px;
+        height: 40px;
+        color: #2a3f17;
+        transition: all 1s;
+      }
+      .choice1:hover{
+        transform: translate(50px,0);
+      }
+      .footing{
+        width: 1000px;
+        height: 300px;
+        margin: auto;
+        background-color: #f8f8f8;
+        border-top: 2px solid #000000;
+      }
+      .big{
+        position: relative;
+        display: flex;
+        width: 170px;
+        height: 100px;
+        top: 100px;
+        left: 180px;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .box1{
+        width: 170px;
+        height: 40px;
+        text-align: center;
+        line-height: 30px;
+        font-size: x-large;
+      }
+      .small{
+        position: relative;
+        display: flex;
+        width: 120px;
+        height: 100px;
+        left: 360px;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .box2{
+        width: 120px;
+        height: 30px;
+      }
+      .big_world{
+        position: relative;
+        bottom: 70px;
+        left: 670px;
+        width: 210px;
+        height: 50px;
+        background-color: #949f8b;
+        line-height: 50px;
+        text-align: center;
+        font-size: x-large;
+      }
+    </style> 
+</head>
+<body>
+  <div class="navigation">
+    <span class="iconfont">&#xe62f;</span>
+    <span class="iconfont">&#xe8d6;</span>
+  </div>
+  <div class="photography_background">
+    <div class="camera"></div>
+    <div class="text_photography">Animal Photography</div>
+    <div class="text1">A silhouette of them, a simple little acttion, here are the photographer’s 
+eyes the best of them, their laughter, their love, their every vivid, are recored 
+by us.</div>
+    <div class="explore">EXPLORE</div>
+  </div> 
+  <div class="three_show_background">
+    <div class="three_show">
+      <div class="show" ><img src="https://typora--first.oss-cn-huhehaote.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F1.png" style="display: block;width: 100%;height: 100%;"/>
+      <div class="sign1">Fly</div>
+    </div>
+      <div class="show"><img src="https://typora--first.oss-cn-huhehaote.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F2.png"style="display: block;width: 100%;height: 100%;"/>
+      <div class="sign2">Love</div>
+      </div>
+      <div class="show"><img src="https://typora--first.oss-cn-huhehaote.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F3.png"style="display: block;width: 100%;height: 100%;"/>
+          <div class="sign3">Stand</div>
+        </div>
+    </div>
+  </div>
+  <div class="sign_up_background">
+    <div class="text_background">
+      <div class="text">Family Farms is the best place,where I can buy fruit,vegetable,meat,honey,milk,eggs and so on for my retaurant directly fromupplier. Super convinient.Thank you” xdccnfc cfvfesc cfnccnjdcn cfjdcdsr dcwwzwqg ejs dddc ddf fnfjv eij fvnv jnxzexh cncdcmdsc ddnc, cddmdcds dncdn cdcn wqeoeas, dcndassasas,cdcndcnc cciqoskxm cbdcpqslwq nfnere nfncsfjjc dndcww frhfjnc qpdjweiw cnncqe, cqjsdc ccn dcjndc , ncf cdncjd dcdjcndq csjncq dcdncf dcdjdnc cdjsq,qkodkqe wqcnpsdc cdnqq qcw,cqnonxj dcdcnd dcnjsdvb wcnwq cowwncjq jjcnjncqnw wcq c wd cwch, cnjncnc ececdcnncdwnc	nenwc dcnnc cjcj,c cjrnc wecwc.</div>
+      <div class="sign_up">SIGN UP</div>
+    </div>
+  </div>
+  <div class="difference_background">
+    <div class="difference">Difference</div>
+    <div class="four_show">
+      <div class="show2"><img style="height: 120px;" src="https://typora--first.oss-cn-huhehaote.aliyuncs.com/%E9%A9%AC.png" >
+        <div class="child2">Horse</div>
+        <div class="child3">A difference story</div>
+      </div>
+      <div class="show2"><img style="height: 120px;" src="https://typora--first.oss-cn-huhehaote.aliyuncs.com/%E8%A2%8B%E9%BC%A0.png" >
+        <div class="child1"></div>
+        <div class="child2">Kangaroo</div>
+        <div class="child3">A difference story</div>
+      </div>
+      <div class="show2"><img  style="height: 120px;" src="https://typora--first.oss-cn-huhehaote.aliyuncs.com/%E7%8B%AE%E5%AD%90.png">
+        <div class="child1"></div>
+        <div class="child2">Lion</div>
+        <div class="child3">A difference story</div>
+      </div>
+      <div class="show2"><img style="height: 120px;" src="https://typora--first.oss-cn-huhehaote.aliyuncs.com/%E5%B0%8F%E9%B8%9F.png" >
+        <div class="child1"></div>
+        <div class="child2">Hummingbird</div>
+        <div class="child3">A difference story</div>
+      </div>
+    </div>
+    <div class="know_more">Know more</div>
+  </div>
+  <div class="squirrel_background">
+    <div class="photo"></div>
+    <div class="the_photo">The Photo</div>
+    <div class="text_squirrel">“Family Farms is the best place where I can buy fruit,vegetable,meat,honey,milk,eggs and so on for my retaurant directly from supplier. Super convinient.Thank you”</div>
+    <div class="choice">
+      <span class="choice1"><span style="font-size: 50px;">&#9312</span>&nbsp&nbsp&nbsp&nbspLooking for it</span>
+      <span class="choice1"><span style="font-size: 50px;">&#9313</span>&nbsp&nbsp&nbsp&nbspCultivate feelings</span>
+      <span class="choice1"><span style="font-size: 50px;">&#9314</span>&nbsp&nbsp&nbsp&nbspShooting</span>
+      <span class="choice1"><span style="font-size: 50px;">&#9315</span>&nbsp&nbsp&nbsp&nbspHarvest achievement
+</span>
+    </div>
+  </div>
+  <div class="footing">
+    <div class="big">
+      <div class="box1">IN THE WILD</div>
+      <div class="box1">IN THE SEA</div>
+    </div>
+    <div class="small">
+      <div class="box2"><span style="color: 4d5b41;">MORE</span></div>
+      <div class="box2"><span style="color: #949f8b">We create art.</span></div>
+      <div class="box2"><span style="color: #949f8b">We create life</span></div>
+    </div>
+    <div class="big_world"><span style="color: #f8f8f8;">Big World</span></div>
+  </div>
+</body>
+</html>
