@@ -22,7 +22,7 @@ hr {
 }
 .banner {
     height: 880px;
-    background-image: url(images/乌龟.png);
+    background-image: url(https://liangmoxvan.oss-cn-beijing.aliyuncs.com/%E4%B9%8C%E9%BE%9F.png);
     background-repeat: no-repeat;
     background-position:top center;
     text-align: center;
@@ -131,7 +131,7 @@ hr {
 }
 .sign {
     position: relative;
-    background-image: url(images/鹿.png);
+    background-image: url(https://liangmoxvan.oss-cn-beijing.aliyuncs.com/%E9%B9%BF.png);
     height: 760px;
     background-repeat: no-repeat;
     background-position:top center;
