@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1702432100750') format('truetype');
+}
+
+.iconfont_yuan {
+  font-family: "iconfont" !important;
+  font-size: 150px;
+  font-style: normal;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-24gl-circle:before {
+  content: "\ea97";
+}
+
