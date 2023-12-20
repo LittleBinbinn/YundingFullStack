@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Animaton</title>
+    <style>
+        .box{
+            height: 4674px;
+            /* background-color: aqua; */
+            margin: 0 auto;
+        }
+        .search{
+            
+            height: 50px;
+            background-color: white;
+        }
+        .directory{
+            position: relative;
+            background-color: white;
+            width: 76px;
+            height: 50px;
+            transition-duration: 1s;
+        }
+        .directory:hover{
+            transform: scale(0.6);
+        }
+        .directoryposition{
+            position: absolute;
+            left: 27px;
+            top: 15px;
+        }
+        .circle{
+            
+            position: relative;
+            top:-50px ;
+            left: 1330px;
+            background-color: white;
+            width: 76px;
+            height: 50px;
+        }
+        .circleposition{
+            position: absolute;
+            top: 15px;
+            right: 27px;
+        }
+        .photography{
+            position: relative;
+            height: 881px;
+            background-color: blue;
+        }
+        .capture{
+            position: absolute;
+            left: 44%;
+            top:-50px;
+            width: 198px;
+            height: 201px;
+            background-color: purple;
+            transition-duration: 1s;
+        }
+        .capture:hover{
+            transform: scale(0.9);
+        }
+        .tortoise{
+            position: absolute;
+            width: 1406px;
+            position: absolute;
+            top: 152px;
+            height: 407px;
+            background-color: transparent;
+        }
+        .Animalphotography{
+            position: absolute;
+            width: 500px;
+            height: 100px;
+            background-color: transparent;
+            left: 500px;
+            top: 60px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 48px;
+            color: #2a3f17;
+        }
+        .topexplore{
+            position: absolute;
+            width:950px ;
+            height: 230px;
+            background-color: transparent;
+            top: 180px;
+            left: 290px;
+            font-size: 35px;
+            color: #5e6b51;
+            
+        }
+        .explore{
+            position: absolute;
+            top: 559px;
+            width: 1406px;
+            height: 72px;
+            background-color: transparent;
+        }
+        .explorebottom{
+            position: relative;
+            width:300px ;
+            height:72px ;
+            background-color: #2a3f17;
+            left: 283px;
+            color: white;
+            font-size: 40px;
+            text-align: center;
+            line-height: 72px;
+        }
+        .blank{
+            position: relative;
+            width: 1406px;
+            height: 599px;
+            background-color: white;
+    
+        }
+        .fly{
+            position: absolute;
+            left: 155px;
+            top: -147px;
+            width: 333px;
+            height:500px ;
+            background-color: transparent;
+            transition-duration: 1s;
+        }
+        .flybox{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: transparent;
+            left: 230px;
+            top: -104px;
+            font-size: 47px;
+            color: white;
+
+        }
+        .fly:hover{
+            transform: translate(0,-70px);
+        }
+        .love{
+            position: absolute;
+            left: 38%;
+            top: -147px;
+            width:333px ;
+            height: 499px;
+            background-color: transparent;
+            transition-duration: 1s;
+        }
+        .lovebox{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: transparent;
+            left: 206px;
+            top: -104px;
+            font-size: 47px;
+            color: white;
+
+        }
+        .love:hover{
+            transform: translate(0,-70px);
+        }
+        .stand{
+            position: absolute;
+            right: 155px;
+            top: -147px;
+            width:333px ;
+            height: 499px;
+            background-color: transparent;
+            transition-duration: 1s;
+        }
+        .standbox{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: transparent;
+            left: 166px;
+            top: -104px;
+            font-size: 47px;
+            color: white;
+
+        }
+        .stand:hover{
+            transform: translate(0,-70px);
+        }
+        .giraffa
+        {
+            position: relative;
+            height:760px;
+            width: 1406px;
+            background-color: blueviolet;
+        }
+        .SIGNUP{
+            /* position: absolute; */
+            position: relative;
+            width: 700px;
+            height: 500px;
+            background-color: #e0dfdf;
+            top: -780px;
+            left:25%;
+            transition-duration: 1s;
+            
+        }
+        .rubbish{
+            padding: 30px;
+            color: #6d7665;
+            font-size: 20px;
+            text-align: center;
+            line-height: 30px;
+        }
+        .SIGNUP:hover{
+            transform: translate(0,-30px);
+        }
+        .SIGNUPbottom{
+            position: relative;
+            height: 100px;
+            width: 300px;
+            background-color:#2a3f17 ;
+            top: 50x;
+            left: 30%;
+            transition-duration: 1s;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            font-size: 35px;
+        }
+        .SIGNUPbottom:hover{
+            transform: scale(0.8);
+        }
+        .difference{
+            height:158px ;
+            width:1406px ;
+            background-color: paleturquoise;
+        }
+        /* difference 部分不太会做 */
+        /* .differencebox{
+            position: relative;
+            width: 200px;
+            height: 158px;
+            background-color: darksalmon;
+            left: 340px;
+            animation-name: run;
+            animation-duration: 2s;
+        }
+        @keyframes run {
+            0%{}
+            25%{border-top: solid 1px [indianred]; }
+            50%{border-right: solid 1px;}
+            75%{border-bottom: solid 1px;}
+            100%{border-left: solid 1px;}
+            
+        } */
+        .animals{
+            position: relative;
+            height: 445px;
+            width: 1406px;
+            background-color: transparent;
+        }
+        .horse{
+            position: absolute;
+            width: 263px;
+            height: 417px;
+            background-color: transparent;
+            left: 153px;
+            transition-duration: 1s;
+        }
+        .horse:hover{
+            transform: translate(0,-30px);
+        }
+        .pic{
+            height: 262px;
+            width: 263px;
+            background-color: transparent;
+        }
+        .english{
+                height: 72px;
+                width: 263px;
+                background-color: #e0dfdf;
+                line-height: 72px;
+                text-align: center;
+                color: black;
+                font-size: 32px;
+        }
+        .story{
+            height: 87px;
+            width: 263px;
+            background-color:#e0dfdf;
+            font-size: 23px;
+            line-height: 87px;
+            text-align: center;
+        }
+        .kangaroo{
+            position: absolute;
+            width: 263px;
+            height: 417px;
+            background-color: transparent;
+            left: 432px;
+            transition-duration: 1s;
+        }
+        .kangaroo:hover{
+            transform: translate(0,-30px);
+        }
+        .picc{
+            height: 262px;
+            width: 263px;
+            background-color: transparent;
+        }
+        .englishh{
+                height: 72px;
+                width: 263px;
+                background-color: #e0dfdf;
+                line-height: 72px;
+                text-align: center;
+                color: black;
+                font-size: 32px;
+        }
+        .storyy{
+            height: 87px;
+            width: 263px;
+            background-color:#e0dfdf;
+            font-size: 23px;
+            line-height: 87px;
+            text-align: center;
+        }
+        .lion{
+            position: absolute;
+            width: 263px;
+            height: 417px;
+            background-color: transparent;
+            left: 711px;
+            transition-duration: 1s;
+        }
+        .lion:hover{
+            transform: translate(0,-30px);
+        }
+        .piccc{
+            height: 262px;
+            width: 263px;
+            background-color: #e0dfdf;
+        }
+        .englishhh{
+                height: 72px;
+                width: 263px;
+                background-color:#e0dfdf;
+                font-size: 32px;
+                line-height: 72px;
+                text-align: center;
+                color: black;
+                line-height: 72px;
+                text-align: center;
+                
+                font-size: 32px;
+        }
+        .storyyy{
+            height: 87px;
+            width: 263px;
+            background-color: #e0dfdf;
+            font-size: 23px;
+            line-height: 87px;
+            text-align: center;
+        }
+        .hummingbird{
+            position: absolute;
+            width: 263px;
+            height: 417px;
+            background-color: transparent;
+            right: 153px;
+            transition-duration: 1s;
+        }
+        .hummingbird:hover{
+            transform: translate(0,-30px);
+        }
+        .picccc{
+            height: 262px;
+            width: 263px;
+            background-color: transparent;
+        }
+        .englishhhh{
+                height: 72px;
+                width: 263px;
+                background-color:#e0dfdf;
+                line-height: 72px;
+                text-align: center;
+                color: black;
+                font-size: 32px;
+        }
+        .storyyyy{
+            height: 87px;
+            width: 263px;
+            background-color:#e0dfdf;
+            font-size: 23px;
+            line-height: 87px;
+            text-align: center;
+        }
+        .knowmore{
+            width: 1406px;
+            height: 245px;
+            background-color: transparent;
+        }
+        .knowmorebottom{
+            position: relative;
+            width: 600px;
+            height: 100px;
+            background-color: white;
+            top: 60px;
+            left: 430px;
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px;
+            border: solid 1px;
+            border-color: #2a3f17;
+            color: #2a3f17;
+            transition-duration: 1s;
+        }
+        .knowmorebottom:hover{
+        background-color:#2a3f17 ;
+        color: white;
+        }
+        .squirrel{
+            position: relative;
+            width:1406px ;
+            height:1018px ;
+            background-color: white;
+        }
+        .squirrelpic{
+            position: absolute;
+            width: 683px;
+            height:1018px ;
+            background-color: darkred;
+            left: 90px;
+        }
+        .thephoto{
+            position: absolute;
+            width: 300px;
+            height:89px ;
+            background-color: white;
+            right:  280px;
+            top: 58px;
+            transition-duration: 1s;
+            color: #2a3f17;
+            font-size: 38px;
+        }
+        .thephoto:hover{
+            transform: translate(0,-50px);
+        }
+        .more{
+            position: absolute;
+            width: 500px;
+            height: 176px;
+            background-color: white;
+            top: 143px;
+            left: 826px;
+            transition-duration: 0.1s;
+            transition-timing-function: cubic-bezier(0,.92,.85,.59);
+            color: #2a3f17;
+            font-size: 23px;
+        }
+        .more:hover{
+            transform: translate(70px,0);
+            
+        }
+        
+        .one{
+            position: absolute;
+            width: 300px;
+            height: 174px;
+            background-color: white;
+            left: 826px;
+            top: 319px;
+            transition-duration: 1s;
+            transition-timing-function: linear;
+        }
+        .one:hover{
+            transform: translate(70px,0);
+        }
+        .big{
+            font-size: 50px;
+            color: #2a3f17;
+        }
+        .small{
+            position: relative;
+            width: 400px;
+            top: -40px;
+            left: 60px;
+            font-size: 26px;
+            color: #55634b;
+        }
+        .two{
+            position: absolute;
+            width: 300px;
+            height: 174px;
+            background-color: white;
+            left: 826px;
+            top: 493px;
+            transition-duration: 1s;
+            transition-timing-function: linear;
+        }
+        .two:hover{
+            transform: translate(70px,0);
+        }
+        .three{
+            position: absolute;
+            width: 300px;
+            height: 174px;
+            background-color: white;
+            left: 826px;
+            top: 667px;
+            transition-duration: 1s;
+            transition-timing-function: linear;
+        }
+        .three:hover{
+            transform: translate(70px,0);
+        }
+        .four{
+            position: absolute;
+            width: 300px;
+            height: 174px;
+            background-color: white;
+            left: 826px;
+            top: 841px;
+            transition-duration: 1s;
+            transition-timing-function: linear;
+        }
+        .four:hover{
+            transform: translate(70px,0);
+        }
+        .line{
+            width: 1406px;
+            height: 60px;
+            background-color: white;
+            border-bottom: solid 1px;
+            border-left-color: #000000;
+        }
+        .end{
+            position: relative;
+            width: 1406px;
+            height: 460px;
+            
+        }
+        .left{
+            position: absolute;
+            position: relative;
+            width: 230px;
+            height: 460px;
+            left: 330px;
+            
+            font-size: 30px;
+            color: #949f8b;
+            line-height: 60px;
+            
+        }
+        .leftone{
+            position: absolute;
+            width:230px ;
+            height: 250px;
+            top: 200px;
+            left: 50px;
+        }
+        .left{
+            position: absolute;
+            width: 230px;
+            height: 460px;
+            left: 330px;
+            
+            font-size: 30px;
+            color: #949f8b;
+            line-height: 60px;
+            
+        }
+        .center{
+            position: absolute;
+            width: 200px;
+            height: 460px;
+            left: 560px;
+            
+        }
+        .centerone{
+            position:absolute;
+            width: 200px;
+            height: 50px;
+            top: 210px;
+            font-size: 25px;
+            color:#4d5b41;
+        }
+        .centertwo{
+            position:absolute;
+            width: 200px;
+            height: 150px;
+            font-size: 20px;
+            color:#697461;
+            top: 260px;
+        }
+        .left{
+            position: absolute;
+            width: 230px;
+            height: 460px;
+            left: 330px;
+            
+            font-size: 30px;
+            color: #949f8b;
+            line-height: 60px;
+            
+        }       
+        .right{
+            position: absolute;
+            width: 646px;
+            height: 460px;
+            left: 760px;
+            
+        }
+        .bigword{
+            position: absolute;
+            width:361px ;
+            height:74px ;
+            background-color: #949f8b;
+            top: 50%;
+            left: 143px;
+            transition-duration: 1s;
+            color: white;
+            text-align: center;
+            line-height: 74px;
+            font-size: 34px;
+        }
+        .bigword:hover{
+            transform: translate(0,-30px);
+            background-color: white;
+            color: #949f8b;
+        }
+        .wugui{
+            width:100%;
+            height: 100%;
+        }
+    .lu{
+        /* height: 100%;
+        width: 100%;
+        object-fit: fill; */
+        max-width: 100%;
+        max-height: 100%;
+    }
+    </style>
+</head>
+<body>
+    <section class="box">
+            <div class="search">
+                <div class="directory"><img src="https://typora----magic.oss-cn-beijing.aliyuncs.com/%E4%B8%89%E6%9D%A0.png" class="directoryposition"/>
+                </div>
+                <div class="circle"><a href="#"><img src="https://typora----magic.oss-cn-beijing.aliyuncs.com/%E6%94%BE%E5%A4%A7%E9%95%9C.png" class="circleposition"/></a></div>
+            </div>
+            <div class="photography">
+                <img src="https://typora----magic.oss-cn-beijing.aliyuncs.com/tortoise.png" class="wugui"/>
+                <div class="capture"><img src="https://typora----magic.oss-cn-beijing.aliyuncs.com/capture.png"/></div>
+                <div class="tortoise">
+                    <div class="Animalphotography">Animal photography</div> 
+                    <div class="topexplore">A  silhouette of them, a simple little action, here are the photographer eyes the best of them, their laughter, their love, their every vivid , are recorded by us.</div>
+                </div>
+                <div class="explore">
+                    <div class="explorebottom">EXPLORE</div>
+                </div>
+            </div>
+            <div class="blank">
+                <div class="fly">
+                    <img src="https://typora----magic.oss-cn-beijing.aliyuncs.com/fly.png"/>
+                    <div class="flybox">FLY</div>
+                </div>
+                <div class="love">
+                    <img src="https://typora----magic.oss-cn-beijing.aliyuncs.com/love.png"/>
+                    <div class="lovebox">LOVE</div>
+                </div>
+                <div class="stand">
+                    <img src="https://typora----magic.oss-cn-beijing.aliyuncs.com/stand.png"/>
+                    <div class="standbox">STAND</div>
+                </div>
+            </div>
+            <div class="giraffa">
+                <img src="https://typora----magic.oss-cn-beijing.aliyuncs.com/giraffe.png" class="lu"/>
+                <div class="SIGNUP"><div class="rubbish">
+                    "Family Farnis is the best place, where I can buy fruit, vegetable, meal, honey, milk,eggs and so on for my retaurant directly fromupplier. Super convinient. Thank you"xdccnfc cfvfesc cfnccnjdcn cfjdcdsr dcwwwzwqg ejs dddc ddf fnfjv eij fvnv jnxxexh cn cdcmdsc ddnc, cddmdcds dncdn cdcn wqeoeas, dcndassasas, cdcndcnc cciqoskxm cbdcpqslwq nfner e nfncsfjj c dndcww frhfjnc qpdjweiw cnncqe, cqjsdc ccn dcjndc, ncf cdncjd dcdjcndq csjncq dcdncf dcdjdnc cdjsq, qkodkqe wqcnpsdc cdnqq qcw, cqnonxj dcdcnd dcnjsdvb wcnwq cowwncjq jjcnjncqnw wcq c wd cwch, cnjncnc ece cdcnncdwnc nenwc dcnnc cjcj,c cjrnc wecwc.
+                </div>
+                    
+                    <div class="SIGNUPbottom">SIGN UP</div>
+                </div>
+            </div>
+            <div class="difference">
+                <div class="differencebox"></div>
+            </div>
+            <div class="animals">
+                <div class="horse">
+                    <div class="pic"><img src="https://typora----magic.oss-cn-beijing.aliyuncs.com/horse.png"/></div>
+                    <div class="english">Horse</div>
+                    <div class="story" ><a href="#" >A different story</a></div>
+                </div>
+                <div class="kangaroo">
+                    <div class="picc"><img src="https://typora----magic.oss-cn-beijing.aliyuncs.com/kangaroo.png"/></div>
+                    <div class="englishh">kangaroo</div>
+                    <div class="storyy"><a href="#">A different story</a> </div>
+                </div>
+                <div class="lion">
+                    <div class="piccc"><img src="https://typora----magic.oss-cn-beijing.aliyuncs.com/lion.png"/></div>
+                    <div class="englishhh">Lion</div>
+                    <div class="storyyy"><a href="#">A different story</a> </div>
+                </div>
+                <div class="hummingbird">
+                    <div class="picccc"><img src="https://typora----magic.oss-cn-beijing.aliyuncs.com/hummingbird.png"/></div>
+                    <div class="englishhhh">Hummingbird</div>
+                    <div class="storyyyy"><a href="#">A different story</a> </div>
+                </div>
+            </div>
+            <div class="knowmore">
+                <div class="knowmorebottom">know more</div>
+            </div>
+            <div class="squirrel">
+                <div class="squirrelpic"><img src="https://typora----magic.oss-cn-beijing.aliyuncs.com/squirrel.png"/></div>
+                <div class="thephoto">The Photo</div>
+                <div class="more">"Family Farms is the best placewhere I can buy fruitb,vegetable,meat,heney,milk,eggs and so on for my retaurant directly from supplier.Super convincient.Thank you"</div>
+                <div class="one"><div class="big">①</div>
+                                <div class="small">Looking for it</div>
+                </div>
+                <div class="two"><div class="big">②</div>
+                <div class="small">Cultive feelings</div>
+            </div>
+                <div class="three"><div class="big">③</div>
+                <div class="small">Shootings</div>
+            </div>
+                <div class="four"><div class="big">④</div>
+                <div class="small">Harvest achievement</div>
+            </div>
+            </div>
+            <div class="line"></div>
+            <div class="end">
+                <div class="left"><div class="leftone">THE WILD</br>IN THE SEA</div> </div>
+                <div class="center"><div class="centerone">MORE</div><div class="centertwo">We create art</br>Wecreate life</div></div>
+                <div class="right">
+                    <div class="bigword" >Big word</div>
+                </div>
+            </div>
+    </section>
+</body>
+</html>
