@@ -1,0 +1,519 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('iconfont.woff2?t=1702394620204') format('woff2'),
+        url('iconfont.woff?t=1702394620204') format('woff'),
+        url('iconfont.ttf?t=1702394620204') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.background {
+    width: 1600px;
+    height: 3935px;
+    margin: 0px auto;
+}
+
+.top {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    border: gray 1px solid;
+    background-color: #fff;
+}
+
+.camera {
+    position:absolute;
+    width: 200px;
+    height: 200px;
+    left: 700px;
+    vertical-align: auto;
+    background: 17px 17px url("https://zhang0816.oss-cn-beijing.aliyuncs.com/picture1.png") #81c04b no-repeat ;
+    z-index: 1 ;
+    transition: all 0.5s;
+}
+
+.camera:hover {
+    transform: scale(1.2);
+}
+
+.list {
+    position: absolute;
+    width: 22px;
+    height: 16px;
+    left: 25px;
+    margin: 12px 0px;
+    transition: all 0.5s;
+}
+
+.list:hover {
+    transform: scale(2);
+}
+
+.glass {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 25px;
+    margin: 12px 0px;
+    transition: all 0.5s;
+}
+
+.glass:hover {
+    transform: scale(2);
+}
+
+.turtle {
+    position: relative;
+    width: 100%;
+    height: 774px;
+    background: url("https://zhang0816.oss-cn-beijing.aliyuncs.com/picture2.png");
+}
+
+.text {
+    position: absolute;
+    width: 927px;
+    height: 150px;
+    top: 242px;
+    left: 336px;
+    color: #2a3f17;
+}
+
+.text p {
+    font-size: 45px;
+    text-align: center;
+    line-height: 70px;
+    font-weight: 800;
+}
+
+.text span {
+    position: absolute;
+    top: 80px;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 200;
+}
+
+.explore {
+    position: absolute;
+    width: 218px;
+    height: 60px;
+    left: 336px;
+    top: 463px;
+    font-size: 25px;
+    font-family: Regular;
+    text-align: center;
+    line-height: 60px;
+    background-color: #2a3f17;
+    transition: all 0.5s;
+}
+
+.explore:hover {
+    transform: scale(1.2)
+}
+.explore a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.explore a:hover {
+    transform: scale(1.2);
+}
+
+.picture {
+    position: relative;
+    width: 929px;
+    height: 450px;
+    top: -149px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.picture div{
+    font-size: 40px;
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 300px;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+.picture div:hover {
+    transform: translateY(-50px);
+}
+
+.picture div:nth-child(1) {
+    background: url("https://zhang0816.oss-cn-beijing.aliyuncs.com/picture3.png");
+}
+
+.picture div:nth-child(2) {
+    background: url("https://zhang0816.oss-cn-beijing.aliyuncs.com/picture4.png");
+}
+
+.picture div:nth-child(3) {
+    background: url("https://zhang0816.oss-cn-beijing.aliyuncs.com/picture5.png");
+}
+
+.picture div span {
+    position: relative;
+    left: 60%;
+    top: 70%;
+}
+
+.photo {
+    position: relative;
+    width: 100%;
+    height: 633px;
+    background: url("https://zhang0816.oss-cn-beijing.aliyuncs.com/picture6.png");
+}
+
+.giraffe {
+    position: absolute;
+    box-sizing: border-box;
+    padding: 40px;
+    line-height: 25px;
+    font-size: 20px;
+    width: 800px;
+    height: 450px;
+    left: 400px;
+    top:  -70px;
+    color: #2a3f17;
+    background-color: #e0dfdf;
+}
+
+.father {
+    position: relative;
+    width: 800px;
+    height: 450px;
+    transition: all 0.5s;
+}
+
+.father:hover {
+    transform: translateY(-30px);
+}
+
+.sign {
+    position: absolute;
+    width: 165px;
+    height: 60px;
+    top: 60%;
+    left: 717.5px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    line-height: 60px;
+    background-color: #2a3f17;
+    transition: all 0.5s;
+}
+
+.sign:hover {
+    transform: scale(0.8);
+}
+
+.sign a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.difference {
+    position: relative;
+    width: 955px;
+    height: 410px;
+    top: 68px;
+    margin: 0px auto;
+}
+
+.textarea {
+    position: absolute;
+    box-sizing: border-box;
+    width: 200px;
+    height: 50px;
+    left: 38%;
+    font-size: 38px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    line-height: 25px;
+    color: #2a3f17;
+    transition: all 5s;
+    border: transparent 4px solid;
+}
+
+.textarea span {
+    position: relative;
+    top: 10px;
+}
+
+@keyframes box-border {
+    0%{
+        border-top: #2a3f17 solid;
+    }
+    30%{
+        border-right: #2a3f17 solid;
+    }
+    50%{
+        border-bottom: #2a3f17 solid;
+    }
+    80%{
+        border-left: #2a3f17 solid;
+    }
+}
+.textarea:hover {
+    animation-name: box-border;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.difference ul {
+    position: absolute;
+    width: 100%;
+    height: 340px;
+    top: 70px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.difference ul li {
+    width: 220px;
+    height: 100%;
+    background-color: #e0dfdf;
+    transition: all 0.5s;
+}
+
+.difference ul li:hover {
+    transform: translateY(-40px);
+}
+
+.difference ul li img {
+    position: relative;
+    width: 220px;
+    height: 220px;
+}
+
+.difference ul li .word {
+    position: relative;
+    width: 220px;
+    height: 120px;
+    margin-top: -4px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #2a3f17;
+    text-align: center;
+    line-height: 50px;
+}
+
+.difference ul li .word p {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.difference ul li .word span {
+    font-size: 20px;
+    font-weight: 200;
+    border-bottom: 1px #2a3f17 solid;
+}
+
+.know {
+    position: relative;
+    width: 295px;
+    height: 55px;
+    top: 120px;
+    margin: 0px auto;
+    border: 2px green solid;
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+    color: #2a3f17;
+    border: #2a3f17 2px solid;
+    transition: all 1s;
+}
+
+.know a {
+    color: #2a3f17;
+    text-decoration: none;
+    transition: all 1s;
+}
+
+.know a:hover {
+    color: #fff;
+}
+
+.know:hover {
+    color: #fff;
+    background-color: #2a3f17;
+}
+
+.squirrel {
+    position: relative;
+    width: 1130px;
+    height: 850px;
+    top: 170px;
+    margin: 0px auto;
+}
+
+.squirrel_photo {
+    position: absolute;
+    width: 585px;
+    height: 100%;
+    background: url("https://zhang0816.oss-cn-beijing.aliyuncs.com/picture11.png");
+} 
+
+.squirrel_text {
+    position: absolute;
+    width: 545px;
+    height: 100%;
+    left: 585px;
+}
+
+.squirrel_text ul {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.squirrel_text ul li {
+    position: relative;
+    width: 100%;
+    height: 15%;
+}
+
+.squirrel_text ul li:nth-child(1) span {
+    position: absolute;
+    top: 60px;
+    left: 10%;
+    font-size: 40px;
+    color: #2a3f17;
+}
+
+.squirrel_text ul li:nth-child(2) span {
+    position: absolute;
+    font-size: 20px;
+    top: 10px;
+    left: 10%;
+    color: #2a3f17;
+}
+
+.squirrel_text b {
+    position: absolute;
+    left: 76px;
+    top: 35px;
+    font-size: 45px;
+    color: #2a3f17;
+}
+
+.squirrel_text img {
+    position: absolute;
+    top: 35px;
+    left: 60px;
+}
+
+.squirrel_text span {
+    position: absolute;
+    top: 34%;
+    left: 25%;
+    text-align: center;
+    font-size: 30px;
+    color: #2a3f17;
+}
+
+#one {
+    transition: all 1s;
+}
+
+#one:hover {
+    transform: translateY(-30px) !important;
+}
+
+#two {
+    transition: all 1s;
+}
+
+#two:hover {
+    transform: scale(1.2) translateX(30px);
+}
+
+#three {
+    transition: all 1s;
+}
+
+#three:hover {
+    transform: translateX(70px);
+}
+
+.foot {
+    position: relative;
+    width: 100%;
+    height: 460px;
+    top: 250px;
+    border-top: 2px darkgreen solid;
+}
+
+.left {
+    position: absolute;
+    width: 455px;
+    height: 105px;
+    top: 50%;
+    left: 300px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.left_left {
+    height: 100%;
+    font-size: 30px;
+    text-align: center;
+    color: #2a3f17;
+}
+
+.left_right {
+    color: #697461;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.right {
+    position: absolute;
+    width: 300px;
+    height: 70px;
+    top: 50%;
+    right: 275px;
+    transform: translateY(-50%);
+    font-size: 35px;
+    color: #fff;
+    background-color: #949f8b;
+    text-align: center;
+    line-height: 70px;
+    transition: all 1s;
+}
+
+.right:hover {
+    transform: translateY(-70px);
+    background-color: #fff;
+    color: #949f8b;
+}
