@@ -1,0 +1,44 @@
+{
+  "id": "4351002",
+  "name": "initial",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "3732638",
+      "name": "2",
+      "font_class": "icon-test",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "4940711",
+      "name": "icon-number1",
+      "font_class": "icon-number",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "8910005",
+      "name": "3-1",
+      "font_class": "df",
+      "unicode": "e6d0",
+      "unicode_decimal": 59088
+    },
+    {
+      "icon_id": "11983189",
+      "name": "four",
+      "font_class": "four",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "5387521",
+      "name": "菜单",
+      "font_class": "caidan",
+      "unicode": "eaf1",
+      "unicode_decimal": 60145
+    }
+  ]
+}

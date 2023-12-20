@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1702432770276') format('truetype');
+}
+
+.iconfont_xiangji1 {
+  font-family: "iconfont" !important;
+  font-size: 100px;
+  color: white;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ai-camera:before {
+  content: "\e66c";
+}
+

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Photography</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .kuang{
+            width: 1518px;
+            height: 40px;
+            background-color: white;
+        }
+        .box1{
+            position: absolute;
+            top: 10px;
+            width: 50px;
+            height: 50px;
+        }
+        .box2{
+            position: absolute;
+            top: -10px;
+            left: 680px;
+            width: 100px;
+            height: 100px;
+            transition: 0.5s;
+        }
+        .box2:hover{
+            transform: translate(0px,20px);
+        }
+        .box3{
+            position: absolute;
+            top: 10px;
+            left: 1480px;
+            width: 50px;
+            height: 50px;
+            transition: 0.5s;
+        }
+        .box3:hover{
+            transform: scale(0.5, 0.5);
+        }
+        .banner{
+            width: 1518px;
+            height: 932px;
+            background-image: url("https://pic.imgdb.cn/item/65819d31c458853aefb40c85.png");
+            background-size: 100%;
+        }
+        .zi{
+            position: absolute;
+            top: 250px;
+            left: 580px;
+            width: 600px;
+            height: 70px;
+            color: #2a3f17;
+            font-size: 40px;
+        }
+        .zi2{
+            position: absolute;
+            top: 400px;
+            left: 460px;
+            width: 700px;
+            height: 300px;
+            color: #2a3f17;
+            font-size: 25px;
+        }
+        .e{
+            position: absolute;
+            left: 300px;
+            top: 600px;
+            background-color: #2a3f17; 
+            border: none;
+            color: white;
+            width: 250px;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .e:hover{
+            transform: scale(0.5, 0.5);
+        }
+        .huo_flex{
+            position: absolute;
+            top: 734px;
+            left: 130px;
+            width: 1200px;
+            height: 505px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .huo{
+            width: 300px;
+            height: 505px;
+            transition: 0.3s;
+        }
+        .huo:hover{
+            opacity: 1;
+            transform: translate(0px,-50px);
+        }
+        .hbox1{
+            position: absolute;
+            left: 250px;
+            top: 400px;
+            font-size: 50px;
+            color: white;
+        }
+        .hbox3{
+            position: absolute;
+            bottom: 30px;
+            right: 50px;
+            font-size: 50px;
+            color: white;
+        }
+        .interval{
+            width: 1518px;
+            height: 603px;
+        }
+        .juxing{
+            position: absolute;
+            top: 1449px;
+            left: 340px;
+            width: 850px;
+            height: 545px;
+            background-color: #e0dfdf;
+        }
+        .si{
+            position: absolute;
+            left: 600px;
+            top: 1800px;
+            background-color: #2a3f17; 
+            border: none;
+            color: white;
+            width: 250px;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            opacity: 0.6;
+            transition: 0.3s;
+        }
+        .si:hover{
+            transform: scale(0.5, 0.5);
+        }
+        .juxing:hover{
+            transform: translate(0px,-50px);
+        }
+        .lu{
+            width: 1518px;
+            height: 760px;
+            background-image: url("https://pic.imgdb.cn/item/65819d25c458853aefb3db12.png");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        .diff{
+            width: 1518px;
+            height: 171px;
+        }
+        .butong{
+            width: 1518px;
+            height: 417px;
+        }
+        .butong_flex{
+            position: absolute;
+            top: 2446px;
+            left: 150px;
+            width: 1200px;
+            height: 421px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .bbox{
+            width: 240px;
+            height: 421px;
+        }
+        .bbox:hover{
+            transform: translate(0px,-50px);
+        }
+        .know{
+            width: 1518px;
+            height: 171px;
+        }
+        .song{
+            position: relative;
+            width: 1518px;
+            height: 1040px;
+        }
+        .shu{
+            position: absolute;
+            left: 180px;
+            width: 650px;
+            height: 1040px;
+        }
+        .s_flex{
+            position: absolute;
+            top: 100px;
+            left: 900px;
+            width: 550px;
+            height: 800px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .sbox{
+            width: 550px;
+            height: 100px;
+        }
+        .sbox:first-child:hover{
+            transform: translate(0px,-50px);
+        }
+        .sbox:hover{
+            transform: translate(50px,0px);
+        }
+        .xia{
+            position: relative;
+            width: 1518px;
+            height: 461px;
+        }
+        .img{
+            width: 100%;
+            height: 100%;
+        }
+        .zuihou_flex{
+            position: absolute;
+            top: 180px;
+            left: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 280px;
+            height: 184px;
+        }
+        .zbox{
+            width: 280px;
+            height: 78px;
+        }
+        .zuihou_flexw2{
+            position: absolute;
+            top: 180px;
+            left: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 280px;
+            height: 184px;
+        }
+        .zbox2{
+            width: 280px;
+            height: 40px;
+        }
+        .D{
+            position: absolute;
+            left: 600px;
+            top: 2280px;
+            color: #2a3f17;
+            width: 250px;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            transition: 0.5s;
+        }
+        .D:hover{
+            border: 5px solid #2a3f17;
+        }
+        .B{
+            position: absolute;
+            left: 1000px;
+            top: 220px;
+            background-color: #949f8b; 
+            border: none;
+            color: white;
+            width: 250px;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            opacity: 0.6;
+            transition: 0.3s;
+        }
+        .B:hover{
+            opacity: 1;
+            background-color: white;
+            color: #949f8b;
+            transform: translate(0px,-25px);
+        }
+        .k{
+            position: absolute;
+            left: 600px;
+            top: 2930px;
+            border: 5px solid;
+            border-color: #2a3f17;
+            color: #2a3f17;
+            width: 250px;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .k:hover{
+            background-color: #2a3f17;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="kuang">
+        <div class="box1">
+            <img src="https://pic.imgdb.cn/item/65819d25c458853aefb3db36.png">
+        <div class="box2">
+            <img src="https://pic.imgdb.cn/item/65819d30c458853aefb4053b.png">
+        </div>
+        <div class="box3">
+            <img src="https://pic.imgdb.cn/item/65819d18c458853aefb3a99e.png">
+        </div>
+    </div>
+    <div class="banner">
+        <div class="zi">
+            <p>Animal Photography</p>
+        </div>
+        <div class="zi2">
+            <p>A silhouette of team,a simple little action,here are thr photography eyes the best of them,their laughter,their love,there every vivid,are record by us.</p>
+        </div>
+        <div class="e">
+            EXPLORE
+        </div>
+        <div class="huo_flex">
+            <div class="huo">
+                <img src="https://pic.imgdb.cn/item/65819d23c458853aefb3d3e6.png">
+                <div class="hbox1">
+                    Fly
+                </div>
+            </div>
+            <div class="huo">
+                <img src="https://pic.imgdb.cn/item/65819d23c458853aefb3d4cf.png">
+            </div>
+            <div class="huo">
+                <img src="https://pic.imgdb.cn/item/65819d23c458853aefb3d5a5.png">
+                <div class="hbox3">
+                    Stand
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="interval"></div>
+    <div class="lu">
+        <div class="juxing">
+            <p style="color: #2a3f17;font-size: 20px;margin-top: 90px; margin-left: 40px;margin-right: 40px;">"Family Farms is the best place,where i can buy fruit,vegetable,meat honey,milk,eggsand so on for my retaurant direly fromupplier.Super convinent,Thank you."xdccnfc cfvfesc shdjjeb dheujdnd djen sjwjend,xbehdbd cndbfc dnbeh djehd d jonenenk.sbwhxnjw dhwhjd ldkioj dnjuh mepour jjfnk corm,nenwclkmo dcnnc cici,c cjinc wecnc.dncjid cmfrikd ,skdlofmf pwoqxndj jfjrklfn dmefmnv foemimd wlwnf fnofm wnimdle rfnken ojene eidokdd diejne einnkcc r fdncnf rmfkjdnc dkfifnvg tmnndnv fjnvjdnc dioe. ieomncur cisdmen slndckcs djncidn icinff,cjifn edminnd slcnidn ckidn.</p>
+        </div>
+        <div class="si">
+            <h1>sign up</h1>
+        </div>
+    </div>
+    <div class="diff">
+        <div class="D">
+            <h1>Different</h1>
+        </div>
+    </div>
+    <div class="butong">
+        <div class="butong_flex">
+            <div class="bbox">
+                <img src="https://pic.imgdb.cn/item/65819d18c458853aefb3a82b.png">
+            </div>
+            <div class="bbox">
+                <img src="https://pic.imgdb.cn/item/65819d18c458853aefb3a8e4.png">
+            </div>
+            <div class="bbox">
+                <img src="https://pic.imgdb.cn/item/65819d18c458853aefb3a952.png">
+            </div>
+            <div class="bbox">
+                <img src="https://pic.imgdb.cn/item/65819d18c458853aefb3a882.png">
+            </div>
+        </div>
+    </div>
+    <div class="know">
+        <div class="k">
+            <h1>Know more</h1>
+        </div>
+    </div>
+    <div class="song">
+        <div class="shu">
+            <img src="https://pic.imgdb.cn/item/65819d30c458853aefb40503.png">
+        </div>
+        <div class="s_flex">
+            <div class="sbox">
+                <h1 style="color: #2a3f17;">The Photo</h1>
+            </div>
+            <div class="sbox">
+                <p style="color: #2a3f17;font-size: 20px;">"Family Farms is the best place,where i can buy fruit,vegetable,meat honey,milk,eggsand so on for my retaurant direly fromupplier.Super convinent,Thank you."</p>
+            </div>
+            <div class="sbox">
+                <h2 style="color: #2a3f17;">#1.looking for it</h2>
+            </div>
+            <div class="sbox">
+                <h2 style="color: #2a3f17;">#2.Cultivate feelings</h2>
+            </div>
+            <div class="sbox">
+                <h2 style="color: #2a3f17;">#3.shooting</h2>
+            </div>
+            <div class="sbox">
+                <h2 style="color: #2a3f17;">#4.Harvest achievement</h2>
+            </div>
+        </div>
+    </div>
+    <hr style="margin-top: 10px;margin-bottom: 10px;">
+    <div class="xia">
+        <div class="zuihou_flex">
+            <div class="zbox">
+                <h1 style="color: #2a3f17;">IN THE WILD</h1>
+            </div>
+            <div class="zbox">
+                <h1 style="color: #2a3f17;">IN THE SEA</h1>
+            </div>
+        </div>
+        <div class="zuihou_flexw2">
+            <div class="zbox2">
+                <h2 style="color: #2a3f17;">MORE</h2>
+            </div>
+            <div class="zbox2">
+                <p style="color: #2a3f17;">we creat art.</p>
+            </div>
+            <div class="zbox2">
+                <p style="color: #2a3f17;">we creat life.</p>
+            </div>
+        </div>
+        <div class="B">
+            <h1>Big world</h1>
+        </div>
+    </div>
+</body>
+</html>

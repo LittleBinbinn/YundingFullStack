@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1922786",
+      "name": "icon_任务栏收缩",
+      "font_class": "icon_renwulancopy",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    }
+  ]
+}

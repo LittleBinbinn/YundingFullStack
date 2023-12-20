@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        .top{
+            display: flex;
+            background-color: aquamarine;
+            height: 30px;
+            justify-content: space-between;
+            background-image: url(top.png);
+        }
+        .top .head {
+            margin-top: 5px;
+            margin-left: 20px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .sg {
+            transition: transform 0.8s ease;
+        }
+        .sg:hover {
+            transform: scale(0.7);
+        }
+        .SS {
+            transition: transform 0.8s ease;
+        }
+        .SS:hover {
+            transform: scale(0.7);
+        }
+        .topback {
+            height: 930px;
+            background-image: url(xiaowangba.png);
+        }
+        .xiangji {
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            top: 0px;
+            left: 50%;
+            margin-left: -100px;
+            transition: all 1s;
+            cursor: pointer;
+        }
+        .xp {
+            transition: transform 0.8s ease;
+        }
+        .xp:hover {
+            transform: scale(0.9);
+        }
+        .AP {
+            position: absolute;
+            height: 65px;
+            width: 634px;
+            background-image: url(AP.png);
+            left: 50%;
+            margin-left: -317px;
+            top: 320px;
+        }
+        .text {
+            position: absolute;
+            height: 93px;
+            width: 1096px;
+            background-image: url(text.png);
+            left: 50%;
+            margin-left: -548px;
+            top: 440px;
+        }
+        .explore {
+            position: absolute;
+            height: 72px;
+            width: 262px;
+            background-color: #2a3f17;
+            top: 635px;
+            left: 415px;
+            transition: width 2s,height 2s;
+            cursor: pointer;
+        }
+        .explore .wz {
+            margin-top: 12px;
+            margin-left: 55px;
+            color: #ffffff;
+        }
+        .explore:hover {
+            width: 300px;
+            height: 100px;
+        }
+        .photo {
+            display: flex;
+            height: 500px;
+            width: 65%;
+            justify-content: space-evenly;
+            margin-left: 20%;
+            margin-top: -150px;
+        }
+        .photo .hln {
+            background-color: chocolate;
+            width: 333px;
+            height: 500px;
+            transition: all 1s ease;
+            
+            
+        }
+        .photo .hln:hover{
+            position: relative;
+            margin-top: -30px;
+            transition-duration: 500ms;
+        }
+        .lu {
+            position: relative;
+            height: 760px;
+            background-image: url(lu.png);
+            top: 300px;
+        }
+        .text1 {
+            position: absolute;
+            height: 541px;
+            width: 946px;
+            background-image: url(text1.png);
+            left: 50%;
+            margin-left: -473px;
+            margin-top: -550px;
+            transition: all 0.8s ease;
+        }
+        .text1:hover {
+            margin-top: -600px;
+        }
+        .su {
+            position: absolute;
+            width: 197px;
+            height: 70px;
+            background-color: #2a3f17;
+            margin-top: -140px;
+            left: 50%;
+            margin-left: -98.5px;
+            transition: all 2s;
+            cursor: pointer;
+            transition: all  1s ease-in-out;
+        }
+        .su .SU {
+            margin-top: 11px;
+            margin-left: 30px;
+            color: #ffffff;
+        }
+        .su:hover {
+            width: 200px;
+            height: 80px;
+            margin-top: -170px;
+            transition-duration: 800ms;
+        }
+        .difference {
+            position: absolute;
+            width: 170px;
+            height: 50px;
+            margin-top: 350px;
+            margin-left: 45%;
+            border: 3px solid transparent;
+            transition: border-color 0.3s;
+            color: #2a3f17;
+        }
+        .difference:hover {
+            border-color: #2a3f17
+        }
+        .animal {
+            display: flex;
+            height: 414px;
+            width: 1360px;
+            justify-content: space-around;
+            margin-left: 220px;
+        }
+        .animal .photo {
+            margin-top: 450px;
+            margin-left: 20px;
+            transition: all 0.8s ease;
+        }
+        .animal .photo:hover {
+            margin-top: 400px;
+            transition-duration: 800ms;
+        }
+        .km {
+            position: absolute;
+            height: 69px;
+            width: 359px;
+            background-image: url(Knowmore.png);
+            top: 3150px;
+            left: 50%;
+            margin-left: -179.5px;
+            background-color: #ffffff;
+            transition: all 1s;
+            color: #2a3f17;
+        }
+        .km:hover {
+            background-color: #2a3f17;
+            color: #ffffff;
+        }
+        .KM {
+            margin-top: 12px;
+            margin-left: 85px;
+        }
+        .ss {
+            position: absolute;
+            height: 1020px;
+            width: 702px;
+            background-image: url(ss.png);
+            top: 3300px;
+            left: 190px;
+        }
+        .tp {
+            position: absolute;
+            height: 30px;
+            width: 176px;
+            background-image: url(tp.png);
+            margin-top: 910px;
+            left: 1020px;
+            transition: all 0.8s ease;
+        }
+        .tp:hover {
+            margin-top: 870px;
+        }
+        .f {
+            position: absolute;
+            height: 117px;
+            width: 521px;
+            background-image: url(f.png);
+            margin-top: 972px;
+            left: 1020px;
+            transition: all 0.8s ease;
+        }
+        .f:hover {
+            left: 1100px;
+            transform:scale(1.2);
+        }
+        .xh1 {
+            position: absolute;
+            height: 70px;
+            width: 247px;
+            background-image: url(xh1.png);
+            margin-top: 1190px;
+            left: 1020px;
+            transition: all 0.8s ease;
+        }
+        .xh1:hover {
+            left: 1100px;
+        }
+        .xh2 {
+            position: absolute;
+            height: 70px;
+            width: 293px;
+            background-image: url(xh2.png);
+            margin-top: 1340px;
+            left: 1020px;
+            transition: all 0.8s ease;
+        }
+        .xh2:hover {
+            left: 1100px;
+        }
+        .xh3 {
+            position: absolute;
+            height: 70px;
+            width: 198px;
+            background-image: url(xh3.png);
+            margin-top: 1510px;
+            left: 1020px;
+            transition: all 0.8s ease;
+        }
+        .xh3:hover {
+            left: 1100px;
+        }
+        .xh4 {
+            position: absolute;
+            height: 70px;
+            width: 338px;
+            background-image: url(xh4.png);
+            margin-top: 1690px;
+            left: 1020px;
+            transition: all 0.8s ease;
+        }
+        .xh4:hover {
+            left: 1100px;
+        } 
+        .underline {
+            position: absolute;
+            height: 460px;
+            width: 100%;
+            background-image: url(underline.png);
+            margin-top: 1900px;
+        }
+        .itw {
+            position: absolute;
+            height: 31px;
+            width: 245px;
+            background-image: url(itw.png);
+            margin-top: 2050px;
+            left: 400px;
+        }
+        .its {
+            position: absolute;
+            height: 32px;
+            width: 215px;
+            background-image: url(its.png);
+            margin-top: 2135px;
+            left: 400px;
+        }
+        .moer {
+            position: absolute;
+            height: 24px;
+            width: 87px;
+            background-image: url(moer.png);
+            margin-top: 2058px;
+            left: 700px;
+        }
+        .ww {
+            position: absolute;
+            height: 60px;
+            width: 159px;
+            background-image: url(ww.png);
+            margin-top: 2100px;
+            left: 700px;
+        }
+        .bw {
+            position: absolute;
+            height: 73px;
+            width: 361px;
+            background-color: #949f8b;
+            margin-top: 2070px;
+            left: 1170px;
+            transition: all 0.8s ease;
+            cursor: pointer;
+            color: #ffffff;
+        }
+        .bw .BW {
+            margin-left: 90px;
+            margin-top: 13px;
+        }
+        .bw:hover {
+            margin-top: 2050px;
+            background-color: #ffffff;
+            color: #949f8b;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <span class="head"><img src="sangang.png" class="sg"></span>
+        <span class="head"><img src="sousuo.png" class="SS"></span>
+    </div>
+    <div class="topback"></div>
+    <div class="xiangji"><img src="xiangji.png" class="xp"></div>
+    <div class="AP"></div>
+    <div class="text"></div>
+    <div class="explore"><h1 class="wz">EXPLORE</h1></div>
+    <div class="photo">
+        <div class="hln"><img src="photo1.png" class="fly"></div>
+        <div class="hln"><img src="photo2.png" class="love"></div>
+        <div class="hln"><img src="photo3.png" class="stand"></div>
+    </div>
+    <div class="lu"></div>
+    <div class="text1"></div>
+    <div class="su"><div class="SU"><h1>Sign Up</h1></div></div>
+    <div class="difference"><h1 class="button">Difference</h1></div>
+    <div class="animal">
+        <div class="photo"><img src="Horse.png"></div>
+        <div class="photo"><img src="Kangaroo.png"></div>
+        <div class="photo"><img src="Lion.png"></div>
+        <div class="photo"><img src="Hummingbird.png"></div>
+    </div>
+    <div class="km"><h1 class="KM">Know more</h1></div>
+    <div class="ss"></div>
+    <div class="tp"></div>
+    <div class="f"></div>
+    <div class="xh1"></div>
+    <div class="xh2"></div>
+    <div class="xh3"></div>
+    <div class="xh4"></div>
+    <div class="underline"></div>
+    <div class="itw"></div>
+    <div class="its"></div>
+    <div class="moer"></div>
+    <div class="ww"></div>
+    <div class="bw"><div><h1 class="BW">Big World</h1></div></div>
+</body>
+</html>

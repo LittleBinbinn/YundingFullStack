@@ -1,0 +1,30 @@
+{
+  "id": "4375946",
+  "name": "第四次全栈zuo'ye",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1210334",
+      "name": "icon_more",
+      "font_class": "iconmore",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "6331285",
+      "name": "查询",
+      "font_class": "chaxun",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "12321005",
+      "name": "照相机",
+      "font_class": "zhaoxiangji",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    }
+  ]
+}

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 1920px;
+        height: 4800px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .fir {
+        position: relative;
+        width: 1920px;
+        height: 930px;
+    }
+
+    .top {
+        width: 1920px;
+        height: 50px;
+        position: relative;
+        top: -935px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: white;
+    }
+
+    .topleft {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        top: 18px;
+        left: 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .topleft:hover {
+        transform: scale(0.6);
+    }
+
+    .topmid {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .topmid:hover {
+        transform: scale(0.9);
+    }
+
+    .topright {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top: 18px;
+        right: 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .topright:hover {
+        transform: scale(0.6);
+    }
+
+    .sec {
+        position: relative;
+        width: 1920px;
+        height: 600px;
+    }
+
+    .ph333 {
+        width: 1110px;
+        height: 494px;
+        position: relative;
+        top: -145px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    .ph1 {
+        transition: transform 0.5s ease;
+        transform:
+            translateY(0);
+    }
+
+    .ph1:hover {
+        transform:
+            translateY(-10px);
+    }
+
+    .ph2 {
+        transition: transform 0.5s ease;
+        transform:
+            translateY(0);
+    }
+
+    .ph2:hover {
+        transform:
+            translateY(-10px);
+    }
+
+    .ph3 {
+        transition: transform 0.5s ease;
+        transform:
+            translateY(0);
+    }
+
+    .ph3:hover {
+        transform:
+            translateY(-10px);
+    }
+
+
+    .txt {
+        width: 946px;
+        height: 541px;
+        position: relative;
+        margin: 0 auto;
+        background-color: rgb(224, 223, 223);
+        top: -842px;
+        font-size: 25px;
+        transition: transform 0.3s ease;
+        transform:
+            translateY(0);
+    }
+
+    .txt:hover {
+        transform:
+            translateY(-10px);
+    }
+
+    .txtmain {
+        width: 800px;
+        height: 341px;
+        position: relative;
+        margin: 0 auto;
+        font-size: 20px;
+    }
+
+    .sign {
+        width: 197px;
+        height: 70px;
+        position: relative;
+        margin: 0 auto;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .sign:hover {
+        transform: scale(0.9);
+    }
+
+    .for {
+        position: relative;
+        top: -545px;
+        width: 1920px;
+        height: 800px;
+    }
+
+    .title {
+        position: relative;
+        top: 64px;
+        width: 340px;
+        height: 80px;
+        margin: 0 auto;
+        background-color: white;
+        font-size: 60px;
+
+    }
+
+    .title::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: 4px solid transparent;
+    }
+
+    .title:hover::after {
+        animation: border-animation 1s ease-in-out forwards;
+    }
+
+    @keyframes border-animation {
+        0% {
+            border-top-color: rgb(42, 63, 23);
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+        }
+
+        25% {
+            border-top-color: rgb(42, 63, 23);
+            border-right-color: rgb(42, 63, 23);
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+        }
+
+        50% {
+            border-top-color: rgb(42, 63, 23);
+            border-right-color: rgb(42, 63, 23);
+            border-bottom-color: rgb(42, 63, 23);
+            border-left-color: transparent;
+        }
+
+        75% {
+            border-top-color: rgb(42, 63, 23);
+            border-right-color: rgb(42, 63, 23);
+            border-bottom-color: rgb(42, 63, 23);
+            border-left-color: rgb(42, 63, 23);
+        }
+
+        100% {
+            border-top-color: rgb(42, 63, 23);
+            border-right-color: rgb(42, 63, 23);
+            border-bottom-color: rgb(42, 63, 23);
+            border-left-color: rgb(42, 63, 23);
+        }
+    }
+
+    .phs {
+        width: 1150px;
+        height: 412px;
+        position: relative;
+        top: 110px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    .p1 {
+        transition: transform 0.5s ease;
+        transform:
+            translateY(0);
+    }
+
+    .p1:hover {
+        transform:
+            translateY(-15px);
+    }
+
+    .p2 {
+        transition: transform 0.5s ease;
+        transform:
+            translateY(0);
+    }
+
+    .p2:hover {
+        transform:
+            translateY(-15px);
+    }
+
+    .p3 {
+        transition: transform 0.5s ease;
+        transform:
+            translateY(0);
+    }
+
+    .p3:hover {
+        transform:
+            translateY(-15px);
+    }
+
+    .p4 {
+        transition: transform 0.5s ease;
+        transform:
+            translateY(0);
+    }
+
+    .p4:hover {
+        transform:
+            translateY(-15px);
+    }
+    .know {
+        position: relative;
+        width: 358px;
+        height: 66px;
+        margin: 0 auto;
+        background-color: white;
+        top: 220px;
+        font-size: 38px;
+        border: 3px solid rgb(42, 63, 23);
+        color: rgb(42, 63, 23);
+        transition: background-color 0.3s,color 0.3s;
+    }
+    .know:hover {
+        background-color:rgb(42, 63, 23) ;
+        color: white;
+    }
+    .fiv {
+        position: relative;
+        top: -480px;
+        width: 1420px;
+        height: 1076px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    .right {
+        position: relative;
+        width: 600px;
+        height: 1000px;
+        margin: 0 auto;
+        top: 15px;
+        left: 5%;
+        display: flex;
+        flex-direction: column;
+    }
+    .pa1 {
+        position: relative;
+        width: 160px;
+        height: 20px;
+        top: 70px;
+        transition: transform 0.3s ease;
+        transform:
+            translateY(0);
+    }
+    .pa1:hover {
+        transform:
+            translateY(-35px);
+    }
+    .pa2 {
+        position: relative;
+        top: 140px;
+        width: 521px;
+        height: 117px;
+        transition: transform 0.3s ease-out;
+    }
+    .pa2:hover {
+        transform: scale(1.1)
+        translate(5px,5px);
+    }
+    .pa3 {
+        position: relative;
+        top: 220px;
+        width: 247px;
+        height: 70px; 
+        transition: transform 0.3s ease;
+        transform:
+            translateX(0); 
+    }
+    .pa3:hover {
+        transform:
+            translateX(45px);
+    }
+    .pa4 {
+        position: relative;
+        top: 310px;
+        width: 293px;
+        height: 70px;
+        transition: transform 0.3s ease;
+        transform:
+            translateX(0); 
+    }
+    .pa4:hover {
+        transform:
+            translateX(45px);
+    }
+    .pa5 {
+        position: relative;
+        top: 400px;
+        width: 198px;
+        height: 70px;
+        transition: transform 0.3s ease;
+        transform:
+            translateX(0); 
+    }
+    .pa5:hover {
+        transform:
+            translateX(45px);
+    }
+    .pa6 {
+        position: relative;
+        top: 490px;
+        width: 338px;
+        height: 70px;
+        transition: transform 0.3s ease;
+        transform:
+            translateX(0); 
+    }
+    .pa6:hover {
+        transform:
+            translateX(45px);
+    }
+    .last {
+        position: relative;
+        top: -400px;
+        width: 1920px;
+        height: 460px;
+        background: url(https://wangbutaihao.oss-cn-beijing.aliyuncs.com/last.png);
+    }
+    .bw {
+        position: relative;
+        height: 73px;
+        width: 360px;
+        left: 70%;
+        top: 200px;
+        background-color: rgb(148,159,139);
+        font-size: 40px;
+        color: white;
+        padding-top: 10px;
+        transition: background-color 1s,color 1s;
+        transition: transform 1s ease;
+        transform:
+            translateY(0);
+    }
+    .bw:hover {
+        transform:
+            translateY(-35px);
+            background-color: white;
+            color: rgb(148,159,139);
+    }
+
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="fir">
+            <img style="width:1920px;height:930px;" src="https://wangbutaihao.oss-cn-beijing.aliyuncs.com/ex.png" alt="ex">
+            <div class="top">
+                <div class="topleft">
+                    <img style="width:30px;height:20px;" src="https://wangbutaihao.oss-cn-beijing.aliyuncs.com/san.png" alt="san">
+                </div>
+                <div class="topmid">
+                    <img style="width:200px;height:200px;" src="https://wangbutaihao.oss-cn-beijing.aliyuncs.com/photo.png" alt="photo">
+                </div>
+                <div class="topright">
+                    <img style="width:20px;height:20px;" src="https://wangbutaihao.oss-cn-beijing.aliyuncs.com/add.png" alt="add">
+                </div>
+
+            </div>
+        </div>
+        <div class="sec">
+            <div class="ph333">
+                <div class="ph1">
+                    <img style="width:332px;height:494px;" src="https://wangbutaihao.oss-cn-beijing.aliyuncs.com/ph1.png" alt="ph1">
+                </div>
+                <div class="ph2">
+                    <img style="width:332px;height:494px;" src="https://wangbutaihao.oss-cn-beijing.aliyuncs.com/ph2.png" alt="ph2">
+                </div>
+                <div class="ph3">
+                    <img style="width:332px;height:494px;" src="https://wangbutaihao.oss-cn-beijing.aliyuncs.com/ph3.png" alt="ph3">
+                </div>
+            </div>
+        </div>
+        <div class="thir">
+            <img style="width:1920px;height:760px;" src="https://wangbutaihao.oss-cn-beijing.aliyuncs.com/lu.png" alt="lu">
+            <div class="txt">
+                <div class="txtmain" style="color: rgb(42, 63, 23);">
+                    <br><br><br>
+                    “Family Farms is the best place,where I can buy fruit,vegetable,meat,honey,milk,<br>
+                    eggs and so on for my retaurant directly fromupplier. Super convinient.Thank you”<br>
+                    xdccnfc cfvfesc cfnccnjdcn cfjdcdsr dcwwzwqg ejs dddc ddf fnfjv eij fvnv jnxzexh cn<br>
+                    cdcmdsc ddnc, cddmdcds dncdn cdcn wqeoeas, dcndassasas,cdcndcnc cciqoskxm <br>
+                    cbdcpqslwq nfnere nfncsfjjc dndcww frhfjnc qpdjweiw cnncqe, cqjsdc ccn dcjndc ,<br>
+                    ncf cdncjd dcdjcndq csjncq dcdncf dcdjdnc cdjsq, qkodkqe wqcnpsdc cdnqq qcw,<br>
+                    cqnonxj dcdcnd dcnjsdvb wcnwq cowwncjq jjcnjncqnw wcq c wd cwch, cnjncnc ece <br>
+                    cdcnncdwnc nenwc dcnnc cjcj , c cjrnc wecwc .
+                </div>
+                <div class="sign">
+                    <img style="width:197px;height:70px;" src="https://wangbutaihao.oss-cn-beijing.aliyuncs.com/sign.png" alt="sign">
+                </div>
+
+            </div>
+        </div>
+        <div class="for">
+            <div class="title" style="color: rgb(42, 63, 23);"> &nbsp;Difference</div>
+            <div class="phs">
+                <div class="p1">
+                    <img style="width:265px;height:414px;" src="https://wangbutaihao.oss-cn-beijing.aliyuncs.com/p1.png" alt="p1">
+                </div>
+                <div class="p2">
+                    <img style="width:265px;height:414px;" src="https://wangbutaihao.oss-cn-beijing.aliyuncs.com/p2.png" alt="p2">
+                </div>
+                <div class="p3">
+                    <img style="width:265px;height:414px;" src="https://wangbutaihao.oss-cn-beijing.aliyuncs.com/p3.png" alt="p3">
+                </div>
+                <div class="p4">
+                    <img style="width:265px;height:414px;" src="https://wangbutaihao.oss-cn-beijing.aliyuncs.com/p4.png" alt="p4">
+                </div>
+
+            </div>
+            <div class="know">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Know more
+            </div>
+        </div>
+        <div class="fiv">
+            <div class="left">
+                <img style="width:702px;height:1020px;" src="https://wangbutaihao.oss-cn-beijing.aliyuncs.com/song.png" alt="song">
+            </div>
+            <div class="right">
+                <div class="pa1">
+                    <img style="width:180px;height:30px;" src="https://wangbutaihao.oss-cn-beijing.aliyuncs.com/tp.png" alt="tp">
+                </div>
+                
+                <div class="pa2">
+                    <img style="width:521px;height:117px;" src="https://wangbutaihao.oss-cn-beijing.aliyuncs.com/pa2.png" alt="pa2">
+                </div>
+                <div class="pa3">
+                    <img style="width:247px;height:70px;" src="https://wangbutaihao.oss-cn-beijing.aliyuncs.com/l1.png" alt="l1">
+                </div>
+                <div class="pa4">
+                    <img style="width:293px;height:70px;" src="https://wangbutaihao.oss-cn-beijing.aliyuncs.com/l2.png" alt="l2">
+                </div>
+                <div class="pa5">
+                    <img style="width:198px;height:70px;" src="https://wangbutaihao.oss-cn-beijing.aliyuncs.com/l3.png" alt="l3">
+                </div>
+                <div class="pa6">
+                    <img style="width:338px;height:70px;" src="https://wangbutaihao.oss-cn-beijing.aliyuncs.com/l4.png" alt="l4">
+                </div>
+            </div>
+        </div>
+        <div class="last">
+       
+            <div class="bw">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Big World
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

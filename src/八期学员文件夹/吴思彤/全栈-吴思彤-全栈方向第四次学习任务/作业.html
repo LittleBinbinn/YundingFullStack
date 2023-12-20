@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow-x: hidden;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fonts/iconfont.css" type="text/css"> 
+    <style>
+        *{
+            margin: 0 auto;
+        }
+        .body{
+            max-width: 1500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .top{
+            position: relative;
+            width: 1500px;
+            height: 40px;
+            background-color: white;
+        }
+        @font-face {
+        font-family: 'iconfont';
+        src: url('fonts/iconfont.woff2?t=1702527864719') format('woff2'),
+             url('fonts/iconfont.woff?t=1702527864719') format('woff'),
+             url('fonts/iconfont.ttf?t=1702527864719') format('truetype');
+        }
+        i{
+            font-family: 'iconfont';
+            font-style: normal;
+            font-size: 30px;
+        }
+        .left{
+            position: absolute;
+            top: 10px;
+            left: 0px;
+            transition: all 1s;
+        }
+        .left:hover{
+            transform: scale(0.8);
+        }
+        .right{
+            position: absolute;
+            top: 10px;
+            right: 0px;
+        }
+        .weigui{
+            position: relative;
+            width: 1500px;
+            height: 726px;
+            left: -5px;
+            top: 10px;
+            background-image: url(https://w05.oss-cn-beijing.aliyuncs.com/%E4%B9%8C%E9%BE%9F.png);
+            background-repeat: no-repeat; 
+        } 
+        .photo{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            left: 45%;
+            right: 50%;
+            top: -10px;
+            background-image: url(https://w05.oss-cn-beijing.aliyuncs.com/%E7%9B%B8%E6%9C%BA.png);
+            transition: all .4s;
+        }
+        .photo:hover{
+            transform: scale(0.8);
+        }
+
+        .w_title{
+            position: relative;
+            width: 700px;
+            height: 150px;
+            left: 137px;
+            top: 170px;
+            color: rgb(35, 46, 14);
+            font-family:Cambria;
+            font-size: 50px;
+        }
+        .w_wenzi{
+            position: relative;
+            width: 900px;
+            height: 200px;
+            top: 130px;
+            left: 50px;
+            color: rgb(25, 55, 21);
+            font-family:微软雅黑;
+            font-size: 25px;
+        }
+        .w_bottom{
+            position: relative;
+            width: 262px;
+            height: 72px;
+            left: -270px;
+            top: 82px;
+            color: rgb(254, 250, 250);
+            font-family:微软雅黑;
+            font-size: 30px;
+            text-align: center;
+            line-height: 72px;
+            background-color: rgb(25, 55, 21);
+        }
+        .bird{
+            position: relative; 
+            width: 900px;
+            height: 500px;
+            top: -87px;
+            left: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .b_photo{
+            width: 250px;
+            height: 375px;
+            transition: all 1s;
+        }
+        .b_photo:hover{
+            transform: translateY(-50px);
+        }
+        .lun{
+            position: relative;
+            top: -45px;
+            width: 1500px;
+            height: 594px;
+            background-image: url(https://w05.oss-cn-beijing.aliyuncs.com/%E9%B9%BF.png);
+        }
+        .kuang{
+            position: relative;
+            width: 1000px;
+            height: 500px;
+            left: 20px;
+            top: -84px;
+            background-color: rgb(214, 212, 212);
+            transition: all 0.6s;
+        }
+        .kuang:hover{
+            transform: translateY(-20px);
+        }
+        .k_wenzi{
+            position: relative;
+            top: 72px;
+            width: 800px;
+            height: 300px;
+            font-family:微软雅黑;
+            font-size: 20px;
+            text-align: left;
+            line-height: 30px;
+            color: rgb(25, 55, 21);
+        }
+        .k_sign{
+            position: relative;
+            width: 197px;
+            height: 70px;
+            background-color: rgb(25, 55, 21);
+            color: azure;
+            font-family:微软雅黑;
+            font-size: 30px;
+            text-align: center;
+            line-height: 70px;
+            top: 77px;
+            transition: all 1s;
+        }
+        .k_sign:hover{
+            transform: scale(0.8);
+        }
+        .zi{
+            position: relative;
+            width: 247px;
+            height: 70px;
+            color: rgb(25, 55, 21);
+            top: 37px;
+            font-family:微软雅黑;
+            font-size: 50px;
+            left: 36px;
+        }
+        .zi::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 5px solid rgb(25, 55, 21);
+            border-right: 5px solid rgb(25, 55, 21);
+            opacity: 0;
+            left: 0;
+            top: 0;
+        }
+        .zi::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-bottom: 5px solid rgb(25, 55, 21);
+            border-left: 5px solid rgb(25, 55, 21);
+            opacity: 0;
+            right: 0;
+            bottom: -5px;
+        }
+        .zi:hover::before {
+            width: 100%;
+            height: 100%; 
+            opacity: 1;
+            transition: width 1s linear, height 1s linear 1s;
+        }
+        .zi:hover::after {
+            width: 100%;
+            height: 100%; 
+            opacity: 1;
+            transition: width 1s linear 2s, height 1s linear 3s,opacity 0s linear 2s; 
+        }
+        .animal{
+            position: relative;
+            width: 900px;
+            height: 500px;
+            top: 79px;
+            left: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .box{
+            width: 200px;
+            height: 500px;
+            transition: all 0.8s;
+        }
+        .box:hover{
+            transform: translateY(-20px);
+        }
+        .box_a{
+            position: relative;
+            width: 200px;
+            height: 198px;
+        }
+        .box_b{
+            position: relative;
+            width: 200px;
+            height: 50px;
+            font-family:微软雅黑;
+            font-size: 30px;
+            text-align: center;
+            line-height: 57px;
+            color: rgb(25, 55, 21);
+            background-color: rgb(214, 212, 212);
+        }
+        .box_c{
+            width: 200px;
+            height: 100px;
+            font-family:微软雅黑;
+            font-size: 20px;
+            text-align: center;
+            line-height: 75px;
+            text-decoration: underline;
+            color: rgb(25, 55, 21);
+            background-color: rgb(214, 212, 212);
+        }
+        .know{
+            position: relative;
+            width: 300px;
+            height: 70px;
+            top: 20px;
+            left: 20px;
+            border: 2px  solid rgb(25, 55, 21);
+            color: rgb(25, 55, 21);
+            background-color: transparent;
+            font-family:微软雅黑;
+            font-size: 40px;
+            text-align: center;
+            line-height: 70px;
+            transition: all 2s;
+        } 
+        .know:hover{
+            background-color: rgb(25, 55, 21);
+            color: azure;
+        }
+        .songsu{
+            position: relative;
+            width: 500px;
+            height: 726px;
+            left: -300px;
+            top: 200px;
+            background-image: url(https://w05.oss-cn-beijing.aliyuncs.com/%E6%9D%BE%E9%BC%A0.png);
+        }
+        .p{
+            position: relative;
+            top: -531px;
+            width: 500px;
+            height: 250px;
+            right: -300px;
+        }
+        .p_title{
+            position: relative;
+            width: 300px;
+            height: 100px;
+            top: 10px;
+            left: -26%;
+            color: rgb(25, 55, 21);
+            font-family: 微软雅黑;
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px;
+            transition: all .5s;
+        }
+        .p_title:hover{
+            transform: translateY(-50px);
+        }
+        .p_wenzi{
+            position: relative;
+            width: 500px;
+            height: 400px;
+            color: rgb(25, 55, 21);
+            font-family: 微软雅黑;
+            font-size: 20px;
+            text-align: left;
+            line-height: 40px;
+            transition: all .8s;
+        }
+        .p_wenzi:hover{
+            height: 420px;
+            transform: scale(1.2);
+            transform-origin:  top left;
+        }
+        .yuhao{
+            position: relative;
+            width: 500px;
+            height: 450px;
+            top: -212px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;  
+        }
+        .p_box{
+            position: relative;
+            width: 500px;
+            height: 70px;
+            top: -2px;
+            transition: all .5s;
+        } 
+        .p_box:hover{
+            transform: translateX(50px);
+        }
+        .box1{
+            position: relative;
+            width: 56px;
+            height: 56px;
+            left: -43%;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 56px;
+            font-size: 32px;
+            border: solid rgb(25, 55, 21);
+        }
+        .box2{
+            position: relative;
+            width: 300px;
+            height: 70px;
+            left: 5%;
+            top: -62px;
+            line-height: 70px;
+            font-family: 微软雅黑;
+            font-size: 20px;
+            text-align: left;
+            color:rgb(25, 55, 21) ;
+        }
+        .down{
+            position: relative;
+            width: 1500px;
+            height: 600px;
+            top: 10px;
+          
+        }
+        .d_left{
+            position: relative;
+            width: 300px;
+            height: 165px;
+            left: -290px;
+            top: -550px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .d_w{
+            position: relative;
+            width: 300px;
+            height: 12px;
+            font-family: 微软雅黑;
+            font-size: 30px;
+            text-align: left;
+            color: rgb(25, 55, 21);
+        }
+        .d_m{
+            position: relative;
+            width: 400px;
+            height: 200px;
+            left: 40px;
+            top: -671px;
+            color: rgb(39, 101, 30);
+            font-family: 微软雅黑;
+            font-size: 27px;
+            text-align: left;
+        }
+        .d_x{
+            position: relative;
+            width: 254px;
+            height: 81px;
+            left: -28px;
+            top: -823px;
+            color: rgb(75, 79, 74);
+            font-family: 微软雅黑;
+            font-size: 20px;
+            text-align: left;
+            line-height: 29px;
+        }
+        .button{
+            position: relative;
+            width: 300px;
+            height: 60px;
+            left: 360px;
+            top: -920px;
+            background-color: rgb(137, 145, 124);
+            font-family: 微软雅黑;
+            font-size: 33px;
+            text-align: center;
+            line-height: 60px;
+            color: azure;
+            transition: all 1.8s;
+        }
+        .button:hover{
+            background-color: transparent;
+            color:  rgb(137, 145, 124);
+            transform: translateY(-40px);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="top">
+    <i><div class="left">&#xe62f;</div>
+        <div class="right">&#xe62d;</div>
+    </i>
+    </div>
+    <div class="weigui">
+        <div class="w_title">Animal Photography</div>
+        <div class="w_wenzi">A silhouette of them, a simple little acttion, here are the photographer's eyes the best of them, their laughter, their love, their every vivid, are recored by us.
+        </div>
+        <div class="w_bottom"> EXPIORE</div> 
+    </div>
+    <div class="photo"></div>
+    <div class="bird">
+        <div class="b_photo"><img src="https://w05.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F1.png"></div>
+        <div class="b_photo"><img src="https://w05.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F2.png"></div>
+        <div class="b_photo"><img src="https://w05.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F3.png"></div>
+    </div>
+    <div class="lun">
+        <div class="kuang">
+            <div class="k_wenzi">"Family Farms is the best place, where I can buy fruitvegetable,meat,honey,milk, 
+                <br>
+                eggs and so on for my retaurant directly fromupplier. Super convinient.Thank you"
+                <br>
+                xdccnfc cfvfesc cfnccnjdcn cfjdcdsr dcwwzwqg ejs dddc ddf fnfjv eij fvnv jnxzexh cn 
+                <br>
+                cdcmdsc ddnc, cddmdcds dncdn cdcn wqeoeas, dcndassasas,cdcndcnc ccigoskum
+                <br> 
+                cbdcpqslwq nfnere nfncsfijc dndcww frhfinc qpdjweiw cnncqe, cqjsdc ccn dcindc 
+                <br>
+                ncf cdncjd dcdjcndq csincq dcdncf dcdjdnc cdjsq, qkodkqe wqcnpsdc cdngq qcw, 
+                <br>
+                cqnonxj dcdcnd dcnjsdvb wenwq cowwncjq jicnjncqnw weq c wd cwch, cnjncnc ece 
+                <br>
+                cdcnncdwnc nenwc dcnnc cjcj, c cjrnc wecwc
+                </div>
+            <div class="k_sign">SIGN UP</div>
+        </div>
+    </div>
+    <div class="zi">Difference
+    </div>
+    <div class="animal">
+        <div class="box">
+            <div class="box_a"><img src="https://w05.oss-cn-beijing.aliyuncs.com/%E9%A9%AC.png"></div>
+            <div class="box_b">Horse</div>
+            <div class="box_c"> A difference story</div>
+        </div>
+        <div class="box">
+            <div class="box_a"><img src="https://w05.oss-cn-beijing.aliyuncs.com/%E8%A2%8B%E9%BC%A0.png"></div>
+            <div class="box_b">Kangaroo</div>
+            <div class="box_c"> A difference story
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_a"><img src="https://w05.oss-cn-beijing.aliyuncs.com/%E7%8B%AE%E5%AD%90.png"></div>
+            <div class="box_b">Lion</div>
+            <div class="box_c"> A difference story</div>
+        </div>
+        <div class="box">
+            <div class="box_a"><img src="https://w05.oss-cn-beijing.aliyuncs.com/%E5%B0%8F%E9%B8%9F.png"></div>
+            <div class="box_b">Hummingbird</div>
+            <div class="box_c"> A difference story</div>
+        </div>
+    </div>
+    <div class="know">Know more</div> 
+    <div class="songsu"></div>
+    <div class="p">
+        <div class="p_title">The Photo</div>
+        <div class="p_wenzi">
+            &nbsp; &nbsp;"Family Farms is the best placewhere I
+            <br>
+            can buy fruit,vegetable,meat,honey,milk
+            <br>
+            eggs and so on for my retaurant directly from
+            <br>
+            supplier. Super convinient.Thank you"
+        </div>
+        <div class="yuhao">
+            <div class="p_box">
+                <div class="box1">1</div>
+                <div class="box2">Looking for it Regular</div>
+            </div>
+            <div class="p_box">
+                <div class="box1">2</div>
+                <div class="box2">Cultivate feelings</div>
+            </div>
+            <div class="p_box">
+                <div class="box1">3</div>
+                <div class="box2">Shooting</div>
+            </div>
+            <div class="p_box">
+                <div class="box1">4</div>
+                <div class="box2">Harvest achievement T Shoe</div>
+            </div>
+        </div>
+    </div>
+    <hr style="border: 2px solid rgb(25, 55, 21) ;" />
+    <div class="down"></div>
+        <div class="d_left">
+                <div class="d_w">IN THE WILD </div>
+                <div class="d_w">IN THE SEA </div>
+            </div>
+        <div class="d_m">MOER </div>
+        <div class="d_x">We create art
+            <br>We create life</div>
+    </div>
+    <div class="button">Big World</div>
+</body>
+</html>

@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="alitubiao/all/iconfont.css">
+    <link rel="stylesheet" href="alitubiao/xiangji1/iconfont.css">
+    <link rel="stylesheet" href="alitubiao/yuan/iconfont.css">
+    <link rel="stylesheet" href="alitubiao/sosuo/iconfont.css">
+    <link rel="stylesheet" href="alitubiao/fgx/iconfont.css">
+    <meta charset="UTF-8">
+
+    <title>Animal</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .header {
+            /*display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 600px;
+            height: 1000px;*/
+            position: absolute;
+            background: url("https://lcy57.oss-cn-beijing.aliyuncs.com/img/202312192149566.png");
+            width: 100%;
+            height: 100%;
+        }
+
+        .header_top {
+            display: flex;
+            position: absolute;
+            background-color: white;
+            width: 100%;
+            height: 7%;
+        }
+
+        .header_top_box {
+            margin: 0 auto;
+            width: 400px;
+            height: 500px;
+        }
+
+        .header_top_all {
+            display: flex;
+            position: relative;
+            left: 25px;
+            top: 22px;
+            transition: transform 2s ease-in-out;
+
+        }
+
+        .header_top_all :hover {
+            transform: scale(0.75);
+        }
+
+        .header_top_photoback {
+            display: flex;
+            background-color: rgb(104, 169, 6);
+            width: 200px;
+            height: 200px;
+            position: relative;
+            left: 50%;
+            top: 125%;
+            margin-left: -100px;
+            margin-top: -100px;
+            transition: transform 2s ease-in-out;
+
+        }
+
+        .header_top_photoback:hover {
+            transform: scale(0.75);
+        }
+
+        .header_top_photoback_bj {
+            display: flex;
+            position: absolute;
+            left: 25px;
+            top: 40px;
+        }
+
+        .header_top_photoback_photo {
+            display: flex;
+            position: relative;
+            left: 50px;
+            top: 65px;
+        }
+
+        .header_top_sosuo {
+            display: flex;
+            position: absolute;
+            left: 97%;
+            top: 22px;
+            transition: transform 2s ease-in-out;
+        }
+
+        .header_top_sosuo :hover {
+            transform: scale(0.75);
+        }
+
+        .header_topwz {
+            display: flex;
+            position: absolute;
+            left: 37%;
+            top: 290px;
+        }
+
+        .header_topwz_zt {
+            font-family: "宋体";
+            font-size: 50px;
+            font-weight: bold;
+            color: rgb(3, 67, 3);
+        }
+
+        .header_txt {
+            display: flex;
+            position: absolute;
+            left: 26%;
+            top: 365px;
+
+        }
+
+        .header_txt_zt {
+            font-family: "Microsoft Yahei";
+            font-size: 24px;
+            color: rgb(3, 67, 3);
+        }
+
+        .header_explore {
+            display: flex;
+            /*flex-direction: row;*/
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 26%;
+            top: 605px;
+            background-color: rgb(3, 67, 3);
+            width: 150px;
+            height: 50px;
+            transition: transform 2s ease-in-out;
+        }
+
+        .header_explore:hover {
+            transform: scale(0.75);
+        }
+
+        .header_explore_zt {
+            font-family: "Microsoft Yahei";
+            font-size: 20px;
+            color: white;
+
+        }
+
+        .header_photos {
+            width: 100%;
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 50%;
+            height: 500px;
+            position: absolute;
+            left: 26%;
+            top: 783px;
+        }
+
+        .header_photos_box1 {
+            position: relative;
+            width: 100px;
+            height: 75px;
+            transition: transform 1s ease-in-out;
+        }
+
+        .header_photos_box1:hover {
+            transform: translateY(-40px)
+        }
+
+        .header_photos_box1_wz {
+            display: flex;
+            position: relative;
+            left: 270px;
+            top: -80px;
+        }
+
+        .header_photos_box_wz_zt {
+            font-family: "宋体";
+            font-weight: bold;
+            font-size: 30px;
+            color: white;
+        }
+
+        .header_photos_box2 {
+            position: relative;
+            width: 100px;
+            height: 75px;
+            transition: transform 1s ease-in-out;
+        }
+
+        .header_photos_box2:hover {
+            transform: translateY(-40px)
+        }
+
+        .header_photos_box2_wz {
+            display: flex;
+            position: relative;
+            left: 250px;
+            top: -80px;
+        }
+
+        .header_photos_box3 {
+            position: relative;
+            width: 100px;
+            height: 75px;
+            transition: transform 1s ease-in-out;
+        }
+
+        .header_photos_box3:hover {
+            transform: translateY(-40px)
+        }
+
+        .header_photos_box3_wz {
+            display: flex;
+            position: relative;
+            left: 240px;
+            top: -80px;
+        }
+
+        .bodys {
+            display: flex;
+            width: 100%;
+            height: 760px;
+            position: absolute;
+            top: 1475px;
+        }
+
+        .bodys_txt_background {
+            background-image: url("https://lcy57.oss-cn-beijing.aliyuncs.com/img/202312192149573.png");
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: absolute;
+            top: 80px;
+
+        }
+
+        .bodys_txt_wz {
+            display: flex;
+            background-color: rgb(198, 196, 196);
+            width: 55%;
+            height: 500px;
+            position: absolute;
+            left: 30%;
+            top: 0px;
+            transition: transform 1s ease-in-out;
+        }
+
+        .bodys_txt_wz:hover {
+            transform: translateY(-40px)
+        }
+
+        .bodys_txt_wz_box1 {
+            display: flex;
+            width: 100%;
+            height: 225px;
+            position: relative;
+            left: 14%;
+            top: 125px;
+        }
+
+        .bodys_txt_wz_box1_zt {
+            font-family: "Microsoft Yahei";
+            font-size: 16px;
+            color: rgb(3, 67, 3);
+            line-height: 1.5em;
+        }
+
+        .bodys_txt_wz_box2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(3, 67, 3);
+            width: 150px;
+            height: 50px;
+            color: black;
+            position: relative;
+            left: -400px;
+            top: 400px;
+            transform: transform 2s ease-in-out;
+        }
+
+        .bodys_txt_wz_box2:hover {
+            transform: scale(0.8);
+        }
+
+        .bodys_txt_wz_box2_zt {
+            font-family: "Microsoft Yahei";
+            font-size: 24px;
+            color: white;
+        }
+
+        .difference {
+            display: flex;
+            width: 100%;
+            height: 692px;
+            /* background-color: steelblue;*/
+            position: absolute;
+            top: 2300px;
+        }
+
+        .difference_box {
+            display: flex;
+            position: absolute;
+            left: 48%;
+            top: 85px;
+        }
+
+        .difference_box_kk {
+            display: flex;
+            position: absolute;
+            left: -29%;
+            opacity: 0;
+            transform: opacity ease-in-out;
+        }
+
+        .difference_box_kk:hover {
+            transition-duration: 5s;
+            opacity: 1;
+        }
+
+        .diference_box_zt {
+            font-family: "Microsoft Yahei";
+            font-size: 45px;
+            color: rgb(3, 67, 3);
+        }
+
+        .box {
+            display: flex;
+            justify-content: space-between;
+            /* background-color: violet;*/
+            width: 75%;
+            height: 450px;
+            position: absolute;
+            left: 250px;
+            top: 225px;
+        }
+
+        .difference_box1 {
+            display: flex;
+            background-color: rgb(170, 169, 169);
+            width: 265px;
+            height: 415px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            transform: transform ease-in-out;
+        }
+
+        .difference_box1:hover {
+            transition-duration: 2s;
+            transform: translateY(-40px)
+        }
+
+        .difference_box_photo {
+            display: flex;
+            width: 263px;
+            height: 263px;
+            position: relative;
+        }
+
+        .diference_box_wz {
+            display: flex;
+            /*background-color: crimson;*/
+            width: 100%;
+            height: 152px;
+            position: relative;
+            left: -263px;
+            top: 263px;
+        }
+
+        .difference_box1_wz_title {
+            display: flex;
+            /*width: 50%;*/
+            position: relative;
+            left: 37%;
+            top: 20px;
+        }
+
+        .difference_box_wz_title_zt {
+            font-family: "Microsoft Yahei";
+            font-size: 24px;
+            color: rgb(3, 67, 3);
+        }
+
+        .difference_box1_wz_body {
+            display: flex;
+            width: 263px;
+            height: 152px;
+            position: relative;
+            left: 0%;
+            top: 65px;
+
+        }
+
+        .difference_box_wz_body_xhx {
+            position: relative;
+            left: -15%;
+        }
+
+        .difference_box_wz_body_zt {
+            font-family: "Microsoft Yahei";
+            font-size: 16px;
+            color: rgb(3, 67, 3);
+        }
+
+        .difference_box2 {
+            display: flex;
+            width: 265px;
+            height: 415px;
+            background-color: rgb(170, 169, 169);
+            position: absolute;
+            left: 300px;
+            transform: transform ease-in-out;
+        }
+
+        .difference_box2:hover {
+            transition-duration: 2s;
+            transform: translateY(-40px)
+        }
+
+
+        .difference_box2_wz_title {
+            display: flex;
+            /*width: 50%;*/
+            position: relative;
+            left: 32%;
+            top: 20px;
+        }
+
+        .difference_box2_wz_body {
+            display: flex;
+            width: 263px;
+            height: 152px;
+            position: relative;
+            left: -15%;
+            top: 65px;
+        }
+
+        .difference_box3 {
+            display: flex;
+            width: 265px;
+            height: 415px;
+            background-color: rgb(170, 169, 169);
+            position: absolute;
+            left: 600px;
+            transform: transform ease-in-out;
+        }
+
+        .difference_box3:hover {
+            transition-duration: 2s;
+            transform: translateY(-40px)
+        }
+
+        .difference_box3_wz_title {
+            display: flex;
+            /*width: 50%;*/
+            position: relative;
+            left: 38%;
+            top: 20px;
+        }
+
+        .difference_box3_wz_body {
+            display: flex;
+            width: 263px;
+            height: 152px;
+            position: relative;
+            left: 7%;
+            top: 65px;
+        }
+
+        .difference_box4 {
+            display: flex;
+            width: 263px;
+            height: 415px;
+            background-color: rgb(170, 169, 169);
+            position: absolute;
+            left: 900px;
+            transform: transform ease-in-out;
+        }
+
+        .difference_box4:hover {
+            transition-duration: 2s;
+            transform: translateY(-40px)
+        }
+
+        .difference_box4_wz_title {
+            display: flex;
+            /*width: 50%;*/
+            position: relative;
+            left: 27%;
+            top: 20px;
+        }
+
+        .difference_box4_wz_body {
+            display: flex;
+            width: 265px;
+            height: 152px;
+            position: absolute;
+            left: 33%;
+            top: 65px;
+        }
+
+        .knowmore {
+            display: flex;
+            /*background-color: thistle;*/
+            width: 100%;
+            height: 900px;
+            position: absolute;
+            top: 700px;
+        }
+
+        .knowmore_title_kk {
+            display: flex;
+            width: 360px;
+            height: 60px;
+            position: absolute;
+            left: 43%;
+            top: 10px;
+        }
+
+        .knowmore_title_wz {
+            display: flex;
+            width: 360px;
+            height: 60px;
+            position: absolute;
+            left: 47%;
+            top: 10px;
+        }
+
+        .knowmore_title_zt {
+            font-family: "Microsoft Yahei";
+            font-size: 36px;
+            color: rgb(3, 67, 3);
+        }
+
+        .knowmore_photo {
+            display: flex;
+            width: 40%;
+            height: 700px;
+            position: absolute;
+            left: 17%;
+            top: 125px;
+        }
+
+        .knowmore_txt {
+            display: flex;
+            /*background-color: turquoise;*/
+            width: 35%;
+            height: 650px;
+            position: absolute;
+            left: 55%;
+            top: 200px;
+        }
+
+        .knowmore_txt_title {
+            display: flex;
+            position: relative;
+            top: 10px;
+            transform: transform ease-in-out;
+        }
+
+        .knowmore_txt_title:hover {
+            transition-duration: 5s;
+            transform: translateY(-30px)
+        }
+
+        .knowmore_txt_title_zt {
+            font-family: "Microsoft Yahei";
+            font-size: 24px;
+            color: rgb(3, 67, 3);
+        }
+
+        .knowmore_txt_wz {
+            display: flex;
+            /*background-color: red;*/
+            width: 100%;
+            height: 225px;
+            position: absolute;
+            left: 0%;
+            top: 75px;
+            transform: transform ease-in-out;
+        }
+
+        .knowmore_txt_wz:hover {
+            transition-duration: 5s;
+            transform: translateX(100px) translateY(10px) scale(1.25);
+        }
+
+        .knowmore_txt_wz_zt {
+            font-family: "Microsoft Yahei";
+            font-size: 16px;
+            color: rgb(3, 67, 3);
+        }
+
+        .knowmre_txt_list1 {
+            display: flex;
+            /* background-color: white;*/
+            width: 100%;
+            height: 100px;
+            position: absolute;
+            top: 200px;
+            transform: transform ease-in-out;
+        }
+
+        .knowmre_txt_list1:hover {
+            transition-duration: 5s;
+            transform: translateX(100px);
+        }
+
+        .knowmre_txt_list_sh {
+            display: flex;
+            /*background-color: yellow;*/
+            width: 65px;
+            height: 65px;
+        }
+
+        .knowmre_txt_list_wz {
+            display: flex;
+            /* background-color: tan;*/
+            width: 600px;
+            height: 65px;
+            position: relative;
+            left: 10px;
+            top: 30px;
+        }
+
+        .knowmre_txt_list_wz_zt {
+            font-family: "Microsoft Yahei";
+            font-size: 24px;
+            color: rgb(3, 67, 3);
+        }
+
+        .knowmre_txt_list2 {
+            display: flex;
+            /*background-color: white;*/
+            width: 100%;
+            height: 100px;
+            position: absolute;
+            top: 300px;
+            transform: transform ease-in-out;
+        }
+
+        .knowmre_txt_list2:hover {
+            transition-duration: 5s;
+            transform: translateX(100px);
+        }
+
+        .knowmre_txt_list3 {
+            display: flex;
+            /*background-color: white;*/
+            width: 100%;
+            height: 100px;
+            position: absolute;
+            top: 400px;
+            transform: transform ease-in-out;
+        }
+
+        .knowmre_txt_list3:hover {
+            transition-duration: 5s;
+            transform: translateX(100px);
+        }
+
+
+        .knowmre_txt_list4 {
+            display: flex;
+            /*background-color: white;*/
+            width: 100%;
+            height: 100px;
+            position: absolute;
+            top: 500px;
+            transform: transform ease-in-out;
+        }
+
+        .knowmre_txt_list4:hover {
+            transition-duration: 5s;
+            transform: translateX(100px);
+        }
+
+        .knower_xiahuayie {
+            /*background-color: teal;*/
+            display: flex;
+            width: 100%;
+            height: 391px;
+            position: absolute;
+            top: 1000px;
+        }
+
+        .footer {
+            display: flex;
+            /*background-color: yellow;*/
+            width: 100%;
+            height: 300px;
+            position: absolute;
+            top: 1750px;
+        }
+
+        .footer_txt {
+            display: flex;
+            /*background-color: seagreen;*/
+            width: 200px;
+            height: 100px;
+            position: relative;
+            left: 400px;
+            top: 75px;
+        }
+
+        .footer_txt_wz {
+            display: flex;
+            /*background-color: skyblue;*/
+            width: 100%;
+            height: 100px;
+        }
+
+        .footer_txt_wz_zt {
+            font-family: "Microsoft Yahei";
+            font-size: 24px;
+            color: rgb(3, 67, 3);
+            line-height: 2.5em;
+        }
+
+        .footer_wb {
+            display: flex;
+            /*background-color: thistle;*/
+            width: 180px;
+            height: 100px;
+            position: relative;
+            left: 380px;
+            top: 100px;
+        }
+
+        .footer_wb_title {
+            font-family: "Microsoft Yahei";
+            font-size: 20px;
+            color: rgb(4, 128, 4);
+        }
+
+        .footer_wb_txt {
+            /*background-color: chocolate;*/
+            width: 100%;
+            height: 80px;
+            position: relative;
+            left: -57px;
+            top: 30px;
+        }
+
+        .footer_wb_txt_zt {
+            font-family: "Microsoft Yahei";
+            font-size: 18px;
+            color: rgb(4, 128, 4);
+            line-height: 1.5em;
+        }
+
+        .footer_big {
+            display: flex;
+            background-color: rgb(1, 126, 1);
+            opacity: 1;
+            justify-content: center;
+            align-items: center;
+            width: 240px;
+            height: 50px;
+            position: relative;
+            left: 600px;
+            top: 100px;
+            color: white;
+            font-family: "Microsoft Yahei";
+            font-size: 24px;
+            transform: color transform opacity ease-in-out;
+        }
+
+        .footer_big:hover {
+            transition-duration: 5s;
+            color: rgb(55, 53, 53);
+            transform: translateY(-30px);
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_top">
+            <div class="header_top_all"><span class="iconfont_all">&#xe53a;</span></div>
+            <div class="header_top_photoback">
+                <div class="header_top_photoback_bj"><span class="iconfont_yuan">&#xea97;</span></div>
+                <div class="header_top_photoback_photo">
+                    <span class="iconfont_xiangji1">&#xe66c;</span>
+                </div>
+            </div>
+            <div class="header_top_sosuo"><span class="iconfont_sosuo">&#xf00a8;</span></div>
+        </div>
+        <div class="header_wz">
+            <div class="header_topwz">
+                <div class="header_topwz_zt">Animal Photography</div>
+            </div>
+            <div class="header_txt">
+                <div class="header_txt_zt">A sillhouette of them,a simple litte acttion,here are the photographer’
+                    s<br>eyes the best of them,their laughter,their love,they every vivd,are recored<br>by us</div>
+            </div>
+        </div>
+        <div class="header_explore">
+            <div class="header_explore_zt">EXPLORE</div>
+        </div>
+        <div class="header_photos">
+            <div class="header_photos_box1"><img src="https://lcy57.oss-cn-beijing.aliyuncs.com/img/202312192149567.png"
+                    alt="火烈鸟1" title="火烈鸟1">
+                <div class="header_photos_box1_wz">
+                    <div class="header_photos_box_wz_zt">Fly</div>
+                </div>
+            </div>
+            <div class="header_photos_box2"><img src="https://lcy57.oss-cn-beijing.aliyuncs.com/img/202312192149568.png"
+                    alt="火烈鸟2" title="火烈鸟2">
+                <div class="header_photos_box2_wz">
+                    <div class="header_photos_box_wz_zt">Love</div>
+                </div>
+            </div>
+            <div class="header_photos_box3"><img src="https://lcy57.oss-cn-beijing.aliyuncs.com/img/202312192149569.png"
+                    alt="火烈鸟3" title="火烈鸟3">
+                <div class="header_photos_box3_wz">
+                    <div class="header_photos_box_wz_zt">stand</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bodys">
+        <div class="bodys_txt">
+            <div class="bodys_txt_background"></div>
+            <div class="bodys_txt_wz">
+                <div class="bodys_txt_wz_box1">
+                    <div class="bodys_txt_wz_box1_zt">
+                        "Family Farmy is the best place,where I can buy
+                        fruit,vegetable,meat,honey,milk,<br>egg and so on for my retaurant directly fromupplier.Super
+                        convinient.Thank you"<br>xdccnfc cfvfesc cfnccnjdcn cfjdcdsr dcwwzwqg ejs dddc ddf fnfjv eij
+                        fvnv
+                        jnxzexh cn<br>cdcmdsc ddnc, cddmdcds dncdn cdcn wqeoeas, dcndassasas,cdcndcnc
+                        cciqoskxm<br>cbdcpqslwq
+                        nfnere nfncsfjjc
+                        dndcww frhfinc qpdjweiw cnncqe, cqjsdc ccn dcindc,<br>ncf cdncjd dcdjcndq csincq dcdncf dcdjdnc
+                        cdjsq,
+                        qkodkqe wqcnpsdc cdnqq qcw,<br>cqnonxj dedcnd dcnjsdvb wenwq cowwncjq jjcnjncqnw weq c wd cwch,
+                        cnjncnc
+                        ece<br>cdcnncdwnc nenwc dcnnc cjcj , c
+                        cjrnc wecwc.</div>
+                </div>
+                <div class="bodys_txt_wz_box2">
+                    <div class="bodys_txt_wz_box2_zt ">SIGN UP</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="difference">
+        <div class="difference_box">
+            <div class="difference_box_kk"><img src="https://lcy57.oss-cn-beijing.aliyuncs.com/img/202312192149572.png">
+            </div>
+            <div class="diference_box_zt">Difference</div>
+        </div>
+        <div class="box">
+            <div class="difference_box1">
+                <div class="difference_box_photo"><img
+                        src="https://lcy57.oss-cn-beijing.aliyuncs.com/img/202312192149574.png" alt="马" title="马"></div>
+                <div class="diference_box_wz">
+                    <div class="difference_box1_wz_title">
+                        <div class="difference_box_wz_title_zt">Horse</div>
+                    </div>
+                    <div class="difference_box1_wz_body">
+                        <div class="difference_box_wz_body_zt">A difference story
+                            <div class="difference_box_wz_body_xhx"><img
+                                    src="https://lcy57.oss-cn-beijing.aliyuncs.com/img/202312192149565.png"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="difference_box2">
+                <div class="difference_box_photo"><img
+                        src="https://lcy57.oss-cn-beijing.aliyuncs.com/img/202312192149571.png" alt="袋鼠" title="袋鼠">
+                </div>
+                <div class="diference_box_wz">
+                    <div class="difference_box2_wz_title">
+                        <div class="difference_box_wz_title_zt">Kangaroo</div>
+                    </div>
+                    <div class="difference_box2_wz_body">
+                        <div class="difference_box_wz_body_zt">A difference story<div
+                                class="difference_box_wz_body_xhx"><img
+                                    src="https://lcy57.oss-cn-beijing.aliyuncs.com/img/202312192149565.png"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="difference_box3">
+                <div class="difference_box_photo"><img
+                        src="https://lcy57.oss-cn-beijing.aliyuncs.com/img/202312192149575.png" alt="狮子" title="狮子">
+                </div>
+                <div class="diference_box_wz">
+                    <div class="difference_box3_wz_title">
+                        <div class="difference_box_wz_title_zt">Lion</div>
+                    </div>
+                    <div class="difference_box3_wz_body">
+                        <div class="difference_box_wz_body_zt">A difference story<div
+                                class="difference_box_wz_body_xhx"><img
+                                    src="https://lcy57.oss-cn-beijing.aliyuncs.com/img/202312192149565.png"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="difference_box4">
+                <div class="difference_box_photo"><img
+                        src="https://lcy57.oss-cn-beijing.aliyuncs.com/img/202312192149578.png" alt="小鸟" title="小鸟">
+                </div>
+                <div class="diference_box_wz">
+                    <div class="difference_box4_wz_title">
+                        <div class="difference_box_wz_title_zt">Hummingbird</div>
+                    </div>
+                    <div class="difference_box4_wz_body">
+                        <div class="difference_box_wz_body_zt">A difference story<div
+                                class="difference_box_wz_body_xhx"><img
+                                    src="https://lcy57.oss-cn-beijing.aliyuncs.com/img/202312192149565.png"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="knowmore">
+            <div class="knowmore_title"></div>
+            <div class="knowmore_title_kk"><img src="https://lcy57.oss-cn-beijing.aliyuncs.com/img/202312192149572.png">
+            </div>
+            <div class="knowmore_title_wz">
+                <div class="knowmore_title_zt">Know more</div>
+            </div>
+            <div class="knowmore_photo"><img src="https://lcy57.oss-cn-beijing.aliyuncs.com/img/202312192149576.png"
+                    alt="松鼠" title="松鼠"></div>
+            <div class="knowmore_txt">
+                <div class="knowmore_txt_title">
+                    <div class="knowmore_txt_title_zt">The Photo</div>
+                </div>
+                <div class="knowmore_txt_wz">
+                    <div class="knowmore_txt_wz_zt">"Family Farms is the best placewhere I<br>
+                        can buyfruit,vegetable,meat,honey,milk,<br>
+                        eggs and so on for my retaurant directly from
+                        <br>supplier. Super convinient.Thank you"
+                    </div>
+                </div>
+                <div class="knowmre_txt_list1">
+                    <div class="knowmre_txt_list_sh"><img
+                            src="https://lcy57.oss-cn-beijing.aliyuncs.com/img/202312192149560.png" alt="1" title="1">
+                    </div>
+                    <div class="knowmre_txt_list_wz">
+                        <div class="knowmre_txt_list_wz_zt">Look for it</div>
+                    </div>
+                </div>
+                <div class="knowmre_txt_list2">
+                    <div class="knowmre_txt_list_sh"><img
+                            src="https://lcy57.oss-cn-beijing.aliyuncs.com/img/202312192149562.png" alt="2" title="2">
+                    </div>
+                    <div class="knowmre_txt_list_wz">
+                        <div class="knowmre_txt_list_wz_zt">Cultivate feelings</div>
+                    </div>
+                </div>
+                <div class="knowmre_txt_list3">
+                    <div class="knowmre_txt_list_sh"><img
+                            src="https://lcy57.oss-cn-beijing.aliyuncs.com/img/202312192149562.png" alt="3" title="3">
+                    </div>
+                    <div class="knowmre_txt_list_wz">
+                        <div class="knowmre_txt_list_wz_zt">Shooting</div>
+                    </div>
+                </div>
+                <div class="knowmre_txt_list4">
+                    <div class="knowmre_txt_list_sh"><img
+                            src="https://lcy57.oss-cn-beijing.aliyuncs.com/img/202312192149564.png" alt="4" title="4">
+                    </div>
+                    <div class="knowmre_txt_list_wz">
+                        <div class="knowmre_txt_list_wz_zt">Harvest achievement</div>
+                    </div>
+                </div>
+            </div>
+            <div class="knower_xiahuayie"><img src="https://lcy57.oss-cn-beijing.aliyuncs.com/img/202312192149570.png"
+                    alt="下划线" title="下划线"></div>
+        </div>
+        <div class="footer">
+            <div class="footer_txt">
+                <div class="footer_txt_wz">
+                    <div class="footer_txt_wz_zt">IN THE WLED<br>IN THE SEA</div>
+                </div>
+            </div>
+            <div class="footer_wb">
+                <div class="footer_wb_title">MOER</div>
+                <div class="footer_wb_txt">
+                    <div class="footer_wb_txt_zt ">We create art.<br>We creat life</div>
+                </div>
+            </div>
+            <div class="footer_big">
+                <div class="foot_big_zt">Big World</div>
+            </div>
+        </div>
+</body>
+
+</html>

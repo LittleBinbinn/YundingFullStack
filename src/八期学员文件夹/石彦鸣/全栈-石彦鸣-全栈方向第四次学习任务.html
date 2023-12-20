@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+        body{
+            width: 1920px;
+            margin: auto;
+        }
+        .top{
+            width: 1920px;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            color: #ffffff;
+            margin:auto;
+        }
+        .top>button{
+            height: 50px;
+            width: 50px;
+            border: 0px;
+            background-color: transparent;
+            transition-duration: 0.3S ;
+        }
+        .top>button>img:hover{
+          transform: scale(0.8);
+        }
+        .logo{
+          z-index: 1111111111111111;
+        }
+        .logo>img{
+          transition:all 2s ease;
+        }
+        .logo>img:hover{
+          transform: scale(0.8);
+        }
+        .top>button>img{
+            height: 100%;
+            width: 100%;
+        }
+        .introduce{
+            margin:auto;
+            position: relative;
+        }
+        .introduce>.background{
+            width: 1920px;
+        }
+        .introduce>.background>img{
+            width: 100%;
+            height: 100%;
+        }.introduce>.text{
+            position: absolute;
+            left: 410px;
+            top: 90px;
+            top: 200px;
+            width: 1100px;
+            height: 180px;
+            text-align: center;
+        }
+        #EXPIORE{
+            position: relative;
+            top: 140px;
+            right: 370px;
+            text-align: center;
+            height: 80px;
+            width: 260px;
+            border: 0;
+            background-color: #2a3f17;
+            font-size: 30px;
+            color: white;
+            transition-duration: 0.8s;
+        }
+        #EXPIORE:hover{
+          transform: scale(0.8);
+        }
+        .birds{
+          height: 500px;
+          width: 1120px;
+          margin: auto;
+          display: flex;
+          justify-content: space-between;
+          position: relative;
+          top: -150px;
+        }
+        .birds>div{
+          width: 333px;
+          transition-duration: 0.8s;
+        }
+        .birds>div:hover{
+          transform: translateY(-50px);
+        }
+        .birds a{
+          font-size: 48px;
+          color: white;
+          position: relative;
+          top: -100px;
+          left: 180px;
+        }
+        .sign{
+          height: 1000px;
+        }
+        .sign >.text{
+          width: 950px;
+          height: 540px;
+          background-color: #e0dfdf;
+          margin: auto;
+          transition-duration:0.8s ;
+        }
+        .sign>.text:hover{
+          transform: translateY(-100px);
+        }
+        .sign >.text>p{
+          font-size: 20px;
+          color: #2a3f17;
+          width: 800px;
+          height: 240px;
+          margin: auto;
+          position: relative;
+          top: 80px;
+        }
+        .sign >.text>button{
+          width: 200px;
+          height: 75px;
+          background-color: #2a3f17;
+          color: white;
+          font-size: 30px;
+          position: relative;
+          left: 370px;
+          top: 160px;
+          transition-duration: 0.8s;
+        }
+        .sign >.text>button:hover{
+          transform: scale(0.8);
+        }
+        .sign>.background{
+          position: relative;
+          top: -450px;
+          z-index: -114514;
+        }
+        .difference>.photos{
+          height: 420px;
+          width: 1120px;
+          display: flex;
+          justify-content: space-between;
+          margin: auto;
+        }
+        .difference>.photos>div{
+          height: 420px;
+          width: 262px;
+          background-color: #e0dfdf;
+          transition-duration:0.8s ;
+        }
+        .difference>.photos>div:hover{
+          transform: translateY(-50px);
+        }
+        .difference>.photos p{
+          font-size: 30px;
+          color: #2a3f17;
+          text-align: center;
+          margin: 15px;
+        }
+        .difference>.photos a{
+          font-size: 21.85px;
+          color: #2a3f17;
+          margin: 37px;
+          text-decoration :underline;
+        }
+        @keyframes border{
+          0%{
+            border-width: 3px;
+            border-color: transparent;
+          }
+          25%{
+            border-width: 3px;
+            border-color: transparent;
+            border-top-color: #2a3f17 ;
+            border-top-width: 3px;
+            border-top-style: solid;
+          }
+          50%{
+            border-width: 3px;
+            border-color: transparent;
+            border-right-color: #2a3f17;
+            border-right-width: 3px;
+            border-right-style: solid;
+          }
+          75%{
+            border-width: 3px;
+            border-color: transparent;
+            border-bottom-color: #2a3f17;
+            border-bottom-width: 3px;
+            border-bottom-style: solid;
+          }
+          100%{
+            border-width: 3px;
+            border-color: transparent;
+            border-left-color: #2a3f17;
+            border-left-width: 3px;
+            border-left-style: solid;
+          }
+        }
+    @-webkit-keyframes border{
+          0%{
+            border-width: 3px;
+            border-color: transparent;
+          }
+          25%{
+            border-width: 3px;
+            border-color: transparent;
+            border-top-color: #2a3f17 ;
+            border-top-width: 3px;
+            border-top-style: solid;
+          }
+          50%{
+            border-width: 3px;
+            border-color: transparent;
+            border-right-color: #2a3f17;
+            border-right-width: 3px;
+            border-right-style: solid;
+          }
+          75%{
+            border-width: 3px;
+            border-color: transparent;
+            border-bottom-color: #2a3f17;
+            border-bottom-width: 3px;
+            border-bottom-style: solid;
+          }
+          100%{
+            border-width: 3px;
+            border-color: transparent;
+            border-left-color: #2a3f17;
+            border-left-width: 3px;
+            border-left-style: solid;
+          }
+        }
+        #d_title{
+          font-size: 48px;
+          text-align: center;
+          margin: auto;
+          margin-bottom: 40px;
+          color: #2a3f17;
+          width: 280px;
+          height: 70px;
+          -webkit-animation: border 1.6s infinite;
+          animation: border 1.6s  infinite;
+        }
+        #d-title:hover{
+          animation-play-state: running;
+        }
+        .difference>button{
+          width: 360px;
+          height: 70px;
+          background-color: #ffffff;
+          border-color: #2a3f17;
+          border-width: 3px;
+          text-align: center;
+          font-size: 30px;
+          position: relative;
+          left: 795px;
+          top: 120px;
+          color: #2a3f17;
+          transition-duration:0.8s ;
+        }
+        .difference>button:hover{
+          background-color: #2a3f17;
+          color: #ffffff;
+        }
+        .detail{
+          display: flex;
+          width: 1360px;
+          margin: auto;
+          position: relative;
+          top: 230px;
+        }
+        .detail>.text{
+          margin-left: 120px;
+        }
+        .detail p{
+          color: #2a3f17;
+          font-size: 24px;
+          margin-bottom: 90px;
+          transition-duration: 0.8s;
+        }
+        .detail p:hover{
+          transform: translateX(20px);
+        }
+        .detail>.text>div{
+          font-size: 24px;
+          color: #2a3f17;
+          height: 80px;
+          margin-bottom: 90px;
+          transition-duration: 0.8s;
+        }
+        .detail>.text>div:hover{
+          transform: translateX(50px);
+        }
+        .end{
+          border-top-color: #2a3f17;
+          border-top-width: 3px;
+          border-top-style: solid;
+          width: 1920px;
+          height: 475px;
+          position: relative;
+          top: 290px;
+          display: flex;
+        }
+        #bigworld{
+          width: 365px;
+          height: 75px;
+          font-size: 36px;
+          color:white;
+          background-color: #949f8b;
+          text-align: center;
+          margin-top: 200px;
+          transition-duration: 0.8s;
+        }
+        #bigworld:hover{
+          transform: translateY(-20px);
+          color: #949f8b;
+          background-color: transparent;
+        }
+        .text>div>span{
+          text-align: center;
+          width: 75px;
+          height: 75px;
+          font-size: 48px;
+          border-style: solid;
+          border-width: 3px;
+          border-radius: 50%;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <button class="options">
+        <img
+          src="https://flowermooon.oss-cn-beijing.aliyuncs.com/%E9%80%89%E9%A1%B9.png"
+        />
+      </button>
+      <div class="logo">
+        <img
+          src="https://flowermooon.oss-cn-beijing.aliyuncs.com/top%20logo.png"
+        />
+      </div>
+      <button class="search">
+        <img
+          src="https://flowermooon.oss-cn-beijing.aliyuncs.com/%E6%90%9C%E7%B4%A2%20(1).png"
+        />
+      </button>
+    </div>
+    <div class="introduce">
+      <div class="background">
+        <img
+          src="https://flowermooon.oss-cn-beijing.aliyuncs.com/%E4%B9%8C%E9%BE%9F.png"
+        />
+      </div>
+      <div class="text">
+        <h style="font-size: 72px;color: #2a3f17;">Animal Photography</h>
+        <p style="font-size: 30px;color: #2a3f17;">
+          A silhouette of them, a simple little acttion, here are the
+          photographer’s eyes the best of them, their laughter, their love,
+          their every vivid, are recored by us.
+        </p>
+        <button id="EXPIORE">EXPIORE</button>
+      </div>
+      <div class="birds">
+        <div>
+          <img
+            src="https://flowermooon.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F1.png"
+          />
+          <a>Fly</a>
+        </div>
+        <div>
+          <img
+            src="https://flowermooon.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F2.png"
+          />
+          <a>Love</a>
+        </div>
+        <div>
+          <img
+            src="https://flowermooon.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F3.png"
+          />
+          <a>Stand</a>
+        </div>
+      </div>
+    </div>
+    <div class="sign">
+      <div class="text">
+        <p>
+          “Family Farms is the best place，where I can buy fruit,vegetable,meat,honey,milk,
+        eggs and so on for my retaurant directly fromupplier. Super convinient.Thank you”
+        xdccnfc cfvfesc cfnccnjdcn cfjdcdsr dcwwzwqg ejs dddc ddf fnfjv eij fvnv jnxzexh cn
+        cdcmdsc ddnc, cddmdcds dncdn cdcn wqeoeas, dcndassasas,cdcndcnc cciqoskxm 
+        cbdcpqslwq nfnere nfncsfjjc dndcww frhfjnc qpdjweiw cnncqe, cqjsdc ccn dcjndc ,
+        ncf cdncjd dcdjcndq csjncq dcdncf dcdjdnc cdjsq, qkodkqe wqcnpsdc cdnqq qcw,
+        cqnonxj dcdcnd dcnjsdvb wcnwq cowwncjq jjcnjncqnw wcq c wd cwch, cnjncnc ece
+        cdcnncdwnc	nenwc dcnnc cjcj , c cjrnc wecwc .	
+        </p>
+        <button>SIGN UP</button>
+      </div>
+      <div class="background">
+        <img src="https://flowermooon.oss-cn-beijing.aliyuncs.com/%E9%B9%BF.png"/>
+      </div>
+    </div>
+    <div class="difference">
+      <div style="width: 1920px;height: 75px;margin-bottom: 40px;"><div id ="d_title">Difference</div></div>
+      <div class="photos">
+        <div>
+          <img src="https://flowermooon.oss-cn-beijing.aliyuncs.com/%E9%A9%AC.png"/>
+          <p>Horse</p>
+        </br>
+          <a>A difference story </a>
+        </div>
+        <div>
+          <img src="https://flowermooon.oss-cn-beijing.aliyuncs.com/%E8%A2%8B%E9%BC%A0.png"/>
+          <p>Kangaroo</p>
+          </br>
+          <a>A difference story </a>
+        </div>
+        <div>
+          <img src="https://flowermooon.oss-cn-beijing.aliyuncs.com/%E7%8B%AE%E5%AD%90.png"/>
+          <p>Lion</p>
+          </br>
+          <a>A difference story </a>
+        </div>
+        <div>
+          <img src="https://flowermooon.oss-cn-beijing.aliyuncs.com/%E5%B0%8F%E9%B8%9F.png"/>
+          <p>Hummingbird</p>
+          </br>
+          <a>A difference story </a>
+        </div>
+      </div>
+      <button>Know more</button>
+    </div>
+    <div class="detail">
+      <div>
+        <img src="https://flowermooon.oss-cn-beijing.aliyuncs.com/%E6%9D%BE%E9%BC%A0.png"/>
+      </div>
+      <div class="text">
+        <p style="font-size: 36px;margin-bottom: 36px;">The Photo</p>
+        <p>“Family Farms is the best placewhere I can buy fruit,vegetable, meat,honey,milk,
+        eggs and so on for my retaurant directly from
+        supplier. Super convinient.Thank you”</p>
+        <div>
+          <span>&nbsp;1 </span>&nbsp;&nbsp;&nbsp;for it
+        </div>
+        <div>
+          <span>&nbsp;2 </span>&nbsp;&nbsp;&nbsp;Cultivate feelings
+        </div>
+        <div>
+          <span>&nbsp;3 </span>&nbsp;&nbsp;&nbsp;Shooting
+        </div>
+        <div>
+          <span>&nbsp;4 </span>&nbsp;&nbsp;&nbsp;Harvest achievement
+        </div>
+      </div>
+    </div>
+    <div class="end">
+      <div style="margin-left: 445px;margin-top: 120px;margin-right: 20px;">
+        <p style="font-size: 40px; color: #2a3f17;">IN THE WILD</p>
+        <p style="font-size: 40px; color: #2a3f17;">IN THE SEA</p>
+      </div>
+      <div style="margin-top: 120px;margin-right: 320px;">
+        <p style="font-size: 30px; color: #2a3f17;margin-top: 40px;">MOER</p>
+        <p style="font-size: 24px; color: #2a3f17;margin: 5px;">We create art.</p>
+        <p style="font-size: 24px; color: #2a3f17;margin: 5px;">We create life</p>
+      </div>
+      <div id="bigworld">Big World</div>
+    </div>
+  </body>
+</html>
