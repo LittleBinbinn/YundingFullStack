@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="font4.css" rel="stylesheet" type="text/css" />
+    <style>
+        *{
+                margin: 0;
+            }
+        .bg{
+            position: relative;
+            height: 4900px;
+            width: 1700px;
+            margin: 0 auto;
+            background-color: white;
+        } 
+        .top{
+            position: relative;
+            height: 50px;
+            width: 100%;
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .box{
+            position: relative;
+            /*background-color: darkred;*/
+            width:100px ;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.4s;
+        }
+        .box:hover{
+            transform: scale(0.8);
+        }
+        .photography{
+            position: relative;
+            width:100% ;
+            height: 900px;
+            /*background-color:tomato;*/
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(https://qi-image.oss-cn-beijing.aliyuncs.com/photography.png);
+        }
+        .photo_ico{
+            position: relative;
+            top: -50px;
+            width:200px ;
+            height: 200px;
+            background-color: rgb(111, 188, 91);
+            display: flex;
+            margin:auto;
+            justify-content: center;
+            align-items: center;
+            transition: 0.8s;
+        }
+        .photo_ico:hover{
+            transform: scale(0.8);
+        }
+        .round{
+            background-color: rgb(111, 188, 91);
+            width: 120px;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 4px solid rgb(246, 245, 245);
+            border-radius: 60px;
+        }
+        .photo_title{
+            position: relative;
+            top: 30px;
+            /*background-color:bisque;*/
+            width: 600px;
+            height: 80px;
+            margin:auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .photo_content{
+            position: relative;
+            top: 50px;
+            /*background-color:bisque;*/
+            width: 1000px;
+            height: 100px;
+            margin:auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .photo_explore{
+            position: relative;
+            left: 350px;
+            top: 180px;
+            background-color:rgb(16, 83, 39);
+            width: 230px;
+            height: 75px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .action{
+            position: relative;
+            top: -150px;
+            /*background-color:bisque;*/
+            width: 1000px;
+            height: 500px;
+            margin:auto;
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between;
+
+        }
+        .actbox1{
+            position: relative;
+            width: 300px;
+            height: 100%;
+            /*background-color: cadetblue;*/
+            background-image: url(https://qi-image.oss-cn-beijing.aliyuncs.com/act1.png);
+            transition-duration: 2s;
+        }
+        .actbox1:hover{
+            transform: translateY(-80px);
+        }
+        .actbox2{
+            position: relative;
+            width: 300px;
+            height: 100%;
+            /*background-color: cadetblue;*/
+            background-image: url(https://qi-image.oss-cn-beijing.aliyuncs.com/act2.png);
+            transition-duration: 2s;
+        }
+        .actbox2:hover{
+            transform: translateY(-80px);
+        }
+        .actbox3{
+            position: relative;
+            width: 300px;
+            height: 100%;
+            /*background-color: cadetblue;*/
+            background-image: url(https://qi-image.oss-cn-beijing.aliyuncs.com/act3.png);
+            transition-duration: 2s;
+        }
+        .actbox3:hover{
+            transform: translateY(-80px);
+        }
+        .actdes{
+            position: relative;
+            top: 320px;
+            left: 160px;
+            width: 120px;
+            height: 60px;
+            /*background-color:rgb(186, 161, 64);*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .sign{
+            position: relative;
+            top: 110px;
+            width:100% ;
+            height: 760px;
+            /*background-color:tomato;*/
+            background-image: url(https://qi-image.oss-cn-beijing.aliyuncs.com/sign.png);
+        }
+        .sign_up{
+            position: relative;
+            top: -100px;
+            background-color:rgb(199, 192, 192);
+            width: 860px;
+            height: 500px;
+            margin:auto;
+            transition-duration: 2s;
+        }
+        .sign_up:hover{
+            transform: translateY(-50px);
+        }
+        .sign_content{
+            position: relative;
+            top: 70px;
+            width: 750px;
+            height: 300px;
+            /*background-color: darkcyan;*/
+            margin: 0 auto;
+        }
+        .sign_button{
+            position: relative;
+            top: 50px;
+            width: 220px;
+            height: 80px;
+            background-color: rgb(16, 83, 39);
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition-duration: 1s;
+        }
+        .sign_button:hover{
+            transform: scale(0.8) ;
+        }
+        .difference{
+            position: relative;
+            top:200px;
+            /*background-color:bisque;*/
+            width: 300px;
+            height: 100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid white;
+        }
+        @keyframes different {
+            50%{
+                border:rgb(20, 108, 51)  ;
+            }
+            to{
+                border:rgb(16, 83, 39)  ;
+            }
+        }
+        .difference:hover {
+            animation: different 4s linear forwards;
+        }
+        .differ{
+            position: relative;
+            top: 290px;
+            width: 1150px;
+            height: 450px;
+            background-color: white;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between;
+        }
+        .dibox{
+            position: relative;
+            width: 260px;
+            height: 100%;
+            background-color:rgb(212, 207, 207);
+            display: grid;
+            grid-template-rows: 285px 65px 100px;
+            transition-duration: 1s;
+        }
+        .dibox:hover{
+            transform: translateY(-50px);
+        }
+        .di_picture1{
+            position: relative;
+            width: 100%;
+            height: 260px;
+            /*background-color:rgb(35, 158, 182);*/
+            background-image: url(https://qi-image.oss-cn-beijing.aliyuncs.com/di_picture1.png);
+        }
+        .di_picture2{
+            position: relative;
+            width: 100%;
+            height: 260px;
+            /*background-color:rgb(35, 158, 182);*/
+            background-image: url(https://qi-image.oss-cn-beijing.aliyuncs.com/di_picture2.png);
+        }
+        .di_picture3{
+            position: relative;
+            width: 100%;
+            height: 260px;
+            /*background-color:rgb(35, 158, 182);*/
+            background-image: url(https://qi-image.oss-cn-beijing.aliyuncs.com/di_picture3.png);
+        }
+        .di_picture4{
+            position: relative;
+            width: 100%;
+            height: 260px;
+            /*background-color:rgb(35, 158, 182);*/
+            background-image: url(https://qi-image.oss-cn-beijing.aliyuncs.com/di_picture4.png);
+        }
+        .di_name{
+            position: relative;
+            width: 100%;
+            height: 50px;
+            /*background-color:rgb(35, 182, 91);*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .di_story{
+            position: relative;
+            width: 100%;
+            height: 50px;
+            /*background-color:rgb(205, 119, 27);*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .know{
+            position: relative;
+            top:400px ;
+            background-color:white;
+            width: 420px;
+            height: 80px;
+            margin: 0 auto;
+            border:solid rgb(16, 83, 39);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(26, 83, 12);
+            transition: 1s;
+        }
+        .know:hover{
+            background-color:rgb(16, 83, 39) ;
+            color: white;
+        }
+        .squir_photo{
+            position: relative;
+            top: 500px;
+            left: 150px;
+            /*background-color: rgb(194, 163, 194);*/
+            background-image: url(https://qi-image.oss-cn-beijing.aliyuncs.com/squir_photo.png);
+            width: 700px;
+            height: 1000px;
+        }
+        .sphoto_title{
+            position: relative;
+            left: 950px;
+            bottom: 420px;
+            background-color:white;
+            width: 420px;
+            height: 80px;
+            transition: 1s;
+        }
+        .sphoto_title:hover{
+            transform: translateY(-30px);
+        }
+        .sphoto_text{
+            position: relative;
+            left: 950px;
+            top: -400px;
+            /*background-color:rgb(228, 140, 140);*/
+            width: 620px;
+            height: 200px;
+            transition: 1.3s;
+        }
+        .sphoto_text:hover{
+            transform:translate(55px);  
+            scale: 1.2;         
+        }
+        .number{
+            position: relative;
+            top: -380px;
+            left: 950px;
+            /*background-color: rgb(194, 163, 194);*/
+            width: 500px;
+            height: 580px;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
+        }
+        .number_{
+            position: relative;
+            /*background-color:rgb(140, 228, 225);*/
+            width: 100%;
+            height: 100px;
+            display: grid;
+            grid-template-columns:110px 100px;
+            align-items: center;
+            transition: 0.8s ease-out;
+        }
+        .number_:hover{
+            transform: translateX(80px);
+        }
+        .num{
+            background-color: white;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid rgb(16, 83, 39);
+            border-radius: 40px;
+        }
+        .num_text{
+            /*background-color: tomato;*/
+            height:80px ;
+            width: 350px;
+            display: flex;
+            align-items: center;
+        }
+        hr{
+            position: relative;
+            top: -270px;
+            border: 0;
+            height: 3px;
+            background-color: black;
+        }
+        .end_in{
+            position: relative;
+            top: -100px;
+            left: 200px;
+            width: 380px;
+            height: 200px;
+            /*background-color: #fff;*/
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
+        }
+        .in_the{
+            width: 100%;
+            height: 90px;
+            /*background-color: burlywood;*/
+            font-size: 57px;
+        }
+        .end_more{
+            position: relative;
+            top: -290px;
+            left: 600px;
+            width: 380px;
+            height: 200px;
+            /*background-color: #fff;*/
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
+        }
+        .more{
+            width: 100%;
+            height: 60px;
+            /*background-color: burlywood;*/
+        }
+        .end_button{
+            position: relative;
+            top: -450px;
+            left: 1100px;
+            width: 380px;
+            height: 80px;
+            background-color: #496c54;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 1s;
+            color: rgb(217, 209, 209);
+        }
+        .end_button:hover{
+            transform: translateY(-30px);
+            background-color: white;
+            color:#496c54 ;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <div class="top">
+            <div class="box">
+                <i class="iconfont" style="color: black;font-size: 40px;">&#xe61e;</i>
+            </div>
+            <div class="box">
+                <i class="iconfont" style="color: black;font-size: 40px;">&#xe86e;</i>
+            </div>
+        </div>
+        <div class="photography">
+            <div class="photo_ico">
+                <div class="round">
+                    <i class="iconfont" style="color: ghostwhite;font-size: 95px;">&#xe60b;</i>
+                </div>
+            </div>
+            <div class="photo_title">
+                <div  style="color: rgb(26, 83, 12);font-size: 57px;">Animal Photography</div>
+            </div>
+            <div class="photo_content">
+                <div style="color: rgb(26, 83, 12);font-size: 28px;">A silhouette of them, a simple little action, here are the photographer's eyes the best of them, their laughter, their
+                love, their every vivid, are recored by us.</div>
+            </div>
+            <div class="photo_explore">
+                <div style="color: rgb(241, 243, 241);font-size: 30px;">EXPIORE</div>
+            </div>
+        </div>
+        <div class="action">
+            <div class="actbox1">
+                <div class="actdes">
+                    <div style="color: rgb(241, 243, 241);font-size: 35px;">Fly</div>
+                </div>
+            </div>
+            <div class="actbox2">
+                <div class="actdes">
+                    <div style="color: rgb(241, 243, 241);font-size: 35px;">Love</div>
+                </div>
+            </div>
+            <div class="actbox3">
+                <div class="actdes">
+                    <div style="color: rgb(241, 243, 241);font-size: 35px;">Stand</div>
+                </div>
+            </div>
+        </div>
+        <div class="sign">
+            <div class="sign_up">
+                <div class="sign_content">
+                    <div style="color: rgb(26, 83, 12);font-size: 19px;line-height: 2.3ch;">
+                        "Family Farms is the best place, where I can buy fruit,vegetable, meat honey,milk eggs and so on for my retaurant directly fromupplier. Super convinient.Thank you" xdccnfc civfesc cfnccnjdcn cfjdcdsr dcwwzwqg ejs dddc ddf fnfjv eij fvnv jnxzexh cn cdcmdsc ddnc, cddmdcds dncdn cdcn wqeoeas, dcndassasas,cdcndcnc cciq0skxm cbdcpqslwq nfnere nfncsfjic dndcww frhfjnc qpdjweiw cnncqe,cqjsdc ccn dcjndc, ncf cdncjd dcdjcndg csjncg dcdncf dcdjdnc cdjsq,qkodkqe wqcnpsdc cdnqq qcw. cqnonxj dcdcnd dcnjsdvb wcnwq cowwncjq jcnjncqnw wcq Cwd cwch, cnjncnc ece cdcnncdwncnenwc dcnnc cjcj,c cgrnc wecwc.
+                    </div>
+                </div>
+                <div class="sign_button">
+                    <div style="color: rgb(241, 243, 241);font-size: 30px;">SIGN UP</div>
+                </div>
+            </div>
+        </div>
+        <div class="difference">
+            <div style="color: rgb(26, 83, 12);font-size: 57px;">Difference</div>
+        </div>
+        <div class="differ">
+            <div class="dibox">
+                <div class="di_picture1"></div>
+                <div class="di_name">
+                    <div style="color: rgb(26, 83, 12);font-size: 36px;">Horse</div>
+                </div>
+                <div class="di_story">
+                    <u style="color: rgb(26, 83, 12);font-size: 26px;">A different story</u>
+                </div>
+            </div>
+            <div class="dibox">
+                <div class="di_picture2"></div>
+                <div class="di_name">
+                    <div style="color: rgb(26, 83, 12);font-size: 36px;">Kangaroo</div>
+                </div>
+                <div class="di_story">
+                    <u style="color: rgb(26, 83, 12);font-size: 26px;">A different story</u>
+                </div>
+            </div>
+            <div class="dibox">
+                <div class="di_picture3"></div>
+                <div class="di_name">
+                    <div style="color: rgb(26, 83, 12);font-size: 36px;">Lion</div>
+                </div>
+                <div class="di_story">
+                    <u style="color: rgb(26, 83, 12);font-size: 26px;">A different story</u>
+                </div>
+            </div>
+            <div class="dibox">
+                <div class="di_picture4"></div>
+                <div class="di_name">
+                    <div style="color: rgb(26, 83, 12);font-size: 36px;">Hummingbird</div>
+                </div>
+                <div class="di_story">
+                    <u style="color: rgb(26, 83, 12);font-size: 26px;">A different story</u>
+                </div>
+            </div>
+        </div>
+        <div class="know">
+            <div style="font-size: 35px;">Know more</div>
+        </div>
+        <div class="squir_photo"></div>
+        <div class="sphoto_title">
+            <div style="color: rgb(26, 83, 12);font-size: 48px;">The Photo</div>
+        </div>
+        <div class="sphoto_text">
+            <div style="color: rgb(26, 83, 12);font-size: 30px;">"Family Farms is the best placewhere I can buy fruit,vegetable,meat,honey,milk, eggs and so on for my retaurant directly
+            from
+            supplier. Super convinient.Thank you"</div>
+        </div>
+        <div class="number">
+            <div class="number_">
+                <div class="num">
+                    <div style="color: rgb(26, 83, 12);font-size: 48px;">1</div>
+                </div>
+                <div class="num_text">
+                    <div style="color: rgb(26, 83, 12);font-size: 30px;">Looking for it</div>
+                </div>
+            </div>
+            <div class="number_">
+                <div class="num">
+                    <div style="color: rgb(26, 83, 12);font-size: 48px;">2</div>
+                </div>
+                <div class="num_text">
+                    <div style="color: rgb(26, 83, 12);font-size: 30px;">Cultivate feelings</div>
+                </div>
+            </div>
+            <div class="number_">
+                <div class="num">
+                    <div style="color: rgb(26, 83, 12);font-size: 48px;">3</div>
+                </div>
+                <div class="num_text">
+                    <div style="color: rgb(26, 83, 12);font-size: 30px;">Shooting</div>
+                </div>
+            </div>
+            <div class="number_">
+                <div class="num">
+                    <div style="color: rgb(26, 83, 12);font-size: 48px;">4</div>
+                </div>
+                <div class="num_text">
+                    <div style="color: rgb(26, 83, 12);font-size: 30px;">Harvest achievement</div>
+                </div> 
+            </div>
+        </div>
+        <hr />
+        <div class="end_in">
+            <div class="in_the">
+                <div style="color: rgb(26, 83, 12);">IN THE WILD</div>
+            </div>
+            <div class="in_the">
+                <div style="color: rgb(26, 83, 12);">IN THE SEA</div>
+            </div>
+        </div>
+        <div class="end_more">
+            <div class="more">
+                <div style="color: rgb(26, 83, 12);font-size: 40px;opacity: 0.8;">MORE</div>
+            </div>
+            <div class="more">
+                <div style="color: rgb(26, 83, 12);font-size: 30px;opacity: 0.6;">We create art.</div>
+            </div>
+            <div class="more">
+                <div style="color: rgb(26, 83, 12);font-size: 30px;opacity: 0.6;">We create life.</div>
+            </div>
+        </div>
+        <div class="end_button">
+            <div style="font-size: 42px;">Big World</div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
