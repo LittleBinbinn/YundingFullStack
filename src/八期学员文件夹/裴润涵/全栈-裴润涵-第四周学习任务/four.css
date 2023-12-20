@@ -52,7 +52,7 @@ ul{
 }
 .turtle{
     position: relative;
-    background-image: url(imges/乌龟.png);
+    background-image: url(https://peirunhan.oss-cn-beijing.aliyuncs.com/%E4%B9%8C%E9%BE%9F.png);
     height: 882px;
     color: #2a3f17;
 }
@@ -123,7 +123,7 @@ ul{
     transform: translateY(-40px);
 }
 .deer{
-    background-image: url(imges/鹿.png);
+    background-image: url(https://peirunhan.oss-cn-beijing.aliyuncs.com/%E9%B9%BF.png);
     height: 760px;
 }
 .deer .sign{
