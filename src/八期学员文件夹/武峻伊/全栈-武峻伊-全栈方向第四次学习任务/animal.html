@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <title>wujunyi</title>
+        <style>
+            *{
+                margin:0;
+            }
+            .body{
+            margin: 0;
+            padding: 0;  
+            height: 100vh;  
+            display: flex;  
+            justify-content: center;  
+            align-items: center;  
+            }
+            .top{
+            width: 100%;
+            height: 50px;
+            position: relative;
+            }
+            .left{
+                width: 30px;
+                height: 30px;
+                float: left;
+                top: 10px;
+                position: relative;
+                left: 20px;
+                transition: width 2s,height 2s;
+            }
+            .left:hover{
+                width:10px ;
+                height: 10px;
+            }
+            .iconfont{
+                width: 30px;
+                height: 30px;
+                float: right;
+                top: 10px;
+                position: relative;
+                right: 20px;
+                font-family: "iconfont" !important;
+                font-size: 16px;
+                font-style: normal;
+                transition: width 2s,height 2s;
+            }
+            .iconfont:hover{
+                width: 10px;
+                height: 10px;
+            }
+            .background{
+            width: 100%;
+            height: 650px;
+            background-color: aqua;
+            position: relative;
+            background-image: url(https://wjyss.oss-cn-beijing.aliyuncs.com/background.png);
+            background-size: 1600px 620px;
+            }
+            .first{
+                width: 600px;
+                height: 50px;
+                margin: 0 auto;
+                top: 130px;
+                position: relative;
+                color: #2a3f17;
+                font-size: 50px;
+                font-weight: 500;
+                text-align: center;
+                line-height: 50px;
+            }
+            .second{
+                width: 750px;
+                height: 60px;
+                margin: 0 auto;
+                /* background-color: azure; */
+                top: 140px;
+                position: relative;
+                color:#2a3f17 ;
+                font-size: 25px;
+            }
+            .explore{
+                width: 260px;
+                height: 60px;
+                background-color: #2a3f17;
+                top:250px;
+                left:320px;
+                position: relative;
+                color: white;
+                font-size: 26px;
+                text-align: center;
+                line-height: 60px;
+            }
+            .flex1{
+                width: 780px;
+                height: 350px;
+                left: 320px;
+                top: 320px;
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .box{
+                width: 230px;
+                height: 350px;
+                position: relative;
+                background-color: chartreuse;
+                transition: all 1s;
+            }
+            .box:hover{
+                transform: translate(0,-30px);
+            }
+            .white{
+                height: 330px;
+                width: 100%;
+                top: 670px;
+            }
+            .deer{
+                height: 440px;
+                width: 100%;
+                position: relative;
+                background-color: coral;
+                background-image: url(https://wjyss.oss-cn-beijing.aliyuncs.com/deer.png);
+                background-size: 1500px 440px;
+            }
+            .grey{
+                width: 630px;
+                height: 330px;
+                margin: 0 auto;
+                position: relative;
+                background-color: #e0dfdf;
+                bottom: 50px;
+                transition: all 1s;
+            }
+            .grey:hover{
+                transform: translate(0,-30px);
+            }
+            .words{
+                width: 590px;
+                height: 180px;
+                margin: 0 auto;
+                position: relative;
+                top: 30px;
+                color: #2a3f17;
+                font-size: 15px;
+            }
+            .sign{
+                width: 130px;
+                height: 45px;
+                margin: 0 auto;
+                position: relative;
+                background-color:#2a3f17 ;
+                top: 70px;
+                color: white;
+                text-align: center;
+                line-height: 45px;
+                font-weight: 500px;
+                transition: width 2s,height 2s;
+            }
+            .sign:hover{
+                width: 110px;
+                height: 20px;
+            }
+            .take{
+                width: 110px;
+                height: 120px;
+                margin: 0 auto;
+                background-color: #81c04b;
+                position:absolute;
+                bottom: 600px;
+                left: 630px;
+                transition: width 2s,height 2s;
+            }
+            .take:hover{
+                width: 80px;
+                height: 80px;
+            }
+            .big{
+                width: 100%;
+                height: 1220px;
+                position: relative;
+                border-bottom: #000000 solid 3px;
+            }
+            .different{
+                width: 160px;
+                height: 45px;
+                margin: 0 auto;
+                position: relative;
+                top: 25px;
+                /* background-color: darkcyan; */
+                color: #2a3f17;
+                font-size: 30px;
+                line-height: 45px;
+            }
+            .different:before,.div1:after{content:"";display:block;width: 0;height:0;border:2px solid transparent;box-sizing: border-box;position: absolute;}
+ 
+.different:before{top:0;left:0;transition: border-color 0s ease-in 0.8s,width 0.2s ease-in 0.6s,height 0.2s ease-in 0.4s;}
+.different:after{right:0;bottom:0;transition: border-color 0s ease-in 0.4s,width 0.2s ease-in 0.2s,height 0.2s ease-in ;}
+.different:hover:before{width:100%;height:100%;transition:width 0.2s ease-in ,height 0.2s ease-in 0.2s;border-top-color:#2a3f17;border-right-color:#2a3f17;border-left-color: #2a3f17;border-bottom-color: #2a3f17;}
+.different:hover:after{width:100%;height:100%;transition: border-color 0s ease-in 0.4s,width 0.2s ease-in 0.4s,height 0.3s ease-in 0.6s;border-bottom-color:#2a3f17;border-left-color:#2a3f17;border-left-color: #2a3f17;border-bottom-color: #2a3f17;}
+            .flex2{
+                width: 660px;
+                height: 230px;
+                margin: 0 auto;
+                top: 40px;
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .box1{
+                width: 150px;
+                height: 230px;
+                position: relative;
+                background-color: #e0dfdf;
+                transition: all 1s;
+            }
+            .box1:hover{
+                transform: translate(0,-30px);
+            }
+            .photo{
+                width: 150px;
+                height: 130px;
+                position: relative;
+                background-color: darkkhaki;
+            }
+            .name{
+                width: 70px;
+                height: 30px;
+                /* margin: 0 auto; */
+                left: 30px;
+                top: 20px;
+                position:relative ;
+                color:#2a3f17 ;
+                font-size: 17px;
+                line-height: 30px;
+            }
+            .line{
+                width: 130px;
+                height: 25px;
+                margin: 0 auto;
+                border-bottom: 2px solid #2a3f17;
+                top: 27px;
+                position: relative;
+                color:#2a3f17 ;
+                font-size: 13px;
+                text-align: center;
+                line-height: 25px;
+            }
+            .know{
+                width: 190px;
+                height: 40px;
+                margin: 0 auto;
+                border-color:#2a3f17 ;
+                border-style: solid;
+                border-width: 2px;
+                position: relative;
+                top: 110px;
+                color:#2a3f17 ;
+                font-size: 20px;
+                text-align: center;
+                line-height: 40px;
+            }
+            .know:hover{
+                background-color: #2a3f17;
+                color: white;
+            }
+            .flex3{
+                width: 1100px;
+                height: 700px;
+                margin: 0 auto;
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                top: 150px;
+            }
+            .box3{
+                position: relative;
+                width: 500px;
+                height:700px;
+            }
+            .box3~.box{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background-color: white;
+            }
+            .num{
+                position: relative;
+                width: 450px;
+                height: 110px;
+                color:#2a3f17 ;
+                text-align: left;
+            }
+            .num~.num1{
+                transition: all 2s;
+            }
+            .num~.num1:hover{
+                transform: translate(0,50px);
+            }
+            .num~.num2:hover{
+                width: 530px;
+                height: 180px;
+            }
+            .num~.num3{
+                transition: all 2s;
+            }
+            .num~.num3:hover{
+                 transform: translate(50px,0);
+            }
+            .last{
+                width: 100%;
+                height:250px ;
+                position: relative;
+            }
+            .le{
+                width: 300px;
+                height: 150px;
+                left: 200px;
+                position: relative;
+                /* background-color: turquoise; */
+                top: 57px;
+                color:#2a3f17  ;
+                text-align: center;
+                line-height: 65PX;
+                font-size: 25PX;
+            }
+            .mid{
+                width: 150px;
+                height: 150px;
+                left: 501px;
+                position: relative;
+                bottom: 94px;
+                /* background-color:teal; */
+                color: #2a3f17 ;
+                text-align: left;
+                line-height: 45px;
+                font-size: 14px;
+            }
+            .ri{
+                width: 230px;
+                height: 50px;
+                left: 840px;
+                position: relative;
+                bottom: 190px;
+                background-color: #949f8b;
+                color: white;
+                text-align: center;
+                line-height: 50px;
+                font-size: 20px;
+                transition: all 2s;
+            }
+            .ri:hover{
+                background-color: white;
+                transform: translate(0,-30px);
+            }
+        </style>
+    </head>
+    <body>
+        <div style="text-align: center; max-width: 100%;height: 100vh
+        ;">
+         <div class="top">
+            <div class="left"><img style="width: 30px;height: 30px;" src="https://wjyss.oss-cn-beijing.aliyuncs.com/icon_%E7%9B%AE%E5%BD%95.png" /></div>
+            <div class="iconfont"><img style="width: 30px;height: 30px;" src="https://wjyss.oss-cn-beijing.aliyuncs.com/%E6%94%BE%E5%A4%A7%E9%95%9C.png" /></div>
+         </div>
+         <div class="background">
+            <div class="take"><img style="width: 105px; top:20px; height: 110px;" src="https://wjyss.oss-cn-beijing.aliyuncs.com/phone.png"/></div>
+         <div class="first">Animal Photography</div>
+         <div class="second">A silhouette of them,a simple little acttion,here are the photographer eyes the best of them,their laughter,their love,their every vivid,are recored by us.</div>
+         <div class="explore">EXPLORE</div>
+         <div class="flex1">
+         <div class="box"><img style="width: 230px; height: 350px;" src="https://wjyss.oss-cn-beijing.aliyuncs.com/bird1.png"/></div>
+         <div class="box"><img style="width: 230px; height: 350px;" src="https://wjyss.oss-cn-beijing.aliyuncs.com/bird2.png"/></div>
+         <div class="box"><img style="width: 230px; height: 350px;"
+        src="https://wjyss.oss-cn-beijing.aliyuncs.com/bird3.png"/></div>
+         </div>
+         </div>
+         <div class="white"></div>
+         <div class="deer">
+         <div class="grey">
+        <div class="words">“Family Farms is the best place，where I can buy fruit,vegetable,meat,honey,milk,eggs and so on for my retaurant directly fromupplier.super convinient.Thank you"xdccnfc cfvfesc cfnccnjdcn cfjdcdsr dcwwzwqg ejs dddc ddf fnfjv eij fvnv jnxzexh cn cdcmdsc ddnc,cddmdcds dncdn cdcn wqeoeas,dcndassasas,cdcndcnc cciqoskxm cbdcpqslwq nfnere nfncsfjjc dndcww frhfjnc qpdjweiw cnncqe,cqjsdc ccn dcjndc,ncf cdncjd dcdjcndq csjncq dcdncf dcdjdnc cdjdnc cdjsq,qkodkqe wqcnpsdc cdnqq qcw,cqnonxj dcdcnd dcnjsdvd wcnwq cowwncjq cowwncjq jjcnjncqnw wcq c wd cwch,cnjncnc ece cdcnncdwnc &nbsp;nenwc dcnnc cjcj,c cjrnc wecwc.</div>
+        <div class="sign">SIGN UP</div>
+         </div>
+         </div>
+         <div class="big">
+        <div class="different">Difference</div>
+        <div class="flex2">
+            <div class="box1">
+                <div class="photo"><img style="width: 150px;height: 130px;"src="https://wjyss.oss-cn-beijing.aliyuncs.com/one.png"/> </div>
+                <div class="name">Horse</div>
+                <div class="line">A difference story</div>
+            </div>
+            <div class="box1">
+                <div class="photo"><img style="width: 150px;height: 130px;"src="https://wjyss.oss-cn-beijing.aliyuncs.com/two.png"/></div>
+                <div class="name">Kangaroo</div>
+                <div class="line">A difference story</div>
+            </div>
+            <div class="box1">
+                <div class="photo"><img style="width: 150px;height: 130px;"src="https://wjyss.oss-cn-beijing.aliyuncs.com/three.png"/></div>
+                <div class="name">Lion</div>
+                <div class="line">A difference story</div>
+            </div>
+            <div class="box1">
+                <div class="photo"><img style="width: 150px;height: 130px;" src="https://wjyss.oss-cn-beijing.aliyuncs.com/four.png"/></div>
+                <div class="name">Hummingbird</div>
+                <div class="line">A difference story</div>
+            </div>
+        </div>
+        <div class="know">Know more</div>
+        <div class="flex3">
+            <div class="box3"><img style="width:500px; height: 700px;"src="https://wjyss.oss-cn-beijing.aliyuncs.com/mouse.png"/></div>
+            <div class="box3 box">
+                <div class="num num1" style="font-size: 30px; line-height: 150px; text-align: left;">The Photo</div>
+                <div class="num num2">"Family Farms is the best placewhere I can buy fruit,vegetable,meat,honey,milk,eggs and so on for my retaurant dire ctly from supplier.Super convinient.Thank you"</div>
+                <div class="num num3" style="font-size: 40px;">&#9312;<span style="font-size: 19px;line-height: 110px;">&nbsp;&nbsp;Looking for it</span>
+                </div>
+                <div class="num num3" style="font-size: 40px;">&#9313;<span style="font-size: 19px;line-height: 110px;">&nbsp;&nbsp;Cultive feeling</span></div>
+                <div class="num num3" style="font-size: 40px;">&#9314;<span style="font-size: 19px;line-height: 110px;">&nbsp;&nbsp;Shooting</span></div>
+                <div class="num num3" style="font-size: 40px;">&#9315;<span style="font-size: 19px;line-height: 110px;">&nbsp;&nbsp;Harvest achievement</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="last">
+            <div class="le">IN THE WILD<br />IN THE SEA</div>
+            <div class="mid">MORE<br/>We create art.<br/>We create life</div>
+            <div class="ri">Big World</div>
+        </div>
+         </div>
+        </div>
+    </body>
+</html>
