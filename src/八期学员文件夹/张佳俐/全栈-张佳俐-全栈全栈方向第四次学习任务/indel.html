@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/font_4355890_d05gzv33ve5/iconfont.css">
+    <link rel="stylesheet" href="/css/font_4355890_i302lhnfkbi/iconfont.css">
+    <link rel="stylesheet" href="/css/font_4356109_wq75ox16fn8/iconfont.css">
+    <style>
+        *{
+           margin: 0;
+        }
+    
+    .top{
+        position: absolute;
+        width:1920px;
+        height:50px;
+        background-color:white;
+    }
+    .photo{
+        position: relative;
+        width:200px;
+        height:200px;
+        margin: auto;
+        background-color: rgb(103, 164, 11);
+        transition: scale 2s;
+        -webkit-transition: scale 2s; 
+	}
+    .photo:hover
+    {
+        -ms-transform:scale(0.8,0.8); /* IE 9 */
+        -webkit-transform: scale(0.8,0.8); 
+        transform: scale(0.8,0.8); 
+    }
+    .circle{
+        left: 17.5px;
+        top: 17.5px;
+		height: 160px;
+		width: 160px;
+		border-radius: 50%;
+		position: absolute;
+		border-width:5px;
+        border-style:solid;
+        border-color:rgba(255, 255, 255, 0.728);
+    }
+    .expore{
+        position:relative;
+        top: 300px;
+        height: 70px;
+        width: 260px;
+        left: 420px;
+        background-color:rgba(5, 68, 5, 0.941);
+        text-align:center;
+        display:table-cell;
+    }
+
+    .flex_box{
+        top:-140px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        left: 400px;
+        width: 1112px;
+        height: 740px;
+        
+    }
+    .box{
+        position: relative;
+        width: 325px;
+        height: 500px;
+        animation: myfirst 3s linear 2s infinite alternate;
+        -webkit-animation: myfirst 3s linear 2s infinite alternate;
+}
+    /*.box:hover
+    {
+         animation: myfirst 3s linear 2s infinite alternate;
+        -webkit-animation: myfirst 3s linear 2s infinite alternate;
+        
+    }*/
+    @keyframes myfirst
+{
+    0%   {top:0px;}
+    100% {top:20px;}
+}
+ 
+   @-webkit-keyframes myfirst 
+{
+    0%   {top:0px;}
+    100%  {top:20px;}
+}
+    
+    .background{
+        width: 1920px;
+        height: 100%;
+        background-color:white;
+    }
+    .turtle{
+        width: 1920px;
+    }
+    .deer{
+        position: relative;
+    }
+    .text{
+        top:-840px;
+        position: relative;
+        width: 940px;
+        height: 540px;
+        background-color: rgb(220, 218, 218);
+        margin: auto;
+    }
+    .sign_up{
+        position: relative;
+        top:170px;
+        width: 200px;
+        height: 70px;
+        margin: auto;
+        background-color: rgba(4, 53, 4, 0.964);
+        text-align:center;
+        transition: scale 2s;
+        -webkit-transition: scale 2s; 
+	}
+    .sign_up:hover
+    {
+        -ms-transform:scale(0.9,0.9); /* IE 9 */
+        -webkit-transform: scale(0.9,0.9); 
+        transform: scale(0.9,0.9); 
+    }
+    .difference{
+        position: absolute;
+        top: 2540px;
+        left:400px;
+        width: 1150px;
+        height: 400px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row; 
+        text-align: center; 
+    }
+    .differ_box{
+        width: 260px;
+        height: 400px;
+        background-color:rgb(225, 224, 224);
+    }
+    .button{
+        width:357px;
+        height:65px;
+        border-width:3px;
+        border-style:solid;
+        margin: auto;
+        border-color:rgb(3, 69, 3);
+        text-align: center;
+
+    }
+    .squrrel{
+        position: relative;
+        top:85px;
+        height: 1080px;
+        width:auto;
+        background-color:rgb(225, 224, 224);
+    }
+    .picture{
+        position: relative;
+        left:255px;
+        width: auto;
+    }
+
+    .end{
+        position: relative;
+        top:70px;
+        bottom: 0;
+        height: 461px;
+        width: 1920px;
+        background-color: white;
+    }
+    span1{
+        font-size: 42px;
+        position: absolute;
+        top:300px;
+        color: rgba(5, 68, 5, 0.941);
+        left:600px;
+    }
+    span2{
+        position:absolute;
+        color: rgba(5, 68, 5, 0.941);
+        left:420px;
+        width:1000px;
+        top:370px;
+        font-size: 24px;
+    }
+    span3{
+        position: relative;
+        top:9px;
+        color: rgba(255, 255, 255, 0.861);
+        font-size: 31px;
+    }
+    span4{
+        position: relative;
+        top:75px;
+        left: 80px;
+        line-height: 1.5;
+        font-size: 20px;
+        color: rgba(5, 68, 5, 0.978);
+
+    }
+    span5{
+        position: relative;
+        font-size: 33px;
+        color: rgb(2, 53, 2);
+        top:-495px;
+        /*border-width:5px;
+        border-style:solid;
+        border-color:rgba(255, 255, 255, 0.728);
+        height: 35px;
+        width: 70px;
+        background-color: black;*/
+        transition: scale 2s;
+        -webkit-transition: scale 2s;
+    }
+    span5:hover
+    {
+        -ms-transform:scale(0.8,0.8); /* IE 9 */
+        -webkit-transform: scale(0.8,0.8); 
+        transform: scale(0.8,0.8); 
+    }
+   span6{
+        top:40px;
+        text-align: center;
+        font-size: 26px;
+        color: rgba(5, 68, 5, 0.978);
+    }
+    span7{
+        top:15px;
+        font-size: 20px;
+        color: rgba(5, 68, 5, 0.978);
+    }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="top">
+        <span class="iconfont1">&#xe600;</span>
+        <span class="iconfont2">&#xe626;</span>
+        <div class="photo">
+            <div class="circle">
+                <span class="iconfont3">&#xe66c;</span>
+            </div>
+        </div>
+        <div class="expore">
+            <p><span3>EXPRORE</span3></p>
+        </div>
+        </div>
+        <div class="turtle">
+            <img src="https://zhangjiali.oss-cn-beijing.aliyuncs.com/img/乌龟.png"/>
+            <p><span1>Animal&nbsp;Photography</span1></p>
+            <p><span2>A silhouette of them,a simple little acttion,here are the photographe eyes the best of them,their laughter,their love,their every vivid,are by us</span2>
+            </p>
+        </div>
+        <div class="flex_box">
+            <div class="box">
+                <img src="https://zhangjiali.oss-cn-beijing.aliyuncs.com/img/火烈鸟2.png"/>
+            </div>
+            <div class="box">
+                <img src="https://zhangjiali.oss-cn-beijing.aliyuncs.com/img/火烈鸟1.png"/>
+            </div>
+            <div class="box">
+                <img src="https://zhangjiali.oss-cn-beijing.aliyuncs.com/img/火烈鸟3.png"/>
+            </div>
+        
+        </div>
+        <div class="deer">
+            <img src="https://zhangjiali.oss-cn-beijing.aliyuncs.com/img/鹿.png"/>
+            <div class="text">
+                <p><span4>“Family Farms is the best place,where I can buy fruit,vegetable,meat,honey,milk,</br>eggs and so on for my retaurant directly fromupplier.Super convinient.Thank you"</br>xdccnfc cfvfesc cfnccnjdcn cfjdcdsr dewwzwqg ejs ddde ddf fnfjv eij fvny jinxzexh cn </br>cdcmdsc ddnc,cddmdcds dncdn cdon wqeoeas,dondassasas,cdcndcnc cciqoskxm </br>cbdcpqslwq nfnere nfncsfijc dndoww frhfinc qpdjweiw onncqe,cqjsdc ccn dcjndc,</br>ncf cdncjd dcdjcndq csjncq dedncf dedjdnc cdjsq,qkodkqe wqonpsdo cdnqq qcw,</br>cqnonxj dcdcnd denjsdvb wcnwq cowwncjq jjcnjncqnw weq c wd cwch,cnjncnc ece </br>cdcnncdwnc nenwc dcnnc cjqj,c cjrnc wecwc.
+                </span4></p>
+            <div class="sign_up">
+                <p><span3>SIGN UP</span3></p>
+            </div>
+            </div>
+        </div>
+        <div class="Dif"><span5><p align="center">Difference</p></span5></div>
+        <div class="difference">
+            <div class="differ_box">
+                <img src="https://zhangjiali.oss-cn-beijing.aliyuncs.com/img/马.png"/>
+                <P><span6>Horse</span6></P>
+                <p><span7><u>A different story</u></span7></p>
+            </div>
+            <div class="differ_box">
+                <img src="https://zhangjiali.oss-cn-beijing.aliyuncs.com/img/袋鼠.png"/>
+                <p><span6>Kangraoo</span6></p>
+                <p><span7><u>A different story</u></span7></p>
+            </div>
+            <div class="differ_box">
+                <img src="https://zhangjiali.oss-cn-beijing.aliyuncs.com/img/狮子.png"/>
+                <P><span6>Lion</span6></P>
+                <p><span7><u>A different story</u></span7></p>
+            </div>
+            <div class="differ_box">
+                <img src="https://zhangjiali.oss-cn-beijing.aliyuncs.com/img/小鸟.png"/>
+                <P><span6>Hummingbird</span6></P>
+                <p><span7><u>A different story</u></span7></p>
+            </div>
+        </div>
+        <div class="button">
+        </br><p><span6>Know more</span6></p>
+        </div>
+        <div class="squrrel">
+            <div class="picture">
+                <img src="https://zhangjiali.oss-cn-beijing.aliyuncs.com/img/松鼠.png"/>
+            </div>
+        </div>
+        <div class="end">
+            <div style="border:1px solid #023013"></div>
+            <img src="https://zhangjiali.oss-cn-beijing.aliyuncs.com/img/下.png"/>
+
+
+        </div>
+
+
+
+    </div>  
+</body>
+</html>
+
+
+
