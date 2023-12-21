@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+li  {
+    list-style: none;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x:hidden;
+}
+.container{
+	width: 1600px;
+	margin: 0 auto;
+}
+div .box-1{
+	height: 928px;
+	margin-bottom: 10px;
+}
+.box-1 {
+    position: relative;
+    height: 928px;
+    width: 100%;
+    background-color: #fff;
+}
+.box-1 {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    background: url(https://wwwaaat.oss-cn-beijing.aliyuncs.com/%E4%B9%8C%E9%BE%9F.jpg) no-repeat center center/cover; /* 使用 cover 让图像占满整个容器并保持纵横比 */
+  }
+.box-1 .background button {
+    height: 72px;
+    width: 262px;
+    border: none;
+    background-color: #2a3f17;
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 72px;
+    margin-left: 325px;
+    margin-top: 500px;
+}
+.box-1 .camera {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -100px;
+    width: 155px;
+    height: 155px;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+}
+.box-1 .camera img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.box-1 .camera :hover {
+    transform: scale(0.85);
+}
+div .box-2{
+	height: 500px;
+	margin-bottom: 10px;
+	
+}
+.box-2 {
+    position: relative;
+    height: 500px;
+    background-color: #ffffff;
+}
+.box-2 ul {
+    position: absolute;
+    margin-left: 320px;
+    margin-top: -110px;
+}
+.box-2 ul li {
+    float: left;
+    height: 425px;
+    width: 250px;
+    background-color: rgb(red, green, blue);
+    margin-right: 60px;
+    transition: all 1s ;
+    transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+
+}
+.box-2 ul li:hover {
+    transform: translateY(-30px);
+}
+.box-2 ul li img {
+    height: 100%;
+    width: 100%;
+}
+div .box-3{
+	height: 600px;
+	margin-bottom: 10px;
+}
+.box-3 {
+    position: relative;
+    height: 600px;
+    width: 100%;
+    background-color: pink;
+    background: url(https://wwwaaat.oss-cn-beijing.aliyuncs.com/%E9%B9%BF.jpg) no-repeat;
+    transition: all 2s ;
+    transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+}
+.box-3 .part {
+    position: absolute;
+    height: 380px;
+    width: 700px;
+    background-color: #e0dfdf;
+    top: -70px;
+    left: 435px;
+}
+.box-3 :hover {
+        transform: translateY(-30px);
+}
+.box-3 .part .farm {
+    display: block;
+    height: 250px;
+    width: 660px;
+    /* background-color: #fff; */
+    margin: 25px;
+    color: #2a3f17;
+    font-size: 18px;
+
+}
+.box-3 .part .signup {
+    height: 45px;
+    width: 135px;
+    background-color: #2a3f17;
+    margin-left: 260px;
+    color:#ffffff;
+    font-size: 30px;
+}
+div .box-4{
+	height: 750px;
+}
+.box-4 {
+    height: 750px;
+    width: 100%;
+    /* background-color: pink; */
+}
+.box-4 h3 {
+    position: relative;
+    height: 100px;
+    width: 250px;
+    margin: 30px auto;
+    /* padding: 60px; */
+    line-height: 100px;
+    text-align: center;
+    font-size: 48px;
+    color: #2a3f17;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #2a3f17;
+    font-size: 30px;
+    letter-spacing: 0.4rem;
+    overflow: hidden;
+}
+.box-4 h3:before,
+.box-4 h3:after{
+    content:"";
+    display:block;
+    width: 0;
+    height:0;
+    border:2px solid transparent;
+    box-sizing: border-box;
+    position: absolute;
+}
+.box-4 h3:before{
+    top:0;
+    left:0;
+    transition: border-color 0s ease-in 0.8s,width 0.2s ease-in 0.6s,height 0.2s ease-in 0.4s;
+}
+.box-4 h3:after{
+    right:0;
+    bottom:0;
+    transition: border-color 0s ease-in 0.4s,width 0.2s ease-in 0.2s,height 0.2s ease-in;
+}
+.box-4 h3:hover:before{
+    width:100%;
+    height:100%;
+    transition:width 0.2s ease-in ,height 0.2s ease-in 0.2s;
+    border-top-color:#2a3f17;
+    border-right-color:#2a3f17;
+}
+.box-4 h3:hover:after{
+    width:100%;
+    height:100%;
+    transition: border-color 0s ease-in 0.4s,width 0.2s ease-in 0.4s,height 0.3s ease-in 0.6s;
+    border-bottom-color:#2a3f17;
+    border-left-color:#2a3f17;
+}
+.box-4 ul{
+    margin-left: 170px;
+    height: 450px;
+}
+.box-4 ul li {
+    float: left;
+    height: 340px;
+    width: 300px;
+    margin-right: 15px;
+    /* background-color: papayawhip; */
+    transition: all 1s ;
+    transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+}
+.box-4 ul li:hover {
+    transform: translateY(-30px);
+}
+.box-4 .div1 {
+    position: relative;
+    height: 60px;
+    width: 320px;
+    /* background-color: peru; */
+    line-height: 60px;
+    margin-left: 620px;
+    text-align: center;
+    border: none;
+    outline: none;
+    color: #2a3f17;
+    font-size: 30px;
+    letter-spacing: 0.4rem;
+    overflow: hidden;
+}
+.div1:before,
+.div1:after{
+    content:"";
+    display:block;
+    width: 0;
+    height:0;
+    border:2px solid transparent;
+    box-sizing: border-box;
+    position: absolute;
+}
+.div1:before{
+    top:0;
+    left:0;
+    transition: border-color 0s ease-in 0.8s,width 0.2s ease-in 0.6s,height 0.2s ease-in 0.4s;
+}
+.div1:after{
+    right:0;
+    bottom:0;
+    transition: border-color 0s ease-in 0.4s,width 0.2s ease-in 0.2s,height 0.2s ease-in;
+}
+.div1:hover:before{
+    width:100%;
+    height:100%;
+    transition:width 0.2s ease-in ,height 0.2s ease-in 0.2s;
+    border-top-color:#2a3f17;
+    border-right-color:#2a3f17;
+}
+.div1:hover:after{
+    width:100%;
+    height:100%;
+    transition: border-color 0s ease-in 0.4s,width 0.2s ease-in 0.4s,height 0.3s ease-in 0.6s;
+    border-bottom-color:#2a3f17;
+    border-left-color:#2a3f17;
+}
+div .box-5{
+	height: 1100px;
+	margin-bottom: 10px;
+}
+.box-5 {
+    height: 1100px;
+    width: 100%;
+}
+.box-5 div {
+    float: left;
+}
+.box-5 .songshu {
+    height: 750px;
+    width: 500px;
+    margin-left: 100px;
+    margin-right: 280px;
+}
+.box-5 .section {
+    height: 1000px;
+    width: 500px;
+}
+.box-5 .section .title {
+    height: 100px;
+    width: 400px;
+    margin-top: 60px;
+    line-height: 100px;
+    color: #2a3f17;
+    font-size: 36px;
+    cursor: pointer;
+    transition: all 1s ;
+    transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+}
+.box-5 .section .title:hover {
+    transform: translateY(-30px);
+}
+.box-5 .section.paragraph{
+    height: 100px;
+    width: 520px;
+    background-color: #fff;
+    font-size: 25px;
+    color: #2a3f17;
+    cursor: pointer;
+    transition: all 1.5s ;
+    transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+}
+.box-5 .section .paragraph:hover {
+    transform: scale(1.2);
+}
+.box-5 .section  .one {
+    height: 100px;
+    width: 520px;
+    margin-top: 60px;
+    color: #2a3f17;
+    font-size: 24px;
+    line-height: 100px;
+    cursor: pointer;
+    transition: all 1.5s ;
+    transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+}   
+.box-5 .section .one:hover {
+    transform: translateX(60px);
+}
+.box-5 .section .two {
+    height: 100px;
+    width: 520px;
+    margin-top: 60px;
+    color: #2a3f17;
+    font-size: 24px;
+    line-height: 100px;
+    cursor: pointer;
+    transition: all 1.5s ;
+    transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+}   
+.box-5 .section.two:hover {
+    transform: translateX(60px);
+}
+.box-5 .section .three {
+    height: 100px;
+    width: 520px;
+    margin-top: 60px;
+    color: #2a3f17;
+    font-size: 24px;
+    line-height: 100px;
+    cursor: pointer;
+    transition: all 1.5s ;
+    transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+}   
+.box-5 .section .three:hover {
+    transform: translateX(60px);
+}
+.box-5 .section .four {
+    height: 100px;
+    width: 520px;
+    margin-top: 60px;
+    color: #2a3f17;
+    font-size: 24px;
+    line-height: 100px;
+    cursor: pointer;
+    transition: all 1.5s ;
+    transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+}   
+.box-5 .section .four:hover {
+    transform: translateX(60px);
+}
+div .box-6{
+	height: 300px;
+}
+.box-6 {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    background-color: #fff;
+}
+.box-6 .bottom {
+    margin: 30px;
+    margin-left: 200px;
+}
+.box-6 button {
+    position: absolute;
+    height: 70px;
+    width: 350px;
+    top: 150px;
+    right: 270px;
+    font-size: 36px;
+    color: #ffffff;
+    background-color: #949f8b;
+    border: none;
+}
