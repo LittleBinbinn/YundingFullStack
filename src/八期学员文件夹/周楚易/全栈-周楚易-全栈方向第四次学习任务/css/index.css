@@ -1,0 +1,678 @@
+
+.turtle{
+    width: 1680px;
+    height: 979px;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation_bar{
+    display: flex;
+    width: 1680px;
+    height: 50px;
+    position: relative;
+    justify-content: space-between;
+}
+
+.turtle_image{
+   flex:1;
+   background-image: url(https://www.z4a.net/images/2023/12/19/4e6d9bf4a1c625e286c015a3820de7e0.png);
+}
+
+.list{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    left: 0%;
+    /* text-align: center;
+    display: table; */
+}
+
+.search{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    right: 0%;
+}
+
+.camera{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-image: url(https://www.z4a.net/images/2023/12/19/e171a2516dc6b0b1be6af33150cdeb2a.png);
+    background-position: center;
+    transition: width 1s, height 1s;
+}
+
+.camera:hover{
+    width: 150px;
+    height: 150px;
+}
+
+.content{
+    position: relative;
+    display: flex;
+    top: 250px;
+    width: 1111px;
+    height: 380px;
+    margin: auto;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Animal_Photography{
+    position: relative;
+    width: 1111px;
+    height: 180px;
+}
+
+.Animal_Photography h1{
+    font-family: SimSun;
+    text-align: center;
+    font-size: 40px;
+}
+
+.Animal_Photography p{
+    font-size: 30px;
+}
+
+.Animal_Photography p~.Animal_Photography p1{
+    line-height: 10px;
+}
+
+.EXPLORE{
+    position: relative;
+    width: 300px;
+    height: 100px;
+    background-color: rgb(42, 63,23);
+    font-size: 35px;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+}
+
+.flamingo{
+    position: absolute;
+    display: flex;
+    top: 1050px;
+    height: 500px;
+    width: 1111px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.box1{
+    position: relative;
+    width: 333px;
+    height: 500px;
+    background-image: url(https://www.z4a.net/images/2023/12/19/1e5b84d133ef7b0f8.png);
+    transition: 1s;
+}
+
+.box1:hover{
+    transform: translateY(-5%);
+}
+
+.box2{
+    overflow-y: hidden;
+    width: 333px;
+    height: 500px;
+    background-image: url(https://www.z4a.net/images/2023/12/19/2b62facbcb003451b.png);
+    transition: 1s;
+}
+
+.box2:hover{
+    transform: translateY(-5%);
+}
+
+.box3{
+    overflow-y: hidden;
+    width: 333px;
+    height: 500px;
+    background-image: url(https://www.z4a.net/images/2023/12/19/3610fdd0fcbcbedac.png);
+    transition: 1s;
+}
+
+.box3:hover{
+    transform: translateY(-5%);
+}
+
+.box1 p{
+    font-size: 50px;
+    padding: 300px 200px;
+    color: #fff;
+}
+
+.box2 p{
+    font-size: 50px;
+    padding: 300px 150px;
+    color: #fff;
+}
+
+.box3 p{
+    font-size: 50px;
+    padding: 300px 120px;
+    color: #fff;
+}
+
+.deer{
+    position: relative;
+    top: 600px;
+    width: 1680px;
+    height: 760px;
+    background-image: url(https://www.z4a.net/images/2023/12/19/aef14a8f9e336a85bce7789ec27a0e63.png);
+}
+
+.deer_text{
+    position: absolute;
+    display: flex;
+    width: 950px;
+    height: 540px;
+    top: -380px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgb(224, 223, 223);
+    flex-direction: column;
+    justify-content: space-around;
+    transition: 1s;
+}
+
+.deer_text:hover{
+    transform: translateY(-5%);
+}
+
+.text{
+    position: relative;
+    width: 800px;
+    height: 240px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+.sign_up{
+    position: relative;
+    width: 190px;
+    height: 70px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: rgb(42,63,23);
+    font-size: 30px;
+    text-align: center;
+    line-height: 70px;
+    color: #fff;
+    transition: width 1s,height 1s;
+}
+
+.sign_up:hover{
+    width: 170px;
+    height: 60px;
+}
+
+.Difference{
+    position: absolute;
+    top: 2400px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 300px;
+    height: 70px;
+    text-align: center;
+    font-size: 55px;
+    color: rgb(42,63,23);
+    transition: color 0.25s;
+}
+
+.Difference:hover{
+    border-style: outset;
+    border-width: 2px;
+    border-color: rgb(42,63,23);
+}
+
+.four_animals{
+    position: relative;
+    display: flex;
+    top: 750px;
+    width: 1140px;
+    height: 500px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.animals{
+    position: relative;
+    display: flex;
+    width: 1140px;
+    height: 400px;
+    justify-content: space-between;
+}
+
+.horse{
+    position: relative;
+    display: flex;
+    width: 260px;
+    height: 410px;
+    background-color: rgb(224, 223, 223);
+    flex-direction: column;
+    transition: 1s;
+}
+
+.horse:hover{
+    transform: translateY(-5%);
+}
+
+.horse_image{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    background-image: url(https://www.z4a.net/images/2023/12/19/d0978f250f14c878e2f56e368ff71213.png)
+}
+
+.horse_story{
+    flex: 1;
+    text-align: center;
+}
+
+.kangraoo{
+    position: relative;
+    display: flex;
+    width: 260px;
+    height: 410px;
+    background-color: rgb(224, 223, 223);
+    flex-direction: column;
+    transition: 1s;
+}
+
+.kangraoo_image{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    background-image: url(https://www.z4a.net/images/2023/12/19/d16720617f218857a71527d8aad0e8ef.png)
+}
+
+.kangraoo_story{
+    flex: 1;
+}
+
+.kangraoo:hover{
+    transform: translateY(-5%);
+}
+
+.lion{
+    position: relative;
+    display: flex;
+    width: 260px;
+    height: 410px;
+    background-color: rgb(224, 223, 223);
+    flex-direction: column;
+    transition: 1s;
+}
+
+.lion:hover{
+    transform: translateY(-5%);
+}
+
+.lion_image{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    background-image: url(https://www.z4a.net/images/2023/12/19/3a16363205d4703995f2c8075ac9d119.png)
+}
+
+.lion_story{
+    flex: 1;
+}
+
+.Hummingbird{
+    position: relative;
+    display: flex;
+    width: 260px;
+    height: 410px;
+    background-color: rgb(224, 223, 223);
+    flex-direction: column;
+    transition: 1s;
+}
+
+.Hummingbird:hover{
+    transform: translateY(-5%);
+}
+
+.Hummingbird_image{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    background-image: url(https://www.z4a.net/images/2023/12/19/f01395e17ab69cb5f4fbf374f13f415b.png)
+}
+
+.Hummingbird_story{
+    flex: 1;
+}
+
+.animals_title{
+    font-size: 30px;
+    text-align: center;
+    color: rgb(42,63,23);
+}
+
+.story{
+    font-size: 20px;
+    text-align: center;
+    line-height: 4px;
+    color: rgb(42,63,23);
+    text-decoration: underline;
+}
+
+.know_more{
+    position: relative;
+    top: 800px;
+    width: 360px;
+    height: 75px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(42,63,23);
+    font-size: 30px;
+    text-align: center;
+    line-height: 70px;
+    color: rgb(42,63,23);
+    transition: all 0.5s;
+}
+
+.know_more:hover{
+    background-color: rgb(42,63,23);
+    color: #fff;
+}
+
+.The_Photo{
+    position: relative;
+    display: flex;
+    top: 905px;
+    width: 1320px;
+    height: 1020px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.squirrel{
+    position: relative;
+    width: 700px;
+    height: 1020px;
+    background-image: url(https://www.z4a.net/images/2023/12/19/e6801c4302cb5faaffc377dc66f65857.png);
+}
+
+.introduction{
+    position: relative;
+    display: flex;
+    width: 520px;
+    height: 1020px;
+    flex-flow: column;
+}
+
+.title{
+    display: flex;
+    height: 356px;
+    flex-direction: column;
+    color: rgb(42,63,23);
+}
+
+.The_Photo_title{
+    height: 150px;
+    line-height: 200px;
+    font-size: 50px;
+    transition: 1s;
+}
+
+.The_Photo_title:hover{
+    transform: translateY(-50%);
+}
+
+.The_Photo_title_content{
+    flex: 1;
+    font-size: 26px;
+    transition: all 1s;
+}
+
+.The_Photo_title_content:hover{
+    width: 600px;
+    height: 200px;
+   font-size: 28px;
+}
+
+.The_Photo_content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.first{
+    display: flex;
+    position: relative;
+    height: 160px;
+    width: 520px;
+    transition: 1s;
+}
+
+.first:hover{
+    transform: translateX(20%);
+}
+
+.one{
+    position: relative;
+    top: 40px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border-color:rgb(42,63,23);
+    border-style: solid;
+    border-width: 2px;
+    font-size: 50px;
+    text-align: center;
+    line-height: 70px;
+}
+
+.one_content{
+    flex: 1;
+    padding-left: 20px;
+    font-size: 30px;
+    line-height: 180px;
+    border-color:rgb(42,63,23);
+}
+
+.second{
+    display: flex;
+    position: relative;
+    height: 160px;
+    width: 520px;
+    transition: 1s;
+}
+
+.second:hover{
+    transform: translateX(20%);
+}
+
+.two{
+    position: relative;
+    top: 40px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border-color:rgb(42,63,23);
+    border-style: solid;
+    border-width: 2px;
+    font-size: 50px;
+    text-align: center;
+    line-height: 70px;
+}
+
+.two_content{
+    flex: 1;
+    padding-left: 20px;
+    font-size: 30px;
+    line-height: 180px;
+    border-color:rgb(42,63,23);
+}
+
+.third{
+    display: flex;
+    position: relative;
+    height: 160px;
+    width: 520px;
+    transition: 1s;
+}
+
+.third:hover{
+    transform: translateX(20%);
+}
+
+.three{
+    position: relative;
+    top: 40px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border-color:rgb(42,63,23);
+    border-style: solid;
+    border-width: 2px;
+    font-size: 50px;
+    text-align: center;
+    line-height: 70px;
+}
+
+.three_content{
+    flex: 1;
+    padding-left: 20px;
+    font-size: 30px;
+    line-height: 180px;
+    border-color:rgb(42,63,23);
+}
+
+.fourth{
+    display: flex;
+    position: relative;
+    height: 160px;
+    width: 520px;
+    transition: 1s;
+}
+
+.fourth:hover{
+    transform: translateX(20%);
+}
+
+.four{
+    position: relative;
+    top: 40px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border-color:rgb(42,63,23);
+    border-style: solid;
+    border-width: 2px;
+    font-size: 50px;
+    text-align: center;
+    line-height: 70px;
+}
+
+.four_content{
+    flex: 1;
+    padding-left: 20px;
+    font-size: 30px;
+    line-height: 180px;
+    border-color:rgb(42,63,23);
+}
+
+.line{
+    width: 1680px;
+    height: 2px;
+    position: relative;
+    top: 960px;
+    background-color: rgb(42,63,23);
+}
+
+.last_text{
+    position: absolute;
+    display: flex;
+    top: 4380px;
+    width: 480px;
+    height: 160px;
+    left: 440px;
+}
+
+.In{
+    position: relative;
+    display: flex;
+    width: 300px;
+    height: 160px;
+    flex-direction: column;
+}
+
+.wild{
+    position: relative;
+    width: 300px;
+    height: 80px;
+    font-size: 45px;
+    color: rgb(42,63,23);
+}
+
+.sea{
+    flex: 1;
+    font-size: 45px;
+    line-height: 110px;
+    color: rgb(42,63,23);
+}
+
+.More{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.More box{
+    height: 53px;
+    width: 180px;
+    font-size: 20px;
+    line-height: 30px;
+    color: rgb(148, 159, 139);
+}
+
+.More p{
+    font-size: 30px;
+    line-height: 0;
+}
+
+.Big_World{
+    position: absolute;
+    top: 4440px;
+    left: 1180px;
+    width: 360px;
+    height: 72px;
+    background-color: rgb(148, 159, 139);
+    font-size: 40px;
+    text-align: center;
+    line-height: 70px;
+    color: #fff;
+    transition: all 1s;
+}
+
+.Big_World:hover{
+    transform: translateY(-20%);
+    background-color: #fff;
+    color: rgb(148, 159, 139);
+}

@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <mata name="viewport" content="width"=device-width,inital-scale=1.0>
+        <mata http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Animal Photography</title>
+            <style>
+                .background-one {
+                    width: 100%;
+                    height: 400px;
+                    top: 50px;
+                    position: relative;
+                    display: flex;
+                    background-size: 100% 100%;
+                    background-color: darkturquoise;
+
+
+
+
+                }
+
+                .explore {
+                    width: 175px;
+                    height: 35px;
+                    top: 225px;
+                    left: 450px;
+                    position: absolute;
+                    display: flex;
+                    background-color: olivedrab;
+
+
+                }
+
+                .box1 {
+                    width: 200px;
+                    height: 350px;
+                    left: 350px;
+                    top: 300px;
+                    position: absolute;
+                    display: flex;
+                    background-color: blueviolet;
+                    transition: All 0.4s ease-in-out;
+                    -webkit-transition: All 0.4s ease-in-out;
+                    -moz-transition: All 0.4s ease-in-out;
+                    -o-transition: All 0.4s ease-in-out;
+
+
+                }
+
+                .box1:hover {
+                    transform: translate(0, -10px);
+                    -webkit-transform: translate(0, -10px);
+                    -moz-transform: translate(0, -10px);
+                    -o-transform: translate(0, -10px);
+                    -ms-transform: translate(0, -10px);
+                }
+
+                .box2 {
+                    width: 200px;
+                    height: 350px;
+                    left: 650px;
+                    top: 300px;
+                    position: absolute;
+                    display: flex;
+                    background-color: blueviolet;
+                    transition: All 0.4s ease-in-out;
+                    -webkit-transition: All 0.4s ease-in-out;
+                    -moz-transition: All 0.4s ease-in-out;
+                    -o-transition: All 0.4s ease-in-out;
+
+
+
+                }
+
+                .box2:hover {
+                    transform: translate(0, -10px);
+                    -webkit-transform: translate(0, -10px);
+                    -moz-transform: translate(0, -10px);
+                    -o-transform: translate(0, -10px);
+                    -ms-transform: translate(0, -10px);
+                }
+
+                .box3 {
+                    width: 200px;
+                    height: 350px;
+                    left: 950px;
+                    top: 300px;
+                    position: absolute;
+                    display: flex;
+                    background-color: blueviolet;
+                    transition: All 0.4s ease-in-out;
+                    -webkit-transition: All 0.4s ease-in-out;
+                    -moz-transition: All 0.4s ease-in-out;
+                    -o-transition: All 0.4s ease-in-out;
+
+
+
+                }
+
+                .box3:hover {
+                    transform: translate(0, -10px);
+                    -webkit-transform: translate(0, -10px);
+                    -moz-transform: translate(0, -10px);
+                    -o-transform: translate(0, -10px);
+                    -ms-transform: translate(0, -10px);
+                }
+
+                .box4 {
+                    width: 75px;
+                    height: 75px;
+                    left: 700px;
+                    top: -50px;
+                    position: absolute;
+                    display: flex;
+                    background-color: forestgreen;
+                    transition: all 0.5s;
+
+                }
+
+                .box4:hover {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                .box5 {
+                    width: 30px;
+                    height: 30px;
+                    left: 0;
+                    top: -50px;
+                    position: absolute;
+                    display: flex;
+                    transition: all 0.5s;
+
+
+                }
+
+                .box5:hover {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                .box6 {
+                    width: 30px;
+                    height: 30px;
+                    right: 0;
+                    top: -50px;
+                    position: absolute;
+                    display: flex;
+                    transition: all 0.5s;
+
+
+                }
+
+                .box6:hover {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                .background-two {
+                    width: 100%;
+                    height: 350px;
+                    background-color: cornflowerblue;
+                    top: 500px;
+                    position: relative;
+                    display: flex;
+                }
+
+                .content {
+                    width: 580px;
+                    height: 300px;
+                    left: 470px;
+                    top: -100px;
+                    background-color: lavender;
+                    position: absolute;
+                    display: flex;
+                    transition: All 0.4s ease-in-out;
+                    -webkit-transition: All 0.4s ease-in-out;
+                    -moz-transition: All 0.4s ease-in-out;
+                    -o-transition: All 0.4s ease-in-out;
+
+                }
+
+                .Sign {
+                    width: 175px;
+                    height: 35px;
+                    top: 250px;
+                    left: 200px;
+                    position: absolute;
+                    display: flex;
+                    background-color: olivedrab;
+
+                }
+
+
+
+                .content:hover {
+                    transform: translate(0, -10px);
+                    -webkit-transform: translate(0, -10px);
+                    -moz-transform: translate(0, -10px);
+                    -o-transform: translate(0, -10px);
+                    -ms-transform: translate(0, -10px);
+                }
+
+                .Difference {
+                    width: 100%;
+                    height: 400px;
+                    top: 500px;
+                    position: relative;
+                }
+
+                .difference {
+                    width: 200px;
+                    height: 40px;
+                    left: 600px;
+                    top: 40px;
+                    position: absolute;
+                    display: flex;
+                }
+
+                .photo1 {
+                    width: 150px;
+                    height: 200px;
+                    top: 100px;
+                    left: 350px;
+                    position: absolute;
+                    display: flex;
+                    background-color: hotpink;
+                    transition: All 0.4s ease-in-out;
+                    -webkit-transition: All 0.4s ease-in-out;
+                    -moz-transition: All 0.4s ease-in-out;
+                    -o-transition: All 0.4s ease-in-out;
+
+                }
+
+                .photo1:hover {
+                    transform: translate(0, -10px);
+                    -webkit-transform: translate(0, -10px);
+                    -moz-transform: translate(0, -10px);
+                    -o-transform: translate(0, -10px);
+                    -ms-transform: translate(0, -10px);
+                }
+
+                .photo2 {
+                    width: 150px;
+                    height: 200px;
+                    top: 100px;
+                    left: 550px;
+                    position: absolute;
+                    display: flex;
+                    background-color: hotpink;
+                    transition: All 0.4s ease-in-out;
+                    -webkit-transition: All 0.4s ease-in-out;
+                    -moz-transition: All 0.4s ease-in-out;
+                    -o-transition: All 0.4s ease-in-out;
+
+                }
+
+                .photo2:hover {
+                    transform: translate(0, -10px);
+                    -webkit-transform: translate(0, -10px);
+                    -moz-transform: translate(0, -10px);
+                    -o-transform: translate(0, -10px);
+                    -ms-transform: translate(0, -10px);
+                }
+
+
+                .photo3 {
+                    width: 150px;
+                    height: 200px;
+                    top: 100px;
+                    left: 750px;
+                    position: absolute;
+                    display: flex;
+                    background-color: hotpink;
+                    transition: All 0.4s ease-in-out;
+                    -webkit-transition: All 0.4s ease-in-out;
+                    -moz-transition: All 0.4s ease-in-out;
+                    -o-transition: All 0.4s ease-in-out;
+
+                }
+
+                .photo3:hover {
+                    transform: translate(0, -10px);
+                    -webkit-transform: translate(0, -10px);
+                    -moz-transform: translate(0, -10px);
+                    -o-transform: translate(0, -10px);
+                    -ms-transform: translate(0, -10px);
+                }
+
+
+                .photo4 {
+                    width: 150px;
+                    height: 200px;
+                    top: 100px;
+                    left: 950px;
+                    position: absolute;
+                    display: flex;
+                    background-color: hotpink;
+                    transition: All 0.4s ease-in-out;
+                    -webkit-transition: All 0.4s ease-in-out;
+                    -moz-transition: All 0.4s ease-in-out;
+                    -o-transition: All 0.4s ease-in-out;
+
+                }
+
+                .photo4:hover {
+                    transform: translate(0, -10px);
+                    -webkit-transform: translate(0, -10px);
+                    -moz-transform: translate(0, -10px);
+                    -o-transform: translate(0, -10px);
+                    -ms-transform: translate(0, -10px);
+                }
+
+                .Box1 {
+                    width: 150px;
+                    height: 125px;
+                    background-color: lightseagreen;
+                    position: absolute;
+                    display: flex;
+                }
+
+                .Box2 {
+                    width: 150px;
+                    height: 75px;
+                    background-color: silver;
+                    position: absolute;
+                    top: 125px;
+                    display: flex;
+
+
+                }
+
+
+                .box {
+                    width: 175px;
+                    height: 35px;
+                    top: 350px;
+                    left: 625px;
+                    position: absolute;
+                    display: flex;
+                    border-style: solid;
+                    border-color: darkolivegreen;
+                }
+
+                .box:hover {
+                    background-color: darkolivegreen;
+                }
+
+                .Interface {
+                    width: 100%;
+                    height: 650px;
+                    top: 500px;
+                    position: relative;
+                }
+
+                .ThePhoto {
+                    width: 425px;
+                    height: 600px;
+                    left: 300px;
+                    top: 25px;
+                    position: absolute;
+                    background-color: darkolivegreen;
+                    display: flex;
+
+                }
+
+                .section {
+                    width: 425px;
+                    height: 600px;
+                    left: 760px;
+                    top: 25px;
+                    position: absolute;
+                    display: flex;
+
+                }
+
+                .end {
+                    width: 100%;
+                    height: 250px;
+                    top: 500px;
+                    position: relative;
+                    border-top-style: solid;
+                    border-top-color: black;
+
+                }
+
+                p2 {
+                    font-family: 'Courier New', Courier, monospace;
+                    font-size: xxx-large;
+                    font-weight: 700;
+                    color: olivedrab;
+                    top: 75px;
+                    position: absolute;
+                    left: 550px;
+
+
+                }
+
+                p5 {
+                    font-family: 'Courier New', Courier, monospace;
+                    font-size: medium;
+                    font-weight: 700;
+                    color: olivedrab;
+                    top: 140px;
+                    position: absolute;
+                    left: 450px;
+
+
+
+                }
+
+                p {
+                    font-size: medium;
+                    font-family: 'Courier New', Courier, monospace;
+                    font-weight: 700;
+                    color: mediumaquamarine;
+                    padding-left: 10px;
+                    padding-top: 10px;
+                    padding-right: 10px;
+                }
+
+                h1 {
+                    font-family: 'Courier New', Courier, monospace;
+                    font-size: 35px;
+                    font-style: normal;
+                    font-weight: 600;
+                    color: azure;
+                    text-align: center;
+
+                }
+
+                p1 {
+                    font-size: medium;
+                    font-family: 'Courier New', Courier, monospace;
+                    font-weight: 700;
+                    color: darkolivegreen;
+                    left: 35px;
+                    top: 5px;
+                    position: absolute;
+                }
+
+                .lastbox {
+                    width: 175px;
+                    height: 35px;
+                    top: 110px;
+                    left: 1100px;
+                    position: absolute;
+                    display: flex;
+                    background-color: darkolivegreen;
+                }
+
+                .lastbox:hover {
+                    background-color: white;
+                }
+
+                p3 {
+                    font-size: large;
+                    font-family: 'Courier New', Courier, monospace;
+                    font-weight: 700;
+                    color: white;
+                    left: 40px;
+                    top: 5px;
+                    position: absolute;
+
+                }
+
+                p6 {
+                    font-size: large;
+                    font-family: 'Courier New', Courier, monospace;
+                    font-weight: 700;
+                    color: darkolivegreen;
+                    left: 40px;
+                    top: 5px;
+                    position: absolute;
+
+
+                }
+
+                p6:hover {
+                    color: white;
+                }
+
+                p7 {
+                    font-size: xx-large;
+                    font-family: 'Courier New', Courier, monospace;
+                    font-weight: 700;
+                    color: darkolivegreen;
+                    left: 40px;
+                    top: 5px;
+                    position: absolute;
+
+
+
+                }
+
+                p8 {
+                    font-size: x-large;
+                    font-family: 'Courier New', Courier, monospace;
+                    font-weight: 500;
+                    color: white;
+                    left: 20px;
+                    top: 5px;
+                    position: absolute;
+
+                }
+
+                p8:hover {
+                    color: darkolivegreen;
+                }
+
+                p9 {
+                    font-size: x-large;
+                    font-family: 'Courier New', Courier, monospace;
+                    font-weight: 700;
+                    color: white;
+                    left: 150px;
+                    top: 275px;
+                    position: absolute;
+
+
+                }
+
+                p10 {
+                    font-size: small;
+                    font-family: 'Courier New', Courier, monospace;
+                    font-weight: 600;
+                    color: darkolivegreen;
+                    left: 10px;
+                    top: 30px;
+                    position: absolute;
+                    text-decoration: underline;
+
+                }
+
+                P11 {
+                    font-size: xx-large;
+                    font-family: 'Courier New', Courier, monospace;
+                    font-weight: 600;
+                    color: darkolivegreen;
+                    left: 400px;
+                    top: 100px;
+                    position: absolute;
+
+                }
+
+                p12 {
+                    font-size: xx-large;
+                    font-family: 'Courier New', Courier, monospace;
+                    font-weight: 600;
+                    color: darkolivegreen;
+                    left: 400px;
+                    top: 150px;
+                    position: absolute;
+
+
+                }
+
+                p13 {
+                    font-size: x-large;
+                    font-family: 'Courier New', Courier, monospace;
+                    font-weight: 600;
+                    color: darkolivegreen;
+                    left: 700px;
+                    top: 110px;
+                    position: absolute;
+
+                }
+
+                p14 {
+                    font-size: large;
+                    font-family: 'Courier New', Courier, monospace;
+                    font-weight: 600;
+                    color: darkolivegreen;
+                    left: 700px;
+                    top: 140px;
+                    position: absolute;
+
+                }
+
+                p15 {
+                    font-size: large;
+                    font-family: 'Courier New', Courier, monospace;
+                    font-weight: 600;
+                    color: darkolivegreen;
+                    left: 700px;
+                    top: 160px;
+                    position: absolute;
+
+                }
+            </style>
+</head>
+
+<body>
+    <div class="background-one">
+        <p2>Animal Photography</p2>
+        <p5>A silhouette of them, a simple little acttion, here are the photographerS
+            eyes the best of them, their laughter, their love, their every vivid,are regarded
+            by us.</p5>
+        <img src="https://hostings.oss-cn-beijing.aliyuncs.com/%E7%AC%AC%E5%9B%9B%E5%91%A8%E7%B4%A0%E6%9D%90/%E4%B9%8C%E9%BE%9F.png"
+            width="100%" height="100%">
+        <div class="explore">
+            <p8>EXPLORE</p8>
+        </div>
+        <div class="box1">
+            <img
+                src="https://hostings.oss-cn-beijing.aliyuncs.com/%E7%AC%AC%E5%9B%9B%E5%91%A8%E7%B4%A0%E6%9D%90/%E7%81%AB%E7%83%88%E9%B8%9F1.png">
+            <p9>Fly</p9>
+        </div>
+        <div class="box2">
+            <img
+                src="https://hostings.oss-cn-beijing.aliyuncs.com/%E7%AC%AC%E5%9B%9B%E5%91%A8%E7%B4%A0%E6%9D%90/%E7%81%AB%E7%83%88%E9%B8%9F2.png">
+            <p9>Love</p9>
+        </div>
+        <div class="box3">
+            <img
+                src="https://hostings.oss-cn-beijing.aliyuncs.com/%E7%AC%AC%E5%9B%9B%E5%91%A8%E7%B4%A0%E6%9D%90/%E7%81%AB%E7%83%88%E9%B8%9F3.png">
+            <p9>Stand</p9>
+        </div>
+        <div class="box4">
+            <img
+                src="https://hostings.oss-cn-beijing.aliyuncs.com/%E7%AC%AC%E5%9B%9B%E5%91%A8%E7%B4%A0%E6%9D%90/%E7%9B%B8%E6%9C%BA.png">
+        </div>
+        <div class="box5">
+            <img
+                src="https://hostings.oss-cn-beijing.aliyuncs.com/%E7%AC%AC%E5%9B%9B%E5%91%A8%E7%B4%A0%E6%9D%90/list-view.png">
+        </div>
+        <div class="box6">
+            <img
+                src="https://hostings.oss-cn-beijing.aliyuncs.com/%E7%AC%AC%E5%9B%9B%E5%91%A8%E7%B4%A0%E6%9D%90/list-view.png">
+        </div>
+
+
+
+    </div>
+    <div class="background-two">
+        <img src="https://hostings.oss-cn-beijing.aliyuncs.com/%E7%AC%AC%E5%9B%9B%E5%91%A8%E7%B4%A0%E6%9D%90/%E9%B9%BF.png"
+            width="100%" height="100%">
+        <div class="content">
+            <p>"Family Farms is the best place, where I can buy fruit,vegetable, meat, honey, milk eggs and so on for my
+                retaurant
+                directly fromupplier. Super convinient.Thank you" xdccnfc cfvfesc cfnccnjdcn cfjdcdsr dcwwzwqg ejs dddc
+                ddf fnfjv ej
+                fvnv jnxzexh cn cdcmdsc ddnc, cddmdcds dncdn cdcn wgeoeas, dcndassasas,cdcndcnc cciqoskxm cbdcpqslwq
+                nfnere nfncsfjc
+                dndcww frhfjnc qpdjweiw cnncqe, cqjsdc ccn dcjndc, ncf cdncjd dcdjcndq csjncq dcdncf dcdjdnc cdjsq,
+                qkodkqe wqcnpsdc
+                cdnqq qcw, cqnonxj dcdcnd dcnjsdvb wcnwq cowwncjq jcnjncqnw wcq cwd cwch, cnjncnc ece cdcnncdwnc nenwc
+                dcnnc cjcj,ccjrnc
+                wecwc</p>
+            <div class="Sign">
+                <p3>SIGN UP</p3>
+            </div>
+        </div>
+    </div>
+
+    <div class="Difference">
+        <div class="difference">
+            <p7>Difference</p7>
+        </div>
+        <div class="photo1">
+            <div class="Box1">
+                <img src="https://hostings.oss-cn-beijing.aliyuncs.com/%E7%AC%AC%E5%9B%9B%E5%91%A8%E7%B4%A0%E6%9D%90/%E9%A9%AC.png"
+                    width="100%">
+            </div>
+            <div class="Box2">
+                <P1>house</P1>
+                <p10>A difference story</p10>
+            </div>
+        </div>
+        <div class="photo2">
+            <div class="Box1">
+                <img src="https://hostings.oss-cn-beijing.aliyuncs.com/%E7%AC%AC%E5%9B%9B%E5%91%A8%E7%B4%A0%E6%9D%90/%E8%A2%8B%E9%BC%A0.png"
+                    width="100%">
+            </div>
+            <div class="Box2">
+                <p1>Kangaroo</p1>
+                <p10>A difference story</p10>
+            </div>
+        </div>
+        <div class="photo3">
+            <div class="Box1">
+                <img src="https://hostings.oss-cn-beijing.aliyuncs.com/%E7%AC%AC%E5%9B%9B%E5%91%A8%E7%B4%A0%E6%9D%90/%E7%8B%AE%E5%AD%90.png"
+                    width="100%">
+            </div>
+            <div class="Box2">
+                <p1>Lion</p1>
+                <p10>A difference story</p10>
+            </div>
+        </div>
+        <div class="photo4">
+            <div class="Box1">
+                <img src="https://hostings.oss-cn-beijing.aliyuncs.com/%E7%AC%AC%E5%9B%9B%E5%91%A8%E7%B4%A0%E6%9D%90/%E5%B0%8F%E9%B8%9F.png"
+                    width="100%">
+            </div>
+            <div class="Box2">
+                <p1>Hummingbord</p1>
+                <p10>A difference story</p10>
+            </div>
+        </div>
+        <div class="box">
+            <p6>know more</p6>
+        </div>
+    </div>
+
+    <div class="Interface">
+        <div class="ThePhoto">
+            <img src="https://hostings.oss-cn-beijing.aliyuncs.com/%E7%AC%AC%E5%9B%9B%E5%91%A8%E7%B4%A0%E6%9D%90/%E6%9D%BE%E9%BC%A0.png"
+                width="100%">
+        </div>
+        <div class="section"></div>
+    </div>
+
+    <div class="end">
+        <p11>IN THE WILD</p11>
+        <P12>IN THE SEA</P12>
+        <p13>MOER</p13>
+        <P14>we creat art</P14>
+        <p15>we creat life</p15>
+        <div class="lastbox">
+            <p8>Big World</p8>
+        </div>
+    </div>
+
+</body>
+
+</html>

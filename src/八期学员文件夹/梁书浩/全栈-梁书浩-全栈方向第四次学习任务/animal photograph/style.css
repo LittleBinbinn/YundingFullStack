@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.w {
+    margin: auto;
+    width: 1140px;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+hr {
+    size: 2px;
+    color: #2a3f17;
+}
+.header {
+    height: 50px;
+    max-width: 100%;
+}
+.banner {
+    height: 880px;
+    background-image: url(https://liangmoxvan.oss-cn-beijing.aliyuncs.com/%E4%B9%8C%E9%BE%9F.png);
+    background-repeat: no-repeat;
+    background-position:top center;
+    text-align: center;
+}
+.photograph {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    transition: all .5s;
+}
+.photograph:hover {
+    transform: translateY(-50px);
+}
+.w h1 {
+    margin-top: 92px;
+    color: #2a3f17;
+    font-size: 72px;
+    font-family: Cambria;
+    font-weight: 400;
+}
+.w p {
+    color: #2a3f17;
+    font-size: 30px;
+    font-family: Cambria;
+}
+.label {
+    margin-top: 142px;
+    width: 260px;
+    height: 70px;
+    background-color: #fff;
+    transition: all .3s;
+}
+.label p {
+    color: #2a3f17;
+    font-size: 30px;
+    line-height: 70px;
+}
+.label:hover p {
+    transform: scale(1.1);
+    background-color: #2a3f17;
+    color: #fff;
+}
+.label:hover {
+    transform: scale(1.1);
+}
+.photo {
+    height: 600px;
+}
+.photo .w {
+    margin-top: 100px;
+}
+.bird1,
+.bird2,
+.bird3 {
+    display: inline-block;
+    position: relative;
+}
+.photo img {
+    height: 500px;
+    margin-left: 64px;
+}
+.bird1 img {
+    margin-left: 0px;
+}
+.photo .bird1 p {
+    position: absolute;
+    top: 70%;
+    left: 65%;
+    font-size: 48px;
+    color: #fff;
+    font-family: Cambria;
+}
+.photo .bird2 p {
+    position: absolute;
+    top: 70%;
+    left: 60%;
+    font-size: 48px;
+    color: #fff;
+    font-family: Cambria;
+}
+.photo .bird3 p {
+    position: absolute;
+    top: 70%;
+    left: 55%;
+    font-size: 48px;
+    color: #fff;
+    font-family: Cambria;
+}
+.photo .bird1 {
+    transition: all .5s;
+}
+.photo .bird2 {
+    transition: all .5s;
+}
+.photo .bird3 {
+    transition: all .5s;
+}
+.photo .bird1:hover {
+    transform: translateY(-145px);
+}
+.photo .bird2:hover {
+    transform: translateY(-145px);
+}
+.photo .bird3:hover {
+    transform: translateY(-145px);
+}
+.sign {
+    position: relative;
+    background-image: url(https://liangmoxvan.oss-cn-beijing.aliyuncs.com/%E9%B9%BF.png);
+    height: 760px;
+    background-repeat: no-repeat;
+    background-position:top center;
+}
+
+.log {
+    position: absolute;
+    width: 946px;
+    height: 540px;
+    background-color: #e0dfdf;
+    top: 50%;
+    left: 50%;
+    margin: -270px -473px;
+    transition: all .5s;
+}
+.log p {
+    margin-top: 80px;
+    padding: 0 80px;
+    color: #2a3f17;
+    font-size: 20px;
+    font-family: "微软雅黑";
+}
+.signin {
+    margin: 90px auto;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    width: 200px;
+    background-color: #fff;
+    transition: all .3s;
+}
+.signin h1 {
+    color: #2a3f17;
+    font-size: 30px;
+}
+.log:hover {
+    transform: translateY(-170px);
+}
+.signin:hover {
+    transform: scale(1.1);
+}
+.signin h1:hover {
+    color: #fff;
+    background-color: #2a3f17;
+}
+.difference {
+    height: 850px;
+}
+.difference h1 {
+    margin-top: 80px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.animals {
+    float: left;
+    margin-left: 25px;
+    width: 260px;
+    height: 410px;
+    background-color: #e0dfdf;
+}
+.four {
+    height: 410px;
+}
+.animals img {
+    width: 100%;
+}
+.four h3 {
+    margin-top: 27px;
+    color: #2a3f17;
+    font-size: 30px;
+    text-align: center;
+}
+.four p {
+    margin-top: 23px;
+    color: #2a3f17;
+    font-size: 22px;
+    text-align: center;
+}
+.four a {
+    text-decoration: underline #2a3f17;
+}
+.difference .four .animals:nth-child(1) {
+    margin-left:0px;
+}
+.know {
+    margin-top: 120px;
+    height: 65px;
+    line-height: 65px;
+    width: 360px;
+    border: 2px solid #2a3f17;
+    transition: all .3s;
+}
+.know p {
+    color: #2a3f17;
+    font-size: 30px;
+    font-weight:500;
+    text-align: center;
+}
+.know:hover p {
+    background-color: #2a3f17;
+    border: 2px solid #fff;
+    color: #fff;
+}
+.know:hover {
+    transform: scale(1.1);
+}
+.thephoto {
+    height: 1080px;
+    width: 1400px;
+    margin: 0 auto;
+}
+.mouth {
+    float: left;
+    width: 700px;
+    height: 1020px;
+}
+.mouth img {
+    width: 100%;
+}
+.word {
+    float: right;
+    margin-left: 50px;
+    width: 600px;
+    height: 1020px;
+    text-align: left;
+}
+.word h2 {
+    margin-top: 85px;
+    font-size: 36px;
+}
+.word p {
+    margin-top: 35px;
+    font-size: 24px;
+}
+.box {
+    margin-top: 90px;
+    height: 70px;
+}
+.circle {
+    display: inline-block;
+    height: 70px;
+    line-height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 2px solid #2a3f17;
+}
+.circle h1 {
+    font-size: 48px;
+    text-align: center;
+}
+.box h3 {
+    display: inline-block;
+    font-size: 24px;
+    text-align: center;
+}
+.end {
+    position: relative;
+    height: 460px;
+}
+.wild {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.wild dl dt {
+    font-size: 40px;
+    color: #2a3f17;
+}
+.wild dl dd {
+    font-size: 40px;
+    margin-top: 40px;
+    color: #2a3f17;
+}
+.wild dl a:hover dd,
+.more dl a:hover dd,
+.wild dl a:hover dt,
+.more dl a:hover dt {
+    color: burlywood;
+}
+
+.more {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translateY(-50%);
+}
+.more dl dt {
+    font-size: 30px;
+    color: #2a3f17;
+}
+.more dl dd {
+    font-size: 24px;
+    margin-top: 15px;
+    color: #2a3f17;
+}
+.world {
+    position: absolute;
+    margin-top: 195px;
+    margin-left: 780px;
+    height: 70px;
+    line-height: 70px;
+    width: 360px;
+    background-color: #949f8b;
+    transition: all .3s;
+}
+.world h3 {
+    font-size: 36px;
+    text-align: center;
+    font-weight: 500;
+    color: #fff;
+}
+.world:hover {
+    transform: scale(1.1);
+    background-color: #2a3f17;
+}

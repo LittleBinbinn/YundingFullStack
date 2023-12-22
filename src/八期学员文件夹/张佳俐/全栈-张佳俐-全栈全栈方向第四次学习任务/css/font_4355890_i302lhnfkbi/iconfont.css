@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4355890 */
+  src: url('iconfont.woff2?t=1703055867402') format('woff2'),
+       url('iconfont.woff?t=1703055867402') format('woff'),
+       url('iconfont.ttf?t=1703055867402') format('truetype');
+}
+
+.iconfont3 {
+  font-family: "iconfont" !important;
+  font-size: 100px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+  left:25px;
+  top:25px;
+  position: relative;
+}
+
+.icon-ai-camera:before {
+  content: "\e66c";
+}
+

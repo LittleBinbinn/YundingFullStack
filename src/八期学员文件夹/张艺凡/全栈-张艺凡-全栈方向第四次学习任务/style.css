@@ -1,0 +1,407 @@
+/* 部分动画效果 */
+        /* 向上浮动 */
+        @keyframes float{
+            0%{top: 0px;}
+            100%{top: -20px;}
+        }
+        /* 松鼠右侧表格的向右浮动效果 */
+        @keyframes right{
+            0%{right:0px;}
+            100%{right:-30px;}
+        }
+        @keyframes moveUp {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(30px);
+    }
+}
+li:nth-child(n){
+   transition: 2s;
+}
+li:nth-child(n):hover{
+    animation-name: moveUp;
+    animation-duration: 2s;
+}
+img{
+            width: 100%;
+            height: 100%;
+        }
+.photo{
+    position: absolute;
+    top: 0%;
+    width: 10%;
+    left: 45%;
+    height: 22%;
+    transition: 0.5s;
+}
+.photo:hover{
+    transform: scale(2);
+}
+.top{
+    position:relative;
+    width: 100%;
+    height: 4%;
+    background-color: aquamarine;
+}
+.animal_photo{
+    position: relative;
+    width: 100%;
+    height: 1400px;
+}
+
+.AP_background{
+    position: relative;
+    width: 100%;
+    height:700px ;
+    /* background-color: bisque; */
+    background-image: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E4%B9%8C%E9%BE%9F.png);
+}
+.AP_text{
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    height: 60%;
+    /* background-color: brown; */
+    text-align: center;
+}
+.AP_expiore{
+    position: absolute;
+    left: 20%;
+    bottom: 10%;
+    width: 20%;
+    height: 10%;
+    background-color: #2c4517;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    line-height: 2;
+}
+.AP_3pic{
+    position: relative;
+    width: 60%;
+    height: 400px;
+    left: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.AP_pic{
+    position: relative;
+    width: 30%;
+    height: 100%;
+    /* background-color: deeppink; */
+    transition: 2s;
+}
+.AP_pic:hover{
+    animation-name: float;
+    animation-duration: 2s;
+}
+.SIGN_UP{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    /* background-color: greenyellow; */
+    background-image: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E9%B9%BF.png);
+}
+.SU_TEXT{
+    position: relative;
+    width: 50%;
+    height: 70%;
+    left: 25%;
+    background-color: rgb(197, 197, 197); 
+    transition: 2s;
+}
+.SU_text{
+    position: relative;
+    width: 100%;
+    height: 70%;
+    text-align: center;
+    line-height: 30px;
+    background-color: rgb(199, 199, 199);
+}
+.SU_TEXT:hover{
+    animation-name: float;
+    animation-duration: 2s;
+}
+.SU_signup{
+    position: absolute;
+    width: 30%;
+    left: 35%;
+    top: 70%; 
+    height: 15%;
+    text-align: center;
+    background-color: rgb(46, 85, 49);
+    transition: 2s;
+}
+.SU_signup:hover{
+    transform: scale(0.5);
+        animation-name: nm;
+        animation-duration: 2s;
+}
+.Difference{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    /* PIC */
+}
+.differencex{
+    position: relative;
+    width: 30%;
+    left: 35%;
+    height: 10%;
+    text-align: center;
+    font-size: 50px;
+    line-height: 1.2;
+    
+}
+.DIF_4PIC{
+    position: relative;
+    width: 60%;
+    left: 20%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+}
+.DIF_pic:hover {
+    animation-name: float;
+    animation-duration: 2s;
+}
+.DIF_pic{
+    position: relative;
+    width: 22%;
+    height: 100%;
+    /* background-color: hotpink; */
+    transition: 2s;
+}
+.DIF_4TEXT{
+    position: relative;
+    width: 60%;
+    left: 20%;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.DIF_text{
+    position: relative;
+    width: 22%;
+    height: 100%;
+    background-color: rgb(199, 199, 199);
+    transition: 2s;
+}
+.DIF_text:hover{
+    animation-name: float;
+    animation-duration: .5s;
+}
+/* 变化大小/失色 */
+@keyframes nm{
+    0%{}
+    100%{ 
+        background: #326632;
+    color: #6f855a;}
+}
+.Know_more{
+    position: absolute;
+    left: 40%;
+    bottom: 10%;
+    width: 20%;
+    height: 10%;
+    background-color: rgb(253, 253, 253);
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: rgb(42, 81, 58);
+    text-align: center;
+    transition: 0.5s;
+}
+.Know_more:hover {
+    transform: scale(0.5);
+        animation-name: nm;
+        animation-duration: 2s;
+}
+.THE_photo{
+    position: relative;
+    height: 1090px;
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid #2a3f17;
+}
+
+.TP_pic{
+position: relative;
+    float: left;
+    width: 40%;
+    left: 5%;
+    height: 80%;
+    top: 10%;
+    background: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E6%9D%BE%E9%BC%A0.png); 
+    background-size: 100% 1030px;
+}
+.TP_TEXT{
+    position: relative;
+    float: left;
+    width: 40%;
+    left: 10%;
+    height: 100%;
+}
+.title{
+    position: relative;
+    width: 90%;
+    left: 10%;
+    height: 50px;
+    margin: 0 auto;
+    font: normal bold 36px "微软雅黑";
+  
+}
+.family{
+    position: relative;
+    width: 80%;
+    left: 10%;
+    height: 130px;
+    margin:  0 auto;
+    font: normal normal 20px "微软雅黑";
+}
+li{
+    position: relative;
+    width: 100%;
+    height: 70px;
+    margin-top: 92px;
+}
+li .number{
+    display: table-cell;
+    float: left;
+    width: 10%;
+    height: 50px;
+    border-radius: 42px;
+    background-color: white;
+    text-align: center;
+    vertical-align: middle;
+    color: #132701;
+    font-size: 38px;
+    border: 2px solid #2d510d;
+    text-align: center;
+    line-height: 50px;
+}
+li .text{
+    float: left;
+    width: 400px;
+    height: 70px;
+    padding-left: 20px;
+    text-align: center;
+    font: normal normal 24px "微软雅黑";
+    line-height: 40px;
+    color: #000000;
+}
+.TP_TEXT ul{
+    position: relative;
+    width: 500px;
+    height: 740px;
+    margin: 0  auto;
+}
+.
+.TP_text:hover{
+    animation-name: right;
+    animation-duration: 2s;
+}
+.BIG_world {
+    width: 100%;
+    height: 300px;
+    /* top: 2185px; */
+    /* 删掉图片就会挪动位置 */
+    position: relative;
+    border-top: solid #2a3f17 2px;
+}
+.BG_T1 {
+    width: 20%;
+    height: 150px;
+    position: absolute;
+    bottom: 80px;
+    left: 15%;
+    font: normal 400 30px "微软雅黑";
+    text-align: center;
+    line-height: 75px;
+    color: #2a3f17;
+}
+.BG_T2 {
+    width: 20%;
+    height: 150px;
+    position: absolute;
+    bottom: 100px;
+    left: 35%;
+    text-align: center;
+    font: normal 400 20px "微软雅黑";
+    line-height: 35px;
+    color: #6f855a;
+}
+.button {
+    width: 300px;
+    height: 70px;
+    background: #a2b096;
+    position: absolute;
+    bottom: 130px;
+    left: 60%;
+    color: #fff;
+    font: normal 400 30px "微软雅黑";
+    text-align: center;
+    line-height: 70px;
+}
+/* 底部页面的渐变效果（向上失色） */
+@keyframes up {
+    0% {}
+    100% {
+        transform: translate(0,-25px);
+        background: #fff;
+        color: #788a69;
+    }
+}
+.button:hover {
+    animation: up 0.5s linear 0s alternate forwards;
+}
+
+.differencex:before {
+      bottom: 0;
+      right: 0;
+      transition: border-color 0s ease-in 0.4s, width 0.2s ease-in 0.2s, height 0.2s ease-in;
+      transition: border-color 0s ease-in 0.4s, width 0.2s ease-in 0.2s, height 0.2s ease-in;
+    }
+
+    .differencex:after {
+      top: 0;
+      left: 0;
+      transition: border-color 0s ease-in 0.8s, width 0.2s ease-in 0.6s, height 0.2s ease-in 0.4s;
+      transition: border-color 0s ease-in 0.8s, width 0.2s ease-in 0.6s, height 0.2s ease-in 0.4s;
+    }
+
+    .differencex:before,
+    .differencex:after {
+      content: '';
+      display: block;
+      position: absolute;
+      box-sizing: border-box;
+      border: 3px solid transparent;
+      width: 0;
+      height: 0;
+    }
+    .differencex:hover:before {
+      border-bottom-color: black;
+      border-left-color: black;
+      transition: border-color 0s ease-out 0.4s, width 0.2s ease-out 0.4s, height 0.2s ease-out 0.6s;
+      transition: border-color 0s ease-out 0.4s, width 0.2s ease-out 0.4s, height 0.2s ease-out 0.6s;
+    }
+
+    .differencex:hover:after {
+      border-top-color: black;
+      border-right-color: black;
+      transition: width 0.2s ease-out, height 0.2s ease-out 0.2s;
+      transition: width 0.2s ease-out, height 0.2s ease-out 0.2s;
+    }
+
+    .differencex:hover:before,
+    .differencex:hover:after {
+      border-width: 3px;
+      width: 100%;
+      height: 100%;
+    }

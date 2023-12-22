@@ -1,0 +1,30 @@
+{
+  "id": "4375936",
+  "name": "第四次作业",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1075",
+      "name": "照相机",
+      "font_class": "zhaoxiangji",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "1221178",
+      "name": "放大镜",
+      "font_class": "fangdajing",
+      "unicode": "e6e4",
+      "unicode_decimal": 59108
+    },
+    {
+      "icon_id": "1604577",
+      "name": "类目",
+      "font_class": "leimu",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    }
+  ]
+}

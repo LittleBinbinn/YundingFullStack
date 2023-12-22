@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 929px;
+            background-color: paleturquoise;
+        }
+
+        .animal_one {
+            width: 100%;
+            height: 929px;
+        }
+
+        .header {
+            position: relative;
+            top: -934px;
+            width: 100%;
+            height: 49px;
+            background-color: white;
+        }
+
+        .left {
+            position: absolute;
+            top: 15px;
+            left: 25px;
+            transition: width 2s, height 2s;
+        }
+
+        .left:hover {
+            width: 11px;
+            height: 8px;
+        }
+
+        .right {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            transition: width 2s, height 2s;
+        }
+
+        .right:hover {
+            width: 11px;
+            height: 8px;
+        }
+
+        .photo {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 0;
+            left: 50%;
+            margin-left: -100px;
+        }
+
+        .shoot {
+            transition: transform 2s;
+        }
+
+        .shoot:hover {
+            transform: scale(0.8);
+        }
+
+        .explore {
+            position: absolute;
+            top: 600px;
+            left: 21.8%;
+            width: 260px;
+            height: 72px;
+            background-color: #2a3f17;
+            transition: height 2s;
+        }
+
+        .explore:hover {
+            height: 144px;
+        }
+
+        .explore p {
+            font-size: 30px;
+            line-height: 72px;
+            text-align: center;
+            color: white;
+        }
+
+        .birdshow {
+            position: absolute;
+            top: 800px;
+            left: 50%;
+            margin-left: -600px;
+            width: 1200px;
+            height: 500px;
+
+        }
+
+        .fly {
+            width: 333px;
+            height: 500px;
+            /* background-color: palegreen; */
+            float: left;
+            transition: transform 2s;
+        }
+
+        .fly:hover {
+            transform: translateY(-50%);
+        }
+
+        .love {
+            width: 333px;
+            height: 500px;
+            margin-left: 100.5px;
+            /* background-color: palegreen; */
+            float: left;
+            transition: transform 2s;
+        }
+
+        .love:hover {
+            transform: translateY(-50%);
+        }
+
+
+        .stand {
+            width: 333px;
+            height: 500px;
+            /* background-color: palegreen; */
+            float: right;
+            transition: transform 2s;
+        }
+
+        .stand:hover {
+            transform: translateY(-50%);
+        }
+
+
+        .bird {
+            width: 100%;
+            height: 600px;
+            background-color: #f8f8f8;
+        }
+
+        .middlewords {
+            position: absolute;
+            left: 50%;
+            margin-left: -474px;
+            top: 1450px;
+            width: 948px;
+            height: 543px;
+            background-color: #e0dfdf;
+            transition: transform 2s;
+        }
+
+        .middlewords:hover {
+            transform: translateY(-25%);
+        }
+
+        .sign_up {
+            position: relative;
+            top: -150px;
+            width: 200px;
+            left: 50%;
+            margin-left: -100px;
+            height: 68px;
+            background-color: #2a3f17;
+            transition: transform 2s;
+        }
+
+        .sign_up p {
+            color: white;
+            font-size: 30px;
+            line-height: 68px;
+            text-align: center;
+
+        }
+
+        .sign_up:hover {
+            transform: scale(0.8);
+        }
+
+        .deer {
+            width: 100%;
+            height: 760px;
+            background-color: lightcoral;
+        }
+
+        .Deer {
+            width: 100%;
+            height: 760px;
+        }
+
+        .body {
+            display: flex;
+            width: 100%;
+            height: 1930px;
+            background-color: #f8f8f8;
+            border-bottom: 3px solid black;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @keyframes border-appear {
+            0% {
+                border-top: none;
+                border-right: none;
+                border-bottom: none;
+                border-left: none;
+            }
+
+            25% {
+                border-top: 2px solid #000;
+                border-right: none;
+                border-bottom: none;
+                border-left: none;
+            }
+
+            50% {
+                border-top: 2px solid #000;
+                border-right: 2px solid #000;
+                border-bottom: none;
+                border-left: none;
+            }
+
+            75% {
+                border-top: 2px solid #000;
+                border-right: 2px solid #000;
+                border-bottom: 2px solid #000;
+                border-left: none;
+            }
+
+            100% {
+                border-top: 2px solid #000;
+                border-right: 2px solid #000;
+                border-bottom: 2px solid #000;
+                border-left: 2px solid #000;
+            }
+        }
+
+        .Difference {
+            width: 280px;
+            height: 60px;
+            margin-top: 60px;
+            border: none;
+        }
+
+        .Difference:hover {
+            animation: border-appear 1s ease-in-out;
+        }
+
+        .Difference p {
+            font-size: 48px;
+            text-align: center;
+            line-height: 60px;
+            color: #2a3f17;
+        }
+
+        .four_photos {
+            width: 1134px;
+            height: 413px;
+            margin-top: 30px;
+            background-color: white;
+        }
+
+        .four_photos p {
+            margin-top: 15px;
+            font-size: 30px;
+            color: #2a3f17;
+            text-align: center;
+        }
+
+        .four_photos .line {
+            font-size: 22px;
+            text-decoration-line: underline;
+            text-decoration-thickness: 2px;
+            text-decoration-skip-ink: none;
+        }
+
+        .horse {
+            width: 264px;
+            height: 413px;
+            background-color: #e0dfdf;
+            float: left;
+            transition: transform 2s;
+        }
+
+        .horse:hover {
+            transform: translateY(-25%);
+        }
+
+        .kangaroo {
+            width: 262px;
+            height: 413px;
+            margin-left: 30px;
+            background-color: #e0dfdf;
+            float: left;
+            transition: transform 2s;
+        }
+
+        .kangaroo:hover {
+            transform: translateY(-25%);
+        }
+
+        .hummingbird {
+            width: 262px;
+            height: 413px;
+            background-color: #e0dfdf;
+            float: right;
+            transition: transform 2s;
+        }
+
+        .hummingbird:hover {
+            transform: translateY(-25%);
+        }
+
+        .lion {
+            font-size: 22px;
+            width: 262px;
+            height: 413px;
+            margin-right: 30px;
+            background-color: #e0dfdf;
+            float: right;
+            transition: transform 2s;
+        }
+
+        .lion:hover {
+            transform: translateY(-25%);
+        }
+
+        .Know {
+            width: 360px;
+            height: 70px;
+            margin-top: 120px;
+            background-color: white;
+            border: #2a3f17 solid 2px;
+            transition: background-color 1s;
+        }
+
+        .Know:hover {
+            background-color: #2a3f17;
+        }
+
+        .Know p {
+            color: #2a3f17;
+            font-size: 30px;
+            text-align: center;
+            line-height: 70px;
+            transition: color 1s;
+        }
+
+        .Know:hover p {
+            color: white;
+        }
+
+        .animal_two {
+            width: 1360px;
+            height: 1020px;
+            margin-top: 87px;
+            background-color: #f8f8f8;
+        }
+
+        .songshu {
+            width: 702px;
+            height: 1020px;
+            float: left;
+        }
+
+        .songshuwords {
+            width: 500px;
+            height: 1020px;
+            float: right;
+        }
+
+        .the_photo {
+            margin-left: 8px;
+            font-size: 36px;
+            color: #2a3f17;
+            transition: transform 2s;
+        }
+
+        .the_photo:hover {
+            transform: translateY(-50%);
+        }
+
+        .thephoto {
+            margin-top: 40px;
+            transition: transform 2s;
+        }
+
+        .thephoto:hover {
+            transform: translateX(25%);
+        }
+
+        .one {
+            margin-top: 65px;
+            transition: transform 2s;
+        }
+
+        .one:hover {
+            transform: translateX(25%);
+        }
+
+        .two {
+            margin-top: 65px;
+            transition: transform 2s;
+        }
+
+        .two:hover {
+            transform: translateX(25%);
+        }
+
+        .three {
+            margin-top: 65px;
+            transition: transform 2s;
+        }
+
+        .three:hover {
+            transform: translateX(25%);
+        }
+
+        .four {
+            margin-top: 65px;
+            transition: transform 2s;
+        }
+
+        .four:hover {
+            transform: translateX(25%);
+        }
+
+        .bottom {
+            position: relative;
+            width: 1005px;
+            height: 460px;
+            background-color: white;
+        }
+
+        .words_oe {
+            position: relative;
+            top: 150px;
+            left: 650px;
+        }
+
+        .wordsbottom_03 {
+            position: relative;
+            top: 170px;
+            left: 150px;
+        }
+
+        .last {
+            position: absolute;
+            top: 250px;
+            left: 1000px;
+            width: 360px;
+            height: 73px;
+            background-color: #949f8b;
+            overflow: hidden;
+            transition: transform 1s, background-color 1s;
+        }
+
+        .last p {
+            line-height: 73px;
+            font-size: 36px;
+            text-align: center;
+            color: white;
+            transition: color 1s;
+        }
+
+        .last:hover {
+            transform: translateY(-100%);
+            background-color: white;
+        }
+
+        .last:hover p {
+            color: #949f86;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <img src=https://damn-meili.oss-cn-beijing.aliyuncs.com/乌龟.png class="animal_one">
+        <div class="header">
+            <a href="#"><img src=https://damn-meili.oss-cn-beijing.aliyuncs.com/three.png class="left"></a>
+            <a href="#"><img src=https://damn-meili.oss-cn-beijing.aliyuncs.com/search.png class="right"></a>
+        </div>
+        <div class="photo">
+            <a href="#"><img src=https://damn-meili.oss-cn-beijing.aliyuncs.com/shoot.png class="shoot"></a>
+        </div>
+    </div>
+    <a href="#">
+        <div class="explore">
+            <p>EXPLORE</p>
+        </div>
+    </a>
+    <div class="birdshow">
+        <div class="fly">
+            <img src=https://damn-meili.oss-cn-beijing.aliyuncs.com/Fly.png>
+        </div>
+        <div class="love">
+            <img src=https://damn-meili.oss-cn-beijing.aliyuncs.com/Love.png>
+        </div>
+        <div class="stand">
+            <img src=https://damn-meili.oss-cn-beijing.aliyuncs.com/Stand.png>
+        </div>
+    </div>
+    <div class="bird"></div>
+    <div class="middlewords">
+        <img src=https://damn-meili.oss-cn-beijing.aliyuncs.com/mwords.png>
+        <div class="sign_up">
+            <p>SIGN UP</p>
+        </div>
+    </div>
+    <div class="deer">
+        <img src=https://damn-meili.oss-cn-beijing.aliyuncs.com/鹿.png class="Deer">
+    </div>
+    <div class="body">
+        <div class="Difference">
+            <p>Difference</p>
+        </div>
+        <div class="four_photos">
+            <div class="horse">
+                <img src=https://damn-meili.oss-cn-beijing.aliyuncs.com/horse.png>
+                <p>Horse</p>
+                <p class="line">A difference story</p>
+            </div>
+            <div class="kangaroo">
+                <img src=https://damn-meili.oss-cn-beijing.aliyuncs.com/袋鼠.png>
+                <p>Kangaroo</p>
+                <p class="line">A difference story</p>
+            </div>
+            <div class="hummingbird">
+                <img src=https://damn-meili.oss-cn-beijing.aliyuncs.com/bird.png>
+                <p>Hummingbird</p>
+                <p class="line">A difference story</p>
+            </div>
+            <div class="lion">
+                <img src=https://damn-meili.oss-cn-beijing.aliyuncs.com/lion.png>
+                <p>Lion</p>
+                <p class="line">A difference story</p>
+            </div>
+        </div>
+        <div class="Know">
+            <p>Know &nbsp;&nbsp;&nbsp;more</p>
+        </div>
+        <div class="animal_two">
+            <div class="songshu">
+                <img src=https://damn-meili.oss-cn-beijing.aliyuncs.com/松鼠.png>
+            </div>
+            <div class="songshuwords">
+                <p class="the_photo">The Photo</p>
+                <img src=https://damn-meili.oss-cn-beijing.aliyuncs.com/thephoto_07.png class="thephoto">
+                <img src=https://damn-meili.oss-cn-beijing.aliyuncs.com/1'_10.png  class="one">
+                <img src=https://damn-meili.oss-cn-beijing.aliyuncs.com/2_12.png class="two">
+                <img src=https://damn-meili.oss-cn-beijing.aliyuncs.com/3_14.png class="three">
+                <img src=https://damn-meili.oss-cn-beijing.aliyuncs.com/4_16.png class="four">
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <img src=https://damn-meili.oss-cn-beijing.aliyuncs.com/words_oe.png class="words_oe">
+        <img src=https://damn-meili.oss-cn-beijing.aliyuncs.com/wordsbottom_03.png class="wordsbottom_03">
+        <div class="last">
+            <p>Big World</p>
+        </div>
+    </div>
+</body>
+
+</html>

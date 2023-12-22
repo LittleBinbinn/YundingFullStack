@@ -1,0 +1,342 @@
+body {
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.first {
+    width: 1920px;
+    height: 45px;
+    background-color: white;
+}
+
+.first-1 {
+    width: 200px;
+    height: 200px;
+    transition: all 0.8s linear;
+}
+
+.first-2 {
+    width: 1920px;
+    height: 925px;
+    background-image: url(https://2833046094.oss-cn-beijing.aliyuncs.com/%E4%B9%8C%E9%BE%9F.png);
+}
+
+.first-3 {
+    width: 260px;
+    height: 70px;
+    background-color: #2a3f17;
+    position: relative;
+    top: 400px;
+    right: 440px;
+    text-align: center;
+    line-height: 80px;
+    transition: all 1s linear;
+}
+
+.first-4 {
+    float: left;
+    line-height: 45px;
+    padding-left: 30px;
+    transition: all 0.3s linear;
+}
+
+.first-5 {
+    float: right;
+    line-height: 45px;
+    padding-right: 30px;
+    transition: all 0.3s linear;
+}
+
+.first-6 {
+    text-align: center;
+    position: relative;
+    bottom: -250px;
+}
+
+.first-7 {
+    text-align: center;
+    position: relative;
+    bottom: -280px;
+}
+
+.second {
+    width: 1250px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    bottom: 140px;
+}
+
+.second-1 {
+    width: 330px;
+    height: 500px;
+    background-image: url(https://2833046094.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F1.png);
+    transition: all 0.6s linear;
+}
+
+.second-2 {
+    width: 330px;
+    height: 500px;
+    background-image: url(https://2833046094.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F2.png);
+    transition: all 0.6s linear;
+}
+
+.second-3 {
+    width: 330px;
+    height: 500px;
+    background-image: url(https://2833046094.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F3.png);
+    transition: all 0.6s linear;
+}
+
+.second-4 {
+    position: relative;
+    top: 350px;
+    left: 200px;
+}
+
+.second-5 {
+    position: relative;
+    top: 350px;
+    left: 180px;
+}
+
+.second-6 {
+    position: relative;
+    top: 350px;
+    left: 150px;
+}
+
+.third {
+    height: 760px;
+    width: 1920px;
+    background-image: url(https://2833046094.oss-cn-beijing.aliyuncs.com/%E9%B9%BF.png);
+    margin-top: 100px;
+}
+
+.third-1 {
+    width: 945px;
+    height: 540px;
+    background-color: #e0dfdf;
+    position: relative;
+    bottom: 90px;
+    text-align: center;
+    line-height: 610px;
+    transition: all 0.7s linear;
+}
+
+.third-2 {
+    width: 197px;
+    height: 70px;
+    background-color: #2a3f17;
+    position: relative;
+    bottom: 200px;
+    text-align: center;
+    line-height: 80px;
+    transition: all 0.8s linear;
+}
+
+.forth {
+    width: 260px;
+    height: 60px;
+    margin-top: 80px;
+    text-align: center;
+    line-height: 80px;
+}
+
+.forth-1 {
+    width: 1250px;
+    height: 410px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.forth-2 {
+    width: 265px;
+    height: 410px;
+    background-color: #e0dfdf;
+    transition: all 0.6s linear;
+}
+
+.fifth {
+    width: 360px;
+    height: 70px;
+    margin-top: 120px;
+    margin-bottom: 80px;
+    color: #2a3f17;
+    text-align: center;
+    line-height: 70px;
+    font-size: 30px;
+    border: #2a3f17;
+    border-width: 3px;
+    border-style: solid;
+    transition: all 0.6s linear;
+}
+
+.sixth {
+    text-align: center;
+    font-size: 0;
+}
+
+.sixth-1 {
+    width: 700px;
+    height: 1020px;
+    display: inline-block
+}
+
+.sixth-2 {
+    width: 750px;
+    display: inline-block
+}
+
+.sixth-3 {
+    position: relative;
+    top: -500px;
+    right: 150px;
+    transition: all 0.5s linear;
+}
+
+.sixth-4 {
+    position: relative;
+    top: -460px;
+    right: -20px;
+    transition: all 0.6s linear;
+}
+
+.sixth-5 {
+    position: relative;
+    top: -370px;
+    left: -120px;
+    transition: all 0.8s linear;
+}
+
+.sixth-6 {
+    position: relative;
+    top: -300px;
+    left: -98px;
+    transition: all 0.8s linear;
+}
+
+.sixth-7 {
+    position: relative;
+    top: -220px;
+    left: -145px;
+    transition: all 0.8s linear;
+}
+
+.sixth-8 {
+    position: relative;
+    top: -140px;
+    left: -73px;
+    transition: all 0.8s linear;
+}
+
+.seventh {
+    width: 1920px;
+    height: 2px;
+    background-color: black;
+    margin-top: 60px;
+}
+
+.seventh-1 {
+    width: 600px;
+    height: 250px;
+    margin-top: 150px;
+    position: relative;
+    left: -250px;
+}
+
+.seventh-2 {
+    height: 75px;
+    width: 360px;
+    background-color: #949f8b;
+    color: aliceblue;
+    font-size: 40px;
+    text-align: center;
+    line-height: 75px;
+    position: relative;
+    left: 680px;
+    top: -100px;
+    transition: all 1s linear;
+}
+
+.first-1:hover {
+    transform: scale(0.9);
+}
+
+.first-3:hover {
+    transform: scale(0.9);
+}
+
+.first-4:hover {
+    transform: scale(0.9);
+}
+
+.first-5:hover {
+    transform: scale(0.9);
+}
+
+.second-1:hover {
+    transform: translateY(-50px);
+}
+
+.second-2:hover {
+    transform: translateY(-50px);
+}
+
+.second-3:hover {
+    transform: translateY(-50px);
+}
+
+.third-1:hover {
+    transform: translateY(-30px);
+}
+
+.third-2:hover {
+    transform: scale(0.9);
+}
+
+.forth-2:hover {
+    transform: translateY(-50px);
+}
+
+.fifth:hover {
+    color: white;
+    background-color: #2a3f17;
+}
+
+.sixth-3:hover {
+    transform: translateY(-50px);
+}
+
+.sixth-4:hover {
+    transform: translateX(70px) scale(1.2);
+}
+
+.sixth-5:hover {
+    transform: translateX(70px);
+}
+
+.sixth-6:hover {
+    transform: translateX(70px);
+}
+
+.sixth-7:hover {
+    transform: translateX(70px);
+}
+
+.sixth-8:hover {
+    transform: translateX(70px);
+}
+
+.seventh-2:hover {
+    background-color: white;
+    color: #949f8b;
+    transform: translateY(-30px);
+}

@@ -1,0 +1,673 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style-type: none ;
+}
+a {
+    text-decoration: none;
+}
+.header{
+    position: relative;
+    width: 1650px;
+    height: 930px;
+    margin: 0 auto;
+}
+.header .top{
+    position: relative;
+    width: 1650px;
+    height: 50px;
+}
+.list{
+    position: relative;
+    float: left;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    color: black;
+    transition: width 2s,heoght 2s;
+}
+.iconfont return :hover{
+    width: 25px;
+    height: 25px;
+}
+.search{
+    position: relative;
+    float: right;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    color: black;
+}
+.search :hover{
+    width: 25px;
+    height: 25px;
+    transition: width 2s, heoght 2s;
+}
+.turtle{
+    position: relative;
+    width: 1650px;
+    height: 880px;
+    background: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E4%B9%8C%E9%BE%9F.png);
+    background-size: 100% 880px;
+}
+.photo{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    top: -50px;
+    background-size: 100%;
+}
+.photoexame{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E7%9B%B8%E6%9C%BA.png);
+    margin: 0 auto;
+    background-size: 100%;
+    transition: width 2s, height 2s;
+}
+.photoexame:hover{
+    width: 100px;
+    height: 100px;
+}
+.turtle .text{
+    position: relative;
+    width: 1000px;
+    height: 250px;
+    margin: 50px auto;
+
+}
+.turtle .text .title{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    color: #2a3f17;
+    text-align: center;
+    line-height: 100%;
+    font: normal bold 72px 'Cambria';
+}
+.turtle .text .word {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    color: #2a3f17;
+    padding: -10px 20px ;
+    top: -30px;
+    text-align: center;
+    line-height: 100%;
+    font: normal normal 30px 'Cambria';
+}
+.expiore{
+    position: relative;
+    width: 200px;
+    height: 80px;
+    margin: 0 auto;
+    top: 50px;
+    left:  -400px;
+    background-color: #2a3f17;
+    color: white;
+    font: normal normal 30px '微软雅黑';
+    line-height: 80px;
+    text-align: center;
+}
+.bird{
+    height: 600px;
+    position: relative;
+}
+.birdbox{
+    position: relative;
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+    top: -150px;
+}
+.fly{
+    position: relative;
+    float: left;
+    margin-right: 50px;
+    width: 300px;
+    height: 500px;
+    background: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F1.png);
+    background-size: 100% 500px;
+}
+.fly:hover{
+    animation-name: fly;
+    animation-duration: 4s;
+}
+@keyframes fly {
+    0% {
+        top: 0px;
+    }
+    50% {
+        top: -50px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+@keyframes fly3 {
+    0% {
+        top: -50px;
+    }
+
+    50% {
+        top: -100px;
+    }
+
+    100% {
+        top: -50px;
+    }
+}
+.love{
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 500px;
+    background: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F2.png);
+    background-size: 100% 500px;
+}
+.love:hover {
+    animation-name: fly;
+    animation-duration: 4s;
+}
+.stand{
+    position: relative;
+    float: left;
+    margin-left: 50px;
+    width: 300px;
+    height: 500px;
+    background: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F3.png);
+    background-size: 100% 500px;
+}
+.stand:hover {
+    animation-name: fly;
+    animation-duration: 4s;
+}
+.deerbox{   
+    position: relative;
+    width: 1650px;
+    height: 760px;
+    background: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E9%B9%BF.png);
+    background-size: 100% 760px;
+    margin: 0 auto;
+}
+.deerbox .textbox{
+    top: -50px;
+    position: relative;
+    width: 950px;
+    height: 540px;
+    Overflow:hidden;
+    margin: 0 auto;
+    color: #2a3f17;
+    background-color: #e0dfdf;
+    font: normal normal 20px '微软雅黑';
+}
+.deerbox .textbox:hover{
+    animation-name: fly3;
+    animation-duration: 4s;
+}
+.deerbox .textbox .text{
+    position: relative;
+    width: 800px;
+    height: 250px;
+    margin: 70px auto;
+}
+.deerbox .textbox .bottom{
+    position: relative;
+    width: 200px;
+    height: 70px;
+    margin: 0  auto;
+}
+.deerbox .textbox .bottomexame{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+        background-color: #2a3f17;
+        color: white;
+        font: normal normal 30px '微软雅黑';
+        text-align: center;
+        line-height: 70px;
+        transition: width 2s, height 2s;
+}
+.deerbox .textbox .bottomexame:hover{
+    width: 170px;
+    height: 60px;
+}
+.difference{
+    margin-top: 20px;
+    position: relative;
+    height: 840px;
+}
+.difference .title{
+    position: relative;
+    width: 320px;
+    height: 125px;
+    margin: 0 auto;
+}
+.difference .titleexame{
+    position: relative;
+    width: 300px;
+    height: 120px;
+    margin: 0 auto;
+    font: normal normal 48px "微软雅黑";
+    text-align: center;
+    line-height: 125px;
+}
+.difference .titleexame:hover{
+    animation-name: border;
+    animation-duration: 4s;
+}
+@keyframes border {
+    25% {
+        border-top: 4px solid #2a3f17;
+    }
+    50%{
+        border-top: 4px solid #2a3f17;
+        border-right:4px solid #2a3f17;
+    }
+    75% {
+        border-top: 4px solid #2a3f17;
+        border-right: 4px solid #2a3f17;
+        border-bottom: 4px solid #2a3f17;
+    }
+
+    100% {
+        border-top: 4px solid #2a3f17;
+        border-right: 4px solid #2a3f17;
+        border-bottom: 4px solid #2a3f17;
+        border-left: 4px solid #2a3f17;
+    }
+}
+.difference .picture{
+    position: relative;
+    width: 1150px;
+    height: 400px;
+    margin: 0 auto;
+}
+.horse {
+    position: relative;
+    width: 265px;
+    height: 400px;
+    float: left;
+    margin-right: 30px;
+    background-color: #e0dfdf;
+}
+.horse:hover{
+    animation-name: fly;
+    animation-duration: 2s;
+}
+.horse .picture{
+    position: relative;
+    width: 265px;
+    height: 250px;
+    background:url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E9%A9%AC.png);
+    background-size: 100% 250px;
+}
+.horse .title{
+    position: relative;
+    width: 265px;
+    height: 80px;
+    font: normal bold 30px "微软雅黑";
+    line-height: 80px;
+    text-align: center;
+}
+.horse .text{
+    position: relative;
+    width: 265px;
+    height: 70px;
+    font: normal bold 21px "微软雅黑";
+    line-height: 70px;
+    text-align: center;
+    text-decoration: underline;
+}
+.kangaroo{
+    position: relative;
+    width: 265px;
+    height: 400px;
+    float: left;
+    margin-right: 30px;
+    background-color: #e0dfdf;
+}
+.kangaroo:hover{
+    animation-name: fly;
+    animation-duration: 2s;
+}
+.kangaroo .picture {
+    position: relative;
+    width: 265px;
+    height: 250px;
+    background: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E8%A2%8B%E9%BC%A0.png);
+    background-size: 100% 250px;
+}
+.kangaroo .title {
+    position: relative;
+    width: 265px;
+    height: 80px;
+    font: normal bold 30px "微软雅黑";
+        line-height: 80px;
+        text-align: center;
+}
+.kangaroo .text {
+    position: relative;
+    width: 265px;
+    height: 70px;
+    font: normal bold 21px "微软雅黑";
+        line-height: 70px;
+        text-align: center;
+        text-decoration: underline;
+}
+.lion{
+    position: relative;
+    width: 265px;
+    height: 400px;
+    float: left;
+    margin-right: 30px;
+    background-color: #e0dfdf;
+}
+.lion:hover{
+    animation-name: fly;
+    animation-duration: 2s;
+}
+.lion .picture {
+    position: relative;
+    width: 265px;
+    height: 250px;
+    background: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E7%8B%AE%E5%AD%90.png);
+    background-size: 100% 250px;
+}
+.lion .title {
+    position: relative;
+    width: 265px;
+    height: 80px;
+    font: normal bold 30px "微软雅黑";
+        line-height: 80px;
+        text-align: center;
+}
+.lion .text {
+    position: relative;
+    width: 265px;
+    height: 70px;
+    font: normal bold 21px "微软雅黑";
+        line-height: 70px;
+        text-align: center;
+        text-decoration: underline;
+}
+.hummingbird{
+    position: relative;
+    width: 265px;
+    height: 400px;
+    float: left;
+    background-color: #e0dfdf;
+}
+.hummingbird:hover{
+    animation-name: fly;
+    animation-duration: 2s;
+}
+.hummingbird .picture {
+    position: relative;
+    width: 265px;
+    height: 250px;
+    background: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E5%B0%8F%E9%B8%9F.png);
+    background-size: 100% 250px;
+}
+.hummingbird .title {
+    position: relative;
+    width: 265px;
+    height: 80px;
+    font: normal bold 30px "微软雅黑";
+    line-height: 80px;
+    text-align: center;
+}
+.hummingbird .text {
+    position: relative;
+    width: 265px;
+    height: 70px;
+    font: normal bold 21px "微软雅黑";
+        line-height: 70px;
+        text-align: center;
+        text-decoration: underline;
+}
+.difference .bottom{
+    position: relative;
+    width: 360px;
+    height: 70px;
+    margin: auto;
+    margin-top: 120px;
+    border: 2px solid #2a3f17;
+    color: #2a3f17;
+    background-color: white;
+    font: normal bold 30px "微软雅黑";
+    line-height: 70px;
+    text-align: center;
+}
+.difference .bottom:hover{
+    animation-name: change;
+    animation-duration: 2s;
+}
+@keyframes change{
+    0%{
+        color: #2a3f17;
+            background-color: white;
+    }
+    50%{
+        background-color: #2a3f17;
+            color: white;
+    }
+    100%{
+        color: #2a3f17;
+            background-color: white;
+    }
+}
+.songshubox{
+    position: relative;
+    height: 1090px;
+    width: 1650px;
+    background-color: #f8f8f8;
+    margin: 0 auto;
+    border-bottom: 1px solid #2a3f17;
+}
+.songshubox .box{
+    position: relative;
+    width: 1350px;
+    height: 1030px;
+    margin: 0 auto;
+}
+.songshubox .picture{
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 100%;
+    background: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E6%9D%BE%E9%BC%A0.png);
+    background-size: 100% 1030px;
+}
+.songshubox .text{
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+.songshubox .text .title{
+    position: relative;
+    width: 500px;
+    height: 160px;
+    margin: 0 auto;
+    font: normal bold 36px "微软雅黑";
+    line-height: 230px;
+}
+.songshubox .text .title:hover{
+    animation-name: fly1;
+    animation-duration: 2s;
+}
+@keyframes fly1{
+    0%{
+        top: 0px;
+    }
+    50%{
+        top: -20px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+.songshubox .text .family{
+    position: relative;
+    width: 500px;
+    height: 130px;
+    margin:  0 auto;
+    font: normal normal 22px "微软雅黑";
+    transition: width 1s, height 1s;
+}
+.songshubox .text .family:hover{
+    width: 600px;
+    height: 150px;
+    font-size: 24px;
+}
+.songshubox .text ul{
+    position: relative;
+    width: 500px;
+    height: 740px;
+    margin: 0  auto;
+}
+li{
+    position: relative;
+    width: 500px;
+    height: 70px;
+    margin-top: 92px;
+}
+.songshubox .text li:hover{
+    animation-name: float2;
+    animation-duration: 2s;
+}
+@keyframes float2{
+    0%{
+        left: 0px;
+    }
+    50%{
+        left: 50px;
+    }
+    100%{
+        left:0px
+    }
+}
+li .number{
+    float: left;
+    width: 70px;
+    height: 70px;
+    display: table-cell;
+    border-radius: 42px;
+    background-color: white;
+    text-align: center;
+    vertical-align: middle;
+    color: #2a3f17;
+    font-size: 38px;
+    border: 2px solid #2a3f17;
+    line-height: 70px;
+}
+li .wenben{
+    float: left;
+    width: 400px;
+    height: 69px;
+    padding-left: 20px;
+    font: normal normal 24px "微软雅黑";
+    line-height: 90px;
+    color: #77806f;
+}
+.last{
+    position: relative;
+    height: 460px;
+    background-color: white;
+    Overflow: hidden;
+}
+.last .box{
+    position: relative;
+    width: 1140px;
+    height: 170px;
+    margin: 160px auto;
+}
+.last .box .text{
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 50%;
+}
+.last .box .text .left{
+    float: left;
+    width: 50%;
+    height: 100%;
+    color: #57644d;
+}
+.left .top{
+    width: 100%;
+    height: 50%;
+    font: normal normal 40px "微软雅黑";
+    line-height: 70px;
+}
+.left .bottom{
+    width: 100%;
+    height: 50%;
+    font: normal normal 40px "微软雅黑";
+    line-height: 100px;
+}
+.last .box .text .right {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+.right .top{
+    width: 100%;
+    height: 33%;
+    font: normal normal 30px "微软雅黑";
+    line-height: 60px;
+    color: #899184;
+}
+.right .bottom{
+    width: 100%;
+    height: 66%;
+    font: normal normal 24px "微软雅黑";
+    color: #697461;
+    padding-top: 30px;
+    line-height: 40px;
+}
+.last .box .buttombox{
+    position: relative;
+    float: right;
+    height: 100%;
+    width: 50%;
+}
+.buttombox .buttom{
+    position: relative;
+    margin-top: 47.5px;
+    float: right;
+    width: 360px;
+    height: 75px;
+    background-color: #949f8b;
+    color: white;
+    font:  36px "微软雅黑";
+    line-height: 75px;
+    text-align: center;
+}
+.buttombox .buttom:hover{
+    animation-name: change2;
+    animation-duration: 2s;
+}
+@keyframes change2{
+    0%{
+        top: 0px;
+        background-color: #949f8b;
+        color: white;
+    }
+    50%{
+        top: -20px;
+        background-color: white;
+        color: #949f8b;
+    }
+    100%{
+        top: 0px;
+        background-color: #949f8b;
+        color: white;
+    }
+}

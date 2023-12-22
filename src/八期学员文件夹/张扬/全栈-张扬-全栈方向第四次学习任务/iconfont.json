@@ -1,0 +1,23 @@
+{
+  "id": "4355046",
+  "name": "picture",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5802479",
+      "name": "放大镜",
+      "font_class": "Magnifier",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "7339838",
+      "name": "选项",
+      "font_class": "xuanxiang",
+      "unicode": "e6a9",
+      "unicode_decimal": 59049
+    }
+  ]
+}

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .up-camera{
+            width: 13%;
+            height: 200px;
+            left: 46.5%;
+            top: -50px;
+            background-image: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E7%9B%B8%E6%9C%BA.png);
+            background-repeat: no-repeat;
+            position: relative;
+            flex-direction: row;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+
+            
+  animation-name: example;
+  animation-iteration-count: infinite;
+            transition: width 2s, height 2s;
+            
+  animation-duration: 4s;
+        }
+.up-camera:hover {
+  width: 300px;
+  
+  height: 300px;
+}
+@keyframes example {
+  0%   {background-image: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E7%9B%B8%E6%9C%BA.png); width: 13%;  height: 200px;  left: 46.5%; top: -50px;}
+  50%  {background-image: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E7%9B%B8%E6%9C%BA.png); width: 20%;  height: 300px;  left: 40%; top: -50px;}
+  100% {background-image: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E7%9B%B8%E6%9C%BA.png); width: 13%;  height: 200px;  left: 46.5%; top: -50px;}
+}
+        .back-gui{
+            width: 100%;
+            height: 1000px;
+            background-image: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E4%B9%8C%E9%BE%9F.png);
+            margin: 0;
+            padding: 0;
+            background-repeat: no-repeat;
+            position: absolute;
+            flex-direction: row;
+            top: 50px;
+            background-size: cover;
+            /* 铺满整个div */
+        }
+        .text-top{
+            position: absolute;
+            top: 300px; 
+            left: 60%; 
+            transform: translate(-50%, -50%); /* 水平、垂直居中 */
+            font-size: 24px; /* 调整文本大小 */
+            color: white; /* 调整文本颜色 */
+            color: blue;
+        }
+        .explore{
+            background-color: green;
+            width: 150px;
+            height: 50px;
+            display: flex;
+            position: relative;
+            top: 65%;
+            left: 30%;
+            font-size: 30px;
+            
+            justify-content: center; /* 文字水平居中 */
+            align-items: center; /* 垂直居中 */
+            cursor: pointer;
+            font-style: oblique;
+            color: brown;
+        }
+        .photo-top1{
+            width: 20%;
+            height: 400px;
+            position: absolute;
+            left: 15%;
+            top: 900px;
+            background-image: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F1.png);
+            background-repeat: no-repeat;
+            flex-direction: row;
+            margin: 0;
+            padding: 0;
+            
+  animation-name: photo-top1;
+  animation-duration: 4s;
+        }
+        
+        .photo-top1:hover {
+            left: 15%;
+            top: 800px;
+            
+            transition-duration: 2s;
+        }
+/*         
+@keyframes photo-top1 {
+  0%   {background-image: url(火烈鸟1.png);  left: 15%; top: 800px;}
+  100% {background-image: url(火烈鸟1.png);  left: 15%; top: 900px;}
+} */
+        .photo-top2{
+            width: 20%;
+            height: 400px;
+            position: absolute;
+            left: 40%;
+            top: 900px;
+            background-image: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F2.png);
+            background-repeat: no-repeat;
+            flex-direction: row;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .photo-top2:hover {
+            left: 40%;
+            top: 800px;
+            
+            transition-duration: 2s;
+        }
+        .photo-top3{
+            width: 20%;
+            height: 400px;
+            position: absolute;
+            left: 65%;
+            top: 900px;
+            background-image: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F3.png);
+            background-repeat: no-repeat;
+            flex-direction: row;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .photo-top3:hover {
+            left: 65%;
+            top: 800px;
+            
+            transition-duration: 2s;
+        }
+        .deer{
+            width: 100%;
+            height: 600px;
+            background-image: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E9%B9%BF.png);
+            margin: 0;
+            padding: 0;
+            
+            top: 1500px;
+            
+            margin: 0;
+            padding: 0;
+            position: absolute;
+        }
+        .explain{
+            top: 1000px;
+            width: 60%;
+            height: 400px;
+            top: 1400px;
+            left: 20%;
+            background-color: wheat;
+            color: blueviolet;
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: large;            
+            position: absolute;
+            float: left;
+            display: flex;
+        }
+        .explain:hover {
+            left: 20%;
+
+            top: 1300px;
+             
+            transition-duration: 2s;
+        }
+        .sign{
+            background-color: green;
+            width: 180px;
+            height: 50px;
+            display: flex;
+            position: relative;
+            top: 75%;
+            left: -50%;
+            font-size: 30px;
+            
+            justify-content: center; /* 文字水平居中 */
+            align-items: center; /* 垂直居中 */
+            cursor: pointer;
+            font-style: oblique;
+            color: brown;
+        }
+        .text{
+            top: 2100px;
+            width: 10%;
+            height: 100px;
+            position: absolute;
+            display: flex; 
+            left: 45%;
+            font-size: 32px;
+            font-family: 'Courier New', Courier, monospace;
+            color: burlywood;
+            flex-direction: row; 
+            justify-content: center; 
+        }
+        .photo-middle1{
+            width: 15%;
+            height: 300px;
+            position: absolute;
+            left: 12.5%;
+            top: 2300px;
+            background-image: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E9%A9%AC.png);
+            
+            flex-direction: row;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .photo-middle1:hover {
+            top: 2100px;
+            
+            transition-duration: 2s;
+        }
+        .photo-middle2{
+            width: 15%;
+            height: 300px;
+            position: absolute;
+            left: 32.5%;
+            top: 2300px;
+            background-image: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E7%8B%AE%E5%AD%90.png);
+            
+            flex-direction: row;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .photo-middle2:hover {
+            top: 2100px;
+            
+            transition-duration: 2s;
+        }
+        .photo-middle3{
+            width: 15%;
+            height: 300px;
+            position: absolute;
+            left: 52.5%;
+            top: 2300px;
+            background-image: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E8%A2%8B%E9%BC%A0.png);
+            
+            flex-direction: row;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .photo-middle3:hover {
+            top: 2100px;
+            
+            transition-duration: 2s;
+        }
+        .photo-middle4{
+            width: 15%;
+            height: 300px;
+            position: absolute;
+            left: 72.5%;
+            top: 2300px;
+            background-image: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E5%B0%8F%E9%B8%9F.png);
+            
+            flex-direction: row;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .photo-middle4:hover {
+            top: 2100px;
+            
+            transition-duration: 2s;
+        }
+        .button {
+            top: 2500px;
+            height: 50px;
+            width: 20%;
+            left: 40%;
+            display: flex;
+            background-color: #4CAF50; /* 绿色 */
+            color: white;
+            padding: 15px 32px;
+            font-size: 10px;
+            margin: 4px 2px;
+            cursor: pointer;
+            
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+        }
+        .button-knowmore{
+  
+            background-color: white; 
+            color: black; 
+            border: 2px solid #4CAF50;
+            display: flex;
+            position: relative;
+            top: 2500px;
+            height: 50px;
+            width: 10%;
+            left: 45%;
+            display: flex;
+            justify-content: center; /* 文字水平居中 */
+            align-items: center; /* 垂直居中 */
+            
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+  cursor: pointer;
+        }
+
+        .button-knowmore:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+        .mouse{
+            background-image: url(https://ziyuantypora.oss-cn-beijing.aliyuncs.com/%E6%9D%BE%E9%BC%A0.png);
+            width: 40%;
+            top: 2800px;
+            background-repeat: no-repeat;
+            display: flex;
+            position: relative;
+            left: 10%;
+            height: 600px;
+        }
+        .under-txt{
+
+            
+            
+            margin: 0;
+            padding: 0;
+            position: relative;
+            display: flex;
+
+            transition-property: width;
+            transition-timing-function: linear;
+            top: 2200px;
+            left: 60%;
+            height: 300px;
+            width: 200px;
+            color: gold;
+            
+            animation: text-animation 3s ;
+        
+            cursor: pointer;
+}
+.under-txt:hover {
+transform: scale(2);
+  /*为了使变大时的效果更加平滑，可以添加过度效果*/
+  transition: all 0.3s linear;
+}
+.u-txt1{
+    
+            
+    margin: 0;
+            padding: 0;
+            position: relative;
+            display: flex;
+
+            transition-property: width;
+            transition-timing-function: linear;
+            top: 2100px;
+            left: 60%;
+            height: 50px;
+            width: 400px;
+            color: gold;
+            font-size: 40px;
+            animation: text-animation 3s ;
+        
+            cursor: pointer;
+}
+.u-txt1:hover {
+transform: scale(2);
+  /*为了使变大时的效果更加平滑，可以添加过度效果*/
+  transition: all 0.3s linear;
+} 
+.u-txt2{
+    
+            
+    margin: 0;
+            padding: 0;
+            position: relative;
+            display: flex;
+
+            transition-property: width;
+            transition-timing-function: linear;
+            top: 2150px;
+            left: 60%;
+            height: 50px;
+            width: 400px;
+            color: gold;
+            font-size: 40px;
+            animation: text-animation 3s ;
+        
+            cursor: pointer;
+}
+.u-txt2:hover {
+transform: scale(2);
+  /*为了使变大时的效果更加平滑，可以添加过度效果*/
+  transition: all 0.3s linear;
+} 
+.u-txt3{
+    
+            
+    margin: 0;
+            padding: 0;
+            position: relative;
+            display: flex;
+
+            transition-property: width;
+            transition-timing-function: linear;
+            top: 2200px;
+            left: 60%;
+            height: 50px;
+            width: 400px;
+            color: gold;
+            font-size: 40px;
+            animation: text-animation 3s ;
+        
+            cursor: pointer;
+}
+.u-txt3:hover {
+transform: scale(2);
+  /*为了使变大时的效果更加平滑，可以添加过度效果*/
+  transition: all 0.3s linear;
+} 
+.u-txt4{
+    
+            
+    margin: 0;
+            padding: 0;
+            position: relative;
+            display: flex;
+
+            transition-property: width;
+            transition-timing-function: linear;
+            top: 2250px;
+            left: 60%;
+            height: 50px;
+            width: 600px;
+            color: gold;
+            font-size: 40px;
+            animation: text-animation 3s ;
+        
+            cursor: pointer;
+}
+.u-txt4:hover {
+transform: scale(2);
+  /*为了使变大时的效果更加平滑，可以添加过度效果*/
+  transition: all 0.3s linear;
+} 
+    </style>
+</head>
+
+<body>
+    <div class="back-gui">
+        <!-- 一开始那个乌龟背景 -->
+        <div class="explore">
+           
+            <a href="https://www.php.cn/"> Explore</a>
+           
+        </div> 
+    
+        <div class="text-top">
+                <h1>AnimalPhotography</h1> 
+                <br>
+               <p>
+                A silhouette of them, a simple little acttion, here are the photographer’s eyes the best of them, their laughter, their love, their every vivid, are recored by us.
+               </p>
+        </div>
+    </div>
+
+    <div class="up-camera">
+<!-- 上面那个绿色小相机图标 -->
+    </div>
+    <div class="photo-top1">
+        <!-- 三图中的第一个 -->
+    </div>
+    <div class="photo-top2">
+    </div>
+    <div class="photo-top3">
+    </div>
+
+
+    <div class="deer">
+
+    </div>
+    <div class="explain">
+            <p>
+                "Family Farms is the best placewhere l can buy fruit,vegetable,meat,honey, milk,eggs and so on for my retaurant directly from supplier. Super convinient.Thank you"
+           
+                "Family Farms is the best place，where I can buy fruit,vegetable,meat,honey, milk, eggs and so on for my retaurant directly fromupplier. Super convinient.Thank you" xdccnfc cfvfesc cfnccnjdcn cfjdcdsr dcwwzwqg ejs dddc ddf fnfjv eij fvnv jnxzexh cn cdcmdsc ddnc, cddmdcds dncdn cdcn wqeoeas, dcndassasas,cdcndcnc cciqoskxm cbdcpqslwq nfnere nfncsfjjc dndcww frhfjnc qpdjweiw cnncqe, cqjsdc ccn dcjndc , ncf cdncjd dcdjcndq csjncq dcdncf dcdjdnc cdjsq, qkodkqe wqcnpsdc cdnqq qcw, cqnonxj dcdcnd dcnjsdvb wcnwq cowwncjq jjcnjncqnw wcq c wd cwch, cnjncnc ece cdcnncdwnc nenwc dcnnc cjcj ， c cjrnc wecwc .
+            </p>
+            <div class="sign">
+                    
+            <a href="https://www.php.cn/"> SignUP</a>
+           
+            </div>
+    </div>
+    
+    <div class="text">
+            <h1>Differance</h1>
+    </div>
+
+    <!-- 下面 的四图 -->
+    <div class="photo-middle1">
+    </div>
+    
+    <div class="photo-middle2">
+
+    </div>
+    
+    <div class="photo-middle3">
+
+    </div>
+    
+    <div class="photo-middle4">
+
+    </div>
+    
+    <button class="button-knowmore">know more</button>
+    <!-- know more按钮 -->
+    <div class="mouse">
+        <!-- 松鼠图片 -->
+
+    </div>
+    <div class="under-txt">
+        <p>
+            <h1>The Photo</h1>
+            <br>
+“Family Farms is the best placewhere lcan buy fruit,vegetable,meat,honey,milk,eggs and so on for my retaurant directly fromsupplier. Super convinient.Thank you"
+        </p>
+
+    </div>
+    <div class="u-txt1">
+        <p>
+            ①Looking for it
+        </p>
+    </div>
+    <div class="u-txt2">
+        <p>
+            ②Cultivate feelings
+        </p>
+    </div>
+    <div class="u-txt3">
+        <p>
+            ③Shooting
+        </p>
+    </div>
+    <div class="u-txt4">
+        <p>
+            ④Harvest achievement
+        </p>
+    </div>
+</body>
+</html>
