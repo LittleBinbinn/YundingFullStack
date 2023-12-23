@@ -1,0 +1,412 @@
+.body{
+    margin: 0 ;
+    padding: 0;
+}
+.Box {
+    width: 100%;
+    height: 3500px;
+    margin: 0;  
+    background-color: #f8f8f8;
+}
+.Box .header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+}
+.header div {
+    width: 30px;
+    height: 100%;
+}
+.header div:hover{
+    transform: scale(0.8);
+}
+
+.part-one {
+    position: relative;
+    width: 100%;
+    height: 710px;
+    background: no-repeat;  
+}
+ .photography {
+     position: absolute;
+     left: 42%;
+     top: -60px;
+     width: 200px;
+     height: 200px;
+     background:url(images/图标.png);
+     margin: auto;
+     transition: all .8s ease;
+ }
+ .photography:hover{
+    transform: scale(0.7);
+ }
+.part-one .AP {
+    position: absolute;
+    width: 500px;
+    height: 70px;
+    left: 32%;
+    top: 28%;
+    font-size: 54px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #2a3f17;
+}
+.part-one .a {
+    position: absolute;
+    width: 839px;
+    height: 50px;
+    left: 22%;
+    top: 40%;
+    font-size: 23px;
+    color: #2a3f17;
+}
+.part-one .explore{
+    position: absolute;
+    width:185px ;
+    height: 50px;
+    background-color: #2a3f17;
+    color: #fff;
+    font-size: 23px;
+    left: 22%;
+    top: 64%;
+    text-align: center;
+    line-height:50px ;   
+    transition: all .6s ease;
+} 
+.explore:hover{
+    transform: scale(0.9);
+}
+.part-one .birds  {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width:840px ;
+    height: 340px;
+    left: 22%;
+    top:80% ;
+    
+}
+
+.birds .fly{
+    position: relative;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    transition: 1s ease;
+}
+.birds .fly:hover {
+    transform: translateY(-40px);
+}
+.fly .one{
+    position: absolute;
+    width: 54px;
+    height: 40px;
+    top: 70%;
+    left: 48%;
+    font-size: 26px; 
+}
+.birds .love{
+    position: relative;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    transition: 1s ease;
+}
+.birds .love:hover {
+    transform: translateY(-40px);
+}
+.love .two{
+    position: absolute;
+    width: 54px;
+    height: 40px;
+    top: 70%;
+    left: 48%;
+    font-size: 26px;
+}
+.birds .stand {
+    position: relative;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    transition: 1s ease;
+}
+.birds .stand:hover {
+    transform: translateY(-40px);
+}
+.stand .three {
+    position: absolute;
+    width: 54px;
+    height: 40px;
+    top: 70%;
+    left: 48%;
+    font-size: 26px;
+}
+
+.background{
+    width: 100%;
+    height: 380px;
+    background-color:#f8f8f8;
+}
+
+.part-two{
+    position: relative;
+    width: 100%;
+    height: 630px;
+}
+.part-two .sign{
+    text-align: center;
+    position: absolute;
+    width: 620px;
+    height: 400px;
+    background: #e0dfdf;
+    top: -8%;
+    left: 28%;
+    font-size: 14px; 
+    transition: 1s ease;
+}
+
+.part-two .sign:hover{
+    transform: translateY(-20px);
+}
+.sign .paragraphy{
+    display: inline-block;
+    width: 520px;
+    height: 260px;
+    margin-top: 45px; 
+    color: #2a3f17;    
+}
+.sign .Button{
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    background: #2a3f17;
+    color: #fff;
+    font-size: 20px;
+    line-height: 50px; 
+    transition: 1s ease;
+}
+.sign .Button:hover{
+    transform: scale(0.8);
+}
+.part-three {
+    width: 100%;
+    height: 480px; 
+    text-align: center;
+}
+.part-three .difference{
+    display: inline-block;
+    width: 150px;
+    height: 55px;
+    margin: 0 auto;
+    font-size: 27px;
+    color:#2a3f17;
+    line-height: 55px;
+    animation: myfirst 4s ease;
+}
+.difference:hover {
+    border: 3px solid #2a3f17
+}
+
+.animals{
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    height: 400px;
+    margin: 10px auto;
+}   
+.animals div{
+    width: 220px;
+    height:340px;
+    background-color: #e0dfdf;
+    transition: .6s ease;
+}   
+.animals div:hover {
+    transform: translateY(-18px);
+}    
+.animals span{
+    display: inline-block;
+    font-size: 19px;
+    color:#4f5d44;
+    width:150px ;
+    height: 50px;
+    line-height: 50px;  
+}
+.animals .story{
+    width:140px ;
+    height:30px ;
+    color: #2a3f17;
+    margin: 10px auto;
+    line-height: 40px;
+    border-bottom: 2px solid #2a3f17;
+}
+
+.part-four{
+    position: relative;
+    width: 100%;
+    height: 960px;
+    border-bottom:3px solid #000; 
+}
+.part-four .know {
+    width: 220px;
+    height: 45px;
+    margin:0 auto;
+    border: 3px solid #2a3f17;
+    color: #2a3f17;
+    font-size: 25px;
+    text-align: center;
+    line-height: 45px;
+    transition: all .9s ease;
+}
+.part-four .know:hover {
+    background-color: #2a3f17;
+    color: white;
+    border: 3px solid #000;
+}
+.part-four .photo{
+    
+    margin-top: 70px;
+    margin-left: 174px;
+}
+.part-four .right{
+    position: absolute;
+    width: 380px;
+    height: 620px;
+    left: 55%;
+    top: 20%;
+    color: #2a3f17;
+}
+.right .the{
+    font-size: 24px;
+    transition: .6s ease;
+}
+.right .the:hover{
+    transform: translateY(-30px);
+}
+.right .ff{
+    font-size: 16px;
+    margin-top: 12px;
+    color: #2a3f17;
+    transition: .5s ease;
+}
+.right .ff:hover {
+    transform:translateX(30px);
+    font-size: 18px;
+}
+.four-texts div{
+    position: relative;
+    height: 70px;
+    width: 300px;
+    margin-top: 40px;
+}
+.first .fir{
+    position: absolute;
+    font-size: 30px;
+    left: 18px;
+    top: 8px;
+}
+.first .look{
+    position: absolute;
+    font-size:18px;
+    top: 20px;
+    left:60px;
+}
+.second .sec {
+    position: absolute;
+    font-size: 30px;
+    left: 18px;
+    top: 8px;
+}
+.second .feel {
+    position: absolute;
+    font-size: 18px;
+    top: 20px;
+    left: 60px;
+}
+.third .tir {
+    position: absolute;
+    font-size: 30px;
+    left: 18px;
+    top: 8px;
+}
+.third .shoot {
+    position: absolute;
+    font-size: 18px;
+    top: 20px;
+    left: 60px;
+}
+.forth .for {
+    position: absolute;
+    font-size: 30px;
+    left: 18px;
+    top: 8px;
+}
+.forth .harvest {
+    position: absolute;
+    font-size: 18px;
+    top: 20px;
+    left: 60px;
+}
+.four-texts div{
+    transition: 1s ease;
+}
+.four-texts div:hover{
+    transform: translateX(50px);
+}
+
+.foot{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: #fff;
+}
+.foot .in{
+    position: absolute;
+    width: 200px;
+    height: 120px;
+    left: 22%;
+    top: 30%;
+    font-size: 25px;
+    color:#2a3f17;
+}
+.in .sea{
+    margin-top: 30px;
+}
+.foot .mw{
+    position: absolute;
+    width: 180px;
+    height: 120px;
+    top: 30%;
+    left: 35%;
+}
+.mw .moer{
+    margin-top:5px;
+    font-size:20px;
+    color:#4d5b41;
+}
+.mw .art{
+    margin-top:8px;
+    color: #697461;
+    font-size:17px ;
+}
+.mw .life {
+    margin-top:8px;
+    color: #697461;
+    font-size: 17px;
+}
+.foot .big{
+    position: absolute;
+    top: 38%;
+    left: 65%;
+    width: 260px;
+    height: 60px;
+    background-color: #949f8b;
+    margin: auto;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    transition: all .8s ease;
+}
+ .big:hover {
+    transform: translateY(-30px);
+    background-color: transparent;
+    color:#949f8b ;
+ }

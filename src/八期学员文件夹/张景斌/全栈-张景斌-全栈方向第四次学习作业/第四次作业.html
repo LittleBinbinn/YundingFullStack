@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Animal</title>
+    <style>
+        @keyframes float{
+            0%{top: 0px;}
+            100%{top: -20px;}
+        }
+
+        @keyframes right {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(30px);
+    }
+}
+
+li:nth-child(n):hover{
+    animation-name: right;
+    animation-duration: 2s;
+}
+        img{
+            width: 100%;
+            height: 100%;
+        }
+.TITLE{
+    color: green;
+}
+.photo{
+    position: absolute;
+    top: 0%;
+    width: 10%;
+    left: 45%;
+    height: 22%;
+    transition-property: all;
+    transition-duration: 0.8s;
+    transition-timing-function: cubic-bezier(0.49, 1.59,);
+}
+.photo:hover{
+    width: 140px;
+    height: 120px;
+}
+.top{
+    position:relative;
+    width: 100%;
+    height: 4%;
+    background-color: aquamarine;
+}
+.animal_photo{
+    position: relative;
+    width: 100%;
+    height: 1400px;
+}
+
+.top_background{
+    position: relative;
+    width: 100%;
+    height:700px ;
+    background-image: url(https://typora-crazy050115.oss-cn-beijing.aliyuncs.com/%E4%B9%8C%E9%BE%9F.png);
+}
+.top_text{
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    height: 60%;
+    text-align: center;
+}
+.top_expiore{
+    position: absolute;
+    left: 20%;
+    bottom: 10%;
+    width: 20%;
+    height: 10%;
+    background-color: #2c4517;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    line-height: 2;
+}
+.top_3pic{
+    position: relative;
+    width: 60%;
+    height: 400px;
+    left: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.top_pic{
+    position: relative;
+    width: 30%;
+    height: 100%;
+    transition: 2s;
+}
+.top_pic:hover{
+    animation-name: float;
+    animation-duration: 2s;
+}
+.SIGN_UP{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    /* background-color: greenyellow; */
+    background-image: url(https://typora-crazy050115.oss-cn-beijing.aliyuncs.com/%E9%B9%BF.png);
+}
+.SU_TEXT{
+    position: relative;
+    width: 50%;
+    height: 70%;
+    left: 25%;
+    background-color: #e0dfdf;
+    transition: 2s;
+}
+.SU_text{
+    position: relative;
+    width: 100%;
+    height: 70%;
+    background-color: #e0dfdf;
+}
+.SU_TEXT:hover{
+    animation-name: float;
+    animation-duration: 2s;
+}
+.SU_signup{
+    position: absolute;
+    width: 30%;
+    left: 35%;
+    top: 70%; 
+    height: 15%;
+    background-color: darkolivegreen;
+    transition: 2s;
+}
+.SU_signup:hover{
+    transform: scale(0.5);
+        animation-name: nm;
+        animation-duration: 2s;
+}
+.Difference{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    /* PIC */
+}
+.differencex{
+    position: relative;
+    width: 30%;
+    left: 35%;
+    height: 10%;
+    text-align: center;
+    font-size: 50px;
+    line-height: 1.2;
+    
+}
+    .differencex:before {
+      bottom: 0;
+      right: 0;
+      transition: border-color 0s ease-in 0.4s, width 0.2s ease-in 0.2s, height 0.2s ease-in;
+      transition: border-color 0s ease-in 0.4s, width 0.2s ease-in 0.2s, height 0.2s ease-in;
+    }
+
+    .differencex:after {
+      top: 0;
+      left: 0;
+      transition: border-color 0s ease-in 0.8s, width 0.2s ease-in 0.6s, height 0.2s ease-in 0.4s;
+      transition: border-color 0s ease-in 0.8s, width 0.2s ease-in 0.6s, height 0.2s ease-in 0.4s;
+    }
+
+    .differencex:before,
+    .differencex:after {
+      content: '';
+      display: block;
+      position: absolute;
+      box-sizing: border-box;
+      border: 3px solid transparent;
+      width: 0;
+      height: 0;
+    }
+    .differencex:hover:before {
+      border-bottom-color: black;
+      border-left-color: black;
+      transition: border-color 0s ease-out 0.4s, width 0.2s ease-out 0.4s, height 0.2s ease-out 0.6s;
+      transition: border-color 0s ease-out 0.4s, width 0.2s ease-out 0.4s, height 0.2s ease-out 0.6s;
+    }
+
+    .differencex:hover:after {
+      border-top-color: black;
+      border-right-color: black;
+      transition: width 0.2s ease-out, height 0.2s ease-out 0.2s;
+      transition: width 0.2s ease-out, height 0.2s ease-out 0.2s;
+    }
+
+    .differencex:hover:before,
+    .differencex:hover:after {
+      border-width: 3px;
+      width: 100%;
+      height: 100%;
+    }
+.MID_4PIC{
+    position: relative;
+    width: 60%;
+    left: 20%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+}
+.MID_pic:hover {
+    animation-name: float;
+    animation-duration: 2s;
+}
+.MID_pic{
+    position: relative;
+    width: 22%;
+    height: 100%;
+    background-color: hotpink;
+    transition: 2s;
+}
+.MID_4TEXT{
+    position: relative;
+    width: 60%;
+    left: 20%;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.MID_text{
+    position: relative;
+    width: 22%;
+    height: 100%;
+    background-color: #e0dfdf;
+    transition: 2s;
+}
+.MID_text:hover{
+    animation-name: float;
+    animation-duration: .5s;
+}
+@keyframes nm{
+    0%{}
+    100%{ 
+        background: #fff;
+    color: #6f855a;}
+}
+.Know_more{
+    position: absolute;
+    left: 40%;
+    bottom: 10%;
+    width: 20%;
+    height: 10%;
+    background-color: white;
+    text-align: center;
+    transition: 0.5s;
+    border: 3px solid;
+    border-color: green;
+}
+.Know_more:hover {
+    transform: scale(0.5);
+        animation-name: nm;
+        animation-duration: 2s;
+}
+.THE_photo{
+    position: relative;
+    height: 1090px;
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid #2a3f17;
+}
+
+.TP_pic{
+position: relative;
+    float: left;
+    width: 40%;
+    left: 5%;
+    height: 80%;
+    top: 10%;
+    background: url(https://typora-crazy050115.oss-cn-beijing.aliyuncs.com/%E6%9D%BE%E9%BC%A0.png); 
+    background-size: 100% 1030px;
+}
+.TP_TEXT{
+    position: relative;
+    float: left;
+    width: 40%;
+    left: 10%;
+    height: 100%;
+}
+.title{
+    position: relative;
+    width: 90%;
+    left: 10%;
+    height: 50px;
+    margin: 0 auto;
+    font: normal bold 36px "微软雅黑";
+  
+}
+.family{
+    position: relative;
+    width: 80%;
+    left: 10%;
+    height: 130px;
+    margin:  0 auto;
+    font: normal normal 20px "微软雅黑";
+}
+li{
+    position: relative;
+    width: 100%;
+    height: 70px;
+    margin-top: 92px;
+}
+li .number{
+    display: table-cell;
+    float: left;
+    width: 10%;
+    height: 50px;
+    border-radius: 42px;
+    background-color: white;
+    text-align: center;
+    vertical-align: middle;
+    color: #132701;
+    font-size: 38px;
+    border: 2px solid #2d510d;
+    text-align: center;
+    line-height: 50px;
+}
+li .text{
+    float: left;
+    width: 400px;
+    height: 70px;
+    padding-left: 20px;
+    text-align: center;
+    font: normal normal 24px "微软雅黑";
+    line-height: 40px;
+    color: #000000;
+}
+.TP_TEXT ul{
+    position: relative;
+    width: 500px;
+    height: 740px;
+    margin: 0  auto;
+}
+.
+.TP_text:hover{
+    animation-name: right;
+    animation-duration: 2s;
+}
+.BIG_world {
+    width: 100%;
+    height: 300px;
+
+    position: relative;
+    border-top: solid #2a3f17 2px;
+}
+.B_T1 {
+    width: 20%;
+    height: 150px;
+    position: absolute;
+    bottom: 80px;
+    left: 15%;
+    font: normal 400 30px "微软雅黑";
+    text-align: center;
+    line-height: 75px;
+    color: #2a3f17;
+}
+.B_T2 {
+    width: 20%;
+    height: 150px;
+    position: absolute;
+    bottom: 100px;
+    left: 35%;
+    text-align: center;
+    font: normal 400 20px "微软雅黑";
+    line-height: 35px;
+    color: #6f855a;
+}
+.button {
+    width: 300px;
+    height: 70px;
+    background: #a2b096;
+    position: absolute;
+    bottom: 130px;
+    left: 60%;
+    color: #fff;
+    font: normal 400 30px "微软雅黑";
+    text-align: center;
+    line-height: 70px;
+}
+@keyframes up {
+    0% {}
+    100% {
+        transform: translate(0,-25px);
+        background: #fff;
+        color: #788a69;
+    }
+}
+.button:hover {
+    animation: up 0.5s linear 0s alternate forwards;
+}
+
+</style>
+</head>
+<body>
+    <div class="top"></div>
+    <div class="animal_photo">
+        <div class="top_background">
+            <div class="top_text">
+                <div class="photo">
+                    <img src="https://typora-crazy050115.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E6%A0%87.png">
+                </div>
+             
+                <br><br><br><br><br><br><p style=font-size:50px class="TITLE">AnimalPhotography</p>
+               <p class="TITLE" style="font-size: 30px;">A silhouette of them, a simple little acttion, here are the photographer's eyes the best of them ,their laughter,their love,their every vivid,are reoored by us.</p>
+            </div>
+            <div class="top_expiore">
+                EXPIORE
+            </div>
+        </div>
+        <div class="top_3pic">
+            <div class="top_pic">
+                 <img src="https://typora-crazy050115.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F1.png">
+            </div> 
+            <div class="top_pic">
+                <img src="https://typora-crazy050115.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F2.png">
+            </div>
+            <div class="top_pic">
+                 <img src="https://typora-crazy050115.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F3.png">
+            </div>
+        </div>
+    </div>
+    <div class="SIGN_UP">
+        <div class="SU_background"></div>
+        <div class="SU_TEXT"><p style="font-size: 20px; margin: 30px; color: green;">Family Farms is the best place，where I can buy fruit,vegetable,meat,honey,milk,
+eggs and so on for my retaurant directly fromupplier. Super convinient.Thank you”
+xdccnfc cfvfesc cfnccnjdcn cfjdcdsr dcwwzwqg ejs dddc ddf fnfjv eij fvnv jnxzexh cn
+cdcmdsc ddnc, cddmdcds dncdn cdcn wqeoeas, dcndassasas,cdcndcnc cciqoskxm 
+cbdcpqslwq nfnere nfncsfjjc dndcww frhfjnc qpdjweiw cnncqe, cqjsdc ccn dcjndc ,
+ncf cdncjd dcdjcndq csjncq dcdncf dcdjdnc cdjsq, qkodkqe wqcnpsdc cdnqq qcw,
+cqnonxj dcdcnd dcnjsdvb wcnwq cowwncjq jjcnjncqnw wcq c wd cwch, cnjncnc ece
+cdcnncdwnc	nenwc dcnnc cjcj , c cjrnc wecwc .	</p>
+            <div class="SU_text"></div>
+            <div class="SU_signup"><p style="font-size: 30px;color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign Up</p></div>
+        </div>
+    </div>
+    <div class="Difference">
+        <div class="differencex">
+            DIFFERENCE
+        </div>
+        <div class="MID_4PIC">
+            <div class="MID_pic">
+                 <img src="https://typora-crazy050115.oss-cn-beijing.aliyuncs.com/%E9%A9%AC.png">
+            </div>
+            <div class="MID_pic">
+                 <img src="https://typora-crazy050115.oss-cn-beijing.aliyuncs.com/%E8%A2%8B%E9%BC%A0.png">
+            </div>
+            <div class="MID_pic">
+                <img src="https://typora-crazy050115.oss-cn-beijing.aliyuncs.com/%E7%8B%AE%E5%AD%90.png">
+            </div>
+            <div class="MID_pic">
+                 <img src="https://typora-crazy050115.oss-cn-beijing.aliyuncs.com/%E5%B0%8F%E9%B8%9F.png">
+            </div>
+        </div>
+        <div class="MID_4TEXT">
+            <div class="MID_text"><p style="font-size: 25px;color: #2a3f17;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Horse</p><p style="font-size: 20px;color: #2a3f17;text-decoration: underline;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A difference story</p></div>
+            <div class="MID_text"><p style="font-size: 25px;color: #2a3f17;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kangaroo</p><p style="font-size: 20px;color: #2a3f17;text-decoration: underline;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A difference story</p></div>
+            <div class="MID_text"><p style="font-size: 25px;color: #2a3f17;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lion</p><p style="font-size: 20px;color: #2a3f17;text-decoration: underline;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A difference story</p></div>
+            <div class="MID_text"><p style="font-size: 25px;color: #2a3f17;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hummingbird</p><p style="font-size: 20px;color: #2a3f17;text-decoration: underline;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A difference story</p></div>
+        </div>
+        <div class="Know_more"><p style="color: green;font-size: 20px;"> Know More</p></div>
+    </div>
+    <div class="THE_photo">
+        <div class="TP_pic"></div>
+        <div class="TP_TEXT">
+            <li class="TP_toptext">
+                <div class="title">The Photo </div><div class="family" > "Family Farms isthe best placewhere I<br>
+                    can buy fruit,vegetable,meat, honey,milk,<br>
+                    eggs and so on for my retaurantdirectly from<br>
+                    supplier. super convinient.Thank you"</div>
+                    <ul>
+            <li class="TP_text">
+                <div class="number">1</div>
+                <div class="text">Looking forit</div>
+            </li>
+            <li class="TP_text">
+                <div class="number">2</div>
+                <div class="text">cultivatefeelings</div>
+            </li>
+            <li class="TP_text">
+                <div class="number">3</div>
+                <div class="text">Shooting</div>
+            </li>
+            <li class="TP_text">
+                <div class="number">4</div>
+                <div class="text">Harvestachievement</div>
+            </li>
+        </ul>
+        </div>
+        </div>
+    </div>
+    <div class="BIG_world">
+        <div class="B_T1">
+              IN THE WILD<br>IN THE SEA
+        </div>
+        <div class="B_T2">
+            <h4>MOER</h4>
+             We create art.<br>We create life.
+        </div>
+        <div class="button">Big World</div>
+    </div>
+</body>
+</html>

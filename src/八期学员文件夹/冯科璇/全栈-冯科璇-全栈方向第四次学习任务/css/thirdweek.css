@@ -1,0 +1,632 @@
+* {
+    margin: 0;
+}
+
+.search {
+    width: 100%;
+    height: 45px;
+    position: relative;
+    background-color: blue;
+    background-image: url("https://baicsc.oss-cn-beijing.aliyuncs.com/typora-image/search.png");
+    background-size: 100% 45px;
+
+}
+
+.turtle {
+    position: relative;
+    height: 1120px;
+    background-color: blue;
+    background-image: url("https://baicsc.oss-cn-beijing.aliyuncs.com/typora-image/%E4%B9%8C%E9%BE%9F.png");
+    background-size: 100% 1120px;
+    color: #2a3f17;
+    font-size: 60px;
+    text-align: center;
+}
+
+.camera {
+    position: relative;
+    top: -1170px;
+    width: 196px;
+    height: 196px;
+    left: 45%;
+    background-color: blue;
+    background-image: url("https://baicsc.oss-cn-beijing.aliyuncs.com/typora-image/camera.png");
+    background-size: 100% 196px;
+    transition: width 1s, height 1s;
+}
+
+.camera:hover {
+    width: 186px;
+    height: 186px;
+}
+
+.turtle_eng {
+    position: relative;
+    top: -860px;
+    height: 100px;
+    width: 50%;
+    left: 500px;
+    color: #2a3f17;
+    font-size: 30px;
+    text-align: center;
+}
+
+.buttle1 {
+    position: absolute;
+    top: 700px;
+    height: 70px;
+    width: 14%;
+    left: 500px;
+    background-color: #3e4608;
+    font-size: 35px;
+    line-height: 1.8em;
+    text-align: center;
+    color: rgb(238, 240, 243);
+}
+
+.buttle1:hover {
+    animation-name: change1;
+    animation-duration: 2s;
+}
+
+@keyframes change1 {
+    0% {
+        color: white;
+        background-color: #2a3f17;
+    }
+
+    50% {
+        color: #2a3f17;
+        background-color: white;
+
+        100% {
+            color: white;
+            background-color: #2a3f17;
+        }
+    }
+}
+
+.bird {
+    position: relative;
+    top: -500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 576px;
+    width: 50%;
+    left: 500px;
+}
+
+.bird:hover {
+    animation-name: fly;
+    animation-duration: 4s;
+}
+
+@keyframes fly {
+    0% {
+        top: -500px;
+    }
+
+    50% {
+        top: -550px;
+    }
+
+    100% {
+        top: -500px;
+    }
+
+}
+
+.bird1 {
+    background-color: #2a3f17;
+    height: 576px;
+    width: 30%;
+    background-image: url("https://baicsc.oss-cn-beijing.aliyuncs.com/typora-image/Fly.png");
+    background-size: 100%596px;
+
+}
+
+
+.bird2 {
+    background-color: #2a3f17;
+    height: 576px;
+    width: 30%;
+    background-image: url("https://baicsc.oss-cn-beijing.aliyuncs.com/typora-image/Love.png");
+    background-size: 100% 596px;
+}
+
+.bird3 {
+    background-color: #2a3f17;
+    height: 576px;
+    width: 30%;
+    background-image: url("https://baicsc.oss-cn-beijing.aliyuncs.com/typora-image/Stand.png");
+    background-size: 100% 596px;
+}
+
+.door {
+    position: relative;
+    top: -210px;
+    height: 800px;
+    width: 100%;
+    background-color: blue;
+    background-image: url("https://baicsc.oss-cn-beijing.aliyuncs.com/typora-image/%E9%B9%BF.png");
+    background-size: 100% 800px;
+}
+
+.door_eng {
+    position: relative;
+    top: -1100px;
+    height: 400px;
+    width: 35%;
+    left: 650px;
+    background-color: #d0d2cf;
+    color: #2a3f17;
+    font-size: 20px;
+    padding: 50px;
+}
+
+.door_eng:hover {
+    animation-name: up;
+    animation-duration: 4s;
+}
+
+@keyframes up {
+    0% {
+        top: -1100px;
+    }
+
+    50% {
+        top: -1150px;
+    }
+
+    100% {
+        top: -1100px;
+    }
+
+}
+
+.buttle2 {
+    position: absolute;
+    top: 2100px;
+    height: 70px;
+    width: 14%;
+    left: 950px;
+    background-color: #3e4608;
+    font-size: 35px;
+    line-height: 1.8em;
+    text-align: center;
+    color: rgb(238, 240, 243);
+}
+
+.buttle2:hover {
+    animation-name: small;
+    animation-duration: 4s;
+}
+
+@keyframes small {
+    0% {
+        height: 70px;
+        width: 14%;
+    }
+
+    50% {
+        height: 60px;
+        width: 10%;
+        left: 970px;
+        font-size: 30px;
+    }
+
+    100% {
+        height: 70px;
+        width: 14%;
+    }
+
+}
+
+.difference {
+    position: absolute;
+    top: 2700px;
+    height: 80px;
+    width: 20%;
+    left: 880px;
+
+    font-size: 50px;
+    line-height: 1.8em;
+    text-align: center;
+    color: #2a3f17;
+}
+
+.difference:hover {
+    animation-name: border;
+    animation-duration: 4s;
+}
+
+@keyframes border {
+    25% {
+        border-top: 4px solid #2a3f17;
+    }
+
+    50% {
+        border-top: 4px solid #2a3f17;
+        border-right: 4px solid #2a3f17;
+    }
+
+    75% {
+        border-top: 4px solid #2a3f17;
+        border-right: 4px solid #2a3f17;
+        border-bottom: 4px solid #2a3f17;
+    }
+
+    100% {
+        border-top: 4px solid #2a3f17;
+        border-right: 4px solid #2a3f17;
+        border-bottom: 4px solid #2a3f17;
+        border-left: 4px solid #2a3f17;
+    }
+}
+
+.animal {
+    position: relative;
+    top: -500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 506px;
+    width: 50%;
+    left: 500px;
+}
+
+.animal:hover {
+    animation-name: up1;
+    animation-duration: 4s;
+}
+
+@keyframes up1 {
+    0% {
+        top: -500px;
+    }
+
+    50% {
+        top: -550px;
+    }
+
+    100% {
+        top: -500px;
+    }
+
+}
+
+.animal1 {
+    background-color: #2a3f17;
+    height: 506px;
+    width: 23%;
+    background-image: url("https://baicsc.oss-cn-beijing.aliyuncs.com/typora-image/Horse.png");
+    background-size: 100%506px;
+}
+
+.animal2 {
+    background-color: #2a3f17;
+    height: 506px;
+    width: 23%;
+    background-image: url("https://baicsc.oss-cn-beijing.aliyuncs.com/typora-image/Kangaroo.png");
+    background-size: 100%506px;
+}
+
+.animal3 {
+    background-color: #2a3f17;
+    height: 506px;
+    width: 23%;
+    background-image: url("https://baicsc.oss-cn-beijing.aliyuncs.com/typora-image/Lion.png");
+    background-size: 100%506px;
+}
+
+.animal4 {
+    background-color: #2a3f17;
+    height: 506px;
+    width: 23%;
+    background-image: url("https://baicsc.oss-cn-beijing.aliyuncs.com/typora-image/Hummingbird.png");
+    background-size: 100%506px;
+}
+
+
+.knowmore {
+    position: absolute;
+    top: 3450px;
+    height: 70px;
+    width: 14%;
+    left: 950px;
+    font-size: 35px;
+    line-height: 1.8em;
+    text-align: center;
+    color: #2a3f17;
+    border: 2px solid #2a3f17;
+}
+
+.knowmore:hover {
+    animation-name: change;
+    animation-duration: 2s;
+}
+
+@keyframes change {
+    0% {
+        color: #2a3f17;
+        background-color: white;
+    }
+
+    50% {
+        color: white;
+        background-color: #2a3f17;
+    }
+
+    100% {
+        color: #2a3f17;
+        background-color: white;
+    }
+}
+
+.squirrel {
+    position: relative;
+    top: -230px;
+    height: 1000px;
+    width: 30%;
+    left: 330px;
+    background-color: aqua;
+    background-image: url("https://baicsc.oss-cn-beijing.aliyuncs.com/typora-image/%E6%9D%BE%E9%BC%A0.png");
+    background-size: 100% 1000px;
+}
+
+.photo:hover {
+    animation-name: move1;
+    animation-duration: 2s;
+}
+
+@keyframes move1 {
+    0% {
+        top: 3650px;
+    }
+
+    50% {
+        top: 3620px;
+    }
+
+    100% {
+        top: 3650px;
+    }
+}
+
+.photo {
+    position: absolute;
+    top: 3650px;
+    height: 70px;
+    width: 14%;
+    left: 1080px;
+
+    font-size: 35px;
+    line-height: 1.8em;
+    text-align: center;
+    color: #2a3f17;
+}
+
+.photo_eng {
+    position: absolute;
+    top: 3750px;
+    height: 70px;
+    width: 30%;
+    left: 1150px;
+
+    font-size: 25px;
+    line-height: 1.8em;
+    color: #2a3f17;
+    transition: width 0.01s, height 0.01s;
+}
+
+.photo_eng:hover {
+    width: 35%;
+    height: 90px;
+    font-size: 27px;
+}
+
+.step {
+    position: relative;
+    top: -800px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start;
+    align-items: flex-start; */
+    height: 500px;
+    width: 35%;
+    left: 1250px;
+}
+
+.step:hover {
+    animation-name: move2;
+    animation-duration: 2s;
+}
+
+@keyframes move2 {
+    0% {
+        left: 1250px;
+    }
+
+    50% {
+        left: 1300px;
+    }
+
+    100% {
+        left: 1250px;
+    }
+}
+
+.step1 {
+    height: 125px;
+    width: 80%;
+    /* background-image: url("https://baicsc.oss-cn-beijing.aliyuncs.com/typora-image/1.png");
+    background-size: 100% 120px; */
+    font-size: 25px;
+    line-height: 1.8em;
+    color: #2a3f17;
+}
+
+
+.step2 {
+    left: 50px;
+    height: 125px;
+    width: 80%;
+    /* background-image: url("https://baicsc.oss-cn-beijing.aliyuncs.com/typora-image/2.png");
+    background-size: 100% 100px; */
+    font-size: 25px;
+    line-height: 1.8em;
+    color: #2a3f17;
+}
+
+.step3 {
+
+    height: 125px;
+    width: 80%;
+    /* background-image: url("https://baicsc.oss-cn-beijing.aliyuncs.com/typora-image/3.png");
+    background-size: 100% 100px; */
+    font-size: 25px;
+    line-height: 1.8em;
+    color: #2a3f17;
+}
+
+.step4 {
+
+    height: 125px;
+    width: 80%;
+    /* background-image: url("https://baicsc.oss-cn-beijing.aliyuncs.com/typora-image/4.png");
+    background-size: 100% 100px; */
+    font-size: 25px;
+    line-height: 1.8em;
+    color: #2a3f17;
+}
+
+.s1 {
+    position: absolute;
+    top: 4000px;
+    height: 100px;
+    width: 100px;
+    left: 1150px;
+    background-image: url("https://baicsc.oss-cn-beijing.aliyuncs.com/typora-image/%E6%A4%AD%E5%9C%86%204.png");
+    background-size: 100% 100px;
+}
+
+.s1:hover {
+    animation-name: float1;
+    animation-duration: 2s;
+}
+
+@keyframes float1 {
+    0% {
+        left: 1150px;
+    }
+
+    50% {
+        left: 1170px;
+    }
+
+    100% {
+        left: 1150px;
+    }
+}
+
+
+.s2 {
+    position: absolute;
+    top: 4125px;
+    height: 100px;
+    width: 100px;
+    left: 1150px;
+    background-image: url("https://baicsc.oss-cn-beijing.aliyuncs.com/typora-image/%E6%A4%AD%E5%9C%86%204%20%E6%8B%B7%E8%B4%9D.png");
+    background-size: 100% 100px;
+}
+
+.s2:hover {
+    animation-name: float1;
+    animation-duration: 2s;
+}
+
+.s3 {
+    position: absolute;
+    top: 4250px;
+    height: 100px;
+    width: 100px;
+    left: 1150px;
+    background-image: url("https://baicsc.oss-cn-beijing.aliyuncs.com/typora-image/%E6%A4%AD%E5%9C%86%204%20%E6%8B%B7%E8%B4%9D%202.png");
+    background-size: 100% 100px;
+}
+
+.s3:hover {
+    animation-name: float1;
+    animation-duration: 2s;
+}
+
+.s4 {
+    position: absolute;
+    top: 4375px;
+    height: 100px;
+    width: 100px;
+    left: 1150px;
+    background-image: url("https://baicsc.oss-cn-beijing.aliyuncs.com/typora-image/%E6%A4%AD%E5%9C%86%204%20%E6%8B%B7%E8%B4%9D%203.png");
+    background-size: 100% 100px;
+}
+
+.s4:hover {
+    animation-name: float1;
+    animation-duration: 2s;
+}
+
+.line {
+    position: absolute;
+    top: 4675px;
+    height: 5px;
+    width: 100%;
+    background-color: #3d5626;
+}
+
+.end {
+    position: absolute;
+    top: 4678px;
+    height: 450px;
+    width: 100%;
+    background-color: #3d5626;
+    background-image: url("https://baicsc.oss-cn-beijing.aliyuncs.com/typora-image/end.png");
+    background-size: 100% ;
+}
+
+.buttle3{
+    position: absolute;
+    top: 4900px;
+    height: 70px;
+    width: 14%;
+    left: 1400px;
+    background-color: #3e4608;
+    font-size: 35px;
+    line-height: 1.8em;
+    text-align: center;
+    color: rgb(238, 240, 243);
+}
+
+.buttle3:hover{
+    animation-name: float2;
+    animation-duration: 2s;
+}
+
+@keyframes float2{
+    0% {
+        top: 4900px;
+        color: white;
+        background-color: #2a3f17;
+    }
+
+    50% {
+        top: 4850px;
+        color: #2a3f17;
+        background-color: white;
+
+    100% {
+        top: 4850px;
+        color: #2a3f17;
+        background-color: #2a3f17;
+    }
+}

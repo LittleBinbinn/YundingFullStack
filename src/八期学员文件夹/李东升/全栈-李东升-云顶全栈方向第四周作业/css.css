@@ -1,0 +1,286 @@
+.middle {
+    position: relative;
+    width: 1500px;
+    left: 35%;
+    transform: translate(-50%);
+}
+
+div:nth-child(1) {
+    position: absolute;
+  left: 20%;
+  top: 50%;
+  height: 500px;
+  width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+div:nth-child(2) {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    height: 1000px;
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+div:nth-child(3) {
+    position: absolute;
+    top: 100%;
+    left: 20%;
+    height: 100px;
+    width: 1920px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+div:nth-child(4) {
+    position: absolute;
+    top: 200%;
+    left: 1%;
+    height: 100px;
+    width: 1920px;
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+div:nth-child(5)
+{
+    position: absolute;
+        top: 350%;
+        left: 1%;
+        height: 1000px;
+        width: 1920px;
+     
+}
+div:nth-child(6) {
+position: absolute;
+    top: 450%;
+    left: 1%;
+    height: 1200px;
+    width: 1920px;
+    display: flex;
+
+}
+.box{
+    transition: all 0.4s;
+}
+.box:hover{
+    box-shadow: 0 8px 8px 0 grey;
+    transform: translate(0, -100px);
+}
+.box1{
+    transition: all 0.4s;
+}
+
+.box1:hover {
+    background-color: aqua;
+}
+.box2 {
+    transition: all 0.4s;
+}
+
+.box2:hover {
+  transform: scale(150%,150%);
+}
+.box3 {
+    transition: all 0.4s;
+}
+
+.box3:hover {
+ 
+    transform: translate(100px, 0);
+}
+.box4 {
+    transition: all 0.4s;
+}
+
+.box4:hover {
+    background-color: white;
+    transform: translate(0, -100px);
+}
+div:nth-child(7) {
+    position: absolute;
+    top: 600%;
+    left: 1%;
+    height: 500px;
+    width: 1920px;
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+dis:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+dis:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+tb{
+position: absolute;
+left: 65%;
+
+}
+p1 {
+        font-family: Cambria;
+        font-size: 72px;
+        text-align: center;
+}
+p2{
+font-family: 微软雅黑;
+    font-size: 30px;
+}
+P3{
+    position:absolute;
+    top: 350%;
+    left: 10%;
+font-family: Cambria;
+    font-size: 48px;
+    color: white;
+}
+P4 {position: absolute;
+    top: 350%;
+    left: 45%;
+font-family: Cambria;
+    font-size: 48px;
+    color: white;
+        
+}
+
+P5 {
+position: absolute;
+    top: 350%;
+    left: 75%;
+font-family: Cambria;
+    font-size: 48px;
+    color: white;
+        
+}
+dib:nth-child(1) {
+height: 600px;
+width: 900px;
+background-color: #e0dfdf;
+    justify-content: space-between;
+   
+    margin: 0 auto;
+
+
+}
+dib:nth-child(2) {
+ 
+    justify-content: space-between;
+
+
+}
+p6{
+
+    font-size: 20px;
+}
+p7{position: absolute;
+    left: 45%;
+
+    background-color: #2a3f17;
+ color: white;
+        font-size: 32px;
+}
+p8{
+    position: absolute;
+        left: 45%;
+        font-size: 40px;
+}
+did{
+    
+  height: 500px;
+    width: 1920px;
+    display: flex;
+ justify-content: center;
+}
+did s
+
+{width: 265px;
+    height: 414px;
+    margin: 20px;
+}
+p9 {
+    position: absolute;
+    left: 45%;
+    top: 80%;
+    font-size: 40px;
+    border: 2px solid black;
+    font-size: 30px;
+}
+div a:nth-child(1)
+{
+    margin:100px;
+}
+div a:nth-child(2) {
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+}
+a s
+{height: 120px;
+    margin: 10px;
+    text-decoration: none;
+
+}
+s p1
+{
+    font-size: 50px;
+}
+s p2
+{
+    font-size: 40px;
+}
+div b:nth-child(1)
+{
+height: 500px;
+width: 500px;
+display: flex;
+flex-direction: column;
+
+}
+div b:nth-child(2) {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+div b:nth-child(3) {
+    height: 100px;
+    width: 220px;
+    background-color: yellowgreen;
+   
+    color: white;
+}
+
+b s
+{
+    height: 100px;
+    margin: 10px;
+}
+b p1
+{
+    font-size: 40px;
+}
+b p2
+{
+    font-size: 20px;
+ 
+}
+b p{
+    font-size: 40px;
+
+}

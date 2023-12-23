@@ -1,0 +1,785 @@
+
+.banner{
+    width: 1920px;
+    height: 4674px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%,0);
+    z-index: 1;
+}
+*{
+    transition-duration: 2s ;
+}
+.lv :hover{
+    scale: 80%;
+
+}
+.三杠:hover{
+    scale: 80%;
+}
+.放大镜:hover{
+    scale: 80%;
+}
+
+.矩形{
+    background-color: rgb(129, 192, 75);
+    position: absolute;
+    left: 860px;
+    top: 0px;
+    width: 200px;
+    height: 200px;
+    z-index: 26;
+  }
+  .椭圆 {
+    border-width: 4px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 50%;
+    position: absolute;
+    left: 878px;
+    top: 18px;
+    width: 156px;
+    height: 156px;
+    z-index: 27;
+  }
+  .相机{
+    position: absolute;
+    left: 905px;
+    top: 60px;
+    z-index: 28;
+  }
+  .椭圆1 {
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 1879px;
+    top: 17px;
+    width: 9px;
+    height: 9px;
+    z-index: 23;
+  }
+  .形状2 {
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 1887px;
+    top: 25px;
+    width: 6px;
+    height: 6px;
+    z-index: 22;
+  }
+  .形状_1_拷贝_2 {
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 26px;
+    top: 30px;
+    width: 18px;
+    height: 0;
+    z-index: 19;
+  }
+  .形状_1_拷贝 {
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 26px;
+    top: 24px;
+    width: 18px;
+    height: 0;
+    z-index: 18;
+  }
+  .形状_1 {
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 26px;
+    top: 18px;
+    width: 18px;
+    height: 0;
+    z-index: 17;
+  }
+  .矩形_上 {
+    position: absolute;
+    left: -69px;
+    top: 0px;
+    width: 2045px;
+    height: 49px;
+    z-index: 15;
+  }
+  .乌龟{
+    position: absolute;
+    top: 49px;
+    left: 0px;
+  }
+  .Animal_Photography {
+    font-size: 72px;
+    font-family: "Cambria";
+    color: rgb(42, 63, 23);
+    line-height: 0;
+    position: absolute;
+    left: 595px;
+    top: 317.016px;
+    z-index: 5;
+  }
+  .A_silhouette_of_them__a_simple_little_acttion__ {
+    font-size: 30px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 1;
+    position: absolute;
+    left: 416px;
+    top: 406.277px;
+    z-index: 6;
+  }
+  .矩形_ {
+    background-color: rgb(42, 63, 23);
+    position: absolute;
+    left: 416px;
+    top: 605px;
+    width: 262px;
+    height: 72px;
+    z-index: 7;
+  }
+  .EXPIORE {
+    font-size: 30px;
+    font-family: "Microsoft YaHei";
+    color: rgb(255, 255, 255);
+    line-height: 1;
+    position: absolute;
+    left: 485px;
+    top: 630px;
+    z-index: 8;
+  }
+  .火3:hover{
+    transform: translate(0px,-50px);
+  }
+  .火烈鸟3 {
+    background-image: url("https://mdk1.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F3.png");
+    position: absolute;
+    left: 1182px;
+    top: 783px;
+    width: 333px;
+    height: 498px;
+    z-index: 9;
+  }
+  .火2:hover{
+    transform: translate(0px,-50px);
+  }
+  .火烈鸟2 {
+    background-image: url("https://mdk1.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F2.png");
+    position: absolute;
+    left: 793px;
+    top: 783px;
+    width: 333px;
+    height: 499px;
+    z-index: 10;
+  }
+  .火1:hover{
+    transform: translate(0px,-50px);
+  }
+  .火烈鸟1 {
+    background-image: url("https://mdk1.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F1.png");
+    position: absolute;
+    left: 404px;
+    top: 783px;
+    width: 333px;
+    height: 500px;
+    z-index: 11;
+  }
+  .Fly {
+    font-size: 48px;
+    font-family: "Cambria";
+    color: rgb(255, 255, 255);
+    line-height: 0.625;
+    position: absolute;
+    left: 605.734px;
+    top: 1177.004px;
+    z-index: 12;
+  }
+  .Love {
+    font-size: 48px;
+    font-family: "Cambria";
+    color: rgb(255, 255, 255);
+    line-height: 0.625;
+    position: absolute;
+    left: 963.734px;
+    top: 1182.004px;
+    z-index: 13;
+  }
+  .Stand {
+    font-size: 48px;
+    font-family: "Cambria";
+    color: rgb(255, 255, 255);
+    line-height: 0.625;
+    position: absolute;
+    left: 1331px;
+    top: 1183.004px;
+    z-index: 14;
+  }
+  .鹿 {
+    position: absolute;
+    left: 0px;
+    top: 1527px;
+    width: 1920px;
+    height: 760px;
+    /* z-index: 32; */
+  }
+  .上:hover
+  {
+     transform: translate(0px,-50px);
+  }
+  .s:hover{
+    transform: scale(1.4,1.4);
+  }
+  .矩形_6 {
+    background-color: rgb(224, 223, 223);
+    position: absolute;
+    left: 499px;
+    top: 1444px;
+    width: 946px;
+    height: 541px;
+    z-index: 33;
+  }
+  ._Family_Farms_is_the_best_place，where_I_can_buy {
+    font-size: 20px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 1.5;
+    position: absolute;
+    left: 578px;
+    top: 1546.851px;
+    z-index: 34;
+  }
+  .矩形_11 {
+    position: absolute;
+    left: 873px;
+    top: 1852px;
+    width: 197px;
+    height: 70px;
+    z-index: 36;
+  }
+  .SIGN_UP {
+    font-size: 30px;
+    font-family: "Microsoft YaHei";
+    color: rgb(255, 255, 255);
+    line-height: 1;
+    position: absolute;
+    left: 910px;
+    top: 1873px;
+    z-index: 37;
+  }
+  .Difference {
+    font-size: 48px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 0;
+    position: absolute;
+    left: 848px;
+    top: 2389.854px;
+    z-index: 40;
+  }
+  .矩形_8 {
+    background-color: rgb(224, 223, 223);
+    position: absolute;
+    left: 399px;
+    top: 2446px;
+    width: 264px;
+    height: 413px;
+    z-index: 41;
+  }
+  .马1:hover{
+    transform: translate(0px,-50px);
+  }
+  .袋鼠1:hover{
+    transform: translate(0px,-50px);
+  }
+  .狮子1:hover{
+    transform: translate(0px,-50px);
+  }
+  .小鸟1:hover{
+    transform: translate(0px,-50px);
+  }
+  .马 {
+    background-image: url("https://mdk1.oss-cn-beijing.aliyuncs.com/%E9%A9%AC.png");
+    position: absolute;
+    left: 398px;
+    top: 2445px;
+    width: 264px;
+    height: 261px;
+    z-index: 42;
+  }
+  .A_difference_story_拷贝_5 {
+    font-size: 22px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 0;
+    -moz-transform: matrix( 1,0,0,0.99332029101559,0,0);
+    -webkit-transform: matrix( 1,0,0,0.99332029101559,0,0);
+    -ms-transform: matrix( 1,0,0,0.99332029101559,0,0);
+    position: absolute;
+    left: 438.996px;
+    top: 2803.647px;
+    z-index: 43;
+  }
+  .形状_5_拷贝_5 {
+    border-width: 2px;
+    border-color: rgb(42, 63, 23);
+    border-style: solid;
+    position: absolute;
+    left: 435px;
+    top: 2818px;
+    width: 195px;
+    height: 0;
+    z-index: 44;
+  }
+  .Horse {
+    font-size: 30px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 0;
+    position: absolute;
+    left: 491px;
+    top: 2752.287px;
+    z-index: 45;
+  }
+  .矩形_8_拷贝 {
+    background-color: rgb(224, 223, 223);
+    position: absolute;
+    left: 694px;
+    top: 2446px;
+    width: 264px;
+    height: 413px;
+    z-index: 46;
+  }
+  .袋鼠 {
+    background-image: url("https://mdk1.oss-cn-beijing.aliyuncs.com/%E8%A2%8B%E9%BC%A0.png");
+    position: absolute;
+    left: 695px;
+    top: 2446px;
+    width: 262px;
+    height: 261px;
+    z-index: 47;
+  }
+  .A_difference_story_拷贝_4 {
+    font-size: 22px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 0;
+    -moz-transform: matrix( 1,0,0,0.99332029101559,0,0);
+    -webkit-transform: matrix( 1,0,0,0.99332029101559,0,0);
+    -ms-transform: matrix( 1,0,0,0.99332029101559,0,0);
+    position: absolute;
+    left: 730.996px;
+    top: 2803.647px;
+    z-index: 48;
+  }
+  .形状_5_拷贝_4 {
+    border-width: 2px;
+    border-color: rgb(42, 63, 23);
+    border-style: solid;
+    position: absolute;
+    left: 727px;
+    top: 2818px;
+    width: 195px;
+    height: 0;
+    z-index: 49;
+  }
+  .Kangaroo {
+    font-size: 30px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 0;
+    position: absolute;
+    left: 755px;
+    top: 2749.287px;
+    z-index: 50;
+  }
+  .矩形_8_拷贝_2 {
+    background-color: rgb(224, 223, 223);
+    position: absolute;
+    left: 987px;
+    top: 2446px;
+    width: 264px;
+    height: 413px;
+    z-index: 51;
+  }
+  .狮子 {
+    background-image: url("https://mdk1.oss-cn-beijing.aliyuncs.com/%E7%8B%AE%E5%AD%90.png");
+    position: absolute;
+    left: 988px;
+    top: 2447px;
+    width: 262px;
+    height: 260px;
+    z-index: 52;
+  }
+  .形状_5_拷贝_3 {
+    border-width: 2px;
+    border-color: rgb(42, 63, 23);
+    border-style: solid;
+    position: absolute;
+    left: 1020px;
+    top: 2818px;
+    width: 195px;
+    height: 0;
+    z-index: 53;
+  }
+  .A_difference_story_拷贝_3 {
+    font-size: 22px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 0;
+    -moz-transform: matrix( 1,0,0,0.99332029101559,0,0);
+    -webkit-transform: matrix( 1,0,0,0.99332029101559,0,0);
+    -ms-transform: matrix( 1,0,0,0.99332029101559,0,0);
+    position: absolute;
+    left: 1023.996px;
+    top: 2803.647px;
+    z-index: 54;
+  }
+  .Lion {
+    font-size: 30px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 0;
+    position: absolute;
+    left: 1088px;
+    top: 2753.287px;
+    z-index: 55;
+  }
+  .矩形_8_拷贝_3 {
+    background-color: rgb(224, 223, 223);
+    position: absolute;
+    left: 1281px;
+    top: 2446px;
+    width: 264px;
+    height: 413px;
+    z-index: 56;
+  }
+  .小鸟 {
+    background-image: url("https://mdk1.oss-cn-beijing.aliyuncs.com/%E5%B0%8F%E9%B8%9F.png");
+    position: absolute;
+    left: 1283px;
+    top: 2447px;
+    width: 261px;
+    height: 259px;
+    z-index: 57;
+  }
+  .形状_5_拷贝_2 {
+    border-width: 2px;
+    border-color: rgb(42, 63, 23);
+    border-style: solid;
+    position: absolute;
+    left: 1314px;
+    top: 2818px;
+    width: 195px;
+    height: 0;
+    z-index: 58;
+  }
+  .A_difference_story_拷贝_2 {
+    font-size: 22px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 0;
+    -moz-transform: matrix( 1,0,0,0.99332029101559,0,0);
+    -webkit-transform: matrix( 1,0,0,0.99332029101559,0,0);
+    -ms-transform: matrix( 1,0,0,0.99332029101559,0,0);
+    position: absolute;
+    left: 1317.996px;
+    top: 2803.647px;
+    z-index: 59;
+  }
+  .Hummingbird {
+    font-size: 30px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 0;
+    position: absolute;
+    left: 1312px;
+    top: 2749.287px;
+    z-index: 60;
+  }
+  .松鼠 {
+    background-image: url("https://mdk1.oss-cn-beijing.aliyuncs.com/%E6%9D%BE%E9%BC%A0.png");
+    position: absolute;
+    left: 256px;
+    top: 3133px;
+    width: 702px;
+    height: 1020px;
+    z-index: 79;
+  }
+  .pho:hover{
+    transform: translate(0px,-50px);
+  }
+  .f:hover{
+    transform: translate(0px,-30px);
+  }
+  .The_Photo {
+    font-size: 36px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 0;
+    position: absolute;
+    left: 1086px;
+    top: 3241.143px;
+    z-index: 78;
+  }
+  ._1:hover{
+    transform: translate(50px,0px);
+  }
+  ._2:hover{
+    transform: translate(50px,0px);
+  }
+  ._3:hover{
+    transform: translate(50px,0px);
+  }
+  ._4:hover{
+    transform: translate(50px,0px);
+  }
+  .椭圆_4_拷贝_3 {
+    border-width: 2px;
+    border-color: rgb(42, 63, 23);
+    border-style: solid;
+    border-radius: 50%;
+    position: absolute;
+    left: 1082px;
+    top: 3983px;
+    width: 66px;
+    height: 66px;
+    z-index: 77;
+  }
+  ._4_ {
+    font-size: 48px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 0.625;
+    position: absolute;
+    left: 1103px;
+    top: 4003px;
+    z-index: 76;
+  }
+  .椭圆_4_拷贝_2 {
+    border-width: 2px;
+    border-color: rgb(42, 63, 23);
+    border-style: solid;
+    border-radius: 50%;
+    position: absolute;
+    left: 1082px;
+    top: 3813px;
+    width: 66px;
+    height: 66px;
+    z-index: 75;
+  }
+  ._3_ {
+    font-size: 48px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 0.625;
+    position: absolute;
+    left: 1103px;
+    top: 3833px;
+    z-index: 74;
+  }
+  .椭圆_4_拷贝 {
+    border-width: 2px;
+    border-color: rgb(42, 63, 23);
+    border-style: solid;
+    border-radius: 50%;
+    position: absolute;
+    left: 1082px;
+    top: 3650px;
+    width: 66px;
+    height: 66px;
+    z-index: 73;
+  }
+  ._2_ {
+    font-size: 48px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 0.625;
+    position: absolute;
+    left: 1102px;
+    top: 3670px;
+    z-index: 72;
+  }
+  .椭圆_4 {
+    border-width: 2px;
+    border-color: rgb(42, 63, 23);
+    border-style: solid;
+    border-radius: 50%;
+    position: absolute;
+    left: 1082px;
+    top: 3492px;
+    width: 66px;
+    height: 66px;
+    z-index: 71;
+  }
+  ._1_ {
+    font-size: 48px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 0.625;
+    position: absolute;
+    left: 1103px;
+    top: 3511px;
+    z-index: 70;
+  }
+  .Harvest_achievement_ {
+    font-size: 24px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 1.25;
+    position: absolute;
+    left: 1177px;
+    top: 4010.422px;
+    z-index: 69;
+  }
+  .Shooting {
+    font-size: 24px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 1.25;
+    position: absolute;
+    left: 1176px;
+    top: 3839.422px;
+    z-index: 68;
+  }
+  .Cultivate_feelings {
+    font-size: 24px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 1.25;
+    position: absolute;
+    left: 1178px;
+    top: 3680.422px;
+    z-index: 67;
+  }
+  .Looking_for_it {
+    font-size: 24px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 1.25;
+    position: absolute;
+    left: 1178px;
+    top: 3521.422px;
+    z-index: 66;
+  }
+  ._Family_Farms_is_the_best_placewhere_I__can_buy {
+    font-size: 24px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 1.25;
+    position: absolute;
+    left: 1086px;
+    top: 3319.422px;
+    z-index: 65;
+  }
+  .Know__more {
+    font-size: 30px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 0;
+    position: absolute;
+    left: 883px;
+    top: 3016.287px;
+    z-index: 64;
+  }
+  .框框_拷贝 {
+    border-width: 2px;
+    border-color: rgb(42, 63, 23);
+    border-style: solid;
+    position: absolute;
+    left: 792px;
+    top: 2978px;
+    width: 355px;
+    height: 65px;
+    z-index: 63;
+  }
+  ._13:hover{
+    transform: translate(0px,-30px);
+  }
+  .Big_World {
+    font-size: 36px;
+    font-family: "Microsoft YaHei";
+    color: rgb(255, 255, 255);
+    line-height: 0;
+    position: absolute;
+    left: 1320px;
+    top: 4441.143px;
+    z-index: 88;
+  }
+  
+  .矩形_13 {
+    background-color: rgb(42, 63, 23);
+    opacity: 0.502;
+    position: absolute;
+    left: 1228px;
+    top: 4407px;
+    width: 361px;
+    height: 73px;
+    z-index: 87;
+  }
+  .We_create_art__We_create_life {
+    font-size: 24px;
+    font-family: "Microsoft YaHei";
+    color: rgba(42, 63, 23, 0.8);
+    line-height: 1.667;
+    position: absolute;
+    left: 748px;
+    top: 4476.418px;
+    z-index: 86;
+  }
+  .MOER {
+    font-size: 30px;
+    font-family: "Microsoft YaHei";
+    color: rgba(42, 63, 23, 0.902);
+    line-height: 0;
+    position: absolute;
+    left: 744px;
+    top: 4407.287px;
+    z-index: 85;
+  }
+  .IN_THE_SEA {
+    font-size: 40px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 0;
+    position: absolute;
+    left: 442px;
+    top: 4496.713px;
+    z-index: 84;
+  }
+  .IN_THE_WILD {
+    font-size: 40px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 0;
+    position: absolute;
+    left: 443px;
+    top: 4404.713px;
+    z-index: 83;
+  }
+  .矩形_下 {
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: -8px;
+    top: 4214px;
+    width: 2046px;
+    height: 633px;
+    z-index: 82;
+  }
+  
