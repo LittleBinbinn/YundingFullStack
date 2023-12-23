@@ -1,0 +1,30 @@
+{
+  "id": "4371910",
+  "name": "dong4",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2076190",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e86e",
+      "unicode_decimal": 59502
+    },
+    {
+      "icon_id": "5475530",
+      "name": "菜单",
+      "font_class": "caidan",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "5800632",
+      "name": "照相机",
+      "font_class": "zhaoxiangji",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    }
+  ]
+}

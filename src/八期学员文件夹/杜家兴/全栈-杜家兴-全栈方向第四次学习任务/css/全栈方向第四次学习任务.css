@@ -8,7 +8,11 @@ body>div {
 .tortoise {
     width: 1683px;
     height: 814px;
+<<<<<<< HEAD
     background:url(images/乌龟.png) no-repeat;
+=======
+    background:url(https://ye-fly.oss-cn-beijing.aliyuncs.com/乌龟.png) no-repeat;
+>>>>>>> 9e92ebbc4d3804d39da35eeecb86891cfb539310
 }
 .bar {
     width: 1683px;
@@ -123,6 +127,7 @@ body>div {
     height: 335px;
 }
 .bird1 {
+<<<<<<< HEAD
     background: url(images/火烈鸟1.png);
 }
 .bird2 {
@@ -130,6 +135,15 @@ body>div {
 }
 .bird3 {
     background: url(images/火烈鸟3.png);
+=======
+    background: url(https://ye-fly.oss-cn-beijing.aliyuncs.com/火烈鸟1.png);
+}
+.bird2 {
+    background: url(https://ye-fly.oss-cn-beijing.aliyuncs.com/火烈鸟2.png);
+}
+.bird3 {
+    background: url(https://ye-fly.oss-cn-beijing.aliyuncs.com/火烈鸟3.png);
+>>>>>>> 9e92ebbc4d3804d39da35eeecb86891cfb539310
 }
 .bird>div>span {
     color: #fff;
@@ -155,7 +169,11 @@ body>div {
     height: 666px;
     position: relative;
     top: 500px;
+<<<<<<< HEAD
     background: url(images/鹿.png);
+=======
+    background: url(https://ye-fly.oss-cn-beijing.aliyuncs.com/鹿.png);
+>>>>>>> 9e92ebbc4d3804d39da35eeecb86891cfb539310
 }
 .text2 {
     position:absolute;

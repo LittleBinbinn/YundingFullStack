@@ -22,7 +22,11 @@ hr {
 }
 .banner {
     height: 880px;
+<<<<<<< HEAD
     background-image: url(images/乌龟.png);
+=======
+    background-image: url(https://liangmoxvan.oss-cn-beijing.aliyuncs.com/%E4%B9%8C%E9%BE%9F.png);
+>>>>>>> 9e92ebbc4d3804d39da35eeecb86891cfb539310
     background-repeat: no-repeat;
     background-position:top center;
     text-align: center;
@@ -131,7 +135,11 @@ hr {
 }
 .sign {
     position: relative;
+<<<<<<< HEAD
     background-image: url(images/鹿.png);
+=======
+    background-image: url(https://liangmoxvan.oss-cn-beijing.aliyuncs.com/%E9%B9%BF.png);
+>>>>>>> 9e92ebbc4d3804d39da35eeecb86891cfb539310
     height: 760px;
     background-repeat: no-repeat;
     background-position:top center;

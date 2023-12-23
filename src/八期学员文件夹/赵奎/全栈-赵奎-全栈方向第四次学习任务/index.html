@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            overflow-y: scroll;
+    }
+
+    :root {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    :root body {
+        position: absolute;
+    }
+
+    body {
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .head {
+        position: relative;
+        width: 100%;
+        height: 1283px;
+        background-image: url("https://typora--zk.oss-cn-beijing.aliyuncs.com/1.png");
+        background-repeat: no-repeat;
+        background-position: center 0;
+    }
+
+    .white {
+        position: absolute;
+        height: 50px;
+        width: 1920px;
+        left: 50%;
+        margin-left: -960px;
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+    }
+
+    .zuo {
+        height: 40px;
+        width: 40px;
+        margin-left: 20px;
+        margin-top: 10px;
+        transition: 1s;
+    }
+
+    .zuo:hover {
+        transform: scale(1.5);
+    }
+
+    .you {
+        height: 40px;
+        width: 40px;
+        margin-top: 10px;
+        transition: 1s;
+    }
+
+    .you:hover {
+        transform: scale(1.5);
+    }
+
+    .xiangji {
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        left: 50%;
+        margin-left: -100px;
+        transition: 1s ease;
+    }
+
+    .xiangji:hover {
+        transform: scale(0.9);
+    }
+
+    .word {
+        position: absolute;
+        width: 1110px;
+        height: 404px;
+        left: 50%;
+        margin-left: -555px;
+        margin-top: 200px;
+    }
+
+    .title {
+        height: 203px;
+        font-size: 72px;
+        color: #2a3f17;
+        font-family: Cambria;
+        text-align: center;
+        line-height: 203px;
+    }
+
+    .pass {
+        height: 202px;
+        font-size: 30px;
+        font-family: 微软雅黑;
+        color: #2a3f17;
+        text-align: center;
+    }
+
+    .qq {
+        position: absolute;
+        width: 1110px;
+        height: 900px;
+        left: 50%;
+        margin-left: -555px;
+        margin-top: 600px;
+    }
+
+    .explore {
+        position: absolute;
+        width: 261px;
+        height: 72px;
+        background-color: #2a3f17;
+        font-size: 30px;
+        font-family: 微软雅黑;
+        color: white;
+        line-height: 72px;
+        text-align: center;
+    }
+
+    .picture {
+        position: absolute;
+        height: 605px;
+        width: 1110px;
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .bird {
+        width: 334px;
+        height: 502px;
+        margin-top: 103px;
+        transition: 1s ease;
+    }
+
+    .bird:hover {
+        margin-top: 60px;
+    }
+
+    .second {
+        position: relative;
+        height: 763px;
+        width: 100%;
+        margin-top: 246px;
+        background-image: url("https://typora--zk.oss-cn-beijing.aliyuncs.com/鹿.png");
+        background-repeat: no-repeat;
+        background-position: center 0;
+    }
+
+    .text {
+        position: absolute;
+        width: 946px;
+        height: 544px;
+        left: 50%;
+        margin-left: -473px;
+        margin-top: -85px;
+        background-color: #e0dfdf;
+        transition: 1s;
+    }
+
+    .text:hover {
+        margin-top: -120px;
+    }
+
+    .text .pass {
+        height: 230px;
+        font-size: 20px;
+        color: #2a3f17;
+        text-align: center;
+        font-family: "微软雅黑";
+        margin-top: 80px;
+    }
+
+    .signup {
+        height: 72px;
+        width: 197px;
+        margin-left: 375px;
+        text-align: center;
+        font-size: 30px;
+        font-family: "微软雅黑";
+        line-height: 72px;
+        color: white;
+        margin-top: 100px;
+        background-color: #2a3f17;
+        transition: 1s;
+    }
+
+    .signup:hover {
+        transform: scale(0.9);
+    }
+
+    .third {
+        position: relative;
+    }
+
+    .difference {
+        position: absolute;
+        width: 235px;
+        height: 55px;
+        left: 50%;
+        margin-left: -115px;
+        margin-top: 50px;
+        color: #2a3f17;
+        font-size: 48px;
+        font-family: "微软雅黑";
+        transition: 2s;
+    }
+
+    .difference:hover {
+        border: #2a3f17 solid 5px;
+    }
+
+    .animals {
+        position: absolute;
+        width: 1147px;
+        height: 414px;
+        left: 50%;
+        margin-left: -573.5px;
+        margin-top: 170px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .animals .box {
+        width: 263px;
+        height: 414px;
+        background-color: #e0dfdf;
+        transition: 1s;
+    }
+
+    .animals .box:hover {
+        margin-top: -50px;
+    }
+
+    .box .pic {
+        width: 263px;
+        height: 261px;
+    }
+
+    .box .text1 {
+        width: 263px;
+        height: 63px;
+        font-size: 30px;
+        line-height: 63px;
+        text-align: center;
+        color: #2a3f17;
+        font-family: "微软雅黑";
+    }
+
+    .box .text2 {
+        width: 263px;
+        height: 90px;
+        line-height: 90px;
+        text-align: center;
+        color: #2a3f17;
+        font-family: "微软雅黑";
+        text-decoration: underline;
+        font-size: 21.85px;
+    }
+
+    .kownmore {
+        position: relative;
+    }
+
+    .know {
+        position: absolute;
+        width: 360px;
+        height: 70px;
+        margin-top: 700px;
+        left: 50%;
+        margin-left: -180px;
+        border: 2px solid #2a3f17;
+        line-height: 70px;
+        text-align: center;
+        color: #2a3f17;
+        font-family: "微软雅黑";
+        font-size: 30px;
+        transition: 1s;
+    }
+
+    .know:hover {
+        background-color: #2a3f17;
+        color: #fff;
+    }
+
+    .photo {
+        position: absolute;
+        width: 1404px;
+        height: 1024px;
+        left: 50%;
+        margin-left: -702px;
+        margin-top: 900px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .box1 {
+        width: 702px;
+        height: 1024px;
+    }
+
+    .box1 .the {
+        width: 522px;
+        height: 277px;
+        margin-left: 128px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .up {
+        height: 138px;
+        color: #2a3f17;
+        font-family: "微软雅黑";
+        font-size: 36px;
+        line-height: 138px;
+        transition: 1s;
+    }
+
+    .up:hover {
+        margin-top: -30px;
+    }
+
+    .down {
+        height: 139px;
+        color: #2a3f17;
+        font-family: "微软雅黑";
+        font-size: 24px;
+        white-space: nowrap;
+        transition: width 1s, font-size 1s;
+    }
+
+    .down:hover {
+        width: 550px;
+        font-size: 35px;
+    }
+
+    .number {
+        width: 522px;
+        height: 663px;
+        margin-left: 125px;
+        margin-top: 86px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .boxx {
+        width: 522px;
+        height: 165px;
+        color: #2a3f17;
+        font-family: "微软雅黑";
+        font-size: 24px;
+        line-height: 165px;
+        transition: margin-left 1s;
+    }
+
+    .boxx:hover {
+        margin-left: 100px;
+    }
+
+    .final {
+        position: relative;
+        width: 100%;
+        height: 460px;
+            border: 2px solid #2a3f17;
+            margin-top: 2000px;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .left {
+            width: 959px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .right {
+            width: 959px;
+        }
+        
+        .left1,
+        .left2 {
+            height: 123px;
+            margin-top: 172px;
+        }
+        
+        .left1 {
+            width: 693px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .zi {
+            height: 32px;
+            color: #2a3f17;
+            font-family: "微软雅黑";
+            font-size: 40px;
+            text-align: left;
+            padding-left: 440px;
+        }
+        
+        .left2 {
+            width: 268px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .ziup {
+            height: 32px;
+            padding-left: 54px;
+            padding-top: 5px;
+            color: #2a3f17;
+            font-family: "微软雅黑";
+            font-size: 30px;
+        }
+        
+        .zidown {
+            height: 92px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .boox {
+            height: 50px;
+            color: #2a3f17;
+            font-family: "微软雅黑";
+            font-size: 24px;
+            text-align: center;
+            padding-top: 30px;
+        }
+        
+        .big {
+            width: 362px;
+            height: 70px;
+            background-color: #949f8b;
+            margin-top: 191px;
+            margin-left: 270px;
+            text-align: center;
+            line-height: 70px;
+            color: white;
+            font-family: "微软雅黑";
+            font-size: 36px;
+            transition: 1s;
+        }
+        
+        .big:hover {
+            background-color: #fff;
+            color: #949f8b;
+            margin-top: 180px;
+        }
+    
+
+    </style>
+
+</head>
+
+<body>
+    <div class="head">
+        <div class="white">
+            <div class="zuo"><img src="https://typora--zk.oss-cn-beijing.aliyuncs.com/三杠.png" /></div>
+            <div class="you"><img src="https://typora--zk.oss-cn-beijing.aliyuncs.com/放大镜.png" /></div>
+            </div>
+        <div class="xiangji"><img src="https://typora--zk.oss-cn-beijing.aliyuncs.com/相机.png" /></div>
+        <div class="word">
+            <div class="title">Animal Photography</div>
+            <div class="pass">A silhouette of them，a simple little acttion,here are the photographeries<br />eyes the
+                best of them,their laughter,their love,their every vivid,are recored<br />by us.</div>
+        </div>
+        <div class="qq">
+            <div class="explore">
+                EXPLORE
+            </div>
+            <div class="picture">
+                <div class="bird"><img src="https://typora--zk.oss-cn-beijing.aliyuncs.com/火烈鸟1.png" /></div>
+                <div class="bird"><img src="https://typora--zk.oss-cn-beijing.aliyuncs.com/火烈鸟2.png" /></div>
+                <div class="bird"><img src="https://typora--zk.oss-cn-beijing.aliyuncs.com/火烈鸟3.png" /></div>
+            </div>
+        </div>
+    </div>
+    <div class="second">
+        <div class="text">
+            <div class="pass">
+                "Famiiy Farms is the best piace， where i can buy fruit,vegetabie,meat,honey,miik,<br /> eggs and so on
+                for my retaurant
+                directly fromupplier. Super convinient.Thank you" <br />xdccnfc cfvfesc cfnccnjdcn cfjdcdsr dcwwzwqg ejs
+                dddc ddf fnfjv
+                eij
+                fvnv jnxzexh cn <br />cdcmdsc ddnc, cddmdcds dncdn cdcn wqeoeas, dcndassasas,cdcndcnc cciqoskxm
+                <br />cbdcpqslwq nfnere
+                nfncsfjjc
+                dndcww frhfjnc qpdjweiw cnncqe, cqjsdc ccn dcjndc , <br />ncf cdncjd dcdjcndq csjncq dcdncf dcdjdnc
+                cdjsq, qkodkqe
+                wqcnpsdc
+                cdnqq qcw,<br /> cqnonxj dcdcnd dcnjsdvb wcnwq cowwncjq jjcnjncqnw wcq c wd cwch, cnjncnc ece
+                <br />cdcnncdwnc nenwc
+                dcnnc cjcj,ccjrnc wecwc .
+            </div>
+            <div class="signup">SIGN UP</div>
+        </div>
+    </div>
+    <div class="third">
+        <div class="difference">Difference</div>
+        <div class="animals">
+            <div class="box">
+                <div class="pic"><img src="https://typora--zk.oss-cn-beijing.aliyuncs.com/马.png" /></div>
+                <div class="text1">Horse</div>
+                <div class="text2">A difference story</div>
+            </div>
+            <div class="box">
+                <div class="pic"><img src="https://typora--zk.oss-cn-beijing.aliyuncs.com/袋鼠.png" /></div>
+                <div class="text1">Kangaroo</div>
+                <div class="text2">A difference story</div>
+            </div>
+            <div class="box">
+                <div class="pic"><img src="https://typora--zk.oss-cn-beijing.aliyuncs.com/狮子.png" /></div>
+                <div class="text1">Lion</div>
+                <div class="text2">A difference story</div>
+            </div>
+            <div class="box">
+                <div class="pic"><img src="https://typora--zk.oss-cn-beijing.aliyuncs.com/小鸟.png" /></div>
+                <div class="text1">Hummingbird</div>
+                <div class="text2">A difference story</div>
+            </div>
+        </div>
+    </div>
+    <div class="knowmore">
+        <div class="know">Know more</div>
+        <div class="photo">
+            <div class="box1"><img src="https://typora--zk.oss-cn-beijing.aliyuncs.com/松鼠.png" /></div>
+            <div class="box1">
+                <div class="the">
+                    <div class="up">The Photo</div>
+                    <div class="down">
+                        "Family Farms is the best placewhereI <br/>can buy fruit,vegetable,meat,honey,milk,eggs <br />and so on for my retaurant directly from <br />supplier.Super convinient.Thank you"
+                    </div>
+                </div>
+                <div class="number">
+                    <div class="boxx"><img src="https://typora--zk.oss-cn-beijing.aliyuncs.com/圈1.png" />Looking for it</div>
+                    <div class="boxx"><img src="https://typora--zk.oss-cn-beijing.aliyuncs.com/圈2.png" />Cultivate feelings</div>
+                    <div class="boxx"><img src="https://typora--zk.oss-cn-beijing.aliyuncs.com/圈3.png" />Shooting</div>
+                    <div class="boxx"><img src="https://typora--zk.oss-cn-beijing.aliyuncs.com/圈4.png" />Harvest achievement</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="final">
+        <div class="left">
+            <div class="left1">
+                <div class="zi">IN THE WILD</div>
+                <div class="zi">IN THE SEA</div>
+            </div>
+            <div class="left2">
+                <div class="ziup">MORE</div>
+                <div class="zidown">
+                    <div class="boox">We create art.</div>
+                    <div class="boox">We create life.</div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="big">Big World</div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,565 @@
+<!DOCTYPE htm>
+<html1 lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="Viewport" content="width=device-width,initial-scale=1.0" />
+        <title>animal photography</title>
+        <link rel="stylesheet" href="css/download (1)/font_jxl3982t3p/iconfont.css">
+        <style>
+            *{
+                margin: 0 ;
+            }
+            body{
+                width: 1650px;
+                height: 3300px;
+                margin: 0 auto;
+            }
+
+            .top{
+                position: relative;
+                width: 100%;
+                height: 1200px;
+                background-color: white;
+            }
+            .search{
+                position: relative;
+                width: 100%;
+                height: 40px;  
+            }
+            .search-mulu{
+                position: relative;
+                width: 3%;
+                left: 15px;
+                top: 15;
+                height: 40px;
+                transition: transform .5s;   
+            }
+            .search-mulu:hover{
+                transform: scale(0.7);
+            }
+             .search-sosuo{
+                position: relative;
+                left: 98%;
+                width: 1%;
+                height: 40px;
+                top: -25;
+                transition: transform .5s;
+            }
+            .search-sosuo:hover{
+                transform: scale(0.7);
+            }
+            .xiangji{
+                position: absolute;
+                width: 10%;
+                height: 165px;
+                left: 45%;
+                top: -40px;
+                transition: transform .5s;     
+            }
+            .xiangji:hover{
+                transform:scale(0.7);
+            }
+       
+            .top-background{
+                position: relative;
+                width: 100%;
+                height: 700px;
+            background: url(https://jingluming.oss-cn-beijing.aliyuncs.com/%E4%B9%8C%E9%BE%9F.png) no-repeat;
+            }
+            .top-text1{
+                position: relative;
+                width: 60%;
+                height: 60px;
+                left: 20%;
+                top: 30%; 
+              font-size: 95px;
+                  font-family: "Cambria";
+              color: rgb(42, 63, 23);
+               line-height: 0;
+                  text-align: center;
+            }
+            .top-text2{
+                position: relative;
+                width: 50%;
+                height: 70px;
+                left: 25%;
+                top: 30%;
+                   font-size: 22px;
+                font-family: "Microsoft YaHei";
+                 color: rgb(42, 63, 23);
+                line-height: 1;
+            }
+            .expiore{
+                position:relative;
+                width: 12%;
+                height: 50px;
+                left: 25%;
+                top: 40%;
+               font-size: 30px;
+               font-family: "Microsoft YaHei";
+               color: rgb(255, 255, 255);
+              line-height: 1.6;
+                text-align: center;
+               z-index: 8;               
+                 background-color: rgb(42, 63, 23);             
+            }
+            .top-flex{
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                width: 50%;
+                left: 25%;
+                height: 400px;
+                top: -150px;
+                justify-content: space-between;
+                transition: 2s;
+            }
+            .box{
+                width: 28%;
+                height: 400px;
+                 transition: 2s;
+            }
+            .box:hover{
+                   transform: translateY(-60px);
+            }
+            .box-text{
+              position:relative;
+              left: 60%;
+              top: -150px;
+               width: 30%;
+              height: 60px; 
+             font-size: 44px;
+              font-family: "Cambria";
+              color: rgb(255, 255, 255);
+             line-height: 0.625;
+            }
+            .signup{
+                position: relative;
+                width: 100%;
+                height: 600px;
+                background: url(https://jingluming.oss-cn-beijing.aliyuncs.com/%E9%B9%BF.png) no-repeat;
+            }
+            .sign-text{
+                position: relative;
+                width: 40%;
+                height: 400px;
+                left: 30%;
+                top: -60px;
+                background-color: rgb(224, 223, 223);
+                transition: 2s;
+            }
+            .sign-text:hover{
+                transform: translateY(-50px);
+            }
+            .signup-text{
+                position: relative;
+                width: 80%;
+                left: 10%;
+                height: 200px;
+                top: 55px;
+                 font-size: 13px;
+              font-family: "Microsoft YaHei";
+                 color: rgb(42, 63, 23);
+              line-height: 1.6;
+            }
+            .sign-buttom{
+                position: relative;
+                width: 28%;
+                left: 36%;
+                top:85px;
+                height: 60px;
+                background-color: rgb(42, 63, 23);
+                font-size: 28px;
+                font-family: "Microsoft YaHei";
+                color: rgb(255, 255, 255);
+               line-height: 2.0;
+               text-align: center;
+               transition: transform .5s;
+            }
+            .sign-buttom:hover{
+                transform: scale(0.8);
+            }
+            .different{
+                position: relative;
+                width: 100%;
+                height: 450px;
+            }
+            @keyframes difference {
+                25%{
+                    border-top: 3px solid #2a3f17;
+                }
+                50%{
+                     border-top: 3px solid #2a3f17;
+                     border-right: 3px solid #2a3f17;
+                }
+                75%{
+                    border-top: 3px solid #2a3f17;
+                     border-right: 3px solid #2a3f17;
+                       border-bottom: 3px solid #2a3f17;
+                }
+                100%{
+                     border-top: 3px solid #2a3f17;
+                     border-right: 3px solid #2a3f17;
+                       border-bottom: 3px solid #2a3f17;
+                       border-left: 3px solid #2a3f17;
+                }
+            }
+            .difference-text{
+                position: relative;
+                width: 15%;
+                left: 42.5%;
+                top: 50px;
+                height: 60px;
+                 font-size: 48px;
+              font-family: "Microsoft YaHei";
+             color: rgb(42, 63, 23);
+              line-height: 1;
+            text-align: center;
+            }
+            .difference-text:hover{
+                    animation: difference 8s;
+            }
+            .difference-flex{
+                position: relative;
+                width: 60%;
+                height: 350px;
+                left: 20%;
+                top: 85px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .diff-box{
+                width: 22.7%;
+                height: 300px;
+                transition: 2s;
+            }
+            .diff-box:hover{
+                transform: translateY(-50px);
+            }
+            .diff-box-text{
+                position: relative;
+                width: 80%;
+                height: 90px;
+                left: 10%;
+                top: -120;
+                text-align: center;
+            }
+            .diff-box-text span{  
+            font-size: 27px;
+             font-family: "Microsoft YaHei";
+             color: rgb(42, 63, 23);
+              line-height: 2;
+            }
+            .diff-box-text a{ 
+               font-size: 20px;
+              font-family: "Microsoft YaHei";
+               color: rgb(42, 63, 23);
+               line-height: 1;
+            }
+            .know-more{
+                position: relative;
+                width: 62%;
+                height: 800px;
+                left: 19%;
+                top: 50px;
+            }
+            .know-text{
+                position: relative;
+                width: 30%;
+                height: 75px;
+                left: 35%;
+                top: 25px;
+                font-size: 30px;
+                font-family: "Microsoft YaHei";
+                color: rgb(42, 63, 23);
+                 line-height: 2.3;
+                 text-align: center;
+              border-width: 2px;
+              border-color: rgb(42, 63, 23);
+              border-style: solid;
+              transition: 2s;
+            }
+            .know-text:hover{
+                background: rgb(42, 63, 23);
+                color:white;
+            }
+            .know-flex{
+                position: relative;
+                width: 100%;
+                height: 650px;
+                top: 80px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .know-box{
+                width: 44%;
+                height: 650px;
+            }
+            .the-photo{
+                position: relative;
+                width: 50%;
+                top: 20px;
+                height: 60px;
+                 font-size: 33px;
+               font-family: "Microsoft YaHei";
+                color: rgb(42, 63, 23);
+                line-height: 1.6;
+                transition: 2s;
+            }
+            .the-photo:hover{
+                transform: translateY(-40px);
+            }
+            .paragraphy{
+                position: relative;
+                width: 100%;
+                height: 100px;
+                top: 50px;
+             font-size: 20px;
+               font-family: "Microsoft YaHei";
+            color: rgb(42, 63, 23);
+             line-height: 1.25;
+             transition: transform .5s;
+            }
+            .paragraphy:hover{
+                transform: scale(1.2);
+            }
+            .small-flex{
+                position: relative;
+                width: 100%;
+                height: 400px;
+                top: 90px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+            .small-flexbox{
+                  width: 100%;
+                  height: 65px;
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                 transition: 2s;
+            }
+            .small-flexbox:hover{
+                transform: translateX(70px);
+            }
+            .box-flex-num{
+                width: 15%;
+                height: 65px;
+                 border-width: 2px;
+                 border-color: rgb(42, 63, 23);
+                 border-style: solid;
+                border-radius: 50%;
+                 text-align: center;
+                font-size: 48px;
+                font-family: "Microsoft YaHei";
+                 color: rgb(42, 63, 23);
+                 line-height: 1.2;
+            }
+            .box-flex-english{
+                width: 80%;              
+                height: 65px;
+                font-size: 24px;
+                font-family: "Microsoft YaHei";
+                 color: rgb(42, 63, 23);
+                 line-height: 2.68;
+            }
+            .foot{
+                position: relative;
+                width: 100%;
+                height: 380px;
+                top: 80px;
+            }
+            .foot-hengxian{
+                position: relative;
+                width: 100%;
+                height: 5px;
+                background-color: black;
+            }
+            .foot-flex{
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                width: 55%;
+                height: 200px;
+                left: 22.5%;
+                top: 85px;     
+            }
+            .foot-box1{
+                width: 30%;
+                position: relative;
+                height: 180px;
+                top: 20px;                  
+                  font-size: 40px;
+                 font-family: "Microsoft YaHei";
+                   color: rgb(42, 63, 23);
+                   line-height: 2;
+            }
+            .foot-box2{
+                width: 20%;
+                height: 160px;
+                top: 40;
+                position: relative;
+            }
+            .foot-box2 a{
+               font-size: 24px;
+             font-family: "Microsoft YaHei";
+              color: rgba(42, 63, 23, 0.8);
+                line-height: 1.667;
+            }
+            .foot-box2 b{             
+                    font-size: 30px;
+              font-family: "Microsoft YaHei";
+            color: rgba(42, 63, 23, 0.902);
+               line-height: 1.54;
+            }
+            .foot-box3{
+                width: 50%;
+                height: 200px;
+            }
+            .biaoqian{
+                position: relative;
+                width: 50%;
+                height: 70px;
+                left: 25%;
+                top:66px ;
+             text-align: center;
+             font-size: 36px;
+              font-family: "Microsoft YaHei";
+               color: rgb(255, 255, 255);
+               line-height: 1.85;
+              background-color: rgb(42, 63, 23);
+               opacity: 0.502;
+               transition: 2s;
+            }
+            .biaoqian:hover{
+                background: white;
+                color: #949f8b;
+                transform: translateY(-30px);
+            }
+        </style>
+    </head>
+    <body>
+            <div class="top">       
+                    <div class="search">
+                        <div class="search-mulu">
+                            <span class="iconfont">&#xf06a;</span>
+                        </div>
+                        <div class="search-sosuo">
+                            <span class="iconfont">&#xe619;</span>
+                        </div>
+                    </div>
+                <div class="xiangji"></div>
+                <div class="top-background">
+                    <div class="xiangji">
+                        <img src="https://jingluming.oss-cn-beijing.aliyuncs.com/%E7%9B%B8%E6%9C%BA.png">
+                    </div>
+                    <div class="top-text1">Animal Photography</div>
+                    <div class="top-text2">&nbsp;&nbsp;A silhouette of them,a simple little action,here are the photographer’s <br>&nbsp;&nbsp;eyes the best of them,their laughter,their
+                    love,their every vivid,are recorded <br>&nbsp;&nbsp;by us</div>
+                    <div class="expiore">EXPIORE</div>
+                </div>
+              
+                <div class="top-flex">
+                    <div class="box">
+                        <img src="https://jingluming.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F1.png"/>
+                        <div class="box-text">Fly</div>
+                    </div>
+                    <div class="box">
+                        <img src="https://jingluming.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F2.png"/>
+                        <div class="box-text">Love</div>
+                    </div>
+                    <div class="box">
+                        <img src="https://jingluming.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F3.png"/>
+                        <div class="box-text">Stand</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="signup">
+                <div class="sign-text">
+                   <div class="signup-text">
+                    “Family Farms is the best place，where I can buy fruit,vegetable,meat,honey,milk,<br> eggs and so on for my retaurant directly fromupplier. Super convinient.Thank you”<br>
+                    xdccnfc cfvfesc cfnccnjdcn cfjdcdsr dcwwzwqg ejs dddc ddf fnfjv eij fvnv jnxzexh cn<br> cdcmdsc ddnc, cddmdcds dncdn cdcn wqeoeas, dcndassasas,cdcndcnc cciqoskxm<br>  cbdcpqslwq nfnere nfncsfjjc dndcww frhfjnc qpdjweiw cnncqe, cqjsdc ccn dcjndc ,<br> ncf cdncjd dcdjcndq csjncq dcdncf dcdjdnc cdjsq, qkodkqe wqcnpsdc cdnqq qcw,<br>
+                    cqnonxj dcdcnd dcnjsdvb wcnwq cowwncjq jjcnjncqnw wcq c wd cwch, cnjncnc ece<br>
+                    cdcnncdwnc&nbsp;&nbsp;&nbsp; nenwc dcnnc cjcj , c cjrnc wecwc .
+                   </div>
+                   <div class="sign-buttom">SIGN&nbsp;&nbsp;UP</div>
+
+                 </div>
+            </div>
+            <div class="different">
+                <div class="difference-text">Difference</div>
+                <div class="difference-flex">
+                    <div class="diff-box">
+                        <img src="https://jingluming.oss-cn-beijing.aliyuncs.com/%E9%A9%AC.png"/>
+                        <div class="diff-box-text"><span>Horse</span><br><a href="#">A different story</a></div>
+                    </div>
+                    <div class="diff-box">
+                        <img src="https://jingluming.oss-cn-beijing.aliyuncs.com/%E8%A2%8B%E9%BC%A0.png">
+                        <div class="diff-box-text"><span>Kangaroo</span><br><a href="#">A different story</a>
+                        </div>
+                    </div>
+                    <div class="diff-box">
+                        <img src="https://jingluming.oss-cn-beijing.aliyuncs.com/%E7%8B%AE%E5%AD%90.png">
+                        <div class="diff-box-text"><span>Lion</span><br><a href="#">A different story</a>
+                        </div>
+                    </div>
+                    <div class="diff-box">
+                        <img src="https://jingluming.oss-cn-beijing.aliyuncs.com/%E5%B0%8F%E9%B8%9F.png">
+                        <div class="diff-box-text"><span>Hummingbird</span><br><a href="#">A different story</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="know-more">
+                <div class="know-text">Know more</div>
+                <div class="know-flex">
+                     <div class="know-box">
+                        <img src="https://jingluming.oss-cn-beijing.aliyuncs.com/%E6%9D%BE%E9%BC%A0.png">
+                     </div>
+                     <div class="know-box">
+                        <div class="the-photo">The Photo</div>
+                        <div class="paragraphy">"Family Farms is the best place where I can buy fruit,vegetables,meat,milk,eggs and so on for my restaurant directly
+                        from supplier.Super convenient.Thank you "</div>
+                        <div class="small-flex">
+                            <div class="small-flexbox">
+                                    <div class="box-flex-num">1</div>
+                                    <div class="box-flex-english">Looking for it</div>  
+                            </div>
+                            <div class="small-flexbox">
+                          
+                                    <div class="box-flex-num">2</div>
+                                    <div class="box-flex-english">Cultivate feelings</div>
+                            </div>
+                            <div class="small-flexbox">
+                         
+                                    <div class="box-flex-num">3</div>
+                                    <div class="box-flex-english">Shooting</div>                              
+                            </div>
+                            <div class="small-flexbox">
+                                    <div class="box-flex-num">4</div>
+                                    <div class="box-flex-english">Harvest achievement</div>                          
+                            </div>
+                        </div>
+                        
+                     </div>
+
+                </div>
+            </div>
+            <div class="foot">
+                <div class="foot-hengxian"></div>
+                <div class="foot-flex">
+                    <div class="foot-box1">IN THE WILD<br>IN THE SEA</div>
+                    <div class="foot-box2"><b>MORE</b><br><a>We creat art<br>We creat life</a></div>
+                    <div class="foot-box3">
+                        <div class="biaoqian">Big World</div>
+                    </div>
+                </div>
+            </div>
+
+
+    </body>

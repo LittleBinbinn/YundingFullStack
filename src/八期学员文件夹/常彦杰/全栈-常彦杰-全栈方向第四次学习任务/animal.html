@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animal</title>
+</head>
+<style>
+    * {
+        margin: 0;
+    }
+    a {
+        text-decoration: none;
+        color: rgb(95, 92, 92);
+    }
+    .iconfont {
+        position: relative;
+        left: 25px;
+        top: 10px;
+        transition: 2s;
+    }
+    .iconfont:hover {
+        font-size: 20px;
+    }
+    .start {
+        height: 42px;
+    }
+    .turtle {
+        height: 795px;
+        background-image: url(https://jsama.oss-cn-beijing.aliyuncs.com/turtle.png);
+        position: relative;
+    }
+    .camera {
+        width: 172px;
+        height: 172px;
+        background-color: rgb(161, 211, 86);
+        position: relative;
+        left: 44%;
+        top: -5.5%;
+        transition: all 0.75s ease-in-out;
+    }
+    .camera:hover {
+        transform: scale(0.8,0.8);
+    }
+    .circle {
+        width: 141px;
+        height: 141px;
+        left: 12px;
+        top: 12px;
+        position: relative;
+        border-radius: 90px;
+        border: white;
+        border-style: solid;
+        border-width: 4px;
+    }
+    .piccamera {
+        left: 20px;
+        top: 32px;
+        position: relative;
+    }
+    .title1 {
+        font-size: 50px;
+        color: rgb(1, 48, 1);
+        width: 543px;
+        height: 58px;
+        left: 35%;
+        top: 8%;
+        position: relative;
+    }
+    .txt {
+        position: relative;
+        left: 23%;
+        width: 839px;
+        font-size: 23px;
+        color: rgb(1, 65, 1);
+    }
+    .explore {
+        background-color: rgb(5, 70, 5);
+        width: 185px;
+        height: 52px;
+        position: relative;
+        left: 23%;
+        top: 14%;
+        color: white;
+        font-size: 30px;
+        display: block;
+        padding-left: 40px;
+        padding-top: 10px;
+        transition: all 0.8s ease-in-out;
+    }
+    .explore:hover {
+        background-color: honeydew;
+        color: rgb(3, 61, 3);
+        transform: scale(0.8,0.8);
+    }
+    .bird {
+        height: 510px;
+    }
+    .block {
+        width: 960px;
+        height: 430px;
+        left: 340px;
+        top: -25%;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .bird span{
+        display: inline-block;
+        position: relative;
+        width: 287px;
+        height: 429px;
+        transition: all 0.8s ease-in-out;
+    }
+    .bird span:hover {
+        transform: translateY(-40px);
+    }
+    .deer {
+        height: 652px;
+        background-image: url(https://jsama.oss-cn-beijing.aliyuncs.com/deer.png);
+    }
+    .deertxt {
+        height: 400px;
+        width: 700px;
+        padding-top: 70px;
+        padding-left: 100px;
+        color: rgb(8, 74, 8);
+        background-color: rgb(214, 215, 214);
+        position: relative;
+        top: -80px;
+        left: 26%;
+        line-height: 25px;
+        transition: all 0.8s ease-in-out;
+    }
+    .deertxt:hover {
+        transform: translateY(-30px);
+    }
+    .sign {
+        width: 155px;
+        height: 50px;
+        background-color: rgb(3, 61, 3);
+        position: relative;
+        color: white;
+        font-size: 35px;
+        display: block;
+        left: 30%;
+        top: 15%;
+        padding-top: 20px;
+        padding-left: 15px;
+        transition: all 0.8s ease-in-out;
+    }
+    .sign:hover {
+        transform: scale(0.8,0.8);
+    }
+    .difference {
+        height: 720px;
+    }
+    .diftitle {
+        font-size: 40px;
+        width: 200px;
+        position: relative;
+        left: 42%;
+        top: 7%;
+        color:rgb(4, 52, 4);
+    }
+    .diftitle:hover {
+        animation-name: border;
+        animation-duration: 4s;
+        animation-fill-mode:forwards;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes border {
+    25% {
+        border-top:3px solid #000;
+    }
+
+    50% {
+        border-right: 3px solid #000;
+    }
+
+    75% {
+        border-bottom: 3px solid #000;
+    }
+
+    100% {
+        border: 3px solid #000;
+    }
+    }
+
+    .animalpic {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 360px;
+        width: 980px;
+        position: relative;
+        left: 20%;
+        top: 10%;
+    }
+    .animalpic span {
+        display: inline-block;
+        background-color: rgb(214, 211, 211);
+        width: 226.5px;
+        height: 360px;
+        transition: all 0.8s ease-in-out;
+    }
+    .animalpic span:hover {
+        transform: translateY(-30px);
+    }
+    .knowmore {
+        border-style: solid;
+        border-width: 2px;
+        border-color: rgb(2, 64, 2);
+        width: 235px;
+        font-size: 30px;
+        height: 52px;
+        padding-top: 10px;
+        padding-left: 60px;
+        position: relative;
+        left: 40%;
+        top: 20%;
+        color: rgb(6, 72, 6);
+        display: block;
+        transition: all 0.8s ease-in-out;
+    }
+    .knowmore:hover {
+        background-color: rgb(54, 82, 5);
+        color: white;
+    }
+    .horse {
+        top: 4.5%;
+        left: 30%;
+        position: relative;
+        color: rgb(3, 53, 3);
+        font-size: 25px;
+    }
+    .kangaroo {
+        left: 23%;
+        top: 4.5%;
+        position: relative;
+        color: rgb(3, 53, 3);
+        font-size: 25px;
+    }
+    .lion {
+        left: 33%;
+        top: 4.5%;
+        position: relative;
+        color: rgb(3, 53, 3);
+        font-size: 25px;
+    }
+    .hbird {
+        left: 12%;
+        top: 4.5%;
+        position: relative;
+        color: rgb(3, 53, 3);
+        font-size: 25px;
+    }
+    .story {
+        left: 17%;
+        font-size: large;
+        border-bottom: rgb(3, 62, 3);
+        color: rgb(3, 62, 3);
+        border-bottom-style: solid;
+        position: relative;
+        width: 153px;
+        top: 8%;
+    }
+    .photo {
+        height: 930px;
+        width: 1200px;
+        left: 13.5%;
+        position: relative;
+    }
+    .title {
+        transition: all 0.8s ease-in-out;
+    }
+    .title:hover {
+        transform: translateY(-30px);
+    }
+    .total {
+        border-bottom-style:solid;
+        padding-bottom: 50px;
+        border-color: rgb(97, 118, 97);
+    }
+    .photo .songshu {
+        position: relative;
+        top: 3%;
+        left: 5%;
+    }
+    .photo .stxt {
+        position: relative;
+    }
+    .photo span {
+        display: inline-block;
+    }
+    .songshutxt {
+        position: relative;
+        bottom: 60%;
+        height: 750px;
+        width: 450px;
+        left: 10%;
+        color: rgb(97, 118, 97);
+    }
+    .songshutxt .title {
+        font-size: 35px;
+        margin-left: 30px;
+    }
+    .songshutxt .stxt {
+        top: 5%;
+        font-size: large;
+        width: 550px;
+        height: 100px;
+        line-height: 30px;
+        margin-left: 30px;
+        transition: all 1s ease-in-out;
+    }
+    .stxt:hover {
+        font-size: 25px;
+        width: 550px;
+        height: 110px;
+        line-height: 50px;
+    }
+    .option {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        top: 15%;
+    }
+    .option div{
+        margin: 30px;
+        transition: all 0.8s ease-in-out;
+    }
+    .option div:hover {
+        transform: translateX(70px);
+    }
+    .option .otxt {
+        position: relative;
+        left: 15%;
+        font-size: 25px;
+    }
+    .end {
+        height: 400px;
+    }
+    .end .in {
+        left: 8%;
+        display: inline-block;
+        position: relative;
+        width:700px;
+        height: 410px;
+    }
+    .in span {
+        display: inline-block;
+        position: relative;
+    }
+    .end div {
+        display: inline-block;
+    }
+    .t1 {
+        line-height: 60px;
+        font-size: 30px;
+        color: rgb(58, 91, 56);
+        position: relative;
+        left: 40%;
+        top: 28%;
+    }
+    .m {
+        font-size: 25px;
+        color:rgb(88, 138, 88);
+    }
+    .we {
+        color: rgb(88, 138, 88);
+        line-height: 30px;
+    }
+    .t2 {
+        left: 50%;
+        top: 28%;
+    }
+    .world {
+        top: 20%;
+        left: 15%;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-color: rgb(146, 171, 142);
+        display: inline-block;
+        position: relative;
+        font-size: 25px;
+        color: white;
+        transition: all 0.8s ease-in-out;
+    }
+    .world:hover {
+        transform: translateY(-40px);
+        background-color: white;
+        color: rgb(109, 149, 85);
+    }
+</style>
+<link rel="stylesheet" href="css/iconfont.css">
+<body>
+    <div class="start"><a href="#" class="iconfont">&#xeaf1;</a></div>
+    <div class="turtle">
+        <div class="camera"><div class="circle"><img src="https://jsama.oss-cn-beijing.aliyuncs.com/camera.png" class="piccamera" /></div></div>
+        <div class="title1">Animal Photography</div>
+        <br /><br /><br /><br /><hr color="lightgrey">
+        <div class="txt">A silhouette of them, a simple little acttion, here are the photographer' s <br />
+            eyes the best of them, their laughter, their love, their every vivid, are recored <br />
+            by us.</div>
+        <a class="explore" href="#">EXPLORE</a>
+    </div>
+    <div class="bird">
+        <div class="block">
+            <span class="b1"><img src="https://jsama.oss-cn-beijing.aliyuncs.com/Fly.png" /></span>
+            <span class="b2"><img src="https://jsama.oss-cn-beijing.aliyuncs.com/Love.png" /></span>
+            <span class="b3"><img src="https://jsama.oss-cn-beijing.aliyuncs.com/Stand.png" /></span>
+        </div>
+    </div>
+    <div class="deer">
+        <div class="deertxt">"Family Farms is the best place,
+            where I can buy fruit,vegetable,meat,honey,milk,<br />
+            eggs and so on for my retaurant directly fromupplier. Super convinient.Thank you"<br />
+            xdccnfc cfvfesc cfnccnjdcn cfjdcdsr dcwwzwqg ejs dddc ddf fnfjv eij fvnv jnxzexh cn<br />
+            cdcmdsc ddnc, cddmdcds dncdn cdcn wqeoeas, dcndassasas,cdcndcnc cciqoskxm <br />
+            cbdcpqslwq nfnere nfncsfjjc dndcww frhfjnc qpdjweiw cnncqe, cqjsdc ccn dcjndc ,<br />
+            ncf cdncjd dcdjcndq csjncq dcdncf dcdjdnc cdjsq, qkodkqe wqcnpsdc cdnqq qcw,<br />
+            cqnonxj dcdcnd dcnjsdvb wcnwq cowwncjq jjcnjncqnw wcq c wd cwch, cnjncnc ece<br />
+            cdcnncdwnc	nenwc dcnnc cjcj , c cjrnc wecwc .	
+            <a class="sign" href="#">SIGN UP</a>
+        </div>
+    </div>
+    <div class="difference">
+        <div class="diftitle">Difference</div>
+        <div class="animalpic">
+            <span><img src="pic/1.png" /><div class="horse">Horse</div><div class="story">A difference story</div></span>
+            <span><img src="pic/2.png" /><div class="kangaroo">Kangaroo</div><div class="story">A difference story</div></span>
+            <span><img src="pic/3.png" /><div class="lion">Lion</div><div class="story">A difference story</div></span>
+            <span><img src="pic/4.png" /><div class="hbird">Hummingbird</div><div class="story">A difference story</div></span>
+        </div>
+        <a class="knowmore" href="#">Know more</a>
+    </div>
+    <div class="total">
+    <div class="photo">
+        <span class="songshu"><img src="https://jsama.oss-cn-beijing.aliyuncs.com/songshu.png" ></span>
+        <span class="songshutxt">
+            <div class="title">The Photo</div>
+            <div class="stxt">"Family Farms is the best placewhere I <br />
+                can buy fruit,vegetable,meat,honey,milk,<br />
+                eggs and so on for my retaurant directly from<br />
+                supplier. Super convinient.Thank you"
+            </div>
+                <div class="option">
+                    <div><span class="number">&#xe660;</span><span class="otxt">Looking for it</span></div>
+                    <div><span class="number">&#xe603;</span><span class="otxt">Cultivate feelings</span></div>
+                    <div><span class="number">&#xe6d0;</span><span class="otxt">Shooting</span></div>
+                    <div><span class="number">&#xe60d;</span><span class="otxt">Harvest achievement</span></div>
+                </div>
+        </span>
+    </div>
+    </div>
+    <div class="end"> 
+        <span class="in">
+            <span class="t1">IN THE WILD<br />
+            IN THE SEA</span>
+            <span class="t2">
+                <div class="m">MOER</div>
+                <br />
+                <div class="we">We create art.<br />
+                We create life.</div>
+            </span>
+        </span>
+        <span class="world">
+            Big World
+        </span>
+    </div>
+</body>
+</html>

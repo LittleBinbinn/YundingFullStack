@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <link rel="stylesheet" href="./css2/iconfont2.css">
+    <style>
+        *{
+            margin: 0;
+        }
+        .icon{
+            display: flex;
+            justify-content: space-between;
+        }
+        .icon_box{
+            width: 50px;
+            height: 50px;
+        }
+        .img1{
+            position: relative;
+            z-index: 998;
+            width: 50%;
+            text-align: center;
+            transition: transform 1s;
+        }
+        .img1:hover{
+            transform: scale(0.7);
+        }
+        .img11{
+            border: none;
+            background-color: transparent;
+        }
+        .turtle{
+            transform: translate(0,-110px);
+            width: 100%;
+            height: 820px;
+            /* background-color: pink; */
+            background-image: url(https://zhaiyurui.oss-cn-beijing.aliyuncs.com/%E4%B9%8C%E9%BE%9F.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .wenzi1{
+            transform: translate(0,-60px);
+            align-items: center;
+            font-size: 30px;
+        }
+        .wenzi2{
+            width: 50%;
+            align-items: center;
+            color: #2a3f17;
+            font-size: 25px;
+            transform: translate(0,-50px);
+        }
+        .explore{
+            width: 200px;
+            height: 90px;
+            background-color: #2a3f17;
+            color: white;
+            transform: translate(-330px,58px);
+        }
+        .bird{
+            position: relative;
+            width: 50%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            /* background-color: pink; */
+            align-items: center;
+            margin: 0 auto;
+            transform: translate(0,-200px);
+        }
+        .bird_box1{
+            position: relative;
+            z-index: 9999;
+            width: 33%;
+            height: 400px;
+            margin: 35px;
+            /* background-color: blue; */
+            background-image: url(https://zhaiyurui.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F1.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            transition: transform 1s;
+            
+        }
+        .bird_box1:hover{
+            transform: translate(0,-30px);
+        }
+        .bird_box2{
+            position: relative;
+            z-index: 9999;
+            width: 33%;
+            height: 400px;
+            margin: 35px;
+            background-image: url(https://zhaiyurui.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F2.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            transition: transform 1s;
+            
+        }
+        .bird_box2:hover{
+            transform: translate(0,-30px);
+        }
+        .bird_box3{
+            position: relative;
+            z-index: 9999;
+            width: 33%;
+            height: 400px;
+            margin: 35px;
+            background-image: url(https://zhaiyurui.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E7%83%88%E9%B8%9F3.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            transition: transform 1s;
+        }
+        .bird_box3:hover{
+            transform: translate(0,-30px);
+        }
+        .wenzi3{
+            display: inline-block;
+            position: relative;
+            top: 250px;
+            left: 160px;
+            font-size: 32px;
+            color: white;
+        }
+        .wenzi4{
+            display: inline-block;
+            position: relative;
+            top: 250px;
+            left: 130px;
+            font-size: 32px;
+            color: white;
+        }
+        .wenzi5{
+            display: inline-block;
+            position: relative;
+            top: 250px;
+            left: 100px;
+            font-size: 32px;
+            color: white;
+        }
+        .lu{
+            width: 100%;
+            height: 1000px;
+            background-image: url(https://zhaiyurui.oss-cn-beijing.aliyuncs.com/%E9%B9%BF.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .wenzi6{
+            position: relative;
+            top: -100px;
+            font-size: 20px;
+        }
+        .signup{
+            position: relative;
+            top: -470px;
+            width: 200px;
+            height: 50px;
+            border: none;
+            font-size: 40px;
+            color: white;
+            background-color: #2a3f17;
+            align-items: center;
+            transition: transform 1s;
+        }
+        .signup:hover{
+            transform: scale(0.78);
+        }
+        .bor{
+            position: relative;
+            top: -300px;
+            width: 50%;
+            height: 450px;
+            background-image: url(https://zhaiyurui.oss-cn-beijing.aliyuncs.com/%E7%9F%A9%E5%BD%A2%206.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            align-items: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            transition: transform 1s;
+        }
+        .bor:hover{
+            transform: translate(0,-30px);
+        }
+        .diff{
+            width: 60%;
+            height: auto;
+            margin: auto;
+        }
+        #draw-border{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* height: 100vh; */
+        }
+        .wenzi7 {
+            border:0;
+            background: none;
+            text-transform: uppercase;
+            outline:none;
+            font-weight: bold;
+            position: relative;
+            padding: 10px 20px;
+            font-size: 50px;
+            color: #2a3f17;
+            box-sizing: border-box;
+        }
+        .wenzi7::before,.wenzi7::after{
+            position: absolute;
+            box-sizing: inherit;
+            content: '';
+            border:2px solid transparent;
+            width: 0;
+            height: 0;
+        }
+        .wenzi7::after{
+            bottom: 0;
+            right: 0;
+        }
+        .wenzi7::before{
+            top: 0;
+            left: 0;
+        }
+        .wenzi7:hover::before,.wenzi7:hover::after{
+            width: 100%;
+            height: 100%;
+        }
+        .wenzi7:hover::before{
+            border-top-color: #2a3f17;
+            border-right-color: #2a3f17;
+            transition: width 0.3s ease-out,height 0.3s ease-out 0.3s;
+        }
+        .wenzi7:hover::after{
+            border-bottom-color: #2a3f17;
+            border-left-color: #2a3f17;
+            transition:  border-color 0s ease-out 0.6s,width 0.3s ease-out 0.6s,height 0.3s ease-out 1s;
+        }
+        .tp{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            text-align: center;
+        }
+        .tp_box1{
+            width: 20%;
+            height: 320px;
+            background-image: url(https://zhaiyurui.oss-cn-beijing.aliyuncs.com/%E9%A9%AC.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            transition: transform 1s;
+        }
+        .tp_box1:hover{
+            transform: translate(0,-30px);
+        }
+        .tp_box2{
+            width: 20%;
+            height: 320px;
+            background-image: url(https://zhaiyurui.oss-cn-beijing.aliyuncs.com/%E8%A2%8B%E9%BC%A0.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            transition: transform 1s;
+        }
+        .tp_box2:hover{
+            transform: translate(0,-30px);
+        }
+        .tp_box3{
+            width: 20%;
+            height: 320px;
+            background-image: url(https://zhaiyurui.oss-cn-beijing.aliyuncs.com/%E7%8B%AE%E5%AD%90.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            transition: transform 1s;
+        }
+        .tp_box3:hover{
+            transform: translate(0,-30px);
+        }
+        .tp_box4{
+            width: 20%;
+            height: 320px;
+            background-image: url(https://zhaiyurui.oss-cn-beijing.aliyuncs.com/%E5%B0%8F%E9%B8%9F.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            transition: transform 1s;
+        }
+        .tp_box4:hover{
+            transform: translate(0,-30px);
+        }
+        .wenzi8{
+            font-size: 30px;
+            position: relative;
+            top: 90px;
+            color: #2a3f17;
+        }
+        .wenzi9{
+            text-decoration: underline;
+            position: relative;
+            top: 90px;
+            color: #2a3f17;
+        }
+        .Konw{
+            border: 4px solid #2a3f17;
+            background-color: transparent;
+            outline:none;
+            color: #2a3f17;
+            margin: auto;
+            font-size: 40px;
+            text-align: center;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            padding: 10px;
+            transition: all 1s ease 0.1s;
+        }
+        .Konw:hover{
+            background-color: #2a3f17;
+            color: white;
+        }
+        .row{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            /* align-items: center; */
+        }
+        .songshu{
+            width: 500px;
+            height: 1136px;
+            position: relative;
+            top: 50px;
+            left: 140px;
+        }
+        .Photo{
+            width: 300px;
+            height: 1136px;
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            position: relative;
+            top: 42px;
+            right: 470px;
+
+        }
+        .photo{
+            position: relative;
+            left: 30px;
+            font-size: 50px;
+            color: #2a3f17;
+            transition: all 1s;
+        }
+        .photo:hover{
+            transform: translate(0,-50px);
+        }
+        .wenzi10{
+            position: relative;
+            left: 30px;
+            display: inline-block; 
+            font-size: 20px;
+            color: #2a3f17;
+            transition: all 1s;
+        }
+        .wenzi10:hover{
+            transform: scale(1.3) translate(90px,0);
+        }
+        .wenzi11{
+            width: 300px;height: 1136px;
+            font-size: 40px;
+        }
+        li {
+            float: left;
+            margin: 10px;
+            width: 40px;
+            height: 40px;
+            font-size: 30px;
+            border: 4px solid #2a3f17;
+            text-align: center;
+            line-height: 30px;
+            list-style: none;
+            border-radius: 50%;
+            color: #2a3f17;
+            cursor: pointer;
+        }
+        
+        .for{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        .wenzi11_box{
+            transition: all 1s ease 0.1s;
+        }
+        .wenzi11_box:hover{
+            transform: translate(50px,0);
+        }
+        .last{
+            width: 100%;
+            height: 400px;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+        }
+        .wenzi12{
+            position: relative;
+            top: 150px;
+            left: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+        }
+        .wenzi12_box{
+            font-size: 30px;
+            color: #2a3f17;
+        }
+        .wenzi13{
+            position: relative;
+            top: 150px;
+            left: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+        }
+        .wenzi13_box1{
+            font-size: 27px;
+            color: #658647;
+        }
+        .wenzi13_box2{
+            font-size: 18px;
+            color: #658647;
+        }
+        .big{
+            width: 400px;
+            position: relative;
+            top: -170px;
+            left: 1100px;
+            color: white;
+            font-size: 40px;
+            background-color: #658647;
+            transition: all 1.5s;
+            text-align: center;
+        }
+        .big:hover{
+            color: #658647;
+            background-color: white;
+            transform: translate(0,-50px);
+        }
+    </style>
+</head>
+<body style="overflow-x:hidden">
+    <div class="icon">
+        <div class="icon_box"><button class="iconfont">&#xe60c;</button></div>
+        <div class="img1"><button class="img11"><img src="https://zhaiyurui.oss-cn-beijing.aliyuncs.com/%E7%9B%B8%E6%9C%BA.png" alt="相机" width="80%"></button></div>
+        <div class="icon_box"><button class="iconfont2">&#xe86e;</button></div>
+    </div>
+    <div class="turtle">
+        <div class="wenzi1"><h1>Animal Photography</h1></div>
+        <div class="wenzi2"><p>A silhouette of them,a simple little action,here are the photographer's eyes the best of them,their laughter,their love,their every vivid,are recored by us.</p></div>
+        <button class="explore"><h1>EXPLORE</h1></button>
+    </div>
+    <div class="bird">
+        <div class="bird_box1"><h1 class="wenzi3">Fly</h1></div>
+        <div class="bird_box2"><h1 class="wenzi4">Love</h1></div>
+        <div class="bird_box3"><h1 class="wenzi5">Stand</h1></div>
+    </div>
+    <div class="lu">
+        <div class="bor">
+            <div class="wenzi6">"Family Farms is the best place,where i can buy fruit,vegetable,meat,honey,milk,eggs and so on for my retaurant directly frommupplier.Supper convenient.Thank you."xdccnfc cfvfesc cfnccnjdcn cfjdcdsr dcwwzwqg eqwewqe ewqewq fdsfs fdsfd fdfs fsdf e ewr hgt yrt yr yhrty rtygds gsf sdf dsfsdfsdfs fsdfsdf fsdfsdf wecwc dfedwsdef wsfwfwe fwefew fw wefw fwewe jeifa fsaefaefaij dsd cwc cweinmdfaoi dainaidna fdaofja ajdoajd faofja adamnod fanfia.adha dadnia adamnodaiodfnawipod admaopdma ojaod ojdpao jpad pjad japd pjiad japd dad.</div>      
+        </div>
+        <button class="signup">SIGN UP</button>
+    </div>
+    <div class="diff">
+        <div id="draw-border"><button class="wenzi7">Difference</button></div><br><br><br><br>
+        <div class="tp">
+            <div class="tp_box1">
+                <div class="wenzi8">House</div><br><br>
+                <div class="wenzi9">A difference story</div>
+            </div>
+            <div class="tp_box2">
+                <div class="wenzi8">Kangaroo</div><br><br>
+                <div class="wenzi9">A difference story</div>
+            </div>
+            <div class="tp_box3">
+                <div class="wenzi8">Lion</div><br><br>
+                <div class="wenzi9">A difference story</div>
+            </div>
+            <div class="tp_box4">
+                <div class="wenzi8">HummingBird</div><br><br>
+                <div class="wenzi9">A difference story</div>
+            </div>
+        </div><br><br><br><br><br><br><br>
+    </div>
+    <button class="Konw">&nbsp;&nbsp;&nbsp;konw more&nbsp;&nbsp;&nbsp;</button>
+    <div class="row">
+        <div class="songshu">
+            <img src="https://zhaiyurui.oss-cn-beijing.aliyuncs.com/%E6%9D%BE%E9%BC%A0.png" alt="#">
+        </div>
+        <div class="Photo">
+            <br><br><br><br><div class="photo">The Photo</div><br><br><br>
+            <div class="wenzi10">"Family Farms is the best place where i can buy fruit,vegetable,meat,milk,eggs,and so on for my retaurant directly frommupplier.Supper convenient.Thank you."</div><br><br><br><br>
+            <div class="for">
+                <ul>
+                    <div class="wenzi11_box"><li>1</li><br><p style="font-size: 25px; white-space: nowrap; color: #2a3f17;">&nbsp;&nbsp;&nbsp;&nbsp;Looking for it</p></div>
+                    <br><br><br><br><br>
+                    <div class="wenzi11_box"><li>2</li><br><p style="font-size: 25px; white-space: nowrap;color: #2a3f17;">&nbsp;&nbsp;&nbsp;&nbsp;Cultivate feelings</p></div>
+                    <br><br><br><br><br>
+                    <div class="wenzi11_box"><li>3</li><br><p style="font-size: 25px; white-space: nowrap;color: #2a3f17;">Shooting</p></div>
+                    <br><br><br><br><br>
+                    <div class="wenzi11_box"><li>4</li><br><p style="font-size: 25px; white-space: nowrap;color: #2a3f17;">&nbsp;&nbsp;&nbsp;&nbsp;Harvest achievement</p></div>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr style="border: 2px solid;">
+    <div class="last">
+        <div class="wenzi12">
+            <div class="wenzi12_box">IN THE WILD</div><br><br>
+            <div class="wenzi12_box">IN THE SEA</div>
+        </div>
+        <div class="wenzi13">
+            <div class="wenzi13_box1">MORE</div><br>
+            <div class="wenzi13_box2">We create art</div><br>
+            <div class="wenzi13_box2">We create life</div>
+        </div>
+    </div>
+    <div class="big">&nbsp;&nbsp;&nbsp;Big World&nbsp;&nbsp;&nbsp;</div>
+</body>
+</html>
