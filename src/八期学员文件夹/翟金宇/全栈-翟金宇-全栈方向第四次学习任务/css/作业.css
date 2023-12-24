@@ -1,0 +1,321 @@
+body {
+    background-color: #f8f8f8;
+}
+
+a {
+    font-size: 21px;
+    font-family: '微软雅黑';
+    color: #2a3f17;
+}
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+header {
+    width: 1920px;
+    height: 50px;
+}
+
+.search {
+    float: right;
+    width: 50px;
+    height: 50px;
+}
+
+.xiangji {
+    width: 200px;
+    height: 200px;
+    left: 50%;
+    position: absolute;
+    margin: 0 -100px;
+    z-index: 2;
+}
+
+.menu {
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+
+.title {
+    width: 1920px;
+    height: 880px;
+    position: relative;
+}
+
+.wugui {
+    position: absolute;
+}
+
+.text1 {
+    margin: 0 600px;
+    top: 240px;
+    font-size: 72px;
+    font-family: Cambria;
+    color: #2a3f17;
+    position: absolute;
+}
+
+.text2 {
+    top: 330px;
+    margin: 0 410px;
+    font-size: 30px;
+    line-height: 30px;
+    font-family: Cambria;
+    color: #2a3f17;
+    position: absolute;
+}
+
+.explore {
+    top: 555px;
+    left: 416px;
+    width: 262px;
+    height: 72px;
+    background-color: #2a3f17;
+    position: absolute;
+    text-align: center;
+    font-size: 30px;
+    font-family: '微软雅黑';
+    color: #fff;
+}
+
+.huo1 {
+    position: absolute;
+    top: 730px;
+    left: 400px;
+    width: 333px;
+    height: 500px;
+    transition: all 1s;
+}
+
+.huo1:hover {
+    top: 660px;
+}
+
+.huo2 {
+    position: absolute;
+    top: 730px;
+    left: 50%;
+    margin: 0 -166px;
+    width: 333px;
+    height: 500px;
+    transition: all 1s;
+}
+
+.huo2:hover {
+    top: 660px;
+}
+
+.huo3 {
+    position: absolute;
+    top: 730px;
+    right: 400px;
+    width: 333px;
+    height: 500px;
+    transition: all 1s;
+}
+
+.huo3:hover {
+    top: 660px;
+}
+
+.fly {
+    bottom: 90px;
+    right: 60px;
+    position: absolute;
+    color: #fff;
+    font-size: 42px;
+    font-family: Cambria;
+}
+
+.Love {
+    bottom: 90px;
+    right: 60px;
+    position: absolute;
+    color: #fff;
+    font-size: 42px;
+    font-family: Cambria;
+}
+
+.Stand {
+    bottom: 90px;
+    right: 60px;
+    position: absolute;
+    color: #fff;
+    font-size: 42px;
+    font-family: Cambria;
+}
+
+.a1 {
+    width: 1920px;
+    height: 760px;
+    position: relative;
+    top: 600px;
+}
+
+.box3 {
+    position: absolute;
+    top: 0;
+    margin-left: -473px;
+    margin-top: -80px;
+    left: 50%;
+    width: 946px;
+    height: 541px;
+    background-color: #e0dfdf;
+}
+
+.text3 {
+    position: absolute;
+    margin: 70px auto;
+    right: 75px;
+    left: 75px;
+    font-size: 20px;
+    font-family: '微软雅黑';
+    line-height: 30px;
+    color: #2a3f17;
+}
+
+.sign {
+    position: absolute;
+    width: 200px;
+    height: 70px;
+    background-color: #2a3f17;
+    bottom: 60px;
+    left: 50%;
+    margin: 0 -100px;
+    font-family: '微软雅黑';
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+.a2 {
+    position: relative;
+    width: 1200px;
+    height: 500px;
+    background-color: #f8f8f8;
+    top: 670px;
+}
+
+.diff {
+    width: 240px;
+    height: 50px;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    margin: 0 -120px;
+    font-size: 48px;
+    font-family: '微软雅黑';
+    color: #2a3f17;
+}
+
+.ma {
+    position: absolute;
+    left: 0;
+    top: 90px;
+    width: 263px;
+    height: 415px;
+    background-color: #e0dfdf;
+    text-align: center;
+    transition: top 1s;
+}
+.ma:hover {
+    top: 60px;
+}
+.horse {
+    font-size: 30px;
+    color: #2a3f17;
+    font-family: '微软雅黑';
+}
+
+.daishu {
+    position: absolute;
+    left: 300px;
+    top: 90px;
+    width: 263px;
+    height: 415px;
+    background-color: #e0dfdf;
+    text-align: center;
+    transition: top 1s;
+}
+.daishu:hover {
+    top: 60px;
+}
+.kan {
+    font-size: 30px;
+    color: #2a3f17;
+    font-family: '微软雅黑';
+}
+
+.shizi {
+    position: absolute;
+    right: 300px;
+    top: 90px;
+    width: 263px;
+    height: 415px;
+    background-color: #e0dfdf;
+    text-align: center;
+    transition: top 1s;
+}
+.shizi:hover {
+    top: 60px;
+}
+.lion {
+    font-size: 30px;
+    color: #2a3f17;
+    font-family: '微软雅黑';
+}
+
+.niao {
+    right: 0;
+    top: 90px;
+    position: absolute;
+    width: 263px;
+    height: 415px;
+    background-color: #e0dfdf;
+    text-align: center;
+    transition: top 1s;
+}
+.niao:hover {
+    top: 60px;
+}
+.hum {
+    font-size: 30px;
+    color: #2a3f17;
+    font-family: '微软雅黑';
+}
+.know {
+    text-align: center;
+    position: relative;
+    top: 800px;
+    width: 370px;
+    height: 70px;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    font-size: 30px;
+    font-family: '微软雅黑';
+    color: #2a3f17;
+}
+.box4 {
+    width: 1400px;
+    height: 1020px;
+    position: relative;
+    top: 920px;
+}
+.song {
+    float: left;
+}
+.the {
+    float: right;
+}
+footer {
+    width: 1920px;
+    height: 460px;
+    position: relative;
+    top: 1000px;
+}
+.bo {
+    width: 100%;
+}
