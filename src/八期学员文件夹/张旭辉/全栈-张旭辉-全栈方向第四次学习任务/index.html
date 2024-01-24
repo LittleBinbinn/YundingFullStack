@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{ 
+        display:flex;  
+        justify-content: center;  
+        height:100vh;  
+        margin:0;
+        overflow-x: hidden;  
+        }
+        .container {  
+            width: 90%;
+        }
+        .leftlittle {
+            width:70px;
+            height:49px;
+            position: relative;
+            background-image: url("https://typora-zxh.oss-cn-beijing.aliyuncs.com/1.jpg");
+            transition: transform 0.3s ease-in-out;
+        }
+        .leftlittle:hover {
+            transform: scale(0.7);  
+        }
+        .rightlittle {
+            width:70px;
+            height:49px;
+            position: relative;
+            left:95%;
+            bottom:49px;
+            background-image: url("https://typora-zxh.oss-cn-beijing.aliyuncs.com/2.jpg");
+            transition: transform 0.3s ease-in-out;
+        }
+        .rightlittle:hover {
+            transform: scale(0.7);
+        }
+        .middlelittle {
+            width:200px;
+            height:200px;
+            background-image: url("https://typora-zxh.oss-cn-beijing.aliyuncs.com/3.png");
+            position: relative;
+            bottom:98px;
+            left:45%;
+            transition: transform 0.3s ease-in-out;
+            z-index: 2;
+        }
+        .middlelittle:hover {
+            transform: scale(0.9);
+        }
+        .middlebig img{
+            position:relative;
+            bottom:249px;
+            z-index: 1; 
+            width: 100%; /* 设置图片宽度为100% */  
+            height: 100%; /* 设置图片高度为100% */  
+            object-fit: cover; 
+        }
+        .fly {
+            width: 334px;
+            height: 500px;
+            background-image: url("https://typora-zxh.oss-cn-beijing.aliyuncs.com/5.png");
+            position: relative;
+            bottom:359px;
+            left:190px;
+            z-index: 3;
+            transition: transform 0.3s ease-in-out;
+        }     
+        .fly:hover
+        {  
+            transform: translateY(-30px);
+        }
+        .love{
+            width: 334px;
+            height: 500px;
+            background-image: url("https://typora-zxh.oss-cn-beijing.aliyuncs.com/6.png");
+            position: relative;
+            bottom:859px;
+            left:590px;
+            z-index: 3;
+            transition: transform 0.3s ease-in-out;
+        }
+        .love:hover
+        {  
+            transform: translateY(-30px);
+        }
+        .stand{
+            width: 334px;
+            height: 500px;
+            background-image: url("https://typora-zxh.oss-cn-beijing.aliyuncs.com/7.png");
+            position: relative;
+            bottom:1359px;
+            left:990px;
+            z-index: 3;
+            transition: transform 0.3s ease-in-out;
+        }
+        .stand:hover
+        {
+            transform: translateY(-30px);
+        }
+        .word{
+            width: 950px;
+            height: 540px;
+            background-image: url("https://typora-zxh.oss-cn-beijing.aliyuncs.com/8.jpg");
+            position: relative;
+            left:270px;
+            bottom:1200px;
+            z-index: 2;
+            transition: transform 0.3s ease-in-out;
+        }
+        .sign{
+            width: 197px;
+            height: 72px;
+            background-image: url("https://typora-zxh.oss-cn-beijing.aliyuncs.com/9.png");
+            position: relative;
+            top:410px;
+            left:370px;
+            transition: transform 0.3s ease-in-out;
+            z-index: 3;
+        }
+        .sign:hover {
+            transform: scale(0.8); 
+        }
+        .word:hover
+        {  
+            transform: translateY(-30px);
+        }
+        .lu img{
+            position:relative;
+            bottom:249px;
+            z-index: 1; 
+            width: 100%; /* 设置图片宽度为100% */  
+            height: 100%; /* 设置图片高度为100% */  
+            object-fit: cover;
+            bottom:1550px;
+        }
+        .head {
+            position: relative;  
+            width: 250px;  
+            height: 50px;
+            border: none;
+            transition: opacity 2s ease-in-out;
+            bottom: 1480px;
+            left:600px;    
+        }
+        .head:hover{
+            animation: appear 2s infinite;
+        }
+        @keyframes appear {  
+        0% {}  
+        25% {
+            border-left: 5px solid #2a3f17;  
+             }  
+        50% {  
+            border-top: 5px solid #2a3f17;  
+            border-left: 5px solid #2a3f17;  
+            }  
+        75% {  
+            border-top: 5px solid #2a3f17;  
+            border-left: 5px solid #2a3f17;  
+            border-right: 5px solid #2a3f17;  
+            }  
+         100% {  
+            border-top: 5px solid #2a3f17;  
+            border-left: 5px solid #2a3f17;  
+            border-right: 5px solid #2a3f17;
+            border-bottom:5px solid #2a3f17;
+            } 
+        }
+        .different{
+            position: relative;
+            color: #2a3f17;
+            text-align: center;
+            font-size:50px;
+            bottom:60px;
+        }
+        .horse {
+            width: 260px;
+            height: 416px;
+            background-image: url("https://typora-zxh.oss-cn-beijing.aliyuncs.com/11.jpg");
+            position: relative;
+            bottom: 1480px;
+            left: 140px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .horse:hover {
+            transform: translateY(-30px);
+        }
+        .kangaroo {
+            width: 260px;
+            height: 416px;
+            background-image: url("https://typora-zxh.oss-cn-beijing.aliyuncs.com/12.jpg");
+            position: relative;
+            bottom: 1896px;
+            left: 440px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .kangaroo:hover {
+            transform: translateY(-30px);
+        }
+        .lion {
+            width: 260px;
+            height: 416px;
+            background-image: url("https://typora-zxh.oss-cn-beijing.aliyuncs.com/13.jpg");
+            position: relative;
+            bottom: 2312px;
+            left: 740px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .lion:hover {
+            transform: translateY(-30px);
+        }
+        .hummingbird {
+            width: 260px;
+            height: 416px;
+            background-image: url("https://typora-zxh.oss-cn-beijing.aliyuncs.com/14.jpg");
+            position: relative;
+            bottom: 2728px;
+            left: 1040px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .hummingbird:hover {
+            transform: translateY(-30px);
+        }
+        .know {
+            position: relative;
+            width: 250px;  
+            height: 50px;
+            border: 3px solid #2a3f17;
+            bottom: 2608px;
+            left:580px;
+        }    
+        .Know {
+            position: relative;
+            color: #2a3f17;
+            font-size:20px;
+            left: 70px;
+            bottom:10px;
+            transform: color 2s ease none ;
+        }
+        .Know:hover {
+            color:white;
+        }
+        .know:hover {
+            animation: know 2s infinite;
+        }
+        @keyframes know {
+        from {background-color: #fff;}
+        to {background-color: #2a3f17;}
+        }
+        .last{
+            width: 700px;
+            height:1020px;
+            background-image: url("https://typora-zxh.oss-cn-beijing.aliyuncs.com/15.jpg");
+            position: relative;
+            bottom:2558px;
+        }
+        .photo {
+            width: 175px;
+            height:30px;
+            background-image: url("https://typora-zxh.oss-cn-beijing.aliyuncs.com/16.png");
+            position: relative;
+            left:800px;
+            bottom:3528px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .photo:hover {
+            transform: translateY(-20px);
+        }
+        .one{
+            width: 553px;
+            height: 137px;
+            position: relative;
+            bottom:3488px;
+            left:800px;
+            transition: width 5s, height 4s;
+            transition: transform 2s ease-in-out;
+        }
+        .one img:hover{
+            width: 600px;
+            height: 150px;
+            transform: translateX(20px);
+        }
+        .two {
+            width: 300px;
+            height: 80px;
+            position: relative;
+            bottom:3438px;
+            left:800px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .two:hover {
+            transform: translateX(70px);
+        }
+        .three {
+            width: 300px;
+            height: 80px;
+            position: relative;
+            bottom:3338px;
+            left:800px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .three:hover {
+            transform: translateX(70px);
+        }
+        .four {
+            width: 300px;
+            height: 80px;
+            position: relative;
+            bottom:3238px;
+            left:800px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .four:hover {
+            transform: translateX(70px);
+        }
+        .five {
+            width: 300px;
+            height: 80px;
+            position: relative;
+            bottom:3138px;
+            left:800px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .five:hover {
+            transform: translateX(70px);
+        }
+        .six {
+            width: 100%; /* 设置图片宽度为100% */  
+            height: 100%; /* 设置图片高度为100% */  
+            object-fit: cover;
+            position: relative;
+            bottom: 2938px;
+        }
+        .seven{
+            width: 300px;
+            height: 80px;
+            position: relative;
+            bottom:3688px;
+            left:150px;
+        }
+        .eight {
+            width: 300px;
+            height: 60px;
+            position: relative;
+            bottom:3738px;
+            left:850px;
+            font-size:40px;
+            background-color:#2a3f17;
+            padding-left: 100px;
+            color:white;
+            transform: color 2s ease 3s ;
+        }
+        .eight:hover {
+            animation: eight 4s infinite;
+            color: #2a3f17;
+        }
+        @keyframes eight {
+        from {background-color:#2a3f17;}
+        to {background-color: #fff;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="leftlittle"></div>
+        <div class="rightlittle"></div>
+        <div class="middlelittle"></div>
+        <div class="middlebig">
+            <img src="https://typora-zxh.oss-cn-beijing.aliyuncs.com/4.jpg">
+        </div>
+        <div class="fly"></div>
+        <div class="love"></div>
+        <div class="stand"></div>
+            <div class="word">
+                <div class="sign"></div>
+            </div>
+        <div class="lu">
+            <img src="https://typora-zxh.oss-cn-beijing.aliyuncs.com/10.png">
+        </div>
+        <div class="head"><p class="different">Difference</p></div>
+        <div class="horse"></div>
+        <div class="kangaroo"></div>
+        <div class="lion"></div>
+        <div class="hummingbird"></div>
+        <div class="know"><p class="Know">Know more</p></div>
+        <div class="last"></div>
+        <div class="photo"></div>
+        <div class="one">
+            <img src="https://typora-zxh.oss-cn-beijing.aliyuncs.com/17.png">
+        </div><div class="two">
+            <img src="https://typora-zxh.oss-cn-beijing.aliyuncs.com/18.png">
+        </div>
+        <div class="three">
+            <img src="https://typora-zxh.oss-cn-beijing.aliyuncs.com/19.png">
+        </div>
+        <div class="four">
+            <img src="https://typora-zxh.oss-cn-beijing.aliyuncs.com/20.png">
+        </div>
+        <div class="five">
+            <img src="https://typora-zxh.oss-cn-beijing.aliyuncs.com/21.png">
+        </div>
+        <div class="six">
+            <img src="https://typora-zxh.oss-cn-beijing.aliyuncs.com/22.png">
+        </div>
+        <div class="seven">
+            <img src="https://typora-zxh.oss-cn-beijing.aliyuncs.com/23.gif">
+        </div>
+        <div class="eight">
+            <p class="big">Big World</p>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

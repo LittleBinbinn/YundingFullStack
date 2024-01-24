@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>animals</title>
+    <link rel="stylesheet" type="text/css" href="./五周作业.css/iconfont.css"/>
+<style>
+    *{
+        margin:0;
+    }
+.beijing{
+    width:100%;
+    background-image: url('https://florenceshine.oss-cn-beijing.aliyuncs.com/%E7%AC%AC%E4%BA%94%E5%91%A8%E8%83%8C%E6%99%AF.png');
+}
+.shang{
+    width:100%;
+    height:600px;
+    background-image:url('https://florenceshine.oss-cn-beijing.aliyuncs.com/%E9%BE%9F%E9%BE%9F.png');
+    background-size: cover;
+}
+.daohang{
+    position:relative;
+    background-color: aliceblue;
+    height:20px;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.zuo{
+    width:20px;
+    height:20px;;
+}
+.icon-daohanglanmoshi02
+{
+    position:absolute;
+}
+.you{
+    width:20px;
+    height:20px;
+}
+.icon-daohanglansousuo{
+    position:relative;
+    left:15%;
+}
+#yiduanbiaoti{
+    text-align:center;
+    font-family:"微软雅黑";
+}
+.paragraph1{
+    position:absolute;
+    width:730px;
+    height:200px;
+    top:30%;
+    left:27%;
+    font-size: large;
+}
+.anniu1{
+    position:relative;
+    width:180px;
+    height:70px;
+    background-image:url('https://florenceshine.oss-cn-beijing.aliyuncs.com/%E7%BB%BF%E8%89%B2%E6%8C%89%E9%92%AE.png');
+    top:60%;
+    left:27%;
+    transition:1s;
+    line-height:70px;/*设置盒模型元素居中的方法*/
+    text-align: center;
+    font-family:"Verdana";
+    font-size:larger;
+}
+.anniu1:hover{
+    width:220px;
+    height:80px;
+}
+.photo{
+    position:absolute;
+    width:150px;
+    height:150px;
+    background-color: rgb(43, 226, 83);
+top:-10px;
+left:45%;
+transition: 1s;
+}
+.quan{
+    position:relative;
+    width:100px;
+    height:100px;
+    border-radius: 90px;
+    top:14%;
+    left:15%;
+    transition:1s;
+    border:2px solid white;
+}
+.quan:hover{
+    width:110px;
+    height:110px;
+}
+.photo:hover{
+    width:160px;
+    height:160px;
+}
+.icon-xiangji1{
+    left:5%;
+    top:5%;
+    position:relative;
+    font-size: 90px;
+    transition:1.5s;
+}
+.icon-xiangji1:hover{
+font-size: 100px;
+}
+.bird3{
+    position:absolute;
+width:220px;
+height:300px;
+background-image: url('https://florenceshine.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E9%B8%9F3.png');
+background-size:cover;
+top:60%;
+left:58%;
+transition:1.5s;
+}
+.bird3:hover{
+    width:230px;
+    height:330px;
+}
+.bird2{
+    position:absolute;
+width:220px;
+height:300px;
+background-image: url('https://florenceshine.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E9%B8%9F2.png');
+top:60%;
+left:42%;
+transition:1.5s;
+background-size:cover;
+}
+.bird2:hover{
+    width:230px;
+    height:330px;
+}
+.bird1{
+    position:absolute;
+width:220px;
+height:300px;
+background-image:url('https://florenceshine.oss-cn-beijing.aliyuncs.com/%E7%81%AB%E9%B8%9F%E4%B8%802.png');
+background-size: cover;
+top:60%;
+left:27%;
+transition:1.5s;
+}
+.bird1:hover{
+    width:230px;
+    height:330px;
+}
+#fly{
+    position: relative;
+    font-size: xx-large;
+    color:aliceblue;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 450px;
+    left:170px;
+}
+#love{
+    position: relative;
+    font-size: xx-large;
+    color:aliceblue;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 450px;
+    left:150px;
+}
+#stand{
+    position: relative;
+    font-size: xx-large;
+    color:aliceblue;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 450px;
+    left:120px;
+}
+.zhong{
+    position:relative;
+    width:100%;
+    height:400px;
+    background-image:url('https://florenceshine.oss-cn-beijing.aliyuncs.com/%E9%B9%BF2.png');
+    background-size: cover;
+    top:400px;
+}
+.paragraph2{
+    position:absolute;
+    width:600px;
+    height:300px;
+    background-image:url('https://florenceshine.oss-cn-beijing.aliyuncs.com/%E7%81%B0%E8%83%8C.png');
+    top:-15%;
+    left:30%;
+    font-size: 15px;
+    line-height: 1.6;
+}
+p{
+    position:relative;
+    top:10px;
+}
+.anniu2{
+    position: relative;
+    width:150px;
+    height:60px;
+    background-image:url('https://florenceshine.oss-cn-beijing.aliyuncs.com/%E7%BB%BF%E8%89%B2%E6%8C%89%E9%92%AE.png');
+    top:40%;
+    left:45%;
+    transition:1s;
+    line-height: 60px;
+    text-align: center;
+}
+.anniu2:hover{
+    width:160px;
+    height:70px;
+}
+.box{
+    position:relative;
+    width:100%;
+    height:550px;
+    top:401px;
+}
+.title{
+    position:relative;
+    width:300px;
+    height:70px;
+    left:40%;
+    line-height: 70px;
+    text-align: center;
+    font-size: 25px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight:500;
+}
+.animals{
+    position:relative;
+    width:800px;
+    height:400px;
+    display:flex;
+    justify-content:space-between;
+    left:23%
+}
+.animal{
+    position:relative;
+    width:120px;
+    height:200px;
+    top:80px;
+}
+.photoa{
+    width:120px;
+    height:130px;
+    transition:1.2s;
+}
+.photoa.photo1
+{
+    background-image: url('https://florenceshine.oss-cn-beijing.aliyuncs.com/%E9%A9%AC.png');
+    background-size: cover;
+}
+.photoa.photo2{
+    background-image: url('https://florenceshine.oss-cn-beijing.aliyuncs.com/%E8%A2%8B%E9%BC%A0.png');
+    background-size:cover;
+}
+.photoa.photo3{
+    background-image: url('https://florenceshine.oss-cn-beijing.aliyuncs.com/%E7%8B%AE%E5%AD%90.png');
+    background-size:cover;
+}
+.photoa.photo4{
+    background-image: url('https://florenceshine.oss-cn-beijing.aliyuncs.com/%E5%B0%8F%E9%B8%9F.png');
+    background-size:cover;
+}
+.photoa:hover{
+    height:150px;
+}
+#horse1{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bolder;
+}
+#horse2{
+line-height: 0;
+    font-size: smaller;
+    text-align: center;
+}
+#daishu1{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bolder;
+}
+#daishu2{
+line-height: 0;
+    font-size: smaller;
+    text-align: center;
+}
+#lion1{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bolder;
+}
+#lion2{
+    line-height: 0;
+    font-size: small;
+    text-align: center;
+}
+#humming1{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bolder;
+}
+#humming2{
+line-height: 0;
+    font-size: smaller;
+    text-align: center;
+}
+.a{
+position:relative;
+bottom:10px;
+border: 0.5px solid ;    
+}
+.anniu3{
+    position:relative;
+    width:200px;
+    height:50px;
+    left:45%;
+    transition:1.5s;
+    border:solid;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 100;
+    font-size: larger;
+}
+.anniu3:hover{
+    width:210px;
+height:60px;
+}
+.paragrapha{
+    width:120px;
+    height:70px;
+    background-image:url('https://florenceshine.oss-cn-beijing.aliyuncs.com/%E7%81%B0%E8%83%8C.png');
+    transition: 1.5s;
+}
+.xiaban{
+    width:100%;
+    height:1500px;
+
+}
+.songshu{
+    position:relative;
+    width:400px;
+    height:800px;
+    background-image:url('https://florenceshine.oss-cn-beijing.aliyuncs.com/%E6%9D%BE%E9%BC%A0.png');
+    background-size: cover;
+    top:36%;
+    left:16%;
+    transform:scale(1);
+    transition: transform 1s ease-in-out;
+}
+.songshu:hover{
+    transform:scale(1.05);
+}
+.introduce{
+    position:relative;
+    width:400px;
+    height:800px;
+    background-color: aquamarin;
+    top:-17%;
+    left:50%;
+    display: flex;
+    flex-direction: column;
+}
+.introducea{
+    width:98%;
+    height:180px;
+
+    margin: 5px;
+    display:flex;
+    flex-direction: row;
+}
+.first{
+    position:relative;
+    width:70px;
+    height:70px;
+    border-radius: 90px;
+    top:20%;
+    text-align: center;
+    line-height: 70px;
+    border: 2px solid;
+}
+.second{
+    position:relative;
+    width:70px;
+    height:70px;
+    border-radius: 90px;
+    top:20%;
+    text-align: center;
+    line-height: 70px;
+    border: 2px solid;
+}.third{
+    border: 2px solid;
+    position:relative;
+    width:70px;
+    height:70px;
+    border-radius: 90px;
+    top:20%;
+    text-align: center;
+    line-height: 70px;
+}
+.fourth{
+    position:relative;
+    width:70px;
+    height:70px;
+    border-radius: 90px;
+    top:20%;
+    text-align: center;
+    line-height: 70px;
+    border: 2px solid;
+}
+#first{
+    position:relative;
+    left:20%;
+    top:38%;
+}
+#second{
+    position:relative;
+    top:38%;
+    left:20%;
+}
+#third{
+    position:relative;
+    top:38%;
+    left:20%;
+}
+#fourth{
+    position:relative;
+    top:38%;
+    left:20%;
+}
+#songshu1{
+    font-weight:500;
+}
+#songshu2{
+    font-size: large;
+}
+.introducezong{
+    height:300px;
+    width:98%;
+    margin:5px;
+}
+.introducea~.introduceb
+{
+    height:300px;
+}
+.dibu{
+    height:400px;
+    width:100%;
+}
+.kuai1{
+    position:relative;
+    height:100px;
+    width:300px;
+    top:30%;
+    left:20%;
+    text-align: center;
+    line-height: 170px;
+}
+.kuai2{
+    position:relative;
+    width:300px;
+    height:100px;
+    top:40%;
+    left:20%;
+    text-align: center;
+    line-height: 0%;
+}
+.kuai3{
+    position:relative;
+    width:200px;
+    height:200px;
+    left:40%;
+    top:-55px;
+}
+.wenzi{
+    position:relative;
+    top:25%
+}
+.kuai4{
+position:relative;
+height:50px;
+width:150px;
+background-image:url('https://florenceshine.oss-cn-beijing.aliyuncs.com/%E5%A2%A8%E7%BB%BF%E7%9F%A9%E5%BD%A2.png');
+font-size: larger;
+text-align: center;
+line-height:50px;
+bottom:50%;
+left:60%;
+transition:1.5s;
+}
+.kuai4:hover{
+    height:60px;
+    width:160px;
+}
+#dibu1{
+    border: 1px solid;
+}
+</style>
+</head>
+<body>
+    <div class="beijing">
+    <div class="shang">
+        <div class="daohang">
+            <div class="zuo"><i class="iconfont icon-daohanglanmoshi02"></i></div>
+            <div class="you"><i class="iconfont icon-daohanglansousuo"></i></div>
+        </div>
+        <div class="photo">
+            <div class="quan"><i class="iconfont icon-xiangji1"></i></div>
+
+        </div>
+            <div class="paragraph1">
+                <h2 id="yiduanbiaoti">Animal Photography</h2>
+                A silhouette of them, a simple little acttion, here are the photographer’s 
+eyes the best of them, their laughter, their love, their every vivid, are recored 
+by us.
+            </div>
+            <div class="anniu1">EXPIORE</div>
+            <div class="bird1"><div id="fly">Fly</div></div>
+            <div class="bird2"><div id="love">Love</div></div>
+            <div class="bird3"><div id="stand">Stand</div></div>
+    </div>
+    <div class="zhong">
+        <div class="paragraph2"><p>“Family Farms is the best place，where I can buy fruit,vegetable,meat,honey,milk,
+            eggs and so on for my retaurant directly fromupplier. Super convinient.Thank you”
+            xdccnfc cfvfesc cfnccnjdcn cfjdcdsr dcwwzwqg ejs dddc ddf fnfjv eij fvnv jnxzexh cn
+            cdcmdsc ddnc, cddmdcds dncdn cdcn wqeoeas, dcndassasas,cdcndcnc cciqoskxm 
+            cbdcpqslwq nfnere nfncsfjjc dndcww frhfjnc qpdjweiw cnncqe, cqjsdc ccn dcjndc ,
+            ncf cdncjd dcdjcndq csjncq dcdncf dcdjdnc cdjsq, qkodkqe wqcnpsdc cdnqq qcw,
+            cqnonxj dcdcnd dcnjsdvb wcnwq cowwncjq jjcnjncqnw wcq c wd cwch, cnjncnc ece
+            cdcnncdwnc	nenwc dcnnc cjcj , c cjrnc wecwc .	</div>
+        <div class="anniu2">SIGN UP</p></div>
+    </div>
+    <div class="box">
+        <div class="title">Different</div>
+        <div class="animals">
+            <div class="animal">
+                <div class="photoa photo1"></div>
+                <div class="paragrapha">
+                    <p id="horse1">Horse</p><br>
+                    <p id="horse2">a different story</p>
+                </div>
+                <hr class="a">
+            </div>
+            <div class="animal">
+                <div class="photoa photo2"></div>
+                <div class="paragrapha">
+                    <p id="daishu1">Kangroo</p><br>
+                    <p id="daishu2">a different story</p>
+                </div>
+                <hr class="a">
+            </div>
+            <div class="animal">
+                <div class="photoa photo3"></div>
+                <div class="paragrapha">
+                    <p id="lion1">lion</p><br>
+                    <p id="lion2">a different story</p>
+                </div>
+                <hr class="a">
+            </div>
+            <div class="animal">
+                <div class="photoa photo4"></div>
+                <div class="paragrapha">
+                    <p id="humming1">HummingBird</p><br>
+                    <p id="humming2">a different story</p>
+                </div>
+                <hr class="a">
+            </div>
+        </div>
+        <div class="anniu3">know&nbsp&nbsp&nbsp&nbsp&nbsp more</div>
+    </div>
+    <div class="xiaban">
+        <div class="songshu"></div>
+        <div class="introduce">
+            <div class="introducezong">
+                <h2 id="songshu1">The Photo</h2>
+                <p id="songshu2">“Family Farms is the best placewhere I 
+                can buy fruit,vegetable,meat,honey,milk,
+                eggs and so on for my retaurant directly from
+                supplier. Super convinient.Thank you”</p>
+            </div>
+            <div class="introducea"><div class="first"><h1>1</h1></div><div id="first">Looking&nbsp; for&nbsp; it</div></div>
+            <div class="introducea"><div class="second"><h1>2</h1></div><div id="second">Cultivate feelings</div></div>
+            <div class="introducea"><div class="third"><h1>3</h1></div><div id="third">Shooting</div></div>
+            <div class="introducea"><div class="fourth"><h1>4</h1></div><div id="fourth">Harvest achivement</div></div>
+        </div>
+    </div>
+    <div class="dibu">
+        <hr id="dibu1">
+        <div class="kuai1"><h3>IN THE WILD</h3></div>
+        <div class="kuai2"><H3>IN THE SEA</H3></div>
+        <div class="kuai3">
+          <div class="wenzi">
+              <p>MORE</p>
+            <p>We creat art</p>
+            <p>we creat life</p>
+          </div>
+        </div>
+        <div class="kuai4">Big World</div>
+    </div>
+</div>
+</body>
+</html>

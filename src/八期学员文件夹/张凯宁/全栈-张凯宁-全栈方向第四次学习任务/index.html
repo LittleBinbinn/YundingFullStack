@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal</title>
+    <link rel="stylesheet" href="index.css ">
+    <style>
+        *{margin: 0;
+            padding: 0;
+        }
+         html {
+        overflow-y: scroll;
+     }
+     :root {
+                            overflow-y: auto; overflow-x: hidden;
+                        }
+                         
+                         :root body {
+                            position: absolute;
+                        } 
+                            body {
+                            width: 100vw;
+                            overflow: hidden;
+                            overflow-y: scroll;
+                        }
+        .first {
+            position: relative;
+            width: 100%;
+            height: 922px;
+            background-image: url(https://zhangkaining.oss-cn-beijing.aliyuncs.com/%E4%B9%8C%E9%BE%9F.png);
+            background-size:cover;	
+            background-size:100%100%;
+
+        }
+        .top {
+            display: flex;
+            position: relative;
+            width: 100%;
+            height: 50px;
+            background-color: #fff;
+        }
+        .nav1 {
+            width: 50px;
+            height: 50px;
+        }
+        .nav3 {
+            width: 50px;
+            height: 50px;
+        }
+        .nav2 {
+            flex:1;
+            height: 50px;
+            background-color: white;
+        }
+        .picture {
+            position: relative;
+            margin: auto;
+            width: 200px;
+            height: 200px;
+            background-color: #81c04b;
+        }
+        .shangchuan {
+            position: relative;
+            top: -167px;
+            left: 20%;
+            height: 100px;
+            width: 100px;
+            line-height: 200px;
+            text-align: center;
+            
+        }
+        .animalphoto {
+            position: relative;
+            top: 30%;
+            margin: auto;
+            height: 196px;
+            width: 1112px;
+            background-color: none;
+        }
+        .aptitle {
+            height: 50%;
+            text-align: center;
+            line-height:80px;
+            font-size: 70px;
+            color: #2a3f17;
+        }
+        .aptext {
+            text-align: center;
+            font-size: 30px;
+            color: #2a3f17;
+        }
+        .explorebutton {
+            position: relative;
+            top: 60%;
+            width: 266px;
+            height: 70px;
+            background-color: #2a3f17;
+            text-align: center;
+            line-height: 70px;
+            font-size: 40px;
+            color: honeydew;
+        }
+        .explorebutton a {
+            color: #fff;
+            text-decoration: none;
+
+
+        }
+        .picture3 {
+            position: relative;
+            width: 100%;
+            height: 600px;
+        }
+        .three {
+            position: relative;
+            margin: auto;
+            top: -150px;
+            height: 500px;
+            width: 1112px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+        
+        .t1 {
+            position: relative;
+            width: 320px;
+        }
+        .t1 img  {
+            position: absolute;
+            transition: transform 1.5s;
+            height: 500px;
+        }
+        .t1 img:hover {
+            transform: translateY(-90px);
+        }
+        .top .iconfont {
+            transition:transform 1s ;
+        }
+        .top .iconfont:hover {
+            transform: scale(0.7);
+        }
+        .nav2 a {
+            text-decoration: none;
+            color: white;
+        }
+        .nav1 a {
+            text-decoration: none;
+           
+        }.nav2 a {
+            text-decoration: none;
+            
+        }
+        .explorebutton a{text-decoration: none;
+            color: white;}
+        .nav1 a{
+            color: black;
+        }
+        .deerbutton a{
+            text-decoration: none;
+            color: white;
+        }
+        .nav3 a{
+            color: black;
+            text-decoration: none;
+        }
+        .deer {
+            width: 100%;
+            height: 760px;
+            position: relative;
+            background-image:url(https://zhangkaining.oss-cn-beijing.aliyuncs.com/%E9%B9%BF.png)
+        }
+        .deertext {
+            position: relative;
+            top: -80px;
+            margin: 0 auto;
+            width: 945px;
+            height: 543px;
+            background-color: #e0dfdf;
+            transition: transform 1s;
+        }
+        .deertext:hover {
+            transform: translateY(-90px);
+        }
+        .deert {
+            position: relative;
+            top: 80px;
+            margin: 0 auto;
+            
+            width: 800px;
+            height: 233px;
+            font-size: 20px;
+            color: #2a3f17;
+            
+            
+        }
+        .deerbutton {
+            position: relative;
+            top: 180px;
+            margin: 0 auto;
+            text-align: center;
+            width: 200px;
+            height: 70px;
+            background-color: #2a3f17;
+            line-height: 70px;
+            font-size: 30px;
+            color: white;
+            transition: transform 1s;
+        }
+        .deerbutton:hover {
+            transform: scale(0.7);
+        }
+        .difference {
+            width: 100%;
+            height: 850px;
+            text-align: center;
+        }
+        .differencetitle {
+            position: relative;
+            top: 100px;
+            
+            width: 270px;
+            height: 80px;
+            font-size: 48px;
+            line-height: 80px;
+            color:#2a3f17 ;
+            background-color: #fff;
+            border: none;
+            transition: color 2s;
+
+        }
+        .differencetitle::before, .differencetitle::after {
+            box-sizing: inherit;
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: 6px solid transparent;
+
+        }
+        .differencetitle::before {
+            top: 0;
+            left: 0;
+        }
+        .differencetitle::after {
+            bottom: 0;
+            right: 0;
+        }
+        .differencetitle:hover {
+            color: #2a3f17;
+            &:before,
+            &:after {
+                width: 100%;
+		height: 100%;
+	}
+}
+
+.differencetitle:hover::before {
+	border-top-color: #2a3f17;
+	border-right-color: #2a3f17;
+	transition: width 0.1s, height 0.1s 0.1s; 
+}
+
+.differencetitle:hover::after {
+	border-bottom-color:#2a3f17;
+	border-left-color: #2a3f17;
+	transition: border-color 0s 0.2s, width 0.1s 0.2s, height 0.1s 0.3s;
+}
+
+
+
+        .differencepicture {
+            position: relative;
+            top: 200px;
+            margin: 0 auto;
+            text-align: center;
+            width: 1112px;
+            height: 400px;
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .dpicture {
+            width: 260px;
+             background-color: #e0dfdf;
+        }
+        .pic4 {
+            height: 270px;
+        }
+        .dtext {
+            color: #2a3f17;
+           
+        }
+        .dtitle {
+            position: relative;
+            top: 25px;
+            margin: 0 auto;
+            text-align: center;
+            width: 180px;
+            height: 30px;
+            color: #2a3f17;
+            font-size: 25px;
+            line-height: 30px;
+            font-weight: 500;
+        }
+        .dtext1 {
+            position: relative;
+            top: 36px;
+            margin: 0 auto;
+            text-align: center;
+            
+            width: 250px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 18px;
+
+        }
+        .dtext1 a {
+            text-decoration:underline ;
+            color: #2a3f17; 
+        }
+        .pic4 img {
+            position: relative;
+            width: 260px;
+            height: 270px;
+        }
+        .dpicture {
+            transition: transform 1.5s;
+        }
+        .dpicture:hover {
+            transform: translateY(-90px);;
+        }
+        .differencebutton {
+            position: relative;
+            text-align: center;
+            margin: 0 auto;
+            top: 300px;
+            width: 350px;
+            height: 70px;
+            background-color: white;
+            border-color:#2a3f17 ;
+            border-width: 5px;
+            border-style: solid;
+            font-size: 40px;
+            color: #2a3f17 ;
+            line-height: 70px;
+            text-align: center;
+            transition-duration: 0.4s;
+
+        }
+        .differencebutton a {
+            text-decoration:none ;
+            color: #2a3f17; 
+            transition-duration: 0.4s;
+        }
+        
+        .differencebutton a:hover {
+            background-color: #2a3f17;
+            color: white ;
+        }
+        .differencebutton:hover {
+            background-color: #2a3f17;
+        }
+
+        .point {
+            height: 1250px;
+
+        }
+        .out {
+            position: relative;
+            top: 130px;
+            margin: 0 auto;
+            left: 0%;
+            width: 1400px;
+            height: 700px;
+            background-color: #fff;
+        }
+        .left {
+            position: relative;
+            width: 700px;
+            height: 1024px;
+        }
+        .right {
+            position: relative;
+            width: 700px;
+            height: 1024px;
+            top: -1024px;
+            left: 700px;
+        }
+        
+        .up {
+            position: relative;
+            
+            width: 700px;
+            height: 345px;
+        }
+        .down {
+            position: relative;
+            height: 575px;
+            width: 600px;
+            left: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .uptitle {
+            position: relative;
+            top: 40px;
+            left: 100px;
+            width: 400px;
+            height: 100px;
+            background-color: #fff;
+            font-size: 60px;
+            color:#2a3f17 ;
+            text-indent: none;
+            transition: transform 1.5s;
+        }
+        .uptitle:hover {
+            transform: translateY(-50px);
+        }
+        .uptext {
+            position: relative;
+            top: 50px;
+            left: 100px;
+            width: 500px;
+            height: 160px;
+            background-color: #fff;
+            font-size: 25px;
+            color:#2a3f17 ;
+            transition: transform 0.7s;
+        }
+        .uptext:hover {
+            transform:translateX(20px) translateY(20px) scale(1,1.1);
+        }
+        .index {
+            height: 120px;
+            width: 500px;
+            left: 100px;
+            transition: transform 1s;
+        }
+        .index:hover {
+            transform: translateX(80px);
+        }
+        .box {
+            position: relative;
+            top: -100px;
+            left: 110px;
+            height: 80px;
+            width: 300px;
+            background-color: #fff;
+            font-size: 30px;
+            line-height: 80px;
+        }
+        .end {
+            position: relative;
+            height: 460px;
+            border-top: black solid 2px;
+        }
+        .endleft {
+            position: relative;
+            width: 510px;
+            height: 180px;
+            background-color: #fff;
+            
+        }
+        .bigtext {
+            position: relative;
+            width: 240px;
+            height: 180px;
+            font-size: 38px;
+            line-height: 110px;
+            color:#2a3f17 ;
+
+        }
+        .smalltext {
+            position: relative;
+            width: 230px;
+            height: 180px;
+            top: -180px;
+            left: 280px;
+        }
+        .smalltitle {
+            position: relative;
+            top: 37px;
+            width: 200px;
+            height: 30px;
+            background-color: white;
+            font-size: 27px;
+            color: #949f8b;
+        }
+        .smallt1 {
+            position: relative;
+            top: 50px;
+            width: 200px;
+            height: 100px;
+            background-color: #fff;
+            font-size: 25px;
+            line-height: 50px;
+            color: #949f8b;
+        }
+        .endbutton {
+            position: relative;
+            background-color: #fff;
+            width: 360px;
+            height: 80px;
+            top: -125px;
+            left: 700px;
+            font-size: 40px;
+            color: white;
+            background-color:  #949f8b;
+            outline: none;
+            border: 0;
+            transition-duration: 0.4s;
+        }
+        .endbutton:hover {
+            background-color: #fff;
+            color:#949f8b ;
+        }
+        .ll {
+            margin: 0 auto;
+            position: relative;
+            width: 1200px;
+            height: 180px;
+            top: 150px;
+            
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <div class="first">
+        <div class="top">
+            <div class="nav1 iconfont" style="font-size: 40px; color: black;line-height: 50px; text-align: center; text-decoration: none;"><a href="#">&#xe667;</a></div>
+            <div class="nav2"><a href="#">
+                <div class="picture iconfont" style="text-align: center; line-height: 200px; color: white; font-size: 180px; font-weight: 200;">&#xea97;<div class="shangchuan iconfont" style="color: white;text-align: center; line-height: 120px; font-size: 120px;"> &#xe623;</div></div>
+                </a>
+            </div>
+            <div class="nav3 iconfont" style="font-size: 40px; color: black; line-height: 50px; text-align: center;"><a href="#">&#xe612;</a></div>
+        </div>
+        <div class="animalphoto">
+            <div class="aptitle">Animal Photography</div>
+            <div class="aptext">A silhouette of them, a simple little acttion, here are the photographer eyes the best of them, their laughter, their
+            love, their every vivid, are io by us.</div>
+        <div class="explorebutton"><a href ="#">EXPLORE</a></div>
+        </div>
+
+    </div>
+    <div class="picture3">
+        <div class="three">
+            <div class="t1">
+                
+                <img src="https://zhangkaining.oss-cn-beijing.aliyuncs.com/Fly.png" /></div>
+            <div class="t1">
+                <img src="https://zhangkaining.oss-cn-beijing.aliyuncs.com/Love.png" /></div>
+            <div class="t1"><img src="https://zhangkaining.oss-cn-beijing.aliyuncs.com/Stand.png" /></div>
+        </div>
+    </div>
+    <div class="deer">
+        <div class="deertext">
+            
+            <div class="deert">&nbsp;"Family Farms is the best place,where I can buy fruit,vegetable,meat,honey,milk, eggs and so on for my retaurant
+            directly fromupplier.Super convinient.Thank you" xdccnfc cfvfesc cfnccnjdcn cfjdcdsr dcwwzwqg ejs dddc ddf fnfjv eij
+            fvnv jnxzexh cn cdcmdsc ddnc,cddmdcds dncdn cdcn wqeoeas, dcndassasas,cdcndcnc cciqoskxm cbdcpqslwq nfnere nfncsfjjc
+            dndcww frhfjnc qpdjweiw cnncqe, cqjsdc ccn dcjndc , ncf cdncjd dcdjcndq csjncq dcdncf dcdjdnc cdjsq, qkodkqe wqcnpsdc
+            cdnqq qcw, cqnonxj dcdcnd dcnjsdvb wcnwq cowwncjq jjcnjncqnw wcq c wd cwch, cnjncnc ece cdcnncdwncnenwc dcnnc cjcj , c
+            cjrnc wecwc .
+</div>
+            <div class="deerbutton"><a href="#">SIGN UP</a></div>
+        </div>
+    </div>
+    <div class="difference">
+        <button class="differencetitle">Difference</button>
+        <div class="differencepicture">
+            <div class="dpicture">
+                <div class="pic4"><img src="https://zhangkaining.oss-cn-beijing.aliyuncs.com/%E9%A9%AC.png" ></div>
+                <div class="dtext">
+                <div class="dtitle">Horse</div>
+                <div class="dtext1"><a href="#">A difference story</a></div>
+            </div></div><div class="dtext"></div>
+            <div class="dpicture"><div class="pic4"><img src="https://zhangkaining.oss-cn-beijing.aliyuncs.com/%E8%A2%8B%E9%BC%A0.png" ></div><div class="dtext">
+                <div class="dtitle">Kangaroo</div>
+                <div class="dtext1"><a href="#">A difference story</a></div>
+            </div></div><div class="dtext"></div>
+            <div class="dpicture"><div class="pic4"><img src="https://zhangkaining.oss-cn-beijing.aliyuncs.com/%E7%8B%AE%E5%AD%90.png" ></div><div class="dtext">
+                <div class="dtitle">Lion</div>
+                <div class="dtext1"><a href="#">A difference story</a></div>
+            </div></div><div class="dtext"></div>
+            <div class="dpicture"><div class="pic4"><img src="https://zhangkaining.oss-cn-beijing.aliyuncs.com/%E5%B0%8F%E9%B8%9F.png" ></div><div class="dtext">
+                <div class="dtitle">Hummingbird</div>
+                <div class="dtext1"><a href="#">A difference story</a></div>
+            </div></div>
+        </div>
+        <div class="differencebutton"><a href="#" style="width: 355.33px; height: 75.33px;">Know more</a></div>
+    </div>
+    <div class="point">
+        <div class="out">
+            <div class="left"><img src="https://zhangkaining.oss-cn-beijing.aliyuncs.com/%E6%9D%BE%E9%BC%A0.png" alt=""></div>
+            <div class="right">
+                <div class="up">
+                    <div class="uptitle">The Photo</div>
+                    <div class="uptext">&nbsp;"Family Farms is the best placewhere l can buy fruit,vegetable,meat,honey,milk,
+                    eggs and so on for my retaurant directly from supplier. Super convinient.Thank you"
+</div>
+                </div>
+                <div class="down">
+                    <div class="index iconfont" style="font-size: 100px; font-weight: 100;line-height: 120px;color: #2a3f17;">&#xe613;
+                        <div class="box">Looking for it</div>
+                    </div>
+                    <div class="index iconfont" style="font-size: 98px;font-weight: 100;line-height: 120px;color: #2a3f17;">&#xe62b;
+                    <div class="box">Cultivate feelings</div></div>
+                    <div class="index iconfont" style="font-size: 107px;font-weight: 100;line-height: 120px;color: #2a3f17;position: relative;left: -3px;">&#xe72a;
+                    <div class="box">Shooting</div></div>
+                    <div class="index iconfont" style="font-size: 95px; font-weight: 100;line-height: 120px;color: #2a3f17;">&#xea2d;
+                        <div class="box">Harvest achievement</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="end">
+        <div class="ll">
+        <div class="endleft">
+            <div class="bigtext"><p>IN THE WILD</p> <p>IN THE SEA</p></div>
+            <div class="smalltext">
+                <div class="smalltitle">MORE</div>
+                <div class="smallt1"><p>We create art.</p><p>We create life</p></div>
+            </div>
+        </div>
+        <button class="endbutton">Big World</button>
+        </div>
+    </div>
+    
+
+
+    
+    
+</body>
+</html>

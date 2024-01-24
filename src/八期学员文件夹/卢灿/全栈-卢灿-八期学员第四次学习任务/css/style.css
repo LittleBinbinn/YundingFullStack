@@ -1,0 +1,482 @@
+.overall {
+    width: 1920px;
+    height: 4674px;
+    position: relative;
+    margin: auto;
+}
+
+.indexes_search {
+    width: 1920px;
+    height: 50px;
+}
+
+.up_left {
+    width: 49px;
+    height: 49px;
+    position: relative;
+    left: 25px;
+    top: 4px;
+    transition: transform .5s;
+}
+
+.up_left:hover {
+    transform: scale(0.6);
+}
+
+.up_right {
+    width: 49px;
+    height: 49px;
+    position: relative;
+    left: 1860px;
+    top: -45px;
+    transition: transform .5s;
+}
+
+.up_right:hover {
+    transform: scale(0.6);
+}
+
+.turtle_background {
+    position: relative;
+    width: 1920px;
+    height: 880px;
+    background-color: #96c4d1;
+    background-image: url("https://typora--image--image.oss-cn-beijing.aliyuncs.com/turtle.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.camera {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #81c04b;
+    margin: auto auto;
+    top: -50px;
+    left: 45%;
+    transition: transform .5s;
+}
+
+.camera:hover {
+    transform: scale(0.8);
+}
+
+.turtle_text {
+    position: relative;
+    width: 1920px;
+    height: 450px;
+    font-size: 35px;
+    color: #2a3f17;
+    text-align: center;
+}
+
+span {
+    font-size: 55px;
+}
+
+.EXPIORE {
+    position: absolute;
+    width: 260px;
+    height: 70px;
+    background-color: #2a3f17;
+    top: 300px;
+    left: 350px;
+    font-size: 40px;
+    line-height: 70px;
+    color: #fff;
+}
+
+.blank_animal {
+    width: 1920px;
+    height: 600px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.blank_animal_blank {
+    width: 80px;
+    height: 500px;
+    background-color: #fff;
+}
+
+.animals_box_Fly {
+    width: 330px;
+    height: 500px;
+    position: relative;
+    font-size: 50px;
+    color: #fff;
+    line-height: 800px;
+    text-indent: 170px;
+    top: -170px;
+    background-image: url("https://typora--image--image.oss-cn-beijing.aliyuncs.com/fly.jpg");
+    transition: transform 1s;
+}
+
+.animals_box_Fly:hover {
+    transform: translateY(-80px);
+}
+
+.animals_box_Love {
+    width: 330px;
+    height: 500px;
+    position: relative;
+    top: -170px;
+    font-size: 50px;
+    color: #fff;
+    line-height: 800px;
+    text-indent: 170px;
+    background-image: url("https://typora--image--image.oss-cn-beijing.aliyuncs.com/love.jpg");
+    transition: transform 1s;
+}
+
+.animals_box_Love:hover {
+    transform: translateY(-80px);
+}
+
+.animals_box_Stand {
+    width: 330px;
+    height: 500px;
+    position: relative;
+    top: -170px;
+    font-size: 50px;
+    color: #fff;
+    line-height: 800px;
+    text-indent: 170px;
+    background-image: url("https://typora--image--image.oss-cn-beijing.aliyuncs.com/stand.jpg");
+    transition: transform 1s;
+}
+
+.animals_box_Stand:hover {
+    transform: translateY(-80px);
+}
+
+.deer_background {
+    width: 1920px;
+    height: 760px;
+    background-color: #405f3e;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("https://typora--image--image.oss-cn-beijing.aliyuncs.com/deer.jpg");
+}
+
+.sign_up_blank {
+    width: 945px;
+    height: 80px;
+    background-color: #e0dfdf;
+    transition: transform 1s;
+}
+
+.sign_up_text {
+    width: 945px;
+    height: 542px;
+    position: relative;
+    top: -80px;
+    background-color: #e0dfdf;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    color: #2a3f17;
+    text-align: center;
+    transition: transform 1s;
+}
+
+.sign_up_text:hover {
+    transform: translateY(-80px);
+}
+
+.sign_up_en {
+    width: 945px;
+    height: 400px;
+    background-color: #e0dfdf;
+}
+
+.sign_up_box {
+    width: 196px;
+    height: 67px;
+    background-color: #2a3f17;
+    left: 60px;
+    font-size: 30px;
+    line-height: 70px;
+    color: #fff;
+    transition: transform .8s;
+}
+
+.sign_up_box:hover {
+    transform: scale(0.8);
+}
+
+.difference_animals {
+    width: 1920px;
+    height: 580px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.difference_box {
+    width: 300px;
+    height: 80px;
+    background-color: #fff;
+    transform: translateY(50px);
+    font-size: 55px;
+    color: #2a3f17;
+    border: none;
+    text-align: center;
+}
+
+.difference_box:hover {  
+    animation: border 4s linear alternate ;
+}
+
+@keyframes border {
+    15% {
+        border-top: 3px solid #2a3f17;
+    }
+
+    50% {
+        border-top: 3px solid #2a3f17;
+        border-right: 3px solid #2a3f17;
+    }
+
+    75% {
+        border-top: 3px solid #2a3f17; 
+        border-right: 3px solid #2a3f17;
+        border-bottom: 3px solid #2a3f17;
+    }
+
+    100% {
+        border-top: 3px solid #2a3f17;
+        border-right: 3px solid #2a3f17;
+        border-bottom: 3px solid #2a3f17;
+        border-left: 3px solid #2a3f17;
+    }
+}
+.four_animals {
+    width: 1150px;
+    height: 420px;
+    background-color: #fff;
+    transform: translateY(80px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.four_flex {
+    width: 263px;
+    height: 420px;
+    background-color: #e0dfdf;
+    color: #2a3f17;
+    font-size: 33px;
+    text-align: center;
+    line-height: 90px;
+    transition: transform 0.9s;
+}
+
+.four_flex:hover {
+    transform: translateY(-40px);
+}
+
+.picture_box {
+    width: 263px;
+    height: 261px;
+    background-color: #fff;
+}
+
+div p {
+    font-size: 25px;
+    line-height: 35px;
+    text-decoration: underline;
+}
+
+.know_more {
+    width: 1920px;
+    height: 1350px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.know_more_title {
+    width: 360px;
+    height: 70px;
+    background-color: #fff;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #2a3f17;
+    font-size: 40px;
+    color: #2a3f17;
+    text-align: center;
+    line-height: 60px;
+    transform: translateY(90px);
+    transition: 1s;
+}
+
+.know_more_title:hover {
+    background-color: #405f3e;
+    color: #fff;
+}
+
+.picture_and_text {
+    width: 1500px;
+    height: 1020px;
+    background-color: #fff;
+    transform: translateY(160px);
+    display: flex;
+    flex-direction: row;
+}
+
+.squirrel_picture {
+    width: 702px;
+    height: 1020px;
+}
+
+.squirrel_introduce {
+    width: 798px;
+    height: 1020px;
+    display: flex;
+    flex-direction: column;
+}
+
+.squirrel_title {
+    width: 180px;
+    height: 50px;
+    position: relative;
+    top: 88px;
+    left: 110px;
+    font-size: 38px;
+    color: #2a3f17;
+    transition: transform .5s;
+}
+
+.squirrel_title:hover {
+    transform: translateY(-20px)
+}
+
+.squirrel_sentence {
+    width: 550px;
+    height: 150px;
+    position: relative;
+    left: 120px;
+    top: 150px;
+    font-size: 25px;
+    color: #2a3f17;
+    transition: transform 1s;
+}
+
+.squirrel_sentence:hover {
+    transform: translateX(60px) scale(1.2)
+}
+
+.squirrel_catalog {
+    width: 444px;
+    height: 140px;
+    position: relative;
+    left: 120px;
+    top: 200px;
+    display: flex;
+    flex-direction: row;
+    transition: transform 1s;
+}
+
+.squirrel_catalog:hover {
+    transform: translateX(60px);
+}
+
+.squirrel_number {
+    width: 70px;
+    height: 70px;
+    color: #2a3f17;
+    font-size: 50px;
+    text-align: center;
+    border-radius: 50%;
+    border-color: #2a3f17;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.squirrel_index {
+    width: 300px;
+    height: 70px;
+    position: relative;
+    left: 30px;
+    color: #2a3f17;
+    font-size: 28px;
+    line-height: 75px;
+}
+
+.big_world {
+    width: 1920px;
+    height: 460px;
+    position: relative;
+}
+
+.big_world_title {
+    width: 360px;
+    height: 70px;
+    background-color: #949f8b;
+    position: relative;
+    left: 1200px;
+    top: 190px;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    line-height: 70px;
+    transition: 1s;
+}
+
+.big_world_title:hover {
+    transform: translateY(-20px);
+    background-color: #fff;
+    color: #405f3e;
+}
+
+.In_the_wild {
+    width: 268px;
+    height: 64px;
+    color: #2a3f17;
+    font-size: 50px;
+    position: relative;
+    left: 400px;
+    top: 80px;
+}
+
+.In_the_sea {
+    width: 268px;
+    height: 64px;
+    color: #2a3f17;
+    font-size: 50px;
+    position: relative;
+    left: 400px;
+    top: 130px;
+}
+
+.More {
+    width: 100px;
+    height: 56px;
+    position: relative;
+    left: 800px;
+    top: -30px;
+    font-size: 40px;
+    color: #4d5b41;
+}
+
+.Create {
+    width: 170px;
+    height: 80px;
+    position: relative;
+    left: 800px;
+    top: -10px;
+    font-size: 30px;
+    line-height: 40px;
+    color: #838b7c;
+}

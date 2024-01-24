@@ -1,0 +1,444 @@
+body {
+    width: 1920px;
+    min-width: none;
+    height: 4674px;
+    margin: 0 auto;
+    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+    color: #000;
+    /* background-image: url(../image/Shape\ 7\ copy.png);  */
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+.tortoise{
+    width: 1920px;
+    height: 929px;
+    background-image:url(image/乌龟.png) ; 
+}
+.head{
+    display: flex;
+    background: white;
+    width: 1920px;
+    height: 49px;
+}
+.head-1{
+    width: 75px;
+    height: 49px;
+    text-align: center;
+    transition: width 1s, height 1s;
+}
+.head-1:hover{
+    width: 50px;
+    height: 40px;
+}
+.head-1 img{
+    width: 25%;
+    position: relative;
+    top: 12px;
+}
+.head-2{
+    flex: 1;
+}
+.head-3{
+    width: 75px;
+    height:49px;
+    transition: width 1s, height 1s;
+}
+.head-3:hover{
+    width: 50px;
+    height: 40px;
+}
+.head-3 img {
+    width: 25%;
+    position: relative;
+    top: 12px;
+}
+.photo{
+    width: 160px;
+    height: 160px;
+    border: 7px solid white;
+    border-radius: 50%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: -30px;
+    transition: background 1s;
+}
+.photo:hover{
+    background: yellowgreen;
+}
+.photo img{
+    width: 75%;
+    position: relative;
+    top: 10px;
+    color: white;
+}
+.word{
+    width: 1111px;
+    margin: auto;
+    text-align: center;
+}
+.word h1{
+    font-size: 72px;
+    font-family: Cambria;
+}
+.word p{
+    font-size: 30px;
+}
+.ex{
+    font-size: 30px;
+    width: 264px;
+    height: 76px;
+    background-color: green;
+    text-align: center;
+    position: relative;
+    top: 55px;
+    left: 420px;
+}
+.ex p{
+    position: relative;
+    top: 12px;
+    left: 70px;
+}
+.flamingo{
+    display: flex;
+    width: 1111px;
+    height: 500px;
+    margin: 0 auto;
+    justify-content: space-between;
+    position: relative;
+    top: -140px;
+    justify-content: space-between;
+}
+.f-1 img{
+    width: 335px;
+    height: 500px;
+    transition: height 2s;
+}
+.f-1 img:hover{
+    transform: scale(1.1);
+}
+.f-2 img {
+    width: 335px;
+    height: 500px;
+    transition: height 2s;
+}
+
+.f-2 img:hover {
+    transform: scale(1.1);
+}
+.f-3 img {
+    width: 335px;
+    height: 500px;
+    transition: height 2s;
+}
+
+.f-3 img:hover {
+    transform: scale(1.1);
+}
+.deer{
+    width: 1920px;
+    height: 760px;
+    background-image:url(image/鹿.png);
+    
+}
+
+.word-1{
+    font-size: 20px;
+    width: 946px;
+    height: 541px;
+    background-color: grey;
+    margin:0 auto;
+    position: relative;
+    top: -82px;
+    text-align: center;
+    transition: transform 2s;
+}
+.word-1:hover{
+    transform: scale(1.1);
+}
+.w-1{
+    width: 800px;
+    height: 240px;
+    margin: 0 auto;
+    position: relative;
+    top: 70px;
+    font-size: 20px;
+   
+}
+p{
+    text-align: left;
+}
+.w-2{
+    width: 197px;
+    height: 70px;
+    background-color: green;
+    margin: auto;
+    position: relative;
+    top: 170px;
+    transition:transform 2s;
+}
+.w-2:hover{
+
+    transform: scale(1.1);
+}
+.w-2 h2{
+    position: relative;
+    top: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: 100;
+    
+}
+.difference{
+    width: 233px;
+    height: 50px;
+    margin:0  auto;
+    font-size: 48px;
+    position: relative;
+    top: 83px;
+    transition: border 2s ease-in-out;
+}
+.difference:hover{
+    border:5px solid black;
+}
+.diff{
+    display: flex;
+    margin: 0 auto;
+    width: 1147px;
+    height: 413px;
+    position: relative;
+    top: 120px;
+    justify-content: space-between;
+}
+.diff h1 {
+    text-align: center;
+    font-size: 30px;
+}
+.diff p {
+    text-align: center;
+    font-size: 21.85px;
+}
+.diff-1{
+    background-color: gray;
+    transition: height 2s;
+}
+.diff-1:hover{
+    transform: scale(1.1);
+}
+.diff-2 {
+    background-color: gray;
+    transition: height 2s;
+}
+.diff-2:hover {
+    transform: scale(1.1);
+}
+.diff-3 {
+    background-color: gray;
+    transition: height 2s;
+}
+.diff-3:hover {
+    transform: scale(1.1);
+}
+.diff-4 {
+    background-color: gray;
+    transition: height 2s;
+}
+.diff-4:hover {
+    transform: scale(1.1);
+}
+.K{
+    font-size: 30px;
+    border: 2px solid black;
+    width: 358px;
+    height: 70px;
+    
+    margin: 0 auto;
+    position: relative;
+    top: 250px;
+}
+.K p{
+    position: relative;
+    left: 100px;
+    top: -20px;
+}
+.squirrel{
+    display:flex;
+    width: 1404px;
+    height: 1020px;
+    position: relative;
+    top: 350px;
+    margin: 0 auto;
+}
+.header{
+    position: relative;
+    top: 86px;
+    left: 126px;
+    width: 530px;
+    height: 190px;
+    transition: transform 2s;
+}
+.header:hover{
+    transform: scale(1.1);
+}
+.header h1{
+    font-size: 36px;
+    font-weight: 100;
+}
+.header p{
+    font-size: 24px;
+    line-height: 25px;
+}
+.b{
+    width: 530px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    top: 105px;
+    left: 126px;
+    
+}
+.b-1{
+    display: flex;
+    transition: transform 1s;
+}
+.b-1:hover{
+    transform: scale(1.1);
+}
+.b-2 {
+    display: flex;
+    transition: transform 1s;
+}
+.b-2:hover {
+    transform: scale(1.1);
+}
+.b-3{
+    display: flex;
+    transition: transform 1s;
+}
+.b-3:hover {
+    transform: scale(1.1);
+}
+.b-4 {
+    display: flex;
+    transition: transform 1s;
+}
+.b-4:hover {
+    transform: scale(1.1);
+}
+.c-1{
+    font-size: 48px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid black;
+    text-align: center;
+    font-family: 微软雅黑;
+}
+.c-2 {
+    font-size: 48px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid black;
+    text-align: center;
+    font-family: 微软雅黑;
+}
+.c-3 {
+    font-size: 48px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid black;
+    text-align: center;
+    font-family: 微软雅黑;
+}
+.c-4 {
+    font-size: 48px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid black;
+    text-align: center;
+    font-family: 微软雅黑;
+}
+.d-1{
+    font-size: 24px;
+    position: relative;
+    top: 12px;
+    left: 30px;
+}
+.d-2 {
+    font-size: 24px;
+    position: relative;
+    top: 12px;
+    left: 30px;
+}
+.d-3 {
+    font-size: 24px;
+    position: relative;
+    top: 12px;
+    left: 30px;
+}
+.d-4 {
+    font-size: 24px;
+    position: relative;
+    top: 12px;
+    left: 30px;
+}
+.line{
+    position: relative;
+    top: 400px;
+
+}
+.foot{
+    display: flex;
+    position: relative;
+    top:500px;
+}
+.foot-1{
+    flex: 1;
+    font-size: 40px;
+}
+.foot-1 p{
+    font-weight: 100;
+    position: relative;
+    left: 350px;
+}
+.foot-2 {
+    flex: 1;
+    position: relative;
+    top: 30px;
+}
+.foot-2 h1{
+    font-size: 30px;
+    font-weight: 100;
+}
+.foot-3 p{
+    font-size: 24px;
+    
+}
+.foot-3{
+    font-size: 24px;
+}
+.foot-3 {
+    flex: 1;
+}
+.B{
+    width: 361px;
+    height: 73px;
+    background-color: green;
+    text-align: center;
+    transition: background-color 2s;
+}
+.B:hover{
+    background-color:blue;
+}
+.B p{
+    font-size: 36px;
+    position: relative;
+    top: 10px;
+    left: 100px;
+    color: white;
+}

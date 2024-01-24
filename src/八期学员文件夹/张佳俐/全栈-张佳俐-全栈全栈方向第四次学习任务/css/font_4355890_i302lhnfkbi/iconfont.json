@@ -1,0 +1,16 @@
+{
+  "id": "4355890",
+  "name": "zuo'ye",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "795514",
+      "name": "相机",
+      "font_class": "ai-camera",
+      "unicode": "e66c",
+      "unicode_decimal": 58988
+    }
+  ]
+}

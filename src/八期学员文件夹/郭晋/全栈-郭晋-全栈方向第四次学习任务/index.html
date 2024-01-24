@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="第四周作业" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./iconfont.css">
+    <style>
+        body {
+            margin: auto;
+            width: 1000px;
+            overflow-x: hidden;
+        }
+        
+        .diyi {
+            width: 100%;
+            height: 500px;
+            background-color: rgba(0, 255, 255, 0);
+        }
+        
+        .tubiao1 {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 192, 203, 0);
+            transition: all 0.5s;
+        }
+        
+        div:hover .tubiao1 {
+            transform: scale(0.5);
+        }
+        
+        .tubiao2 {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 192, 203, 0);
+            position: absolute;
+            top: 0;
+            transition: all 0.5s;
+            right: 230px;
+        }
+        div:hover.tubiao2{
+            transform: scale(0.5);
+
+        }
+        
+        .back {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background-color: bisque;
+            background-image: url(https://aihanguo.oss-cn-beijing.aliyuncs.com/乌龟.png);
+            background-size: cover;
+        }
+        
+        .zho {
+            width: 80px;
+            height: 80px;
+            position:absolute;
+            background-size: contain;
+            background-image: url(https://aihanguo.oss-cn-beijing.aliyuncs.com/相机.png);
+            background-color: rgb(72, 255, 0);
+           left: 50%;
+           top: 0;
+           transition: all 0.5s;
+        }
+        div:hover.zho{
+            transform:scale(1.5)
+        }
+        .wenzi1 {
+            width: 500px;
+            height: 150px;
+            background-color: rgba(153, 205, 50, 0);
+            position:relative;
+            top: -400px;
+            left: 280px;
+        }
+        
+        .anniu {
+            width: 150px;
+            height: 50px;
+            background-color: rgb(12, 52, 7);
+            position:relative;
+            top: -400px;
+            left: 250px;
+            transition: all 2s;
+        }
+        
+        div:hover .anniu {
+            transform:scale(0.5);
+        }
+        
+        .t {
+            width: 70%;
+            height: 200px;
+            position:relative;
+            left:150px;
+            top:-270px;
+            background-color: rgba(153, 205, 50, 0);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+           
+        }
+        
+        .t1 {
+            width: 150px;
+            height: 200px;
+            background-color: bisque;
+            background-image: url(https://aihanguo.oss-cn-beijing.aliyuncs.com/Fly.png);
+            background-size: contain;
+            transition: all 0.5s;
+        } div:hover.t1{
+            transform: translateY(-10px);}
+        .t2 {
+            width: 150px;
+            height: 200px;
+            background-color: bisque;
+            background-image: url(https://aihanguo.oss-cn-beijing.aliyuncs.com/Love.png);
+            background-size: contain;
+            transition: all 0.5s;
+        } 
+        div:hover.t2{
+            transform: translateY(-10px);
+        }
+
+        .t3 {
+            width: 150px;
+            height: 200px;
+            background-color: bisque;
+            background-image: url(https://aihanguo.oss-cn-beijing.aliyuncs.com/Stand.png);
+            background-size: contain;
+            transition: all 0.5s;
+        }
+        div:hover.t3{
+            transform: translateY(-10px);
+        }
+        .lu {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background-color: aqua;
+            top: 400px;
+            background-image: url(https://aihanguo.oss-cn-beijing.aliyuncs.com/鹿.png);
+            background-size: cover;
+        }
+        .wenzi2 {
+            width: 500px;
+            height: 300px;
+            background-color: rgb(151, 146, 147);
+            position: absolute;
+            top: -50px;
+            left: 300px;
+            transition: all 0.5s;
+        }
+        div:hover.wenzi2{
+            transform: translateY(-10px);
+        }
+
+        .anniu2 {
+            width: 150px;
+            height: 50px;
+            background-color: rgb(5, 62, 18);
+            position:relative;
+            top: 280px;
+            left: 420px;
+            transition: all 0.5s;
+        }
+        div:hover.anniu2{
+            transform: scale(0.7)
+        }
+
+        .dere {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background-color: rgba(153, 205, 50, 0);
+            top: 447px;
+        }
+
+        .wenzi3 {
+            width: 100%;
+            height: 50px;
+            background-color: rgba(240, 248, 255, 0);
+        }
+
+        .beijin2 {
+            width: 80%;
+            height: 300px;
+            background-color: rgba(255, 99, 71, 0);
+        }
+        @keyframes move {
+               0%{
+              border-top: 0px;
+                border-left: 0px;
+                border-right: 0px;
+                border-bottom: 0px;
+                
+               }
+               25%{  
+             border-top: 200px;
+                border-left: 0px;
+                border-right: 0px;
+                border-bottom: 0px;
+                width: 200px;
+                height: 0px;
+               }
+               50%{ 
+               border-top: 200px;
+                border-left: 0px;
+                border-right: 50px;
+                border-bottom: 0px;
+               }
+              75%{
+                border-top: 200px;
+                border-left: 0px;
+                border-right:50px;
+                border-bottom: 200px;}
+               100%{  
+                border-top: 200px;
+                border-left: 50px;
+                border-right: 50px;
+                border-bottom: 200px;
+               }
+      }
+        .diff {
+            width: 200px;
+            height: 50px;
+     border-width: 2px;
+            border-style: solid;
+            background-color: rgba(0, 255, 255, 0);
+            position: absolute;
+            left: 400px;
+            top: -20px;
+        }
+        div:hover.diff{
+            animation-name: move;
+            animation-duration: 2s;
+        }
+        .buju {
+            width: 80%;
+            height: 200px;
+            position: relative;
+            top:50px;
+            left:200px;
+            background-color: rgba(255, 192, 203, 0);
+            display: flex;
+            flex-direction: row;
+            margin: center;
+            justify-content: space-between;
+        }
+
+        .b1 {
+            width: 150px;
+            height: 220px;
+            background-color: rgba(0, 255, 255, 0);
+            background-image: url(https://aihanguo.oss-cn-beijing.aliyuncs.com/Horse.png);
+            background-size: cover;
+        }
+
+        .b2 {
+            width: 150px;
+            height: 220px;
+            background-color: rgba(0, 255, 255, 0);
+            background-image: url(https://aihanguo.oss-cn-beijing.aliyuncs.com/Lion.png);
+            background-size: cover;
+        }
+
+        .b3 {
+            width: 150px;
+            height: 220px;
+            background-color: rgba(0, 255, 255, 0);
+            background-image: url(https://aihanguo.oss-cn-beijing.aliyuncs.com/daishu.png);
+            background-size: cover;
+        }
+
+        .b4 {
+            width: 150px;
+            height: 220px;
+            background-color: rgba(0, 255, 255, 0);
+            background-image: url(https://aihanguo.oss-cn-beijing.aliyuncs.com/Hummingbird.png);
+            background-size: cover;
+        }
+
+        .anniu3 {
+            width: 300px;
+            height: 70px;
+            position:relative;
+            top: 100px;
+            left: 350px;
+            background-color: rgba(137, 43, 226, 0);
+            
+        }
+        div:hover.anniu3{
+            animation-name: anniu3;
+            animation-duration: .5s;
+            
+        }
+        @keyframes anniu3{
+            0%{
+                background-color: rgb(37, 69, 5);
+                width: 0%;
+            }
+            100%{
+                width: 200px;
+                background-color: rgb(31, 56, 6);
+            }
+        }
+        .box {
+            width: 100%;
+            height: 400px;
+           position: relative;
+           top:500px;
+            background-color: rgba(238, 130, 238, 0);
+
+        }
+
+        .shongshu {
+            width: 300px;
+            height: 400px;
+            position:relative;
+            top:50px;
+            left: 200px;
+            background-color: rgba(0, 255, 255, 0);
+            background-image: url(https://aihanguo.oss-cn-beijing.aliyuncs.com/松鼠.png);
+            background-size: cover;
+        }
+
+        .jiashao {
+            width: 400px;
+            height: 200px;
+            background-color: rgba(255, 255, 0, 0);
+            position:relative;
+            left: 350px;
+            transition: all 0.5s;
+        }
+        div:hover.jiashao{
+            transform: translateY(-20px)translateX(30px);
+        }
+        .xu1 {
+            width: 175px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0);
+            position:relative;
+            left: 350px;
+            top: -60px;
+            background-image: url(https://aihanguo.oss-cn-beijing.aliyuncs.com/a.png);
+            background-size: contain;
+            transition: all .5s;
+        }
+        div:hover.xu1{
+            transform: translateX(30px);
+        }
+        .xu2 {
+            width: 205px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0);
+            position:relative;
+            left: 350px;
+            top: -40px;
+            background-image: url(https://aihanguo.oss-cn-beijing.aliyuncs.com/b.png);
+            background-size: contain;
+            transition: all .5s;
+        }
+        div:hover.xu2{
+            transform: translateX(30px);
+        }
+        .xu3 {
+            width: 140px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0);
+            position:relative;
+            left: 350px;
+            top: -20px;
+            background-image: url(https://aihanguo.oss-cn-beijing.aliyuncs.com/c.png);
+            background-size: contain;
+            transition: all .5s;
+        }
+        div:hover.xu3{
+            transform: translateX(30px);
+        }
+        .xu4 {
+            width: 238px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0);
+            position:relative;
+            background-image: url(https://aihanguo.oss-cn-beijing.aliyuncs.com/d.png);
+            background-size: contain;
+            left: 350px;
+            top:0px;
+            transition: all .5s;
+        }
+        div:hover.xu4{
+            transform: translateX(30px);
+        }
+        .zuihou {
+            width: 100%;
+            height: 250px;
+            position: relative;
+            background-color: rgba(245, 222, 179, 0);
+            border-top: 2px solid black;
+            top:550px;
+            left:0px;
+        }
+
+        .jieshao1 {
+            width: 300px;
+            height: 150px;
+            position:relative;
+            top:50px;
+            left:230px;
+            background-color: rgba(0, 255, 255, 0);
+        }
+
+        .big {
+            width: 150px;
+            height: 50px;
+            top:-80px;
+            left:590px;
+            background-color: rgb(4, 60, 10);
+            position:relative;
+        }
+            @keyframes bianse{
+                0%{
+                }
+                100%{
+                    transform: translateY(-30px);
+                    background-color: rgba(0, 0, 139, 0);
+                }
+            }
+            div:hover.big{
+                animation-name: bianse;
+            animation-duration: 2s;
+            animation-iteration-count: inherit;
+            }
+
+
+
+            </style>
+</head>
+<body>
+    <div class="diyi">
+        <div class="tubiao1"><span class="iconfont icon-sousuo"></span>
+        </div>
+        <div class="tubiao2"><span class="iconfont icon-mulu"></span></div>
+        <div class="back"></div>
+        <div class="beijin"></div>
+        <div class="zho"></div>
+        <div class="wenzi1"><font size="6" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAnimal&nbspPhotography</font><br>
+        A&nbspsilhouette&nbspof&nbspthem&nbspacction,&nbsphere&nbspare&nbspthe&nbspphotography&nbsp <br>
+        eyes&nbspthe&nbspbest&nbspof&nbspthem,there&nbsplove&nbsp,there&nbspevery&nbspvivid,are <br>
+        by&nbspus;
+        </div>
+        <div class="anniu"><font size="5" color="white">&nbsp&nbsp&nbspEXPLORE</font></div>
+        <div class="t">
+            <div class="t1"></div>
+            <div class="t2"></div>
+            <div class="t3"></div>
+        </div> </div>
+        <div class="lu">
+            <div class="wenzi2"><br><br>
+            "Family Farms is the best place,where I can buy fruit, vegetable,meat,honey,milk,
+            eggs and so on for my retaurant directly frpmupplier. Super convinent. Thank you"
+            xdccfc cfvfesc sfnccnjdcn cfjdcder dcwwzwqg ejs dddc ddf fnfji eij fvnv eijfvnv jnxzxh cn 
+            cdmds ddnc ,cddmdcds dncdn cdcn wqeoerash ,dcndassassas,cdcdncn cciqoskxm
+            cbdcqpslwy nfnere dndcww frhjnc qpdjweiw cnnqpe,cqjsdv ccn dcjndc,
+            ncf cdncjd dcdjcncq dcdncf cdjsp qkodkpe wqcnpsdc cdnpp qcw,cqnonxjdcdcnd 
+            wcnwq cowwcjqp jjjcnjncqw wcq cwd cwch ,cnjncnc ece cdcnncdwc nenwc dcnnc cjcj,ccjrnc wecwc;
+            </div>
+            <div class="anniu2"><font size="5">&nbsp&nbsp&nbspSIGN UP</font></div>
+        </div>
+      <div class="dere">
+        <div class="beijin2">
+          <div class="diff"><font size="6">Difference</font></div>
+            <div class="buju">
+            <div class="b1"></div>
+            <div class="b2"></div>
+            <div class="b3"></div>
+            <div class="b4"></div>
+        </div>
+         <div class="anniu3" style="width:300px;height:50px;border:1px solid #000;"><font size="5">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspKonw more</font></div>
+        </div>
+       
+     </div>
+      <div class="box">
+        <div class="shongshu">
+        <div class="jiashao"> <font size="6">&nbsp&nbsp&nbspThe photo</font><br>
+        "family Farm is the best placewhere i can buy fruit ,vegetable,meat
+        honey,milk,eggs,and so on for my retaurant directil form supplier.
+        supper convinient. thank you"
+        
+        </div>
+        <div class="xu1"></div>
+        <div class="xu2"></div>
+        <div class="xu3"></div>
+        <div class="xu4"></div>
+        </div>
+      </div>      
+     <div class="zuihou">
+        <span  style="text-decoration:overline"></span>
+      <div class="jieshao1">
+       <font size="5">IN THE WILD</font>&nbsp&nbsp&nbsp <font size="4">MODE</font><br>
+        <font size="5">IN THE SEA</font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        we  create art <br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp we cerate life
+      </div>
+      <div class="big"><font size="6">big world</font></div>
+     </div>
+    
+</body>
+</html>
+

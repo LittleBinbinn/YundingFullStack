@@ -1,0 +1,485 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body>div {
+    margin: 0 auto;
+}
+.tortoise {
+    width: 1683px;
+    height: 814px;
+    background:url(https://ye-fly.oss-cn-beijing.aliyuncs.com/乌龟.png) no-repeat;
+}
+.bar {
+    width: 1683px;
+    height: 50px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+.box {
+    width: 50px;
+    height: 50px;
+}
+.box>img {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    position: relative;
+    top: 10px;
+}
+.list>img {
+    left: 20px;
+}
+.search>img {
+    right: 20px;
+}
+@keyframes small {
+    0% {
+
+    }   
+    
+    100% {
+        transform: scale(0.8,0.8);
+    }
+}
+.box:hover>img {
+    animation: small .3s linear 0s alternate forwards;
+}
+.camera {
+    width: 180px;
+    height: 180px;
+    background-color: #81c04b;
+}
+.circle {
+    width: 140px;
+    height: 140px;
+    margin: 16px auto;
+    border: solid #fff 4px;
+    border-radius: 50%;
+}
+.circle>img {
+    display: inline-block;
+    width: 100px;
+    height: 68px;
+    position: relative;
+    left: 21px;
+    top: 35px;
+}
+@keyframes small2 {
+    0% {}
+
+    100% {
+        transform: scale(0.9, 0.9);
+    }
+}
+.camera:hover {
+    animation: small2 .5s linear 0s alternate forwards;
+}
+.text1 {
+    width: 800px;
+    position: relative;
+    top: 200px;
+    margin: 0 auto;
+    color: #2a3f17;
+}
+.text1>h1 {
+    text-align: center;
+    font: normal 700 50px "宋体";
+}
+.text1>span {
+    font: normal 500 20px "微软雅黑";
+    line-height: 30px;
+}
+.button1 {
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    left: 441.5px;
+    top: 500px;
+    background-color: #2a3f17;
+    text-align: center;
+    font: normal 300 30px "微软雅黑";
+    line-height: 60px;
+}
+.button1>a {
+    color: #fff;
+    text-decoration: none;
+}
+.button1:hover {
+    animation: small2 .3s linear 0s alternate forwards;
+}
+.bird {
+    width: 800px;
+    height: 335px;
+    position: absolute;
+    left: 441.5px;
+    top: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+.bird>div {
+    width: 225px;
+    height: 335px;
+}
+.bird1 {
+    background: url(https://ye-fly.oss-cn-beijing.aliyuncs.com/火烈鸟1.png);
+}
+.bird2 {
+    background: url(https://ye-fly.oss-cn-beijing.aliyuncs.com/火烈鸟2.png);
+}
+.bird3 {
+    background: url(https://ye-fly.oss-cn-beijing.aliyuncs.com/火烈鸟3.png);
+}
+.bird>div>span {
+    color: #fff;
+    font: normal 500 40px "宋体";
+    display: inline-block;
+    position: relative;
+    top: 220px;
+    left: 115px;
+}
+@keyframes up {
+    0% {
+
+    }
+    100% {
+        transform: translate(0, -30px);
+    }
+}
+.bird>div:hover {
+    animation: up .3s linear 0s alternate forwards;
+}
+.deer {
+    width: 1683px;
+    height: 666px;
+    position: relative;
+    top: 500px;
+    background: url(https://ye-fly.oss-cn-beijing.aliyuncs.com/鹿.png);
+}
+.text2 {
+    position:absolute;
+    top: -100px;
+    left: 441.5px;
+    width: 600px;
+    height: 400px;
+    padding-left:100px;
+    padding-right: 100px;
+    padding-top: 50px;
+    text-indent: 1em;
+    font: normal 500 16px "黑体";
+    line-height: 20px;
+    text-align: left;
+    color: #2a3f17;
+    background: #e0dfdf;
+}
+.text2:hover {
+    animation: up .5s linear 0s alternate forwards;
+}
+.button2 {
+    width: 200px;
+    height: 65px;
+    background: #2a3f17;
+    position: relative;
+    top: 70px;
+    left: 200px;
+    text-indent: 1.5em;
+    font: normal 300 30px "微软雅黑";
+    line-height: 65px;
+}
+.button2>a {
+    text-decoration: none;
+    color: #fff;
+}
+.button2:hover {
+    animation: small2 .2s linear 0s alternate forwards;
+}
+.difference {
+    width: 200px;
+    height: 60px;
+    position: relative;
+    top:600px;
+    text-align: center;
+    color: #2a3f17;
+    font: normal 500 30px "微软雅黑";
+    line-height: 60px;
+    overflow: hidden;
+    cursor: default;
+}
+.difference>div {
+    position: relative;
+    background: #2a3f17;
+}
+.box1,.box3 {
+    width: 200px;
+    height: 2px;
+}
+.box2,.box4 {
+    width: 2px;
+    height: 60px;
+}
+.box1 {
+    top: -60px;
+    left: -200px;
+}
+@keyframes right {
+    0% {}
+
+    100% {
+        transform: translate(200px, 0);
+    }
+}
+.difference:hover>.box1 {
+    animation: right .25s linear 0s alternate forwards;
+}
+.box2 {
+    left: 198px;
+    top: -122px;
+}
+@keyframes down {
+    0% {}
+
+    100% {
+        transform: translate(0, 60px);
+    }
+}
+.difference:hover>.box2 {
+    animation: down .25s linear .25s alternate forwards;
+}
+.box3 {
+    top: -64px;
+    left: 200px;
+}
+@keyframes left {
+    0% {}
+
+    100% {
+        transform: translate(-200px, 0);
+    }
+}
+.difference:hover>.box3 {
+    animation: left .25s linear .5s alternate forwards;
+}
+.box4 {
+    left: 0;
+    top: -64px;
+}
+@keyframes up2 {
+    0% {}
+
+    100% {
+        transform: translate(0, -60px);
+    }
+}
+.difference:hover>.box4 {
+    animation: up2 .25s linear .75s alternate forwards;
+}
+.show {
+    width: 1000px;
+    height: 330px;
+    position: relative;
+    top: 650px;
+    display: flex;
+    justify-content: space-between;
+}
+.show>div {
+    width: 225px;
+    height: 330px;
+    background: #e0dfdf;
+    text-align: center;
+    line-height: 50px;
+    color: #2a3f17;
+}
+.show>div>h3 {
+    font: normal 400 20px "微软雅黑";
+}
+.show>div>a {
+    color: #2a3f17;
+}
+.show>div:hover {
+    animation: up .3s linear 0s alternate forwards;
+}
+.button3 {
+    width: 300px;
+    height: 60px;
+    border: solid #2a3f17 3px;
+    position: relative;
+    top: 750px;
+    text-align: center;
+}
+.button3>a{
+    display: inline-block;
+    height: 60px;
+    width: 300px;
+    text-decoration: none;
+    color: #2a3f17;
+    font: normal 400 30px "微软雅黑";
+    line-height: 60px;
+}
+@keyframes  change {
+    0% {
+
+    }
+    100% {
+        background: #2a3f17;
+        color: #fff;
+    }
+}
+.button3:hover>a {
+    animation: change .3s linear 0s alternate forwards;
+}
+.photo {
+    width: 1300px;
+    height: 872px;
+    position: relative;
+    top: 800px;
+    display: flex;
+    justify-content: space-between;
+}
+.squirrel {
+    width: 600px;
+    height: 872px;
+}
+.text3 {
+    cursor: default;
+    width: 600px;
+    height: 872px;
+}
+.a {
+    color: #2a3f17;
+    position: relative;
+    top: 60px;
+    font:normal 350 40px "微软雅黑";
+}
+.article {
+    color: #2a3f17;
+    position: relative;
+    font: normal 400 20px "微软雅黑";
+    padding-right: 20px;
+    top: 100px;
+}
+.list2 {
+    width: 600px;
+    height: 500px;
+    position: relative;
+    top: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.list2>div {
+    cursor: default;
+    width: 600px;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+}
+.list2>div>span {
+    display: inline-block;
+}
+.number {
+    width: 73px;
+    height: 73px;
+    border: solid #2a3f17 2px;
+    border-radius: 50%;
+    text-align: center;
+    font: normal 500 30px "微软雅黑";
+    line-height: 73px;
+    color: #2a3f17;
+}
+.text {
+    width: 500px;
+    height: 75px;
+    text-align: left;
+    font: normal 400 20px "微软雅黑";
+    line-height: 75px;
+    color: #2a3f17;
+}
+.a:hover {
+    animation: up .3s linear 0s alternate forwards;
+}
+@keyframes right2 {
+    0% {
+
+    }
+    100% {
+        transform: translate(50px, 0)
+    }
+}
+@keyframes right3 {
+    0% {}
+
+    100% {
+        transform: translate(50px, 0) scale(1.1, 1.1)
+    }
+}
+.article:hover {
+    animation: right3 .3s linear 0s alternate forwards;
+}
+.list2>div:hover>span{
+    animation: right2 .3s linear 0s alternate forwards;
+}
+.last {
+    width: 1683px;
+    height: 300px;
+    position: relative;
+    top: 900px;
+    border-top: solid #2a3f17 2px;
+}
+.text4 {
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    bottom: 80px;
+    left: 350px;
+    font: normal 400 30px "微软雅黑";
+    text-align: center;
+    line-height: 75px;
+    color: #2a3f17;
+}
+.text5 {
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    bottom: 60px;
+    left: 550px;
+    text-align: center;
+    font: normal 400 20px "微软雅黑";
+    line-height: 35px;
+    color: #4d5b41;
+}
+.button4 {
+    width: 300px;
+    height: 70px;
+    background: #949f8b;
+    position: absolute;
+    bottom: 130px;
+    left: 1000px;
+    color: #fff;
+    font: normal 400 30px "微软雅黑";
+    text-align: center;
+    line-height: 70px;
+}
+@keyframes change2 {
+    0% {
+
+    }
+    100% {
+        transform: translate(0,-20px);
+        background: #fff;
+        color: #949f8b;
+    }
+}
+.button4:hover {
+    animation: change2 .3s linear 0s alternate forwards;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Photography</title>
+    <style>
+        .container {
+            margin: auto;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .first {
+
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+        }
+
+        .first>button {
+            height: 40px;
+            width: 50px;
+            border: 0px;
+            background-color: transparent;
+            transition-duration: 0.8S;
+        }
+
+        .first>button>img:hover {
+            transform: scale(0.7);
+        }
+
+        .logo {
+            position: absolute;
+            z-index: 99;
+            left: 1133px;
+        }
+
+        .logo>img {
+            transition: 1s;
+        }
+
+        .logo>img:hover {
+            transform: scale(0.7);
+        }
+
+        .first>button>img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .introduction {
+            margin: auto;
+            position: relative;
+        }
+
+        .introduction>.b1>img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .introduction>.text {
+            margin: auto;
+            position: absolute;
+            top: 400px;
+            left: 700px;
+            height: 300px;
+            width: 1200px;
+            text-align: center;
+        }
+
+        #EXPIORE {
+            position: relative;
+            top: 140px;
+            right: 380px;
+            text-align: center;
+            height: 80px;
+            width: 260px;
+            border: 0;
+            background-color: #354f1e;
+            font-size: 30px;
+            color: white;
+            transition-duration: 0.7s;
+        }
+
+        #EXPIORE:hover {
+            transform: scale(0.7);
+        }
+
+        .birds {
+            height: 600px;
+            width: 1420px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            top: -150px;
+        }
+
+        .birds>div {
+            width: 400px;
+            transition-duration: 0.7s;
+        }
+
+        .birds>div:hover {
+            transform: translateY(-60px);
+        }
+
+        .birds a {
+            font-size: 50px;
+            color: white;
+            position: relative;
+            top: -100px;
+            left: 185px;
+        }
+
+        .sign {
+            height: 1000px;
+        }
+
+        .sign>.text {
+            width: 950px;
+            height: 550px;
+            background-color: #f1f1f1;
+            margin: auto;
+            transition-duration: 0.7s;
+        }
+
+        .sign>.text:hover {
+            transform: translateY(-100px);
+        }
+
+        .sign>.text>p {
+            font-size: 20px;
+            color: #2a3f17;
+            width: 800px;
+            height: 250px;
+            margin: auto;
+            position: relative;
+            top: 70px;
+        }
+
+        .sign>.text>button {
+            width: 200px;
+            height: 80px;
+            background-color: #395520;
+            color: white;
+            font-size: 30px;
+            position: relative;
+            left: 390px;
+            top: 160px;
+            transition-duration: 0.7s;
+        }
+
+        .sign>.text>button:hover {
+            transform: scale(0.7);
+        }
+
+        .sign>.b2>img {
+            position: absolute;
+            top: 2000px;
+            width: 100%;
+            height: 100%;
+            z-index: -999;
+        }
+
+        .difference>.photos {
+            height: 800px;
+            width: 1500px;
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 3500px;
+            left: 500px;
+        }
+
+        .difference>.photos>div {
+            height: 420px;
+            width: 265px;
+            background-color: #e0dfdf;
+            transition-duration: 0.7s;
+        }
+
+        .difference>.photos>div:hover {
+            transform: translateY(-70px);
+        }
+
+        .difference>.photos p {
+            font-size: 25px;
+            color: #456529;
+            text-align: center;
+            margin: 30px;
+
+        }
+
+        .difference>.photos a {
+            font-size: 20px;
+            color: #527b2d;
+            margin: 45px;
+            text-decoration: underline;
+        }
+
+        @keyframes border {
+            0% {
+                border-width: 3px;
+                border-color: transparent;
+            }
+
+            25% {
+                border-width: 3px;
+                border-color: transparent;
+                border-top-color: #314a1b;
+                border-top-width: 3px;
+                border-top-style: solid;
+            }
+
+            50% {
+                border-width: 3px;
+                border-color: transparent;
+                border-right-color: #314a1b;
+                border-right-width: 3px;
+                border-right-style: solid;
+            }
+
+            75% {
+                border-width: 3px;
+                border-color: transparent;
+                border-bottom-color: #314a1b;
+                border-bottom-width: 3px;
+                border-bottom-style: solid;
+            }
+
+            100% {
+                border-width: 3px;
+                border-color: transparent;
+                border-left-color: #314a1b;
+                border-left-width: 3px;
+                border-left-style: solid;
+            }
+        }
+
+        #title {
+            font-size: 50px;
+            position: absolute;
+            text-align: center;
+            top: 3300px;
+            left: 1100px;
+            color: #2a3f17;
+            width: 280px;
+            height: 80px;
+            -webkit-animation: border 2s infinite;
+            animation: border 2s infinite;
+
+        }
+
+        #title:hover {
+            animation-play-state: running;
+        }
+
+        @-webkit-keyframes border {
+            0% {
+                border-width: 3px;
+                border-color: transparent;
+            }
+
+            25% {
+                border-width: 3px;
+                border-color: transparent;
+                border-top-color: #5a8633;
+                border-top-width: 3px;
+                border-top-style: solid;
+            }
+
+            50% {
+                border-width: 3px;
+                border-color: transparent;
+                border-right-color: #4c722b;
+                border-right-width: 3px;
+                border-right-style: solid;
+            }
+
+            75% {
+                border-width: 3px;
+                border-color: transparent;
+                border-bottom-color: #3e5e22;
+                border-bottom-width: 3px;
+                border-bottom-style: solid;
+            }
+
+            100% {
+                border-width: 3px;
+                border-color: transparent;
+                border-left-color: #2a3f17;
+                border-left-width: 3px;
+                border-left-style: solid;
+            }
+
+        }
+
+        .difference>button {
+            width: 360px;
+            height: 70px;
+            background-color: #ffffff;
+            border-color: #2a3f17;
+            border-width: 3px;
+            text-align: center;
+            font-size: 30px;
+            position: relative;
+            left: 1050px;
+            top: 1100px;
+            color: #2a3f17;
+            transition-duration: 0.8s;
+        }
+
+        .difference>button:hover {
+            background-color: #3d5c22;
+            color: #ffffff;
+        }
+
+        .last {
+            display: flex;
+            width: 1800px;
+            margin: auto;
+            position: relative;
+            top: 1300px;
+        }
+
+        .last>.text {
+            margin-left: 200px;
+            width: 600px;
+            margin-bottom: 90px;
+            
+        }
+
+        .last p {
+            color: #2a3f17;
+            font-size: 25px;
+            position: relative;
+            transition-duration: 0.7s;
+        }
+
+        .last p:hover {
+            transform: translateX(20px);
+        }
+
+        .last>.text>div {
+            font-size: 24px;
+            color: #344e1d;
+            height: 500px;
+            width: 800px;
+            transition-duration: 0.7s;
+        }
+
+        .last>.text>div:hover {
+            transform: translateX(50px);
+        }    
+            .text>div>span {
+            text-align: center;
+            width: 70px;
+            height: 40px;
+            top: 20px;
+            font-size: 50px;
+            border-style: solid;
+            border-width: 3px;
+            border-radius: 80%;
+        }
+
+        .end {
+            border-top-color: #2a3f17;
+            border-top-width: 3px;
+            border-top-style: solid;
+            width: 2500px;
+            height: 475px;
+            position: relative;
+            top: 30px;
+            display: flex;
+        }
+
+        #Bigworld {
+            width: 370px;
+            height: 750px;
+            font-size: 35px;
+            color: white;
+            background-color: #949f8b;
+            text-align: center;
+            margin-top:380px;
+            margin-bottom:  200px; ;
+            transition-duration: 0.7s;
+        }
+
+        #Bigworld:hover {
+            transform: translateY(-20px);
+            color: #949f8b;
+            background-color: transparent;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="first">
+            <button class="choice">
+                <img src="https://s2.loli.net/2023/12/19/f7nBMdDHrOX5WuR.png">
+            </button>
+            <div class="logo">
+                <img src="https://s2.loli.net/2023/12/19/wUc5sKSvjzeFkrP.png">
+            </div>
+            <button class="search">
+                <img src="https://s2.loli.net/2023/12/19/71lOfYopjw5ybLz.png">
+            </button>
+        </div>
+
+        <div class="introduction">
+            <div class="b1">
+                <img src="https://s2.loli.net/2023/12/19/COREF72qanX6urB.png">
+            </div>
+            <div class="text">
+                <h style="font-size: 72px;color: #30471c;">Animal Photography</h>
+                <p style="font-size: 30px;color: #30471c;">
+                    A silhouette of them, a simple little acttion, here are the
+                    photographer’s eyes the best of them, their laughter, their love,
+                    their every vivid, are recored by us.
+                </p>
+                <button id="EXPIORE">EXPIORE</button>
+            </div>
+            <div class="birds">
+                <div>
+                    <img src="https://s2.loli.net/2023/12/19/5XAIfjZxTd7V6NE.png">
+                    <a>Fly</a>
+                </div>
+                <div>
+                    <img src="https://s2.loli.net/2023/12/19/8OR13P26CDgMVlj.png">
+                    <a>Love</a>
+                </div>
+                <div>
+                    <img src="https://s2.loli.net/2023/12/19/4SPVicIa6uTyldO.png">
+                    <a>Stand</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="sign">
+            <div class="text">
+                <p>
+                    “Family Farms is the best place，where I can buy fruit,vegetable,meat,honey,milk,
+                    eggs and so on for my retaurant directly fromupplier. Super convinient.Thank you”
+                    xdccnfc cfvfesc cfnccnjdcn cfjdcdsr dcwwzwqg ejs dddc ddf fnfjv eij fvnv jnxzexh cn
+                    cdcmdsc ddnc, cddmdcds dncdn cdcn wqeoeas, dcndassasas,cdcndcnc cciqoskxm
+                    cbdcpqslwq nfnere nfncsfjjc dndcww frhfjnc qpdjweiw cnncqe, cqjsdc ccn dcjndc ,
+                    ncf cdncjd dcdjcndq csjncq dcdncf dcdjdnc cdjsq, qkodkqe wqcnpsdc cdnqq qcw,
+                    cqnonxj dcdcnd dcnjsdvb wcnwq cowwncjq jjcnjncqnw wcq c wd cwch, cnjncnc ece
+                    cdcnncdwnc nenwc dcnnc cjcj , c cjrnc wecwc .
+                </p>
+                <button>SIGN UP</button>
+            </div>
+            <div class="b2">
+                <img src="https://s2.loli.net/2023/12/19/wZAFGdEaHLPksOK.png">
+            </div>
+        </div>
+        <div class="difference">
+            <div style="width: 1920px;height: 75px;margin-bottom: 40px;">
+                <div id="title">Difference</div>
+            </div>
+            <div class="photos">
+                <div>
+                    <img src="https://s2.loli.net/2023/12/19/nRKLXfkJjBcY6xM.png">
+                    <p>Horse</p>
+                    </br>
+                    <a>A difference story </a>
+                </div>
+                <div>
+                    <img src="https://s2.loli.net/2023/12/19/ZmdBs82cpRS631a.png">
+                    <p>Kangaroo</p>
+                    </br>
+                    <a>A difference story </a>
+                </div>
+                <div>
+                    <img src="https://s2.loli.net/2023/12/19/V6qm1Dt34ZbNe5p.png">
+                    <p>Lion</p>
+                    </br>
+                    <a>A difference story </a>
+                </div>
+                <div>
+                    <img src="https://s2.loli.net/2023/12/19/dRfzGhVXo7rp3HB.png">
+                    <p>Hummingbird</p>
+                    </br>
+                    <a>A difference story </a>
+                </div>
+            </div>
+            <button>Know more</button>
+        </div>
+        <div class="last">
+            <div>
+                <img src="https://s2.loli.net/2023/12/19/A9Gs4U8vuhE7gFT.png">
+            </div>
+            <div class="text">
+                <p style="font-size: 36px;margin-bottom: 36px;">The Photo</p>
+                <p>“Family Farms is the best placewhere I can buy fruit,vegetable, meat,honey,milk,
+                    eggs and so on for my retaurant directly from
+                    supplier. Super convinient.Thank you”</p>
+                <div>
+                    <span>&nbsp;1 </span>&nbsp;&nbsp;&nbsp;for it
+                </div>
+                <div>
+                    <span>&nbsp;2 </span>&nbsp;&nbsp;&nbsp;Cultivate feelings
+                </div>
+                <div>
+                    <span>&nbsp;3 </span>&nbsp;&nbsp;&nbsp;Shooting
+                </div>
+                <div>
+                    <span>&nbsp;4 </span>&nbsp;&nbsp;&nbsp;Harvest achievement
+                </div>
+            </div>
+        </div>
+        <div class="end">
+            <div style="margin-left: 445px;margin-top: 120px;margin-right: 22px;">
+                <p style="font-size: 40px; color: #2a3f17;">IN THE WILD</p>
+                <p style="font-size: 40px; color: #2a3f17;">IN THE SEA</p>
+            </div>
+            <div style="margin-top: 120px;margin-right: 320px;">
+                <p style="font-size: 30px; color: #2a3f17;margin-top: 40px;">MOER</p>
+                <p style="font-size: 24px; color: #2a3f17;margin: 5px;">We create art.</p>
+                <p style="font-size: 24px; color: #2a3f17;margin: 5px;">We create life</p>
+            </div>
+            <div id="Bigworld">Big World</div>
+        </div>
+</body>
+
+</html>
