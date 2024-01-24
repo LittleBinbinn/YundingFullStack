@@ -1,0 +1,10 @@
+{
+  "folders": [
+	{
+		"path": "../../../../../../../ThreeTools-Learn/demo"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "work1"
+  }
+}
