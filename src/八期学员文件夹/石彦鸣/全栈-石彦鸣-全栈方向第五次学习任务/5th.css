@@ -1,0 +1,69 @@
+body{
+    width: 1890px;
+    height: 1417px;
+    margin: auto;
+}
+body>img{
+    width: 100%;
+    height: 100%;
+    z-index: -114514;
+}
+p{
+    font-size: 30px;
+    color: lightpink;
+}
+.input{
+    width: 1000px;
+    height:1200px;
+    margin: auto;
+    position:relative;
+    top: -1300px;
+}
+.input>div>input{
+    width: 100%;
+}
+#fatherStr{
+    height: 90px;
+    border-bottom-color:white ;
+    border-bottom-width:10px ;
+    border-top: 0px;
+    border-right:0px ;
+    border-left: 0px;
+    border-radius: 5%;
+    font-size: 70px;
+    color: white;
+    background-color: transparent;
+}
+#sonStr {
+    height: 90px;
+    border-bottom-color: white;
+    border-bottom-width: 10px;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-radius: 5%;
+    font-size: 70px;
+    color: white;
+    background-color: transparent;
+}
+.submit{
+}
+#submit{
+    width: 400px;
+    height: 100px;
+    position: relative;
+    left: 300px;
+    top: 120px;
+    border-radius:45px;
+    font-size: 60px;
+    border: 0px;
+    background-color: lightpink;
+    color: white;
+    transition: 0.3s;
+}
+#submit:hover{
+    transform: scale(0.8);
+}
+p{
+    text-align: center;
+}
