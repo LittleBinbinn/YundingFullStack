@@ -1,0 +1,21 @@
+*{
+    margin:0;
+    padding:0;
+}
+.big-box{
+    width: 1200px;
+    height: 600px;
+    background-image: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%);
+    margin:auto;
+    position: relative;
+}
+.box{
+    font-size: 20px;
+    width: 300px;
+    height: 200px;
+    border-radius: 20%;
+    border: 3px solid #9795f0;
+    margin:170px 430px;
+    position: absolute;
+    padding:20px;
+}
