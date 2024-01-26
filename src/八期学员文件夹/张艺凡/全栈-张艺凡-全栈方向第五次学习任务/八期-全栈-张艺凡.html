@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>什么！原来你们早就做完作业了.jpg</title>
+</head>
+<body>
+<input type="text" id="longst" placeholder="请输入字符串">
+<input type="text" id="shortst" placeholder="请输入子串">
+<!-- 按下按钮执行函数内容 -->
+<button onclick="countSubstring()">提交</button>
+<p id="result"></p>
+ 
+<script>
+//统计子字符串的函数 
+function countSubstring() {
+var longst=document.getElementById("longst").value;
+var shortst=document.getElementById("shortst").value;
+var count=0;
+//每次讲较短字符减去 然后再进行计数
+for(var i=0;i<=longst.length-shortst.length;i++){
+var match=true;
+    for(var j=0;j<shortst.length;j++){
+        //字符不相同的时候break
+                if(longst[i+j]!==shortst[j]){
+                match=false;
+                break;
+                }
+    }
+    //如果match true的时候count+1（即计数
+    if(match){
+      count++;
+    }
+  }
+ // +count将语句连接起来
+document.getElementById("result").innerHTML = "子字符串在母字符串中出现的次数为: "+count;
+}
+</script>
+</body>
+</html>
