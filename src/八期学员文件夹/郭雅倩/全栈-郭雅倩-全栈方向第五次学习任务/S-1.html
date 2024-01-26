@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云顶第五次作业</title>
+    <script>
+        window.onload=function(){
+            var button=document.getElementById("btn")
+            var mystr=document.getElementById("myIn1")
+            var mysonstr=document.getElementById("myIn2")
+            var endcount=document.getElementById("myPut")
+            button.onclick=function(){
+                str=mystr.value;
+                sonstr=mysonstr.value;
+                var count =0;
+            
+            for(var i=0;i<str.length;i++){
+                for(var j=0;j<sonstr.length&&i+j<str.length;j++){
+                    if(str[i+j]!==sonstr[j]){
+                        break;
+                    }
+                    if(j===sonstr.length-1){
+                        count++
+                    }
+                }
+                }
+                endcount.innerHTML=count
+
+            }}
+        
+       /// const str ='sssababfdhfhff'
+        //const sonstr ="ab"
+       // console.log(findStr(str,sonstr));
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head> 
+<body>
+    
+        请输入一个字符串：<br>
+        <input type="text" id="myIn1"><br>
+        请输入一个子串：<br>
+        <input type="text" id="myIn2">
+        <input type="button" value="提交" id="btn"><br>
+        字串出现的次数:<br>
+        <label  id="myPut"> </label>
+</body>
+</html>
