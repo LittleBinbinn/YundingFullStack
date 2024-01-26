@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算字串</title>
+    <script type="text/javascript">
+         function getStr(pareatStr,childStr){
+            if(typeof(pareatStr)!=="string"||typeof(childStr)!=="string")
+            {return 0;
+            }
+
+            if(pareatStr.length<childStr.length)
+            {
+                return 0;
+            }
+            else {
+                let num = 0;
+                for (let i = 0; i < pareatStr.length - childStr.length + 1; i++) {
+                    let k = 0;
+                    while (k < childStr.length && pareatStr[i + k] == childStr[k]) {
+                        k++;
+                    }
+                    if (k == childStr.length) {
+                        num++;
+                    }
+                }
+                document.getElementById("result").textContent = "子串的个数为 " + num;
+            }
+                
+            
+
+        }
+    </script>
+</head>
+<body>
+请输入一个字符串: <br>
+ <input type="text"  value="字符串" id="textPare"><br>
+请输入一个子串: <br>
+ <input type="text"  value="子串" id="textChil"><br>
+ 
+ <div id="result"></div>
+ <input type="submit" value="提交" onclick="getStr(document.getElementById('textPare').value, document.getElementById('textChil').value)">
+
+
+</body>
+</html>
