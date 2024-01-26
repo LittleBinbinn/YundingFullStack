@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第五次作业</title>
+        <style>
+            *{
+                margin: 0 auto;
+            }
+            .top{
+                position: absolute;
+                width: 300px;
+                height: 25px;
+                left: 40%;
+            }
+            .mid{
+                position: absolute;
+                top: 50px;
+                width: 200px;
+                height: 25px;
+                left: 40%;
+            }
+            .button{
+                position:absolute;
+                top: 73px;
+                width: 40px;
+                height: 25px;
+                left: 52%;
+            }
+            .bottom{
+                position: absolute;
+                top:100px;
+                width: 300px;
+                height: 25px;
+                left: 40%;
+            }
+        </style>
+        <script>
+             function s() {
+                var a = document.getElementById("t1").value;
+                var b = document.getElementById("t2").value;
+                let sum=0;
+               let n=0;
+                for(let i=0;i<a.length;i++)  {
+                 if(a[i]==b[0]){
+                    for(let j=i;j<b.length+i;j++){
+                      if(a[j]===b[n]) 
+                          n++
+                    }
+                   if(n===b.length) {
+                    sum++;
+                   }
+                   n=0
+                 }
+                }
+               document.getElementById("t3").innerHTML = (sum);
+            }
+        </script>
+</head>
+<body>
+    <div class="top">
+        请输入一个字符串：<input type="text" size="20" id="t1" >
+    </div>
+    <div class="mid">
+        请输入一个字串：<input type="text" id="t2">
+    </div>
+    <div class="button">
+        <input type="button"  value="提交" onclick="s()" >
+    </div>
+    <div class="bottom">
+        子串出现的次数为：<p id="t3"> </p>
+    </div>
+    </div>
+</body>
+</html>
