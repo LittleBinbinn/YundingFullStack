@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>全栈第五次作业</title>
+        <script>
+        function calculate(){
+            let a = document.getElementById('mom').value;
+            let b = document.getElementById('son').value;
+            let time = 0,i = 0,j = 0,n=0,m = b.length;
+            for(i=0;i<=a.length-b.length;i++){
+                n=i;
+                for(j = 0;j < b.length;j++){
+                    if(a[n]!==b[j]){
+                        j-=1;
+                        break;
+                    }
+                    n++;
+                }
+                if(j === b.length){
+                    time++;
+                }
+            }
+            document.getElementById('times').innerHTML=time;
+        }
+    </script>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+    
+        .one {
+            width: 250px;
+            height: 140px;
+            padding-left: 50px;
+            border: 1px solid black;
+            background-color: #dddd;
+        }
+    </style>
+    </head>
+    
+    <body>
+        <form class="one">
+            <label>请输入一个字符串：<br />
+            <input type="text" id="mom" >
+            <br />
+            <lable for="son">请输入一个子串：</lable>
+            <br />
+            <input type="text" id="son" >
+            <button type="button" onClick="calculate()" value="Submit">提交</button>
+            <br />
+            字串出现的次数为：
+            <br/>
+            </lable>
+            <p id="times"></p>
+        </form>
+    </body>        
+</html>
