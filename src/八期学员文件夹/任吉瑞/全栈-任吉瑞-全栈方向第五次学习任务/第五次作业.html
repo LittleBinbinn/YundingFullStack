@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .name3.p{
+ 
+        }
+    </style>
+</head>
+<body>
+<script>document.write("请输入一个字符串：")</script>
+<br><input type="text" id="name1"><br>
+<script>document.write("请输入一个子字符串：")</script><br>
+<input type="text" id="name2">
+<input type="button" value="提交" onclick="fn()"><br>
+<script>document.write("子串出现的次数为：")
+    function fn() 
+    {
+       let a=document.getElementById("name1").value;
+       let b=document.getElementById("name2").value;
+       let c=a.length;
+       let d=b.length;
+       let e;
+       let f;
+       let g="";
+       let h=0;
+       for(e=0;e<c;e++){
+        if(a[e]==b[0]&&(c-e)>=d)
+        {
+            for(f=0;f<d;f++)
+            {
+                g+=a[e+f];
+            }
+            
+            if(b==g){
+                h++;
+                g="";
+            }
+            else{
+                g="";
+            }
+        }
+       }
+       //console.log(h);
+       document.getElementById("name3").innerHTML=h;
+    }
+    
+</script>
+<span id="name3"></span>
+
+</body>
+</html>
