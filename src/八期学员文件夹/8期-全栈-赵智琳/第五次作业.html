@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background: url(https://typora----img.oss-cn-beijing.aliyuncs.com/OIP.jpg) no-repeat ;
+    }
+    .box {
+        position: relative;
+        margin: 200px auto;
+        height: 400px;
+        width: 500px;
+        background-color: rgba(255, 255, 255, .4);
+        border-radius: 70px;
+    }
+    .box h3 {
+        position: absolute;
+        margin-left: 30px;
+        color: #79808c;
+        letter-spacing: 1.5px;
+    }
+    .str2 {
+        top: 30px;
+        left: 40px;
+    }
+    .box input {
+        position: absolute;
+        height: 25px;
+        width: 400px;
+        border: 0;
+        background-color: rgba(217, 71, 71, 0.07);
+        border-radius: 5px;
+    }
+    .box #str1{
+        top: 90px;
+        left: 47px;
+    }
+    .box .zc {
+        left: 40px;
+        top: 110px;
+    }
+    .box #str2{
+        left: 47px;
+        top: 170px;
+    }
+    .tj {
+        position: absolute;
+        height: 35px;
+        width: 90px;
+        right: 50px;
+        top: 230px;
+        background: rgb(175, 86, 219);
+        border: 0;
+        color: #b54040;
+        font-weight: 700;
+        border-radius: 14px;
+        box-shadow: 3px 3px 6px #6c92d4;
+    }
+    .zcc {
+        left: 40px;
+        top: 220px;
+    }
+    #result {
+        position: absolute;
+        top: 221px;
+        left: 202px;
+    }
+    .tj:hover {
+        border: 2px solid rgb(80, 118, 222);
+    }
+
+</style>
+<body>
+    <div class="box">
+        <img src="" alt="">
+        <h3 class="str2">请输入一个字符串</h3>
+        <input id ="str1" type="text">
+        <h3 class="zc">请输入一个字串</h3>
+        <input type="text" id ="str2">
+        <button onclick="numb()"  class="tj">提交</button>
+        <h3 class="zcc">字串出现的次数为</h3>
+        <h3 id="result"></h3>
+
+    </div>
+
+    <script>
+        function numb() {
+        var a = document.getElementById("str1").value;
+        var b = document.getElementById("str2").value;
+        var count = compute(a,b);
+        var res = document.getElementById("result");
+        res.innerText = count;
+        }
+
+        function compute(str, subStr){
+            var count = 0;
+            var flag = true;
+            var slength = subStr.length;
+            for(var i = 0;i < str.length-slength+1;i++){
+                for(var j = 0;j<slength;j++){
+                    if(str[i+j]!=subStr[j]){
+                        flag = false;
+                        break;
+                    }
+                    flag = true;
+                }
+                if(flag ){
+                    count++;
+                }
+            }
+            return count;
+        }
+    </script>
+</body>
+</html>
+Footer
