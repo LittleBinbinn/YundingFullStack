@@ -1,0 +1,46 @@
+<!DOCTYPE htm>
+<html1 lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="Viewport" content="width=device-width,initial-scale=1.0" />
+        <title>第五周</title>
+        <style>
+            .main{
+                margin: auto;
+                width: 300px;
+                height: 300px;
+            }
+            button{
+                color: #000;
+                background-color: bisque;
+                border-radius: 35%;
+                border-color: bisque;
+            }
+
+        </style>
+        <script>
+            function count(){
+                let m=document.querySelector('.main-str').value;
+                let s = document.querySelector('.small-str').value;
+                let count=0;
+                let index=0;
+                while((index=m.indexOf(s,index))!==-1){
+                    count++;
+                    index+=s.length;
+                }
+                document.getElementById("count").innerHTML =count;
+
+            }
+
+        </script>
+        <body class="main">
+            <div>请输入一个字符串</div>
+            <input class="main-str" type="text">
+             <div>请输入一个子串</div>
+             <input class="small-str" type="text">
+              <button onclick="count()">提交</button>
+              <div id="count">子串出现的次数为：</div>
+
+        </body>
+        </head>
