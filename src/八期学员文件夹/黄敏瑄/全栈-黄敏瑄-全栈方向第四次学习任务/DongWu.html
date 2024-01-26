@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .TypeCenter{
+            width: 1920px;
+            margin: auto;
+        }
+        .title{
+            height: 48px;
+        }
+        .takep{
+            width: 199px;
+            height: 201px;
+            margin-left: 860px;
+            float: left;
+            margin-top: -48px;
+            transition-duration: 1.5s;
+        }
+        .takep:hover{
+            transform: scale(0.7s);
+        }
+        .block{
+            width: 80px;
+            height: 48px;
+            float: left;
+            background-repeat: no-repeat;
+        }
+        .block img{
+            width: 40px;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+        .block1{
+            width: 80px;
+            height: 48px;
+            float: right;
+        }
+        .block1 img{
+            width: 35px;
+            padding-top: 10px;
+            padding-left: 28px;
+        }
+        .block1 img:hover{
+            transform: scale(0.7s);
+        }
+        .text{
+            width: 1101px;
+            height: 190px;
+            margin-left: 416px;
+        }
+        .text1{
+            width: 262px;
+            height: 51px;
+            background-color: #2a3f17;
+            margin-left: 416px;
+            margin-top: 131px;
+            font-size: 31px;
+            text-align: center;
+            padding-top: 18px;
+            color: #ffffff;
+        }
+        .box{
+            background-image: url(./images/乌龟.jpg);
+            padding-top: 244px;
+            background-repeat: no-repeat;
+        }
+        .picture3{
+            width: 1114px;
+            height: 502px;
+            margin: auto;
+            margin-top: 118px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .picg{
+            width: 335px;
+            height: 502px;
+            background-image: url(./images/火烈鸟1.jpg);
+        }
+        .pic1 strong{
+            color: #ffffff;
+            background-repeat: no-repeat;
+            padding-left: 170px;
+            font-family: 宋体;
+            font-size: 50px;
+        }
+        .picj{
+            width: 335px;
+            height: 502px;
+            background-image: url(./images/火烈鸟2.jpg);
+        }
+        .picb{
+            width: 335px;
+            height: 502px;
+            background-image: url(./images/火烈鸟3.jpg);
+        }
+        .pic1{
+            transition-duration: 1.5s;
+
+        }
+        .pic1:hover{
+            transform: translateY(-50px);
+        }
+        .name2{
+            width: 1920px;
+            height: 758px;
+            background-image: url(./images/鹿.jpg);
+            background-repeat: no-repeat;
+            margin-top: 245px;
+        }
+        .family{
+            width: 946px;
+            height: 544px;
+            background-color: #e0dfdf;
+            float: left;
+            margin-left: 499px;
+            margin-top: -86px;
+            padding-top: 76px;
+            transition-duration: 1.5s;
+        }
+        .family:hover{
+            transform:translateY(-50px);
+        }
+        .egg{
+            width: 797px;
+            height: 238px;
+            margin: auto;
+            color: #2a3f17;
+            font-size: 19.5px;
+        }
+        .sign{
+            width: 198px;
+            height: 72px;
+            background-color: #2a3f17;
+            margin: auto;
+            margin-top: 96px;
+            color: #ffffff;
+            font-size: 35px;
+            text-align: center;
+            transition-duration: 1.5s;
+        }
+        .sign div{
+            padding-top: 10px;
+        }
+        .sign:hover{
+            transform: scale(0.9);
+        }
+        .diffrernce{
+            width: 235px;
+            height: 45px;
+            margin: auto;
+            margin-top: 81px;
+            padding-bottom: 5px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .diffrernce::before{
+            content: "";
+            position: absolute;
+            width: 2350px;
+            height: 1600px;
+            background: #697461;
+            right: -900px;
+            bottom: 50px;
+            transition-duration: 4s;
+
+        }
+        .diffrernce:hover::before{
+            transform: rotate(120deg);  
+        }
+        .diffrernce::after{
+            content: "";
+            position: absolute;
+            background: #ffffff;
+            inset: 5px;
+        }
+        .diffrernce h4{
+            color: #2a3f17;
+            font-size: 44px;
+            text-align: center;
+            z-index: 1;
+        }
+        .hklh{
+            width: 1148px;
+            height: 416px;
+            margin: auto;
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .pic2{
+            width: 265px;
+            height: 416px;
+            transition-duration: 1.5s;
+        }
+        .pic2:hover{
+            transform:translateY(-18px);
+        }
+        .text h5{
+            font-size: 50px;
+            text-align: center;
+            color: #2a3f17;
+            font-family:宋体;
+        }
+        .text strong{
+            color: #2a3f17;
+            font-size: 31px;
+            font-weight: 400;
+        }
+        .dif{
+            padding-top: 350px;
+        }
+        .tutu1{
+            width: 267px;
+            height: 264px;
+        }
+        .wenzi{
+            width: 267px;
+            height: 152px;
+            background-color: #e0dfdf;
+            text-align: center;
+            line-height: 2;
+        }
+        .wenzi h5{
+            font-size: 35px;
+            padding-top: 25px;
+            color: #2a3f17;
+        }
+        .wenzi a{
+            font-size: 20px;
+            color: #2a3f17;
+        }
+        .know{
+            width: 360px;
+            height: 68px;
+            margin: auto;
+            margin-top: 125px;
+            color: #2a3f17;
+            text-align: center;
+            padding-top: 20px;
+            font-size: 38px;
+            border: #2a3f17 solid;
+            transition-duration: 1.5s;
+            transition-property: all;
+        }
+        .know:hover{
+            background-color:#2a3f17 ;
+            color: #f8f8f8;
+        }
+        .pholast{
+            width: 1358px;
+            height: 1080px;
+            margin: auto;
+            margin-top: 89px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .tu{
+            width: 704px;
+            height: 1021px;
+        }
+        .zi{
+            width: 535px;
+            height: 921px;
+        }
+        .zi1{
+            width: 535px;
+            height: 357px;
+            padding-top: 94px;
+        }
+        .a{
+            color: #2a3f17;
+            font-size: 40px;
+            transition-duration: 1.5s;
+        }
+        .a:hover{
+            transform: translateY(-25px);
+        }
+        .b{
+            color: #2a3f17;
+            font-size: 25px;
+            padding-top: 30px;
+            transition-duration: 1.5s;
+
+        }
+        .b:hover{
+            transform: scale(1.2);
+        }
+        .zi2{
+            width: 535px;
+            height: 565px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .zi21{
+            width: 535px;
+            height: 73px;
+            transition-duration: 1.5s;
+            display: flex;
+        }
+        .zi21:hover{
+            transform:translateX(75px) ;
+        }
+        .zi211{
+            width: 73px;
+            height: 73px;
+            border-radius: 50%;
+            border:  #2a3f17 solid 1px;
+            color: #2a3f17;
+            font-size: 60px;
+            text-align: center;
+        }
+        .zi2111{
+            font-size: 35px;
+            padding-left: 25px;
+            padding-top: 13px;
+        }
+        .last{
+            width: 1920px;
+            height: 293px;
+            padding-top: 167px;
+        }
+        .buchong{
+            border-bottom: #000000 solid 5px;
+        }
+        .lastin{
+            width: 1150px;
+            height: 139px;
+            margin-left: 442px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .twothe{
+            width: 254px;
+            height: 139px;
+            line-height: 1.9;
+        }
+        .twothe h6{
+            font-size: 38px;
+            color: #2a3f17;
+        }
+        .more{
+            width: 400px;
+            height: 139px;
+        }
+        .more h5{
+            font-size: 36px;
+            color: #4d5b41;
+        }
+        .more h6{
+            color: #697461;
+            font-size: 30px;
+        }
+        .bigworld{
+            width: 364px;
+            height: 139px;
+        }
+        .bigworld div{
+            width: 364px;
+            height: 74px;
+            color: #ffffff;
+            margin-top: 27px;
+            font-size: 50px;
+            text-align: center;
+            background-color: #949f8b;
+            transition-duration: 1.5s;
+            transition-property: all;
+        }
+        .bigworld div:hover{
+            transform: translateY(-40px);
+            color: #949f8b;
+            background-color:#ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="TypeCenter">
+        <div>
+            <div class="title">
+                <div class="blcok">
+                    <img src="./tubiao/三杠.jpg">
+                </div>
+                <div class="block1">
+                    <img src="./tubiao/放大镜.jpg">
+                </div>
+            </div>
+            <div class="takep">
+                <img src="./tubiao/相机.jpg">
+            </div>
+            <div class="box">
+                <div class="text">
+                    <h5>Animal Photography</h5>
+                    <strong>A silhouette of them, a simple little acttion, here are the photographer's eyes the best pf them,their laughter,their love,their every vivid,are recored by us.</strong> 
+                </div>
+                <div class="text1">EXPIORE</div>
+                <div class="picture3">
+                    <div class="picg pic1">
+                        <div class="dif"><strong>Fly</strong></div>
+                    </div>
+                    <div class="picj pic1">
+                        <div class="dif"><strong>Love</strong></div>
+                    </div>
+                    <div class="picb pic1">
+                        <div class="dif"><strong>Stand</strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="name2">
+            <div class="family">
+                <div class="egg">
+                    "Family Farms is the best place, where I can buy fruit,vegetable,meat,honey,milkeggs and so on for my retaurant directly
+                    fromupplier. Super convinient.Thank you'xdccnfc cfvfesc cfnccnjdcn cfjdcdsr dcwwzwqg ejs dddc ddf fnfjv eij fvnv jnxzexh
+                    cncdcmdsc ddnc, cddmdcds dncdn cdcn wgeoeas, dcndassasas,cdcndcnc cciqoskxmcbdcpqslwg nfnere nfncsfjc dndcww frhfjnc
+                    qpdjweiw cnncqe, cqjsdc ccn dcjndcncf cdncjd dcdjcndg csjncq dcdncf dcdjdnc cdjsq, qkodkge wqcnpsdc cdnqq qcw,cqnonxj
+                    dcdcnd dcnjsdvb wcnwg cowwncjg jjcnjncqnw wcq c wd cwch, cnjncnc ececdcnncdwnc nenwc dcnnc cjcj , c cjrnc wecwc .
+                </div>
+                <div class="sign">
+                    <div>SIGN UP</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="diffrernce">
+            <h4>Difference</h4>
+        </div>
+
+        <div class="hklh">
+            <div class="pic2">
+                <div class="tutu1"><img src="./images/马.jpg" /></div>
+                <div class="wenzi">
+                    <h5>Horse</h5>
+                    <a href="#">A difference story</a>
+                </div>
+            </div>
+            <div class="pic2">
+                <div class="tutu1"><img src="./images/袋鼠.jpg" /></div>
+                <div class="wenzi">
+                    <h5>Kangaroo</h5>
+                    <a href="#">A difference story</a>
+                </div>
+            </div>
+            <div class="pic2">
+                <div class="tutu1"><img src="./images/狮子.jpg" /></div>
+                <div class="wenzi">
+                    <h5>Lion</h5>
+                    <a href="#">A difference story</a>
+                </div>
+            </div>
+            <div class="pic2">
+                <div class="tutu1"><img src="./images/小鸟.jpg" /></div>
+                <div class="wenzi">
+                    <h5>Hummingbird</h5>
+                    <a href="#">A difference story</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="know">
+            <strong>Know more</strong>
+        </div>
+
+        <div class="buchong">
+            <div class="pholast">
+                <div class="tu"><img src="./images/松鼠.jpg" /></div>
+                <div class="zi">
+                    <div class="zi1">
+                        <div class="a"><strong>The Photo</strong></div>
+                        <div class="b">"Family Farms is the best placewhere lcan buy fruit,vegetable,meat,honey,milkeggs and so on for my retaurant directly
+                        fromsupplier. Super convinient.Thank you</div>
+                    </div>
+                    <div class="zi2">
+                        <div class="zi21">
+                            <div class="zi211">1</div>
+                            <div class="zi2111">Looking for it</div>
+                        </div>
+                        <div class="zi21">
+                            <div class="zi211">2</div>
+                            <div class="zi2111">Cultivate feelings</div>
+                        </div>
+                        <div class="zi21">
+                            <div class="zi211">3</div>
+                            <div class="zi2111">Shooting</div>
+                        </div>
+                        <div class="zi21">
+                            <div class="zi211">4</div>
+                            <div class="zi2111">Harvest achievement</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="last">
+            <div class="lastin">
+                <div class="twothe">
+                    <h6>IN THE WILD</h6>
+                    <h6>IN THE SEA</h6>
+                </div>
+                <div class="more">
+                    <h5>MOER</h5>
+                    <h6>We create art. <br>We create life</h6>
+                </div>
+                <div class="bigworld">
+                    <div>Big World</div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+</html>

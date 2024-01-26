@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function CountChar() {
+            // 获取输入框中的字符串和子串
+            var String001 = document.getElementById("String001").value;
+            var String002 = document.getElementById("String002").value;
+
+            if (String001 === '' || String002 === '') {
+                document.getElementById("result").innerText = "请输入有效的字符串和子串";
+                return;
+            }
+
+            var regex = new RegExp(String002, 'g');
+            var counts = (String001.match(regex) || []).length;
+
+            document.getElementById("result").innerText = "子串 " + String002 + " 在字符串中出现的次数为: " + counts;
+        }
+    </script>
+</head>
+<body>
+    <h2>子串出现次数统计</h2>
+    <label for="String001">输入字符串：</label>
+    <input type="text" id="String001" placeholder="输入字符串"><br><br>
+
+    <label for="String002">输入子串：</label>
+    <input type="text" id="String002" placeholder="输入子串"><br><br>
+
+    <button onclick="CountChar()">统计子串出现次数</button><br><br>
+    <div id="result"></div>
+</body>
+</html>
