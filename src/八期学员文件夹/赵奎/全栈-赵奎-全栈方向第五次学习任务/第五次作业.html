@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function search() {
+            let str = document.getElementById("first").value;
+            let str_son = document.getElementById("second").value;
+            let length1 = str.length;
+            let length2 = str_son.length;
+            let count = 0;
+            for (let i = 0; i <= length1 - length2; i++) {
+                let a = true;
+                for (let j = 0; j <= length2; j++) {
+                    if (str[i + j] !== str_son[j]) {
+                        a = false;
+                        break;
+                    }
+                }
+                if (a) {
+                    count++;
+                    i += (length2 - 1);
+                }
+            }
+            document.getElementById("result").innerHTML = count;
+        }
+    </script>
+</head>
+<body>
+    <div class="box">
+        请输入一个字符串：<br/>
+        <input type="text" id="first"/><br />
+        请输入一个子串：<br/>
+        <input type="text" id="second"/> <button onclick="search()">提交</button><br />
+        子串出现的次数为：<br/>
+        <p id="result"></p>
+    </div>
+    
+</body>
+</html>
