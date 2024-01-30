@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第五周作业</title>
+    <!-- <script>
+        var btn= document.getElementById("btn")
+        var input3 = document.getElementById("number")
+        btn.onclick=function(){
+        input3.value=1
+        function getNumber(){
+            var input1 = document.getElementById("main")
+            var main = input1.value
+            var input2 = document.getElementById("sub")
+            var sub = input2.value
+            if(typeof(main)!==string||typeof(sub)!==string)
+            return "请输入正确的字符串"
+            if(sub.length>=main.length)
+            return 0
+            for(let i=0;i<main.length;i++){
+                let flag=true
+                let num=0
+                for(let j=0;j<sub.length;j++){
+                    if(sub[i]!==main[i+j]){
+                        flag = false
+                        break
+                    }
+                }
+                if (flag)
+                num++
+            return num
+            }
+        }
+    }
+    </script> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .body {
+            margin:auto auto;
+            margin-top: 250px;
+            width: 500px;
+            height: 370px;
+            /* background-color: pink; */
+            border: 1px solid black;
+        }
+        .one {
+            height: 50px;
+            width: 500px;
+            /* background-color: #fff; */
+            margin-left: 10px;
+            margin-top: 30px;
+            font-size: 25px;
+            line-height: 50px;
+        }
+        .two,
+        .four,
+        .six {
+            height: 50px;
+            width: 500px;
+            /* background-color: aqua; */
+        }
+        input[type="text"] {
+            width: 350px;
+            height: 35px;
+            outline: none;
+            margin-left: 10px;
+        }
+        .three {
+            height: 50px;
+            width: 500px;
+            margin-left: 10px;
+            font-size: 25px;
+            line-height: 50px;
+            /* background-color: #fff; */
+
+        }
+        button {
+            height: 40px;
+            width: 50px;
+            margin-left: 10px;
+            font-size: 18px;
+        }
+
+        .five {
+            height: 50px;
+            width: 500px;
+            margin-left: 10px;
+            font-size: 25px;
+            line-height: 50px;
+            /* background-color: #fff; */
+
+        }
+        /* .six {
+            height: 50px;
+            width: 500px;
+            margin-left: 10px;
+            background-color: blue;
+            font-size: 22px;
+            line-height: 50px;
+        } */
+
+    </style>
+</head>
+<body>
+    <div class="body">
+        <div class="one">请输入一个字符串：
+        </div>
+        <div class="two">
+        <input type="text" id="main">
+        </div>
+        <div class="three">请输入一个子串：
+        </div>
+        <div class="four">
+            <input type="text" id="sub">
+            <button id="btn">提交</button>
+        </div>
+        <div class="five">子串出现的次数为：</div>
+        <div class="six">
+            <input type="text" id="number">
+        </div>
+    </div>
+        <script>
+            var btn = document.getElementById("btn")
+            var input3 = document.getElementById("number")
+            btn.onclick = function () {
+                input3.value = getNumber()
+                function getNumber() {
+                    var input1 = document.getElementById("main").value
+                    // var main = input1.value
+                    var input2 = document.getElementById("sub").value
+                    // var sub = input2.value
+                    if (typeof (input1) !== "string" || typeof (input2) !== "string")
+                        return "请输入正确的字符串"
+                    if (input1.length <= input2.length)
+                        return 0
+                    let num = 0
+                    for (let i = 0; i < input1.length; i++) {
+                        let flag= true
+                        for (let j = 0; j < input2.length; j++) {
+                            if (input2[j] !== input1[i + j]) {
+                                flag= false
+                                break
+                            }
+                        }
+                        if (flag)
+                            num++
+                    }
+                        return num
+                }
+            }
+        </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>第五次学习任务</title>
+</head>
+
+<body>
+    <div class="main">
+        请输入一个字符串: 
+        <br><input type="text" id="inputstring"> <br>
+        请输入一个子串:
+        <br><input type="text" id="substring">
+        <button onclick="countstring()">提交</button><br>
+        子串出现的次数为:&nbsp;<span id="result"></span>
+    </div>
+    <script>
+        function countstring() {
+            var inputstring=document.getElementById('inputstring').value;
+            var substring=document.getElementById('substring').value;
+            var count=0;
+            var run=0;
+            while ((run = inputstring.indexOf(substring, run)) != -1)
+            {
+                count++;
+                run+= substring.length;
+            }
+            document.getElementById('result').innerHTML = count;
+        }
+    </script>
+</body>
