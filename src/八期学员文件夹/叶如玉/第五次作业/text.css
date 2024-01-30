@@ -1,0 +1,18 @@
+#mainString{
+    border-style: inset;
+    font-size: large;
+}
+#secString{
+    border-style: inset;
+    font-size: large;
+}
+.button{
+    border-style: inset;
+    background-color: thistle;
+    font-family: "隶书";
+    font-size: large;
+}
+p{
+    font-size: large;
+    font-family: "隶书";
+}
