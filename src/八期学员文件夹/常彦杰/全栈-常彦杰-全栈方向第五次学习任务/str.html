@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>str</title>
+    <script>
+        function search(a,b) {
+          a=document.getElementById("str1").value;
+          b=document.getElementById("str2").value;
+          a=a+"";
+          b=b+"";
+          const length1=a.length;
+          const length2=b.length;
+          var a_number,b_number,judge=0,counters=0,count=0;
+          for(a_number=0;a_number<length1;a_number++)
+          {
+            b_number=0;
+            counters=1;
+            judge=0;
+            if(a[a_number]==b[b_number])
+            {
+              for(;counters<length2;counters++)
+              {
+                a_number++;
+                b_number++;
+                if(a[a_number]!=b[b_number])
+                {
+                  judge=1;
+                  break;
+                }
+              }
+              if(judge==0)
+                count++;
+            }
+          }
+          var z=document.getElementById("count");
+          z.innerHTML=+count;
+        }
+    </script>
+    <style>
+      * {margin: 0;}
+      .background {
+        width: 600px;
+        height: 1060px;
+        background-image: url(Base.png);
+        left: 28%;
+        position: relative;
+      }
+      .title {
+        font-size: 34px;
+        color:rgb(240, 232, 232);
+        left: 38%;
+        position: relative;
+        width: 200px;
+      }
+      .input {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 300px;
+        top: 7%;
+        justify-content: space-between;
+      }
+      .input input {
+        background-color: transparent;
+        
+      }
+      .sss {
+        position: relative;
+        top: 25%;
+        left: 39%;
+      }
+      .submit {
+            left: -12%;
+            position: relative;
+            width: 300px;
+            height: 50px;
+            font-size: 25px;
+            font-weight: 550;
+            background-color: white;
+            border-radius: 50px;
+            color: rgb(136, 114, 148);
+        }
+        .tishi3 {
+          margin-top: 100px;
+          font-size: 25px;
+          color: azure;
+          position: relative;
+          left: -7%;
+        }
+        .tishi1,.tishi2 {
+          font-size: 25px;
+          color: azure;
+          left: 32%;
+          position: relative;
+        }
+        input{
+          height: 80px;
+          border: transparent;
+        }
+        .count {
+          font-size: 25px;
+          color: azure;
+          position: relative;
+          left: 10%;
+          top: 10%;
+        }
+    </style>
+</head>
+<body>
+  <div class="background">
+    <div class="title">statistics</div>
+    <div class="input">
+    <div class="tishi1">请输入一个字符串:</div>
+    <input type="text" id="str1" name="str1"><hr><br>
+    <div class="tishi2">请输入一个子串:</div>
+    <input type="text" id="str2" name="str2"><hr>
+    </div>
+    <div class="sss">
+    <button class="submit" onclick="search()">提交</button><br>
+    <div class="tishi3">子串出现的次数为:</div><br>
+    <div class="count" id="count"></div>
+    </div>
+  </div>  
+</body>
+</html>
