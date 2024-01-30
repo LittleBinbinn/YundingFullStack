@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1702536935577') format('truetype');
+}
+
+.iconfont2 {
+  font-family: "iconfont" !important;
+  font-size: 40px;
+  font-style: normal;
+  border: none;
+  background-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: transform 1s;
+}
+.iconfont2:hover{
+  transform: scale(0.7);
+}
+.icon-sousuo:before {
+  content: "\e86e";
+}
+

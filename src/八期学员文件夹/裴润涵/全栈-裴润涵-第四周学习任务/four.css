@@ -1,0 +1,358 @@
+*{
+    margin: 0;
+    padding: 0;
+    transition-duration: 1.5s;
+}
+ul{
+    list-style: none;
+}
+.w{
+    width: 1920px;
+    margin: auto;
+}
+.header{
+    display: flex;
+    background-color: white;
+    height: 49px;
+    padding: 17px 22px;
+    justify-content: space-between;
+}
+.header img:hover{
+    scale: 60%;
+}
+.camera{
+    position: relative;
+    width: 197px;
+    height: 197px;
+    background-color:#81c04b;
+    z-index: 1;
+}
+.circle1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -80px;
+    margin-left: -80px;
+    width: 160px;
+    height: 160px;
+    border: 5px solid;
+    background-color:transparent;
+    border-radius: 50%;
+    border-color: white;
+}
+.circle1 img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -39px;
+    margin-left: -56px;
+}
+.camera:hover{
+    scale: 60%;
+}
+.turtle{
+    position: relative;
+    background-image: url(https://peirunhan.oss-cn-beijing.aliyuncs.com/%E4%B9%8C%E9%BE%9F.png);
+    height: 882px;
+    color: #2a3f17;
+}
+.turtle p{
+    position: absolute;
+    top: 335px;
+    display: block;
+    font-size: 30px;
+    width: 1100px;
+    left: 416px;
+}
+.turtle h1{
+    position: absolute;
+    top: 244px;
+    font-size: 72px;
+    left: 594px;
+    font-family: serif;
+}
+.turtle .explore{
+    width: 262px;
+    height: 70px;
+    background-color: #2a3f17;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    line-height: 70px;
+    position: absolute;
+    top: 556px;
+    left: 414px;
+}
+.explore:hover{
+    scale: 80%;
+}
+.flamingo{
+    height: 594px;
+    position: relative;
+}
+.huolieniao{
+    position: relative;
+    left: 404px;
+    top: -152px;
+    display: flex;
+    width: 1110px;
+    justify-content: space-between;
+    font-size: 48px;
+    color:white;
+    font-family: Georgia;
+}
+.huolieniao .one p{
+    position: relative;
+    top: -163px;
+    left: 200px;
+    z-index: 1;
+}
+.huolieniao .two p{
+    position: relative;
+    left: 180px;
+    top: -163px;
+    z-index: 1;
+}
+.huolieniao .three p{
+    position: relative;
+    top: -163px;
+    left: 150px;
+    z-index: 1;
+}
+.huolieniao div:hover{
+    transform: translateY(-40px);
+}
+.deer{
+    background-image: url(https://peirunhan.oss-cn-beijing.aliyuncs.com/%E9%B9%BF.png);
+    height: 760px;
+}
+.deer .sign{
+    width: 948px;
+    height: 544px;
+    background-color: #e0dfdf;
+    position: relative;
+    top: -82px;
+    left: 500px;
+}
+.deer .sign p{
+    position: absolute;
+    left: 78px;
+    top: 84px;
+    display: inline-block;
+    width: 796px;
+    color: #2a3f17;
+    font-size: 20px;
+}
+.deer .sign .up{
+    position: absolute;
+    left: 374px;
+    top: 408px;
+    color: white;
+    font-weight: 700px;
+    width: 196px;
+    height: 70px;
+    background-color: #2a3f17;
+    font-size: 30px;
+    text-align: center;
+    line-height: 70px;
+}
+.deer .sign:hover{
+    transform: translateY(-40px);
+}
+.deer .sign .up:hover{
+    scale: 80%;
+}
+.difference{
+    height: 846px;
+    position: relative;
+}
+.difference h1{
+    position: absolute;
+    font-size: 48px;
+    color: #2a3f17;
+    left: 852px;
+    top: 86px;
+    width: 251px;
+    display: inline-block;
+}
+.difference h1::before{
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    border: 4px solid transparent;
+    width: 0;
+    height: 0;
+    top:0;
+    left: 0;
+}
+.difference h1:hover::before{
+    width: 100%;
+    height: 100%;
+    border-top-color: #2a3f17;
+    border-right-color: #2a3f17;
+    transition: width 1s ease-out, height 1s ease-out 1s;
+}
+.difference h1::after{
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    border: 4px solid transparent;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+}
+.difference h1:hover::after{
+    width: 100%;
+    height: 100%;
+    border-bottom-color: #2a3f17;
+    border-left-color: #2a3f17;
+    transition: border-color 0s ease-out 1s ,width 1s ease-out 2s,height 1s ease-out 3s;
+}
+.animal{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 1148px;
+    height: 412px;
+    left: 396px;
+    top:160px ;
+}
+.difference .animal div[class*=animal-]{
+    width: 264px;
+    height: 412px;
+    background-color: #e0dfdf;
+    text-align: center;
+    color: #2a3f17;
+}
+.difference .animal div[class*=animal-] div{
+    font-size: 30px;
+}
+.difference .animal div[class*=animal-] span{
+    font-size: 22px;
+    text-decoration: underline;
+    text-decoration-color:#2a3f17 ;
+    display: inline-block;
+}
+.difference .animal div[class*=animal-]:hover{
+    transform: translateY(-40px);
+}
+.difference .know{
+    width: 356px;
+    height: 68px;
+    border: 2px solid #2a3f17;
+    position: absolute;
+    left: 792px;
+    top: 692px;
+    color: #2a3f17;
+    font-size: 30px;
+    text-align: center;
+    line-height: 68px;
+}
+.difference .know:hover{
+    background-color: #2a3f17;
+    color: white;
+}
+.songshu{
+    height:1080px;
+    display: flex;
+    justify-content: center;
+}
+.songshu img{
+    height: 1020px;
+}
+.songshu .photo{
+    height: 924px;
+    width: 572px;
+    padding-left: 130px;
+    padding-top: 96px;
+    color: #2a3f17;
+}
+.songshu .photo .head{
+    font-size: 36px;
+    position: relative;
+}
+.songshu .photo .head:hover{
+    transform: translateY(-30px);
+}
+.songshu .photo .contents{
+    width: 526px;
+    height: 116px;
+    margin-top: 20px;
+    font-size: 24px;
+    position: relative;
+}
+.songshu .photo .contents:hover{
+    width: 750px;
+    height: 150px;
+    font-size: 35px;
+}
+.songshu .photo ul li{
+    margin-top: 88px;
+    width: 500px;
+    position: relative;
+}
+.songshu .photo ul li:hover{
+    transform: translateX(30px);
+}
+.songshu .photo ul li div{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 2px solid #2a3f17;
+    border-radius: 50%;
+    font-size: 60px;
+    text-align: center;
+    line-height: 70px;
+    color: #2a3f17;
+    position: relative;
+}
+.songshu .photo ul li span{
+    font-size: 24px;
+    margin-left: 28px;
+    display: inline-block;
+    position: relative;
+}
+hr{
+    background-color: #2a3f17;
+    height: 2px;
+}
+.end{
+    height: 456px;
+    color: #949f8b;
+    position: relative;
+}
+.end .wild{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+    height: 123px;
+    font-size: 40px;
+    position: absolute;
+    left: 446px;
+    top: 174px;
+    color: #2a3f17;
+}
+.end ul{
+    position: absolute;
+    left: 746px;
+    top: 180px;
+}
+.end .big{
+    width: 360px;
+    height: 74px;
+    background-color: #949f8b;
+    text-align: center;
+    line-height: 74px;
+    font-size: 36px;
+    color: white;
+    position: absolute;
+    top: 194px;
+    left: 1228px;
+}
+.end .big:hover{
+    transform: translateY(-20px);
+    background-color: transparent;
+    color: #949f8b;
+}

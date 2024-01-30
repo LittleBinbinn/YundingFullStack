@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>AnimalPhotography</title>
+    <style>
+         /* html {
+            width: 100%;
+            overflow-x: hidden;
+        } */
+        *{
+            margin: 0;
+        }
+        .line{
+            width: 27px;
+            height: 15px;
+            left: 0;
+            top: -3%;
+            position: absolute;
+            transition: ease;
+        }
+        .line:hover{
+           transform: scale(0.6);
+        }
+        .magnifier{
+            width: 16px;
+            height: 16px;
+            right: 0;
+            top: -3%;
+            position: absolute;
+            transition: ease;
+        }
+        .magnifier:hover{
+            transform: scale(0.6);
+        }
+        .main{
+            width: 1370px;
+            height: 700px;
+            top: 30px;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+
+        .camera{
+            width: 200px;
+            height: 200px;
+            top: -4%;
+            position: absolute;
+            transition: all 1s;
+        }
+        .camera:hover{
+            transform: scale(0.8);
+        }
+        .mainThree{
+            width: 1370px;
+            height:450px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+        .fly{
+            width: 250px;
+            height: 370px;
+            left: 10%;
+            top: -100px;
+            transition: all 1s;
+            position: absolute;
+        }
+        .fly:hover{
+            transform: translateY(-30px);
+        }
+        .love{
+            width: 250px;
+            height: 370px;
+            top: -100px;
+            transition: all 1s;
+            position: absolute;
+        }
+        .love:hover{
+            transform: translateY(-30px);
+        }
+        .stand{
+            width: 250px;
+            height: 370px;
+            right: 10%;
+            top: -100px;
+            transition: all 1s;
+            position: absolute;
+        }
+        .stand:hover{
+            transform: translateY(-30px);
+        }
+        .bgc2{
+            width: 1370px;
+            height: 540px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+        .FamilyText{
+            transition: all 1s;
+            width: 600px;
+            height: 344px;
+            right: 25%;
+            top: -50px;
+            position: absolute;
+             display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+        .FamilyText:hover{
+            transform: translateY(-30px);
+        }
+        .signup{
+            position: absolute;
+            width: 100px;
+            height: 40px;
+            top: 250px;
+            transition: all 1s;
+        }
+        .signup:hover{
+            transform: scale(0.8);
+        }
+        .difference{
+            position: relative;
+            width: 1370px;
+            height: 700px;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+        .differenceText{
+            color:#2a3f17;
+            border:3px solid #2a3f17;
+            position:absolute;
+            top: 70px;
+            font-size: 40px;
+        }
+        .differenceText::before{
+            position:absolute;  
+            content: "";
+            border: 1.5px solid white;
+            width: 200px;
+            top: -3px;
+            transition: all 1s;
+        }
+        .differenceText:hover::before{
+            transform: translateX(200px);
+        }
+        .differenceText::after{
+            position: absolute;
+            content: "";
+            border: 2px solid white;
+            width: 200px;
+            top:52.5px;
+            left: -3.5px;
+            transition: all 1s 1.4s;
+        }
+        .differenceText:hover::after{
+            transform: translateX(-210px);
+        }
+        .differenceTextBgc{
+            width: 200px;
+            height: 50px;
+            top: -1px;
+            left: -2px;
+            position: absolute;
+        }
+        .differenceTextBgc::before{
+            position: absolute;
+            content: "";
+            height:  52px;
+            border: 2px solid white;
+            left: -2px;
+            top: -2px;
+            transition: all 0.4s 2.4s;
+        }
+        .differenceTextBgc:hover::before{
+            transform: translateY(-60px);
+        }
+        .differenceTextBgc::after{
+            position: absolute;
+            content: "";
+            height: 52px;
+            border: 2px solid white;
+            left: 198.5px;
+            transition: all 0.4s 1s;
+        }    
+        .differenceTextBgc:hover::after{
+            transform: translateY(58px);
+        }
+        
+        .horse{
+            position: absolute;
+            width: 200px;
+            height: 313px;
+            top: 200px;
+            left: 200px;
+            transition: all 1s;
+        }
+        .horse:hover{
+            transform: translateY(-50px);
+        }
+        .kangaroo{
+            position: absolute;
+            width: 200px;
+            height: 313px;
+            top: 200px;
+            left: 460px;
+            transition: all 1s;
+        }
+        .kangaroo:hover{
+            transform: translateY(-50px);
+        }
+        .lion{
+            position:absolute;
+            width: 200px;
+            height: 313px;
+            top: 200px;
+            left: 710px; 
+            transition: all 1s;
+        }
+        .lion:hover{
+            transform: translateY(-50px);
+        }
+        .hummingbird{
+            position: absolute;
+            width: 200px;
+            height: 313px;
+            top: 200px;
+            left: 960px;
+            transition: all 1s;
+
+        }
+        .hummingbird:hover{
+            transform: translateY(-50px);
+        }
+        .KnowMore{
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            margin: 0 auto;
+            color: #2a3f17;
+            font-size: 30px;
+            width: 350px;
+            height: 50px;
+            top: 600px;
+            border: 3px solid #2a3f17;
+            transition: all 1s;
+        }
+        .KnowMore:hover{
+            color: white;
+            border: 3px solid white;
+            background-color:#2a3f17 ;
+        }
+        .squirrel{
+            width: 1370px;
+            height: 700px;
+            position: relative;
+        }
+        .squirrelBgc{
+            position: absolute;
+            width: 500px;
+            height: 727px;
+            left: 180px;
+        }
+        .photoText{
+            position: absolute;
+            width: 200px;
+            height: 34px;
+            left: 800px;
+            top: 60px;
+            transition: all 0.5s;
+        }
+        .photoText:hover{
+            transform: translateY(-20px);
+        }
+        .LongPhotoText{
+            position: absolute;
+            width: 500px;
+            height: 112px;
+            left: 800px;
+            top: 130px;
+            transition: all 1s;
+        }
+        .LongPhotoText:hover{
+            transform-origin: -10px -20px;
+            transform: scale(1.2);
+        }
+        .first{
+            position: absolute;
+            width: 250px;
+            height: 71px;
+            left: 800px;
+            top: 300px;
+            transition: all 1s;
+        }
+        .first:hover{
+            transform: translateX(40px);
+        }
+        .second{
+            position: absolute;
+            width: 300px;
+            height: 72px;
+            left: 800px;
+            top: 400px;
+            transition: all 1s;
+        }
+        .second:hover{
+            transform: translateX(40px);
+        }
+        .third{
+            position: absolute;
+            width: 200px;
+            height: 70px;
+            left: 800px;
+            top: 500px;
+            transition: all 1s;
+        }
+        .third:hover{
+            transform: translateX(40px);
+        }
+        .fourth{
+            position: absolute;
+            width: 338px;
+            height: 70px;
+            left: 800px;
+            top: 600px;
+            transition: all 1s;
+        }
+        .fourth:hover{
+            transform: translateX(40px);
+        }
+        .last{
+            position: relative;
+            width: 1370px;
+            height: 500px;
+        }
+        .lastline
+        {
+            width: 100%;
+            border: 3px solid #2a3f17;
+            position: absolute;
+            top: 200px;
+        }
+        .lastText{
+            position: absolute;
+            width: 1370px;
+            height: 323px;
+            top: 204px;
+        }
+        .bigworld{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            margin: 0 auto;
+            position: absolute;
+            color: white;
+            background-color: #949f8b;
+            top: 350px;
+            left: 800px;
+            width: 300px;
+            height: 70px;
+            font-size:25px;
+            transition: all 1s;
+        }
+        .bigworld:hover{
+            color: #949f8b;
+            background-color: white;
+            transform: translateY(-30px);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+        <img src="https://typora-------image.oss-cn-beijing.aliyuncs.com/EXPIORE.png"/>
+
+        <div class="line">
+            <img src="https://typora-------image.oss-cn-beijing.aliyuncs.com/%E4%B8%89%E6%9D%A0.png"/>
+        </div>
+
+        <div class="magnifier">
+            <img src="https://typora-------image.oss-cn-beijing.aliyuncs.com/%E6%94%BE%E5%A4%A7%E9%95%9C.png"/>
+        </div>
+
+        <div class="camera">
+            <img src=https://typora-------image.oss-cn-beijing.aliyuncs.com/%E7%9B%B8%E6%9C%BA.png alt="">
+        </div>
+    </div>
+
+    <div class="mainThree">
+        <div class="fly">
+            <img src="https://typora-------image.oss-cn-beijing.aliyuncs.com/Fly.png"/>
+        </div>
+
+        <div class="stand">
+            <img src="https://typora-------image.oss-cn-beijing.aliyuncs.com/Stand.png"/>
+        </div>
+
+        <div class="love">
+            <img src="https://typora-------image.oss-cn-beijing.aliyuncs.com/Love.png"/>
+        </div>
+
+    </div>
+
+    <div class="bgc2">
+        <img src="https://typora-------image.oss-cn-beijing.aliyuncs.com/%E9%B9%BF.png"/>
+
+        <div class="FamilyText">
+            <img src="https://typora-------image.oss-cn-beijing.aliyuncs.com/%E2%80%9CFamily%20Farms%20is%20the%20best%20place%EF%BC%8Cwhere%20I%20can%20buy%20fruit,vegetable.png"/>
+
+            <div class="signup">
+                <img src="https://typora-------image.oss-cn-beijing.aliyuncs.com/SIGN%20UP.png"/>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="difference">
+        <div class="differenceText">
+            Difference
+            
+            <div class="differenceTextBgc">
+            </div>
+        </div>
+
+        <div class="horse">
+            <img src="https://typora-------image.oss-cn-beijing.aliyuncs.com/Horse.png"/>
+        </div>
+
+        <div class="kangaroo">
+            <img src="https://typora-------image.oss-cn-beijing.aliyuncs.com/Kangaroo.png"/>
+        </div>
+
+        <div class="lion">
+            <img src="https://typora-------image.oss-cn-beijing.aliyuncs.com/Lion.png"/>
+        </div>
+
+        <div class="hummingbird">
+            <img src="https://typora-------image.oss-cn-beijing.aliyuncs.com/Hummingbird.png"/>
+        </div>
+
+        <div class="KnowMore">Know more</div>
+    </div>
+
+    <div class="squirrel">
+        <div class="squirrelBgc">
+            <img src="https://typora-------image.oss-cn-beijing.aliyuncs.com/%E6%9D%BE%E9%BC%A0.png"/>
+        </div>
+
+        <div class="photoText">
+            <img src="https://typora-------image.oss-cn-beijing.aliyuncs.com/The%20Photo.png"/>
+        </div>
+
+        <div class="LongPhotoText">
+            <img src="https://typora-------image.oss-cn-beijing.aliyuncs.com/%E2%80%9CFamily%20Farms%20is%20the%20best%20placewhere%20I%20%20can%20buy%20fruit,vegetable.png"/>
+        </div>
+
+        <div class="first">
+            <img src="https://typora-------image.oss-cn-beijing.aliyuncs.com/LookingForIt.png"/>
+        </div>
+
+        <div class="second">
+            <img src="https://typora-------image.oss-cn-beijing.aliyuncs.com/CultivateFeelings.png"/>
+        </div>
+
+        <div class="third">
+            <img src="https://typora-------image.oss-cn-beijing.aliyuncs.com/Shooting.png"/>
+        </div>
+
+        <div class="fourth">
+            <img src="https://typora-------image.oss-cn-beijing.aliyuncs.com/HarvestAchievement.png"/>
+        </div>
+
+    </div>
+
+    <div class="last">
+        <div class="lastline"></div>
+        
+        <div class="lastText">
+            <img src="https://typora-------image.oss-cn-beijing.aliyuncs.com/We%20create%20art.%20We%20create%20life.png"/>
+        </div>
+
+        <div class="bigworld">Big World</div>
+        
+    </div>
+
+</body>
+</html>

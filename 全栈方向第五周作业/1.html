@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>全栈第五次作业</title>
+    <style>
+        .background{
+           margin: auto;
+            padding: 0; 
+            width: 500px;
+            height: 300px;
+            background-color: aquamarine;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        <form id="inputForm">
+            <label for="stringInput">输入字符串：</label>
+            <input type="text" id="stringInput" required><br><br>
+            <label for="substringInput">输入子串：</label>
+            <input type="text" id="substringInput" required><br><br>
+            <button type="button" onclick="countSubstring()">确定</button>
+        </form>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function countSubstring() {
+            var stringInput = document.getElementById("stringInput").value;
+            var substringInput = document.getElementById("substringInput").value;
+            var result = document.getElementById("result");
+            var count = 0;
+            var i = 0;
+            while (i < stringInput.length) {
+                if (stringInput.substr(i, substringInput.length) === substringInput) {
+                    count++;
+                    i += substringInput.length;
+                } else {
+                    i++;
+                }
+            }
+            result.innerHTML = "子串在字符串中出现的次数为：" + count;
+        }
+    </script>
+</body>
+
+</html>

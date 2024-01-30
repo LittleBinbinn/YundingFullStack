@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>查找子字符串</title>
+    <style>
+    .Button {
+        padding: 10px 20px;
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 5px 2px;
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+<h1>查找子字符串</h1>
+<p id="output"></p>
+<input type="text" id="str" placeholder="请输入主字符串" style="width: 300px;">
+<input type="text" id="substr" placeholder="请输入要查找的子字符串" style="width: 300px;">
+<button class="Button" onclick="find()">查找子字符串</button>
+
+<script>
+    function find(){
+      // 获取用户输入的主字符串和子字符串
+        var str=document.getElementById("str").value;
+        var substr=document.getElementById("substr").value;
+        var num=0; // 子字符串出现的次数
+        for (var i=0;i<=str.length-substr.length;i++) {
+            if(str.substring(i,i+substr.length)==substr) {
+                num++; // 子字符串出现一次，计数器加一
+            }
+        }
+        document.getElementById("output").innerHTML="子字符串"+substr +"在主字符串"+substr+"中出现了 "+num+"次";
+    }
+  </script>
+</body>
+</html>

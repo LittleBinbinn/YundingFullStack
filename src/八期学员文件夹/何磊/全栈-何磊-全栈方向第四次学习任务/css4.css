@@ -1,0 +1,306 @@
+.typecenter{
+	width: 1920px;
+	margin: auto;
+}
+.wugui{
+	position: relative;
+	margin: 0 auto;
+}
+.camera{
+	position: absolute;
+	width: 180px;
+	height: 160px;
+	left: 36%;
+	top: -20px;
+	background-color: #81c04b;
+}
+.camera1{
+	position: absolute;
+	left: 20px;
+	top: 10px;
+	width: 140px;
+	height: 140px;
+	top: 10px;
+	border: 2px solid white;
+	border-radius: 50%;
+}
+@keyframes camera1{
+	0%{
+		transform: rotate(0deg);
+	}
+	50%{
+		transform: rotate(180deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+@keyframes second3{
+	0%{
+		border: 4px solid orange;
+	}
+	50%{
+		border: 4px solid red;
+	}
+	100%{
+		border: 4px solid #b21616;
+	}
+}
+.camera1 img{
+        animation-name: camera1;
+        animation-duration: 2s;
+        animation-iteration-count: 2;
+        animation-direction: alternate;
+}
+.camera img{
+	margin-left: 14px;
+	margin-top: 30px;
+}
+.img2{
+	position: absolute;
+	width: 633px;
+	height: 70px;
+	left: 30%;
+	top: 150px;
+}
+.img3{
+	position: absolute;
+	width: 633px;
+	height: 70px;
+	left: 15%;
+	top: 220px;
+}
+.expiore{
+	position: absolute;
+	width: 180px;
+	height: 80px;
+	left: 17%;
+	top: 470px;
+	font-size: 30px;
+	background-color: #2a3f17;
+	color: white;
+}
+.expiore1{
+	position: absolute;
+	width: 180px;
+	height: 80px;
+	line-height: 80px;
+	margin-left: 25px;
+}
+.img4{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+    left: 5%;
+	bottom: -100px;
+}.img4 img{
+    transition: all 0.5s;
+}
+.img4 img:hover{
+    transform: rotate(-45deg);
+}
+.img5{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	left: 30%;
+	bottom: -100px;
+}
+.img5 img{
+    transition: all 0.5s;
+}
+.img5 img:hover{
+    display: none;
+}
+.img6{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	left: 55%;
+	bottom: -100px;
+}
+.img6 img{
+    transition: all 0.5s;
+}
+.img6 img:hover{
+	transform: rotate(45deg);
+}
+.second{
+	position: relative;
+	top: 600px;
+	height: 1320px;
+}
+.image img,
+.second img{
+	width: 1550px;
+}
+.second1{
+	position: absolute;
+	width: 730px;
+	height: 300px;
+	top: -70px;
+	left: 20%;
+	background-color: #e0dfdf;
+}
+.second2{
+	position: absolute;
+	width: 640px;
+	height: 170px;
+	left: 50px;
+	top: 0px;
+	margin-top: 12px;
+}
+.second3{
+	position: absolute;
+	width: 100px;
+	height: 60px;
+	top: 100px;
+	margin-left: 40px;
+	margin-top: 120px;
+	background-color: #2a3f17;
+	left: 40%;
+	font-size: 20px;
+	animation-name: second3;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+.second3 a{
+	display: inline-block;
+	margin-top: 13px;
+	margin-left: 12px;
+	color: white;
+	text-decoration: none;
+}
+
+.part3{
+	display: flex;
+	justify-content: center;
+	height: 780px;
+}
+.part3 p{
+	position: relative;
+	top: -90px;
+	font-size: 30px;
+    left: 32%;
+}
+.part3 a{
+	color: black;
+}
+.part3 div{
+	background-color: #e0dfdf;
+	margin-left: 10px;
+	margin-top: 18px;
+	width: 261px;
+	height: 410px;
+}
+.part3 img{
+	width: 261px;
+}
+.part3 .special{
+	position: relative;
+	bottom: 10px;
+	top: 520px;
+	left: -44%;
+	width: 200px;
+	height: 60px;
+	color: black;
+	line-height: 60px;
+	margin: 0 auto;
+	background-color: white;
+	border: 2px solid black;
+	z-index: 2;
+}
+.part3 center div{
+	position: absolute;
+	top: 2380px;
+	width: 230px;
+	height: 42px;
+	font-size: 25px;
+}
+.part3 .special a{
+	text-decoration: none;
+}
+.part4{
+	position: relative;
+	height: 1120px;
+	border-bottom: 5px solid #e0dfdf;
+}
+.part4 img:hover{
+    transform: scale(1.1);
+}
+.part4 img{
+	transition: .5s;
+}
+.squirrel{
+	overflow: hidden;
+}
+.part4 div{
+	position: absolute;
+	width: 700px;
+	height: 1020px;
+}
+.part4 div:nth-child(2){
+    left: 40%;
+    shape-outside: none;
+}
+.part4 .inner1{
+	height: 50px;
+	margin-top: 20px;
+}
+.part4 .inner2{
+	height: 50px;
+	margin-top: 250px;
+}
+.part4 .inner3{
+	height: 50px;
+	margin-top: 450px;
+}
+.part4 .inner4{
+	height: 50px;
+	margin-top: 650px;
+}
+.part4 span{
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 50%;
+	line-height: 50px;
+}
+.part5{
+	position: relative;
+	height: 225px;
+	margin-top: 150px;
+}
+.part5 div{
+	display: inline-block;
+}
+.last1{
+	position: absolute;
+	left: 0%;
+	top: -15px;
+	margin-left: 305PX;
+	margin-top: 0px;
+	height: 225px;
+	width: 220px;
+	color: #2a3f17;
+}
+.last2{
+	position: absolute;
+	height: 225px;
+	width: 220px;
+	left: 30%;
+	color: #a3a99e;
+}
+.last3{
+	position: absolute;
+	left: 50%;
+	top: 50px;
+	height: 60px;
+	width: 210px;
+	line-height: 60px;
+	font-size: 25px;
+	color: white;
+	background-color: #949f8b;
+}

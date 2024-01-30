@@ -1,0 +1,23 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1221486",
+      "name": "搜索",
+      "font_class": "search",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "21446686",
+      "name": "general-titlebar",
+      "font_class": "general-titlebar",
+      "unicode": "f06a",
+      "unicode_decimal": 61546
+    }
+  ]
+}

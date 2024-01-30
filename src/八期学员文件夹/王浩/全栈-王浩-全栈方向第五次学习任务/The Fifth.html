@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="字符查找" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="The Fifth.js"></script>
+<style>
+    .body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        width: 1650px;
+        height: 930px;
+   
+    }
+    .all {
+        width: 1650px;
+        height: 930px;     
+        overflow: hidden;
+    }
+    .allinall{
+        position: relative;
+        top: -500px;
+        left: 5%;
+        width: 350px;
+        height: 600px;
+        margin: 0 auto;
+        overflow: hidden;
+        font-size: 25px;
+    }
+</style>
+
+<body>
+    <div class="all">
+        <img style="width:1650px;height:930px;" src="https://wangbutaihao.oss-cn-beijing.aliyuncs.com/back.jpg" alt="beijing">
+        <div class="allinall">
+        <div>
+            
+            <p1>请输入母字符串:</p1>
+            <input type="text" id="fatherStr">
+        </div>
+        <div>
+            <p2>请输入你想要查找的字符串:</p2>
+            <input type="text" id="sonStr">
+        </div>
+        <div class="submit" style="font-size: 35px;">
+            <input type="submit" value="确定" onclick="test1()" id="submit" />
+        </div>
+        <p3>子字符串出现次数：</p3>
+        <br>
+        <p id="result"></p>
+    </div>
+    </div>
+    
+</body>
+
+</html>

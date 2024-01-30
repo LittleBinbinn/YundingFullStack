@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "127579549",
+      "name": "分割线",
+      "font_class": "fengexian",
+      "unicode": "ec7f",
+      "unicode_decimal": 60543
+    }
+  ]
+}

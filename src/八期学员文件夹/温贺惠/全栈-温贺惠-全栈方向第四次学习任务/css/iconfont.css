@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1702285666552') format('truetype');
+}
+
+.iconfont1 {
+  font-family: "iconfont" !important;
+  font-size: 25px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  top: 15px;
+  left: 30px;
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  background: white;
+}
+.iconfont1:hover {
+    transform:scale(0.5);
+}
+.icon-Magnifier:before {
+  content: "\e62d";
+}
+
+.icon-gengduo:before {
+  content: "\e60c";
+}
+.iconfont2 {
+  font-family: "iconfont" !important;
+  font-size: 25px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  top: 15px;
+  right: 30px;
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  background: white;
+}
+.iconfont2:hover {
+    transform:scale(0.5);
+}

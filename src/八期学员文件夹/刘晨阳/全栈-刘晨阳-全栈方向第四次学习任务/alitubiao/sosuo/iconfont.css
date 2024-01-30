@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1702382453466') format('truetype');
+}
+
+.iconfont_sosuo {
+  font-family: "iconfont" !important;
+  font-size: 23px;
+  color: black;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-sousuo:before {
+  content: "\f00a8";
+}
+

@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1702382253770') format('truetype');
+}
+
+.iconfont_all {
+  font-family: "iconfont" !important;
+  font-size: 20px;
+  font-style: normal;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ops-menu:before {
+  content: "\e53a";
+}
+

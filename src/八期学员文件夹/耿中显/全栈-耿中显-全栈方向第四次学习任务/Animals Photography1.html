@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Photography</title>
+</head>
+<style>
+    @font-face {
+        font-family: 'iconfont';
+        src: url('font/iconfont.woff2?t=1671436514946') format('woff2'),
+            url('font/iconfont.woff?t=1671436514946') format('woff'),
+            url('font/iconfont.ttf?t=1671436514946') format('truetype');
+    }
+
+    .iconfont {
+        font-family: "iconfont" !important;
+        font-size: 20px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .body {
+        width: 1920px;
+        position: relative;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .title {
+        height: 1525px;
+        position: relative;
+    }
+
+    .passage {
+        height: 760px;
+        position: relative;
+    }
+
+    .difference {
+        height: 550px;
+        position: relative;
+        margin-top: -30px;
+    }
+
+    .kw {
+        position: relative;
+        height: 1235px;
+        overflow: hidden;
+        width: 1355px;
+        margin-left: 283.5px;
+    }
+
+    .bottom {
+        height: 460px;
+        position: relative;
+    }
+
+    .navigation {
+        height: 48px;
+        width: 1920px;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .camera {
+        background-color: #81c04b;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        z-index: 3;
+        left: 860px;
+        top: 0px;
+    }
+
+    .navigation span {
+        transition: all 0.8s;
+    }
+
+    .camera:hover {
+        scale: 0.8;
+    }
+
+    .navigation span:hover {
+        font-size: 16px;
+    }
+
+    #camera_circle {
+        position: absolute;
+        z-index: 5;
+        top: 18px;
+        left: 18px;
+    }
+
+    #camera_sign {
+        position: absolute;
+        z-index: 11;
+        top: 60px;
+        left: 45px;
+    }
+
+    .title_title {
+        width: 630px;
+        font-size: 54px;
+        font-family: Cambria;
+        position: absolute;
+        left: 645px;
+        top: 290px;
+        color: #2a3f17;
+        text-align: center;
+    }
+
+    .title_words {
+        width: 1095px;
+        color: #2a3f17;
+        font-size: 24px;
+        position: absolute;
+        left: 415px;
+        top: 380px;
+    }
+
+    .title_button {
+        width: 265px;
+        height: 75px;
+        background-color: #2a3f17;
+        color: white;
+        font-size: 26px;
+        font-weight: 900;
+        position: absolute;
+        left: 415px;
+        top: 575px;
+        line-height: 75px;
+        text-align: center;
+    }
+
+    #explore {
+        left: 202px;
+    }
+
+    .explore {
+        width: 262px;
+        height: 72px;
+        color: white;
+        z-index: 5;
+        position: absolute;
+        left: 410px;
+        top: 605px;
+        background-color: #2a3f17;
+        font-size: 26px;
+        left: 365px;
+        bottom: 245px;
+        line-height: 75px;
+        text-align: center;
+        transition: all 0.7s;
+    }
+
+    .explore:hover {
+        scale: 0.9;
+    }
+
+    .photos_content {
+        width: 1110px;
+        height: 500px;
+        position: absolute;
+        z-index: 9;
+        left: 410px;
+        bottom: 245px;
+
+    }
+
+    .photos_content div {
+        position: absolute;
+        z-index: 11;
+    }
+
+    .photos_content span {
+        font-size: 40px;
+        color: white;
+        font-family: Cambria;
+        position: absolute;
+        z-index: 13;
+        bottom: 93px;
+        display: block;
+        width: 120px;
+        height: 40px;
+    }
+
+    .photo1 {
+        background: url(image/photo1.png) no-repeat scroll;
+        width: 330px;
+        height: 500px;
+    }
+
+    .photo2 {
+        background: url(image/photo2.png) no-repeat scroll;
+        width: 330px;
+        height: 500px;
+        left: 390px;
+    }
+
+    .photo3 {
+        background: url(image/photo3.png) no-repeat scroll;
+        width: 330px;
+        height: 500px;
+        left: 780px;
+    }
+
+    #photo_p1 {
+        left: 202px;
+    }
+
+    #photo_p2 {
+        left: 202px;
+    }
+
+    #photo_p3 {
+        left: 202px;
+    }
+
+    .photo1,
+    .photo2,
+    .photo3 {
+        transition: transform 0.6s;
+    }
+
+    /* 动画 */
+    .photo1:hover,
+    .photo2:hover,
+    .photo3:hover {
+        transform: translateY(-40px);
+    }
+
+    .passage_box {
+        width: 945px;
+        height: 545px;
+        position: absolute;
+        z-index: 3;
+        left: 500px;
+        bottom: 300px;
+        background-color: #e0dfdf;
+        margin: 0;
+        padding: 0;
+        transition: transform 0.8s;
+    }
+
+    .passage_box:hover {
+        transform: translateY(-25px);
+    }
+
+    .passage_words {
+        position: absolute;
+        z-index: 5;
+        left: 80px;
+        bottom: 230px;
+        width: 800px;
+        height: 235px;
+        font-size: 20px;
+        color: #2a3f17;
+    }
+
+    .passage_buttom {
+        width: 265px;
+        height: 75px;
+        background-color: #2a3f17;
+        color: white;
+        font-size: 26px;
+        position: absolute;
+        z-index: 5;
+        left: 365px;
+        bottom: 65px;
+        line-height: 75px;
+        text-align: center;
+        transition: all 0.7s;
+    }
+
+    .passage_buttom:hover {
+        scale: 0.9;
+    }
+
+    /* 四只动物 */
+    .diff_title {
+        color: #2a3f17;
+        font-size: 40px;
+        position: absolute;
+        z-index: 3;
+        top: -90px;
+        left: 850px;
+    }
+
+    /* 动画1 */
+    @keyframes border_appear {
+        0% {
+            border: 0px;
+        }
+
+        30% {
+            border-top: 3px #2a3f17 solid;
+        }
+
+        50% {
+            border-top: 3px #2a3f17 solid;
+            border-right: 3px #2a3f17 solid;
+        }
+
+        75% {
+            border: 3px #2a3f17 solid;
+            border-left: 0px;
+        }
+
+        100% {
+            border: 3px #2a3f17 solid;
+        }
+    }
+
+    .diff_title:hover {
+        animation: border_appear 1.2s ease 0.1s 1 backwards;
+    }
+
+    .diff_content {
+        width: 1150px;
+        height: 410px;
+        margin-left: 400px;
+        margin-top: 160px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .diff_content div {
+        width: 265px;
+        background-color: #e0dfdf;
+        position: relative;
+        transition: transform 0.8s;
+    }
+
+    /* 动画2 */
+    .diff_content div:hover {
+        transform: translateY(-35px);
+    }
+
+    .diff_content p {
+        font-size: 26px;
+        height: 24px;
+        color: #2a3f17;
+        position: absolute;
+        z-index: 5;
+        top: 260px;
+    }
+
+    #diff_p1 {
+        left: 95px;
+    }
+
+    #diff_p2 {
+        left: 80px;
+    }
+
+    #diff_p3 {
+        left: 110px;
+    }
+
+    #diff_p4 {
+        left: 50px;
+    }
+
+    .diff_content a {
+        font-size: 22px;
+        color: #2a3f17;
+        position: absolute;
+        z-index: 5;
+        top: 335px;
+        left: 45px;
+    }
+
+    /* Knowmore部分 */
+    .kw_title {
+        width: 360px;
+        height: 70px;
+        border: 3px #2a3f17 solid;
+        position: absolute;
+        top: 1px;
+        left: 535px;
+        color: #2a3f17;
+        font-size: 28px;
+        text-align: center;
+        line-height: 70px;
+        transition: all 1s;
+    }
+
+    .kw_title:hover {
+        background-color: #2b4613;
+        color: white;
+    }
+
+    #kw_photo,
+    .kw_words {
+        margin-top: 155px;
+    }
+
+    .kw_words {
+        color: #2a3f17;
+        font-size: 22px;
+        position: absolute;
+        margin-top: 0;
+        z-index: 3;
+        right: 0px;
+        top: 90px;
+    }
+
+    #kw_words_title {
+        font-size: 38px;
+        transition: transform 0.8s;
+    }
+
+    #kw_words_title:hover {
+        transform: translateY(-50px);
+    }
+
+    #kw_words1 {
+        width: 520px;
+        transition: all 0.7s linear;
+    }
+
+    #kw_words1:hover {
+        scale: 1.2;
+        transform: translateX(50px);
+    }
+
+    .option {
+        width: 340px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: relative;
+    }
+
+    .option1,
+    .option2,
+    .option3,
+    .option4 {
+        transition: transform 0.8s;
+    }
+
+    .option1:hover,
+    .option2:hover,
+    .option3:hover,
+    .option4:hover {
+        transform: translateX(50px);
+    }
+
+    .ser1,
+    .ser2,
+    .ser3,
+    .ser4 {
+        width: 68px;
+        height: 68px;
+        background: white float: left;
+        position: relative;
+    }
+
+    #img_ser1,
+    #img_ser2,
+    #img_ser3,
+    #img_ser4 {
+        position: absolute;
+        left: 26px;
+        top: 15px;
+    }
+
+    /* 文末 */
+    #bottom_img {
+        position: absolute;
+        z-index: 1;
+    }
+
+    .bottom_words {
+        color: #2a3f17;
+        position: relative;
+        width: 1920px;
+    }
+
+    .bottom_w1 {
+        font-size: 36px;
+        font-weight: 700;
+        position: absolute;
+        z-index: 3;
+        left: 445px;
+        top: 170px;
+    }
+
+    .bottom_w2 {
+        font-size: 20px;
+        position: absolute;
+        z-index: 3;
+        left: 745px;
+        top: 175px;
+    }
+
+    #botton_w2_title {
+        font-size: 26px;
+        font-weight: 900;
+    }
+
+    .bottom_w_button {
+        width: 360px;
+        height: 75px;
+        font-size: 32px;
+        color: white;
+        line-height: 75px;
+        text-align: center;
+        background-color: #949f8b;
+        position: absolute;
+        z-index: 3;
+        right: 330px;
+        top: 190px;
+        transition: all 0.8s linear;
+    }
+
+    .bottom_w_button:hover {
+        background-color: white;
+        color: #949f8b;
+        transform: translateY(-25px);
+    }
+</style>
+
+<body>
+    <div class="title">
+        <!-- camera and bottom-->
+        <img src="https://s2.loli.net/2023/12/19/4EckxCMIiulGZ8W.png"></a>
+        <div class="navigation">
+            <span class="iconfont">&#xe601;</span>
+            <span class="iconfont">&#xe625;</span>
+        </div>
+        <img src="https://s2.loli.net/2023/12/19/iWGBXCmg1TSewIF.png"></a>
+        <div class="camera">
+            <img src="https://s2.loli.net/2023/12/19/P32g9cFhdzSyKLl.png" id="camera_circle">
+            <img src="https://s2.loli.net/2023/12/19/iWGBXCmg1TSewIF.png" id="camera_sign">
+        </div>
+        <div class="title_title">Animal Photography</div>
+        <div class="title_words">A silhouette of them, a simple little acttion, here are the photographer eyes the best
+            of them, their laughter, their love, their every vivid are recorded by us.</div>
+
+        <!-- Fire Bird -->
+        <div class="explore">EXPLORE</div>
+        <div class="photos_content">
+            <div class="photo1">
+                <img src="https://s2.loli.net/2023/12/19/qQcxmD36aBP5Xyl.png"></a>
+                <span id="photo_p1">Fly</span>
+            </div>
+            <div class="photo2">
+                <img src="https://s2.loli.net/2023/12/19/MoiTVHzxn2YfEQb.png"></a>
+                <span id="photo_p2">Love</span>
+            </div>
+            <div class="photo3">
+                <img src="https://s2.loli.net/2023/12/19/y4MEFwdlSzPBtUa.png"></a>
+                <span id="photo_p3">Stand</span>
+            </div>
+        </div>
+    </div>
+    <div class="passage">
+        <!-- Description -->
+        <img src="https://s2.loli.net/2023/12/19/sWCbOwMQBPNG4he.png"></a>
+        <div class="passage_box">
+            <div class="passage_words">
+                “Family Farms is the best place, where I can buy fruit,vegetable, meat, honey,milk,eggs and so on for my
+                retaurant
+                directly fromupplier. Super convinient. Thank you"xdcenfc cfvfesc cfnccnjdcn cfjdcdsr dcwwzwqg ejs dddc
+                ddf fnfjv eij
+                fvnv jnxzexh cn cdcmdsc ddnc, cddmdcds dncdn cdcn wqeoeas, dcndassasas,cdcndcnc cciqoskxm cbdcpqslwq
+                nfnere nfncsfijc
+                dndcww frhfinc qpdjweiw cnncqe, cqjsdc ccn dcindc ,ncf cdncid dedjcndg csincq dedncf dedjdnc cdjsq,
+                qkodkge wqcnpsdc
+                cdngq qcw,cqnonxj dedend dcnjsdvb wenwq cowwncjq jcnincqnw weq c wd cwch, cnjncnc ece cdcnncdwnc nenwc
+                dcnnc cjcj, c
+                cirnc wecwc .”
+            </div>
+            <div class="passage_buttom">SIGN UP</div>
+        </div>
+    </div>
+    <div class="difference">
+        <div class="diff_title">Difference</div>
+        <div class="diff_content">
+            <div class="diff1">
+                <img src="https://s2.loli.net/2023/12/19/olNVvHY8D3guhqt.png"></a>
+                <p id="diff_p1">Horse</p>
+                <a href="#">A difference story</a>
+            </div>
+            <div class="diff2">
+                <img src="https://s2.loli.net/2023/12/19/A9Gx14cUr5jDa7H.png"></a>
+                <p id="diff_p2">Kangaroo</p>
+                <a href="#">A difference story</a>
+            </div>
+            <div class="diff3">
+                <img src="https://s2.loli.net/2023/12/19/5SryaTJEgncl9k4.png"></a>
+                <p id="diff_p3">Lion</p>
+                <a href="#">A difference story</a>
+            </div>
+            <div class="diff4">
+                <img src="https://s2.loli.net/2023/12/19/NCc4Jtu3V9wrhZG.png"></a>
+                <p id="diff_p4">Hummingbird</p>
+                <a href="#">A difference story</a>
+            </div>
+        </div>
+    </div>
+    <div class="kw">
+        <!-- Middle -->
+        <div class="kw_title">Know More</div>
+        <img src="https://s2.loli.net/2023/12/19/tpV3quBT4xKmhJn.png" id="kw_photo">
+        <div class="kw_words">
+            <p id="kw_words_title">The Photo</p>
+            <p id="kw_words1">"Family Farms is the best placewhere I can buy fruit,vegetable,meat,honey,milk,eggs and so
+                on for my retaurant directly from supplier. Super convinient.Thank you"</p><br>
+            <div class="option">
+                <div class="option1">
+                    <div class="ser1">
+                        <img src="https://s2.loli.net/2023/12/19/p82MztXHdxDYrBk.png" id="img_ser1">
+                    </div>
+                    <div class="words1"><br>Looking for it</div>
+                </div>
+                <div class="option2">
+                    <div class="ser2">
+                        <img src="https://s2.loli.net/2023/12/19/fyrKcURCpSz2QbM.png" id="img_ser2">
+                    </div>
+                    <div class="words2"><br>Cultivate feelings</div>
+                </div>
+            </div>
+            <div class="option3">
+                <div class="ser3">
+                    <img src="https://s2.loli.net/2023/12/19/DgviCrjTm3BEFGk.png" id="img_ser3">
+                </div>
+                <div class="words3"><br>Shooting</div>
+            </div>
+            <div class="option4">
+                <div class="ser4">
+                    <img src="https://s2.loli.net/2023/12/19/OrMPhmKIe7vTAL2.png" id="img_ser4">
+                </div>
+                <div class="words4"><br>Harvest achievement</div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="bottom">
+        <!-- LastStep -->
+        <img src="image/bottom.png" id="bottom_img">
+        <div class="bottom_words">
+            <div class="bottom_w1">
+                IN THE WILD <br><br>
+                IN THE SEA
+            </div>
+            <div class="bottom_w2">
+                <p id="bottom_w2_title">MORE</p>
+                We create art. <br>
+                We create life.
+            </div>
+            <div class="bottom_w_button">
+                Big World
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

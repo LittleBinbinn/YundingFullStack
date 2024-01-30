@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg {
+            width: 100%;
+            height: 1500px;
+            background: url(https://18403581474.oss-cn-beijing.aliyuncs.com/img/乌龟.png) no-repeat;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .bg>span {
+            width: 300px;
+            height: 500px;
+            margin-top: 700px;
+            background-image: url(https://18403581474.oss-cn-beijing.aliyuncs.com/img/火烈鸟3.png);
+            background-repeat: no-repeat;
+            transition: 0.8s;
+        }
+
+        .bg>span:nth-child(2) {
+            background-image: url(https://18403581474.oss-cn-beijing.aliyuncs.com/img/火烈鸟2.png);
+        }
+
+        .bg>span:nth-child(3) {
+            background-image: url(https://18403581474.oss-cn-beijing.aliyuncs.com/img/火烈鸟3.png);
+        }
+
+        .bg>span:hover {
+            transform: translateY(-50px);
+        }
+
+        .head {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 20px;
+        }
+
+        .head span:nth-child(2) {
+            background-color: aqua;
+            width: 200px;
+            height: 200px;
+            margin-left: 700px;
+            background: url(https://18403581474.oss-cn-beijing.aliyuncs.com/img/图标.png) no-repeat;
+        }
+
+        .head span:nth-child(1) {
+            background: url(https://18403581474.oss-cn-beijing.aliyuncs.com/img/三杠.png) no-repeat;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+        }
+
+        .head span:nth-child(3) {
+            background: url(https://18403581474.oss-cn-beijing.aliyuncs.com/img/放大镜.png) no-repeat;
+            width: 50px;
+            height: 50px;
+            margin-left: 1600px;
+            position: absolute;
+        }
+
+        .lu {
+            width: 100%;
+            height: 850px;
+            background: url(https://18403581474.oss-cn-beijing.aliyuncs.com/img/鹿.png) no-repeat;
+            display: flex;
+            justify-content: center;
+        }
+
+        .lu div {
+            width: 60%;
+            height: 500px;
+            background: url(https://18403581474.oss-cn-beijing.aliyuncs.com/img/鹿字.png) no-repeat;
+            margin-top: -150px;
+            display: flex;
+            transition: 0.8s;
+        }
+
+        .lu div:hover {
+            transform: translateY(-30px);
+        }
+
+        .lu span {
+            width: 200px;
+            height: 80px;
+            background: url(https://18403581474.oss-cn-beijing.aliyuncs.com/img/signup.png) no-repeat;
+            margin-top: 360px;
+            margin-left: 400px;
+            transition: 0.8s;
+        }
+
+        .lu span:hover {
+            transform: scale(0.8);
+        }
+
+        .diff {
+            width: 100%;
+            height: 500px;
+        }
+
+        .dif1 {
+            width: 200px;
+            text-align: center;
+            font-size: 40px;
+            transition: 0.5s;
+            margin-left: 700px;
+        }
+
+        .dif1:hover {
+            border: 5px solid black;
+        }
+
+        .dif2 {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .dif2 span {
+            width: 250px;
+            height: 400px;
+            transition: 0.8s;
+        }
+
+        .dif2 span:nth-child(2) {
+            background: url(https://18403581474.oss-cn-beijing.aliyuncs.com/img/1.png) no-repeat;
+        }
+
+        .dif2 span:nth-child(3) {
+            background: url(https://18403581474.oss-cn-beijing.aliyuncs.com/img/2.png) no-repeat;
+        }
+
+        .dif2 span:nth-child(4) {
+            background: url(https://18403581474.oss-cn-beijing.aliyuncs.com/img/3.png) no-repeat;
+        }
+
+        .dif2 span:nth-child(5) {
+            background: url(https://18403581474.oss-cn-beijing.aliyuncs.com/img/4.png) no-repeat;
+        }
+
+        .dif2 span:hover {
+            transform: translateY(-30px);
+        }
+
+        .song {
+            width: 100%;
+            height: 1100px;
+        }
+
+        .know {
+            width: 200px;
+            height: 40px;
+            line-height: 35px;
+            color: cadetblue;
+            font-size: 20px;
+            margin-left: 750px;
+            border: 3px solid black;
+            transition: 1.2s;
+            text-align: center;
+        }
+
+        .know:hover {
+            background: cadetblue;
+            color: black;
+        }
+
+        .songshu {
+            display: flex;
+            width: 100%;
+            height: 1030px;
+            justify-content: space-around;
+        }
+
+        .songshu span {
+            width: 40%;
+            height: 1030px;
+        }
+
+        .songshu span:nth-child(1) {
+            background: url(https://18403581474.oss-cn-beijing.aliyuncs.com/img/松鼠.png) no-repeat;
+        }
+
+        .songshu span:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .songshu span span {
+            width: 100%;
+            height: 120px;
+            background-color: firebrick;
+            transition: 1s;
+        }
+
+        .songshu span span:nth-child(1) {
+            background: url(https://18403581474.oss-cn-beijing.aliyuncs.com/img/The\ Photo.png) no-repeat;
+            height: 30px;
+        }
+
+        .songshu span span:nth-child(1):hover {
+            transform: translateY(-10px) scale(1.2) translateX(30px);
+        }
+
+        .songshu span span:nth-child(2) {
+            background: url(https://18403581474.oss-cn-beijing.aliyuncs.com/img/Family.png) no-repeat;
+        }
+
+        .songshu span span:nth-child(2):hover {
+            transform: scale(1.2) translateX(60px);
+        }
+
+        .songshu span span:nth-child(3) {
+            background: url(https://18403581474.oss-cn-beijing.aliyuncs.com/img/01.png) no-repeat;
+        }
+
+        .songshu span span:nth-child(4) {
+            background: url(https://18403581474.oss-cn-beijing.aliyuncs.com/img/02.png) no-repeat;
+        }
+
+        .songshu span span:nth-child(5) {
+            background: url(https://18403581474.oss-cn-beijing.aliyuncs.com/img/03.png) no-repeat;
+        }
+
+        .songshu span span:nth-child(6) {
+            background: url(https://18403581474.oss-cn-beijing.aliyuncs.com/img/04.png) no-repeat;
+        }
+
+        .songshu span span:hover {
+            transform: translateX(100px);
+        }
+
+        .end {
+            width: 100%;
+            height: 400px;
+            display: flex;
+
+        }
+
+        .end span {
+            width: 50%;
+            height: 400px;
+        }
+
+        .end span:nth-child(1) {
+            background: url(https://18403581474.oss-cn-beijing.aliyuncs.com/img/下.png) no-repeat;
+            margin-top: 150px;
+            margin-left: 300px;
+        }
+
+        .end span:nth-child(2) {
+            width: 250px;
+            height: 60px;
+            background-color:rgb(69, 84, 19);
+            margin-top: 180px;
+            margin-left: -70px;
+            color: white;
+            transition: 0.8s;
+            font-size: 25px;
+            line-height: 60px;
+            text-align: center;
+        }
+
+        .end span:nth-child(2):hover {
+            background-color: whitesmoke;
+            color: cadetblue;
+            transform: translateY(-25px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <span></span><span></span><span></span>
+        <sapn></sapn>
+    </div>
+    <div class="bg">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="lu">
+        <div>
+            <span></span>
+        </div>
+    </div>
+    <div class="diff">
+        <div class="dif1">Difference</div>
+        <div class="dif2">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+    </div>
+    <div class="song">
+        <div class="know">Know more</div>
+        <div class="songshu">
+            <span></span>
+            <span>
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+            </span>
+        </div>
+    </div>
+    <hr>
+    <div class="end">
+        <span></span>
+        <span>Big World</span>
+    </div>
+</body>
+
+</html>
