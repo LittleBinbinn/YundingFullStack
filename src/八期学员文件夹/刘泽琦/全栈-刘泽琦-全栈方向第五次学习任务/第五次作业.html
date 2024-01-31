@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全栈方向第五次学习任务</title>
+</head>
+<script>
+    function search() {
+        var string = document.getElementById("string").value;
+        var subString = document.getElementById("substring").value;
+        
+        let count = 0;
+        while(string.match(subString)){
+            string = string.replace(subString,'')
+            count++
+        }
+        document.getElementById("result").innerHTML = count;
+    }
+</script>
+<body>
+    <form onsubmit="event.preventDefault(); search();">
+        请输入一个字符串：<br />
+        <input type="text" id="string" />
+        <br />
+        请输入一个子串：<br />
+        <input type="text" id="substring" />
+        <button type="submit">提交</button> <br />
+        子串出现的次数为：<span id="result"></span>
+    </form>
+</body>
+</html>

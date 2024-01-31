@@ -1,0 +1,21 @@
+*{
+    margin: 0 auto;
+    color:blue;
+}
+.signin{
+    width: 700px;
+    height: 500px;
+    background-image: url("https://dashuailinghefan.oss-cn-beijing.aliyuncs.com/%E5%8E%9F%E7%A5%9E.jpg");
+    background-size: 700px 500px;
+}
+.for{
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+.haha{
+    width: 350px;
+}
+.haha2{
+    width: 350px;
+}

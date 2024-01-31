@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寒假作业一</title>
+    <style>
+        *{
+           margin: 0;
+           padding: 0;
+        }
+        .a {
+            margin: auto;
+            margin-top: 50px;
+            width: 300px;
+            height: 150px;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .b1 {
+            margin: auto;
+            width: 200px;
+            height: 50px;
+            background-color: rgb(255, 255, 255);
+        }
+        .b2 {
+            margin: auto;
+            width: 200px;
+            height: 50px;
+            background-color: rgb(255, 255, 255);
+        }
+        .b3 {
+            margin: auto;
+            width: 200px;
+            height: 50px;
+            background-color: rgb(255, 255, 255);
+        }
+        .c1 {
+            float: right;
+        }
+    </style>
+</head>    
+<body>
+    <div class="a">
+        <div class="b1">
+            <p>请输入一个字符串：</p>
+            <input id="t1" type="text" />
+        </div>
+        <div class="b2">
+            <p>请输入一个子串：</p>
+            <input id="t2" type="text" />
+            <button onclick="s1()" class="c1">提交</button>
+        </div>
+        <div class="b3">
+            <p>子串出现的次数为：<br/></p>
+            <div id="t3"></div> 
+            <script>
+                function s1()
+                {   
+                    var t1=document.getElementById("t1").value;
+                    var t2=document.getElementById("t2").value;
+                    var i=0,j=0,k=0,count=0;
+                    for(i=0;i<t1.length;i++)
+                    {
+                        for(j=0,k=i;j<t2.length&&t2[j]==t1[k];j++,k++)
+                        {
+                            if(j=t2.length-1)
+                            {
+                                count++;
+                                i=i+t2.length;
+                            }
+                        }
+                        
+                    }
+                    if(t1[t1.length-1]==t2[0])
+                    {   
+                        count--;
+                    }
+                    document.getElementById("t3").innerHTML=count;
+                }
+            </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 1000px;
+            background-color: wheat;
+        }
+
+        h3 {
+            color: gray;
+            font-size: 50px;
+        }
+
+        input {
+            font-size: 50px;
+            color: gray;
+            box-shadow: 10px 10px 10px gray;
+        }
+
+        button {
+            font-size: 50px;
+            color: red;
+            box-shadow: 10px 10px 10px gray;
+            background-color: wheat;
+        }
+
+        .fix {
+            position: fixed;
+            font-size: 30px;
+            top: 51%;
+            left: 70%;
+            z-index: 10;
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="words w">
+            <h3>请输入一个字符串：</h3>
+            <input type="text" id="big">
+        </div>
+        <div class="promit">
+            <h3>请输入一个子串：</h3>
+            <input type="text" id="small">
+        </div>
+        <button class="Button">提交</button>
+        <div class="result">
+            <h3>子串出现的次数为：</h3>
+        </div>
+    </div>
+    <div class="fix">
+        可以直接按回车键出结果哦
+    </div>
+    <script>
+        const button = document.querySelector('Button')
+        const result = document.querySelector('.result h3')
+        const fix = document.querySelector('.fix')
+        button.addEventListener('click', function () {
+            const big = document.querySelector('#big')
+            const small = document.querySelector('#small')
+            let cnt = 0
+            let words = big.value
+            let word = small.value
+            for (i = 0; i < words.length; i++) {
+                for (j = 0; j < word.length; j++) {
+                    if (words[i + j] != word[j]) {
+                        break
+                    }
+                }
+                if (j == word.length) {
+                    cnt++
+                }
+            }
+            result.innerHTML = `子串出现的次数为：${cnt}次`
+        })
+        small.addEventListener('keyup', function (e) {
+            if (e.key == 'Enter') {
+                const big = document.querySelector('#big')
+                const small = document.querySelector('#small')
+                let cnt = 0
+                let words = big.value
+                let word = small.value
+                for (i = 0; i < words.length; i++) {
+                    for (j = 0; j < word.length; j++) {
+                        if (words[i + j] != word[j]) {
+                            break
+                        }
+                    }
+                    if (j == word.length) {
+                        cnt++
+                    }
+                }
+                result.innerHTML = `子串出现的次数为：${cnt}次`
+            }
+        })
+        small.addEventListener('focus', function () {
+            fix.style.opacity = 1
+        })
+        small.addEventListener('blur', function () {
+            fix.style.opacity = 0
+        })        
+    </script>
+</body>
+
+</html>
