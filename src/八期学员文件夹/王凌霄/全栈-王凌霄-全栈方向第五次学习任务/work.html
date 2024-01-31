@@ -10,12 +10,12 @@
     <div>
         <form >
             <h3>请输入母串</h3>
-        <input type="text" data-id="mom">
-        <h3>请输入文字</h3>
-        <input type="text" data-id="son">
+            <input type="text" data-id="mom">
+            <h3>请输入子串</h3>
+            <input type="text" data-id="son">
         </form>
         <button type="submit"></button>
-        <h5>1</h5>
+        <h5></h5>
     </div>
 </body>
 <script>
@@ -54,7 +54,7 @@
             h5.innerHTML=`出现了${sum}次`
         }
         else{
-            console.log('请输入内容');
+            h5.innerHTML=`请输入内容`
         }
         //清空sum 和表单内的内容
         sum = 0
