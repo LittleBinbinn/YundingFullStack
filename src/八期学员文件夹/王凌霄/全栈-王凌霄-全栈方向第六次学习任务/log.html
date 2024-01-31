@@ -13,11 +13,11 @@
     <h4>密码</h4>
     <input type="password"><span>请填写密码</span>
     </form>
-    <button type="submit"></button>
+    <button type="submit">登录</button>
     <span class="tint">登陆成功将显示信息</span>
     <div>
         <h3>登陆成功</h3>
-        <p>1</p>
+        <p>信息</p>
         <p>1</p>
         <p>2</p>
     </div>
@@ -103,6 +103,7 @@
                     p1.innerHTML=`姓名:${msg[i].name}`
                     p2.innerHTML=`年龄:${msg[i].age}`
                     p3.innerHTML=`特长:${msg[i].strengths}`
+                    span3.innerHTML=''
                     },2000)
                     return
                 }
