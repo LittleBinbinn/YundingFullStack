@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./log.css">
+</head>
+<body>
+    <h4>邮箱</h4>
+    <form action="">
+        <input type="email"><span>请填写您的邮箱</span>
+    <h4>密码</h4>
+    <input type="password"><span>请填写密码</span>
+    </form>
+    <button type="submit"></button>
+    <span class="tint">登陆成功将显示信息</span>
+    <div>
+        <h3>登陆成功</h3>
+        <p>1</p>
+        <p>1</p>
+        <p>2</p>
+    </div>
+</body>
+<script>
+    //获取
+    let email = document.querySelector("[type=email]")
+    let pass = document.querySelector('[type=password]')
+    let btn = document.querySelector("button")
+    let div = document.querySelector('div')
+    let info = document.querySelector('form')
+    let p1=document.querySelector("p:nth-of-type(1)")
+    let p2=document.querySelector("p:nth-of-type(2)")
+    let p3=document.querySelector("p:nth-of-type(3)")
+    let span3 = document.querySelector(".tint")
+    console.log(span3);
+    let span2 = document.querySelector("span:nth-of-type(2)")
+    console.log(span2);
+    let span1 = document.querySelector("span:nth-of-type(1)")
+    let msg = [{
+    name: '张三',
+    age: 20,
+    strengths: 'JavaScript',
+    avatar: 'https://tse4-mm.cn.bing.net/th/id/OIP-C.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1',
+    email: 'yunding@qq.com',
+    password: 33333
+},
+{
+    name: '李四',
+    age: 19,
+    strengths: 'python',
+    avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.YlKimVo94OkaZDZCzPIDpAHaFh?pid=ImgDet&rs=1',
+    email: '12345678@163.com',
+    password: 11111
+},
+{
+    name: '王五',
+    age: 18,
+    strengths: 'Java',
+    avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.P2hK9SRjhFE8WM9N8tgWFAHaEQ?pid=ImgDet&rs=1',
+    email: 'yundingshuyuan@qq.cn',
+    password: 222222
+},
+]
+    //获取value 比较、
+    const reg = /\w+@(qq)|(163)\\.((com)|(cn))$/
+    //取消默认提交
+    info.addEventListener('submit',function(e){
+        e.preventDefault()
+    })
+    
+    btn.addEventListener('click',function(){
+        //清空以前的内容
+        span1.innerHTML='请在这里输入邮箱'
+        span2.innerHTML='请在这里输密码'
+        span1.className=""
+        span2.className=""
+        span3.className=""
+        span3.innerHTML=''
+        let strpass=pass.value
+        let stremail = email.value
+        div.style.opacity=0
+        info.reset()
+        //验证系统
+        if(!stremail||!strpass){
+            span2.innerHTML=''
+            span1.innerHTML=''
+            span3.classList.add('error')
+            span3.innerHTML = '邮箱密码不能为空'
+            return
+        }
+        else if(reg.test(stremail)){
+            for(let i = 0 ;i<msg.length;i++){
+                if(msg[i].email===stremail&&msg[i].password==strpass){
+                    span3.classList.add('correct')
+                    span2.classList.add('correct')
+                    span1.classList.add('correct')
+                    span1.innerHTML='邮箱正确'
+                    span2.innerHTML='密码正确'
+                    span3.innerHTML = '输入正确 将在2s后展示您的信息'
+                    setTimeout(function(){
+                        div.style.opacity = 1
+                    p1.innerHTML=`姓名:${msg[i].name}`
+                    p2.innerHTML=`年龄:${msg[i].age}`
+                    p3.innerHTML=`特长:${msg[i].strengths}`
+                    },2000)
+                    return
+                }
+                else if(msg[i].email===stremail&&msg[i].password!=strpass){
+                    span1.innerHTML=''
+                    span2.classList.add('error')
+                    span2.innerHTML='密码错误'
+                    return
+                }
+                
+                else{
+                    span2.innerHTML=''
+                    span1.classList.add('error')
+                    span1.innerHTML = '你还没有注册'
+                }
+            }}
+            
+            else if(!reg.test(stremail)){   
+                span2.innerHTML=''
+                span1.classList.add('error')
+                span1.innerHTML = '邮箱格式错误'
+                }
+            }
+                )
+</script>
+</html>
