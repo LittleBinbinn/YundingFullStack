@@ -127,9 +127,11 @@
                         image.src = msg[i].avatar;
                         enter.innerHTML = '登录成功'
                         resultDiv.innerHTML = '<br>姓名：' + msg[i].name + '<br>年龄：' + msg[i].age + '<br>特长：' + msg[i].strengths;
+                        break;
                     }else{
                         error1.innerHTML = '用户存在';
                         error2.innerHTML = '密码错误';
+                        break;
                     }
                 }else if(i==3){
                     error1.innerHTML = '用户不存在';
