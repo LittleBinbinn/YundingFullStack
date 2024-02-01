@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UFT-8">
+    <title>index</title>
+    <style>
+        * {
+            margin: auto;
+            padding: 0;
+
+        }
+
+        .background {
+            width: 500px;
+            height: 800px;
+            margin-top: 60px;
+            border: 1px solid rgb(209, 233, 240);
+            border-radius: 5%;
+        }
+        .first{
+             padding-left: 25%;
+            height:100px;
+            margin:auto;
+             font-size: 60px;
+        }
+        .a{
+        border-radius: 100%;
+        }
+      .b,
+      .c,
+      .d{
+       
+       height:100px;
+       margin-left: 6%;
+       font-size: 50px;
+      }
+    </style>
+    
+</head>
+
+<body>
+    <div class="background">
+        <div class="first">登陆成功</div>
+    <img src="https://tse4-mm.cn.bing.net/th/id/OIP-C.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1" class="a" />
+  <div class="b"> 姓名： <span class="b1"> 123</span></div>
+   <div class="c">年龄：<span class="c1">13 </span></div>
+   <div div class="d">特长：<span class="d1"> </span></div>
+    </div>
+    <script>
+        let msg = [{
+                name: '张三',
+                age: 20,
+                strengths: 'JavaScript',
+                avatar: 'https://tse4-mm.cn.bing.net/th/id/OIP-C.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1',
+                email: 'yunding@qq.com',
+                password: 33333
+            },
+            {
+                name: '李四',
+                age: 19,
+                strengths: 'python',
+                avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.YlKimVo94OkaZDZCzPIDpAHaFh?pid=ImgDet&rs=1',
+                email: '12345678@163.com',
+                password: 11111
+            },
+            {
+                name: '王五',
+                age: 18,
+                strengths: 'Java',
+                avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.P2hK9SRjhFE8WM9N8tgWFAHaEQ?pid=ImgDet&rs=1',
+                email: 'yundingshuyuan@qq.cn',
+                password: 222222
+            },
+            ]
+    var params,arr,i;
+    params = location.search.substr(1);
+    arr = params.split('=')
+    i=arr[1];
+    document.querySelector(".a").innerHTML = (msg[i].avatar);
+    document.querySelector(".b1").innerHTML = (msg[i].name);
+    document.querySelector(".c1").innerHTML = (msg[i].age);
+    document.querySelector(".d1").innerHTML = (msg[i].strengths);
+   
+    
+    </script>
+</body>
+
+</html>
