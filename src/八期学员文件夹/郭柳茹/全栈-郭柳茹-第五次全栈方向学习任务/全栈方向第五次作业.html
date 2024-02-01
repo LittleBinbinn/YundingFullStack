@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zuoye</title>
+    <script>
+        let string;
+        let substring;
+        function connectString() {
+            string = document.getElementById("myInput").value;
+            substring = document.getElementById("myInput2").value;
+            alert("已成功输入字符串");
+            };
+        function count(){
+            let count = 0;
+            let index = string.indexOf(substring); 
+            while (index !== -1) {
+                count++;
+                index = string.indexOf(substring, index + substring.length); 
+            };
+            document.getElementById('putout').innerHTML = count;
+            return count;
+        };
+    </script>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 800px;
+            height: 600px;
+            position: relative;
+            left: 360px;
+            top: 80px;
+            background-color: lightcyan;
+        }
+        #myInput{
+            position: absolute;
+            top: 150px;
+            width: 790px;
+            height: 20px;
+        }
+        #myInput2{
+            position: absolute;
+            top: 260px;
+            width: 790px;
+            height: 20px;
+        }
+        #putout{
+            position: absolute;
+            top: 380px;
+            width: 800px;
+            height: 30px;
+            background-color: mediumturquoise;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p style="position: absolute;top: 130px;">请输入字符串:</p>
+        <input type="text" id="myInput">
+        <p style="position: absolute;top: 240px;">请输入子串:</p>
+        <input type="text" id="myInput2">
+        <button onclick="connectString()" style="position: absolute;top:290px;">字符串输入完毕</button>
+        <div id="outputDiv"></div>
+        <button onclick="count()" style="position: absolute;top: 350px;">计算</button>
+        <div id="putout"></div>
+    </div>
+</body>
+</html>

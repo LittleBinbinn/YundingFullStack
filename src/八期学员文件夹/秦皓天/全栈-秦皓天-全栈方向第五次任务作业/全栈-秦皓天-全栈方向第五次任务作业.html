@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<br lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .String,
+        .Substring {
+            background-color: beige;
+            border: 3px solid saddlebrown;
+        }
+    </style>
+</head>
+
+<body>
+    请输入一个字符串:</br>
+    <input type="text" class="String"></br>
+    请输入一个子串:</br>
+    <input type="text" class="Substring">
+    <button>提交</button></br>
+    <span>子串出现的次数为:</span></br>
+    <span class="output"></span>
+
+
+    <script>
+        var btnEl = document.querySelector("button");
+        btnEl.onclick = function () {
+            var StringEL = document.querySelector(".String");
+            var SubstringEl = document.querySelector(".Substring");
+            var outputEl = document.querySelector(".output");
+            var str = StringEL.value;
+            var target = SubstringEl.value;
+            var pos = 0;
+            var nums = 0;
+            while (pos < str.length) {
+                let foundPos = str.indexOf(target, pos);
+                if (foundPos === -1) {
+                    break;
+                }
+                nums++;
+                pos = foundPos + target.length;
+            }
+            outputEl.textContent = nums;
+        }  
+    </script>
+</body>
+
+</html>

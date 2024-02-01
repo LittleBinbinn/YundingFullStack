@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串查找</title>
+   <style>
+   body{
+    width: 1800px;
+    height: 1400px;
+    margin: auto;
+}
+body>img{
+    width: 100%;
+    height: 100%;
+    z-index: -114514;
+}
+p{
+    font-size: 30px;
+    color: rgb(194, 192, 255);
+}
+.input{
+    width: 1000px;
+    height:1200px;
+    margin: auto;
+    position:relative;
+    top: -1300px;
+}
+.input>div>input{
+    width: 100%;
+}
+#fatherStr{
+    height: 50px;
+    border-bottom-color:rgb(0, 255, 200) ;
+    border-bottom-width:15px ;
+    border-top: 0px;
+    border-right:0px ;
+    border-left: 0px;
+    border-radius: 2%;
+    font-size: 70px;
+    color: rgb(0, 122, 128);
+    background-color: transparent;
+}
+#sonStr {
+    height: 50px;
+    border-bottom-color: rgba(0, 128, 0, 0.501);
+    border-bottom-width: 15px;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-radius: 2%;
+    font-size: 70px;
+    color: rgb(225, 0, 255);
+    background-color: transparent;
+}
+.submit{
+}
+#submit{
+    width: 300px;
+    height: 200px;
+    position: relative;
+    left: 350px;
+    top: 120px;
+    border-radius:100px;
+    font-size: 100px;
+    border: 0px;
+    background-color: pink;
+    color: greenyellow;
+    transition: 0.5s;
+}
+p{
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw%2Fc79d22f4-3fb5-4148-9375-b195ff6e0f1f%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1708865358&t=55c3d2f0936a80205a9435179a63bebb">
+    <div class="input">
+        <div>
+            <p>输入字符串:</p>
+            <input type="text" id="fatherStr">
+        </div>
+        <div>
+            <p>输入查找的字符串:</p>
+            <input type="text" id="sonStr">
+        </div>
+        <div class="submit">
+            <input type="submit"  value="确定" onclick="test1()" id="submit"/>
+        </div>
+    </div> 
+    <script>
+        function test1() {
+    let fatherStr = document.getElementById("fatherStr").value;
+    let sonStr = document.getElementById("sonStr").value;
+    let fatherStrlen = fatherStr.length;
+    let sonStrlen = sonStr.length;
+    let count = 0;
+    console.log(sonStr);
+    console.log(sonStrlen);
+    let i = 0;
+    let j = -1;
+    for (i = 0; i < fatherStrlen; i++) {
+        j = -1;
+        if (fatherStr[i] == sonStr[0]) {
+            while (j < sonStrlen) {
+                j++;
+                if (sonStr[j] != fatherStr[i + j]) {
+                    break;
+
+                } else if (j == sonStrlen - 1) {
+                    count++;
+                }
+            }
+        }
+    }
+    alert(`${sonStr}在${fatherStr}中共出现了${count}次!`);
+}
+    </script>
+</body>
+</html>
