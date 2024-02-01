@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html long="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <title>wjy</title>
+        <script>
+            function work() {
+             let one = document.getElementById("one").value;
+             let two = document.getElementById("two").value;
+             let count = 0;
+             while (one.indexOf(two) !== -1) {
+            count++;
+            one = one.replace(two,'');
+             }
+            document.getElementById("submit").value = "提交";
+             document.getElementById("result").innerHTML="子串出现的次数为："+count;
+                }
+        </script>
+        <style>
+            *{
+                margin: 0;
+            }
+            .first{
+               position: relative;
+               width: 400px;
+               height: 50px;
+               left: 43%;
+               top:350px;
+               line-height: 50px;
+               font-size: 20px;
+
+            }
+            .second input{
+                position: relative;
+                width: 200px;
+                height: 25px;
+                border:2px solid brown ;
+                left: 43%;
+                top: 350px;
+            }
+            .third{
+                position: relative;
+                width: 400px;
+                height: 50px;
+                left: 43%;
+                line-height: 50px;
+                font-size: 20px;  
+                top: 350px;
+            }
+            .main input {
+                position: relative;
+                width: 200px;
+                height: 25px;
+                border: 2px solid brown;
+                left: 43%;
+                top: 350px;  
+            }
+            .submit input {
+                position: relative;
+                margin: auto;
+                left:58%;
+                top: 320px;
+                height: 30px;
+            }
+            p{
+                position: relative;
+                 width: 400px;
+                height: 50px;
+                left: 43%;
+                line-height: 50px;
+                font-size: 20px;  
+                top: 320px;
+            }
+            /* .together{
+                margin: auto;
+                position: relative;
+                width: 1190px;
+            } */
+        </style>
+    </head>
+    <body>
+        <div class="big">
+        <div class="first">请输入一个字符串：</div>
+        <div class="second">
+            <input type="text" id="one">
+        </div>
+        <div class="third">请输入一个子串：</div>
+        <!-- <div class="together"> -->
+        <div class="main">
+            <input type="text" id="two">
+        </div>
+        <div class="submit">
+            <input type="button" value="提交" id="submit" onclick="work()">
+        </div>
+        </div>
+        <div><p id="result">子串出现的次数为: </p></div>
+    </body>
+</html>
