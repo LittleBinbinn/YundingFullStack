@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>全栈方向第六次学习任务</title>
+    <link rel="stylesheet" type="text/css" href="css6.css" />
+  </head>
+  <body>
+    <h2 id="typecenter">登录</h2>
+    <form id="loginForm">
+      <label for="email">邮箱:</label><br />
+      <input type="text" id="email" name="email" /><br />
+      <label for="password">密码:</label><br />
+      <input type="password" id="password" name="password" /><br />
+      <input type="submit" value="提交" />
+    </form>
+    <div id="result"></div>
+    <script>
+      let msg = [
+        {
+          name: "张三",
+          age: 20,
+          strengths: "JavaScript",
+          avatar:
+            "https://tse4-mm.cn.bing.net/th/id/OIP-C.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1",
+          email: "yunding@qq.com",
+          password: 33333,
+        },
+        {
+          name: "李四",
+          age: 19,
+          strengths: "python",
+          avatar:
+            "https://tse2-mm.cn.bing.net/th/id/OIP-C.YlKimVo94OkaZDZCzPIDpAHaFh?pid=ImgDet&rs=1",
+          email: "12345678@163.com",
+          password: 11111,
+        },
+        {
+          name: "王五",
+          age: 18,
+          strengths: "Java",
+          avatar:
+            "https://tse2-mm.cn.bing.net/th/id/OIP-C.P2hK9SRjhFE8WM9N8tgWFAHaEQ?pid=ImgDet&rs=1",
+          email: "yundingshuyuan@qq.cn",
+          password: 222222,
+        },
+      ];
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // 防止表单的默认提交行为
+          var email = document.getElementById("email").value;
+          if (!isValidEmail(email)) {
+            document.getElementById("result").innerHTML = "邮箱格式错误";
+            return;
+          }
+          var password = document.getElementById("password").value;
+          var user = findUser(email, password); // 在msg数组中查找用户
+          if (user) {
+            // 如果找到了用户，显示用户信息
+            displayUserInfo(user);
+          } else {
+            // 如果没有找到用户，或邮箱存在但与密码不匹配，给出提示
+            document.getElementById("result").innerHTML =
+              "没有找到用户或密码不匹配";
+          }
+        });
+
+      // 使用正则表达式检验邮箱是否合法
+      function isValidEmail(email) {
+        var re =
+          /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+      }
+
+      // 在msg数组中查找用户
+      function findUser(email, password) {
+        for (var i = 0; i < msg.length; i++) {
+          if (msg[i].email == email && msg[i].password == password) {
+            return msg[i];
+          }
+        }
+      }
+
+      // 显示用户信息
+      function displayUserInfo(user) {
+        var output = "name: " + user.name + "<br>";
+        output += "age: " + user.age + "<br>";
+        output += "strengths: " + user.strengths + "<br>";
+        output += "email: " + user.email + "<br>";
+        output += "password: " + user.password + "<br>";
+        output += 'avatar: <img src="' + user.avatar + '" alt="Avatar">';
+        document.getElementById("result").innerHTML = output;
+      }
+    </script>
+  </body>
+</html>
