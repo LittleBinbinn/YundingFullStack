@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #666
+}
+
+body {
+  background-color: #fff;
+  color: #666;
+}
+.wholebox {
+  position: relative;
+  width: 400px;
+  height: 700px;
+  margin: 0 auto;
+  background-color: #666;
+}
+.tl {
+  font-family: '微软雅黑';
+  text-align: center;
+  color: pink;
+  font-size: 30px;
+}
+.biaodan {
+  position: absolute;
+  margin: 30% 100px;
+  width: 200px;
+  height: 200px;
+}
+.register {
+  position: absolute;
+  top: 200px;
+  width: 166px;
+  height: 20px;
+}
+.ipe {
+  font-family: '微软雅黑';
+  color: pink;
+}
+.ipp {
+  font-family: '微软雅黑';
+  color: pink;
+}
+.wgf {
+  color: red;
+}
+.wgs {
+  color: red;
+}
