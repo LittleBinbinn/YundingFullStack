@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杨金霓全栈第六次作业</title>
+</head>
+<style>
+    #box {
+        width: 600px;
+        height: 300px;
+        background:rgb(201, 236, 184);
+        margin: 100px auto;
+        text-align: center;
+    }
+    #first {
+        position: relative;
+        left: 120px;
+        text-align: left;
+        top: 20px;
+    }
+    #look {
+        /* position: relative;
+        top: 18px;
+        right: -35px; */
+        font-size: 10px;
+        color: rgb(30, 109, 133);
+    }
+
+    #second {
+        position: relative;
+        top: 20px;
+    }
+    img {
+        position: relative;
+        top: 10px;
+        width: 100px;
+        border-radius: 50%;
+    }
+    span {
+        color: red;
+        font-size: 10px;
+    }
+</style>
+<body>
+    <div id="box">
+        <div id="first">
+            <div id="em">邮箱：</div>
+            <input type="text" id="email"><br>
+            <span id="error1"></span>
+            <div id="pwd">密码：</div>
+            <input type="password" id="password">&nbsp;<span id="look">显示</span><br>
+            <span id="error2"></span><br>
+            <button id="btn" onclick="btn()">登录</button>
+        </div>
+        <div id="second">
+            <div id="enter"></div>
+            <img src="" id="pic"></img>
+            <div id="result"></div>
+            
+        </div>
+    </div>
+</body>
+<script>
+    var pwd = document.getElementById('password');
+    var look = document.getElementById('look');
+    var flag = 0;
+        look.onclick = function () {
+            console.log('777')
+            if (flag == 0) {
+                pwd.type = 'text';
+                look.innerHTML = '隐藏';
+                flag = 1;
+            } else {
+                pwd.type = 'password';
+                look.innerHTML = '显示';
+                flag = 0;
+            }
+        }
+    function btn(){
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var error1 = document.getElementById('error1');
+        var error2 = document.getElementById('error2');
+        var look = document.getElementById('look');
+        var regex = /([@]qq|[@]163)(\.{1}com|\.{1}cn)$/;
+        
+        let msg = [{
+            name: '张三',
+            age: 20,
+            strengths: 'JavaScript',
+            avatar: 'https://tse4-mm.cn.bing.net/th/id/OIP-C.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1',
+            email: 'yunding@qq.com',
+            password: 33333
+        },
+        {
+            name: '李四',
+            age: 19,
+            strengths: 'python',
+            avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.YlKimVo94OkaZDZCzPIDpAHaFh?pid=ImgDet&rs=1',
+            email: '12345678@163.com',
+            password: 11111
+        },
+        {
+            name: '王五',
+            age: 18,
+            strengths: 'Java',
+            avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.P2hK9SRjhFE8WM9N8tgWFAHaEQ?pid=ImgDet&rs=1',
+            email: 'yundingshuyuan@qq.cn',
+            password: 222222
+        },{email:''}
+        ]
+        
+        if(regex.test(email) == false){
+            error1.innerHTML = '输入格式错误，以.com或.cn结尾，且@后为163或qq';
+            //console.log('111');
+        }else {
+            for(let i=0;i<msg.length;i++){
+                if(msg[i].email == email){
+                    if(msg[i].password == password){
+                        console.log(i)
+                        var resultDiv = document.getElementById('result');
+                        var image = document.getElementById('pic');
+                        var first = document.getElementById('first');
+                        var enter = document.getElementById('enter');
+                        first.style.display = 'none';
+                        image.src = msg[i].avatar;
+                        enter.innerHTML = '登录成功'
+                        resultDiv.innerHTML = '<br>姓名：' + msg[i].name + '<br>年龄：' + msg[i].age + '<br>特长：' + msg[i].strengths;
+                    }else{
+                        error1.innerHTML = '用户存在';
+                        error2.innerHTML = '密码错误';
+                    }
+                }else if(i==3){
+                    error1.innerHTML = '用户不存在';
+                    error2.innerHTML = '';
+                }
+            }
+        }
+    }
+
+</script>
+</html>
