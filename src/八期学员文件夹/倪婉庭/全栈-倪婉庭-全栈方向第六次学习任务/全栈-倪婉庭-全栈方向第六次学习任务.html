@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=adge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>登陆系统</title>
+        <style></style>
+    </head>
+    <body>
+        <div>邮箱</div>
+        <input type="text" id="youxiang" placeholder="put in">
+        <button id="btn1">上传</button>
+        <div>密码</div>  
+        <input type="password" id="mima" placeholder="put in">
+        <button id="btn2">登录</button>
+        <button id="btn3" style="display : none">登陆成功</button>
+        <div style="display : none" id="div1">
+            <h1>登录成功</h1>
+            <img src="https://bucket-niwanting.oss-cn-beijing.aliyuncs.com/8725ccc7e5d7c55c11bd176a6008cf0d.png"/>
+            <h3>姓名：张三</h3>
+            <h3>年龄：20</h3>
+            <h3>特长：JavaScript</h3>
+        </div>
+        <div style="display : none" id="div2">
+            <h1>登录成功</h1>
+            <img src="https://bucket-niwanting.oss-cn-beijing.aliyuncs.com/8725ccc7e5d7c55c11bd176a6008cf0d.png"/>
+            <h3>姓名：李四</h3>
+            <h3>年龄：19</h3>
+            <h3>特长：Python</h3>
+        </div>
+        <div style="display : none" id="div3">
+            <h1>登录成功</h1>
+            <img src="https://bucket-niwanting.oss-cn-beijing.aliyuncs.com/8725ccc7e5d7c55c11bd176a6008cf0d.png"/>
+            <h3>姓名：王五</h3>
+            <h3>年龄：18</h3>
+            <h3>特长：Java</h3>
+        </div>
+        <script>
+            //var youxiang = document.getElementById("youxiang");
+            //var password = document.getElementById("mima").value;
+            var btn1 = document.getElementById("btn1");
+            var btn2 = document.getElementById("btn2");
+            var btn3 = document.getElementById("btn3");
+            var div1 = document.getElementById("div1");
+            var div2 = document.getElementById("div2");
+            var div3 = document.getElementById("div3");
+            btn1.onclick = function(){
+            var youxiang = document.getElementById("youxiang");
+            var password = document.getElementById("mima");
+            let result = true  
+            var re = /[a-zA-Z0-9]+@(qq|163)\.(com|cn)$/          
+            result = re.test(youxiang.value)
+            if(result === false){
+                alert("输入格式错误请你的邮箱命名满足以下要求- 1.结尾为.com或.cn2.仅包含一个小数点- 3.小数点前为@qq或@163。")
+            }else{
+                alert("输入邮箱格式正确")
+            }    
+        }
+            btn2.onclick = function(){
+                if(youxiang.value == "yunding@qq.com"&&mima.value == "33333"){
+                    alert("张三登陆成功")
+                    div1.style.display = 'block'
+                    alert("请按按钮")
+                    
+            }
+                else if(youxiang.value == "12345678@163.com"&&mima.value == "11111"){
+                    alert("李四登陆成功")
+                    div2.style.display = 'block'
+                    alert("请按按钮")
+            }   
+                else if(youxiang.value == "yundingshuyuan@qq.cn"&&mima.value == "222222"){
+                    alert("王五登陆成功")
+                    div3.style.display = 'block'
+                    alert("请按按钮")
+            }else{
+                alert("请重新输入")
+            }
+            }
+        </script>
+    </body>
+</html>
