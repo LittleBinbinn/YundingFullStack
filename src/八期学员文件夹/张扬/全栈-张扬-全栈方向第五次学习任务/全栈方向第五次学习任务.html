@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+}
+.background {
+    text-align: center;
+}
+</style>
+<head>
+    <title>全栈方向第五周作业</title>
+</head>
+
+<body>
+    <div class="background">
+        <div>请输入一个字符串</div>
+        <input type="text" class="shuru">
+        <div>请输入一个子串</div>
+        <input type="text" class="shuchu">
+        <button>提交</button>
+        <div>子串出现次数</div>
+        <p class="display"></p>
+    </div>
+    
+    <script>
+        let btn = document.querySelector('button');
+        btn.onclick=function(){
+            let shuru = document.querySelector('.shuru').value;
+            let shuchu = document.querySelector('.shuchu').value;
+            let dis = document.querySelector('.display');
+            let count = 0;
+            while (shuru.indexOf(shuchu) !== -1) {
+                count++;
+                shuru = shuru.replace(shuchu, '')
+            }
+            dis.innerHTML = count;
+        }
+    </script>
+</body>
+
+</html>

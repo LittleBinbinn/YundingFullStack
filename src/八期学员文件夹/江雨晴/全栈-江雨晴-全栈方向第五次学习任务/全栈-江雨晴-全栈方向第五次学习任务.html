@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>第五次作业r</title>
+</head>
+<body>
+
+请输入一个字符串：</br>
+<input id="inputString"></br>
+请输入一个子串：</br>
+<input type="text" id="seekString">&nbsp;<button onclick = count()>提交</button></br>
+子串出现的次数为：
+<div id="result"></div>
+
+<script>
+function count() {
+    var str1 = document.getElementById('inputString').value;
+    var str2 = document.getElementById('seekString').value;
+    var length1 = str1.length;
+    var length2 = str2.length;
+    var count = 0;
+
+    for (var i = 0; i <= length1 - length2; i++) {
+        var match = true;
+        for (var j = 0; j < length2; j++) {
+            if (str1[i + j] !== str2[j]) {
+                match = false;
+                break;
+            }
+        }
+
+        if (match) {
+            count++;
+        }
+    }
+    document.getElementById('result').innerText = count;
+}
+</script>
+
+</body>
+</html>
