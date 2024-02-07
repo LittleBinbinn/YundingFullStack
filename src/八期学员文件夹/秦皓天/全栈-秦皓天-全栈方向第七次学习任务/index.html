@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        span {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        input {
+            border: 1.5px solid black;
+        }
+
+        .box {
+            display: flex;
+            margin-left: 40%;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .box>div {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="time"></div>
+        <div class="log">
+            <div class="account">
+                <span>账号：</span>
+                <input type="text" class="actValue">
+            </div>
+            <div class="password">
+                <span>密码：</span>
+                <input type="password" class="padValue">
+            </div>
+        </div>
+        <div class="btn">
+            <button class="enroll">注册</button>
+            <button class="getList">获取用户列表</button>
+        </div>
+        <div class="Setaccount"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        var timeEl = document.querySelector(".time")
+        axios.get("http://43.143.169.168:9090/time/now")
+            .then(function (response) {
+                timeEl.textContent = '当前时间：' + response.data.data
+            })
+            .catch(function (erro) {
+                console.log(erro);
+            })
+        var enrollEl = document.querySelector(".enroll")
+        var getListEl = document.querySelector(".getList")
+        var SetaccountEl = document.querySelector(".Setaccount")
+        enrollEl.onclick = function () {
+            var actValueEl = document.querySelector(".actValue")
+            var padValueEl = document.querySelector(".padValue")
+            axios({
+                method: 'post',
+                url: 'http://43.143.169.168:9090/user/register',
+                data: {
+                    username: actValueEl.value,
+                    password: padValueEl.value
+                }
+            }).then(function (response) {
+                console.log('注册报文' + JSON.stringify(response));
+            })
+        }
+        getListEl.onclick = function () {
+            axios({
+                method: 'get',
+                url: 'http://43.143.169.168:9090/user/all',
+            }).then(function (response) {
+                console.log('用户列表信息报文'+JSON.stringify(response))
+                const ulElement = document.createElement('ul')
+                for (let i in response.data.data) {
+                    const liElement = document.createElement('li')
+                    liElement.textContent = response.data.data[i]
+                    ulElement.appendChild(liElement)
+                }
+                SetaccountEl.append(ulElement)
+            })
+        }
+    </script>
+</body>
+
+</html>
