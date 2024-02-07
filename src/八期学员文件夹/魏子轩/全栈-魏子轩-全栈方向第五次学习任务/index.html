@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全栈第五周作业</title>
+</head>
+<body>
+    <label for="main" style="display: block; margin-bottom: 5px;">请输入一个字符串:</label>
+    <input type="text" id="main" style="margin-bottom: 10px;">
+    <label for="sub" style="display: block; margin-bottom: 5px;">请输入一个子串:</label>
+    <input type="text" id="sub" style="margin-bottom: 10px;">
+    <button onclick="count()" style="margin-top: 10px;">提交</button>
+    <span id="result" style="margin-left: 10px;"></span>
+    
+    <script>
+        function count() {
+            var main = document.getElementById('main').value;
+            var sub = document.getElementById('sub').value;
+            var count = 0;
+            for (var i = 0; i <= main.length - sub.length; i++) {
+                var match = true;
+                for (var j = 0; j < sub.length; j++) {
+                    if (main[i + j] !== sub[j]) {
+                        match = false;
+                        break;
+                    }
+                }
+                if (match) {
+                    count++;
+                }
+            }
+            document.getElementById('result').textContent = "子串出现的次数为：" +count;
+        }
+    </script>
+</body>
+</html>
