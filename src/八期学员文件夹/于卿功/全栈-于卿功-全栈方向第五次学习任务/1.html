@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+         let button = document.querySelector("button")
+        function getnumber(){
+            let input=document.querySelector(".input").value;
+            let son=document.querySelector(".son").value;
+            let text=document.querySelector(".number");
+            let number=0;
+            let i,j;
+            let result
+       for (i = 0; i <= (input.length - son.length); i++) {
+                result = true
+                if (input[i] === son[0]) {
+                    for (j = 0; j < son.length; j++) {
+                        if (input[i + j] !==son[j]) {
+                            result = false
+                        }
+                    }
+                    if (result == true) {
+                        number++
+                        i = i + son.length - 1
+                    }
+                }
+            }
+            text.value =number}
+   </script>
+    <div>
+        请输入一个字符串：<br>
+        <input type="text" class="input"><br>
+        请输入一个字串：<br>
+        <input type="text" class="son"><br>
+        字串出现的次数为:<br>
+        <input type="text" class="number"><br>
+        <button onclick="getnumber()">输出结果</button>
+    </div>
+</body>
+
+</html>

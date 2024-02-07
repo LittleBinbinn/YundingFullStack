@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>title</title>
+</head>
+
+<body>
+  <h3>请输入一个字符串：</h3>
+  <input type="text" id="strInput">
+  <h3>请输入一个子串：</h3>
+  <input type="text" id="subStrInput">
+  <button onclick="countSubString()">提交</button>
+  <p id="result"></p>
+  <script>
+    function countSubString() {
+      let str = document.getElementById("strInput").value;
+      let subStr = document.getElementById("subStrInput").value;
+      let count = 0;
+      for (var i = 0; i < str.length; i++) {
+        if (str.substring(i, i + subStr.length) === subStr) {
+          count++;
+        }
+      }
+      document.getElementById("result").innerHTML = "子串出现的次数为：" + count;
+    }
+  </script>
+
+
+</body>
+
+</html>

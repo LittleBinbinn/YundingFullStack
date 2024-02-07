@@ -12,7 +12,7 @@ window.onload = function () {
         this.placeholder = '';
     };
 
-    // 网络请求
+    // 网络请求部分
     const instance = axios.create({
         baseURL: "http://43.143.169.168:9090"
     })
