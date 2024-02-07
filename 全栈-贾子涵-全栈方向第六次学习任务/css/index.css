@@ -1,0 +1,29 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+button {
+    border-radius: 20px;
+    width: 200px;
+    height: 60px;
+    border: 1px solid white;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 0;
+    transition: 1s ease-in-out;
+}
+
+
+button:hover {
+    animation-name: button;
+    animation-duration: 2s;
+    transform: translateY(-20px);
+}
+
+
