@@ -52,24 +52,7 @@ input {
     color: orange;
 }
 
-.result {
-    position: absolute;
-    top: 280px;
-}
-
-.result .word {
-    height: 60px;
-}
-#anwser {
-    width: 200px;
-    height: 40px;
-    border-bottom: 2px solid #000;
-    text-align: center;
-    line-height: 50px;
-    font-size: 25px;
-}
-
-.form button {
+#btn {
     position: absolute;
     top: 250px;
     left: 250px;
@@ -81,4 +64,13 @@ input {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     color: #fff;
+    font-size: 20px;
+}
+
+.ture {
+    color: green;
+}
+
+.false {
+    color: red;
 }

@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    position: relative;
+    width: 400px;
+    height: 500px;
+}
+
+.inner_box {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 200px;
+    height: 150px;
+}
+
+button {
+    float: right;
+    margin-top: 14px;
+    width: 40px;
+    height: 30px;
+}
+
+input {
+    color: #999;
+    border: 0px;
+    border-bottom: 1px solid #ccc;
+}
+
+.psw_text {
+    position: absolute;
+    bottom: 44px;
+    left:1px;
+    font-size: 14px;
+    color: #999;
+}
+
+.loginbox {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 300px;
+    height: 300px;
+    font-size: 24px;
+    border-top: 2px solid #999;
+    display: none;
+}
+
+.login_text {
+    width: 100px;
+    height: 30px;
+    margin: 0 auto;
+}

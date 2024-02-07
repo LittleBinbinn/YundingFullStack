@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        
+    </style>
+    <script>
+        function login() {
+        var msg = [{
+        name: '张三',
+        age: 20,
+        strengths: 'JavaScript',
+        avatar: 'https://tse4-mm.cn.bing.net/th/id/OIP-C.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1',
+        email: 'yunding@qq.com',
+        password: 33333
+        },
+        {
+        name: '李四',
+        age: 19,
+        strengths: 'python',
+        avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.YlKimVo94OkaZDZCzPIDpAHaFh?pid=ImgDet&rs=1',
+        email: '12345678@163.com',
+        password: 11111
+        },
+        {
+        name: '王五',
+        age: 18,
+        strengths: 'Java',
+        avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.P2hK9SRjhFE8WM9N8tgWFAHaEQ?pid=ImgDet&rs=1',
+        email: 'yundingshuyuan@qq.cn',
+        password: 222222
+        },]
+        var email=document.getElementById("email").value;
+        var password=document.getElementById("password").value;
+        var n=document.getElementById("notice");
+        var judge=0;
+        function xinxi() {
+        document.body.innerHTML=
+        `
+        登录成功!<br>
+        <img src="${msg[i].avatar}" style="max-width:10%; height:auto; border-radius:50%;">    <br>
+        姓名:  ${msg[i].name}  <br>
+        年龄：  ${msg[i].age}   <br>
+        特长：  ${msg[i].strengths}
+        `}
+        email=email+"";
+        password=+password;
+        erule =/@qq.com$|@163.com$|@qq.cn$|@163.cn$/;
+        dian=/\./g;
+        var d;
+        var pd=dian.exec(email);
+        for(d=0;pd;d++)
+        {
+            pd=dian.exec(email);
+        }
+        if(erule.test(email)&&d==1)
+        {
+            for(var i=0;i<msg.length;i++)
+            {
+                judge=0;
+                if(msg[i].email===email&&msg[i].password===password)
+                {
+                    n.innerHTML="登陆成功,五秒后跳转至主页!"
+                    judge=1;
+                    setTimeout(xinxi,5000);
+                    break;
+                }
+                else if(msg[i].email===email&&msg[i].password!==password)
+                {
+                    n.innerHTML="密码错误，请核对后重新输入!";
+                    judge=1;
+                    break;
+                }
+            }
+            if(judge==0)
+            {
+                n.innerHTML="暂无该账户信息!";
+            }
+        }
+        else
+        {
+            n.innerHTML="非法的邮箱格式！请重新核对后再输入";
+        }
+        }
+        document.addEventListener('keyup',(e)=>{
+            if(e.keyCode==13)
+            {login();}
+        })
+    </script>
+</head>
+<body>
+    <div class="email">email: <input type="text" id="email"></div>
+    <div class="password">password: <input type="password" id="password"></div>
+    <button class="login" onclick="login()">登录</button>
+    <div class="notice" id="notice"></div>
+</body>
+</html>
