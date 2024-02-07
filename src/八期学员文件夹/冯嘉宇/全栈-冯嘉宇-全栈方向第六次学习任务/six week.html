@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>loding</title>
+        <style>
+            * {
+            margin: 0 auto;
+            padding: 0;
+            }
+            .one{
+                width: 250px;
+            }
+            .date{
+                width: 250px;
+            }
+            .date2{
+                width: 250px;
+            }
+            .two{
+                height:50px;
+                width:50px;
+                background-color: rgb(241, 189, 20);
+                display: none;
+                position:absolute;
+                margin-left: 10px;
+                border-radius:50%;
+                font-size: 35px;
+                font-weight: 500;
+            }
+            .three{
+                width:250px;
+                height:50px;
+                position:relative;
+            }
+        </style>
+    </head>
+    <body>
+        <form class="one">
+            <lable>邮箱<br />
+                <input type="text" id="email"><br />
+            </lable>
+            <lable>密码<br />
+                <input type="text" id="code"><br />
+            </lable>
+            <button type="button" onclick="button()">登录</button>
+        </form>
+        <p class="date"></p>
+        <div class="three">
+            <div class="two">&nbsp;js</div>
+        </div>
+        
+        <p class="date2"></p>
+        <script>
+            let one = document.querySelector('.one');
+            let email = document.querySelector('#email');
+            let code = document.querySelector('#code');
+            let date = document.querySelector('.date');
+            let date2 = document.querySelector('.date2');
+            let two = document.querySelector('.two');
+            let msg = [{
+                    name: '张三',
+                    age: 20,
+                    strengths: 'JavaScript',
+                    avatar: 'https://tse4-mm.cn.bing.net/th/id/OIP-C.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1',
+                    email: 'yunding@qq.com',
+                    password: 33333
+                },
+                {
+                    name: '李四',
+                    age: 19,
+                    strengths: 'python',
+                    avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.YlKimVo94OkaZDZCzPIDpAHaFh?pid=ImgDet&rs=1',
+                    email: '12345678@163.com',
+                    password: 11111
+                },
+                {
+                    name: '王五',
+                    age: 18,
+                    strengths: 'Java',
+                    avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.P2hK9SRjhFE8WM9N8tgWFAHaEQ?pid=ImgDet&rs=1',
+                    email: 'yundingshuyuan@qq.cn',
+                    password: 222222
+                },
+                ]
+            function button(){
+                let reg = /(@qq|@163)+(\.cn$|\.com$)/
+                let re = reg.test(email.value);
+                let ze=0,len= email.value.length;
+                for(;len>0;len--){
+                    if(email.value[len]==="."){
+                        ze++;
+                    }
+                }
+                if(re === false || ze !== 1){
+                    alert("请输入正确的邮箱");
+                }
+                let i=0;
+                for(i=0;i<3;i++){
+                    if(email.value == msg[i].email && code.value == msg[i].password){
+                        one.style.display="none";
+                        two.style.display = "block";
+                        date.innerHTML="登录成功"+"<br />"
+                        date2.innerHTML = "姓名:"+msg[i].name+"<br />"+"年龄:"+ msg[i].age+"<br />"+"特长:"+"strengths";
+                        break;
+                    }else if(email.value == msg[i].email && code.value != msg[i].password){
+                        alert("请输入正确的密码");
+                        break;
+                    }
+                }
+                if(i==3){
+                    alert("不存在该用户，请输入正确的邮箱");
+                }
+            }
+        </script>
+    </body>
+</html>
