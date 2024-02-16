@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+                        margin: 0 20%;
+        }
+
+        .email-login {
+            height: 200px;
+        }
+
+        .email {
+            font-size: 20px;
+            padding: 15px 0;
+        }
+
+        .password {
+            font-size: 20px;
+            padding: 10px 0;
+        }
+
+        .input {
+            height: 20px;
+            width: 180px;
+        }
+
+        .button {
+            height: 25px;
+        }
+
+        #result {
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="email-login">
+        <div class="email">
+            邮箱
+            <br>
+            <input id="one" class="input">
+        </div>
+        <div class="password">
+            密码
+            <br>
+            <input id="two" class="input">
+        </div>
+        <div class="button">
+            <button id="login">登录</button>
+        </div>
+    </div>
+    <div id="result"></div>
+</body>
+<script>
+    let msg = [
+        {
+            name: '张三',
+            age: 20,
+            strengths: 'JavaScript',
+            avatar: 'https://tse4-mm.cn.bing.net/th/id/OIP-C.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1',
+            email: 'yunding@qq.com',
+            password: '33333'
+        },
+        {
+            name: '李四',
+            age: 19,
+            strengths: 'python',
+            avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.YlKimVo94OkaZDZCzPIDpAHaFh?pid=ImgDet&rs=1',
+            email: '12345678@163.com',
+            password: '11111'
+        },
+        {
+            name: '王五',
+            age: 18,
+            strengths: 'Java',
+            avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.P2hK9SRjhFE8WM9N8tgWFAHaEQ?pid=ImgDet&rs=1',
+            email: 'yundingshuyuan@qq.cn',
+            password: '222222'
+        },
+    ]
+
+    document.getElementById('login').addEventListener('click',
+        function () {
+            let inputEmail = document.getElementById('one').value;
+            let inputPassword = document.getElementById('two').value;
+
+            for (let i = 0; i < msg.length; i++) {
+                let inf = msg[i];
+                const reg = /[a-zA-Z0-9]+@(qq|163)+(\.com|\.cn)/;
+                if (reg.test(inputEmail)) {
+                    if (inf.email === inputEmail && inf.password === inputPassword) {
+                        document.getElementById('result').textContent = '登录成功！';
+                        document.getElementById('result').innerHTML += '<br>';
+                        let imgUrl = inf.avatar;
+                        let img = document.createElement('img');
+                        img.src = imgUrl;
+                        img.width = 200; // 宽度设置为200像素  
+                        img.height = 200; // 高度设置为100像素
+                        document.getElementById('result').appendChild(img);
+                        document.getElementById('result').innerHTML += '<br>';
+                        document.getElementById('result').innerHTML += '姓名: ' + inf.name + '<br>';
+                        document.getElementById('result').innerHTML += '年龄: ' + inf.age + '<br>';
+                        document.getElementById('result').innerHTML += '特长: ' + inf.strengths + '<br>';
+                        break;
+                    }
+                    else if (inf.email !== inputEmail && inf.password === inputPassword) {
+                        document.getElementById('result').textContent = '抱歉，该用户不存在！';
+                        break;
+                    }
+
+                    else if (inf.email === inputEmail && inf.password !== inputPassword) {
+                        document.getElementById('result').textContent = '密码输入有误，请重新输入!';
+                    }
+
+                }
+                else {
+                    document.getElementById('result').textContent = '输入邮箱格式错误，请重新输入';
+                }
+            }
+
+        });
+
+
+
+
+
+</script>
+
+</html>

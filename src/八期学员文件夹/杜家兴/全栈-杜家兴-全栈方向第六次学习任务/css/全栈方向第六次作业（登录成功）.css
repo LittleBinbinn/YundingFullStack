@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: url(https://ye-fly.oss-cn-beijing.aliyuncs.com/anime_school_winter_street_674_1280x720.jpg);
+    background-size: 100% auto;
+}
+.box {
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    top: 225px;
+    display: flex;
+    background: rgba(255, 255, 255, 0.8);
+}
+.bar {
+    flex-grow: 1;
+}
+.message {
+    flex-grow: 5;
+    text-align: center;
+}
+.information>img {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    position: relative;
+    left: 86px;
+    border-radius: 50%;
+}
+.information>div {
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+}
+ul {
+    list-style: none;
+    height: 275px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    margin-left: 60px;
+    font-size: 20px;
+}
+li {
+    cursor: default;
+}
+li>img {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 9px;
+}
+@keyframes color {
+    0% {}
+
+    100% {
+        color: blue;
+    }
+}
+li:hover {
+    animation: color .1s linear 0s 1 alternate forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
