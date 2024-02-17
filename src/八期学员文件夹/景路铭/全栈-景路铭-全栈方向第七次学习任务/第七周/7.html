@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>第七周</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <style>
-        #babxib{
+        #babxin{
             width: 300px;
             height: 200px;
             margin: auto;
@@ -22,17 +23,18 @@
         <div id="time">
           
         </div>
-        <div id="account">
-            账号：<input type="text" id="account"></input>
+        <div >
+            账号：<input type="text" id="account">
         </div>
-        <div id="password">
-            密码：<input type="password" id="pwd"> </input>
+        <div >
+            密码：<input type="password" id="pwd"> 
         </div>
         <button type="submit" onclick="sign()">注册 </button>
         <button id="btn" onclick="list()">获取用户列表 </button>
         <div id="users"> </div>
     </div>
     <script>
+        
         function time() {
             const xhr = new XMLHttpRequest();
             xhr.open("GET", "http://43.143.169.168:9090/time/now");
@@ -47,9 +49,20 @@
         }
         time()
         function sign() {
+            let params = new FormData();
             var account = document.getElementById("account").value;
             var pwd = document.getElementById("pwd").value;
-            var group = {
+         /*   axios.post({"http://43.143.169.168:9090/user/register"},{
+                "username":` ${account}`,
+               " password": `${pwd}`
+            },params)
+                .then(function (response) {
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });      */
+                       var group = {
                 username: account,
                 password: pwd
             }
@@ -62,7 +75,7 @@
                 if (re.readyState === 4 && re.status === 200) {
                     console.log(JSON.parse(re.responseText));
                 }
-            }
+            }   
         }
          function list() {
                 const lists = new XMLHttpRequest();
