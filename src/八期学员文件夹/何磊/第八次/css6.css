@@ -1,0 +1,16 @@
+#loginForm {
+  position: absolute;
+  top: 250px;
+  left: 45%;
+  font-size: 20px;
+}
+#typecenter {
+  position: relative;
+  top: 190px;
+  left: 45%;
+}
+#result {
+  position: relative;
+  top: 320px;
+  left: 45%;
+}
