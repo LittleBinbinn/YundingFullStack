@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<style>
+    img {
+        width: 50px;
+        height: 50px;
+    }
+</style>
+
+<head>
+    <title>全栈方向第六周学习任务</title>
+</head>
+
+<body>
+    <div class="up">
+        <p>邮箱</p>
+        <input type="text" class="em">
+        <p>密码</p>
+        <input type="password" class="ps">
+        <button class="btn">登录</button>
+    </div>
+    <div class="down">
+        <hr>
+        <p></p>
+        <img src="#">
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+    <script>
+        let msg = [{
+            name: '张三',
+            age: 20,
+            strengths: 'JavaScript',
+            avatar: 'https://tse4-mm.cn.bing.net/th/id/OIP-C.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1',
+            email: 'yunding@qq.com',
+            password: 33333
+        },
+        {
+            name: '李四',
+            age: 19,
+            strengths: 'python',
+            avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.YlKimVo94OkaZDZCzPIDpAHaFh?pid=ImgDet&rs=1',
+            email: '12345678@163.com',
+            password: 11111
+        },
+        {
+            name: '王五',
+            age: 18,
+            strengths: 'Java',
+            avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.P2hK9SRjhFE8WM9N8tgWFAHaEQ?pid=ImgDet&rs=1',
+            email: 'yundingshuyuan@qq.cn',
+            password: 222222
+        },
+        ]
+
+        let btn = document.querySelector('.btn');
+        btn.onclick = function () {
+            let em = document.querySelector('.em').value;
+            let ps = document.querySelector('.ps').value;
+            let ret = /^([A-Za-z0-9])(\w)+(@qq|@163)+(.com|.cn)/;
+            let down = document.querySelector('.down');
+            let img = document.querySelector('img');
+            if (!ret.test(em)) {
+                alert('邮箱格式不正确 请重新输入！');
+                location.reload();
+                return;
+            }
+            for (let i = 0; i < msg.length; i++) {
+                if (msg[i].email == em) {
+                    if (msg[i].password == ps) {
+                        alert('登录成功');
+                        down.children[1].innerHTML = '登录成功';
+                        img.setAttribute('src', msg[i].avatar);
+                        down.children[3].innerHTML = '姓名：' + msg[i].name;
+                        down.children[4].innerHTML = '年龄：' + msg[i].age;
+                        down.children[5].innerHTML = '特长：' + msg[i].strengths;
+                    } else {
+                        alert('用户不存在或密码输入错误！');
+                        location.reload();
+                        break;
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

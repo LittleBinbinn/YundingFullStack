@@ -1,0 +1,97 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+body {
+    background: url(https://ye-fly.oss-cn-beijing.aliyuncs.com/anime_school_winter_street_674_1280x720.jpg);
+    background-size: 100% auto;
+}
+.login {
+    width: 500px;
+    height: 250px;
+    position: relative;
+    top: 325px;
+    background: rgba(225, 225, 225, 0.65);
+}
+.logo {
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+    font-size: 20px;
+}
+.input {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.email,.password {
+    height: 65px;
+}
+label>img {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 8px;
+    left: -3px;
+}
+input {
+    width: 300px;
+    height: 30px;
+    background-color: #ffffff00;
+    border: 0px;
+    border-bottom: 3px #000 solid;
+    outline: none;
+    font-size: 17px;
+}
+.button {
+    position: relative;
+    bottom: 10px;
+    width: 270px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 15px;
+    cursor: default;
+    background-image: linear-gradient(135deg, rgb(163, 165, 255), rgb(255, 204, 223));
+}
+@keyframes small {
+    0% {}
+
+    100% {
+        background-image: linear-gradient(-135deg, rgb(163, 165, 255), rgb(255, 204, 223));
+    }
+}
+.button:hover {
+    animation: small .5s linear 0s 1 alternate forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+    <div class="form-container">  
+        <h2>登录系统</h2>  
+        <form id="loginForm">  
+          <input type="email" id="email" placeholder="邮箱" required>  
+          <input type="password" id="password" placeholder="密码" required>  
+          <button type="submit">登录</button>  
+        </form>  
+    </div>  
+
+
+    <script>  
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {  
+          event.preventDefault(); 
+
+          var email = document.getElementById('email').value;  
+          var password = document.getElementById('password').value;  
+
+          if (email === 'yunding@qq.com' && password === '33333') {  
+            location.href = 'zhang.html';  
+          } 
+          if (email === '12345678@163.com' && password === '11111') {   
+            location.href = 'li.html';  
+          }
+          if (email === 'yundingshuyuan@qq.cn' && password === '222222') {   
+            location.href = 'wang.html';  
+          }
+
+          else {  
+            alert('用户名或密码不正确！');  
+          }  
+        }); 
+        
+        in1.addEventListener('change',verifyEmail)
+        function verifyEmail(){
+            //正则
+            const reg = /^[A-Za-z0-9\-_]+[A-Za-z0-9\.\-_]*[A-Za-z0-9\-_]+@[A-Za-z0-9]+[A-Za-z0-9\.\-_]*(\.[A-Za-z0-9\.\-_]+)*[A-Za-z0-9]+\.[A-Za-z0-9]+[A-Za-z0-9\.\-_]*[A-Za-z0-9]+$/
+
+            if(!reg.test(in1.value)){
+                alert('错误，需要: 1.结尾为.com或.cn 2.仅包含一个小数点 3.小数点前为@qq或@163');
+                return false;
+            }
+        }
+
+        in2.addEventListener('change',verifyPassword)
+        function verifyPassword(){
+            //正则
+            const reg = /^[0-9]^/
+
+            if(!reg.test(in1.value)){
+                alert('错误，重新输入');
+                return false;
+            }
+        }
+
+    </script>   
+</body>
+</html>

@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 600px;
+    margin: auto;
+}
+
+.title {
+    width: 600px;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    font-size: 60px;
+    color: red;
+}
+
+.background {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background-image: url(https://typora----------image.oss-cn-beijing.aliyuncs.com/background.webp);
+}
+
+li {
+    width: 200px;
+    height: 120px;
+    list-style: none;
+}
+
+
+.form {
+    margin: auto;
+    width: 200px;
+    height: 400px;
+}
+
+.word {
+    width: 200px;
+    height: 80px;
+    line-height: 120px;
+    font-size: 20px;
+    color: grey;
+}
+
+input {
+    width: 200px;
+    height: 40px;
+    font-size: 25px;
+    color: orange;
+}
+
+#btn {
+    position: absolute;
+    top: 250px;
+    left: 250px;
+    width: 100px;
+    height: 30px;
+    background-color: green;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.ture {
+    color: green;
+}
+
+.false {
+    color: red;
+}
