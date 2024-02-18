@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第七次学习任务</title>
+    <style>
+        .all {
+
+            width: 300px;
+            height: 100px;
+            margin: auto;
+            margin-top: 50px;
+
+            text-align: center;
+        }
+
+        .infor {
+            width: 300px;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <div id="time"></div>
+        <div class="account">
+            账号：<input type="text" id="account"><br />
+        </div>
+        <div class="pwd">
+            密码：<input type="password" id="pwd"><br />
+        </div>
+        <button type="submit" onclick="sign()">注册</button>
+        <button id="btn" onclick="access()">获取用户列表</button>
+    </div>
+    <div class="infor" id="infor"></div>
+    <script>
+        function getTime() {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "http://43.143.169.168:9090/time/now");
+            xhr.send();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+                    console.log(JSON.parse(xhr.responseText))
+                    time = JSON.parse(xhr.responseText)
+                    timedata = time.data
+                    console.log(timedata)
+                    document.getElementById('time').innerHTML = "当前时间：" + timedata
+                }
+            }
+        }
+        getTime();
+        function sign() {
+            var account = document.getElementById("account").value;
+            var pwd = document.getElementById("pwd").value;
+            var group = {
+                username: account,
+                password: pwd
+            }
+            const re = new XMLHttpRequest();
+            re.open('post', 'http://43.143.169.168:9090/user/register');
+            re.setRequestHeader("Content-type", "application/json");
+            re.send(JSON.stringify(group));
+            re.onreadystatechange = function () {
+                if (re.readyState === 4 && re.status === 200) {
+                    console.log(JSON.parse(re.responseText));
+                }
+            }
+        }
+        function access() {
+            const xha = new XMLHttpRequest();
+            xha.open("GET", "http://43.143.169.168:9090/user/all");
+            xha.send();
+            xha.onreadystatechange = function () {
+                if (xha.readyState == XMLHttpRequest.DONE && xha.status == 200) {
+                    console.log(JSON.parse(xha.responseText))
+                    all = JSON.parse(xha.responseText)
+
+                    for (let propName in all.data) {
+                        document.getElementById('infor').innerHTML += all.data[propName] + '<br>'
+                    }
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
