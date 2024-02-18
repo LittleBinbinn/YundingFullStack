@@ -62,7 +62,7 @@ btn.addEventListener('click', function () {
     <div style="color:red">擅长${msg[i].strengths}</div><br>
       `)
       break
-    } if(i===2) {
+    } if( i===2 ) {
       document.write(`
       <div style="position: relative; margin: 0 auto; width: 300px; height: 300px;">
     <h1>邮箱与密码不匹配，或不存在此用户</h1>
