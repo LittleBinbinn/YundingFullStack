@@ -1,0 +1,42 @@
+<!DOCTYPE html>      
+<html lang="en">      
+<head>      
+    <meta charset="UTF-8">      
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">      
+    <title>Document</title>      
+</head>      
+<style>      
+    * {      
+        margin: 0;      
+        padding: 0;      
+    }    
+</style>      
+<body>      
+    <span>请输入一个字符串：</span>      
+    <div class="one" id="inputString"><input type="text" id="inputStr"></div>      
+    <div>请输入一个子串：</div>      
+    <span class="two" id="inputSubstring"><input type="text" id="inputSub"></span>      
+    <span><button onclick="countSubstring()">提交</button></span>      
+    <div>子串出现的次数为：</div>      
+    <div id="result"></div>       
+    <script>      
+        function countSubstring() {      
+            const inputString = document.getElementById('inputStr').value;        
+            const inputSubstring = document.getElementById('inputSub').value;       
+            let count = 0;        
+            let start = 0;        
+            while (start < inputString.length) {        
+                let index = inputString.indexOf(inputSubstring, start);        
+                if (index !== -1) {        
+                    count++;        
+                    start = index + 1;        
+                } else {        
+                    break;        
+                }      
+            }     
+            // 更新 result 元素的值    
+            document.getElementById('result').textContent = count;     
+        }        
+    </script>      
+</body>      
+</html>

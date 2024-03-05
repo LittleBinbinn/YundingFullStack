@@ -1,0 +1,679 @@
+        .box{
+            height: 4674px;
+            width: 1920px;
+            /* background-color: aqua; */
+            margin: 0 auto;
+        }
+        a{
+            text-decoration: none;
+            color: #2a3f17;
+        }
+        .search{
+            
+            height: 50px;
+            background-color: white;
+        }
+        .directory{
+            position: relative;
+            background-color: white;
+            width: 76px;
+            height: 50px;
+            transition-duration: 1s;
+        }
+        .directory:hover{
+            transform: scale(0.6);
+        }
+        .directoryposition{
+            position: absolute;
+            left: 27px;
+            top: 15px;
+        }
+        .circle{
+            
+            position: relative;
+            top:-50px ;
+            left: 1850px;
+            background-color: white;
+            width: 76px;
+            height: 50px;
+        }
+        .circleposition{
+            position: absolute;
+            top: 15px;
+            right: 27px;
+        }
+        .photography{
+            position: relative;
+            height: 929px;
+            background-color: blue;
+        }
+        .capture{
+            position: absolute;
+            left: 44%;
+            top:-50px;
+            width: 198px;
+            height: 201px;
+            background-color: purple;
+            transition-duration: 1s;
+        }
+        .capture:hover{
+            transform: scale(0.9);
+        }
+        .tortoise{
+            position: absolute;
+            width: 1920px;
+            position: absolute;
+            top: 152px;
+            height: 407px;
+            background-color: transparent;
+        }
+        .Animalphotography{
+            position: absolute;
+            width: 500px;
+            height: 100px;
+            background-color: transparent;
+            left: 700px;
+            top: 60px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 48px;
+            color: #2a3f17;
+        }
+        .topexplore{
+            position: absolute;
+            width:950px ;
+            height: 230px;
+            background-color: transparent;
+            top: 180px;
+            left: 500px;
+            font-size: 35px;
+            color: #5e6b51;
+            
+        }
+        .explore{
+            position: absolute;
+            top: 559px;
+            width: 990px;
+            height: 72px;
+            background-color: transparent;
+        }
+        .explorebottom{
+            position: relative;
+            width:300px ;
+            height:72px ;
+            background-color: #2a3f17;
+            left: 500px;
+            color: white;
+            font-size: 40px;
+            text-align: center;
+            line-height: 72px;
+        }
+        .blank{
+            
+            position: relative; 
+            width: 1150px;
+            height: 599px;
+            margin: 0 auto;
+            top: -87px;
+            background-color: transparent;
+            display: flex;
+            justify-content: space-around;
+            
+        }
+        .fly{
+            flex: 1;
+            height:500px ;
+            background-color: transparent;
+            transition-duration: 1s;
+        }
+        .flybox{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: transparent;
+            left: 230px;
+            top: -104px;
+            font-size: 47px;
+            color: white;
+
+        }
+        .fly:hover{
+            transform: translate(0,-70px);
+        }
+        .love{
+            flex:1;
+            height: 499px;
+            background-color: transparent;
+            transition-duration: 1s;
+        }
+        .lovebox{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: transparent;
+            left: 206px;
+            top: -104px;
+            font-size: 47px;
+            color: white;
+
+        }
+        .love:hover{
+            transform: translate(0,-70px);
+        }
+        .stand{
+            flex: 1;
+            height: 499px;
+            background-color: transparent;
+            transition-duration: 1s;
+        }
+        .standbox{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: transparent;
+            left: 166px;
+            top: -104px;
+            font-size: 47px;
+            color: white;
+
+        }
+        .stand:hover{
+            transform: translate(0,-70px);
+        }
+        .giraffa
+        {
+            position: relative;
+            height:760px;
+            width: 1920px;
+            background-color: blueviolet;
+        }
+        .SIGNUP{
+            position: absolute;
+            position: relative;
+            width: 700px;
+            height: 500px;
+            background-color: #e0dfdf;
+            top: -780px;
+            left:590px;
+            transition-duration: 1s;
+            
+        }
+        .rubbish{
+            padding: 30px;
+            color: #6d7665;
+            font-size: 20px;
+            text-align: center;
+            line-height: 30px;
+        }
+        .SIGNUP:hover{
+            transform: translate(0,-30px);
+        }
+        .SIGNUPbottom{
+            position: relative;
+            height: 100px;
+            width: 300px;
+            background-color:#2a3f17 ;
+            top: 10px;
+            left: 200px;
+            transition-duration: 1s;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            font-size: 35px;
+        }
+        .SIGNUPbottom:hover{
+            transform: scale(0.8);
+        }
+        .difference{
+            height:158px ;
+            width: 1920px ;
+            background-color: transparent; 
+        }
+        .bigbottom{
+            position: relative;
+            width: 600px;
+            height: 100px;
+            left:600px;
+            top: 30px;
+            font-size: 50px;
+            line-height: 100px;
+            text-align: center;
+            background-color: transparent;
+            color: #2a3f17;
+        }
+        .bigbottom::before{
+            content: "";
+            position: absolute;
+            opacity: 0;
+            top:0;
+            left:-3px;
+            width: 0;
+            height: 0;
+            border-top: 4px solid #2a3f17;
+            border-right: 4px solid #2a3f17;
+        }
+        .bigbottom::after{
+            content: "";
+            position: absolute;
+            opacity: 0;
+            bottom: -4px;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-bottom: 4px solid #2a3f17;
+            border-left: 4px solid #2a3f17;
+        }
+        .bigbottom:hover::before{
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            transition:width 1s linear,height 1s linear 1s,opacity 0s linear;
+        }
+        .bigbottom:hover::after{
+            opacity: 1;
+            width: 100%;
+            height: 100%;
+            transition:width 1s linear 2s,height 1s linear 3s ,opacity 0s linear 2s;
+        }  
+        
+        .animals{
+            display: flex;
+            position: relative;
+            left: 230px;
+            justify-content: space-between;
+            height: 445px;
+            width: 1500px;
+            background-color: transparent;
+        }
+        .horse{
+            
+            width: 263px;
+            height: 417px;
+            background-color: transparent;
+           
+            transition-duration: 1s;
+        }
+        .horse:hover{
+            transform: translate(0,-30px);
+        }
+        .pic{
+            height: 262px;
+            width: 263px;
+            background-color: transparent;
+        }
+        .english{
+                height: 72px;
+                width: 263px;
+                background-color: #e0dfdf;
+                line-height: 72px;
+                text-align: center;
+                font-size: 32px;
+                color: #2a3f17;
+                
+        }
+        .story{
+            height: 87px;
+            width: 263px;
+            background-color:#e0dfdf;
+            font-size: 23px;
+            line-height: 87px;
+            text-align: center;
+        }
+        .kangaroo{
+            
+            width: 263px;
+            height: 417px;
+            background-color: transparent;
+            
+            transition-duration: 1s;
+        }
+        .kangaroo:hover{
+            transform: translate(0,-30px);
+        }
+        .picc{
+            height: 262px;
+            width: 263px;
+            background-color: transparent;
+        }
+        .englishh{
+                height: 72px;
+                width: 263px;
+                background-color: #e0dfdf;
+                line-height: 72px;
+                text-align: center;
+                color: #2a3f17;
+                font-size: 32px;
+               
+        }
+        .storyy{
+            height: 87px;
+            width: 263px;
+            background-color:#e0dfdf;
+            font-size: 23px;
+            line-height: 87px;
+            text-align: center;
+        }
+        .lion{
+            
+            width: 263px;
+            height: 417px;
+            background-color: transparent;
+            
+            transition-duration: 1s;
+        }
+        .lion:hover{
+            transform: translate(0,-30px);
+        }
+        .piccc{
+            height: 262px;
+            width: 263px;
+            background-color: #e0dfdf;
+        }
+        .englishhh{
+                height: 72px;
+                width: 263px;
+                background-color:#e0dfdf;
+                font-size: 32px;
+                line-height: 72px;
+                text-align: center;
+                color: #2a3f17;
+                line-height: 72px;
+                text-align: center;
+                
+                font-size: 32px;
+        }
+        .storyyy{
+            height: 87px;
+            width: 263px;
+            background-color: #e0dfdf;
+            font-size: 23px;
+            line-height: 87px;
+            text-align: center;
+        }
+        .hummingbird{
+           
+            width: 263px;
+            height: 417px;
+            background-color: transparent;
+            
+            transition-duration: 1s;
+        }
+        .hummingbird:hover{
+            transform: translate(0,-30px);
+        }
+        .picccc{
+            height: 262px;
+            width: 263px;
+            background-color: transparent;
+        }
+        .englishhhh{
+                height: 72px;
+                width: 263px;
+                background-color:#e0dfdf;
+                line-height: 72px;
+                text-align: center;
+                color: #2a3f17;
+                font-size: 32px;
+                
+        }
+        .storyyyy{
+            height: 87px;
+            width: 263px;
+            background-color:#e0dfdf;
+            font-size: 23px;
+            line-height: 87px;
+            text-align: center;
+        }
+        .bbbox{
+            position: relative;
+            left: 30px;
+            width: 200px;
+            height: 52px;
+            border-bottom: #2a3f17 2px solid ;
+        }
+        .knowmore{
+            width: 1920px;
+            height: 245px;
+            background-color: transparent;
+        }
+        .knowmorebottom{
+            position: relative;
+            width: 600px;
+            height: 100px;
+            background-color: white;
+            top: 60px;
+            left: 650px;
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px;
+            border: solid 1px;
+            border-color: #2a3f17;
+            color: #2a3f17;
+            transition-duration: 1s;
+        }
+        .knowmorebottom:hover{
+        background-color:#2a3f17 ;
+        color: white;
+        }
+        .squirrel{
+            position: relative;
+            width:1920px ;
+            height:1018px ;
+            background-color: white;
+        }
+        .squirrelpic{
+            position: absolute;
+            width: 683px;
+            height:1018px ;
+            background-color: darkred;
+            left: 90px;
+        }
+        .thephoto{
+            position: absolute;
+            width: 300px;
+            height:89px ;
+            background-color: white;
+            left: 826px;
+            top: 58px;
+            transition-duration: 1s;
+            color: #2a3f17;
+            font-size: 38px;
+        }
+        .thephoto:hover{
+            transform: translate(0,-50px);
+        }
+        .more{
+            position: absolute;
+            width: 500px;
+            height: 176px;
+            background-color: white;
+            top: 143px;
+            left: 826px;
+            transition-duration: 0.1s;
+            transition-timing-function: cubic-bezier(0,.92,.85,.59);
+            color: #2a3f17;
+            font-size: 23px;
+        }
+        .more:hover{
+            transform: translate(70px,0);
+            
+            font-size: 24px;
+        }
+
+        .one{
+            position: absolute;
+            width: 300px;
+            height: 174px;
+            background-color: white;
+            left: 826px;
+            top: 319px;
+            transition-duration: 1s;
+            transition-timing-function: linear;
+        }
+        .one:hover{
+            transform: translate(70px,0);
+        }
+        .big{
+            font-size: 50px;
+            color: #2a3f17;
+        }
+        .small{
+            position: relative;
+            width: 400px;
+            top: -40px;
+            left: 60px;
+            font-size: 26px;
+            color: #55634b;
+        }
+        .two{
+            position: absolute;
+            width: 300px;
+            height: 174px;
+            background-color: white;
+            left: 826px;
+            top: 493px;
+            transition-duration: 1s;
+            transition-timing-function: linear;
+        }
+        .two:hover{
+            transform: translate(70px,0);
+        }
+        .three{
+            position: absolute;
+            width: 300px;
+            height: 174px;
+            background-color: white;
+            left: 826px;
+            top: 667px;
+            transition-duration: 1s;
+            transition-timing-function: linear;
+        }
+        .three:hover{
+            transform: translate(70px,0);
+        }
+        .four{
+            position: absolute;
+            width: 300px;
+            height: 174px;
+            background-color: white;
+            left: 826px;
+            top: 841px;
+            transition-duration: 1s;
+            transition-timing-function: linear;
+        }
+        .four:hover{
+            transform: translate(70px,0);
+        }
+        .line{
+            width: 1920px;
+            height: 60px;
+            background-color: white;
+            border-bottom: solid 1px;
+            border-left-color: #000000;
+        }
+        .end{
+            position: relative;
+            width: 1920px;
+            height: 460px;
+            
+        }
+        .left{
+            position: absolute;
+            position: relative;
+            width: 230px;
+            height: 460px;
+            left: 330px;
+            
+            font-size: 30px;
+            color: #949f8b;
+            line-height: 60px;
+            
+        }
+        .leftone{
+            position: absolute;
+            width:230px ;
+            height: 250px;
+            top: 200px;
+            left: 50px;
+        }
+        .left{
+            position: absolute;
+            width: 230px;
+            height: 460px;
+            left: 330px;
+            
+            font-size: 30px;
+            color: #949f8b;
+            line-height: 60px;
+            
+        }
+        .center{
+            position: absolute;
+            width: 200px;
+            height: 460px;
+            left: 560px;
+            
+        }
+        .centerone{
+            position:absolute;
+            width: 200px;
+            height: 50px;
+            top: 210px;
+            font-size: 25px;
+            color:#4d5b41;
+        }
+        .centertwo{
+            position:absolute;
+            width: 200px;
+            height: 150px;
+            font-size: 20px;
+            color:#697461;
+            top: 260px;
+        }
+        .left{
+            position: absolute;
+            width: 230px;
+            height: 460px;
+            left: 330px;
+            
+            font-size: 30px;
+            color: #949f8b;
+            line-height: 60px;
+            
+        }       
+        .right{
+            position: absolute;
+            width: 646px;
+            height: 460px;
+            left: 850px;
+            
+        }
+        .bigword{
+            position: absolute;
+            width:361px ;
+            height:74px ;
+            background-color: #949f8b;
+            top: 50%;
+            left: 143px;
+            transition-duration: 1s;
+            color: white;
+            text-align: center;
+            line-height: 74px;
+            font-size: 34px;
+        }
+        .bigword:hover{
+            transform: translate(0,-30px);
+            background-color: white;
+            color: #949f8b;
+        }
+        /* .wugui{
+            width:100%;
+            height: 100%;
+        } */
+    .lu{
+        /* height: 100%;
+        width: 100%;
+        object-fit: fill; */
+        max-width: 100%;
+        max-height: 100%;
+    }

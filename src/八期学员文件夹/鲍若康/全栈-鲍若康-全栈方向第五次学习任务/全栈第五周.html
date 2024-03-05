@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UFT-8">
+    <title>全栈第五周作业</title>
+    <style>
+    * {
+    margin: auto;
+    padding: 0;
+    
+    }
+    .background{
+        background-color: aliceblue;
+        width: 250px;
+        height: 160px;
+       margin-top: 60px;
+      border: 1px solid  rgb(0, 69, 90);
+    }
+    .one
+    {   margin-left: 5px;
+        width: 250px;
+        height: 50px;
+        padding-top: 8px;
+
+    }
+    .two
+    {  margin-left: 5px;
+        width: 250px;
+        height: 50px;
+    }
+   .three{
+    margin-left: 5px;
+        width: 250px;
+        height: 50px;
+    
+   }
+
+    </style>
+    <script >
+        function print() {
+            var a = document.getElementById("test1").value;
+            var b = document.getElementById("test2").value;
+            let sum=0;
+             var num1 = 0;
+            var zimu1 = a.match(/[a-zA-Z]/g)
+            for (i in zimu1) {
+                num1++
+            }
+             var num2 = 0
+            var zimu2 = b.match(/[a-zA-Z]/g)
+            for (i in zimu2) {
+                num2++
+            }
+           let n=0;
+            for(let i=0;i<num1;i++)  {
+             if(a[i]==b[0]){
+                for(let j=i;j<num2+i;j++){
+                  if(a[j]===b[n]) 
+                      n++
+                }
+               if(n===num2) {
+                sum++;
+               }
+               n=0
+             }
+            }
+           document.getElementById("demo").innerHTML = (sum);
+}    
+</script>
+</head>
+<body>
+<div class="background">
+    <div  class="one">
+        请输入一个字符串：<input type="text" size="20" id="test1" >
+    </div>
+    <div class="two">
+        请输入一个字串：<input type="text" id="test2">&nbsp;
+        <input type="button" name="button" value="提交" onclick="print()" >
+    </div>
+    <div class="three">
+        子串出现的次数为：<p id="demo"> </p>
+    </div>
+</div>
+</body>
+</html>

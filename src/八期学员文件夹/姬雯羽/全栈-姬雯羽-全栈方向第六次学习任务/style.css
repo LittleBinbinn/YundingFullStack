@@ -1,0 +1,29 @@
+.form-container {  
+    width: 300px;  
+    padding: 16px;  
+    background-color: #f8f9fa;  
+    margin: 0 auto;  
+  }  
+    
+  .form-container input[type="email"],  
+  .form-container input[type="password"] {  
+    width: 100%;  
+    padding: 15px;  
+    margin: 5px 0 10px 0;  
+    border: none;  
+    background: #f1f1f1;  
+  }  
+    
+  .form-container button {  
+    width: 100%;  
+    padding: 14px 20px;  
+    margin: 8px 0;  
+    background-color: #4CAF50;  
+    color: white;  
+    border: none;  
+    cursor: pointer;  
+  }  
+    
+  .form-container button:hover {  
+    background-color: #45a049;  
+  }  

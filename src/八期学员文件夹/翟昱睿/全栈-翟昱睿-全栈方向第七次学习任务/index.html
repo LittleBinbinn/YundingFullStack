@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration and List</title>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+        }
+    </style></head>
+<body>
+    <div id="serverTime"></div>
+    <form id="form">
+        <label for="username">账号:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">密码:</label>
+        <input type="password" id="password" name="password" required> 
+    </form>
+    <button type="submit">注册</button>
+    <button id="btn">获取用户列表</button>
+    <div id="user-list"></div>
+    <script src="script.js"></script>
+</body>
+</html>
