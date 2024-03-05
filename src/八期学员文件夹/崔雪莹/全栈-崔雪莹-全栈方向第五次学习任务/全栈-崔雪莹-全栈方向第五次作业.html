@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>fifth-week-work-cuixueying</title>
+        <script>
+            function myStr() {
+                var str = document.getElementById("con").value;
+            
+                var target = document.getElementById("textcon").value;
+           
+                var pos = -1;
+                var count = 0;
+                while ((pos = str.indexOf(target,pos+1)) != -1) {
+                    count++;
+                }
+                document.getElementById("num").innerHTML=count;
+            }
+        </script>
+    </head>
+
+    <body>
+        <p> 请输入一个字符串：</p>
+
+        <p> 
+            <input type="text" value="" id="con" class="textClass" name="textName" placeholder="请在此输入字符串">
+        </p>
+
+        <p> 请输入一个子串: </p>
+
+        <p> 
+            <input type="text" value="" id="textcon" class="textClass" name="strTextName" placeholder="请在此输入子串">
+            <input type="button" name="button" value="确认" onclick="myStr()" >
+        </p>
+
+        <p> 子串出现的次数为：</p>  
+        <p id="num"> </p>
+    </body>
+</html>

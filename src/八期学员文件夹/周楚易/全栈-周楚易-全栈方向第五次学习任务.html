@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function countSubstr(){
+            var mainStr = document.getElementById('mainStr').value;
+            var subStr = document.getElementById('subStr').value;
+            var count = 0;
+            for(i = 0; i <= mainStr.length - subStr.length; i++){
+                if(mainStr.indexOf(subStr, i) === i){
+                    count++;
+                }
+            }
+            document.getElementById('result').innerHTML = count
+        }
+    </script>
+</head>
+<body>
+    请输入一个字符串:<br>
+    <input type="text" name="请输入一个字符串:" id="mainStr"><br>
+    请输入一个子串:<br>
+    <input type="text" name="请输入一个子串:" id="subStr">
+    <button onclick="countSubstr()">提交</button><br>
+    子串出现的次数为:<br>
+    <p id="result"></p>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>哭唧唧</title>
+    <style>
+        *{
+            margin:0 auto;
+        } 
+        input{
+width:300px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function inquire()
+        {
+            let motherstr=document.getElementById("motherstr").value;//获取对应元素的value（属性）
+        let sonstr=document.getElementById("sonstr").value;
+        let number=0;
+        for (let i = 0; i <= motherstr.length - sonstr.length; i++) //可以直接使用id.value
+        {
+    let standard = true;
+    for (let j = 0; j < sonstr.length; j++) {//为什么和C语言这么像我真的哭死
+      if (motherstr[i + j] !== sonstr[j]) {//初始number是0，遇到第二次非子链时+1
+        standard = false;
+        break;
+      }
+    }
+    if (standard) {
+      number++;
+    }
+}
+document.getElementById("result").innerHTML = number;
+    }
+    </script>
+    <p>请输入母字符串：</p>
+    <input type="text" id="motherstr" ><br>
+    <p>请输入子字符串：</p>
+    <input type="text" id="sonstr">
+    <button onclick="inquire()" >如果您不为查作业而<br>而真想知道次数按它</button>
+    <p>子字符串在母字符串中出现的次数为：</p>
+    <p id="result"></p>
+</body>
+</html>

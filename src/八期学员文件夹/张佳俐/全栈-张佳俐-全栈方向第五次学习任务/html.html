@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第五次学习任务</title>
+</head>
+<body>
+    <form action="demo_form.php">
+        请输入一个字符串: 
+        <br><input type="text" id="inputString"> <br>
+        请输入一个子串:
+        <br><input type="text" id="subString">
+        <input type="submit" value="提交"><br>
+        子串出现的次数为：<p id="result"></p>
+        </form>
+
+        <script>
+        function countSubstring() {
+            var inputString = document.getElementById('inputString').value;
+            var subString = document.getElementById('subString').value;
+            var count = 0;
+            var pos = 0;
+            while ((pos = inputString.indexOf(subString, pos)) != -1) {
+                count++;
+                pos += subString.length;
+            }
+            document.getElementById('result').innerHTML = count;
+        }
+        </script>
+   
+    
+   
+    
+</body>
+
+</html>
