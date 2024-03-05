@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <title>第七次作业</title>
+</head>
+<body>
+    
+
+        <script>
+        const xhr=new XMLHttpRequest();
+        xhr.open("GET","http://43.143.169.168:9090/time/now");
+        xhr.send();
+        xhr.onreadystatechange=function(){
+            if(xhr.readyState===4&&xhr.status===200){
+                const time=JSON.parse(xhr.responseText)
+                const timetext=time.data
+                console.log(timetext);
+                document.getElementById('time').innerHTML=timetext
+            } 
+        }
+        function register(){
+            const xhr1=new XMLHttpRequest();
+            xhs.open("POST","http://43.143.169.168:9090/user/register");
+            xhs.setRequestHeader("Content-type","application/json")
+            let username=document.getElementById('username').value
+            let password=document.getElementById('password').value
+            xhr1.send(JSON.stringify({
+                用户:username,
+                密码:password,
+            }))
+        }
+
+        function get(){
+            const xhr2=new XMLHttpRequest();
+            xhr2.open("GET","http://43.143.169.168:9090/user/all");
+            xhr2.send();
+            xhr2.onreadystatechange=function(){
+                if(xhr2.readyState===4&&xha.status===200){
+                    let userdata=JSON.parse(xhr2.responseText);
+                    for(let i=0;i<userdata.length; i++)
+                    
+                    {
+                        document.getElementById('userdata').innerHTML+='<li>'+userdata.data[i]+'<br>'
+                    }
+                }
+            }
+        }
+ </script>
+    当前时间：<div id="time"> 
+    </div>
+    账号：<input type="text" id="username">
+    <br>
+    密码：<input type="password" id="password">
+    <br>
+    <input type="button" value="注册" onclick="register()">
+    <input type="button" value="获取用户列表" onclick="get()">
+    <br>
+    <div id="userdata"></div>
+</body>
+</html>
