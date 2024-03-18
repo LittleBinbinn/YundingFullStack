@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第七次作业</title>
+    <style>
+        .box{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="Time"></div>
+    <div>
+        <span>账号：</span>
+        <input id="account" type="text">
+    </div>
+    <div>
+        <span>密码：</span>
+        <input id="password" type="text">
+    </div>
+    <div>
+        <button id="login" onclick="loginUp()">注册</button>
+        <button id="loginList" onclick="loginList()">获取用户列表</button>
+        <div id="list" class="box"></div>
+    </div>
+    <script>
+        const xhr = new XMLHttpRequest()
+        xhr.open('GET', 'http://43.143.169.168:9090/time/now')
+        xhr.send()
+        xhr.onreadystatechange = function () {
+            if(xhr.readyState === 4 && xhr.status === 200){
+                console.log(JSON.parse(xhr.responseText))
+                time = JSON.parse(xhr.responseText)
+                timedata = time.data
+                console.log(timedata);
+                document.getElementById('Time').innerHTML = '当前时间' + timedata
+            }
+        }
+        function loginUp(){
+            var account = document.getElementById('account').value
+            var password = document.getElementById('password').value
+            const xhr = new XMLHttpRequest()
+            xhr.open('POST', "http://43.143.169.168:9090/user/register")
+            xhr.setRequestHeader('Content-Type', 'application/JSON')
+            xhr.send(JSON.stringify({
+                Username:account,
+                Password:password
+            }))
+        }
+        function loginList(){
+            const xhr = new XMLHttpRequest()
+            xhr.open('GET', 'http://43.143.169.168:9090/user/all')
+            xhr.send()
+            xhr.onreadystatechange = function(){
+            if(xhr.readyState === 4 && xhr.status === 200){
+                console.log(JSON.parse(xhr.responseText))
+                list=JSON.parse(xhr.responseText)
+                for(let i = 0; i<list.data.length; i++){
+                    document.getElementById('list').innerHTML += "<li>"+list.data[i]+"<br>"
+                }
+            }
+        }
+        }
+    </script>
+</body>
+</html>

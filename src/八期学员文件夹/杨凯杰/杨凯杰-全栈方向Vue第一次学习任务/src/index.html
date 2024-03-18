@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuepractice</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <style type="text/css">
+        *{
+            margin: 0;
+        }
+        .warning_words{
+            color: red;
+            font-size: 20px;
+        }
+        .words_cssorigin{
+            color: black;
+        }
+        .words_csschange{
+            color: red;
+        }
+        /* 这是违规弹窗 */
+        .iron{
+            position: absolute;
+            background-image: url("https://miandianyaowang.oss-cn-beijing.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240316165015.jpg");
+            width: 600px;
+            height:500px;
+            background-repeat: no-repeat;
+            text-align: center;
+        }
+        /* 这是弹窗按钮的样式 */
+        #closeButton{
+            position:relative;
+            top:85%;
+            border-radius: 10px;
+            width: 100px;
+            height: 40px;
+            background-color: black;
+            color:white;
+            transition: 1s ;
+        }
+        #closeButton:hover{
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <form id="wordadd_function">
+            <label for="add_word">请添加你的单词</label>
+            <input type="text" id="add_word" v-model.trim="newWord" >
+            <br>
+
+            <h2 class="context">你要输入的单词是:{{newWord}}</h2>
+            <br>
+            <button @click.prevent="addWord" id="addWord">添加</button>
+            <button @click.prevent="deleteWord(index)" id="deleteWord">删除</button>
+
+            <p id="warning" v-if="seen" :class="warning">鳖加辣，单词数量太多了</p>
+            <ul>
+                <li v-for="(word,index) in wordList" :class="words_show" :key="index">
+                    {{word}}
+                </li>
+            </ul>
+            <div  v-if="alert" class="iron">
+                <p style="color: chocolate;font-size: 20px;">菜就多练，单词里只有字母</p>
+            
+            <button @click="close" id="closeButton">关闭</button>
+            </div>
+        </form>
+    </div>
+    <!-- js部分 -->
+    <script type="text/javascript">
+        const regWords =/^[a-zA-Z]+$/;    //检验单词的正则表达式
+
+        const vm = new Vue({
+            el:'#root',
+            data:{
+                newWord:'',
+                wordList:[],//这是单词数组
+                seen:false,
+                alert:false,
+                warning:'warning_words',//此为警告的样式
+                words_show:'words_cssorigin'//此为单词在小于限定数量的样式
+            },
+            methods: {
+                addWord()
+                {
+                    // console.log(regWords.test(this.newWord));
+                    if(regWords.test(this.newWord)){
+                    
+                    if (this.wordList.length < 5 && this.newWord.length != 0) {
+                        this.wordList.push(this.newWord);
+                        this.newWord = '';
+                        this.seen = false;
+                    }
+                    else {
+                        this.wordList.push(this.newWord);
+                        this.newWord = '';
+                        this.seen = true;
+                        this.warning = 'warning_words';
+                        this.words_show = 'words_csschange';
+                    }
+                }
+                else{
+                    this.alert = true;
+                }
+
+                },
+                deleteWord(index)
+                {
+                    this.wordList.splice(index, 1);
+                    this.seen = false;
+                    this.words_show = 'words_cssorigin'
+                    index--;
+                },
+                close(){
+                    this.alert = false;
+
+                }
+            },
+            
+        })
+    </script>
+</body>
+</html>
