@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>子串统计</title>
+</head>
+<body>
+<input type="text" id="string" placeholder="输入字符串">
+<input type="text" id="zistring" placeholder="输入子串">
+<button onclick="number()">统计子串出现的次数</button>
+<p id="result"></p >
+
+<script>
+function number() {
+    var string=document.getElementById('string').value;
+    var zistring=document.getElementById('zistring').value;
+    var num=string.split(zistring).length-1;
+    document.getElementById('result').innerHTML="子字符串在主字符串中出现的次数为:"+num;
+}
+</script>
+</body>
+</html>

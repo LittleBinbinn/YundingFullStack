@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <script src="signup.js"></script>
+</head>
+<style>
+     * {
+        margin: 0;
+        padding: 0;
+    }
+    .out {
+        border-color: steelblue;
+        border-style: solid;
+        border-width: 2px;
+        position: relative;
+        margin: 0 auto;
+        height: 350px;
+        width: 300px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .inside {
+        position: relative;
+        height: 100px;
+        border-color: steelblue;
+        border-style: dashed;
+        border-width: 1px;
+       
+    }
+    .text1 {
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        font-size: 25px;
+    }
+    .text2 {
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        font-size: 25px;
+        background-color: #fff;
+    }
+    input {
+        position: relative;
+        height: 45px;
+        width: 200px;
+        top: 6px;
+    }
+    button {
+        position: relative;
+        width: 55px;
+        height: 30px;
+        font-size: 20px;
+        text-align: center;
+        line-height: 30px;
+    }
+    .warn {
+        position: relative;
+        top: 10px;
+        width: 300px;
+        height: 40px;
+        font-size: 18px;
+        text-align: center;
+        background-color: #fff;
+        line-height: 40px;
+        color: red;
+    }
+</style>
+<body>
+<div class="out">
+    <div class="inside">
+        <div class="text1">邮箱</div>
+        <input type="text" id="email">
+    </div>
+    <div class="inside">
+        <div class="text2">密码</div>
+        <input type="text" id="password">
+    </div>
+    <div class="inside">
+        <button>登录</button>
+        <div class="warn" id="warning"></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>全栈方向第五次作业</title>
+</head>
+
+<body>
+  <form action="">
+    请输入一个字符串<br>
+    <input type="text" value="" class="str1"> <br>
+    请输入一个子串<br>
+    <input type="text" value="" class="str2">
+    <button type="button" class="btn">提交</button> <br>
+    子串重复次数为<br>
+  </form>
+  <script>
+    let str1 = document.querySelector('.str1')
+    let str2 = document.querySelector('.str2')
+    let btn = document.querySelector('.btn')
+    btn.addEventListener('click', function () {
+      let a = false
+      let ucount = 0
+      for (let j = 0; j < str1.value.length; j++) {
+        for (let l = 0; l < str2.value.length; l++) {
+          if (str1.value[j + l] === str2.value[l]) {
+            a = true
+          } else {
+            a = false
+            break
+          }
+        }
+        if (a) {
+          ucount++
+        }
+      }
+      document.write(`
+      <form action="">
+    请输入一个字符串<br>
+    <input type="text" value="${str1.value}" class="str1"> <br>
+    请输入一个子串<br>
+    <input type="text" value="${str2.value}" class="str2">
+    <button type="button" class="btn">提交</button> <br>
+    子串重复次数为<br>
+  </form>`)
+      document.write(ucount)
+    })
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全栈第五周作业</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script type="text/javascript">
+            function test()
+            {
+                var string=document.getElementById("txt").value;
+                var string1=document.getElementById("txt1").value;
+                var addall=0,i;
+                for(i=0;i<string.length;i++){
+                  if(string.indexOf(string1,i)===i){
+                    addall++;
+                  }
+                }
+                document.getElementById("all").innerHTML=addall;
+            }
+        </script>
+</head>
+<body>
+    <form action="">
+        <p>请输入一个字符串：</p>
+        <input id="txt" type="text">
+        </br>
+        <p>请输入一个子串：</p>
+        <input id="txt1" type="text">
+        <input type="button" value="提交" onclick="test()">
+        <p>子串出现的次数为：</p>
+        <p id="all"></p>
+    </form>
+</body>
+</html>
