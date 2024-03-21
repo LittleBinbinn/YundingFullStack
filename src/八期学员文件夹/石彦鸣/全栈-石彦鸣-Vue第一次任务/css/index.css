@@ -1,0 +1,15 @@
+.less {
+    color: black;
+}
+
+.more {
+    color: red;
+}
+
+.visable {
+    color: red;
+}
+
+.disvisable {
+    display: none;
+}
