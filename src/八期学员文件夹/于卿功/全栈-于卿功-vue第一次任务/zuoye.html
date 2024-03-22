@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单词</title>
+    <style>
+        * {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="app"></div>
+</body>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    const app = Vue.createApp({
+        template: `<input type="text" class="input" v-model="newWord"><br>
+    你要输入的单词是：<span class="word">{{newWord}}</span><br>
+    <button @click="addword">添加</button>
+    <button @click="deleteword">删除</button><br>
+    单词列表：
+    <ul>
+        <li v-for="item in word">{{item}}</li>
+    </ul>`,
+        data() {
+            return {
+                word: [],
+                newWord: ''
+            }
+        },
+        methods: {
+            addword() {
+                if (this.newWord.trim() === '') {
+                    alert('输入框不能空着哦');
+                    return;
+                } 
+                this.word.push(this.newWord);
+                this.newWord = '';
+                if (this.word.length > 5) {
+                    alert('憋加了 单词数量太多辣');
+                    this.word.pop();
+                    return;
+                }
+            },
+            deleteword() {
+                this.word.pop();
+            }
+        }
+    })
+    app.mount('.app')
+</script>
+
+</html>
