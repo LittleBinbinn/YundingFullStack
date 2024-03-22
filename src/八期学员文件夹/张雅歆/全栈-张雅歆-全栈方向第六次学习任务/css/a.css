@@ -1,0 +1,48 @@
+body {
+    margin: auto;
+    font-family: '微软雅黑';
+    background-color: #ffffff;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(91, 127, 234);
+    font-size: 50px;
+}
+
+#loginForm {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #a7aebd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#loginForm input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #a0aec6;
+    border-radius: 5px;
+}
+
+#loginForm input[type="submit"] {
+    background-color: #234da9;
+    color: white;
+    cursor: pointer;
+}
+
+#loginForm input[type="submit"]:hover {
+    background-color: #152b96;
+}
+
+#message {
+    margin-top: 20px;
+    color: rgb(0, 0, 0); 
+} 
+#result{
+    text-align: center;
+    color: rgb(65, 54, 37);
+    font-size: 20px;
+}
+

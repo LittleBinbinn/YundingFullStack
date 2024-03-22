@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>全栈方向Vue第一次学习任务</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+  <link rel="stylesheet" href="全栈方向Vue第一次学习任务.css">
+</head>
+
+<body>
+  <div id="app">
+    <input type="text" v-model.trim="word" @keyup.enter="add()">
+    <h1>你要输入的单词是:{{word}}</h1><br>
+    <button @click="add()">添加</button>
+    <button @click="remove()">删除</button>
+    <p v-show="list.length > 5" :class="classArr">不要加了，单词太多了</p>
+    <div :class="classArr[0]">
+      单词列表：
+      <ul>
+        <li v-for="(word,index) in list">{{word}}</li>
+      </ul>
+    </div>
+  </div>
+  <script src="全栈方向Vue第一次学习任务.js"></script>
+</body>
+
+</html>

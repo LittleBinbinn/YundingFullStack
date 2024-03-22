@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://43.143.169.168:9090/user/register')
+        xhr.setRequestHeader('Content-type','application/json')
+
+        xhr.send(
+            JSON.stringify({
+                username:"张山",
+                password:"123098",
+            })
+        )
+
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState===XMLHttpRequest.DONE&& xhr.status == 200){
+                console.log(JSON.parse(xhr.responseText))
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=adge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>算数</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .all{
+                
+                
+                background-color: pink;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .inputbox1{
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 0px;
+            }
+            .inputbox2{
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="all">
+            <div class="inputbox1">
+                <div>请输入一个字符串：</div><br\>
+                <input type="text" id="input1" placeholder="输入字符串">
+            </div>
+            <div class="inputbox2">
+                <div>请输入一个子字符串：</div>
+                <input type="text" id="input2" placeholder="输入子字符串">
+                <button class="button" onclick="num()">提交</button>
+            </div><br\>
+                <div id="result">字串在字符串中出现的次数：</div>
+            </div>
+            
+        </div>
+        <script>
+            function num() {
+            const string =document.getElementById("input1").value;
+            const xiaostring =document.getElementById("input2").value;
+
+            var num = string.split(xiaostring).length - 1;
+            document.getElementById('result').innerHTML = "子串在字符串中出现的次数为: " + num;
+    }
+        </script>
+        
+    </body>
+</html>

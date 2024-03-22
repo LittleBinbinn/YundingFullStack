@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Registration and List</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        padding: 5px;
+        width: 200px;
+        margin-right: 10px;
+      }
+
+      button {
+        padding: 5px 10px;
+      }
+
+      #user-list {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>User Registration</h1>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" required />
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" required />
+
+    <button onclick="registerUser()">Register</button>
+
+    <h2>User List</h2>
+    <button onclick="getUserList()">Get User List</button>
+    <ul id="user-list"></ul>
+
+    <script>
+      const API_GET_TIME = "http://43.143.169.168:9090/time/now";
+      const API_REGISTER = "http://43.143.169.168:9090/user/register";
+      const API_GET_USERS = "http://43.143.169.168:9090/user/all";
+
+      // 获取当前时间并展示
+      // function getCurrentTime() {
+      //   fetch(API_GET_TIME)
+      //     .then((response) => response.json())
+      //     .then((data) => {
+      //       console.log(data); // 在控制台打印返回的数据
+      //       const currentTime = new Date(data.time).toLocaleString(); // 假设返回的数据中有一个time字段
+      //       alert(`Current time is: ${currentTime}`); // 弹出当前时间
+      //     })
+      //     .catch((error) => {
+      //       console.error("Error:", error);
+      //     });
+      // }
+      function getCurrentTime() {
+        fetch(API_GET_TIME)
+          .then((response) => response.json())
+          .then((data) => {
+            // 假设返回的数据结构如下：
+            // {
+            //   "msg": "成功",
+            //   "code": "200",
+            //   "data": "2024-02-20 10:07:48"
+            // }
+            const timeString = data.data; // 获取时间字符串
+            const formattedTimeString = `${timeString.slice(
+              0,
+              4
+            )}-${timeString.slice(5, 7)}-${timeString.slice(
+              8,
+              10
+            )}T${timeString.slice(11, 13)}:${timeString.slice(
+              14,
+              16
+            )}:${timeString.slice(17, 19)}`; // 转换为ISO 8601格式
+            const currentTime = new Date(formattedTimeString); // 创建Date对象
+            if (isNaN(currentTime)) {
+              console.error("无法解析日期:", formattedTimeString);
+              return;
+            }
+            const formattedCurrentTime = currentTime.toLocaleString(); // 转换为本地时间字符串
+            alert(`当前时间是: ${formattedCurrentTime}`); // 弹出当前时间
+          })
+          .catch((error) => {
+            console.error("获取时间出错:", error);
+          });
+      }
+
+      // 注册用户
+      function registerUser() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        fetch(API_REGISTER, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ username, password }),
+        })
+          .then((response) => {
+            if (response.ok) {
+              alert("User registered successfully!");
+              console.log("User registered successfully!");
+            } else {
+              alert("Failed to register user!");
+              console.error("Failed to register user!");
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      }
+
+      // 获取用户列表并展示
+      // function getUserList() {
+      //   fetch(API_GET_USERS)
+      //     .then((response) => response.json())
+      //     .then((data) => {
+      //       console.log(data); // 在控制台打印返回的用户列表数据
+      //       const userList = document.getElementById("user-list");
+      //       userList.innerHTML = ""; // 清空用户列表
+      //       data.forEach((user) => {
+      //         const li = document.createElement("li");
+      //         li.textContent = user.username; // 假设每个用户对象都有一个username字段
+      //         userList.appendChild(li);
+      //       });
+      //     })
+      //     .catch((error) => {
+      //       console.error("Error:", error);
+      //     });
+      // }
+      function getUserList() {
+        fetch(API_GET_USERS)
+          .then((response) => response.json()) // 解析 JSON 响应
+          .then((data) => {
+            console.log(data); // 在控制台打印返回的用户列表数据
+
+            // 检查 data 是否存在以及是否包含元素
+            if (data && data.data && Array.isArray(data.data)) {
+              const userList = document.getElementById("user-list");
+              userList.innerHTML = ""; // 清空用户列表
+
+              // 遍历 data.data 数组并创建列表项
+              data.data.forEach((username) => {
+                const li = document.createElement("li");
+                li.textContent = username; // 直接设置文本内容为用户名
+                userList.appendChild(li); // 将列表项添加到用户列表中
+              });
+            } else {
+              console.error("No user data found in the response.");
+            }
+          })
+          .catch((error) => {
+            console.error("Error fetching user list:", error);
+          });
+      }
+
+      // 页面加载时获取当前时间
+      window.onload = getCurrentTime;
+    </script>
+  </body>
+</html>
