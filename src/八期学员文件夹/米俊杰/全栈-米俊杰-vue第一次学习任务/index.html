@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue</title>
+   
+</head>
+<body>
+    <style>
+        .red{
+            color: #ff0000;
+        }
+    </style>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+   <div id="addwords">
+    <div :class="{ red: arry.length===5 }"   >
+    <input @change="wordchange()" type="text" id="words">
+    
+    <h1>你要输入的单词是：{{word}}</h1>
+
+    <button @click="add();bec()">添加</button>
+    <button @click="reduce()">删除</button>
+    <h2 v-if="arry.length>4">can't be added more</h2>
+    
+    <h3>单词列表</h3>
+        <li v-for = " (word1,index) in arry">{{index+1}} {{word1}}</li>
+</div>
+</div>
+    <script>
+        
+        const addwords =Vue.createApp({
+            data:function(){
+                return{
+                    word:'',
+                    arry:[],
+                    isActive:false
+                }
+            },
+            methods:{
+                wordchange(){
+                    this.word=words.value
+                    console.log(words.value);
+                },
+                add(){
+                    if(this.arry.length<5){
+                    this.arry.push(words.value);   
+                    console.log(this.arry.length)
+                    }
+                    else{
+                        
+                    }
+                },
+                reduce(){
+                    this.arry.pop(words.value);
+                },
+                fade(){
+
+                },
+                bec(){
+                    
+                    if(this.arry.length > 5){
+                    this.isActive= true;
+                    console.log("555")
+
+                }
+                else{
+                    console.log("666")
+
+                }
+                }
+            }
+            
+
+           
+
+        })
+          
+        addwords.mount('#addwords') 
+    </script>
+</body>
+</html>
