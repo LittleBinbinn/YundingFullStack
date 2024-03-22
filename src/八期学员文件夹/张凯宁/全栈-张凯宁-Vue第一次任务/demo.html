@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #app {
+            width: 500px;
+            height: 650px;
+
+            margin: 0 auto;
+        }
+
+        input {
+            width: 400px;
+            height: 30px;
+        }
+
+        button {
+            width: 100px;
+            height: 40px;
+            font-size: 30px;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .active {
+            color: red;
+
+        }
+
+        .warn {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="word">
+
+        <h2>你要输入的单词是：{{word}}</h2>
+        <button @click="addWord">添加</button>
+        <button @click="delWord">删除</button>
+        <div class="change" :class="{active:words.length>5}">
+
+            <h3 v-if="words.length>5">别加啦！单词数量太多了！</h3>
+            <ul>
+                <li v-for="items in words">{{items}}</li>
+            </ul>
+        </div>
+
+
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const app = Vue.createApp(
+            {
+                data: function () {
+                    return {
+                        word: "",
+                        message: "",
+                        words: [],
+                    }
+
+                },
+                methods: {
+                    addWord() {
+
+                        if (this.word != "") {
+                            this.message = this.word;
+                            console.log(typeof (this.message))
+                            this.words.unshift(this.message);
+                        }
+
+
+                    },
+                    delWord() {
+                        this.words.splice(this.words.length - 1, 1);
+
+
+                    }
+
+                }
+            }
+        )
+        app.mount("#app");
+    </script>
+
+
+</body>
+
+</html>
