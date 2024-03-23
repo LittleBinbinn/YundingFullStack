@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./css/index.css" rel="stylesheet" type="text/css" />
+  </head>
+  
+
+  <body>
+    <div id="app">
+      <input id="words" type="text" v-model="inputValue" @keyup.enter="addEnter" />
+      <h3>你要输入的单词是：{{inputValue}}</h3>
+      <br>
+      <button @click="add">添加</button>
+      <button @click="remove">删除</button>
+      
+      
+      <div :class="{active: isActive}">
+        <h2 v-if="isActive">还加呢？大！傻！春!!!</h2>
+      </div>
+      
+    
+      <h3>单词列表：</h3>
+      <br>
+      <ul :class="{redList: isredList}">
+        <li v-for="(item, index) in wordList" :key="index">{{item}}</li>
+      </ul>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+      const app = Vue.createApp({
+          data() {
+              return {
+                  inputValue:'',
+                  wordList: ['哈哈','呵呵','peiqi','乔治']
+                  
+
+              }
+
+          },
+          computed: {
+            isActive(){
+              return this.wordList.length > 5
+            }  ,
+            isredList(){
+              return this.wordList.length > 5
+            }
+          },
+
+          methods: {
+              add(){
+                  this.wordList.push(this.inputValue);
+                  this.inputValue=''
+                  console.log(this.wordList.length);
+
+              },
+              remove(){
+
+                if (this.wordList.length > 0) {
+
+                  let lastIndex = this.wordList.length - 1;
+                  this.wordList.splice(lastIndex,1);
+                  console.log(this.wordList);
+                }
+              },
+              addEnter(){
+                if(this.inputValue.trim() !== ''){//trim()去除首尾空白字符
+                  this.wordList.push(this.inputValue);
+                  this.inputValue=''
+                }
+              }
+                
+          }
+      })
+
+      app.mount('#app')
+    </script>
+  </body>
+</html>
