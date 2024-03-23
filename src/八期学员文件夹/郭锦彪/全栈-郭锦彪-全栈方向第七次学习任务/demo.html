@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        .time{
+            font-size: 20px;
+            height: 40px;
+        }
+        .time_text{
+            border: none;
+            font-size: 20px;
+        }
+        .button{
+            margin-top: 5px;
+            font-size: 15px;
+        }
+        .button2{
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="time">
+        当前时间：<input type="text" class="time_text">
+    </div>
+    <div class="text1">
+        账号：<input type="text" class="text">
+    </div>
+    <div class="password1"> 
+        密码：<input type="password" class="password">
+    </div>
+    <button class="button">注册</button>
+    <button class="button2">获取用户列表</button>
+    <div class="list">
+        
+    </div>
+    <script>
+        var time_text = document.querySelector(".time_text")
+        var button = document.querySelector(".button")
+        var button2 = document.querySelector(".button2")
+        var puttext = document.querySelector(".text")
+        var putpassword = document.querySelector(".password")
+        var list = document.querySelector(".list")
+        button.onclick = function(){
+            if(puttext.value !== '' && putpassword !== ''){       axios({
+                    method: "post",
+                    url: "http://43.143.169.168:9090/user/register",
+                    data:{
+                        "username" : puttext.value,
+                        "password" : putpassword.value     
+                    }
+                })
+                .then((result) => {
+                    console.log("注册报文", result);
+                    return result.data;
+                })
+            }else {
+                alert("请填写完整账号密码");
+            }
+        }
+        window.setInterval(function(){
+            axios({
+                method: "get",
+                url: "http://43.143.169.168:9090/time/now",
+            })
+                .then((result) => {
+                    return result.data;
+                })
+                .then((result) => {
+                    time_text.value = result.data;
+                    time_text.disabled = true
+                })
+                .catch((err) => {
+                    console.log("出错了，", err);
+                }) 
+        },1000)
+        button2.onclick = function(){
+            list.innerHTML = ''
+            axios({
+                method: "get",
+                url: "http://43.143.169.168:9090/user/all",
+            })
+                .then((result) => {
+                    console.log("用户列表信息报文", result);
+                    return result.data;
+                })
+                .then((result) => {
+                    var ul = document.createElement("ul")
+                    list.appendChild(ul)
+                    for(var value of result.data){
+                        ul.insertAdjacentHTML("beforeend",
+                        `<li>${value}</li>`
+                        )
+                    }
+                })
+                .catch((err) => {
+                    console.log("出错了，", err);
+                }) 
+        }
+    </script>
+</body>
+</html>

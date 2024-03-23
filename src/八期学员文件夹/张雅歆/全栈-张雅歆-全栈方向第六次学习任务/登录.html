@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录验证</title>
+    <link rel="stylesheet" href="css/a.css">
+</head>
+
+<body>
+    <h1>登录</h1>
+    <form id="loginForm">
+        <label for="email">邮箱:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="password">密码:</label><br>
+        <input type="password" id="password" name="password" required><br>
+        <input type="submit" value="登录" onclick="loginEmailAndPassword()">
+    </form>
+    <div id="result"></div>
+    <script type="text/javascript" src="js/a.js"></script>
+</body>
+
+</html>

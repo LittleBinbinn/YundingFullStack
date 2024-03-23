@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div id="time"></div>
+    账号：<input type="text" id="account"><br>
+    密码：<input type="password" id="password">
+    <button id="commit" onclick="commit()">注册</button>
+    <button id="information" onclick="message()">点我获取用户信息</button>
+    <div id="list"></div>
+    <script>
+    const time = document.getElementById("time")
+        const xhr = new XMLHttpRequest() 
+        xhr.responseType = "json"    
+        xhr.onload = function(){        
+            if(xhr.status === 200)        
+            var result = xhr.response        
+            console.log(result)        
+            time.innerHTML = `当前时间:${result.data}`
+        }
+        xhr.open("get","http://43.143.169.168:9090/time/now")
+        xhr.send()
+        function commit(){
+            const account = document.getElementById("account")
+            const password = document.getElementById("password")
+            axios.post('http://43.143.169.168:9090/user/register',{
+                "username": `${account}`,
+                "password": `${password}`
+            })
+            .then(function(response){
+                console.log(`注册报文 > ${JSON.stringify(response)}`);
+            })
+            .catch(function(error){
+                console.log(error)
+            })
+        }
+        function message(){
+            const information = document.getElementById("information")
+            axios.get('http://43.143.169.168:9090/user/all')
+            .then(function(response){
+                const list = document.getElementById("list")
+                list.innerHTML = `${JSON.stringify(response.data.data)}`
+                console.log(`用户信息列表报文 > ${JSON.stringify(response)}`)
+            })
+            .catch(function(error){
+                console.log(error)
+            })
+        }
+    </script>
+
+</body>
+</html>

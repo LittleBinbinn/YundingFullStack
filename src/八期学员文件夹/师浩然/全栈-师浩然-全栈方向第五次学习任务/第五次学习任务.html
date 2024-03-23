@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>计数</title>
+    <script>
+      function countmain() {
+        //获取输入的字符串
+        let str = document.getElementById("strInput").value;
+        let substring = document.getElementById("substringInput").value;
+
+        //调用计数函数
+        let count = countnumber(str, substring);
+
+        //显示结果
+        document.getElementById("resultOutput").value = `${count}`;
+      }
+      function countnumber(str, substring) {
+        let count = 0;
+        let a = 0;
+        while (true) {
+          a = str.indexOf(substring, a);
+          if (a === -1) break;
+          count++;
+          a += substring.length;
+        }
+        return count;
+      }
+    </script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        margin: 0 auto;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>请输入一个字符串:</h2>
+    <input type="text" id="strInput" />
+    <br />
+    <h2>请输入一个子串:</h2>
+    <input type="text" id="substringInput" />
+    <button onclick="countmain()">提交</button>
+    <h2>字串的出现次数为:</h2>
+    <input type="text" id="resultOutput" readonly />
+  </body>
+</html>

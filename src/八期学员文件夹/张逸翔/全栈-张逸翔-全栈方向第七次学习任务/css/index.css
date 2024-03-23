@@ -1,0 +1,11 @@
+#account,
+#pwd{
+    display: inline-block;
+}
+button{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+ul{
+    margin-left: 0;
+}
