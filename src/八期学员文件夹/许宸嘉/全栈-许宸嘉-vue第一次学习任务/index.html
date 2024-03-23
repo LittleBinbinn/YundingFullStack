@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue好难嘤嘤嘤</title>
+    <script src="./vue@2"></script>
+    <style>
+        *{
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+    <input type="text" v-model="nword" @keyup.enter="addWord" @input="updateiword" placeholder="请输入一个单词">
+    <h2>你想要输入的单词是{{iword}}</h2><br>
+    <div>
+    <button @click="addWord">添加</button>
+    <button @click="deleteWord">删除</button>
+    </div>
+    <h2>单词列表</h2>
+    <ul>
+        <li v-for="(word, index) in wordList" :key="index" :style="{ color: wordColor }">{{ word }}</li>
+    </ul>
+    <p v-if="showWarning" style="color: red;">单词数目超过五个!</p>
+    </div>
+    <script>
+        const app = Vue.creatApp(
+            {
+                el:'#app',
+                data: 
+                {
+                    nword:'',
+                    wordList:[],
+                    iword: '',
+                    wordColor: '',
+                    showWarning: false,
+                },
+                methonds:
+                {
+                addWord () {  
+            if (this.nword.trim() !== '') {  
+                this.wordList.push(this.nword);  
+                this.nword = '';  
+                this.updateWordColor();
+            }  
+        },  
+                deleteWord() {
+                    if (this.wordList.length > 0) {
+                        this.wordList.pop();
+                        this.updateWordColor();
+                    }
+                },
+                updateiword() {
+                    this.iword = this.nword;
+                },
+                updateWordColor() {
+                    if (this.wordList.length > 5) {
+                        this.wordColor = 'red';
+                        this.showWarning = true;
+                                                                                                                                                                                                                     } else {
+                        this.wordColor = '';
+                        this.showWarning = false;
+                    }
+                }
+                }
+            }
+        )
+        app.mount("#app")
+    </script>
+</body>
+</html>
