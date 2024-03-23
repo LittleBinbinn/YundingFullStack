@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function string() {
+            let a = document.getElementById("str").value;
+            let b = document.getElementById("char").value;
+            if (typeof (a) !== "string" || typeof (b) !== "string") {
+                return 0;
+            }
+            if (a.length < b.length) {
+                return 0;
+            }
+            let x = 0;
+            for (let i = 0; i < a.length; i++) {
+                let n = 1;
+                let j = i;
+                for (let k = 0; k < b.length; j++, k++) {
+                    if (a[j] !== b[k]) {
+                        n = 0;
+                        break;
+                    }
+                }
+                if (n == 1) x++;
+            }
+            document.write(x)
+            return x;
+        } 
+    </script>
+</head>
+
+<body>
+    请输入一个字符串：<br>
+    <input type="text" id="str"><br>
+    请输入一个子串：<br>
+    <input type="text" id="char">
+    <input type="button" value="提交" onclick="string()"><br>
+    子串出现的次数为：<br>
+</body>
+
+</html>

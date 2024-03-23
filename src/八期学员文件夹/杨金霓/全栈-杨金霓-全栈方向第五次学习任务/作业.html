@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杨金霓第五次全栈作业</title>
+</head>
+<style>
+    section {
+        background: rgb(201, 236, 184);
+        width: 300px;
+        height: 170px;
+        margin: auto;
+        margin-top: 100px;
+        text-align: center;
+        padding-top: 20px;
+        color: rgb(4, 107, 74);
+    }
+    input {
+        border-style: none none solid none;
+        background-color: transparent;
+    }
+    button {
+        color: rgb(4, 107, 74);
+        background-color: rgba(255, 255, 255, 0.635);
+        border-radius: 30%;
+        border-color: rgb(159, 157, 157);
+    }
+
+</style>
+<body>
+    <section>
+        <div>请输入第一个字符串:<input type="text" id="first" /></div>
+        <div>请输入第二个字符串:<input type="text" id="second" /></div>
+        <button onclick="count()">提交</button><br>
+        出现的次数为：<div id="putout"></div>
+    </section>
+</body>
+<script>
+    function count() {
+        str = document.getElementById("first").value;
+        d = document.getElementById("second").value;
+        let num = 0;
+        let index = str.indexOf(d);
+        while (index !== -1) {
+            num++;
+            index = str.indexOf(d, index + d.length);
+        };
+        //console.log(num);
+        document.getElementById('putout').innerHTML = num;
+    }
+
+</script>
+</html>

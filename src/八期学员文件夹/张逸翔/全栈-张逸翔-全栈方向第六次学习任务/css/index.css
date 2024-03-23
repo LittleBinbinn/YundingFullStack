@@ -1,0 +1,41 @@
+.title{
+    font-size: 30px;
+}
+.center{
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    margin: 0 auto;
+}
+img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+.circle{
+    width: 100px;
+    height: 100px;
+
+    margin: 0 auto;
+}
+span{
+    float: left;
+    font-size: 25px;
+}
+.information{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+.name
+,.age
+,.str{
+    width: 100px;
+    height: 30px;
+}
+.inputname
+,.inputage
+,.inputstr{
+    width: 200px;
+    height: 33px;
+}

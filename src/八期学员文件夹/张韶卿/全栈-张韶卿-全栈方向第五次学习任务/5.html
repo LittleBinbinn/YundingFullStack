@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .assi{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 500px;
+        width: 500px;
+        margin-top: -250px;
+        margin-left: -250px;
+        /*background-color: rgb(247, 238, 238);*/
+    }
+    input{
+        width: 320px;
+        height: 30px ;
+    }
+
+</style>
+<body>
+    <div class="assi">
+        <p style="color: black;font-size: 25px;">请输入一个字符串：</p>
+        <input id="str" type="text" >
+        <p style="color: black;font-size: 25px;">请输入一个子串：</p>
+        <input id="substr" type="text" >
+        <button onclick="count()" style="color: black;font-size: 20px;">提交</button>
+        <p style="color: black;font-size: 25px;">子串在字符串中出现的次数为：</br><span id="number"></span></p>   
+        <script>
+            function count() {
+                let str = document.getElementById("str").value;
+                let substr = document.getElementById("substr").value;
+                let number = str.split(substr).length-1;
+                document.getElementById("number").innerHTML = number;
+                }   
+        </script>
+    </div>
+</body>
+</html>

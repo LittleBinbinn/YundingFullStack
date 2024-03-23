@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全栈第七周</title>
+    <script src="http:cdn.jsdelivr.net/npm/axios/dist/axios.min.js"> </script>
+    <style>
+*{
+    margin: auto;
+    padding: 0;
+}
+.background{
+    width: 600px;
+     margin-top: 80px;
+}
+div,input{
+    margin-top: 20px;
+}
+
+    </style>
+</head>
+<body>
+   <div class="background">
+    <div >当前时间: <span class="one"> </span> </div>
+    <div >账号：<input type="text" id="username" /></div>
+    <div>密码：<input type="text" id="password"/></div>
+    <input type="button" name="button" value="注册" onclick="login()">
+    <input type="button" name="button" value="获取用户列表" onclick="obtain()">
+    <div class="two"> 
+    <ul></ul>
+   </div>
+   </div>
+   
+    <script src="./index.js"></script>
+</body>
+</html>

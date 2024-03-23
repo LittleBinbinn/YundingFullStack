@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页面</title>
+    <script src="logic.js"></script>
+</head>
+<body>
+    <div>当前时间：
+        <div id="time"></div>
+    </div>
+    <br/>
+    <form id="message">
+        <div>
+            <label for="username">用户名:</label>
+            <input type="text" id="username" name="username">
+        </div>
+        <div>
+            <label for="password">密码:</label>
+            <input type="password" id="password" name="password">
+        </div>
+    </form>
+    <br/>
+    <div>
+        <button onclick="signUp()">注册</button>
+        <button onclick="accountList()">获取用户列表</button>
+        <div id="list"></div>
+    </div>
+</body>
+</html>

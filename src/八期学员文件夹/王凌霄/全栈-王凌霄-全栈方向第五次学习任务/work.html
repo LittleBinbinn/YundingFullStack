@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./work.css">
+</head>
+<body>
+    <div>
+        <form >
+            <h3>请输入母串</h3>
+            <input type="text" data-id="mom">
+            <h3>请输入子串</h3>
+            <input type="text" data-id="son">
+        </form>
+        <button type="submit"></button>
+        <h5></h5>
+    </div>
+</body>
+<script>
+    //获取元素
+    let mom = document.querySelector('input:nth-of-type(1)')
+    console.log(mom);
+    let son = document.querySelector('input:nth-of-type(2)')
+    console.log(son);
+    let btn = document.querySelector('button')
+    let span = document.querySelector('h5')
+    let form = document.querySelector('form')
+    let h5 = document.querySelector('h5')
+    let sum = 0
+    //给按钮添加点击事件
+    btn.addEventListener('click',function(){
+        //检测内容不为空
+        if(mom.value&&son.value){
+            //console.log('正确');
+            let str1 = mom.value
+            let str2 = son.value
+            //console.log(str1.length);
+            for(let i = 0 ;i<=str1.length-str2.length;i++){
+                //console.log(str1[i]);
+                if(str1[i]===str2[0]){
+                    for(let n = 0;n<str2.length;n++){
+                        if(str2[n]!=str1[n+i]){
+                            break
+                        }
+                        if(n==str2.length-1){
+                            sum++
+                        }
+                    }
+                }
+                
+            }
+            h5.innerHTML=`出现了${sum}次`
+        }
+        else{
+            h5.innerHTML=`请输入内容`
+        }
+        //清空sum 和表单内的内容
+        sum = 0
+        form.reset()
+
+    })
+</script>
+</html>

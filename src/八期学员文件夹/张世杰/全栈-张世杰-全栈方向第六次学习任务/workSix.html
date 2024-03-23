@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>登录页面</title>
+  <style>
+    .container {
+      width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: aliceblue; 
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .error {
+      color: red;
+    }
+
+    .avatar {  
+    border-radius: 50%; /* 设置为圆形 */  
+    width: 100px; /* 设置图片的宽度 */  
+    height: 100px; /* 设置图片的高度 */  
+    object-fit: cover; /* 保持图片的纵横比并填充容器 */  
+    display: block; /* 使图片块级显示 */  
+    margin: 0 auto; /* 将图片居中显示 */  
+  }  
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>登录</h2>
+    <div id="result"></div>
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="email">邮箱:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">密码:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit">登录</button>
+    </form>
+  </div>
+</body>
+
+<script>
+  document.getElementById('loginForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // 阻止表单的默认提交行为    
+    var emailInput = document.getElementById('email');//获取用户输入的email
+    var passwordInput = document.getElementById('password');
+    var email = emailInput.value.trim();//去除用户输入的email前后的空格
+    var password = passwordInput.value.trim();
+    var resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = '';
+    var msg = [{ //示例数据。    
+      name: '张三',
+      age: 20,
+      strengths: 'JavaScript',
+      avatar: 'https://tse4-mm.cn.bing.net/th/id/OIP-C.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1',
+      email: 'yunding@qq.com',
+      password: '33333' // 将密码属性转换为字符串 
+    }, {
+      name: '李四',
+      age: 19,
+      strengths: 'python',
+      avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.YlKimVo94OkaZDZCzPIDpAHaFh?pid=ImgDet&rs=1',
+      email: '12345678@163.com',
+      password: '11111' 
+    }, {
+      name: '王五',
+      age: 18,
+      strengths: 'Java',
+      avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.P2hK9SRjhFE8WM9N8tgWFAHaEQ?pid=ImgDet&rs=1',
+      email: 'yundingshuyuan@qq.com',
+      password: '222222'
+    }];
+    var user = msg.find(function (user) { return user.email === email && user.password === password; }); //查找是否有对应属性和用户输入的邮箱，密码都相同的对象。如果有的话，返回该对象。如果没有则返回undefined。    
+    if (user !== undefined) { // 检查user是否是undefined，如果是，则表示没有找到匹配的用户。    
+      resultDiv.innerHTML = `<h2>欢迎, ${user.name}!</h2>` +
+      `<img class="avatar" src="${user.avatar}" alt="${user.name}'s avatar" />`+
+        `<p>年龄：${user.age}</p>` +
+        `<p>专长：${user.strengths}</p>` +
+        `<p>邮箱：${user.email}</p>`;
+        // 登录成功后隐藏输入框  
+        document.getElementById('email').style.display = 'none';
+        document.getElementById('password').style.display = 'none';
+        // 找到要隐藏的标签  
+        var label1 = document.querySelector('label[for="email"]');
+        // 隐藏标签  
+        label1.style.display = 'none';
+        // 找到要隐藏的标签  
+        var label2 = document.querySelector('label[for="password"]');
+        // 隐藏标签  
+        label2.style.display = 'none';
+    } else { // 如果用户不存在，显示错误信息。    
+      resultDiv.innerHTML = `<h2>登录失败</h2><p>邮箱或密码不匹配，请重新输入。</p>`;
+    }
+  });    
+</script>
+</html>

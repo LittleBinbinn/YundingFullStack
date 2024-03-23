@@ -1,0 +1,154 @@
+.background {
+    margin: auto;
+    width: 600px;
+    height: 1060px;
+    position: relative;
+    z-index: -114514;
+}
+
+.top {
+    height: 120px;
+    width: 600px;
+    margin: auto;
+    position: relative;
+    top: -1060px;
+}
+
+
+.top>div {
+    text-align: center;
+    width: 465px;
+    position: relative;
+    top: 40px;
+    left: 67.5px;
+    font-size: 32px;
+    color: #c0dbe3;
+}
+
+
+.inputbox {
+    height: 300px;
+    width: 450px;
+    margin: auto;
+    position: relative;
+    top: -1000px;
+    z-index: 1;
+}
+
+.inputbox>input {
+    width: 450px;
+    height: 23%;
+    border: 0;
+    font-size: 25px;
+    background-color: transparent;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: #889fc2;
+    outline: none;
+    color: whitesmoke;
+}
+
+.inputbox>input::placeholder {
+    color: white;
+}
+
+.inputbox>p>span:hover {
+    color: yellowgreen;
+}
+
+#worngMessage{
+    color:whitesmoke;
+    font-size: 20px;
+}
+#addphoto {
+    height: 150px;
+    width: 150px;
+    border: solid;
+    border-width: 5px;
+    border-radius: 50%;
+    background-color: transparent;
+    font-size: 25px;
+    color: #c0dbe3;
+    position: absolute;
+    left: 225px;
+    top: 170px;
+}
+
+#signIn {
+    height: 80px;
+    width: 450px;
+    background-color: white;
+    position: absolute;
+    top: 355px;
+    margin: auto;
+    z-index: 1;
+    font-size: 32.96px;
+    color: #706d9f;
+    border-radius: 45px;
+}
+
+#signIn:hover {
+    height: 80px;
+    width: 450px;
+    background-color: rgb(208, 208, 208);
+    position: absolute;
+    top: 355px;
+    margin: auto;
+    z-index: 1;
+    font-size: 32.96px;
+    color: #706d9f;
+    border-radius: 45px;
+}
+
+.inputbox>p {
+    position: relative;
+    top: 250px;
+}
+.message {
+    height: 600px;
+    width: 450px;
+    margin: auto;
+    position: relative;
+    top: -1000px;
+    z-index: 1;
+}
+.avatar{
+    width: 200px;
+    height: 200px;
+    background-color: teal;
+    margin: auto;
+    border-radius: 50%;
+}
+.avatar>img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.name{
+    background-color: teal;
+    width: 300px;
+    height: 70px;
+    margin: auto;
+    margin-top: 40px;
+}
+.age{
+    background-color: teal;
+    width: 300px;
+    height: 70px
+    ;margin: auto;
+    margin-top: 30px;
+}
+.strengths {
+    background-color: teal;
+    width: 300px;
+    height: 70px;
+    margin: auto;
+    margin-top: 30px;
+}
+.message>div{
+    font-size: 30px;
+    text-align: center;
+    background-color: transparent;
+    color: whitesmoke;
+}

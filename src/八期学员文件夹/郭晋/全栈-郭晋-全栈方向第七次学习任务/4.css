@@ -1,0 +1,20 @@
+#date{
+    margin: 0 auto;
+    width: 600px;
+    height: 50px;
+    font-size: 30px;
+}
+.enroll{
+    margin: 0 auto;
+    width: 200px;
+    height: 100px;
+}
+#user{
+    margin: 0 auto;
+    width:  200px;
+    height: 200px;
+    font-size: 30px;
+    position: relative;
+    left: 20%;
+    top:-150px
+}

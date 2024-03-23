@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>seven</title>
+    </head>
+    <body>
+        <div class="datas"></div>
+        <form class="one">
+            <lable>
+                账户：
+                <input type="text" id="count"><br />
+            </lable>
+            <lable>
+                密码：
+                <input type="text" id="code"><br /><br />
+            </lable>
+            <button type="button" id="register">注册</button>
+            <button type="button" id="all">获取用户列表</button>
+        </form>
+        <ul class="two"></ul>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script>
+            let datas = document.querySelector(".datas");
+            let all = document.querySelector("#all");
+            let two = document.querySelector(".two");
+            let count = document.querySelector('#count');
+            let code = document.querySelector('#code');
+            axios
+            .get('http://43.143.169.168:9090/time/now')
+            .then(function(response){
+                datas.innerHTML = "当前时间："+response.data.data;
+            })
+            .catch(function(error){
+                console.log(error);
+            })
+            .finally(function(){
+            })
+            all.onclick = function(){
+                axios({
+                    method:"get",
+                    url:"http://43.143.169.168:9090/user/all"
+                })
+                .then(function (response) {
+                    console.log("用户信息列表报文",response);
+                    for (let i = 0; response.data.data[i] != undefined; i++) {
+                        var li = document.createElement('li');
+                        li.innerHTML = response.data.data[i];
+                        two.appendChild(li);
+                    }
+                })
+                .catch(function (error) {
+                    console.log(error);
+                })
+                .finally(function () {
+                })
+            }
+            register.onclick = function(){
+                axios.post("http://43.143.169.168:9090/user/register",{
+                    username: count.value,
+                    password:code.value
+                })
+                .then(function (response) {
+                    console.log("注册报文",response);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                })
+                .finally(function () {
+                })
+            }
+        </script>
+    </body>
+</html>

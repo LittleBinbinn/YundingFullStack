@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .assi {
+        position: absolute;
+        top: 15%;
+        left: 38%;
+        height: 500px;
+        width: 500px;
+        /*background-color: rgb(247, 238, 238);*/
+    }
+
+    input {
+        width: 320px;
+        height: 30px;
+    }
+    img{
+        width: 150px;
+        height: 150px;
+        border-radius: 75px;
+    }
+</style>
+<body>
+
+<div class="assi">
+    <p style="color: black;font-size: 25px;">请输入邮箱：</p>
+    <input id="email" type="text">
+    <p style="color: black;font-size: 25px;">请输入密码：</p>
+    <input id="pass" type="text">
+    <button onclick="check()" style="color: black;font-size: 20px;">登录</button><br>
+    <span id="output"style="color: black;font-size: 30px;"></span>
+    <script>
+        
+        function formatOfEmail(email){
+            let re = /^(\w+)(@qq|@163)(\.{1})(com|cn)$/;
+            return re.test(email);
+        }
+        function check() {
+                
+            let Uemail = document.getElementById("email").value;
+            let pass = document.getElementById("pass").value;
+            
+            if(!formatOfEmail(Uemail)){
+                document.getElementById("output").innerHTML = "邮箱格式错误";
+                return;
+            }
+            let msg = [{
+                name: '张三',
+                age: 20,
+                strengths: 'JavaScript',
+                avatar: '<img src="https://qi-image.oss-cn-beijing.aliyuncs.com/zhang-C.jpg"/>',
+                email: 'yunding@qq.com',
+                password: 33333
+            },
+            {
+                name: '李四',
+                age: 19,
+                strengths: 'python',
+                avatar: '<img src="https://qi-image.oss-cn-beijing.aliyuncs.com/li-C.jpg"/>',
+                email: '12345678@163.com',
+                password: 11111
+            },
+            {
+                name: '王五',
+                age: 18,
+                strengths: 'Java',
+                avatar: '<img src="https://qi-image.oss-cn-beijing.aliyuncs.com/wang-C.jpg"/>',
+                email: 'yundingshuyuan@qq.cn',
+                password: 222222
+            },
+            ]
+            for (let i = 0; i < msg.length; i++) {
+                if (msg[i].email != Uemail || msg[i].password != pass) {
+                    document.getElementById("output").innerHTML = "找不到该用户或邮箱密码不匹配！";
+                     
+                } 
+               else  {
+                    document.getElementById("output").innerHTML = `
+                    欢迎登陆！！！<br>
+                    Avatar: ${msg[i].avatar} <br>
+                    Name: ${msg[i].name} <br>
+                    Age: ${msg[i].age}<br>
+                    Strengths: ${msg[i].strengths}<br>                 
+                `;
+                    break;
+                }                
+            } 
+        
+        }       
+    </script>
+    </div>
+</body>
+</html>

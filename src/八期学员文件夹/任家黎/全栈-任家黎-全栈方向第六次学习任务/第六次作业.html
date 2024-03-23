@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录界面</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color:#f4f4f4;
+        }
+        .main {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            height: 400px;
+            width: 300px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5%;
+        }
+        form {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        p {
+            margin: 20px;
+        }
+        #out {
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <form action="">
+            <h2>login</h2>
+            <p>邮箱:<br>
+                <input id="mail" type="text" >
+            </p>
+            <p>密码:<br>
+                <input id="password" type="password" >
+            </p>
+            <p>
+                <button id="btn">登录</button>
+            </p>
+            <div id="out"></div>
+        </form>
+        
+    </div>
+    <script>
+            var mail = document.getElementById('mail')
+            var password = document.getElementById('password')
+            var btn = document.getElementById('btn')
+            var out = document.getElementById('out')
+            let msg = [{
+                    name: '张三',
+                    age: 20,
+                    strengths: 'JavaScript',
+                    avatar: 'https://tse4-mm.cn.bing.net/th/id/OIP-C.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1',
+                    email: 'yunding@qq.com',
+                    password: 33333
+                },
+                {
+                    name: '李四',
+                    age: 19,
+                    strengths: 'python',
+                    avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.YlKimVo94OkaZDZCzPIDpAHaFh?pid=ImgDet&rs=1',
+                    email: '12345678@163.com',
+                    password: 11111
+                },
+                {
+                    name: '王五',
+                    age: 18,
+                    strengths: 'Java',
+                    avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.P2hK9SRjhFE8WM9N8tgWFAHaEQ?pid=ImgDet&rs=1',
+                    email: 'yundingshuyuan@qq.cn',
+                    password: 222222
+                }
+            ];
+
+        btn.onclick=function(e){
+                e.preventDefault();
+                var regex=/^[a-zA-Z0-9]+@(qq|163)\.(com|cn)$/;
+
+                if(!regex.test(mail.value)){
+                    out.innerText='请输入合法的邮箱地址';
+                    return;
+                }
+
+                const user=msg.find(User=>User.email=== mail.value&& User.password==password.value)
+
+                if(user){
+                    out.innerHTML =`<h1>欢迎，${user.name}</h1>
+                                     <p> age：${user.age}</p>
+                                     <p>strengths: ${user.strengths}</p>
+                                     <img src="${user.avatar}" alt="用户头像">`;
+                } else {
+                    out.innerText= '邮箱或密码错误，请重试';
+                }
+        }
+        
+    </script>
+</body>
+</html>

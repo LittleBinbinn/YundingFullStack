@@ -1,0 +1,111 @@
+body {
+    background:linear-gradient(to right,#70c8f1,#f896d7);
+}
+.w {
+    margin: 100px auto;
+    width: 870px;
+    height: 580px;
+    background-color: #fff;
+    border-radius: 45px;
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, .2);
+}
+.login-form {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 600px;
+    height: 580px;
+    background-color: #fff;
+    border-radius: 45px;
+}
+.login-card {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 270px;
+    height: 580px; 
+    background-color: #fff;
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
+    overflow: hidden;
+}
+.login-card img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
+    transition: .4s;
+}
+.login-card img:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 5px#bbb;
+}
+.email {
+    margin-top: 50px;
+}
+h1 {
+    color: #000;
+    margin-top: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-shadow:5px 5px 5px #aaa;
+    cursor: default;
+    transition: .4s;
+}
+h1:hover {
+    transform: scale(1.1);
+}
+h3 {
+    font-size: 16px;
+    color: #bbb;
+    text-align: center;
+    cursor: default;
+}
+input {
+    border: #fff;
+    width: 330px;
+    height: 50px;
+    text-indent: 20px;
+    margin-left: 130px;
+    display: block;
+    border-bottom:1px solid #aaa;
+    /* background-color: #aaa; */
+    border-radius: 5px;
+    outline: none;
+    transition: .4s;
+}
+p {
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 150px;
+    color: green;
+    cursor: default;
+}
+input:focus {
+    transform: translate(0,-5px);
+    background-color: rgb(232, 240, 254);
+}
+button {
+    border: 0;
+    background: linear-gradient(to right,#70c8f1,#f896d7);
+    height: 50px;
+    width: 250px;
+    border-radius: 25px;
+    margin-top: 30px;
+    margin-left: 175px;
+    font-size: 18px;
+    color: #eee;
+    font-weight: 700;
+    transition: .4s;
+}
+button:hover {
+    transform:scale(1.08);
+}
+.red {
+    color: red;
+}
+.green {
+    color: green;
+}

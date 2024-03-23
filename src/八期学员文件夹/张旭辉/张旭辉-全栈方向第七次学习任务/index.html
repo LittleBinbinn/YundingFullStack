@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="Time"></div>
+    <div>账号: 
+        <input type="text" class="ID">
+    </div>
+    <div>密码: 
+        <input type="password" class="Password">
+    </div>
+        <span><button class="btn1">注册</button> </span>
+        <span><button class="btn2">获取用户列表</button></span>
+        <ul></ul>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"> </script>
+        <script>
+            var id = document.querySelector('.ID');
+            var time = document.getElementById('Time');
+            var password = document.querySelector('.Password');
+            const instance = axios.create
+            ({
+                baseURL: 'http://43.143.169.168:9090',
+                timeout: 1000,
+            });
+            setInterval(function () {
+            instance
+                .get("/time/now")
+                .then(function (response){
+                    console.log(response);
+                    time.innerHTML="当前时间"+response.data.data;
+                })
+                .catch(function (error)
+                {
+                    console.log(error);
+                })
+                .finally(function (){})
+            },1000)
+            var btn1 = document.querySelector('.btn1');
+            var btn2 = document.querySelector('.btn2');
+            btn1.onclick= function () {
+                let data = {
+                "username": id.value,
+                "password": password.value
+                }
+                instance
+                .post("/user/register", data)
+                .then( function (response) {
+                    console.log(response);
+                })
+            }
+            btn2.onclick = function () {
+                instance
+                .get("/user/all")
+                .then(function(response){
+                 let str = JSON.stringify(response.data.data)
+                for(var i=0;i<str.length;i++){
+                    var ul = document.querySelector("ul")
+                    if (response.data.data[i] !== undefined) {
+                    var li = document.createElement("li")
+                    li.innerHTML = (response.data.data[i])
+                    ul.appendChild(li);
+                }
+                } 
+                console.log("获取用户信息的报文", response);
+             })
+        }
+        </script>
+</body>
+</html>
