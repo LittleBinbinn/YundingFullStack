@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function rec() {
+            var count = 0
+            var text1 = document.getElementById("myInput").value;
+            var text2 = document.getElementById("myInput2").value;
+                while (text1.match(text2)) {
+                    text1 = text1.replace(text2, '')
+                    count++
+                }
+
+            document.getElementById("result").textContent = `${count}`
+        }
+    </script>
+</head>
+
+<body>
+    请输入一个字符串<br>
+    <input type="text" id="myInput"><br>
+    请输入子串<br>
+    <input type="text" id="myInput2">
+    <input name="button" type="button" onClick="rec()" value="点击我" />
+    <br>
+    最终的结果是<br>
+    <p id="result"></p>
+
+</body>
+
+</html>

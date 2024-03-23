@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="time"></div>
+    <div>账号: <input type="text" class="ID"></div>
+    <div>密码: <input type="password" class="Password"></div>
+    <span><button class="btn1">注册</button> <button class="btn2">获取用户列表</button></span>
+    <ul></ul>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"> </script>
+    <script>
+        var time = document.querySelector('.time');
+        var ID = document.querySelector('.ID');
+        var Password = document.querySelector('.Password');
+        axios.get('http://43.143.169.168:9090/time/now')
+            .then(function (response) {
+                // 处理成功情况
+                console.log(response);
+                time.innerHTML = "当前时间:" + response.data.data;
+            })
+            .catch(function (error) {
+                // 处理错误情况
+                console.log(error);
+            })
+            .finally(function () {
+                // 总是会执行
+            });
+        // 向给定ID的用户发起请求
+        setInterval(function () {
+            axios.get('http://43.143.169.168:9090/time/now')
+                .then(function (response) {
+                    // 处理成功情况
+                    console.log(response);
+                    time.innerHTML = "当前时间:" + response.data.data;
+                })
+                .catch(function (error) {
+                    // 处理错误情况
+                    console.log(error);
+                })
+                .finally(function () {
+                    // 总是会执行
+                });
+        }, 1000)
+
+        var btn1 = document.querySelector('.btn1');
+        var btn2 = document.querySelector('.btn2');
+        btn1.onclick = function () {
+            if (ID.value === '' || Password.value === '') {
+                alert("账号或密码不符合规范");
+            }
+            else {
+                let data = {
+                    "username": ID.value,
+                    "password": Password.value
+                }
+                axios.post("http://43.143.169.168:9090/user/register", data)
+                    .then((res) => {
+                        console.log(res);
+                    })
+            }
+
+        }
+        btn2.onclick = function () {
+            axios({
+                method: 'get',
+                url: 'http://43.143.169.168:9090/user/all',
+            }).then((res) => {
+                let str = JSON.stringify(res.data.data)
+                for (var value in str) {
+                    var ul = document.querySelector("ul")
+                    if (res.data.data[value] !== undefined) {
+                        var li = document.createElement("li")
+                        li.innerHTML = (res.data.data[value])
+                        ul.appendChild(li);
+
+                    }
+                } console.log("获取用户信息的报文", res);
+            })
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .second {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="first">
+        邮箱<br />
+        <input type="text" id="email"><br>
+        密码<br>
+        <input type="text" id="pwd"><br>
+        <button>登录</button>
+    </div>
+    <div class="second">
+        <div class="loginword">登录成功</div>
+        <div class="img">
+            <img src="https://typora--image--image.oss-cn-beijing.aliyuncs.com/c23e7c9d2447f019ac692293f8811ee.png" />
+        </div>
+        <div class="name"></div>
+        <div class="age"></div>
+        <div class="strengths"></div>
+    </div>
+    <script>
+        let text = document.getElementById('email');
+        let button = document.querySelector('button');
+        let pwd = document.getElementById('pwd');
+        let first = document.getElementsByClassName("first");
+        let second = document.getElementsByClassName("second");
+        let name = document.getElementsByClassName("name");
+        let age = document.getElementsByClassName("age");
+        let strengths = document.getElementsByClassName('strengths');
+        let msg = [{
+                name: '张三',
+                age: 20,
+                strengths: 'JavaScript',
+                avatar: 'https://tse4-mm.cn.bing.net/th/id/OIP-C.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1',
+                email: 'yunding@qq.com',
+                password: 33333
+            },
+            {
+                name: '李四',
+                age: 19,
+                strengths: 'python',
+                avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.YlKimVo94OkaZDZCzPIDpAHaFh?pid=ImgDet&rs=1',
+                email: '12345678@163.com',
+                password: 11111
+            },
+            {
+                name: '王五',
+                age: 18,
+                strengths: 'Java',
+                avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.P2hK9SRjhFE8WM9N8tgWFAHaEQ?pid=ImgDet&rs=1',
+                email: 'yundingshuyuan@qq.cn',
+                password: 222222
+            },
+            ]
+
+            //成功登陆的部分找不到问题在哪一直运行失败 其他的可以
+            button.onclick =function(){
+            let reg = /(@qq|@163)+(\.cn|\.com)/;
+            let result = reg.test(text.value);
+            if(result == false){
+            alert("请输入正确的邮箱");
+            }else if (text.value == msg[0].email && pwd.value == msg[0].password) {
+                    first.styyle.display = "none";
+                    second.style.display = 'block';
+                    name.innerHTML = '姓名：张三';
+                    age.innerHTML = '年龄：20';
+                    strengths.innerHTML = '特长：JavaScript';
+                } else if (text.value == msg[0].email && pwd.value != msg[0].password) {
+                    alert("请输入正确的密码");
+                } else if (pwd.value == msg[1].password && text.value == msg[1].email) {
+                    first.style.display = "none";
+                    second.style.display = 'block';
+                    name.innerHTML = '姓名：李四';
+                    age.innerHTML = '年龄：19';
+                    strengths.innerHTML = '特长：python';
+                } else if (text.value == msg[1].email && pwd.value != msg[1].password) {
+                    alert("请输入正确的密码");
+                } else if (pwd.value == msg[2].password && text.value == msg[2].email) {
+                    first.style.display = "none";
+                    second.style.display = 'block';
+                    name.innerHTML = '姓名：王五';
+                    age.innerHTML = '年龄：18';
+                    strengths.innerHTML = '特长：Java';
+                } else if (text.value == msg[2].email && pwd.value != msg[2].password) {
+                    alert("请输入正确的密码");
+                }else {
+                    alert("用户不存在");
+                }
+            
+        }
+    </script>
+</body>
+</html>

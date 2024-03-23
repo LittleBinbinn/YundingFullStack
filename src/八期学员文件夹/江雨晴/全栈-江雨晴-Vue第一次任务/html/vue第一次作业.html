@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全栈-江雨晴-Vue第一次任务</title>
+    <script src="../js/vue.js"></script>
+    <style>
+        .list{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <input type="text" v-model="str" @keyup='key_addWord'><br>
+        <h2>你要输入的单词是：{{str}}</h2>
+        <span><button @click="addWord">添加</button></span>
+        <span><button @click="deleteWord">删除</button></span>
+        <div id="list" :class="name">
+            <div v-show="b">'憋加辣，单词数量太多啦！！'</div>
+            <div v-show="a">单词列表：</div>
+        </div>
+    </div>
+    <script>
+        const vm = new Vue({
+            el: '#root',
+            data: {
+                str: '',
+                a:false,
+                b:false,
+                arr: [],
+                name:''
+            },
+            methods: {
+                addWord() {
+                    if (this.str !== '') {
+                        this.a = true
+                        if (this.arr.length < 5) {
+                            this.name = ''
+                            this.b = false
+                            this.arr.push(this.str)
+                            console.log(this.arr)
+                            this.str = ''
+
+                            var list = document.getElementById('list')
+                            //var title = document.createTextNode('单词列表：')
+                            var ul = document.createElement('ul')
+                            var words = document.createElement('li')
+                            //list.appendChild(title)
+                            list.appendChild(ul)
+                            ul.appendChild(words)
+                            words.innerHTML = this.arr[this.arr.length-1]
+
+                        } else {
+                            this.b = true
+                            this.name = 'list'
+                        }
+                    } else {
+                        alert('请输入单词哦')
+                    }
+
+                },
+                deleteWord() {
+                        this.name = ''
+                        this.b = false
+                    this.arr.pop()
+                    console.log(this.arr)
+                    var ul = document.getElementsByTagName('ul')[this.arr.length]
+                    var li = document.getElementsByTagName('li')[this.arr.length]
+                    var list = document.getElementById('list')
+                    ul.removeChild(li)
+                    list.removeChild(ul)
+                },
+                key_addWord(e){
+                    if(e.keyCode == 13){
+                        this.addWord();
+                    }
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

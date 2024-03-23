@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="time"></span><br>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+       /* function showtime(){
+            let date= new Date();
+            let year=date.getFullYear();
+            let month=date.getMonth()+1;
+            let day=date.getDate();
+            let hour=date.getHours();
+            let minute=date.getMinutes();
+            let second=date.getSeconds();
+            second=second<10?"0"+second:second;
+            let time=year+"-"+month+"-"+day+" "+hour+":"+minute+":"+second;
+            document.getElementById("time").innerHTML="当前时间："+time;
+        }
+        setInterval("showtime()",1000);*/
+        //const axios = require('axios');
+
+            // 向给定ID的用户发起请求
+            axios.get('http://43.143.169.168:9090/time/now')
+
+                .then(function (response) {
+                    // 处理成功情况
+                    console.log(response);
+                    document.getElementById("time").innerHTML = "当前时间：" + response.data.data
+                })
+                .catch(function (error) {
+                    // 处理错误情况
+                    console.log(error);
+                })
+                .finally(function () {
+                    // 总是会执行
+                });
+                 
+               window.onload=function () {
+                let btn1 = document.getElementById("btn1");
+                   let btn2 = document.getElementById("btn2");
+                   btn1.onclick = function fn1() {
+                       let a = document.getElementById("username").value;
+                       let b = document.getElementById("password").value;
+                       axios.post('http://43.143.169.168:9090/user/register', {
+                           username: a,
+                           password: b
+                       })
+                           .then(function (response) {
+                               console.log("注册报文"+response);
+                           })
+                           .catch(function (error) {
+                               console.log(error);
+                           });
+                   }
+                   btn2.onclick = function fn2() {
+                    let c=document.getElementById("name");
+                    let d='';
+                       axios.get('http://43.143.169.168:9090/user/all')
+
+                           .then(function (response) {
+                               // 处理成功情况
+                               console.log("用户信息列表报文"+response);
+                               for(let i=0;i<response.data.data.length;i++){
+                                d+=response.data.data[i]+"<br>"
+                               }
+                               c.innerHTML=d;
+                           })
+                           .catch(function (error) {
+                               // 处理错误情况
+                               console.log(error);
+                           })
+                           .finally(function () {
+                               // 总是会执行
+                           });
+                   }  
+               }        
+    </script>
+    <span>账号：</span><input type="text" id="username"><br>
+    <span>密码：</span><input type="password" id="password"><br>
+    <button id="btn1">注册</button><button id="btn2">获取用户列表</button><br>
+    <li id="name"></li>
+</body>
+</html>

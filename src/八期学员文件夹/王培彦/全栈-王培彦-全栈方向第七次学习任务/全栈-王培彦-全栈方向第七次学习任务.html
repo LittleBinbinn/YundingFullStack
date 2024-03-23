@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第六次学习任务</title>
+</head>
+<body>
+    <div class="box">
+        <div id="zero"></div>
+        <img src="https://tse4-mm.cn.bing.net/th/id/OIP-C.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1" id="p1"/>
+        <img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.YlKimVo94OkaZDZCzPIDpAHaFh?pid=ImgDet&rs=1" id="p2"/>
+        <img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.P2hK9SRjhFE8WM9N8tgWFAHaEQ?pid=ImgDet&rs=1" id="p3"/>
+        <div id="one">邮箱</div>
+        <input type="text" id="email" />
+        <div id="two">密码</div>
+        <input type="text" id="password" />
+        <button id="but" onclick="btnn()">登录</button>
+        <div id="three"></div>
+        <script>
+        document.getElementById('p1').style.display="none";
+        document.getElementById('p2').style.display="none";
+        document.getElementById('p3').style.display="none";
+        </script>
+    </div>
+    <script>
+        function btnn() 
+        {
+            var Email=document.getElementById('email').value;
+            var Word=document.getElementById('password').value;
+            let re=/([@]qq|[@]163)(\.{1}com|\.{1}cn)$/;
+            let result=re.test(Email);
+            if(result==false)
+            {
+              alert('邮箱输入不正确！');
+              process.exit(0);
+            }
+            let msg = [
+            {
+                name: '李四',
+               age: 19,
+               strengths: 'python',
+               avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.YlKimVo94OkaZDZCzPIDpAHaFh?pid=ImgDet&rs=1',
+               email: '12345678@163.com',
+               password: 11111
+            },
+            {
+                name: '王五',
+               age: 18,
+               strengths: 'Java',
+               avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.P2hK9SRjhFE8WM9N8tgWFAHaEQ?pid=ImgDet&rs=1',
+               email: 'yundingshuyuan@qq.cn',
+               password: 222222
+            },
+            {
+                name: '张三',
+               age: 20,
+               strengths: 'JavaScript',
+               avatar: 'https://tse4-mm.cn.bing.net/th/id/OIP-C.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1',
+               email: 'yunding@qq.com',
+               password: 33333
+            },
+            ]
+            for(var i=0;i<3;i++)
+            {   
+                if(Email==msg[i].email)
+                {
+                    if(Word==msg[i].password)
+                    {
+                        document.getElementById("zero").innerHTML='登录成功';
+                        if(i==0)
+                        {
+                            document.getElementById('p1').style.display="block";
+                        }else if(i==1)
+                        {
+                            document.getElementById('p2').style.display="block";
+                        }else if(i==2)
+                        {
+                            document.getElementById('p3').style.display="block";
+                        }
+                        document.getElementById("email").style.display="none";
+                        document.getElementById("password").style.display="none";
+                        document.getElementById("but").style.display="none";
+                        document.getElementById("one").innerHTML="<br>"+'姓名：'+msg[i].name;
+                        document.getElementById("two").innerHTML="<br>"+'年龄：'+msg[i].age;
+                        document.getElementById("three").innerHTML="<br>"+'特长：'+msg[i].strengths;
+                    }else{
+                        document.write('密码输入不正确！');
+                    }
+                }
+            }
+        }   
+    </script>
+</body>
+</html>

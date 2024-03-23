@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>邮箱登录</title>
+</head>
+
+<body>
+    <!-- 
+        不足：1：图像不会显示
+             2：遍历三个数组对象时有点问题，只能识别到第一个，暂未找到原因
+             3：打开新窗口操作不熟练
+        找问题找到脑壳疼先提交了，缓一缓
+     -->
+    邮箱<br>
+    <input type="email" id="emailInput" placeholder="请输入邮箱"><br>
+    密码<br>
+    <input type="password" id="passwordInput" placeholder="请输入密码"><br>
+    <button type="submit" onClick="submitBun()">登录</button>
+    <div id="result"></div>
+    <script>
+        function yzEmail(email) {
+            let emailReg = /^(a-zA-Z0-9)+@(qq|163)+\.{1}(com|cn)$/;
+            return emailReg.test(email);
+        }
+        function findUser(email, password) {
+            let msg = [{
+                name: '张三',
+                age: 20,
+                strengths: 'JavaScript',
+                avatar: 'https://tse4-mm.cn.bing.net/th/id/OIP-C.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1',
+                email: 'yunding@qq.com',
+                password: 33333
+            },
+            {
+                name: '李四',
+                age: 19,
+                strengths: 'python',
+                avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.YlKimVo94OkaZDZCzPIDpAHaFh?pid=ImgDet&rs=1',
+                email: '12345678@163.com',
+                password: 11111
+            },
+            {
+                name: '王五',
+                age: 18,
+                strengths: 'Java',
+                avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.P2hK9SRjhFE8WM9N8tgWFAHaEQ?pid=ImgDet&rs=1',
+                email: 'yundingshuyuan@qq.cn',
+                password: 222222
+            },];
+            for (let i = 0; i < msg.length; i++) {
+                if (msg[i].email == email && msg[i].password == password) {
+                    return msg[i];
+                }
+                else return null;
+            }
+        }
+        function displayUser(userInfo) {
+            /* window.open('http://127.0.0.1:5501/%E7%99%BB%E5%BD%95%E6%88%90%E5%8A%9F.html','_self','height=600,width=400,top=100,left=0'); */
+            let result = document.getElementById('result');
+            result.innerHTML = `登录成功<br>
+            错误x： (${userInfo.avatar})<br><br><br>
+            姓名: ${userInfo.name} <br>
+            年龄： ${userInfo.age}<br>
+            强项： ${userInfo.strengths}`;
+        }
+        function submitBun() {
+            let emailInput = document.getElementById('emailInput');
+            let passwordInput = document.getElementById('passwordInput');
+            let email = emailInput.value;
+            let password = passwordInput.value;
+            let Emailyz = yzEmail(email);
+            if (!email | !password) {
+                alert('请输入内容！');
+                return;
+            }
+            if (false) {
+                alert('邮箱格式不正确');
+                return;
+            }
+            let userInfo = findUser(email, password);
+            if (userInfo) {
+                displayUser(userInfo);
+            } else {
+                alert('用户不存在或密码错误');
+            }
+        }
+    </script>
+</body>
+
+</html>

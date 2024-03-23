@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box {
+        width: 600px;
+        height: 200px;
+        background:rgb(201, 236, 184);
+        margin: auto;
+        margin-top: 100px;
+        text-align: center;
+    }
+    #message {
+        
+        width: 600px;
+        background:rgb(201, 236, 184);
+        margin: auto;
+        text-align: center;
+    }
+</style>
+<body>
+    <div id="box"><br>
+        <div id="time"></div><br>
+        用户：<input type="text" id="name"><br><br>
+        密码：<input type="password" id="pwd"><br><br>
+        <input type="button" value="注册" onclick="sign()">
+        <input type="button" value="获取用户列表" onclick="users()">
+    </div>
+    <div id="message"></div>
+</body>
+<script>
+    var t = null;
+    t = setTimeout(ti,1000)
+    function ti() {
+        clearTimeout(t);
+        var time = new XMLHttpRequest();
+        time.open('GET', 'http://43.143.169.168:9090/time/now')
+        time.send()
+        time.onreadystatechange = function () {
+            if (time.readyState === XMLHttpRequest.DONE && time.status === 200) {
+                //console.log(JSON.parse(time.responseText).data);
+                document.getElementById('time').innerHTML = JSON.parse(time.responseText).data;
+
+            }
+        };
+        t = setTimeout(ti,1000);
+    }
+    
+    function sign() {
+        var name = document.getElementById("name").value;
+        var pwd = document.getElementById("pwd").value;
+        var group = {
+            username: name,
+            password: pwd
+        }
+        let re = new XMLHttpRequest();
+        re.open('post', 'http://43.143.169.168:9090/user/register');
+        re.setRequestHeader("Content-type", "application/json");
+        re.send(JSON.stringify(group));
+        re.onreadystatechange = function () {
+            if (re.readyState === 4 && re.status === 200) {
+                console.log(JSON.parse(re.responseText));
+            }
+        }
+    }
+    function users(){
+        let user = new XMLHttpRequest();
+        user.open('get', 'http://43.143.169.168:9090/user/all');
+        user.send();
+        user.onreadystatechange = function () {
+            if (user.readyState === 4 && user.status === 200) {
+                var message = document.getElementById("message");
+                let check = JSON.parse(user.responseText);
+                console.log(check);
+                message.innerHTML = check.data.join('<br/>');
+            }
+        }
+    }
+</script>
+</html>
