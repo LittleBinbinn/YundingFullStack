@@ -1,0 +1,23 @@
+
+.pop {
+    color: black;
+  } 
+.wordList {
+    color: red;
+  }
+p{
+    font-size: 40px;
+    font-weight:800;
+}
+input{
+    position: relative;
+    top:20px;
+    width:200px;
+    height:30px;
+    border-radius:15px;
+    border-width:3px;
+}
+button{
+    width:70px;
+    font-size: 15px;
+}
