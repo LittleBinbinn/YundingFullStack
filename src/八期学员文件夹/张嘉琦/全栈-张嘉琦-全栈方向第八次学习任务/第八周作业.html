@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .warning{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+            <input type="text" v-model="message" @keyup.enter="addword">
+        <h2>您所输入的内容是 {{ message }}</h2>
+        <h2 :class="{warning:true}" v-if="words.length>5">鳖加了,受不鸟了,(ノ｀Д)ノ</h2>
+        <button @click="addword">添加</button>
+        <button @click="deleteword(index)">删除</button>
+        <ul>
+            <li v-for="(item,index) in words" :class="{warning:words.length>5}">{{item}}</li>
+        </ul>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        var app = Vue.createApp({
+            data(){
+                return{
+                    message:'',
+                    words:[]
+                } 
+            },
+            methods:{
+                addword(){
+                    if(this.message!==''){
+                        this.words.unshift(this.message)
+                    }
+                },
+                deleteword(index){
+                    this.words.splice(index,1)
+                }
+            }
+        })
+        app.mount("#app")
+    </script>
+</body>
+</html>
