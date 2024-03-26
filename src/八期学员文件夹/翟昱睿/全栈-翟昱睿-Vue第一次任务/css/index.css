@@ -1,0 +1,14 @@
+/* *{
+    margin: 0 auto;
+} */
+.whole{
+    width: 500px;
+    height: 250px;
+}
+.text{
+    font-size: 30px;
+}
+.inputing{
+    width: 200px;
+    height: 20px;
+}
