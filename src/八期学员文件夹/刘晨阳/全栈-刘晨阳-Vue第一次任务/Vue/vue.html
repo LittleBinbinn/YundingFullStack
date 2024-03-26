@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <link rel="stylesheet" href="vue.css">
+ 
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model.trim="yourwords" @keyup.enter="addword()" class="zt1">
+        <p class="zt2">你要输入的单词是:{{yourwords}}</p>
+        <button @click="addword()">添加</button>
+        <button @click="remove()">删除</button>
+        <p v-show="tabale.length > 5" :class="arr">鳖加了，单词太多了</p>
+        <div :class="arr[0]">
+            单词列表：
+            <ul>
+                <li v-for="(yourwords,number) in tabale">{{yourwords}}</li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <script     src="vue.js">
+        // const vm = new Vue({
+        //     el: "#app",
+        //     data: {
+        //         yourwords: "脆脆鲨",
+        //         tabale: [],
+        //         arr: ["pop", "wordnumber"],
+        //     },
+        //     methods: {
+        //         addword() {
+        //             if (this.yourwords === "") {
+        //                 alert("您未输入单词");
+        //                 return;
+        //             }
+        //             this.tabale.unshift(this.yourwords);
+        //             this.yourwords = "";
+        //             if (this.tabale.length > 5) {
+        //                 this.arr[0] = this.arr[1];
+        //             }
+        //         },
+        //         remove() {
+        //             if (this.tabale.length <= 5) {
+        //                 this.arr[0] = this.arr[2];
+        //             }
+        //             if (this.tabale.length == 0) {
+        //                 alert("该单词表没有单词");
+        //                 return;
+        //             }
+        //             this.tabale.pop();
+        //         },
+        //     },
+        // });
+    </script>
+
+</body>
+
+</html>
