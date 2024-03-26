@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加删除单词</title>
+    <!-- css代码 -->
+    <style>
+        .message{
+            color:red;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            font-size: 30px;
+        }
+        
+    </style>
+
+
+</head>
+<body>
+    <div id="app">
+        <!-- 输入框 -->
+        <input id="inputtext" type="text" v-model="newword"  placeholder="Enter a word">
+        <!-- 输入显示 -->
+        <div id="showtext">你输入的单词是：{{newword}}</div>
+        <!-- 添加按钮 -->
+        <button id="addbutton" @click="addword">添加</button>
+        <!-- 删除按钮 -->
+        <button id="deletebutton" @click="deletwords">删除</button>
+        <!-- 当单词数量超过五个时候渲染出这个盒子 -->
+        <div v-if="words.length > 5" class="message">
+            别加了，受不鸟了
+        </div>
+        <!-- 下面是单词列表显示 -->
+        <div id="list">
+            <!-- 标题     这里对列表中的单词数目进行判断如果超过五个改变颜色 -->
+            <h2 :style="{color:words.length > 5?'red' :'black'}">单词列表</h2>
+            <!-- 单词显示 -->
+            <ul>
+                <li type="circle" v-for="(item,index) of words"  :style="{ color: words.length > 5 ? 'red' : 'black' }">
+                    {{item}}</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- vue代码 -->
+    <script>
+        // 创建vue
+        const app =Vue.createApp({
+            data () {
+                return {
+                    words:[],
+                    newword:''
+                }
+            },
+            methods: {
+                addword(){
+                    this.words.push(this.newword);
+                },
+                deletwords(words){
+                    this.words.pop();
+                },
+            },
+        })
+        // 挂载vue
+        app.mount("#app")
+    </script>
+</body>
+</html>
