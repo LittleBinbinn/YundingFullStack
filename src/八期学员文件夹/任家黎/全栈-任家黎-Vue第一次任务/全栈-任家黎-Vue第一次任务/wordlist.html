@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加单词列表</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+        .red {
+            color: red;
+        }
+        button {
+            background-color: #ffff;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 预览输入框的变化，输入框底部实时显示输入框中的内容 -->
+        <input type="text" v-model="word" @keyup.enter="addWord">
+        <h2>你要输入的单词是：{{word}}</h2>
+        <!-- 将输入框内的单词添加到列表中 -->
+        <button @click="addWord">添加</button>
+        <!-- 删除列表最后一个单词 -->
+        <button @click="deleteWord" >删除</button>
+        <!-- 单词列表 -->
+        <div :class="{red:isRed}">
+            <h1>{{warn}}</h1>
+            <h3>单词列表</h3>
+            <ul>
+                <li v-for="item in wordList">{{item}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    word: "",
+                    wordList: [],
+                    warn: "",
+                    isRed: false, // 控制列表是否变红
+                }
+            },
+            methods: {
+                addWord() {
+                    if (this.word.length > 0) {
+                        this.wordList.push(this.word);
+                        this.word = "";
+                        this.updateIsRed();
+                    }
+                },
+                deleteWord() {
+                    if (this.wordList.length > 0) {
+                        this.wordList.pop();
+                        this.updateIsRed();
+                    }
+                },
+                updateIsRed() {
+                    if (this.wordList.length > 5) {
+                        this.isRed = true;
+                        this.warn="鳖加辣！单词数目太多啦"
+                    } else {
+                        this.isRed = false;
+                        this.warn = ""
+                    }
+                }
+            }
+        })
+        app.mount("#app");
+    </script>
+</body>
+
+</html>
