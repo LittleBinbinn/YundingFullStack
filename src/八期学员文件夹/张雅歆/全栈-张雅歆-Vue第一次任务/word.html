@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>单词列表</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="word.css">
+</head>
+
+<body>
+
+    <div id="app">
+        <input type="text" v-model="newWord" placeholder="请输入单词" @keyup.enter="addWord"><!--可以按回车键添加单词 -->
+        <p>当前输入的单词: {{ newWord }}</p> <!-- 用来实时显示输入框中的内容 -->
+        <button @click="addWord">添加</button>
+        <button @click="removeWord" :disabled="wordList.length === 0">删除</button>
+        <p v-show="wordList.length > 0" :class="{ 'red-text': wordList.length > 5 }">单词列表：</p>
+        <p v-if="wordList.length > 5" class="red-text"><img
+                src="https://s2.loli.net/2024/03/23/o6u27LOtzgyGRJj.jpg"><br>单词数目超过五个！</p>
+        <ul>
+            <li v-for="(word, index) in wordList" :key="index" :class="{ 'red-text': wordList.length > 5 }">{{ word }}
+            </li>
+        </ul>
+    </div>
+    <script src="word.js"></script>
+</body>
+
+</html>
