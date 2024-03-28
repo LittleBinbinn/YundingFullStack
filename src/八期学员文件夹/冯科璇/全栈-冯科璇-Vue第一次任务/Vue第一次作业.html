@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全栈方向Vue第一次作业</title>
+</head>
+
+<body>
+    <!-- CDN地址 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <div id="app">
+        <input type="text" v-model="input" placeholder="请输入一个单词">
+        <h2>你要输入的单词是:{{input}}</h2>
+
+        <button @click="increase">添加</button>
+        <button @click="decrease">删除</button>
+
+        <h2 v-if="showMessage" style="color: red;">{{message}}</h2>
+
+        <h2 :style="{color:wordColor}">单词列表</h2>
+
+        <ul>
+            <li v-for="item in words" :style="{color:wordColor}">{{item}}</li>
+        </ul>
+    </div>
+
+    <script src="./Vue第一次作业.js"></script>
+</body>
+
+</html>
