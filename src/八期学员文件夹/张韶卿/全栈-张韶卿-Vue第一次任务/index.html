@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="css/vue.css" rel="stylesheet" type="text/css" />
+
+   
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <input type="text" placeholder="请输入一个单词" @input="message=$event.target.value" @keyup.enter="add">  
+        <h4 >你要输入的单词是:{{message}}</h4>
+        <button @click="add" >添加</button>
+        <button @click="dele">删除</button>
+        <div :class="num?'warn':''">
+            <h4 v-if="num">师傅别加了</h4>
+            <h3>单词列表</h3>
+            <ul>
+                <li v-for="(item,index) in words" :key="index">{{item}}</li>
+            </ul>
+        </div>
+        
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    
+    <script src="js/vue.js"></script>
+
+
+</body>
+
+</html>

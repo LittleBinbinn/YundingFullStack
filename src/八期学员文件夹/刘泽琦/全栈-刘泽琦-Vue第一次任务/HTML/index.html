@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+    <script src="https://unpkg.com/vue@3.4.21/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="word" placeholder="请输入一个单词">
+        <h2>你要输入的单词是：{{ word }}</h2>
+        <button @click="addClick">添加</button>
+        <button @click="delClick">删除</button>
+        <h1 v-if="wordList.length > 5" class="notice">别加啦！单词数量太多了</h1>
+        <div :class="{active: isActive()}">
+            <h1>单词列表</h1>
+            <div>
+                <ul>
+                    <li v-for="(word, index) in wordList" :key="index">{{ word }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../JS/index.js"></script>
+</body>
+</html>

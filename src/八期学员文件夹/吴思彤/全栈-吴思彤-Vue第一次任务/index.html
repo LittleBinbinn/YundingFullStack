@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+<body>
+    <div id = "app">
+        <input type="text" class = "input" v-model = "word" @keyup.enter = "add">
+        <p>你现在要加的单词是:{{word}}</p>
+        <button @click = "add" >添加</button>
+        <button @click = "del">删除</button>
+        <div v-if="words.length > 5" :style="{color:'red'}">  
+            鳖加辣！单词数量太多啦  </div>
+        <p >单词列表:</p>
+        <ul >
+            <li v-for="item in words" :style="{ color: words.length > 5 ? 'red' : 'black' }">{{item}}</li>
+        </ul>
+    </div>
+    <script src="js/index.js" ></script>
+</body>
+</html>

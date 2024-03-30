@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+        <div id="app">
+            <h1>请输入单词</h1>
+            <input type="text" v-model = "newWord" @keyup.enter="addNewword">
+            <h1>你要输入的单词是: {{ newWord }}</h1>
+            <button @click = "addNewword">添加</button>
+            <button @click = "delWord">删除</button>
+            <h2 v-show = "isShow">鳖加辣!单词数量太多了</h2>
+            <ul>
+                <li v-for = "item in words" :style="{'color': wordColor}">{{ item }}</li>
+            </ul>
+        </div>
+        <script src="./lib/vue.js"></script>
+        <script src="./js/index.js"></script>
+</body>
+</html>
