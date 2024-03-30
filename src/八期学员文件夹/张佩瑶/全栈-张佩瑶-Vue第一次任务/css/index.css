@@ -1,0 +1,15 @@
+body{
+    margin: 100px 500px;
+}
+
+#delete{
+    margin-left: 10px;
+}
+
+ul{
+    list-style-type: circle;
+}
+
+.active{
+    color: red;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .exceed-tip{
+            color: red;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="newWord" placeholder="输入单词" @keyup.enter="addToList">
+    <h2>你输入的单词是：{{ newWord }}</h2>
+    <div>
+        <button @click="addToList">添加</button>
+        <p v-if="wordCountExceed" class="exceed-tip">鳖加辣，太多啦</p>
+    </div>
+    <h3>单词列表</h3>
+    <ul>
+        <li v-for="(word, index) in wordList" :key="index" :style="{ color: wordCountExceed ? 'red' : 'black' }">
+            {{ word }}
+            <button @click="removeFromList(index)">删除</button>
+        </li>
+    </ul>
+</div>
+<script src="JS/vue.js"></script>
+<script>
+    const app = Vue.createApp({
+        data:function () {
+            return {
+                newWord: '',
+                wordList: []
+            }
+        },
+        computed: {
+            wordCount(){
+                return this.wordList.length
+            },
+            wordCountExceed(){
+                return this.wordCount > 5
+            }
+        },
+        methods: {
+            addToList() {
+                if (this.newWord.trim() !== '') {
+                    this.wordList.push(this.newWord)
+                    this.newWord = ''
+                }
+            },
+            removeFromList(index) {
+                if (index >= 0 && index < this.wordList.length) {
+                    this.wordList.splice(index, 1)
+                }
+            }
+        }
+    })
+    app.mount('#app')
+</script>
+
+</body>
+</html>

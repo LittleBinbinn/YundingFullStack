@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue第一次作业</title>
+</head>
+<body>
+    <div id="box1">
+        <input id="inputtext" type="text" v-model="newWord" placeholder="Enter a word" @keyup.enter="addwords"/>  
+        <div id="text">你要输入的单词是：{{ newWord }}</div>
+        <button id="add" @click="addwords(words,newWord)">添加</button>
+        <button id="delete" @click="deletewords">删除</button>
+        <div v-if="words.length > 5" class="red-alert">  
+        鳖加辣！单词数量太多啦  
+        </div>
+        <div id="list">
+            <h2 :style="{ color: words.length > 5 ? 'red' : 'black' }">单词列表</h2>
+            <ul>
+                <li type="circle" v-for="(item,index) of words" :key="index" :style="{ color: words.length > 5 ? 'red' : 'black' }">{{item}}</li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const box1 = Vue.createApp({
+            data() {
+                return {
+                    words:[],
+                    newWord: ''
+                }
+            },
+            methods: {
+                addwords(words,newWord,e) {
+                    this.words.push(this.newWord);    
+                },
+                deletewords(words) {
+                    this.words.pop();
+                },
+            },
+        })
+        box1.mount("#box1")
+    </script>
+    <style scoped>  
+        .red-alert {  
+            color: red;  
+            margin-bottom: 10px;  
+        }  
+        #box1 {
+            margin-left: 550px;
+            margin-top: 200px;
+        }
+        #inputtext {
+            width: 300px;
+            height: 60px;
+            font-size: 25px;
+        }
+        #text {
+            width: 400px;
+            height: 80px;
+            font: 600 30px "微软雅黑";
+            line-height: 75px;
+        }
+        #delete {
+            margin-left: 15px;
+        } 
+        h2 {
+            margin-left: 25px;
+        }
+        button {
+            width: 70px;
+            height: 50px;
+            background-color: rgb(15, 14, 14);
+            font: 400 25px "宋体";
+            color: white;
+            border-radius: 20%;
+            cursor: grab;
+        }
+    </style>
+</body>
+</html>

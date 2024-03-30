@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <link rel="stylesheet" href="css\diyici.css" />
+    <div id="app" :class="{ 'warning-text': showWaring }">
+      <input type="text" v-model="newWord" />
+      <div class="head"><p>你要输入的单词是:{{}}</p></div>
+      <button @click="addWord">添加</button>
+      <button @click="deleteWord">删除</button>
+      <div v-show="showWaring" :class="{ 'warning-text-top': showWaring }">
+        <p>鳖加了！要满掉拉</p>
+      </div>
+      <div :class="{ 'warning-text': showWaring }">
+        <ul>
+          单词列表：
+          <li v-for="(word,index) in words" :key="index">{{word}}</li>
+        </ul>
+      </div>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js\diyici.js"></script>
+  </body>
+</html>

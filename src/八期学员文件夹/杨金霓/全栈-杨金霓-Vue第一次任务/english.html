@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<style>
+    #add{
+        margin: 0 35%;
+        width: 500px;
+        height: 500px;
+        background: #c9e3c0;
+        text-align: center;
+    }
+    .word {
+        color: #5e505086;
+    }
+    .box {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        /* background: #85ab78; */
+        text-align: left;
+        top: 30px;
+        left: 35%;
+    }
+    button {
+        /* border: none; */
+        /* background: #b1e1c6; */
+        border-radius: 10px;
+        border-color: rgb(82, 197, 197);
+    }
+</style>
+<body>
+    <div id="add">
+        <div class="box" :style="{ color: isTooManyWords ? 'red' : '' }">
+            <input type="text" value="请输入要添加的单词" v-model="word" @keydown.enter="adds" onfocus="if(value=='请输入要添加的单词')value=''" onblur="if(!value)value='请输入要添加的单词'">
+            <div>你要输入的单词为：{{word}}</div>
+            <button @click="adds" :disabled="wordCount >= 7">添加</button>
+            <button @click="deletion">删除</button>
+            <h2 class="tip" v-show="warn">{{message}}</h2>
+            <div>单词列表：</div>
+            <div id="list">
+                <ul>
+                    <li v-for="item in names">{{item}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const app = Vue.createApp({
+        data () {
+            return {
+                names:[],
+                word: this.value,
+                warn:false,
+                message:'撑不住啦，别加了哭哭'
+            }
+        },
+        computed: {
+            wordCount() {
+                return this.names.length;
+            },
+            isTooManyWords() {
+                return this.names.length >= 5;
+            }
+        },
+        methods: {
+            adds(){
+                console.log(this.word);
+                console.log(this.names.length)
+                if(this.word === undefined){
+                    console.log('空')
+                    alert('请输入单词哦')
+                }else{
+                    this.names.push(this.word);
+                }
+                if(this.names.length >= 5){
+                    this.warn = true;
+                    console.log('qqqq');
+                }else{
+                    this.warn = false;
+                }
+                if(this.names.length >= 7){
+                    alert('停！！！！')
+                }
+            },
+            deletion(){
+                this.names.pop()
+                console.log(this.names.length)
+                if (this.names.length >= 5) {
+                    this.warn = true;
+                    console.log('qqqq');
+                } else {
+                    this.warn = false;
+                }
+            },
+            change(){
+                console.log(this)
+            },
+            first(){
+                
+            }
+        }
+    })
+    app.mount('#add')
+</script>
+</html>
