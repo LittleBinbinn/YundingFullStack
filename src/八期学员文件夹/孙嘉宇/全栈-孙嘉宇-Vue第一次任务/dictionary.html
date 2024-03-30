@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="stylesheet" href=".css/dict.css">
+        <script src="https://unpkg.com/vue@3.4.21/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input v-model="word" @keyup.enter="handleClick(word)" class="input">
+        <h2>你要输入的单词是{{word}}</h2>
+        <button @click="addWord(word)">添加</button>
+        <button @click="removeWord">删除</button>
+        <div :class="{active:isActive}">
+            <h2 v-text="reminder"></h2>
+            <h2>单词列表</h2>
+            <ul>
+                <li v-for="item in wordArray">{{item}}</li>
+            </ul>
+        </div>
+    </div>
+   
+    <script src=".js/dict.js"></script>
+</body>
+</html>
+<!--css样式：输入框黑边去掉-->

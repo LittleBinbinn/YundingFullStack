@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model = "message" @keyup.enter = "add">
+        <h2>你要输入的单词是：{{message}}</h2>
+        <button id="add" @click = "add">添加</button>
+        <button id="delete" @click = "delet">删除</button>
+        <h3 v-if = "words.length > 5" style="color: red;">鳖加辣！单词数量太多了</h3>
+        <div v-if = "words.length > 0" :class = "{ active: words.length > 5 ? true : false}">
+                <h3>单词列表：</h3>
+            <ul>
+                <li v-for = "(item,index) in words">{{item}}</li>
+            </ul>
+        </div>
+        <h3 v-else>单词列表里没有单词~</h3>
+    </div>
+
+    <script>
+
+        //创建app
+        const app = Vue.createApp({
+            data(){
+                return{
+                    message: '' ,
+                    words:[]
+                }
+            },
+            methods:{
+                add() {
+                    if(this.message !== '') {
+                        let newWord = this.message;
+                        this.words.push(newWord);
+                    }
+                    else{
+                        alert("添加的单词不能为空！");
+                    }
+                },
+                delet() {
+                    if( this.words.length == 0)
+                    {
+                        alert("没有单词可以删除了！");
+                    }
+                    else{
+                        this.words.pop();
+                    }
+                }
+            }
+        })
+
+        //挂载app
+        app.mount("#app");
+    </script>
+</body>
+</html>

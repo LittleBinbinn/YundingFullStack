@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="verson-vue2.css">
+    <title>vue第一次作业</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="root">
+
+        <div id="inputItems">
+            <input type="text" placeholder="请输入想要添加的单词" v-model='word' @keyup.enter="addItem"><br>
+                    
+            <h1>你要输入的单词是:{{word}}</h1><br>
+        </div>
+
+        <div id="handleItems">
+            <button :disabled="items.length < 5 ? false : true" @click="addItem">
+                添加
+            </button>
+            
+            <button :disabled="items.length !== 0 ? false : true" @click.stop="delateItems">
+                删除
+            </button>
+            
+            <button :disabled="items.length !== 0 ? false : true" @click="clearItems">
+                清空
+            </button>
+            <!-- <button @click="demoyixia">demo</button> -->
+        </div>
+
+        <div id="displayItems" :class="color">
+            <h1 v-show="items.length < 5? false : true">鳖加啦！单词数量太多了！！受不鸟了！！！</h1>
+            <h2>单词列表</h2>
+            <ul>
+                <li 
+                v-for="(item, index) in items" :key="index">
+                {{item.value}}
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+<script src="vue.js"></script>
+<script src="verson-vue2.js"></script>
+</html>
