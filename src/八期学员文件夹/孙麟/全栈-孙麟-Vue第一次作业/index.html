@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="word">
+        <h1>你要输入的单词是:{{word}}</h1>
+        <button @click="add">添加</button>
+        <button @click="del">删除</button>
+        <h2 style="color: red;" v-if="words.length>5">别加啦!单词数量太多了！</h2>
+        <div :class="words.length>5 ? 'red' : '' ">
+            <h2>单词列表:</h2>
+            <ul>
+                <li v-for="wo in words">{{wo}}</li>
+            </ul>
+        </div>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    word: "",
+                    words: []
+                }
+            },
+            methods: {
+                add() {
+                    this.words.push(this.word)
+                },
+                del() {
+                    this.words.splice(-1)
+                }
+            }
+        })
+        app.mount("#app")
+    </script>
+</body>
+
+</html>

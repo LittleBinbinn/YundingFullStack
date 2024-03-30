@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document1</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/vue.esm-browser.js" type="module"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="whole">
+            <input type="text" class="inputing" v-model="input" @keyup.enter="add" placeholder="请输入一个单词"/>
+            <br>
+            <p class="text">你要输入的单词是: {{ input }}</p>
+            <button @click="add">添加</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button @click="remove">删除</button>
+            <p class="text">单词列表</p>
+        </div>
+        <div v-if="List.length>0">
+            <ul>
+                <li v-for="(word,index) in List" :key="index" :style="{color: lengthing ? 'red' : 'initial' }">{{ word }}</li>
+            </ul>
+            <p v-if="lengthing" style="color: red;">单词数量已超过五个，憋再加了！！！</p>
+        </div>
+    </div>
+<script type="module">
+import {createApp,ref,computed } from './js/vue.esm-browser.js';
+createApp({
+    setup(){
+        const input = ref('');
+        const List = ref([]);
+        const lengthing = computed(() => List.value.length > 5);
+        const add=()=>{
+            // if (inputWord.value && !wordList.value.includes(inputWord.value)) {
+                if (input.value) {
+                List.value.push(input.value);
+                input.value = ''; 
+            }
+        };
+        const remove=()=> {
+            if (List.value.length > 0) {
+                List.value.pop();
+            }
+        };
+        return{
+            input,
+            List,
+            add,
+            remove,
+            lengthing
+        };
+        }
+    }).mount("#app")
+    </script>
+        <style scoped>
+            
+        </style>
+</body>
+</html>
