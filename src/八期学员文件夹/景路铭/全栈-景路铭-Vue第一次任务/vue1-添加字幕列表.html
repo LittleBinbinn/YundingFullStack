@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加字母列表</title>
+    <style>
+
+
+        input {
+            width: 350px;
+            height: 35px;
+            font-size: 25px;
+        }
+
+        button {
+            width: 100px;
+            height: 40px;
+            font-size: 30px;
+            text-align: center;
+            line-height: 40px;
+        }
+        li{
+            font-size: 30px;
+        }
+
+
+    </style>
+    <script src="lib/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="word" @keyup.enter="addWord">
+
+        <h2>你要输入的单词是：{{word}}</h2>
+        <button @click="addWord">添加</button>&nbsp;
+        <button @click="delWord">删除</button>
+       
+
+            <h3 v-if="words.length>5":style="{ color:fontColor,fontSize:fontSize+'px'}">别加啦！单词数量太多了！</h3>
+            <h1 :style="{color:listColor}">单词列表</h1>
+            <ul>
+                <li v-for="items in words" :style="{color:listColor}">{{items}}</li>
+            </ul>
+       
+
+
+    </div>
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+    <script>
+        const app = Vue.createApp(
+            {
+                data: function () {
+                    return {
+                        word: "",
+                        words: [],
+                        fontColor:"red",
+                        fontSize:40,
+                        listColor:"black",
+                        relistColor:"black"
+
+
+                    }
+
+                },
+                methods: {
+                    addWord() {
+                        this.words.push(this.word);
+                        
+                        if(this.words.length>5){
+                            console.log("列表变红")
+                            this.listColor=this.fontColor
+                        }
+
+                        
+                    },
+                    delWord() {
+                        this.words.splice(this.words.length - 1, 1);
+                         if (this.words.length <= 5) {
+                            console.log("列表变黑")
+                            this.listColor = this.relistColor
+                        }
+
+
+                    }
+
+                }
+            }
+        )
+        app.mount("#app");
+    </script>
+
+
+</body>
+
+</html>

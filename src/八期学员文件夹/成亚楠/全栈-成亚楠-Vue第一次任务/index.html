@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue-words</title>
+    <link rel="stylesheet" href="./css/第一次.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="word" @keyup.enter="Enter(word)" class="input" placeholder="请输入单词"><br>
+        <h2>你要输入的单词是：{{word}}</h2>
+        <h2 class="stop" v-show="isActive">别加啦！太多了！</h2>
+        <button @click="addwords">添加</button>&nbsp;
+        <button @click="deleteword">删除</button>
+        <div :class="{active:isActive}">
+            <h2>单词列表：</h2>
+            <ul>
+                <li v-for="word in wordsinput" :key="word">{{word}}</li>
+            </ul>
+        </div>
+    </div>
+    <script src="./js/第一次.js"></script>
+</body>
+</html>

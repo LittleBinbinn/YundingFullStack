@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div id="app">
+        <input id="one" type="text" v-model="myword" placeholder="请输入一个单词">
+        <h3>你要输入的单词是{{myword}}</h3>
+        <!-- <h3>{{number}}</h3>
+        <h3>{{isnumber}}</h3> -->
+        <button @click="add">添加</button>
+        <button @click="del">删除</button>
+        <div v-if="number>5" class="yi"><h2>别加了，受不鸟了</h2></div>
+        <h2 :class="{yi:isnumber}">单词列表</h2>
+        <ul :class="{yi:isnumber}">
+            <li v-for="nowword in word">{{nowword}}</li>
+        </ul>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

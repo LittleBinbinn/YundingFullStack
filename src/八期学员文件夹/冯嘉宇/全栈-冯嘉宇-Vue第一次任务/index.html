@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>vue第一次作业</title>
+    </head>
+    <body>
+        <div id="words">
+            <input type="text" v-model="word" v-on:keyup="submit">
+            <h2>你要输入的单词是：{{word}}</h2>
+            <button @click="add" >添加</button>
+            <button @click="deleted">删除</button>
+            <h3 v-if="allWordes.length > 5 " :style="moreStyle"> 别加了，太多了<h3>
+            <ul :style="tooMoreStyle">
+                <h2>单词列表</h2>
+                <li v-for="item in allWordes" key="item">{{item}}</li>
+            </ul>
+        </div>
+    </body>
+    <script src="vue.js"></script>
+    <script>
+        const app = Vue.createApp({
+            data: function (){
+                return{
+                    word: "",
+                    allWordes: [],
+                    moreStyle:{
+                        color:"red",
+                    }
+                }
+            },
+            methods: {
+                add(){
+                    this.allWordes.push(this.word)
+                },
+                inputWord(event){
+                    this.word = event.target.value
+                },
+                deleted(){
+                    this.allWordes.pop()
+                },
+                submit(event){
+                    if(event.keyCode === 13){
+                        this.allWordes.push(this.word)
+                    }
+                }
+            },
+            computed: {
+                tooMoreStyle(){
+                    return {
+                        color: this.allWordes.length > 5 ? "red" : ""
+                    }
+                }
+            }
+        })
+        app.mount("#words")
+    </script>
+</html>
