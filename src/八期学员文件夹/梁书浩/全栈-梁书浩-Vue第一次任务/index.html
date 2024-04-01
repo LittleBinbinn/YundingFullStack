@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="message">
+        <h2 v-cloak>{{message}}</h2>
+        <div>
+            <button @click="add()">添加</button>
+            <button @click="reduce()">删除</button>
+        </div>
+        <div class="hind" v-if="this.words.length>5">
+            <h1 style="color: red;" v-cloak>别加了，受不鸟了</h1>
+        </div>
+        <div>
+            <h1 :class="{active:isActive}">单词列表</h1>
+            <ul>
+                <li v-for ="item in words" :key="item.value" :class="{active:isActive}" v-cloak>{{item}}</li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

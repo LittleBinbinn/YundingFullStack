@@ -1,0 +1,12 @@
+*{
+    margin: 0 auto;
+   
+}
+.active{
+    color: red;
+    font-size: larger;
+    position:relative
+}
+.active1{
+    color: red;
+}

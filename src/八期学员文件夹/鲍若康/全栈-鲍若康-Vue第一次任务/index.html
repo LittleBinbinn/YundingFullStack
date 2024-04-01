@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin-top: 20px;
+        }
+        .changered{
+          color: rgb(255, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+      <input id="word" type="text" v-model="word" >
+      <div >你要输入的单词是{{word}}</div>
+      
+      <button @click="add " >添加</button>
+      <button @click="delect ">删除</button>
+      <div :class="{changered: addword.length>5?true:false}">
+      <h1 v-if="addword.length>5">别加了，受不鸟了</h1>
+      <h2 >单词列表</h2>
+      <ul >
+        <li v-for="item in addword"> {{item}}</li>
+      
+      </ul>
+    </div>
+    
+      
+    </div>
+
+    <script src="./vue.js"></script>
+    <script >
+      
+      const app = Vue.createApp({
+       
+        data(){
+           return{
+            word: "",
+            addword: [],
+            
+           }
+
+
+        },
+        methods: {
+        add () {
+            this.addword.push(this.word)
+            
+        },
+        delect (){
+            this.addword.pop()
+       
+        }
+
+        }
+      })
+    app.mount("#app")
+    </script>
+</body>
+</html>

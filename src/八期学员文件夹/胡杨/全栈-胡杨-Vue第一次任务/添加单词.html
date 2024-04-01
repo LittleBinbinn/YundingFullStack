@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加单词</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js" type="text/javascript"></script>
+</head>
+<body>
+    
+
+    <div id="app">
+        <input type="text" v-model="word" @keydown.enter="add">
+        <h1>你要输入的单词是：{{word}}</h1>
+        <button @click="add">添加</button>
+        <button @click="deleteword">删除</button>
+        <div class="active" v-if="words.length>5">
+            鳖加辣！单词数量太多了
+        </div>
+        <div :class="{active1:words.length>5}" >单词列表:<br>
+            <ul>
+                <li v-for="(item,index) in words" :key="index" type="circle">{{item}}</li>
+            </ul>
+        </div>
+    </div>
+   
+   
+   
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        
+        const app= Vue.createApp({
+
+            data () {
+                return {
+                    word:"",
+                    words:[],
+                }
+            },
+            methods: {
+                add(){
+                 this.words.push(this.word)
+                },
+                deleteword(){
+                this.words.splice(this.words.length-1,1)
+                }
+            }
+        
+        })
+        app.mount("#app")
+    </script>
+
+</body>
+</html>
