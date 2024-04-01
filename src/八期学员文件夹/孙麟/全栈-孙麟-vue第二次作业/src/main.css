@@ -1,0 +1,17 @@
+table,
+th,
+td {
+    border-collapse: collapse;
+    border: 2px solid black;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+th {
+    background-color: rgb(229, 229, 229);
+}
+
+button {
+    font-size: 26px;
+}
