@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/全栈-倪婉庭-Vue第二次任务.css">
+</head>
+<body>
+   <div id="app">
+    <h1>总价：{{ formaPrice(totalPrice) }}</h1>
+    <h2 v-model="followName">当前选中书籍：{{ followName }}</h2> 
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>书名</th>
+                    <th>价格</th>
+                    <th>购买数量</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(item, index) in books" 
+                    :key="item.id" 
+                    @click="rowClick(index)" 
+                    :class="{active: index === currentIndex}">
+                    <td>{{ index + 1 }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.price }}</td>
+                    <td>
+                        <button :disabled="item.count <= 1" @click="decrement(index)">-</button>
+                        {{ item.count }}
+                        <button @click="increment(index)">+</button>
+                    </td>
+                    <td>
+                        <button @click="removeProgram(index, item)">移除</button>
+                    </td>
+                </tr>
+                <tr v-for="(row, index) in rows" :key="index" display="none">
+                    <td>{{ index + 5}}</td>
+                    <td><input type="text" v-model="followName" placeholder="请输入书名"></td>
+                    <td>{{ row.price }}</td>
+                    <td>
+                        <button :disabled="row.count <= 1" @click="decrement(index)">-</button>
+                        {{ row.count}}
+                        <button @click="increment(index)">+</button>
+                    </td>
+                    <td>
+                        <button @click="removeProgram(index, row)">移除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button @click="increate()">添加</button>
+        <button @click="strikeOut()">删除</button>
+   </div>
+    <script src="./js/全栈-倪婉庭-Vue第二次任务.js"></script>
+    <!-- <script src="./js/data.js"></script> -->
+</body>
+</html>
