@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子串计数器</title>
+
+    <script>
+        function countSubstring() {
+            // 获取用户输入的字符串    
+            let str = document.querySelector(".longStr").value;
+
+            // 获取用户输入的子串    
+            let subStr = document.querySelector(".shortStr").value;
+
+            // 初始化计数器    
+            let count = 0;
+
+            // 使用for循环遍历字符串  
+            for (let i = 0; i < str.length; i++) {
+                // 如果当前字符与子串的第一个字符匹配，则进入循环比较剩余的字符    
+                if (str[i] === subStr[0]) {
+                    let j;
+                    for (j = 0; j < subStr.length; j++) {
+                        // 如果子串的当前字符与字符串的当前字符匹配，则计数器加1    
+                        if (str[i + j] != subStr[j]) {
+                            break;
+                        }
+                    }
+                    // 如果子串的所有字符都与字符串中的字符匹配，则计数器加1    
+                    if (j === subStr.length) {
+                        count++;
+                    }
+                }
+            }
+
+            // 输出结果    
+            alert(`子串 "${subStr}" 在字符串 "${str}" 中出现了 ${count} 次。`);
+        }  
+    </script>
+</head>
+
+<body>
+    <form>
+        请输入一个字符串:<input type="text" class="longStr" />
+        <br />
+        请 输 入 一个子串:<input type="text" class="shortStr" />
+        <br />
+        <input type="button" value="提交" onclick="countSubstring()" />
+    </form>
+</body>
+
+</html>

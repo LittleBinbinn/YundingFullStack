@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ready.css">
+    <title>Document</title>
+    <script>
+        
+    </script>
+</head>
+
+<body>
+    <div class="title">登录界面</div>
+    <div class="background">
+        <div class="form">
+            <form action="signOn.html" onsubmit="return checkAll()">
+            
+                <ul>
+                    <li>
+                        <div class="word">请输邮箱：</div>
+                        <input type="text" name="email" value="" id="email" onblur="checkeEmail()">
+                    </li>
+                    <li>
+                        <div class="word">请输入密码：</div>
+                        <input type="password" name="password" value="" id="password" onblur="checkPassword()">
+                    </li>
+                </ul>
+                <input type="submit" id="btn" value="登录" onclick="checkId()">
+                <button onclick="jianyan()">检验</button>
+                <script src="reday.js">
+                </script>
+        </div>
+    </div>
+
+</body>
+
+</html>

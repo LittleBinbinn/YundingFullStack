@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style src="作业.css"></style>
+</head>
+<body>
+    <h2>Login</h2>
+    <label for="email">邮箱</label>
+    <input type="text" id="email" name="email" required><br>
+    <label for="password">密码</label>
+    <input type="password" id="password" name="password" required><br>
+    <input type="button" value="登录" onclick="validateEmail()">
+    <p id="result">result</p>
+    <img src="" alt="" id="photo">
+    <p id="name"></p>
+    <p id="age"></p>
+    <p id="strength"></p>
+    <script>
+        let msg = [{
+            name: '张三',
+            age: 20,
+            strengths: 'JavaScript',
+            avatar: 'https://tse4-mm.cn.bing.net/th/id/OIP-C.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1',
+            email: 'yunding@qq.com',
+            password: 33333
+        },
+        {
+            name: '李四',
+            age: 19,
+            strengths: 'python',
+            avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.YlKimVo94OkaZDZCzPIDpAHaFh?pid=ImgDet&rs=1',
+            email: '12345678@163.com',
+            password: 11111
+        },
+        {
+            name: '王五',
+            age: 18,
+            strengths: 'Java',
+            avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.P2hK9SRjhFE8WM9N8tgWFAHaEQ?pid=ImgDet&rs=1',
+            email: 'yundingshuyuan@qq.cn',
+            password: 222222
+        },
+        ]
+        function validateEmail() {
+            var email = document.getElementById("email").value;
+            var regex =  /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+            if (regex.test(email)) {
+                chect();
+            } else {
+                alert("输入邮箱错误，请输入正确的邮箱！");
+            }
+        }
+        
+        function chect(){
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var photo = document.querySelector("img");
+            for(var i = 0;i < msg.length; i++)
+            {
+                if(email == msg[i].email)
+                {
+                    if(password == msg[i].password)
+                    {
+                        document.getElementById("result").innerHTML = '登录成功！';
+                        photo.src = msg[i].avatar;
+                        document.getElementById("name").innerHTML ='姓名：'+ msg[i].name;
+                        document.getElementById("age").innerHTML ='年龄：'+ msg[i].age;
+                        document.getElementById("strength").innerHTML ='特长：'+ msg[i].strengths;
+                    break;
+                    }
+                    else{
+                        alert("邮箱与密码不匹配！");
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

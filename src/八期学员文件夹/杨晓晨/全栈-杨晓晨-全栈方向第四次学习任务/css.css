@@ -1,0 +1,408 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+.w{
+    width: 1920px;
+    margin: 0 auto;
+}
+body{
+    background-color: #f8f8f8;
+}
+
+
+.head{
+    position: absolute;
+    width: 1920px;
+    height: 50px;
+    background-color: #fff;
+}
+.head .list{
+    float: left;
+    width: 65px;
+    height: 50px;
+    transition: .2s linear;
+
+}
+.head .list:hover {
+    transform: scale(.8,.8);
+}
+
+.head .camera {
+    position: absolute;
+    left: 860px;
+    width: 200px;
+    height: 200px;   
+    background-image: url(https://typora----------image.oss-cn-beijing.aliyuncs.com/carema.jpg);
+    transition: 0.3s linear ;
+}
+.camera:hover {
+    transform: scale(0.9,0.9);
+}
+.head .search{
+    float: right;
+    width: 65px;
+    height: 50px;
+    transition: .2s linear;
+}
+
+.head .search:hover {
+    transform: scale(.8,.8);
+}
+
+.first{
+    display: flex;
+    justify-content: center;
+    width: 1920px;  
+    height: 930px;
+    background-image: url(https://typora----------image.oss-cn-beijing.aliyuncs.com/first-background.jpg);
+    
+}
+.all{
+    width: 1100px;
+    height: 930px;
+    
+}
+.first .photo{
+    width: 100px;
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    
+    
+}
+.first .word{
+    width: 1030px;
+    height: 260px;
+    margin: 230px 35px;
+    margin-bottom: 0px;
+}
+.first .word h1{
+    text-align: center;
+    font-size: 50px;
+    font-weight: normal;
+    color: #2a3f17;
+}
+.first .word p{
+    font-size: 30px;
+    color: #2a3f17;
+}
+.button-all{
+    display: flex;
+    align-items: center;
+    width: 1030px;
+    height: 270px;
+    margin: 0 35px;
+}
+.first .button{
+    width: 266px;
+    height: 70px;
+    background-color: #2a3f17;
+    font-size: 30px;
+    text-align: center;
+    line-height: 70px;
+    color: #fff;
+}
+.three-photo{
+    width: 1100px;
+    height: 500px;
+}
+.three-photo li{
+    width: 307px;
+    height: 500px;
+    float: left;
+    list-style: none;
+    margin-right: 58px;
+    background-color: green;
+    transition: .5s ease;
+}
+.three-photo li:hover {
+    transform: translate(0,-60px);
+}
+.second{
+    width: 1920px;
+    height: 600px;
+}
+.third{
+    width: 1920px;
+    height: 760px;
+    background-image: url(https://typora----------image.oss-cn-beijing.aliyuncs.com/deer.jpg);
+}
+.third .card{
+    position: relative;
+    top: -100px;
+    left: 50%;
+    margin-left: -475px;
+    width: 950px;
+    height: 540px;
+    background-color: #e0dfdf;
+    transition: 1s ease;
+}
+.third .card:hover {
+    transform: translate(0,-60px);
+}
+.third .word{
+    position: relative;
+    top: 85px;
+    left: 85px;
+    height: 360px;
+    width: 770px;
+    font-size: 18px;
+    color: #2a3f17;
+}
+
+
+
+.third .signup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 770px;
+    height: 180px;
+    margin: 0px 85px;
+    
+}
+.third .button{
+    width: 200px;
+    height: 70px;
+    background-color: #2a3f17;
+    font-size: 30px;
+    text-align: center;
+    line-height: 70px;
+    color: #fff;
+    transition: .7s linear;
+}
+.third .button:hover {
+    transform: scale(.9,.9);
+}
+.forth{
+    width: 1920px;
+    height: 850px;
+}
+
+.forth .title{
+    position: relative;
+    top: 80px;
+    left: 856px;
+    margin-bottom: 40px;
+    width: 244px;
+    height: 55px;
+    border: 10px solid transparent;
+    font-size: 42px;
+    text-align: center;
+    color: #2a3f17;
+    
+}
+.forth .title::after,.forth .title::before {
+    position: absolute;
+    box-sizing: inherit;
+    content: "";
+    width: 0px;
+    height: 0px;
+    background-color: transparent;
+}
+.forth .title::before {
+    transition: width .5s ,height .5s  0.5s;
+    top: -10px;
+    left: -10px;
+}
+.forth .title::after {
+    transition:border 0s 1s   , width .5s  1s,height .5s  1.5s;
+    right: -10px;
+    bottom: -10px;
+}
+.forth .title:hover{
+    &::before,&::after{
+        width: 254px;
+        height: 65px;
+        background-color: transparent;
+    }
+}
+.forth .title:hover::after {
+
+    border-bottom: 10px solid #2a3f17;
+    border-left: 10px solid #2a3f17;
+}
+.forth .title:hover::before {
+    
+    border-top: 10px solid #2a3f17;
+    border-right: 10px solid #2a3f17;   
+}
+.forth .photo{
+    position: relative;
+    top: 120px;
+    left: 400px;
+    /*加一个溢出隐藏试试*/
+    width: 1185px;
+    height: 410px;
+    
+}
+.forth li{
+    float: left;
+    margin-right: 33px;
+    width: 263px;
+    height: 412px;
+    list-style: none;
+    background-color: #e0dfdf;
+    transition: 1s ease;
+}
+.forth li:hover {
+    transform: translate(0,-60px);
+}
+li .picture{
+    width: 263px;
+    height: 262px;
+}
+li .name{
+    width: 263px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 24px;
+    color:#2a3f17 ;
+}
+li .story{
+    width: 263px;
+    height: 70px;
+    text-align: center;
+    font-size: 20px;
+    color: #2a3f17;
+}
+.story a{
+    color: #2a3f17;
+}
+
+.forth .button {
+
+    position: relative;
+    top: 200px;
+    left: 794px;
+    width: 358px;
+    height: 68px;
+    text-align: center;
+    line-height: 68px;
+    font-size: 24px;
+    color: #2a3f17;
+    border: 2px solid #2a3f17;
+    transition: 1s linear;
+}
+.forth .button:hover{
+    background-color: #2a3f17;
+    color: #fff;
+}
+
+
+.fifth{
+    width: 1920px;
+    height: 1085px;
+}
+.photo-word{
+    width: 1400px;
+    height: 1020px;
+    margin: 0 auto;
+}
+.fifth .photo{
+    float: left;
+    width: 700px;
+    height: 1020px;
+    background-image: url(https://typora----------image.oss-cn-beijing.aliyuncs.com/squirrel.jpg);
+}
+.word{
+    float: left;
+    width: 700px;
+    height: 1020px;
+    perspective: 900px;
+}
+.fifth .title{
+    position: relative;
+    top: 85px;
+    left: 130px;
+    width: 180px;
+    height: 40px;
+    font-size: 30px;
+    color: #2a3f17;
+    transition: .7s ease;
+}
+.fifth .title:hover{
+    transform: translate(0,-60px);
+}
+.fifth .introduce{
+    position: relative;
+    top: 120px;
+    left: 130px;
+    width: 425px;
+    height: 120px;
+    text-align: center;
+    font-size: 20px;
+    color: #2a3f17;
+    transition: .3s linear;
+}
+.fifth .introduce:hover {
+    transform: translate3d(0,0,60px);
+}
+.fifth .list{
+    position: relative;
+    top: 186px;
+    width: 700px;
+    height: 660px;
+}
+.fifth ul li{
+    
+    width: 300px;
+    height: 70px;
+    list-style: none;
+    margin-bottom: 85px;
+    margin-left: 125px;
+    transition: .8s ease;
+}
+.fifth ul li:hover {
+    transform: translate(60px,0);
+}
+.fifth li .round{
+    float: left;
+    width: 70px;
+    height: 70px;
+    border: 2px solid #2a3f17;
+    border-radius: 50%;
+    line-height: 70px;
+    text-align: center;
+    font-size: 40px;
+    color: #2a3f17;
+}
+.fifth li .word{
+    float: left;
+    width: 226px;
+    height: 70px;
+    line-height: 80px;
+    font-size: 20px;
+    color: #2a3f17;
+}
+hr {
+    font-size: 2px;
+    color: #2a3f17;
+}
+.sixth {
+    width: 1920px;
+    height: 460px;
+    background-image: url(https://typora----------image.oss-cn-beijing.aliyuncs.com/IN%20THE%20WILD.jpg);
+}
+.sixth .button {
+    position: relative;
+    top: 190px;
+    left: 1228px;
+    width: 360px;
+    height: 72px;
+    background-color: #949f8b;
+    text-align: center;
+    line-height: 72px;
+    font-size: 27px;
+    color: #fff;
+    transition: 1s ease;
+}
+.sixth .button:hover {
+    transform: translate(0, -60px);
+    background-color: #fff;
+    color: #2a3f17;
+}

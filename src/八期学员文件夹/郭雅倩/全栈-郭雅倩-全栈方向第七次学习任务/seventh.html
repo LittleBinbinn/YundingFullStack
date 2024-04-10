@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网络测试</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js/seventh.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #netTime{
+            font-size: 20px;
+            
+            margin: 0 auto;
+            width: -moz-fit-content;
+            width: -webkit-fit-content;
+            width:fit-content;
+        }
+        .regester{
+            margin: 0 auto;
+            width: -moz-fit-content;
+            width: -webkit-fit-content;
+            width:fit-content;
+        }
+    </style>
+</head>
+<body>
+    <div id="netTime"></div>
+    <div class="regester">
+        账户：
+        <input type="text" class="name"><br>
+        密码:
+        <input type="text" class="keyword"><br>
+        <button type="button" class="submit">注册</button>
+        <button type="button" class="getmsg">获取用户列表</button>
+    </div>
+    <div class="container"></div>
+</body>
+</html>

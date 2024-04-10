@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'http://43.143.169.168:9090/user/all')
+        
+        xhr.onload = function () {
+                if (xhr.status == 200) {
+                    let usersData = JSON.parse(xhr.responseText);
+                    console.log(usersData);
+                } else {
+                    console.error('失败，错误状态码：' + xhr.status);
+                }
+            }
+            xhr.send();
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+const app=Vue.createApp({
+    data:function(){
+      return{
+        number:0,
+        word:[],
+        myword:"",
+        isnumber:false,
+        nowword:""
+      }
+    },
+    methods:{
+        add:function(){
+            this.number++
+            if(this.number>5){
+                this.isnumber=true
+            }
+            this.word.push(this.myword)
+        },
+        del:function(){
+            if(this.number!=0){
+            this.number--}
+            if(this.number<=5){
+                this.isnumber=false
+            }
+            this.word.pop()
+        }
+    }
+})
+app.mount("#app")

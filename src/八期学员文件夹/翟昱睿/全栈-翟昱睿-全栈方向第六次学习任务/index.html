@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .whole{
+            width: 910px;
+            text-align: left;
+            margin: 0 auto;
+        }
+        .one{
+            font-size: 60px;
+        }
+        .two{
+            font-size: 60px;
+        }
+        .three{
+            border: none;
+            background-color: transparent;
+            font-size: 30px;
+        }
+        #result{
+            width: 910px;
+            text-align: center;
+            font-size: 60px;
+            margin: 0 auto;
+        }
+        .for{
+            width: 500px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="whole">
+        <form id="logon">
+            <h1 class="one">邮箱</h1>
+            <input type="email" id="emailInput" class="two">
+            <h1 class="one">密码</h1>
+            <input type="password" id="passwordInput" class="two">
+            <button type="submit" class="three">登录</button>
+        </form>
+    </div>
+        <br><br><br><br><br><br>
+        <div id="result"></div>
+    <script>
+    const msg = [{
+    name: '张三',
+    age: 20,
+    strengths: 'JavaScript',
+    avatar: 'https://tse4-mm.cn.bing.net/th/id/OIP-C.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1',
+    email: 'yunding@qq.com',
+    password: '33333'
+},
+{
+    name: '李四',
+    age: 19,
+    strengths: 'python',
+    avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.YlKimVo94OkaZDZCzPIDpAHaFh?pid=ImgDet&rs=1',
+    email: '12345678@163.com',
+    password: '11111'
+},
+{
+    name: '王五',
+    age: 18,
+    strengths: 'Java',
+    avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.P2hK9SRjhFE8WM9N8tgWFAHaEQ?pid=ImgDet&rs=1',
+    email: 'yundingshuyuan@qq.cn',
+    password: '222222'
+},
+]
+        function checking()
+        {
+            event.preventDefault();
+            let emailInput = document.getElementById('emailInput').value;
+            let passwordInput = document.getElementById('passwordInput').value;
+            let userInfo=null;
+            let key=1;
+            let E = false;
+            let P = false;
+            for (let i = 0; i < msg.length; i++) { 
+                let user = msg[i];
+                let pattern=/[0-9a-zA-Z]+@(qq|163)+(\.com|\.cn)/;
+                if(pattern.test(emailInput)){
+                    if (user.email === emailInput && user.password === passwordInput) {
+                        E = true;
+                        P = true;
+                        userInfo = user;
+                        break; 
+                    } 
+                    else if(user.email !== emailInput && user.password === passwordInput){
+                        E = false;
+                        P = true;
+                    }
+                    else if(user.email === emailInput && user.password !== passwordInput){
+                        P = false;
+                        E = true;
+                    }
+                }
+                else{
+                    key=0;
+                }    
+            }
+    if (E && P) {
+        document.getElementById('result').textContent = '登录成功！';
+        document.getElementById('result').innerHTML+='<br>';
+        console.log(userInfo.avatar);
+        let img=document.createElement("img")
+        img.src=userInfo.avatar
+        document.body.appendChild(img)
+        img.style.width="300px";
+        img.style.height="300px";
+        img.style.textAlign='center';
+        img = document.querySelector("img"); 
+        let container = img.parentNode;
+        let containerWidth = container.offsetWidth; 
+        let imgWidth = img.offsetWidth; 
+        let margin = (containerWidth - imgWidth) / 2;
+        img.style.marginLeft = margin + "px"; 
+        document.getElementById('result').innerHTML+='<br>';
+        document.getElementById('result').innerHTML += '姓名: ' + userInfo.name + '<br>';
+        document.getElementById('result').innerHTML += '年龄: ' + userInfo.age + '<br>';
+        document.getElementById('result').innerHTML += '特长: ' + userInfo.strengths + '<br>';
+    }
+    else if (key===0){
+        document.getElementById('result').textContent = '邮箱格式不正确，请重新输入';
+    }  
+    else if (!E&& P){
+        document.getElementById('result').textContent = '邮箱不正确，请重新输入';
+    } 
+    else if (!P&&E) {
+        document.getElementById('result').textContent = '密码不正确，请重新输入';
+    }
+    else if (!E&& !P) {
+        document.getElementById('result').textContent = '未找到匹配的用户';
+    }
+} 
+document.getElementById('logon').addEventListener('submit',checking)
+</script>
+</body>
+</html>

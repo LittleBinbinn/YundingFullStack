@@ -1,0 +1,7 @@
+.warn {
+    color: red;
+}
+
+[v-cloak] {
+    display: none;
+}

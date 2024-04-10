@@ -1,0 +1,9 @@
+body{
+    /* background-color: aquamarine; */
+    margin: 150px 600px;
+}
+#picture{
+    height: 131px;
+    width: 165px;
+    background-image: url("https://zhangpeiyao.oss-cn-beijing.aliyuncs.com/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-01-31%20155020.png");
+}

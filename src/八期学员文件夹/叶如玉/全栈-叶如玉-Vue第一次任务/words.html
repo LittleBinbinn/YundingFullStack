@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="/js/vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="/words.css">
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="newWord" @keyup.enter="addWord" placeholder="输入单词">
+        <div>你要输入的单词是：{{ newWord }}</div>
+        <button @click="addWord">添加</button>
+        <button @click="addWord">删除</button>
+        <ul>
+            <li v-for="(word, index) in words" :key="index" :style="{ color: words.length > 5 ? 'red' : 'black' }">
+                {{ word }}
+                <button @click="removeWord(index)">删除</button> 
+            </li>
+        </ul>
+        <p v-if="words.length > 5">憋加了，搁不下了。</p>
+    </div>
+    
+    <script type="text/javascript">
+        // import {ref} from 'vue'
+        // const words= ref('hello world')
+        new Vue({
+            el: '#app', 
+            data: {
+                newWord: '',
+                words: []
+            },
+            methods: {
+                addWord() {
+                    if (this.newWord.trim() !== '') {
+                        this.words.push(this.newWord);
+                        this.newWord = '';
+                    }
+                },
+                removeWord(index) {
+                    if (index >= 0 && index < this.words.length) {
+                        this.words.splice(index, this.words.length);
+                    }
+                }
+            }
+        });  
+        // export default {
+        //         data() {
+        //             return {
+        //                 newWord: '',
+        //                 words: []
+        //             };
+        //         },
+        //         methods: {
+        //             addWord() {
+        //                 if (this.newWord.trim() !== '') {
+        //                     this.words.push(this.newWord);
+        //                     this.newWord = '';
+        //                 }
+        //             },
+        //             removeWord(index) {
+        //                 this.words.splice(index, 1);
+        //             }
+        //         }
+        //     };  
+    </script>
+</body>
+</html>

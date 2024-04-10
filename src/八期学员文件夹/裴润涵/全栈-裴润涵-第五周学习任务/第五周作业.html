@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let father = prompt("请输入字符串");
+        let son = prompt("请输入子串");
+        let m = father.length;//m记录字符串的总长度
+        let n = son.length;   //n记录子串的长度
+        let flag=true;
+        let count=0;
+        for(var i=0;i<m-n+1;i++){
+            for(var j=0;j<n;j++){
+                if(father[i+j]!=son[j]){
+                    flag=false;
+                    break;
+                }
+                flag=true;
+            }
+            if(flag){
+                count++;
+            }
+        }
+        alert(`子串出现次数 ${count}`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

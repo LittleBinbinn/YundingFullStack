@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .form_container {
+            position: absolute;
+            font-size: 40pt;
+            top: 40%;
+            left: 45%;
+        }
+        input {
+            padding: 10px;
+            font-size: 30px;
+        }
+       
+    </style>
+</head>
+<body>
+
+    <form class="form">
+        <div class="form_container">
+            <p>邮箱</p>
+            <input type="text" id="email">
+            <p>密码</p>
+            <input type="password" id="pwd">
+            <br/>
+            <input type="button" value="登录" onclick="loginForm()">
+        </div>
+    </form>
+
+    <div id="msgInfo"></div>
+
+    <script>
+
+        var msg = [
+            {
+                name: '张三',
+                age: 20,
+                strengths: 'JavaScript',
+                avatar: 'https://tse4-mm.cn.bing.net/th/id/OIP-C.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1',
+                email: 'yunding@qq.com',
+                password: '33333'
+            },
+            {
+                name: '李四',
+                age: 19,
+                strengths: 'python',
+                avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.YlKimVo94OkaZDZCzPIDpAHaFh?pid=ImgDet&rs=1',
+                email: '12345678@163.com',
+                password: '11111'
+            },
+            {
+                name: '王五',
+                age: 18,
+                strengths: 'Java',
+                avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.P2hK9SRjhFE8WM9N8tgWFAHaEQ?pid=ImgDet&rs=1',
+                email: 'yundingshuyuan@qq.cn',
+                password: '222222'
+            }
+        ];
+
+        function loginForm() {
+            var msgInfo = document.getElementById("msgInfo");
+            var email = document.getElementById('email').value;  // 获取邮箱输入框的值
+            var pwd = document.getElementById('pwd').value;      // 获取密码输入框的值
+            let emailRegex = /^([a-zA-Z\d][\w-]{2,})@(\w{2,})\.([a-z]{2,})(\.[a-z]{2,})?$/;
+
+            if (emailRegex.test(email)) {
+                alert('邮箱格式正确！');
+                findMsg(email, pwd);    // 邮箱通过正则表达式验证无误后开始在msg中查找
+            } else {
+                alert('邮箱格式不正确！');  // 输入的邮箱格式若不正确则提示用户
+            }
+        }
+
+        function displayUserInfo(user) {
+            var userInfoDiv = document.getElementById('msgInfo');
+            userInfoDiv.innerHTML = `
+                <h2>${user.name}</h2>
+                <p>年龄：${user.age}</p>
+                <p>强项：${user.strengths}</p>
+                <img src="${user.avatar}" alt="用户头像">
+                <p> 邮箱：${user.email}</p>
+            `;
+        }
+
+        function findMsg(email, pwd) {
+            for (let i = 0; i < msg.length; i++) {    // 在msg数组中遍历查找输入的用户邮箱密码是否正确
+                if (msg[i].email === email && msg[i].password === pwd) {
+                    displayUserInfo(msg[i]);
+                    return;
+                }
+            }
+
+            alert('邮箱或密码不正确！');
+        }
+        
+       
+        document.addEventListener('keyup',(e)=>{    //按下回车键显示用户信息
+            if (e.keyCode == 13) {
+                loginForm();
+            }
+        })
+        
+    </script>
+</body>
+</html>

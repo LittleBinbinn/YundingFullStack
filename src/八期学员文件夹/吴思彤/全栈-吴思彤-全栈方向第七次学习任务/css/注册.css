@@ -1,0 +1,14 @@
+#time{
+    position:absolute;
+    top: 30px;
+    width: 700px;
+    height: 25px;
+    left: 40%;
+}
+.box{
+    position: absolute;
+    top: 60px;
+    width: 150px;
+    height: 100px;
+    left: 40%;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .whole{
+        width:910px;
+        text-align: left;
+        margin: 0 auto;
+        }
+        .one{
+            font-size: 60px;
+            display: inline-block;
+        }
+        .input1{
+            font-size: 60px;
+            display: inline-block;
+        }
+        .input2{
+            font-size:60px;
+            display:inline-block;
+        }
+        .two{
+            display: inline-block;
+            border: none;
+            font-size: 60px;
+            background-color: transparent;
+        }
+        .one1{
+            font-size: 60px;
+        }
+        </style>
+</head>
+<body>
+<div class="whole">
+    <h1 class="one">请输入一个字符串:</h1><br><input type="text" class="input1" id="input1"><br>
+    <h1 class="one">请输入一个子串:</h1><br><input type="text" class="input2" id="input2">&nbsp;&nbsp;&nbsp;&nbsp;
+    <button onclick="counting(document.getElementById('input1').value, document.getElementById('input2').value)" class="two">提交</button><br>
+    <h1 class="one">字串出现的次数为:</h1>
+    <div class="one1" id="countsing"></div>
+</div>
+<script>
+function counting(longerstr,shorterstr)
+{
+    let count=0
+    let longer=longerstr.length
+    let shorter=shorterstr.length
+    let j=1
+    for(let i=0;i<=longer-shorter;i++)
+    {
+        if(longerstr.charAt(i)===shorterstr.charAt(0))
+        {
+            for(j=1;j<shorter;j++)
+            { 
+                if(longerstr.charAt(i+j)!==shorterstr.charAt(j))
+                {
+                    break;
+                }
+            }
+            if(j===shorter)
+            {
+                count++; 
+                i=j+i-1; 
+            }
+            j=1;
+        }
+    }
+    let countsing=document.getElementById("countsing");
+    countsing.innerHTML=count;
+}
+</script>
+	</body>
+    </html>
