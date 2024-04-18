@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>axios的取消请求</title>
+  <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="page-header">基本使用</h2>
+    <button class="btn btn-primary">发送请求</button>
+    <button class="btn btn-danger">取消请求</button>
+  </div>
+
+  <script>
+    const btns = document.querySelectorAll('button')
+    //声明全局变量
+    let cancel = null
+      //发送GET请求
+      btns[0].onclick = function () {
+        //检测上一次请求是否完成
+        if(cancel !== null){
+          //取消上一次请求
+          cancel()
+        }
+        //创建CancelToken
+        let cancelToken = new axios.CancelToken(function (c) {
+          cancel = c
+        })
+
+        //axios()
+        axios({
+          method: 'GET',
+          url: 'http://localhost:3000/post',
+          //添加配置对象的属性
+          // cancelToken: new axios.CancelToken(function(c){
+          //   //将c的值赋值给cancel
+          //   cancel = c
+          // })
+          cancelToken:cancelToken,
+        }).then(response => {
+          console.log(response);
+          //将cancel的值初始化
+          cancel = null
+        })
+      }
+      btns[1].onclick = function () {
+        cancel()
+      }
+  </script>
+</body>
+
+</html>

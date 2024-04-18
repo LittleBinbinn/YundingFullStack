@@ -1,0 +1,34 @@
+{
+  "post": [
+    {
+      "id": "1",
+      "title": "json-server 我是GET传过来的",
+      "author": "get"
+    },
+    {
+      "id": "2",
+      "title": "我是put传过来的",
+      "author": "put"
+    },
+    {
+      "id": 2,
+      "title": "我是post传过来的",
+      "author": "post"
+    },
+    {
+      "id": "2",
+      "title": "我是post传过来的",
+      "author": "post"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
