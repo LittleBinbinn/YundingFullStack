@@ -5,7 +5,7 @@
         <h4><slot name="title"></slot></h4>
         <span><slot name="description"></slot></span>
         </div>
-    <img :src="imgUrl">
+    <img :src="imgUrl" alt="">
     </div>
     <ul class="Alllist">
         <slot name="songName"></slot>
@@ -13,10 +13,13 @@
 </div>
 </template>
 
-<script>
-export default {
-    props: ["imgUrl"]
-}
+<script setup>
+const props = defineProps({
+    imgUrl: {
+        type: String,
+        default: ""
+    }
+})
 </script>
 
 <style scoped>
@@ -24,13 +27,11 @@ h4{
     margin: 0;
 }
 .container{
-    float: left;
-    width: 300px;
-    margin-right: 8px;
+    width: 30%;
 }
 img{
     width: 150px;
-    margin-left: 15px;
+    height: auto;
     margin-bottom: 10px;
 }
 .top{
@@ -39,7 +40,6 @@ img{
 }
 .Alllist{
     list-style: decimal;
-    margin-left: 15px;
 }
 ul{
     border-bottom: 1px solid black;
