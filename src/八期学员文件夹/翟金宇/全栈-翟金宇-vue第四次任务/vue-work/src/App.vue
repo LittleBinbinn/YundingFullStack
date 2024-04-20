@@ -33,30 +33,27 @@
   
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue' 
-import artist from "./components/artist.vue"
-import song from "./components/song.vue"
-import artists from "./data/artist.js"
-import hotSong from "./data/hotSong.js"
-import newSong from "./data/newSong.js"
-import originSong from "./data/originSong.js"
-export default {
-  components:{
-    artist,
-    song
-  },
-  data(){
-    return {
-      artists,
-      songs: [
-        hotSong,
-        newSong,
-        originSong
-      ]
-    }
-  }
-}
+import Artist from "./components/artist.vue"
+import Song from "./components/song.vue"
+import Artists from "./data/artist.js"
+import HotSong from "./data/hotSong.js"
+import NewSong from "./data/newSong.js"
+import OriginSong from "./data/originSong.js"
+
+const artist = ref(Artist)
+const artists = ref(Artists)
+const hotSong = ref(HotSong)
+const newSong = ref(NewSong)
+const orginSong = ref(OriginSong)
+const songs = ref([
+  HotSong,
+  NewSong,
+  OriginSong
+])
+console.log(songs.value);
+
 </script>
 
 <style scoped>
