@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+<body>
+    <div id = "app">
+        <input type="text" id = "input" v-model = "wordInput" @keyup.enter = "add">
+        <p>你现在要加的单词是:{{wordInput}}</p>
+        <button @click = "add" >添加</button>
+        <button @click = "del">删除</button>
+        <p :class="get()">鳖加辣!太多了</p>
+        <p :class="getclasses()">单词列表:</p>
+        <ul :class="getclasses()">
+            <li v-for="item in words">{{item}}</li>
+        </ul>
+    </div>
+    <script src = "js/vue.js"></script>
+</body>
+</html>

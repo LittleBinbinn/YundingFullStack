@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+</style>
+<head>
+    <title>全栈-王浩-全栈方向第七周作业</title>
+</head>
+
+<body>
+    <div class="time"></div>
+    账号<input type="text" class="username"><br>
+    密码<input type="password" class="password"><br>
+    <button onclick="zhuce()">注册</button>
+    <button onclick="huoqu()">获取用户列表</button>
+    <span class="name"></span>
+
+    <script>
+        function time() {
+            let getTime = new XMLHttpRequest();
+            getTime.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.querySelector(".time").innerHTML = "当前时间：" +
+                        this.responseText.slice(33, 52);
+                }
+            };
+            getTime.open("GET", "http://43.143.169.168:9090/time/now");
+            getTime.send();
+        }
+        function zhuce() {
+            let Username = document.querySelector(".username").value;
+            let Password = document.querySelector(".password").value;
+            axios({
+                method: 'post',
+                url: 'http://43.143.169.168:9090/user/register',
+                data: {
+                    username: Username,
+                    password: Password,
+                }
+            })
+                .then(function (response) {
+                    console.log("注册报文", response);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        }
+        function huoqu() {
+            axios.get("http://43.143.169.168:9090/user/all")
+                .then(function (response) {
+                    console.log("用户列表信息报文：", response);
+                    let i;
+                    let li = '';
+                    for (i = 0; i < response.data.data.length; i++) {
+                        li += "<li>" + response.data.data[i] + "</li>";
+                    }
+                    document.querySelector(".name").innerHTML = li;
+                })
+                .catch(function (error) {
+                    console.log(error);
+                })
+        }
+        setInterval(time, 1000);
+    </script>
+</body>
+
+</html>

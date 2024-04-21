@@ -1,0 +1,12 @@
+.background{
+            height: 920px;
+            width: 100%;
+            background-color: thistle;
+        }
+.box{
+    position: relative;
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    top: 300px;
+}

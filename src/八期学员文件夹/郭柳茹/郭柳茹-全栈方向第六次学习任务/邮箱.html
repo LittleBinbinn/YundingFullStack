@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>邮箱</title>
+    <!--  -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .youxiang{
+            position: relative;
+            margin: auto;
+            top: 150px;
+            width: 700px;
+            height: 500px;
+            background-color: paleturquoise;
+        }
+        #yx{
+            position: absolute;
+            top: 160px;
+            left: 190px;
+            width: 300px;
+            height: 25px;
+            color: pink;
+        }
+        #mima{
+            position: absolute;
+            top: 240px;
+            left: 190px;
+            width: 300px;
+            height: 25px;
+            color: pink;
+        }
+        #dl{
+            position: absolute;
+            top: 320px;
+            left: 290px;
+            width: 100px;
+            background-color: pink;
+        }
+        #tishi{
+            position: absolute;
+            width: 400px;
+            height: 20px;
+            top: 190px;
+            left: 200px;
+            color: red;
+        }
+        #tishi2{
+            position: absolute;
+            width: 370px;
+            height: 20px;
+            top: 270px;
+            left: 200px;
+            color: red;
+        }
+        #xinxi{
+            position: absolute;
+            width: 370px;
+            height: 20px;
+            top: 300px;
+            left: 100px;
+        }
+        #touxiang{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 390px;
+            left: 100px;
+        }
+        .img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="youxiang">
+        <h1 style="position: absolute;left: 260px;top: 80px;">邮箱登录</h1>
+        <h4 style="position: absolute;top: 160px;left: 150px;">邮箱:</h4>
+        <input type="text" id="yx">
+        <div id="tishi"></div>
+        <h4 style="position: absolute;top: 240px;left: 150px;">密码：</h4>
+        <div id="tishi2"></div>
+        <input type="password" id="mima">
+        <button id="dl"  onclick="delu()" >登入</button>
+        <div id="xinxi"></div>
+        <div id="touxiang"></div>
+    </div>
+    <script>
+        var msg = [
+                {
+                    name: "张三",
+                    age: "20",
+                    strengths: "JavaScript",
+                    avatar:  'https://tse4-mm.cn.bing.net/th/id/OIP-C.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1',
+                    email: "yunding@qq.com",
+                    password: "33333"
+                },
+                {
+                    name: "李四",
+                    age: "19",
+                    strengths: "python",
+                    avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.YlKimVo94OkaZDZCzPIDpAHaFh?pid=ImgDet&rs=1',
+                    email: "12345678@163.com",
+                    password: "11111"
+                },
+                {
+                    name: "王五",
+                    age: "18",
+                    strengths: "Java",
+                    avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.P2hK9SRjhFE8WM9N8tgWFAHaEQ?pid=ImgDet&rs=1',
+                    email: "yundingshuyuan@qq.cn",
+                    password: "222222"
+                }];
+        function delu(){
+            let result = document.getElementById("yx").value;
+            let mi = document.getElementById("mima").value;
+            let re = /\w@(qq.com|163.com|qq.cn|163.cn)/;
+            if(re.test(result)==false){
+                document.getElementById("tishi").innerHTML = "error,请输入合法邮箱(结尾为.com或.cn,仅包含一个小数点,小数点前为@qq或@163).";
+            };
+            for (let i = 0; i < msg.length; i++) {
+                if (msg[i].email === result && msg[i].password === mi) {
+                    document.getElementById("tishi2").innerHTML= "登录成功"
+                    document.getElementById("xinxi").innerHTML="姓名:"+msg[i].name+"<br>年龄："+msg[i].age+"<br>专长："+
+                    msg[i].strengths
+                    imgElement = document.createElement("img");
+                    imgElement.setAttribute("src", msg[i].avatar);
+                    imgElement.style.width="100px";
+                    imgElement.style.height = "100px";
+                    document.getElementById("touxiang").appendChild(imgElement);
+                    break;
+                } else if(i === msg.length - 1){
+                    document.getElementById("tishi2").innerHTML="密码或账号输入错误，请重试";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

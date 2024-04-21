@@ -1,0 +1,77 @@
+<!DOCTYPE html>  
+<html lang="en">  
+  <head>  
+    <meta charset="UTF-8" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+    <title>单词列表</title>  
+    <!-- 引入 Vue 3 -->  
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>  
+  </head>  
+  <style scoped>  
+    .red {  
+      color: red;  
+    }  
+  
+    .warning {  
+      color: red;  
+      margin-bottom: 10px;  
+    }  
+  </style>  
+  <body>  
+    <!--准备好一个容器-->  
+    <div id="app">  
+      <!-- Vue template here -->  
+      <input  
+        type="text"  
+        v-model="newWord"
+        @keyup.enter="addWord"  
+        placeholder="输入单词"  
+      />  
+      <div v-if="newWord">你要输入的单词是：{{ newWord }}</div>  
+      <button @click="addWord">添加</button>  
+      <button @click="removeWord" :disabled="words.length === 0">  
+        删除  
+      </button>  
+      <div v-if="words.length > 5" class="warning">  
+        单词数目超过五个，单词颜色已变红  
+      </div>
+      <div>单词列表</div>  
+      <ul>  
+        <li  
+          v-for="(word, index) in words"  
+          :key="index"  
+          :class="{ red: words.length > 5 }"  
+        >  
+          {{ word }}  
+        </li>  
+      </ul>  
+    </div>  
+  
+    <script>  
+      // 创建 Vue 应用实例  
+      const app = Vue.createApp({  
+        data() {  
+          return {  
+            newWord: "",  
+            words: [],  
+          };  
+        },  
+        methods: {  
+          addWord() {  
+            if (this.newWord) {  
+              this.words.push(this.newWord);  
+              this.newWord = "";  
+            }  
+          },  
+          removeWord() {  
+            if (this.words.length > 0) {  
+              this.words.pop();  
+            }  
+          },  
+        },  
+      });  
+      // 挂载应用到 #app 元素  
+      app.mount("#app");  
+    </script>  
+  </body>  
+</html>

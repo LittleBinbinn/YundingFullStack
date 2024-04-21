@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up success</title>
+    <script src="success.js"></script>
+</head>
+<style>
+     * {
+        margin: 0;
+        padding: 0;
+    }
+    .out {
+        border-color: steelblue;
+        border-style: solid;
+        border-width: 2px;
+        position: relative;
+        margin: 0 auto;
+        height: 350px;
+        width: 300px;
+        background-color: white;
+    }
+    .success {
+        position: relative;
+        height: 50px;
+        font-size: 28px;
+        line-height: 50px;
+        border-color: steelblue;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .picture {
+        position: relative;
+        height: 100px;
+        border-color: steelblue;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .message {
+        position: relative;
+        height: 170px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .text {
+        position: relative;
+        height: 50px;
+        
+        
+    }
+    .name {
+        position: relative;
+        width: 70px;
+        height: 50px;
+        background-color: #fff;
+        line-height: 50px;
+        font-size: 23px;
+        float: left;
+
+    }
+    .age {
+        position: relative;
+        width: 70px;
+        height: 50px;
+        background-color: #fff;
+        line-height: 50px;
+        font-size: 23px;
+float: left;
+    }
+    .strengths {
+        position: relative;
+        width: 70px;
+        height: 50px;
+        background-color: #fff;
+        line-height: 50px;
+        font-size: 23px;
+        float: left;
+    }
+    .sname  {
+        position: relative;
+        width: 230px;
+        height: 50px;
+        
+        float: right;
+        line-height: 50px;
+        font-size: 18px;
+
+    }
+    .sage  {
+        position: relative;
+        width: 230px;
+        height: 50px;
+        
+        float: right;
+        line-height: 50px;
+        font-size: 18px;
+
+    }
+    .sstrengths  {
+        position: relative;
+        width: 230px;
+        height: 50px;
+        float: right;
+        line-height: 50px;
+        font-size: 18px;
+
+    }
+    .circle {
+        position: absolute;
+        left: 5px;
+        width: 100px;
+        height: 100px;
+        background-color: #eddc51;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        font-size: 70px;
+        text-align: center;
+        line-height: 100px;
+    }
+
+</style>
+<body>
+    <div class="out">
+        <div class="success">登录成功</div>
+        <div class="picture">
+            <div class="circle">JS</div>
+        </div>
+        <div class="message">
+            <div class="text">
+                <div class="name">姓名：</div>
+                <div class="sname" id="sname"></div>
+            </div>
+            <div class="text">
+                <div class="age">年龄：</div>
+                <div class="sage" id="sage"></div>
+            </div>
+            <div class="text">
+                <div class="strengths">特长：</div>
+                <div class="sstrengths" id="sstrengths"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

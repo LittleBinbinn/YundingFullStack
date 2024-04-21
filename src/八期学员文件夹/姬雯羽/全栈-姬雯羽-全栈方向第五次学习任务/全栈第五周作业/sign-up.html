@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>统计</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <div class="inputbox1">
+            <input type="text" id="input1">
+            <span>请输入字符串</span>
+        </div>
+
+        <div class="inputbox2">
+            <input type="text" id="input2">
+            <span>请输入子串</span>
+        </div>
+    
+       <button class="button" onclick="num()">确定</button>
+
+    <div class="span"></div>
+
+    <p id="result">子串在字符串中出现的次数为:</p >
+
+    </div>
+
+<script>
+    function num() {
+    const string =document.getElementById("input1").value;
+    const zistring =document.getElementById("input2").value;
+
+    var num = string.split(zistring).length - 1;
+    document.getElementById('result').innerHTML = "子串在字符串中出现的次数为: " + num;
+    }
+</script>
+</body>
+</html>

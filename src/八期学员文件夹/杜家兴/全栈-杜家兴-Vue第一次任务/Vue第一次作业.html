@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue第一次作业</title>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+        .color {
+            color: red;
+        }
+        .disappear {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <input type="text" :class="{'disappear' : inputDisappear}" v-model="inputShow" @keydown.enter="addWord" >
+        <br><br>
+        <button @click="addWord">添加</button>
+        <button @click="deleteWord">删除</button>
+        <br><br>
+        <h2>宁要输入这个玩意儿===>>> <span v-cloak>{{ inputShow }}</span></h2>
+        <br>
+        <div :class="{'color' : colorChange}">
+            <h1 v-if="wordList.length > 5">憋加辣，要被玩坏惹(//̀Д/́/)</h1>
+            <div>宁添加的玩意儿在这里👇👇👇</div>
+            <ul>
+                <li v-for="word in wordList" v-cloak>{{ word }}</li>
+            </ul>
+        </div>
+        <h1 class="color" v-if="wordList.length > 10" >还加，还加，都说了要被玩坏惹，不给你加了，哼！<( ‵□′)</h1>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const APP = Vue.createApp({
+            data: function() {
+                return {
+                    inputShow: '',
+                    wordList: [],
+                    classAdd:false,
+                    classAdd2:false
+                }
+            },
+            methods: {
+                addWord: function() {
+                    if (this.inputShow.length > 0) {
+                        this.wordList.push(this.inputShow)
+                        this.inputShow = ''
+                    } 
+                },
+                deleteWord: function() {
+                    if (this.wordList.length > 0) {
+                        this.wordList.shift()
+                    }
+                }
+            },
+            computed: {
+                colorChange() {
+                    if(this.wordList.length > 5) {
+                        this.classAdd = true
+                    } else {
+                        this.classAdd = false
+                    }
+                    return this.classAdd
+                },
+                inputDisappear() {
+                    if(this.wordList.length > 10) {
+                        this.classAdd2 = true
+                    } else {
+                        this.classAdd2 = false
+                    }
+                    return this.classAdd2
+                }
+            },
+        })
+        APP.mount('#app')
+    </script>
+</body>
+</html>

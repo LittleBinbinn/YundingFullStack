@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>misson</title>
+    <style>
+        .info_show {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="info_input">
+        <h3>你要输入的单词是{{info_input}}</h3>
+        <div id="info_sum">
+            <button @click="addinfo" >添加</button>
+            <button @click="delinfo">删除</button>
+            <div :class="counters>=5?'info_show':'infoshow'">
+            <div v-if="counters>=5">所添加信息过多！</div>
+            <div>单词列表：</div>
+            <li v-for="item in information">{{item}}</li></div>
+        </div>
+    </div>
+</body>
+<script src="vue.js"></script>
+<script>
+    const app=Vue.createApp({
+        data(){
+            return{
+                information:[],
+                info_input:'',
+                counters:0
+            }
+        },
+        mounted () {
+            document.addEventListener('keyup',this.keyup);
+        },
+        methods: {
+            addinfo(){
+                if(this.info_input){
+                let add=this.information.push(this.info_input);
+                this.counters++;}
+                console.log(this.counters);
+            },
+            delinfo(){
+                let del=this.information.pop();
+                if(this.counters>0)
+                {this.counters--;}
+                console.log(this.counters);
+            },
+            keyup(e){
+                var key = window.event ? e.keyCode : e.which;
+                if(key===13) {
+                    if(this.info_input){
+                        let add=this.information.push(this.info_input);
+                        this.counters++;}
+                        console.log(this.counters);
+                }
+            }
+        }
+    })
+    app.mount('#app')
+</script>
+</html>

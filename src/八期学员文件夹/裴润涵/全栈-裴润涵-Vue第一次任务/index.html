@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        .color1{
+            color: red;
+        }
+        .color2{
+            color: black;
+        }
+        .show{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="word" @keyup.enter="enter">
+        <h1>你要输入的单词是：{{word}}</h1>
+        <button @click="add">添加</button > <button @click="reduce" v-if="words.length>0">删除</button>
+        <div v-bind:class="words.length>=5?'color1':'color2'">
+        <h2>单词列表：</h2>
+        <h2 v-if="words.length>=5">别卷了，单词随便记两个意思一下就行了</h2>
+        <ul>
+            <li v-for="(item,index) in words":key="item">{{item}}</li>
+        </ul>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    const app = Vue.createApp({
+        data: function () {
+            return{
+                word:"",
+                words:['apple','orange','watermelon'],
+                counter:0,
+            }
+        },
+        methods:{
+            add:function(){
+                this.words.push(this.word)
+            },
+            reduce:function(){
+                this.words.pop()
+            },
+            enter:function(){
+                this.words.push(this.word)
+            }
+        }
+    })
+    app.mount("#app")
+    
+</script>
+
+</html>
