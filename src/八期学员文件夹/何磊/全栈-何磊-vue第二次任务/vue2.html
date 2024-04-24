@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>vue第二次学习任务</title>
+<!-- <script src="https://unpkg.com/vue@next"></script> -->
+<script src="vue.js"></script>
+<style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+  <h1>总价：￥{{ totalCost }}元</h1>
+  <h2>当前选中的书籍：{{ selectedBook }}</h2>
+
+  <!-- Book List Table -->
+  <table border="1">
+    <tr>
+      <th>序号</th>
+      <th>书名</th>
+      <th>价格</th>
+      <th>购买数量</th>
+      <th>操作</th>
+    </tr>
+    <tr v-for="(book, index) in books" :key="book.id" @click="selectBook(book)">
+      <td>{{ index + 1 }}</td>
+      <td>{{ book.title }}</td>
+      <td>{{ book.price | currency }}</td>
+      <td>
+        <button @click.stop="updateQuantity(book, -1)">-</button>
+        {{ book.quantity }}
+        <button @click.stop="updateQuantity(book, 1)">+</button>
+      </td>
+      <td>
+        <button @click.stop="removeBook(index)">移除</button>
+      </td>
+    </tr>
+    <tr v-if="adding">
+      <td>{{ books.length + 1 }}</td>
+      <td><input v-model="newBook.title"/></td>
+      <td><input v-model.number="newBook.price" type="number"/></td>
+      <td>{{ newBook.quantity }}</td>
+      <td>
+        <button @click="confirmAddition">确认</button>
+        <button @click="cancelAddition">取消</button>
+      </td>
+    </tr>
+  </table>
+  <button v-if="!adding" @click="prepareToAddBook">添加书籍</button>
+</div>
+
+<script>
+const { createApp } = Vue;
+
+createApp({
+  data() {
+    return {
+      books: [{title:'悲惨世界',
+              price: 100,
+              quantity: 0,
+            },{title:'三体',
+              price: 120,
+              quantity: 0,
+            },{title:'撒哈拉的故事',
+              price: 90,
+              quantity: 0,
+            }],
+
+      newBook: { title: '', price: 0, quantity: 0, id: null },
+      adding: false,
+      selectedBook: ''
+    };
+  },
+  computed: {
+    totalCost() {
+      return this.books.reduce((sum, book) => sum + book.price * book.quantity, 0);
+    }
+  },
+  methods: {
+    updateQuantity(book, delta) {
+      const newQuantity = book.quantity + delta;
+      if (newQuantity >= 0) {
+        book.quantity = newQuantity;
+      }
+    },
+    removeBook(index) {
+      this.books.splice(index, 1);
+    },
+    prepareToAddBook() {
+      this.adding = true;
+      this.newBook.id = Date.now(); // Simple ID assignment
+    },
+    confirmAddition() {
+      if (this.newBook.title.trim() === '') {
+        alert('书名不能为空');
+        return;
+      }
+      if (this.newBook.price <= 0) {
+        alert('价格应当是正数');
+        return;
+      }
+      this.books.push({...this.newBook});
+      this.newBook = { title: '', price: 0, quantity: 0, id: null }; //重置新书条目
+      this.adding = false;
+    },
+    cancelAddition() {
+      this.newBook = { title: '', price: 0, quantity: 0, id: null }; //重置新书条目
+      this.adding = false;
+    },
+    selectBook(book) {
+      this.selectedBook = book.title;
+    }
+  },
+  filters: {
+    currency(value) {
+      return '￥' + value.toFixed(2);
+    }
+  }
+}).mount('#app');
+</script>
+</body>
+</html>

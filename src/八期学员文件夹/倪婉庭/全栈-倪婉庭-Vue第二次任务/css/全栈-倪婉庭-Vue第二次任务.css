@@ -1,0 +1,17 @@
+table{
+    border-collapse: collapse;
+}
+thead{
+    background-color: #d9d3d3;
+}
+th, td{
+    border: 1px solid #aaa;
+    padding: 6px 30px;
+    text-align: center;
+}
+.active{
+    background-color: rgba(229, 57, 57, 0.772);
+}
+.active1{
+    display: block;
+}

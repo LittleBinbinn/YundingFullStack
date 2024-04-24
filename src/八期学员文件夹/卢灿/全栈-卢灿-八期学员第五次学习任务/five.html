@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript</title>
+    <style>
+        .all{
+            margin: auto;
+            height: 250px;
+            width: 250px;
+        }
+    </style>
+    <script>
+        function countString() {
+            let str = document.getElementById("strInput").value;
+            let sub = document.getElementById("subInput").value;
+            let count = 0;
+            let index = 0;
+            while ((index = str.indexOf(sub, index)) !== -1) {
+                count++;
+                index += sub.length;
+            }
+            document.getElementById("result").innerHTML = count;
+        }  
+    </script>
+</head>
+<body>
+    <div class="all">
+        <p>请输入一个字符串：</p>
+        <input type="text" id="strInput" value="">
+        <p>请输入一个子串：</p>
+        <input type="text" id="subInput" value="">
+        <button onclick="countString()">提交</button>
+        <p id="result">子串出现的次数为：</p>
+    </div>
+</body>
+</html>    

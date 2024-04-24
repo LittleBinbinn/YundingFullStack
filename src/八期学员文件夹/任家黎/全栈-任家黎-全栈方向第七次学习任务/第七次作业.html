@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第七次作业</title>
+</head>
+<body>
+    <h2>当前时间：</h2>
+    <div id="current-time"></div>
+    <h2>用户注册：</h2>
+    <div>
+        账号：<input type="text" id="name"><br>
+        密码：<input type="text" id="password">
+    </div>
+    <p></p>
+    <button onclick="register()">注册</button>
+    <button onclick="getUserList()">获取用户列表</button>
+    <h2>用户列表：</h2>
+    <ul id="user-list"></ul>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        axios.get('http://43.143.169.168:9090/time/now')
+            .then(respond => {
+                document.getElementById('current-time').innerText = "当前时间：" + respond.data.data;
+            })
+            .catch(error => {
+                console.error('获取当前时间失败:', error);
+            });
+
+        function register() {
+            var username = document.getElementById('name').value;
+            var password = document.getElementById('password').value;
+
+            let msg = {
+                username: username,
+                password: password
+            };
+
+            axios.post("http://43.143.169.168:9090/user/register", msg)
+                .then(respond => {
+                    console.log('注册成功', respond.data);
+                    alert('用户注册成功！');
+                })
+                .catch(error => {
+                    console.error("注册失败");
+                    alert('用户注册失败！');
+                });
+        }
+
+        function getUserList() {
+            axios.get('http://43.143.169.168:9090/user/all')
+            .then(response => {
+                const userList = response.data.data.map(user => `<li>${user}</li>`).join('');
+                document.getElementById('user-list').innerHTML = userList;
+                console.log('用户列表：', response.data.data);
+            })
+            .catch(error => console.error('获取用户列表失败:', error));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+* {
+    padding: 0;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.active {
+    color: red;
+}

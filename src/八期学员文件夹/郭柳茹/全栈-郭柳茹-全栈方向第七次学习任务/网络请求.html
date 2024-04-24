@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网络请求</title>
+</head>
+<body>
+    <script>
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET','http://43.143.169.168:9090/time/now')
+        
+        xhr.onload=function(){
+            if(xhr.status==200){
+                let responseData = JSON.parse(xhr.responseText);
+                var currentTimeString = responseData['data'];
+                console.log("请求结果："+ responseData['msg']);
+                console.log("状态码："+ responseData['code'] )
+                console.log("当前时间是：" + currentTimeString);
+            }else{
+                console.error('无法获取时间信息！错误状态码：' + xhr.status);
+            }
+        }
+        xhr.send();
+    </script>
+</body>
+</html>

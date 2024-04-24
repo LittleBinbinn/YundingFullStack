@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    
+    <link rel="stylesheet" href="css/vue.css">
+</head>
+<body>
+    <div id="app">
+        <input v-model="message" placeholder="请输入单词" @keyup.enter="Add">
+        <p>您输入的单词是：{{message}}</p>
+        
+        <button @click="Add">添加</button>
+        <button @click="Delete">删除</button>
+        <h2 class="tip" v-show="isActive">别加辣!受不了啦</h2>
+        <h2>单词列表</h2>
+        <p v-for="item in word" :class="{active:isActive}">{{item}}</p>
+    </div>
+</body> 
+<script src="js/vue.js"></script>
+</html>

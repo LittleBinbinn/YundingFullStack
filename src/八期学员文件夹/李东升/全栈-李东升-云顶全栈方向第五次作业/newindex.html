@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+     @import url(new.css);
+    </style>
+
+</head>
+<body>
+        <div class="first">
+            <p>请输入一个字符串：</p>
+            <input type="text" id="a">
+            <br>
+            <p>输入一个子串：</p>
+            <input type="text" id="b">
+            <br>
+            <br>
+            <button onclick="shushu()">提交</button>
+            <br>
+    
+            <p id="result"></p>
+        </div>
+        <div class="gaoshiqi">
+    
+            <img src="https://lds2005.oss-cn-beijing.aliyuncs.com/%E6%9D%8E%E4%B8%9C%E5%8D%87202401251452420.jpg"
+                class="photo">
+    
+        </div>
+        <div class="tishi">
+            <p>孩已经学疯了，哈哈哈哈（精神状态堪忧）
+    
+                <br>
+                摇起来！！！！
+                <br>
+                (声音有点大，自行调整音量)
+                <br>
+                <audio autoplay="" controls="" loop="" class="">
+                    <source src="chipi.mp3" type="audio/mpeg">
+    
+                </audio>
+            </p>
+        </div>
+    
+    
+    
+    
+        <script>
+            function shushu() {
+                var a = document.getElementById('a').value
+                var b = document.getElementById('b').value
+                if (a.split(b).length == 0) {
+                    var count = 0
+                }
+                else {
+                    var count = a.split(b).length - 1
+                }
+                document.getElementById('result').innerHTML = "子串出现的次数为: " + count;
+            }
+
+        </script>
+    
+    
+</body>
+</html>

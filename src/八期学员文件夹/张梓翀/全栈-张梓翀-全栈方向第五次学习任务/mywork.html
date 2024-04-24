@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子字符串出现次数计算器</title>
+</head>
+<body>
+    <h2>输入一个字符串和一个子字符串</h2>
+    <input type="text" id="str1" placeholder="输入字符串"></br></br>
+    <input type="text" id="str2" placeholder="输入子字符串"></br></br>
+    <button onclick="count()">计算</button></br>
+    <p id="result"></p>
+
+    <script>
+        function count() {
+            let str1 = document.getElementById("str1").value;
+            let str2 = document.getElementById("str2").value;
+            let n = 0;
+            let position = str1.indexOf(str2);
+            while (position !== -1) {
+                n++;
+                position = str1.indexOf(str2, position + 1);
+            }
+            document.getElementById("result").innerText = "子字符串出现的次数为: " + n;
+        }
+    </script>
+</body>
+</html>

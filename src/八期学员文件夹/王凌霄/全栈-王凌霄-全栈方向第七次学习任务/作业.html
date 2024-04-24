@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<style>
+    *{
+        margin: 0 auto;
+    }
+    .index{
+        width: 400px;
+        height: 400px;
+        padding: 20px;
+        margin-top: 50px;
+        border: 1px black solid;
+    }
+    input{
+        margin: 10px;
+    }
+</style>
+<body>
+    <div class="index">
+        <p class="time"></p>
+        <form action="">
+            账号：<input type="text" name="username">
+            <br>
+            密码：<input type="password" name="password">
+            <br>
+        </form>
+        <button id="login">注册</button>
+        <button id="check">查看用户列表</button>
+        <div class="list">
+
+        </div>
+    </div>
+</body>
+<script src="./form-serialize.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    //时间获取
+    const timebox = document.querySelector('.time')
+    setInterval(()=>{
+        axios({
+            url:"http://43.143.169.168:9090/time/now"
+        }).then(result=>{
+            console.log(result);
+            const time = result.data
+            timebox.innerHTML = `现在的时间是${time}`
+        }
+
+        ).catch(err=>{
+            console.log(err);
+        })
+
+    },1000)
+    //注册模块
+    const form =document.querySelector('form')
+    document.querySelector('#login').addEventListener('click',()=>{
+        //检查是否有输入
+        const data = serialize(form,{hash:true,empty:true})
+        const{username,password}=data
+        if(username&&password){
+            axios({
+                url:'http://43.143.169.168:9090/user/register',
+                method:'POST',
+                data:{
+                    ...data
+                }
+            }).then(result=>{
+                console.log(result);
+                alert(`${result.msg}`)
+            }).catch(err=>{
+                console.log(err);
+                alert('请重试')
+            })
+
+        }
+        else{alert('请输入！')}
+    })
+//展示模块
+    list = document.querySelector('.list')
+    document.querySelector("#check").addEventListener('click',()=>{
+        //先清除
+        list.innerHTML = ''
+        axios({
+            url:'http://43.143.169.168:9090/user/all',
+        }).then(result=>{
+            const arr = result.data
+            arr.forEach(ele=>{
+                let i = document.createElement('span')
+                i.innerHTML = `
+                    ${ele}
+                    <br>
+                `
+                list.appendChild(i)
+            })
+        }).catch(err=>{
+            console.log(err);
+        })
+    })
+</script>
+</html>

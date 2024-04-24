@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加单词列表</title>
+    <script src="https://unpkg.com/vue@3.2.36/dist/vue.global.prod.js"></script>
+    <link rel="stylesheet" href="css.css">
+    
+    
+</head>    
+<body>
+    <div id="app">
+        <input type="text" v-model="message" @keyup.enter="Add"><br>
+        <p>你要输入的单词是&nbsp;{{message}}</p>
+        <button @click="Add">添加</button>
+        <button @click="Delete">删除</button>
+        <h2 v-if = "word.length > 5" style="color: red;">别加啦！受不了哩</h2>
+        <h2>单词列表</h2>
+        <div v-if="word.length > 0" :class="{ active: word.length > 5 ? true : false}">
+        
+        <ul>
+            <li v-for="(item,index) in word" >{{item}}</li>
+        </ul>
+        
+    </div>
+    
+</body>
+<script src="js.js"></script>
+</html>

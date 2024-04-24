@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UFT-8">
+    <title>全栈第六周作业</title>
+    <style>
+        * {
+            margin: auto;
+            padding: 0;
+
+        }
+
+        .background {
+            background-color: rgb(228, 243, 239);
+            width: 260px;
+            height: 160px;
+            margin-top: 60px;
+            border: 1px solid rgb(209, 233, 240);
+            border-radius: 5%;
+        }
+        .one{
+        margin-left: auto;
+        width: 200px;
+        height: 50px;
+        padding-top: 8px;
+
+        }
+        .two{  
+            margin-left: auto;
+            width: 200px;
+            height: 50px;
+    }
+    .three{
+          margin-left: 13%;
+            
+    }
+    </style>
+    <script>
+       
+    </script>
+</head>
+
+<body>
+    <div class="background">
+        <div class="one">
+            邮箱<br />
+             <input type="text" size="20" id="one">
+        </div>
+        <div class="two">
+            密码<br />
+            <input type="text" id="two">
+            
+        </div>
+        <button class="three">登陆</button>
+    </div>
+    <script>
+        var msg = [{
+                name: '张三',
+                age: 20,
+                strengths: 'JavaScript',
+                avatar: 'https://tse4-mm.cn.bing.net/th/id/OIP-C.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1',
+                email: 'yunding@qq.com',
+                password: 33333
+            },
+            {
+                name: '李四',
+                age: 19,
+                strengths: 'python',
+                avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.YlKimVo94OkaZDZCzPIDpAHaFh?pid=ImgDet&rs=1',
+                email: '12345678@163.com',
+                password: 11111
+            },
+            {
+                name: '王五',
+                age: 18,
+                strengths: 'Java',
+                avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.P2hK9SRjhFE8WM9N8tgWFAHaEQ?pid=ImgDet&rs=1',
+                email: 'yundingshuyuan@qq.cn',
+                password: 222222
+            },
+            ]
+  
+     var mailbox=document.getElementById('one');
+     var password= document.getElementById('two');
+     var button=document.querySelector('.three');
+        
+     button.onclick=function (){
+  
+    
+
+        var time = mailbox.value.match(/\./ig);
+         var reg = /.com$|.cn$/;
+         var result = reg.test(mailbox.value);
+         var m= mailbox.value.search('\\.');
+        var a= mailbox.value.slice(m-3,m);
+        var b = mailbox.value.slice(m - 4, m);
+      if(time=='.'&&result==true&&a=="@qq"||b=="@163"){
+         let b=0;
+       for(let i=0;i<3;i++){
+       if(mailbox.value==msg[i].email&&password.value==msg[i].password){
+        b=1
+          window.location.href="index.html?user="+i;
+       } 
+    }
+       if(b==0){
+        alert("输错啦，快检查一下吧")
+       }
+      }
+      else{
+        alert("邮箱格式输错了哦")
+
+      } 
+   
+    
+   
+      
+    }
+    </script>
+</body>
+
+</html>

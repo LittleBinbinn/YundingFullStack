@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="w section">
+        <div class="login-form">
+            <h1>Sign in</h1>
+                <div class="email">
+                    <h3>Please input the E-mail</h3>
+                    <input class="first" type="text">
+                    <p class="one"></p>
+                </div>
+                <div class="password">
+                    <h3>Please input the Password</h3>
+                    <input class="first" type="password">
+                    <p class="one"></p>
+                </div>
+                <div class="button">
+                    <button>Sign in</button>
+                </div>
+            
+        </div>
+        <div class="login-card">
+            <img src="https://mdk1.oss-cn-beijing.aliyuncs.com/R-C.jpg"/>
+        </div>
+    </div>
+
+    <script>
+        let msg = [{
+    name: '张三',
+    age: 20,
+    strengths: 'JavaScript',
+    avatar: 'https://tse4-mm.cn.bing.net/th/id/OIP-C.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1',
+    email: 'yunding@qq.com',
+    password: 33333
+},
+{
+    name: '李四',
+    age: 19,
+    strengths: 'python',
+    avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.YlKimVo94OkaZDZCzPIDpAHaFh?pid=ImgDet&rs=1',
+    email: '12345678@163.com',
+    password: 11111
+},
+{
+    name: '王五',
+    age: 18,
+    strengths: 'Java',
+    avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.P2hK9SRjhFE8WM9N8tgWFAHaEQ?pid=ImgDet&rs=1',
+    email: 'yundingshuyuan@qq.cn',
+    password: 222222
+},
+]
+
+
+        const all = document.getElementsByClassName('first');
+        const email_dad = /@(qq|163)\.(com|cn)$/;
+        const email = all[0];
+        const password = all[1];
+        const all1 = document.getElementsByClassName('one');
+        const email_tip = all1[0];
+        const password_tip = all1[1];
+        const submit = document.querySelector('button');
+        console.log(submit);
+        email.addEventListener('input',function(event){
+            const inputValue = event.target.value;
+            if(email_dad.test(inputValue)){
+                email_tip.textContent = '输入格式正确';
+                email_tip.className = 'green'
+            }
+            else {
+                email_tip.textContent = '请输入正确格式';
+                email_tip.className = 'red';
+            }
+        })
+        submit.onclick = function(){
+        const matchedUser = msg.find(user => user.email == email.value && user.password == password.value);
+            if(matchedUser){
+                alert('登陆成功！'+ '\n'+"姓名：" + matchedUser.name + '\n'+ "年龄：" + matchedUser.age + '\n'+ "特长：" + matchedUser.strengths);
+            }
+            else {
+                alert('登陆失败!');
+            }
+}
+
+    </script>
+</body>
+</html>
