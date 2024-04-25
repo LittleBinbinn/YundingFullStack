@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Module</h2>
-    <span>{{ module }}</span>
+    <span>{{ $route.query.module }}</span>
   </div>
 </template>
 

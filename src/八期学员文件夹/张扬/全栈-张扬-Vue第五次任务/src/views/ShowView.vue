@@ -1,10 +1,8 @@
 <template>
   <div>
     <ul>
-      <KeepAlive include="OptionView">
         <RouterLink :to="`/home/option?name=${item.name}`" v-for="item in list" :key="item.id">{{ item.name }}
         </RouterLink>
-      </KeepAlive>
     </ul>
     <input type="text" v-model="addValue">&nbsp;
     <button @click="add">确定</button>

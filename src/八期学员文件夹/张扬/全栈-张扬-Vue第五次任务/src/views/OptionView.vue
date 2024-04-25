@@ -1,6 +1,6 @@
 <template>
   <h1>你的选择是：</h1>
-  <div>{{ name }}</div>
+  <div>{{ $route.query.name }}</div>
 </template>
 
 <script setup>

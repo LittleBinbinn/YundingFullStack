@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>我是user&nbsp;{{ user }}</h2>
+    <h2>我是user&nbsp;{{ $route.query.user }}</h2>
     <span>
       <RouterLink :to="`/about/List/Module?module=${useModuleOne}`">useModule1</RouterLink>
       <RouterLink :to="`/about/List/Module?module=${useModuleSecond}`">useModule2</RouterLink>
