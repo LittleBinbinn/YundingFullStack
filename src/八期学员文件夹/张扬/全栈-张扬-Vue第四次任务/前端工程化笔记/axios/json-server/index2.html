@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>axios的其他使用</title>
+  <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="page-header">基本使用</h2>
+    <button class="btn btn-primary">GET请求</button>
+    <button class="btn btn-warning">POST请求</button>
+    <button class="btn btn-success">PUT请求</button>
+    <button class="btn btn-danger">DELETE请求</button>
+  </div>
+
+  <script>
+    //获取实例对象
+    const btns = document.querySelectorAll('button')
+    //创建实例对象
+    const demo = axios.create({
+      baseURL:'https://api.apiopen.top',
+      timeout:2000
+    })
+    demo({
+      url:'/getJoke'
+    }).then(response=>{
+      console.log(response)
+    })
+    // demo.get('/getJoke').then(response=>{
+    //   console.log(response.data);
+    // })
+  </script>
+</body>
+
+</html>
