@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word List</title>
+    <script src="./vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="newWord" @keyup.enter="addWord" @input="updatePreview">
+        <p>你要输入的单词是: {{ preview }}</p>
+        <div>
+          <button @click="addWord">添加</button>
+          <button @click="deleteWord">删除</button>
+        </div>
+        <ul>
+            <li v-for="(word, index) in wordList" :key="index" :style="{ color: wordColor }">{{ word }}</li>
+        </ul>
+        <p v-if="showWarning" style="color: red;">单词数目超过五个!</p>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                newWord: '',
+                wordList: [],
+                preview: '',
+                wordColor: '',
+                showWarning: false
+            },
+            methods: {
+                addWord() {
+                    if (this.newWord.trim() !== '') {
+                        this.wordList.push(this.newWord);
+                        this.newWord = '';
+                        this.updateWordColor();
+                    }
+                },
+                deleteWord() {
+                    if (this.wordList.length > 0) {
+                        this.wordList.pop();
+                        this.updateWordColor();
+                    }
+                },
+                updatePreview() {
+                    this.preview = this.newWord;
+                },
+                updateWordColor() {
+                    if (this.wordList.length > 5) {
+                        this.wordColor = 'red';
+                        this.showWarning = true;
+                    } else {
+                        this.wordColor = '';
+                        this.showWarning = false;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
