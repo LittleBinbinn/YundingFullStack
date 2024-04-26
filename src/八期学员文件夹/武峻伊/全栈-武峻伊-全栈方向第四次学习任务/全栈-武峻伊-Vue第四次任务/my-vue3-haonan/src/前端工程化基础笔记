@@ -1,0 +1,19 @@
+在实际开发过程中，webpack默认只能打包处理以.js后缀名结尾的模块。其他非.js后缀名结尾的模块webpack默认处理不了，需要调用loader加载器才可以正常打包，否则会报错。
+2、loader加载器的作用入
+协助webpack打包处理特定的文件模块，比如: css-loader可以打包处理.css相关的文件 less-loader可以打包处理.less相关的文件
+babel-loader可以打包处理webpack无法处理的高级 js语法
+postcss-loader 用来对.css文件进行处理，并添加在 style-loader 和css-loader之后，用来兼容各浏览器。
+3、打包处理css文件
+运行npm istyle-loader@2.0.1css-loader@5.0.0-D命令，安装处理css文件的loader。
+在webpack.config.js配置文件中添加module->rules数组中，添加loader
+4、同时打包处理css、less文件
+运行npm iless-loader@7.0.0-D命令(先下载 lessloader )
+在webpack.config.js配置文件中添加module->rules数组中，添加loader
+5、打包处理样式表中与url路径相关的文件
+运行npmiurl-loader@4.1.0 file-loader@6.2.1-D命令
+在webpack.config.js配置文件中添加module->rules数组中，添加loader
+6、loader另一种配置写法(企业级多用)
+九、打包发布
+1、配置webpack打包发布如图6十、Source Map
+Source Map是一个信息文件，里面存储着位置信息。也就是说Source Map文件中存储着代码压缩混淆前后的对应关系。发布后如果有问题，
+SourceMap会显示原始代码，不会显示压缩混淆后的代码，极大的方便了后期调试问题，降低多余的除错工作时间。

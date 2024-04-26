@@ -1,0 +1,14 @@
+.tipone
+,.tiptwo{
+    display: inline-block;
+}
+img{
+    width: 15px;
+    height:15px;
+background-color: transparent;
+}
+.center{
+    width: 700px;
+    height: 300px;
+    margin:150px auto;
+}

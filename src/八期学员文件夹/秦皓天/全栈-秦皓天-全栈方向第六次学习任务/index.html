@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/project.css">
+    <link rel="stylesheet" href="./css/special.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="Logpage">
+            <span class="Logwords">欢迎登录云顶</span>
+        </div>
+        <div class="email">
+            <span class="words">邮箱</span>
+            <input type="email" class="emailData">
+        </div>
+        <div class="passwords">
+            <span class="words">密码</span>
+            <input type="password" class="passwordsData">
+        </div>
+        <button class="log">登录<span></span></button>
+    </div>
+
+    <script src="./json/data.js"></script>
+    <script>
+        var value = []
+        var re = /^\w+(@qq|@163)\.(com|cn)$/i
+        var isFlag = false
+        var btnEl = document.querySelector(".log")
+        btnEl.onclick = function () {
+            var passwordEl = document.querySelector(".passwordsData")
+            var emailEl = document.querySelector(".emailData")
+            if (re.test(emailEl.value)) {
+                for (var i = 0; i < msg.length; i++) {
+                    if (emailEl.value == msg[i].email && passwordEl.value == msg[i].password) {
+                        sessionStorage.setItem('keys1', msg[i].name)
+                        sessionStorage.setItem('keys2', msg[i].age)
+                        sessionStorage.setItem('keys3', msg[i].strengths)
+                        isFlag = true
+                        break
+                    }
+                }
+                if (isFlag) {
+                    window.open("Successindex.html", "_self")
+                } else {
+                    window.open("Defeatindex.html", "_self")
+                }
+            } else {
+                alert("您输入的邮箱格式不对哦")
+                // var spanEl = document.createElement("span")
+                // var emailItemEl = document.querySelector(".email")
+                // spanEl.textContent="您输入的邮箱格式不正确哦"
+                // spanEl.classList.add(".Addwords")
+                // emailItemEl.append(spanEl)
+            }
+        }
+    </script>
+</body>
+
+</html>

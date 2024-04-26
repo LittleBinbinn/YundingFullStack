@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>用户注册与用户列表</title>
+</head>
+<body>
+<h1>当前时间：</h1>
+<p id="current-time"></p>
+
+<h2>用户注册</h2>
+<form id="register-form">
+    <label for="username">用户名:</label>
+    <input type="text" id="username" name="username">
+    <label for="password">密码:</label>
+    <input type="password" id="password" name="password">
+    <button type="submit">注册</button>
+</form>
+
+<button id="get-users">获取用户列表</button>
+<p></p>
+
+<script>
+// 获取当前时间
+const currentTimeElement = document.getElementById('current-time');
+fetch('http://43.143.169.168:9090/time/now')
+    .then(response => response.json())
+    .then(data => {
+        currentTimeElement.textContent = data.data;
+    });
+
+// 注册用户
+const registerForm = document.getElementById('register-form');
+registerForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    
+    fetch('http://43.143.169.168:9090/user/register', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.code == 201) {
+            alert("注册成功！")
+        }else if(data.code == 400){
+            alert("注册失败！")
+        }else{
+            alert("输入账户已被注册，请重新注册！")
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const getUsersButton = document.getElementById('get-users');
+    const userList = document.getElementById('user-list');
+    
+    getUsersButton.addEventListener('click', function() {
+        fetch('http://43.143.169.168:9090/user/all')
+            .then(response => response.json())
+            .then(data => {
+                console.log('返回的用户数据:', data.data);
+                if (Array.isArray(data.data)) {
+                    userList.innerHTML = '';
+                    data.forEach(user => {
+                        const p = document.querySelector('p')
+                        let msg = user.data
+                        p.innerHTML = data.data.toString
+
+                        });
+                } else {
+                    console.error('返回的数据不是一个数组');
+                }
+            })
+            .catch(error => {
+                console.error('获取用户列表失败:', error);
+            });
+    });
+});
+</script>
+</body>
+</html>

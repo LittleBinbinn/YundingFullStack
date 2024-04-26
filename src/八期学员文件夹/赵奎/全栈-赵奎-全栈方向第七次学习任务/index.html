@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第七次学习任务</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <p id="time">当前时间: </p>
+    <div class="first">
+        账号：<input type="text" id="zhuce"> <br/>
+        密码：<input type="password" id="pwd"> <br />
+    </div>
+    <p>
+        <button id="btn1">注册</button>
+        <button id="btn2">获取用户信息</button>
+    </p>
+    <div id="message" style="white-space: pre-line;"></div>
+
+    
+    <script>
+        let time = document.getElementById('time');
+        let xhr = new XMLHttpRequest();
+        xhr.open('get' , 'http://43.143.169.168:9090/time/now');
+        xhr.responseType = 'json';
+        xhr.send();
+        xhr.onload = function() {
+            if(xhr.status == 200){
+                time.innerHTML = "当前时间: "+ xhr.response.data;
+            }else{
+                alert("出错了！");
+            }
+        }
+
+
+        let zhuce = document.getElementById('zhuce');
+        let pwd = document.getElementById('pwd');
+        let btn1 = document.getElementById('btn1');
+        btn1.onclick = function() {
+            const res = axios.post('http://43.143.169.168:9090/user/register',{
+                    username: `${zhuce.value}`,
+                    password: `${pwd.value}`
+            })
+            .then(function(response)  {
+                console.log("注册报文" , response);
+            });
+            //用AJAX方法也打了一下
+            // let group = {
+            //     username: `${zhuce.value}`,
+            //     password: `${pwd.value}`
+            // }
+            // let json = JSON.stringify(group);
+            // let xhr1 = new XMLHttpRequest();
+            // xhr1.open('post' , 'http://43.143.169.168:9090/user/register');
+            // xhr1.setRequestHeader('Content-Type', 'application/json');
+            // xhr1.responseType = 'json';
+            // xhr1.send(json);
+            // xhr1.onload = function() {
+            //     console.log("注册报文", response);
+            // }
+        }
+
+
+        let btn2 = document.getElementById('btn2');
+        let message = document.getElementById('message');
+        btn2.onclick = function() {
+            let xhrr = new XMLHttpRequest();
+            xhrr.open('get' , 'http://43.143.169.168:9090/user/all');
+            xhrr.responseType = 'json';
+            xhrr.send();
+            xhrr.onload = function() {
+                console.log("用户信息列表报文" , this.response);
+                let Data = [];
+                Data = this.response.data;
+                let str = Data.toString();
+                // console.log(str);
+                let fin = str.replace(/,/g , " \n ");
+                // console.log(fin);
+                message.innerHTML = (fin);
+            }
+        }
+    </script>
+</body>
+</html>

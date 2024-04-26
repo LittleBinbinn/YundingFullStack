@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <style>
+        #box{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+        }
+        .top_one{
+            position: relative;
+        }
+        .class_two{
+            display: flex;
+            flex-direction: row;
+        }
+
+    </style>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" class="top_one" v-model="message">
+        <div class="box_two">
+            <button @click="add">添加</button>
+            <button @click="down">删除</button>
+        </div>
+        
+        单词列表:
+        <ul>
+        <li 
+        v-for="(word, index) in words"  
+        :key="index"  
+        :class="{ 'red-text': words.length > 4}"
+        >
+        {{word}}
+
+        </li>
+        </ul>
+        <div v-if="words.length > 4">  
+            <h2 style="color: red;">别加了，受不鸟了</h2>
+        </div>
+    </div>
+    <script>
+        const { createApp, ref } = Vue;  
+        const app = createApp({  
+            setup() {  
+                const message = ref('');  
+                const words = ref([]);  
+                function add() {  
+                    if (message.value.trim() !== '') {  
+                        words.value.push(message.value);    
+                    }  
+                }  
+                function down() {  
+                    if (words.value.length > 0) {  
+                        words.value.pop();  
+                    }  
+                }  
+                return {  
+                    message,  
+                    words,  
+                    add,  
+                    down  
+                };  
+            }  
+        });  
+        app.mount('#app'); 
+    </script>
+    <style scoped>  
+        .red-text {  
+            color: red;  
+        }  
+    </style>
+</body>
+</html>

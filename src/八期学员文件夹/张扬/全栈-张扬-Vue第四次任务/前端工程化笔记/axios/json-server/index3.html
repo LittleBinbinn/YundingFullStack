@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>axios拦截器</title>
+  <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="page-header">基本使用</h2>
+    <button class="btn btn-primary">GET请求</button>
+    <button class="btn btn-warning">POST请求</button>
+    <button class="btn btn-success">PUT请求</button>
+    <button class="btn btn-danger">DELETE请求</button>
+  </div>
+
+  <script>
+    //设置请求拦截器
+    axios.interceptors.request.use(function(config){
+      return config
+    },function (error) {
+      return Promise.reject(error)
+    })
+    //设置响应拦截器
+    axios.interceptors.request.use(function (response) {
+      return response
+    },function (error) {
+      return Promise.reject(error)
+    })
+
+    axios({
+        //请求类型
+        method: 'GET',
+        url: 'http://localhost:3000/post'
+      }).then(response => {
+        console.log(response);
+      })
+  </script>
+</body>
+
+</html>

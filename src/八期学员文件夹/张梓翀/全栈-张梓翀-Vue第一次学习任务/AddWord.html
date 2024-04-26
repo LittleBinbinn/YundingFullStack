@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Word</title>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-model="newWord" @input="previewWord" />
+      <p>{{ preview }}</p>
+      <button @click="addWord">确定</button>
+      <button @click="deleteWord">删除</button>
+      <div v-if="wordList.length > 5" style="color: red">憋加辣！要爆辣！</div>
+      <div v-else style="color: black">&nbsp;Man！请添加单词吧。</div>
+      <ul>
+        <li v-for="(word, index) in wordList" :key="index">{{ word }}</li>
+      </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          newWord: "",
+          preview: "",
+          wordList: [],
+        },
+        methods: {
+          addWord() {
+            this.wordList.push(this.newWord);
+            this.newWord = "";
+          },
+          deleteWord() {
+            this.wordList.pop();
+          },
+          previewWord() {
+            this.preview = this.newWord;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

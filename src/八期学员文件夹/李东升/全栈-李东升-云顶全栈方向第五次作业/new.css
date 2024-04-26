@@ -1,0 +1,23 @@
+.first {
+    height: 300px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.gaoshiqi {
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.photo {
+    height: 400px;
+    width: 400px;
+}
+
+.tishi {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+
+}

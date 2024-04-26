@@ -1,0 +1,270 @@
+# node.js
+
+### node.js应用环境
+
+概念：Node.js是一个基于V8 JavaScript引擎的JavaScript运行时的环境
+
+![QQ图片20240420195106](https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/QQ%E5%9B%BE%E7%89%8720240420195106.jpg)
+
+1. ###### 目前前端开发的库都是以node包的形式进行的管理
+
+2. ###### npm,yarn,pnpm工具成为前端开发使用最多的工具
+
+3. ###### 越来愈多的公司使用node.js作为web服务器开发，中间件，代理服务器
+
+4. ###### 大量项目需要借助node.js完成前后端渲染的同构应用
+
+5. ###### 资深前端工程师需要为项目编写脚本工具
+
+6. ###### 使用Electron来开发桌面应用程序
+
+ctrl+c 可以结束命令行
+
+切换到F盘在命令行中输入F：
+
+### node.js版本工具
+
+1. nvm install latest 安装最新的node版本
+2. nvm list 展示目前安装的所有版本
+3. nvm use 切换版本
+
+### node.js输入输出
+
+输出：console.log()
+
+输出：process.argv 内置对象
+
+### 特殊的全局对象
+
+**_dirname** 当前的文件所在的目录结构（获取当前文件所在的路径（目录））
+
+**_filename ** 当前目录＋文件名称
+
+**process** 进程
+
+**global** == globalList
+
+### 定时器方法
+
+```javascript
+setTimeout(() => {
+	console.log("setTimeout")
+} ,2000)  //两秒后打印setTimeout
+
+setInterval(() => {
+	console.log("setInterval")
+} ,2000) //每隔两秒打印setInterval
+
+setImmediate(() => {
+	console.log("Immediate")
+} ,2000) //立即执行
+```
+
+# CommonJS
+
+CommonJS是一个规范
+
+模块中要导出内容：exports
+
+模块中要导入内容：require
+
+```javascript
+exports.formaDate = formaDate;  //导出
+
+const util = require("./util.js")  
+console.log(util.formaDate)   //导入
+
+const{formaCount,formaDate} = require("./util.js")
+console.log(formaDate)
+console.log(formaCount)  //导出，不用写util.
+
+// util变量就等于exports对象
+
+module.exports.name = name; //新对象 不是exports对象
+
+module.exports = {
+	name,
+	age,
+	sayHello
+}   //常用的导出写法
+```
+
+module.exports = exports
+
+模块被多次引入时，会缓存，最终只会加载（运行）一次
+
+# ESModule
+
+```javascript
+<scrpit src="..." type="module"></scrpit>  //将js文件模块化
+```
+
+### 导出：
+
+export { 标识符 }；
+
+```javascript
+export{
+name,
+age,
+}     //export不是对象
+```
+
+```javascript
+export{
+name as fname
+}     //给name起个别名fname
+```
+
+```javascript
+export const name = "why"    //在定义时导出
+```
+
+### 导入：
+
+```javascript
+import {name，age} from '...'
+```
+
+```javascript
+import {name as fname，age} from '...'   //给name起个别名
+```
+
+```javascript
+import * as foo from './foo.js'  //导入时给整个模块起别名
+console.log(foo.name);
+```
+
+### 优化：
+
+```javascript
+export {name,age} from './foo.js'  //在一个单独的index.js文件中同时导入和导出 
+```
+
+```javascript
+export * from './foo.js'
+```
+
+### 默认导出：（一个模块只能有一个默认导出）
+
+```javascript
+function parsLyric() { return ["歌词"] } export default parsLyric  //只导出一个 
+```
+
+```javascript
+export default function() { return ["歌词"] }
+```
+
+此时的导入为：
+
+```javascript
+import a from "./parse_Lyric" //a为自定义的标识符 
+```
+
+#### 注意事项：
+
+1. 在浏览器中使用ESModule时，必须在文件后加上后缀名.js
+2. 打开html时，如果其中有使用模块化的代码，那么必须开启一个服务器来打开
+
+# npm
+
+npm配置文件（package.json）
+
+配置文件记录这你**项目的名称，版本号，项目描述**等
+
+还会记录你项目**所依赖的其他库信息**和**依赖库的版本号**
+
+- 配置文件自动生成 npm init（初始化项目）
+- npm init -y （所有都是默认的，yes）
+
+### 常见的属性
+
+- ###### 必须填写的属性：name，version
+
+  name ，version，description
+
+  **author**是作者相关信息（发布时用到）
+
+  **license**是开源协议（发布时用到）
+
+  **private**属性记录当前项目是否私有，值为true时，npm是不能发布它的
+
+  **main**设置程序的入口
+
+  **scripts**属性
+
+1. 用于配置一些脚本命令，以键值对形式存在
+2. 配置后可以通过 **npm run** 命令的 key 来执行这个命令
+3. 对于常用的start，test，stop，restart，可以通过省略run 直接通过npm start 方式运行
+
+####  **dependencies**属性
+
+1. 指定无论是开发环境还是生成环境都需要依赖的包
+2. 与之对应的是devDependencies
+
+####  **devDependencies**属性
+
+1.  有一些包是生成环境不需要的 ，比如webpack，babel等
+2. 通过npm install webpack --save-dev 安装到devDependencies
+
+####  **peerDependencies**属性 
+
+对等依赖 你依赖的一个包，它必须是以另外一个宿主包为前提的。
+
+### 版本号
+
+^x.y.z ^表示 x不变，y,z永远安装最新版本~x,y,z ~表示 x,y不变，z永远安装最新版本npm其他命令
+
+1. ###### 卸载某个依赖包
+
+npm uninstall package
+
+npm uninstall package --save-dev
+
+npm uninstall package -D
+
+2.强制重新
+
+buildnpm rebuild
+
+3.清除缓存
+
+npm cache clean
+
+# 另一个node包管理工具yarn
+
+### 查看npm镜像
+
+`npm config get registry `
+
+### 设置npm镜像
+
+`npm config set registry https://registry.npm.taobao.org `
+
+# cnpm
+
+npm install -g cnpm --
+
+registry=hettps://registry.npm.taobao.org
+
+下载cnpm并将其镜像设为淘宝的镜像
+
+# npx（下载npm会自带npx）
+
+npx webpack --version
+
+查找局部环境变量的wabpack
+
+package.json文件里
+
+```javascript
+scripts：{"build" : "webpack" //相当于 "build" :"npx webpack"} 
+```
+
+会首先在node_modules/.bin文件夹找webpack文件，如果没有才会在全局寻找
+
+# node内置模块path
+
+path.resolve("./abc/cba","../why/cobe","./abc.txt)
+
+将多个路径拼接在一起，最终一定返回一个绝对路径：pach.resolve

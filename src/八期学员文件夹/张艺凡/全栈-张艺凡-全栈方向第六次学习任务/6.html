@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<head>
+    <title>zzzzzz6</title>
+
+<style>
+/* 这位的css更是丑中丑 */
+    .css{
+        position: relative;
+        background-color: rgb(250, 245, 245);
+        top:20px;
+        width: 50%;
+        height: 400px;
+        left: 25%;
+        display: flex;
+        flex-direction: row;
+    }
+</style>
+
+</head>
+<body>
+    <div class="css">
+        <div id="gaga">
+        </div>
+        <img src="https://tse4-mm.cn.bing.net/th/id/OIP-C.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1" id="avatar1"/>
+        <img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.YlKimVo94OkaZDZCzPIDpAHaFh?pid=ImgDet&rs=1" id="avatar2"/>
+        <img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.P2hK9SRjhFE8WM9N8tgWFAHaEQ?pid=ImgDet&rs=1" id="avatar3"/> 
+
+        <div id="xm">邮箱</div>
+        <!-- 输入邮箱地址 -->
+            <input type="text" id="email" />
+            <div id="nl">密码</div>
+        <!-- 输入密码 -->
+        <input type="text" id="password" />
+            <button id="but" onclick="login()">登录</button>
+            <div id="tc"></div>
+<!-- 先藏起来 之后需要哪个显示哪个 -->
+<script>
+        document.getElementById('avatar1').style.display="none";
+        document.getElementById('avatar2').style.display="none";
+        document.getElementById('avatar3').style.display="none";
+</script> 
+    </div>
+<script>
+        function login() 
+        {
+        var Email=document.getElementById('email').value;
+        var Word=document.getElementById('password').value;
+// 正则
+        let reg=/([@]qq|[@]163)(\.{1}com|\.{1}cn)$/;
+        let result=reg.test(Email);
+            //不符合要求警告
+            if(result==false)
+            {
+              alert('哥们，，，对，，，对吗？');
+            }
+
+// 给的信息
+            let msg = [
+            {
+               name: '张三',
+               age: 20,
+               strengths: 'JavaScript',
+               avatar: 'https://tse4-mm.cn.bing.net/th/id/OIP-C.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1',
+               email: 'yunding@qq.com',
+               password: 33333
+            },
+            {
+               name: '李四',
+               age: 19,
+               strengths: 'python',
+               avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.YlKimVo94OkaZDZCzPIDpAHaFh?pid=ImgDet&rs=1',
+               email: '12345678@163.com',
+               password: 11111
+            },
+            {
+               name: '王五',
+               age: 18,
+               strengths: 'Java',
+               avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.P2hK9SRjhFE8WM9N8tgWFAHaEQ?pid=ImgDet&rs=1',
+               email: 'yundingshuyuan@qq.cn',
+               password: 222222
+            },
+            ]
+
+
+for(var i=0;i<3;i++)
+{   
+if(Email==msg[i].email)
+{
+if(Word==msg[i].password)
+{
+//匹配哪个显示哪个
+//但是显示图片的排版出问题了 更丑了
+    if(i==0)
+    {
+        document.getElementById('avatar1').style.display="block";
+    }
+    else if(i==1)
+    {
+        document.getElementById('avatar2').style.display="block";
+    }
+    else if(i==2)
+    {
+        document.getElementById('avatar3').style.display="block";
+}
+document.getElementById("email").style.display="none";
+document.getElementById("password").style.display="none";
+document.getElementById("but").style.display="none";
+document.getElementById("xm").innerHTML='姓名：'+msg[i].name;
+document.getElementById("nl").innerHTML='年龄：'+msg[i].age;
+document.getElementById("tc").innerHTML='特长：'+msg[i].strengths;
+}
+    else{ 
+        alert('笨蛋，记错密码啦');
+        }
+                }
+            }
+        }   
+    </script>
+</body>
+</html>

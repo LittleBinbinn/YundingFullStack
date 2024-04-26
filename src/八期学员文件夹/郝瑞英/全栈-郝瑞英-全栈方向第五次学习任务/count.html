@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .form-container {
+        position: absolute;
+        font-size: 40pt;
+        top: 40%;
+        left: 50%;
+      }
+      input {
+        padding: 10px;
+        font-size: 30px;
+      }
+      button {
+        padding: 5px;
+        font-size: 15pt;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="form" name="form">
+      <div class="form-container">
+        <p>请输入一个字符串:</p>
+        <input type="text" id="m_string" />
+
+        <br />
+
+        <p>请输入一个子串:</p>
+        <input type="text" id="s_string" />
+
+        <input type="button" value="提交" onclick="countString()" />
+      </div>
+    </form>
+
+    <script>
+      function findString(m_Str, s_Str, str) {
+        let start = 0; // 初始化起始索引为0
+
+        // 循环检查母串中是否存在子串
+        while (start <= str.length - s_Str.length) {
+          if (str.slice(start, start + s_Str.length) === s_Str) {
+            // 使用slice方法提取子串并与s_Str进行比较
+            return start; // 返回子串在母串中的起始索引
+          }
+          start++; // 移动到下一个可能的起始索引
+        }
+        return -1; // 如果未找到子串，返回-1或其他适当的值
+      }
+
+      function countString() {
+        let m_string = document.getElementById("m_string");
+        let s_string = document.getElementById("s_string");
+        if (m_string && s_string) {
+          let count = 0;
+          let position = 0;
+          while (true) {
+            position = findString(m_string.value, s_string.value, position);
+            if (
+              position === -1 ||
+              count >= m_string.value.length - s_string.value.length + 1
+            ) {
+              break;
+            }
+            count++;
+            position += s_string.length;
+          }
+          console.log(
+            `母串为${m_string.value}\n子串为${s_string.value}\n子串出现的次数为${count}`
+          );
+        } else {
+          console.log("元素未找到");
+        }
+      }
+    </script>
+  </body>
+</html>

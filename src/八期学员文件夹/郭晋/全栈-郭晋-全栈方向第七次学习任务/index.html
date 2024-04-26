@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网络请求</title>
+    <link rel="stylesheet" href="4.css">
+</head>
+<body>
+    <div id="date"></div>
+    <div class="enroll">
+        <label for="usename">账户</label>
+        <input type="text" id="usename"><br>
+        <label for="password">密码</label>
+        <input type="password" name="password" id="password"><br>
+        <button type="submit" onclick="enroll()">注册</button>
+        <button type="submit" onclick="xianshi()">获取用户列表</button>
+    </div>
+    <div id="user"></div>
+    <script src="4.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>

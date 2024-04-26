@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>注册系统</title>
+    <style>
+        *{
+            margin:0 auto;
+        }
+        input{
+            display:flex;
+            width:300px;
+            height:20px;
+        }
+        label{
+            position:relative;
+            left:30%;
+            top:20px
+        }
+        button{
+            position:relative;
+            left:46%
+        }
+        div{
+            position:relative;
+            left:15%;
+        }
+    </style>
+</head>
+<body>
+    <div id="time"></div>
+    <script>
+        var xhr=new XMLHttpRequest();//创建请求
+        xhr.open('GET','https://apifox.com/apidoc/shared-63b16e01-e6f5-45c4-b98b-7949f2888ceb',true);
+        //GET方式获取
+        xhr.onreadystatechange=function()
+        {
+            if(xhr.readyState===4&&xhr.status===200)
+            {
+                var response=JSON.parse(xhr.resopnseText);
+                console.log('Server time',reponse.time)
+            }
+        }
+        //判别请求状态
+        xhr.send();//递交请求
+    </script>
+    <label for="username">用户名:</label><br>  
+    <input type="text" id="username" name="username" placeholder="用户名"><br>  
+    <label for="password">&nbsp&nbsp密码:</label><br>/*  
+    <input type="password" id="password" name="password" placeholder="密码"><br>  
+    <button onclick="register">注册</button>
+    <script>
+        function register()
+        {
+            let username=document.getElementById("username").value;
+            let password=document.getElementById("password").value;
+            let xhr=new XMLHttpRequest();
+            xhr.open("POST", "https://apifox.com/apidoc/shared-63b16e01-e6f5-45c4-b98b-7949f2888ceb", true);  
+  xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");  
+  
+  xhr.onreadystatechange = function () {  
+    if (xhr.readyState === 4 && xhr.status === 200) {  
+      alert(xhr.responseText);  
+    }  
+  };  
+  
+  xhr.send("username=" + username + "&password=" + password);  
+}
+    </script>
+    <button onclick="userlist">获取用户列表</button>
+    <script>
+        function userlist(){
+let xhr= new XMLHttpRequest();
+xhr.onreadystatechange=function()
+{
+    if(xhr.readyState===4){
+        
+    } if (xhr.status === 200) { // 请求成功   
+                        var users = JSON.parse(xhr.responseText);  
+                        var userList = document.getElementById('userList');  
+                        userList.innerHTML = '';  
+                        for (var i = 0; i < users.length; i++) {  
+                            var user = users[i];  
+                            var li = document.createElement('li');  
+                            li.textContent = user.username;  
+                            userList.appendChild(li);  
+                        }  
+                    } else {  
+                        // 请求失败  
+                        alert('请求失败，状态码：' + xhr.status);  
+                    }  
+                }  
+            };  
+            xhr.open('GET', '"https://apifox.com/apidoc/shared-63b16e01-e6f5-45c4-b98b-7949f2888ceb"', true);  
+            // 发送请求  
+            xhr.send();  
+            window.onload = getUserList;  
+    </script>
+</body>
+</html>

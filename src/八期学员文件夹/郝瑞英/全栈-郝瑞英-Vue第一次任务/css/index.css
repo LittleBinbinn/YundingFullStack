@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#app {
+    
+    width: 500px;
+    height: 300px;
+    font-size: 20px;
+
+}
+ul {
+    list-style-type: circle
+}
+.active {
+    color: red;
+
+}
+.redList li {
+    color: red;
+}

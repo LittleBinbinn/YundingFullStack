@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单词列表</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.10/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>    
+    <div id="app">
+        <input type="text" placeholder="请输入一个单词" v-model="inputWord" @keyup.enter="addWord" /><br>
+        <strong >你要输出的单词是：{{inputWord}}</strong><br>
+        <button @click="addWord">添加</button>
+        <button @click="deleteWord">删除</button><br>
+        <p v-if="warning" >单词数目超过五个，单词列表的脑容量不够了！</p>
+        <h2 :style="{color:wordListColor}">单词列表</h2>
+        <ul>
+            <li v-for="(word, index) in wordList" :key="index" :style="{ color: wordListColor }">{{word}}</li>
+        </ul>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
