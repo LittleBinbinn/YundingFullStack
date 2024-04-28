@@ -6,7 +6,7 @@
       <RouterLink to="/home/option">你的选择</RouterLink>
     </ul>
   </div>
-  <RouterView></RouterView>
+    <RouterView></RouterView>
 </template>
 
 <script setup></script>

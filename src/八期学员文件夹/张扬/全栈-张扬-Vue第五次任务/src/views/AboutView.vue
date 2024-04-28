@@ -2,14 +2,12 @@
   <div>
     <h2>About</h2>
     <ul>
-      <KeepAlive include="List">
         <RouterLink :to='`/about/List?user=${items.name}`' v-for="items in list" :key="items.id">{{ items.name }}
         </RouterLink>
-      </KeepAlive>
     </ul>
     <input type="text" v-model="addValue">&nbsp;
     <button @click="add">确定</button>
-    <RouterView></RouterView>
+      <RouterView></RouterView>
   </div>
 </template>
 
