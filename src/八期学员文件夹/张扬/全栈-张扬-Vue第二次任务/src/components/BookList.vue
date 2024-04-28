@@ -41,7 +41,7 @@ function ShowBook(value) {
   
 }
 
-function allMoney(num,price) {
+function allMoney(num, price) {
   money.value = num * price
   for (let key in prop.BookList) {
     AllMoney += prop.BookList[key].allPrice
