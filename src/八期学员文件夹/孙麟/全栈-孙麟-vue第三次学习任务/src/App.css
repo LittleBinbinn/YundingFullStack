@@ -1,0 +1,82 @@
+.underline {
+    height: 3px;
+    width: 1200px;
+    background-color: black;
+}
+
+.singer {
+    width: 1200px;
+    height: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.singerpicture img {
+    width: 70px;
+    height: 70px;
+}
+
+.under {
+    height: 2px;
+    width: 1200px;
+    background-color: black;
+}
+
+.songs {
+    width: 1200px;
+    height: 580px;
+    display: flex;
+}
+
+.song {
+    height: 580px;
+    width: 400px;
+}
+
+.head {
+    width: 400px;
+    height: 165px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.text {
+    width: 200px;
+    height: 150px;
+}
+
+.text h1 {
+    margin-bottom: -20px;
+    margin-top: 10px;
+}
+
+.picture img {
+    width: 140px;
+    margin-top: 15px;
+}
+
+.center {
+    height: 3px;
+    width: 385px;
+    background-color: black;
+    position: relative;
+    left: 5px;
+}
+
+.body {
+    font-size: x-large;
+    width: 300px;
+    height: 40px;
+    position: relative;
+    left: 10px;
+}
+
+.c {
+    height: 2px;
+    width: 385px;
+    background-color: black;
+    position: relative;
+    left: 5px;
+}

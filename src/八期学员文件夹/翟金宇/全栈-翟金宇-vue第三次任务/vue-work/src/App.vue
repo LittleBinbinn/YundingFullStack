@@ -2,7 +2,7 @@
   <div>热门歌手</div>
   <div style="border: 1px solid black;"></div>
   <div class="singer">
-  <artist v-for="item in artists">
+  <artist  v-for="item in artists" id="item">
     <template #head>
     <img :src=item.picUrl alt="">
     </template>
@@ -34,6 +34,7 @@
 </template>
 
 <script>
+import { ref } from 'vue' 
 import artist from "./components/artist.vue"
 import song from "./components/song.vue"
 import artists from "./data/artist.js"

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>axios基本使用</title>
+  <!-- CSS -->
+  <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
+</head>
+<body>
+  <div class="container">
+    <h2 class="page-header">基本使用</h2>
+    <button class="btn btn-primary">GET请求</button>
+    <button class="btn btn-warning">POST请求</button>
+    <button class="btn btn-success">PUT请求</button>
+    <button class="btn btn-danger">DELETE请求</button>
+  </div>
+
+  <script>
+    //获取按钮
+    const btns = document.querySelectorAll('button')
+    btns[0].onclick = function () {
+      //发送Ajax请求
+      axios({
+        //请求类型
+        method:'GET',
+        url:'http://localhost:3000/post'
+      }).then(response=>{
+        console.log(response);
+      })
+    }
+    //添加一篇新的文章
+    btns[1].onclick = function () {
+        //发送Ajax请求
+        axios({
+          //请求类型
+          method: 'POST',
+          url: 'http://localhost:3000/post',
+          //设置请求体
+          data:{
+            id:"2",
+            title:'我是post传过来的',
+            author:'post'
+          }
+        }).then(response => {
+          console.log(response);
+        })
+      }
+      //更新数据
+      btns[2].onclick = function () {
+          //发送Ajax请求
+          axios({
+            //请求类型
+            method: 'PUT',
+            url: 'http://localhost:3000/post/2',
+            data: {
+              id: "3",
+              title: '我是put传过来的',
+              author: 'put'
+            }
+          }).then(response => {
+            console.log(response);
+          })
+        }
+        //删除数据
+        btns[3].onclick = function () {
+            //发送Ajax请求
+            axios({
+              //请求类型
+              method: 'DELETE',
+              url: 'http://localhost:3000/post/3',
+            }).then(response => {
+              console.log(response);
+            })
+          }
+  </script>
+</body>
+
+
+</html>

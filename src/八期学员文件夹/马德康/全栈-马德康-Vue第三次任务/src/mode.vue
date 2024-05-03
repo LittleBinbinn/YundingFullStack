@@ -8,7 +8,7 @@
     <img :src="imgUrl">
     </div>
     <ul class="Alllist">
-        <slot name="name"></slot>
+        <slot name="songName"></slot>
     </ul>
 </div>
 </template>
@@ -31,6 +31,7 @@ h4{
 img{
     width: 150px;
     margin-left: 15px;
+    margin-bottom: 10px;
 }
 .top{
     display: flex;
